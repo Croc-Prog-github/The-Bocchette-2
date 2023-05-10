@@ -1,3 +1,3 @@
 # The-Bocchette-2
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/web-platform-a8hddt)
+Mettiti nei panni di macchine da guerra umanizzate, completa la loro storia e gioca in Battle Royale Multiplayer per avazare nel gioco, usando le tecniche molto potenti, ma attento: usano Energia! Tranquillo però, si ricarica col tempo. 
