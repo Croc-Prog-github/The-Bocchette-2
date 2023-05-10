@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <script>alert("L'imput dalla tastiera è abilitato.");</script>
+    <title>The Bocchette - Creativa</title>
+    <!-- START <meta> -->
+    <meta charset="UTF-8" />
+    <!-- END <meta> -->
+
+    <!-- Content -->
+  </head>
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif; background-color: #195e79ad;">
+    <div style="width: 220px; background: #ffffff; z-index: 4; position: absolute; margin-bottom: 1.5%; height: 98%;" hidden id="menu">
+      <span style="font-size: xx-large; margin-inline: 43.5px">CREATIVA</span>
+      <div style=" display: flex; flex-direction: column; flex-wrap: nowrap; align-items: stretch; margin-inline: 5px; margin-top: 15%;">
+        <button style="background: lightgray; border: solid 3px gray" onclick="OSett()">Impostazioni</button>
+        <button disabled>Impostazioni isola</button>
+        <button disabled>Seleziona squadra</button>
+        <button style="background: indianred; border: solid 3px darkred" onclick="let exit=window.confirm('Sei sicuro di voler uscire?');if(exit == true){window.location.href = '/game/home.html';}">ESCI</button>
+      </div>
+    </div>
+
+    <div style="position: absolute; z-index: 0">
+      <div style="margin-top: 10%; position: absolute; z-index: 3;" id="MinImpo" hidden>
+        <div style="padding-left: 95.5%; margin-left: 70%; background: white; ">
+          <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="CSett()">X</button>
+        </div>
+        <iframe src="/game/impo.html" frameborder="1.5" style="width: 600px; height: 400px; margin-left: 70%"></iframe>
+      </div>
+
+      <div name="float island" style="background-image: url(https://docs.google.com/drawings/d/e/2PACX-1vRWUZLeo8-c8Nl2rzezCFAMd93CXLX4z-JQBV9z9TI_XolyqFK8unXW052nve0xH44SaFHekNs3UxqH/pub?w=1096&h=516); width: 1095px; height: 516px;">
+        <img src="" alt="Player" style="position: absolute; z-index: 1; margin-top: 100px; margin-left: 150px;">
+      </div>
+
+      <img src="" alt="La fonte non è disponibile" name="portal" style="position: absolute; z-index: 2; margin-top: -395px; margin-left: 585px;">
+
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vQWjpgoDtgc_wKaOhOq2GgOm_-XqSNS8zmkPvkqwku38r5Fh3spTChn_bS4wRnDHdPdzMz_4P2Kt0BI/pub?w=50&amp;h=50" alt="La fonte non è disponibile">
+    </div>
+  </body>
+</html>
+
+<script> //Apri <iframe> impostazioni
+  function OSett() {
+    const MinImpo = document.getElementById("MinImpo");
+    MinImpo.style.display = "block";
+  }
+
+  function CSett() {
+    const MinImpo = document.getElementById("MinImpo");
+    MinImpo.style.display = "none";
+  }
+</script>
+
+<script> // apri/chiudi menù
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      const menuDiv = document.getElementById('menu');
+      if (menuDiv.hasAttribute('hidden')) {
+        menuDiv.removeAttribute('hidden');
+      } else {
+        menuDiv.setAttribute('hidden', true);
+      }
+    }
+  });
+</script>
+
+<script> //Muoviti nella mappa
+  
+</script>

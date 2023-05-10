@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Bocchette 2 - OnlinePlayer</title>
+    <!-- START <meta> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- END <meta> -->
+
+    <!-- Content -->
+    <script src="/var.js"></script>
+    <script src="/game/event/tecnic.js"></script>
+    <script src="/exit.js"></script>
+    <!-- Muliplayer -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </head>
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad;">
+    <div style="display: flex;">
+      <div style="display: flex; flex-direction: row; justify-content: flex-start; background-color: steelblue; width: 150px; height: 24em;">
+        <div style="color: white; cursor: default;">
+          <hx>Il tuo nome:</hx> <x id="username" style="color: lawngreen;">_</x>
+          <p> <hx>Il tuo SessionID:</hx> <x>null</x> </p>
+          <hx>Cerca giocatori con il SessionID:</hx> <input type="text" maxlength="5" value="@" placeholder="@Player_SessionID" style="width: 120px; text-transform: uppercase;">
+          <p></p>
+          <hx>Non disturbare: </hx> <input type="checkbox" style="cursor: pointer;">
+          <hx>Appari offline: </hx> <input type="checkbox" style="cursor: pointer;"> <br>
+          <hx>Ricerco squadra: </hx> <input type="checkbox" style="cursor: no-drop;" disabled>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; justify-content: flex-start; cursor: default;">
+        <hx style="padding-inline: 180px; margin-block-end: 5px; background-color: white; margin-block-start: 0px;">Giocatori online:</hx>
+        <div name="player Online" style="position: inherit; overflow-y: auto;">
+          <div style="background-color: dodgerblue; margin-inline: 5px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-top: 5px;"><x style="color: white;">_</x> <button style="background: limegreen; border-style: revert; cursor: pointer;">Invita</button></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script> //Inserisce il tuo username in interfacc.
+  function A() {
+    let element = document.getElementById("username");
+    let text = localStorage.getItem("username");
+    element.innerText = text;
+  }
+  setInterval(() => {
+    A();
+  }, 100);
+</script>

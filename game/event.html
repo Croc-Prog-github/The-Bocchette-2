@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Bocchette 2 - Eventi</title>
+    <!-- START <meta> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- END <meta> -->
+
+    <!-- Content -->
+  </head>
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad;">
+    
+  <div style="display: flex; flex-direction: row; justify-content: flex-start;">
+    <a href="/game/home.html" style="text-decoration: none; font-size: 25px; border: solid 2px black;" title="Indietro">⬅️</a>
+  </div>
+
+  <div style="display:flex; flex-direction: row; margin-top: 20px;" name="events">
+    <img src="https://docs.google.com/drawings/d/e/2PACX-1vTzKzhT7XZeejUPjRKjRXFYAn3cO00DUf9_A_qO6yc1v7vOeRWL3yl8l9Rr7ztyxeu1DaCQtItO3cl6/pub?w=308&h=102" alt="La fonte non è disponibile" onclick="Se()" name="creativa">
+    
+    <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY5rVGGwFbGX5XBXOTvVzchOT3Ns1WlJVmbP72yYtGgz_f5qv4CCcEDor5Wss2sgDiVhW9lBXlI9wt/pub?w=308&h=102" alt="La fonte non è disponibile" onclick="Se()" name="Sopravvivenza">
+
+    <img src="https://docs.google.com/drawings/d/e/2PACX-1vSH4Gf2hrfwuAf3VJeJ8cIN9kVLz6gWLHYAa4MX52p-6dqU3Ny97Q6BiFIsWLd63d6XU1aJ_MF4SG5v/pub?w=309&h=102" alt="La fonte non è disponibile" onclick="Se()">
+  </div>
+
+
+  </body>
+</html>
+
+<script> //Seleziona Evento
+  let elementS; //Evento selezionato
+  function Se() {
+    elementS = event.target.src;
+    console.info("L'evento cliccato ha scr: " + elementS);
+    localStorage.setItem("elementS", elementS); // Memorizza la variabile nello storage locale
+    window.location.href = '/game/home.html'; // Reindirizza all'altra pagina
+  }
+</script>

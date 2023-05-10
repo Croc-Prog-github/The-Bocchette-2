@@ -1,0 +1,13 @@
+<script> //Full Screen
+  function fs() {
+    let element = document.documentElement;
+    //let element = document.getElementById("body");
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+      element.msRequestFullscreen();
+    }
+  }
+</script>

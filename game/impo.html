@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Impostazioni</title>
+    <!-- START <meta> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- END <meta> -->
+
+    <!-- Content -->
+  </head>
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #316f87; overflow: hidden;">
+
+    <div style="width: 100%; height: 50px; background: black;padding-left: 16px; margin-left: -8px; margin-top: -8px; display: flex; flex-direction: row;justify-content: flex-start; align-items: center;">
+      <a href="/game/home.html" style="text-decoration: none; font-size: 25px; border: solid 2px black;" title="Indietro" hidden>⬅️</a>
+      <span style="font-size: xx-large; margin-left: 15px; color: white; margin-right: 3vw;">Accessibilità</span>
+
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70px" height="7777px" style="margin-top: -480em; margin-left: -10px;">
+        <g xmlns="http://www.w3.org/2000/svg" transform="translate(50,7718)" onclick="Acess()">
+          <circle fill="white" cx="9" cy="3" r="1.75"></circle>
+          <path fill="white" d="M15.62 5.09C13.68 5.67 11.42 6 9 6s-4.68-.33-6.62-.91l-.37 1.38c1.34.44 2.87.73 4.49.89V17H8v-5h2v5h1.5V7.36c1.62-.16 3.15-.46 4.49-.89l-.37-1.38z"></path>
+        </g>
+      </svg>
+
+      <svg width="70px" height="5163px">
+        <g xmlns="http://www.w3.org/2000/svg" transform="translate(52,2572)" onclick="Video()">
+          <path fill="white" fill-rule="evenodd" clip-rule="evenodd" d="M3 2h12c1.5 0 2 1 2 2v8c0 .8-.5 2-2 2h-3v2H6v-2H3c-.8 0-2-1-2-2V4c0-1.5 1.2-2 2-2zm0 10h12V4H3v8z"/>
+        </g>
+      </svg>
+
+      <svg style="height: 9055px; width: 79px;">
+        <g transform="translate(60,4518)" onclick="ImpSit()">
+          <path fill="white" d="M9 6C7.34 6 6 7.34 6 9s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm0 4.5c-.83 0-1.5-.67-1.5-1.5S8.17 7.5 9 7.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path>
+          <path fill="white" d="M14.98 8.66L17 6.71l-2.02-3.5-2.69.77c-.2-.13-.42-.25-.63-.36L11 1H7l-.66 2.63c-.22.1-.43.22-.63.36l-2.69-.77L1 6.71l2.02 1.95c-.02.41-.02.26 0 .68L1 11.29l2.02 3.5 2.69-.77c.2.13.42.25.63.36L7 17h4l.66-2.63c.22-.11.43-.23.63-.36l2.69.77 2.02-3.5-2.02-1.95c.03-.41.03-.26 0-.67zm.14 2.89l-.85 1.47-1.57-.45-.66-.19-.58.38c-.14.09-.29.18-.48.27l-.62.31-.17.67-.36 1.49H8.17l-.37-1.49-.17-.67-.62-.31c-.18-.09-.34-.18-.48-.27l-.58-.38-.65.19-1.57.45-.85-1.47 1.18-1.14.49-.48-.04-.68v-.16l-.01-.08v-.1l.01-.17.04-.69-.49-.47-1.18-1.13.85-1.47 1.57.45.66.19.58-.38c.14-.09.29-.18.48-.27l.62-.31.16-.67.37-1.49h1.66l.37 1.49.17.67.62.31c.18.09.34.18.48.27l.58.38.66-.19 1.57-.45.85 1.47-1.18 1.14-.49.48.04.69.01.18v.07l-.01.1-.01.17-.04.69.49.48 1.18 1.1z"></path>
+        </g>
+      </svg>
+    </div>
+
+    <div name="Impost.HTML">
+      <div style="margin-top: 20px;" name="Accesibilità" id="acces">
+        <hx style="">Dimensione caratteri (em)</hx> 
+          <input type="number" style="width: 40px;" value="1.0" min="0.5" max="3" id="DCar"> 
+        <var style="margin-left: 25px;">Descrizione</var>
+
+        <p style=""><strong>Sottotitoli</strong></p>
+
+        <div style="display: flex; align-items: center;">
+          <hx style="">Sottotitoli</hx> 
+            <div class="switch">
+              <input type="checkbox" id="switch-1" checked>
+              <label for="switch-1"></label>
+            </div> 
+          <var style="margin-left: 15px;">Abilita i sottotitoli nei dialoghi</var>
+        </div>
+
+        <hx style="">Dimensione caratteri sottotitoli (em)</hx> 
+          <input type="number" style="width: 40px;" value="1.5" min="0.5" max="3"> 
+        <var style="margin-left: 25px;">Descrizione</var>
+      </div>
+
+      <div style="margin-top: 20px;" name="Video" id="vid" hidden>
+
+      </div>
+
+      <div style="margin-top: 20px;" name="Impost.sito" id="impSit" hidden>
+        <label for="imageSetting">Immagini:</label>
+        <select id="imageSetting" onchange="updateSetting('imageSetting')">
+          <option value="allow">Consenti</option>
+          <option value="block">Blocca</option>
+        </select>
+        <br>
+        <label for="jsSetting">JavaScript:</label>
+        <select id="jsSetting" onchange="updateSetting('jsSetting')">
+          <option value="allow">Consenti</option>
+          <option value="block">Blocca</option>
+        </select>
+        <br>
+        <label for="audioSetting">Audio:</label>
+        <select id="audioSetting" onchange="updateSetting('audioSetting')">
+          <option value="allow">Consenti</option>
+          <option value="block">Blocca</option>
+        </select>
+      </div>
+    </div>
+
+    <p></p>
+    <button style="background: indianred; border: solid 3px darkred" onclick="let ReSet=window.confirm('Sei sicuro di voler tornare alle impostazioni predefinite?');">Reimpostazione predefinita</button>
+    <button onclick="Aply2()">Applica</button>
+    <hr>
+
+  </body>
+</html>
+
+<script>
+  function updateSetting(setting) {
+    value = document.getElementById(setting).value;
+    //document.getElementById(setting).value;
+    switch (setting) {
+      case 'imageSetting':
+        if (value === 'allow') {
+          const allowImages = document.getElementById("allowImages");
+          allowImages.addEventListener("change", function() {
+            const images = document.getElementsByTagName("img");
+            for(let i=0; i<images.length; i++){
+              images[i].style.display = this.checked ? "block" : "none";
+            }
+          });
+        } else {
+          let immagini = document.getElementsByTagName('img');
+          for(let i = 0; i < immagini.length; i++) {
+            immagini[i].style.visibility = "hidden";
+          }
+        }
+      break;
+      case 'jsSetting':
+        if (value === 'allow') {
+          document.querySelectorAll('script').forEach(e => e.removeAttribute('nonce'));
+          alert(":)");
+        } else {
+          document.querySelectorAll('script').forEach(function(script) {
+            script.disabled = true;
+          });
+          alert("!");
+        }
+      break;
+      case 'audioSetting':
+        if (value === 'allow') {
+          // abilita l'audio
+        } else {
+          // disabilita l'audio
+        }
+      break;
+    }
+  }
+</script>
+
+<script>//Cambia schermata impostazioni
+  let acces = document.getElementById("acces");
+  let vid = document.getElementById("vid");
+  let impSit = document.getElementById("impSit");
+  function Acess() {
+    vid.hidden = true;
+    impSit.hidden = true;
+    acces.hidden = false;
+  }
+  function Video() {
+    vid.hidden = false;
+    impSit.hidden = true;
+    acces.hidden = true;
+  }
+  function ImpSit() {
+    vid.hidden = true;
+    impSit.hidden = false;
+    acces.hidden = true;
+  }
+</script>
+
+<script> //Salvataggio in session storage
+  //Quando entri nella pagina carichi i valori: storage --> variabili
+  let DCar = sessionStorage.getItem("DCar"); //Dimensione caratteri
+  let sott = sessionStorage.getItem("sott"); //Sottotitoli ON-OFF
+  let DCarSott = sessionStorage.getItem("DCarSott"); //Dimensioni Caratteri Sottotitoli
+  
+  function Aply() { //Applica impo.
+    //Carica: variab. --> sorage
+    sessionStorage.setItem("DCar", DCar);
+    sessionStorage.setItem("sott", sott);
+    sessionStorage.setItem("DCarSott", DCarSott);
+  } 
+  setInterval(function() {
+    Aply();
+    let resetValues = false;
+    for (let key in sessionStorage) { 
+      let value = sessionStorage.getItem(key);
+      if (isNaN(parseFloat(value))) {
+        resetValues = true;
+        console.error("La chiave: " + key + " aveva valore != da variabile di tipo int o float.");
+      }
+    }
+    if (resetValues) {
+      for (let key in sessionStorage) {
+        sessionStorage.setItem(key, "0");
+      }
+      console.warn("I valori di tutte le chiavi sono portati a 0.");
+    }  
+  }, 100);
+</script>
+
+<script> //Aggiorna i valori interf. --> variabili
+  function Aply2() {
+    //Aggiorna Dimensione Caratt.
+      const DCarElement = document.getElementById('DCar');
+      const DCarValue = DCarElement.value;
+      DCar = DCarValue
+    //end
+
+    //Aggiorna Sottotitoli
+
+    //end
+  }
+</script>
+
+<script> //Reimpostazione predefinita
+  function reset() {
+
+  }
+</script>
+
+<style>
+  .switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  margin: 0 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.switch label:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: margin 0.3s ease-in-out;
+}
+
+.switch input:checked + label {
+  background-color: #2196F3;
+}
+
+.switch input:checked + label:before {
+  margin-left: 24px;
+}
+
+.switch label:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.3);
+}
+</style>

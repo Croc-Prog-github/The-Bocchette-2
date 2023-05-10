@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>The Bocchette 2</title>
+    <!-- START <meta> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- END <meta> -->
+
+    <!-- Content -->
+    <script src="/var.js"></script>
+    <script src="/game/event/tecnic.js"></script>
+    <script src="/exit.js"></script>
+    <!-- Muliplayer -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </head>
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin-block: 0px;">
+
+    <div style="display: flex;flex-direction: row;justify-content: space-evenly;align-items: center;background-color: #242424;width: 100%;height: 20px;background-size: cover;flex-wrap: nowrap;" name="up_bar">
+      <div name="€" title="Banconote" style="display: flex; align-items: center; height: 20px; background-color: #1159dba3; border-radius: 4px; margin-top: 15px">
+        <hx style="color: white; padding-left: 10px; cursor: default;" id="soldi">Error</hx>
+        <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY0pup0VxjthO6ohSgX3RC29HShZ8JFuoCg7luCeb6Vf4oOkWPGl32GdugLMPkUn56ZmQ-bH9hnLi5/pub?w=50&h=50" style="height: 40px;" alt="La fonte non è disponibile">
+      </div>
+
+      <div name="Gemme" title="Gemme" style="display: flex; align-items: center; height: 20px; background-color: #1159dba3; border-radius: 4px; margin-top: 15px;">
+        <hx style="color: white; padding-left: 10px; cursor: default;" id="gemme">Error</hx>
+        <img src="https://docs.google.com/drawings/d/e/2PACX-1vQQ42zr_c9L0G-wp60VNXlS7h4fBZjnofJZFcJ9jAVF_Ga8M7LAdoIE40PpWFASQrdFD5e-2CzMwL72/pub?w=50&h=50" style="height: 30px;" alt="La fonte non è disponibile">
+      </div>
+    </div>
+
+    <div name="Profilo" style="background: black; width: 120px; height: 28px; margin-top: 7px; cursor: pointer;">
+      <progress style="width: 95px; margin-left: 5.5px; accent-color: #5757df; margin-top: 4.5%;" value="0" max="100"></progress>
+      <x style="color: white; cursor: default;">1</x>
+    </div>
+
+    <div style="display: flex; align-items: flex-start; flex-direction: column; margin-top: 15px;" name="butt">
+      <button name="news">Notizie</button>
+      <button name="shop" onclick="window.location.href = '/game/shop.html';">Negozio</button>
+      <button name="bocch" onclick="window.location.href = '/game/MenuBocch/SelectBocch.html';">Seleziona Bocchetta</button>
+      <button name="miss" onclick="window.location.href = '/game/pass/miss.html';">Missioni</button>
+      <button name="impo" onclick="OSett()">Impostazioni</button>
+    </div>
+
+    <div style="position: absolute; z-index: 3; margin-top: -5%;" id="MinImpo" hidden>
+      <div style="padding-left: 95.5%; margin-left: 70%; background: white; ">
+        <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="CSett()">X</button>
+      </div>
+      <iframe src="/game/impo.html" frameborder="1.5" style="width: 600px; height: 400px; margin-left: 70%;"></iframe>
+    </div>
+
+    <div style="/*margin-left: 38%;*/ display: flex; justify-content: center;">
+      <div style="margin-right: 15px; display: grid; align-content: center; justify-items: center;">
+        Seleziona Tecnica per tasto E
+        <br>
+        <select id="Tecnic1">
+          <option value="dispersione" onclick="STecnic1()">dispersione</option>
+          <option value="taglio netto" onclick="STecnic1()">taglio netto</option>
+          <option value="super taglio netto" onclick="STecnic1()">super taglio netto</option>
+          <option value="rasengan" disabled title="si sblocca al livello 5">rasengan</option>
+        </select>
+      </div>
+    
+      <div style="margin-right: 15px; display: grid; align-content: center; justify-items: center;">
+        Seleziona Tecnica per tasto F
+        <br>
+        <select id="Tecnic2">
+          <option value="taglio netto" onclick="STecnic2()">taglio netto</option>
+          <option value="dispersione" onclick="STecnic2()">dispersione</option>
+          <option value="super taglio netto" onclick="STecnic2()">super taglio netto</option>
+          <option value="rasengan" disabled title="si sblocca al livello 5">rasengan</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: row; justify-content: space-around; margin-top: 20vh;">
+      <button onclick="" aria-label="1 giocatori online" id="invit1">+</button>
+      <button onclick="" aria-label="1 giocatori online" id="invit2">+</button>
+    </div>
+
+    <div style="position: absolute; z-index: 3; margin-top: -17%; margin-left: 29%;">
+      <div style="padding-left: 95.7%; background: white;">
+        <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="">X</button>
+      </div>
+      <iframe src="/game/multiP/onlineUser.html" height="400px" width="650px"></iframe>
+    </div>
+
+    <div style="display: flex; flex-direction: row-reverse;" name="menù princ" id="M_princ">
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSxF6EvIMPHfWs1SwY_XPABAJHQQRc0l_-V10auLdTB7dpOhTRPZEt0TWIcr-gAmIAYDYfhSQ3xnQPl/pub?w=100&h=100" alt="La fonte non è disponibile" style="margin-top: -357px; margin-bottom: 74vh;" onclick="OpnM()">
+    </div>
+
+
+    <div style="display: flex; flex-direction: row; align-items: flex-start;">
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSAWKGdL6u1QeLPv11QKsqqLfctzKkiRfe1Ik1aMrIwOEtXF0uYPuI4u_vVjd7JddMhW8Y2suMl2SgF/pub?w=252&h=242" alt="La fonte non è disponibile" style="width: 69px; margin-top: -85px;" name="Cassa" onclick="window.location.href = '/game/cass.html';">
+      <button style="margin-top: -90px; margin-left: -23px; border: 0;background: dodgerblue; color: white; border-radius: 9px;">Error</button>
+
+      <div name="pass" style="width: 160px; height: 50px; background-color: gold; border-radius: 8px; margin-right: 35%; margin-left: -88px;" onclick="window.location.href = '/game/pass/pass.html';">
+        <hx style="margin-left: 6%; cursor: default;">Bocchet Pass</hx>
+        <div style="display: flex; flex-direction: row;align-items: center;">
+          <progress value="0" max="50" style="width: 90%; margin-left: 5%; margin-top: -1%; height: 35px;" id="progress"></progress> 
+          <button style="margin-right: 5%; background-color: darkgoldenrod; border: 0px; border-radius: 10px; color: white;" id="obb">Error</button>
+        </div>
+      </div>
+
+      <div style="background: white; width: 200px; height: 55px; /*border: solid 3px black;*/ border-radius: 7px;" onclick="window.location.href = '/game/event.html';">
+        <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY5rVGGwFbGX5XBXOTvVzchOT3Ns1WlJVmbP72yYtGgz_f5qv4CCcEDor5Wss2sgDiVhW9lBXlI9wt/pub?w=308&h=102" alt="La fonte non è disponibile" style="width: 101%; margin-top: -10px;" id="eventS">
+      </div>
+      <button style="margin-left: 5px; padding-block: 24px; margin-top: -17px; padding-inline: 15px; color: white; background-color: dodgerblue; border: solid 3px darkblue; border-radius: 8px; font-size: 20px; border-bottom: solid 6px darkblue;" onclick="play(); STecnic1(); STecnic2();">Gioca</button>
+    </div>
+
+  </body>
+</html>
+
+<script> // Ti rendirizza ad un evento
+  function play() {
+    let evento = eventS.src;
+    console.info("L'evento giocato è: " + evento);
+    switch(evento){
+      case "https://docs.google.com/drawings/d/e/2PACX-1vTzKzhT7XZeejUPjRKjRXFYAn3cO00DUf9_A_qO6yc1v7vOeRWL3yl8l9Rr7ztyxeu1DaCQtItO3cl6/pub?w=308&h=102":
+        console.info("Reindirizzo all'evento: Creativa");
+        window.location.href = '/game/event/creativ.html';
+      break;
+      case "https://docs.google.com/drawings/d/e/2PACX-1vRY5rVGGwFbGX5XBXOTvVzchOT3Ns1WlJVmbP72yYtGgz_f5qv4CCcEDor5Wss2sgDiVhW9lBXlI9wt/pub?w=308&h=102":
+        console.info("Reindirizzo all'evento: Sopravvivenza");
+        window.location.href = '/game/event/sopr.html';
+      break;
+      case "https://docs.google.com/drawings/d/e/2PACX-1vSH4Gf2hrfwuAf3VJeJ8cIN9kVLz6gWLHYAa4MX52p-6dqU3Ny97Q6BiFIsWLd63d6XU1aJ_MF4SG5v/pub?w=309&h=102":
+        console.info("Reindirizzo modalità di gioco: Storia");
+        window.location.href = '/game/event/story.html';
+      break;
+      default:
+        console.error("Reindirizzamento ad un evento fallito!")
+      break;
+    }
+  }
+</script>
+
+<script> //Apri <iframe> impostazioni
+  function OSett() {
+    const MinImpo = document.getElementById("MinImpo");
+    MinImpo.style.display = "block";
+  }
+  
+  function CSett() {
+    const MinImpo = document.getElementById("MinImpo");
+    MinImpo.style.display = "none";
+  }
+</script>
+
+<script>
+  function OpnM() { //Apri menù principale
+    const mPrinc = document.getElementById("M_princ");
+
+    // Elimina tutti gli elementi all'interno di M_princ
+    while (mPrinc.firstChild) {
+      mPrinc.removeChild(mPrinc.firstChild);
+    }
+
+    // Crea il div quando il menù è aperto
+    let newDiv = document.createElement("div");
+    newDiv.style.width = "150px";
+    newDiv.style.paddingBlock = "230px";
+    newDiv.style.background = "black";
+    newDiv.style.marginTop = "-90px";
+    newDiv.style.marginBottom = "9vh";
+    // Inserisce il nuovo div all'interno di M_princ
+    mPrinc.appendChild(newDiv);
+
+
+    //Crea le voci del menù (in un array)
+  }
+</script>
+
+<script> //Riceve il elementS dal local storage (per gli eventi)
+  let elemento = document.querySelector("#eventS"); // Seleziona l'elemento in cui vuoi inserire la variabile
+  let elementS = localStorage.getItem("elementS"); // Recupera la variabile dal storage locale
+  elemento.src = elementS; // Assegna la variabile all'elemento
+</script>
+
+<script> //Aggiorna le gemme
+  function updateGemme() {
+    const gemmeTag = document.getElementById("gemme");
+    gemmeTag.innerHTML = gemme.toString();
+  }
+  setInterval(function() {
+    updateGemme();
+  }, 100);
+</script>
+
+<script> //Aggiorna i soldi
+  function updateSoldi() {
+    const soldiTag = document.getElementById("soldi");
+    soldiTag.innerHTML = soldi.toString();
+  }
+  setInterval(function() {
+    updateSoldi();
+  }, 100);
+</script>
+
+<script> //Visualizza obbiettivo Bocchet pass
+  function updateObb() {
+    const obbTag = document.getElementById("obb");
+    obb = obb + 2;
+    obbTag.innerHTML = obb.toString();
+  }
+  setInterval(function() {
+    updateObb();
+    obb = obb - 2;
+  }, 100);
+</script>
+
+<script> //Visualizza il value di progress del pass
+  function updateGett() {
+    const gettTag = document.querySelector("#progress");
+    gettTag.innerHTML = gett.toString();
+    gettTag.title = gett + " of 50";
+  }
+  setInterval(function() {
+    progress.value = gett;
+    updateGett();
+  }, 100);
+</script>
+
+<style>
+  #invit2 {
+    position: relative;
+    /*display: inline-block;*/
+    /*border-bottom: 1px dotted black;*/
+  }
+  #invit1 {
+    position: relative;
+    /*display: inline-block;*/
+    /*border-bottom: 1px dotted black;*/
+  }
+
+  #invit2::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #333 transparent transparent transparent;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #invit1::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #333 transparent transparent transparent;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #invit2::after {
+    content: attr(aria-label);
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #invit1::after {
+    content: attr(aria-label);
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>

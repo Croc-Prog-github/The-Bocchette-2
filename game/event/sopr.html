@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <script>//alert("L'imput dalla tastiera è abilitato.");</script>
+    <title>The Bocchette - Sopravvivenza SINGOLO</title>
+    <!-- START <meta> -->
+    <meta charset="UTF-8">
+    <!-- END <meta> -->
+
+    <!-- Content -->
+    <script src="/game/event/tecnic.js"></script>
+    <!-- <script src="/game/event/mira.js"></script> -->
+  </head>
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad;">
+
+    <div name="Terreno" style="">
+
+      <div name="Player" style="margin-top: 60px; margin-left: 20px;">
+        <div id="fumetto" aria-label="tasto E" style="margin-left: 30px; position: fixed; margin-top: -25px;">-</div>
+        <progress style="margin-top: -25px; position: absolute; z-index: 1; width: 65px; accent-color: green;" value="100" max="100"></progress>
+        <progress value="0" max="99" style="margin-top: -15px; position: absolute; z-index: 1; width: 65px;" id="YourE"></progress>
+        <img src="#" style="/*position: absolute;*/ top: 50%; left: 50%;" id="player" alt="Player">
+        <div name="mire" id="mire" hidden>
+          <div name="miraE" style="background-color: #d6d6d6cc; width: 150px; height: 30px; rotate: 43deg; transform-origin: left; margin-top: -30px;margin-left: 20px;" id="miraE"></div>
+          <div name="miraF" style="" id="miraF"></div>
+        </div>
+      </div>
+      
+      <div name="tecnic">
+        <div id="taglio_netto" style="width: 5px; height: 2cm; border-radius: 8px; position: relative; background: #1E90FF;"></div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
+
+<script> //Ricarica energia
+  let Energy = document.getElementById("YourE");
+  Energy.value = 10;
+  if (Energy.value < 100) {
+    const intervalId = setInterval(() => {
+      Energy.value += 1;
+    }, 100);
+  }
+  //clearInterval(intervalId);
+</script>
+
+<script> //Comandi per le tecniche
+  document.addEventListener('keydown', function(event) {
+    switch(event.key) {
+      case 'w':
+        // Azione per il tasto w
+      break;
+      case 'a':
+        // Azione per il tasto a
+      break;
+      case 's':
+        // Azione per il tasto s
+      break;
+      case 'd':
+        // Azione per il tasto d
+      break;
+      case 'e': //Tasto tecnica 1
+        console.info("Tasto E, Tecnica: " + tecnic1);
+        EsecTecnic(tecnic1);
+      break;
+      case 'f': //Tasto tecnica 2
+        console.info("Tasto F, Tecnica: " + tecnic2);
+        EsecTecnic(tecnic2);
+      break;
+      default:
+        // Azione per gli altri tasti
+      break;
+    }
+  });
+
+  document.addEventListener('click', function(event) {
+    if (event.button == 0) {
+      //console.info("Tasto Sinistro, Attacco base");
+    }
+    if (event.button == 1) {
+      //azioni click destro mouse
+    }
+  });
+</script>
+
+<script> //Prevede mira in base a tecniche selezionate (tiene premuto tasto sinistro mouse + frecce < o > [per scorrere le tecniche, viste in un fumetto])
+let mire = document.getElementById("mire");
+let fumetto = document.getElementById("fumetto");
+let isMouseDown = false;
+let tooltip = null;
+let text = null;
+let label = "tasto E";
+
+fumetto.style.position = "fixed";
+fumetto.style.display = "inline-block";
+fumetto.style.borderBottom = "1px dotted black";
+
+document.addEventListener('mousedown', (event) => {
+  if (event.button === 0) { // tasto sinistro del mouse
+    isMouseDown = true;
+    FumF(true);
+    mire.hidden = false;
+
+    // Crea il tooltip solo se non esiste già
+    if (!tooltip) {
+      tooltip = document.createElement("div");
+      tooltip.style.content = "";
+      tooltip.style.position = "absolute";
+      tooltip.style.borderStyle = 'solid';
+      tooltip.style.borderWidth = "10px 10px 0 10px";
+      tooltip.style.borderColor = "#333 transparent transparent transparent";
+      tooltip.style.bottom = "100%";
+      tooltip.style.left = "50%";
+      tooltip.style.transform = "translateX(-50%)";
+      fumetto.appendChild(tooltip);
+
+      text = document.createElement("div");
+      text.innerText = label;
+      text.style.position = "absolute";
+      text.style.backgroundColor = "#333";
+      text.style.color = "#fff";
+      text.style.padding = "5px";
+      text.style.borderRadius = "5px";
+      text.style.fontSize = "14px";
+      text.style.fontWeight = "bold";
+      text.style.whiteSpace = "nowrap";
+      text.style.bottom = "120%";
+      text.style.left = "50%";
+      text.style.transform = "translateX(-50%)";
+      fumetto.appendChild(text);
+    }
+  }
+});
+
+document.addEventListener('mouseup', () => {
+  isMouseDown = false;
+  FumF(false);
+  mire.hidden = true;
+
+  // Rimuovi il tooltip quando viene rilasciato il tasto sinistro
+  if (tooltip) {
+    fumetto.removeChild(tooltip);
+    fumetto.removeChild(text);
+    tooltip = null;
+    text = null;
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if (isMouseDown && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
+    label = label === "tasto E" ? "tasto F" : "tasto E";
+    text.innerText = label;
+  }
+});
+
+function FumF(val) {
+  if (val) {
+    fumetto.setAttribute("aria-hidden", "false");
+  } else {
+    fumetto.setAttribute("aria-hidden", "true");
+  }
+}
+</script>
+
+<style>
+  #fumetto {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+#fumetto:hover::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #333 transparent transparent transparent;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#fumetto:hover::after {
+  content: attr(aria-label);
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+</style>
