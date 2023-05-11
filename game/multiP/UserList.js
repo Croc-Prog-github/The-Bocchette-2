@@ -6,16 +6,13 @@ socket.send(JSON.stringify({
   username: localStorage.getItem('username')
 }));
 
-
-const socket = new WebSocket('ws://localhost:3000');
-
 // Quando l'utente accede alla pagina degli utenti online
 socket.send(JSON.stringify({
   type: 'getConnectedUsers'
 }));
 
-socket.on('message', (message) => {
-  const data = JSON.parse(message);
+socket.onmessage = (event) => {
+  const data = JSON.parse(event.data);
   switch (data.type) {
     case 'connectedUsers':
       const connectedUsers = data.users;
@@ -23,6 +20,4 @@ socket.on('message', (message) => {
       break;
     // Altri tipi di messaggi
   }
-});
-
-
+};
