@@ -31,16 +31,54 @@
 
       <div style="display: flex; flex-direction: column; justify-content: flex-start; cursor: default;">
         <hx style="padding-inline: 180px; margin-block-end: 5px; background-color: white; margin-block-start: 0px;">Giocatori online:</hx>
-        <div name="player Online" style="position: inherit; overflow-y: auto;" id="UserOnline">
-          <div style="background-color: dodgerblue; margin-inline: 5px; display: flex; flex-direction: row; justify-content: space-between; align-items: stretch; margin-top: 5px;"><x style="color: white;" id="BUser">_</x> <x title="Non disturbare" style="mix-blend-mode: darken;" id="ND">⛔</x> <button style="background: limegreen; border-style: revert; cursor: pointer;">Invita</button></div>
+        <div name="player Online" style="position: inherit; overflow: auto;" id="UserOnline">
+          <div style="background-color: dodgerblue; margin-inline: 5px; display: flex; flex-direction: row; justify-content: space-between; align-items: stretch; margin-top: 5px;"><x style="color: white;" id="BUser">_</x> <x title="Non disturbare" style="mix-blend-mode: darken;" id="ND">⛔</x> <button style="background: limegreen; border-style: revert; cursor: pointer;" id="inviteB" aria-label="Il giocatore non vuole essere disturbato">Invita</button></div>
         </div>
       </div>
     </div>
   </body>
 </html>
 
+<script> //Gestisce messaggi per l'invito
+  const inviteB = document.getElementById("inviteB");
+  ariaLabel = "Il giocatore non vuole essere disturbato";
+</script>
+<style>
+  #inviteB {
+    position: relative;
+    /*display: inline-block;*/
+    /*border-bottom: 1px dotted black;*/
+  }
+
+  #inviteB::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #333 transparent transparent transparent;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #inviteB::after {
+    content: attr(aria-label);
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>
+
 <script nonce> //Genera il tuo SessionId (non univoco)
-  
+
 </script>
 
 <script> //Inserisce il tuo username in interfacc.
