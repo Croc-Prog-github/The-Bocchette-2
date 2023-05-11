@@ -1,17 +1,13 @@
 const socket = new WebSocket('ws://localhost:3000');
 
-// Dopo aver effettuato il login dell'utente
-socket.send(JSON.stringify({
-  type: 'login',
-  username: localStorage.getItem('username')
-}));
+socket.addEventListener('open', function (event) {
+  socket.send(JSON.stringify({
+    type: 'login',
+    username: localStorage.getItem('username')
+  }));
+});
 
-// Quando l'utente accede alla pagina degli utenti online
-socket.send(JSON.stringify({
-  type: 'getConnectedUsers'
-}));
-
-socket.onmessage = (event) => {
+socket.addEventListener('message', function (event) {
   const data = JSON.parse(event.data);
   switch (data.type) {
     case 'connectedUsers':
@@ -20,4 +16,8 @@ socket.onmessage = (event) => {
       break;
     // Altri tipi di messaggi
   }
-};
+});
+
+socket.addEventListener('error', function (event) {
+  console.log('WebSocket error', event);
+});
