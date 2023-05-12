@@ -112,6 +112,23 @@
   </body>
 </html>
 
+<script> //Apri-chiudi Menù multiplayer
+  function OpnMP() {
+    const MultiP = document.getElementById("MultiP");
+    MultiP.style.display = "block";
+  }
+
+  function ClosMP() {
+    const MultiP = document.getElementById("MultiP");
+    MultiP.style.display = "none";
+
+    /* //Chiude fumetto in lista onlineUser
+    const inviteB = document.getElementById("inviteB");
+    inviteB.setAttribute("aria-label", "");
+    */
+  }
+</script>
+
 <script> // Ti rendirizza ad un evento
   function play() {
     let evento = eventS.src;
@@ -136,17 +153,6 @@
   }
 </script>
 
-<script> //Apri-chiudi Menù multiplayer
-  function OpnMP() {
-    const MultiP = document.getElementById("MultiP");
-    MultiP.style.display = "block";
-  }
-
-  function ClosMP() {
-    const MultiP = document.getElementById("MultiP");
-    MultiP.style.display = "none";
-  }
-</script>
 
 <script> //Apri-chiudi <iframe> impostazioni
   function OSett() {

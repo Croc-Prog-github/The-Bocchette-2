@@ -32,16 +32,27 @@
       <div style="display: flex; flex-direction: column; justify-content: flex-start; cursor: default;">
         <hx style="padding-inline: 180px; margin-block-end: 5px; background-color: white; margin-block-start: 0px;">Giocatori online:</hx>
         <div name="player Online" style="position: inherit; overflow: auto; height: -webkit-fill-available;" id="UserOnline">
-          <div style="background-color: dodgerblue; margin-inline: 5px; display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end; margin-top: 5px;"><x style="color: white;" id="BUser">_</x> <x title="Non disturbare" style="mix-blend-mode: darken;" id="ND">⛔</x> <button style="background: limegreen; border-style: revert; cursor: pointer;" id="inviteB" aria-label="Il giocatore non vuole essere disturbato">Invita</button></div>
+          <div style="background-color: dodgerblue; margin-inline: 5px; display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end; margin-top: 5px;"><x style="color: white;" id="BUser">_</x> <x title="Non disturbare" style="mix-blend-mode: darken;" id="ND">⛔</x> <button style="background: limegreen; border-style: revert; cursor: pointer;" id="inviteB" aria-label="" onclick="Invite();Fum();">Invita</button></div>
         </div>
       </div>
     </div>
   </body>
 </html>
 
-<script> //Gestisce messaggi per l'invito
+<script> //Gestisce fumetti per l'invito
   const inviteB = document.getElementById("inviteB");
-  ariaLabel = "Il giocatore non vuole essere disturbato";
+  function Fum() {
+    /*if (ND = 1) {
+      inviteB.setAttribute("aria-label", "Il giocatore non vuole essere disturbato");
+    }*/
+    inviteB.setAttribute("aria-label", "Server error: richesta non inviata");
+  }
+</script>
+
+<script> //Gestisce gli inviti tra i giocatori
+  function Invite() {
+
+  }
 </script>
 
 <style>
