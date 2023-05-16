@@ -10,9 +10,33 @@
     <!-- Content -->
   </head>
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad;">
+  <div style="width: 220px; background: #ffffff; z-index: 4; position: absolute; margin-bottom: 1.5%; height: 98%;" hidden id="menu">
+    <span style="font-size: xx-large; margin-inline: 43.5px">CREATIVA</span>
+      <div style=" display: flex; flex-direction: column; flex-wrap: nowrap; align-items: stretch; margin-inline: 5px; margin-top: 15%;">
+      <button style="background: lightgray; border: solid 3px gray" onclick="OSett()">Impostazioni</button>
+      <button disabled>Impostazioni isola</button>
+      <button disabled>Seleziona squadra</button>
+      <button style="background: indianred; border: solid 3px darkred" onclick="let exit=window.confirm('Sei sicuro di voler uscire?');if(exit == true){window.location.href = '/game/home.html';}">ESCI</button>
+    </div>
+  </div>
 
-    <div style="">Episodio 1</div>
+    <div>
+      <div style="">Episodio 1</div>
+    </div>
 
     
   </body>
 </html>
+
+<script> // apri/chiudi menù
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    const menuDiv = document.getElementById('menu');
+    if (menuDiv.hasAttribute('hidden')) {
+      menuDiv.removeAttribute('hidden');
+    } else {
+      menuDiv.setAttribute('hidden', true);
+    }
+  }
+});
+</script>
