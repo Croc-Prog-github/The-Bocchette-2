@@ -13,10 +13,10 @@
   </head>
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad;">
 
-    <div name="Terreno" style="">
+    <div name="Terreno" style="width: 950px; height: 700px; background-color: darkkhaki;">
 
-      <div name="Player" style="margin-top: 60px; margin-left: 20px;">
-        <div id="fumetto" aria-label="tasto E" style="margin-left: 30px; position: fixed; margin-top: -25px;">-</div>
+      <div name="Player" style="margin-top: 50px; margin-left: 20px; position: absolute;">
+        <div id="fumetto" aria-label="tasto E" style="margin-left: 30px; position: absolute; margin-top: -25px;">-</div>
         <progress style="margin-top: -25px; position: absolute; z-index: 1; width: 65px; accent-color: green;" value="100" max="100"></progress>
         <progress value="0" max="99" style="margin-top: -15px; position: absolute; z-index: 1; width: 65px;" id="YourE"></progress>
         <img src="#" style="/*position: absolute;*/ top: 50%; left: 50%;" id="player" alt="Player">
@@ -93,7 +93,8 @@ let tooltip = null;
 let text = null;
 let label = "tasto E";
 
-fumetto.style.position = "fixed";
+fumetto.style.position = "absolute";
+fumetto.style.zIndex = "1";
 fumetto.style.display = "inline-block";
 fumetto.style.borderBottom = "1px dotted black";
 
