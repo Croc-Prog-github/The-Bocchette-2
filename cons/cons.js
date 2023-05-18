@@ -1,3 +1,4 @@
+// La console non è disponibile in alcuni file .html del gioco
 function cons(pw) {
   if (pw != "Console") {
     window.alert("Password per apertura Console errata.");
@@ -19,14 +20,9 @@ function cons(pw) {
           <!DOCTYPE html>
           <html>
           <head>
-            <style>
-              body {
-                background-color: black;
-              }
-            </style>
           </head>
-          <body>
-            ${html}
+          <body style="background: black; color: white;">
+            
           </body>
           </html>
         `);
@@ -34,9 +30,7 @@ function cons(pw) {
       }
     }
   
-    const htmlContent = `A`;
-  
-    openWindow("Console", htmlContent);
+    openWindow("Console", "");
   
     return "Console_Aperta";
   }
