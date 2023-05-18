@@ -11,6 +11,7 @@
     <script src="/var.js"></script>
     <script src="/game/event/tecnic.js"></script>
     <script src="/exit.js"></script>
+    <link rel="stylesheet" href="/game/home.css">
     <!-- Muliplayer -->
     <script src="/socket.io/socket.io.js"></script>
     <script src="client.js"></script>
@@ -239,66 +240,3 @@
     updateGett();
   }, 100);
 </script>
-
-<style>
-  #invit2 {
-    position: relative;
-    /*display: inline-block;*/
-    /*border-bottom: 1px dotted black;*/
-  }
-  #invit1 {
-    position: relative;
-    /*display: inline-block;*/
-    /*border-bottom: 1px dotted black;*/
-  }
-
-  #invit2::before {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-width: 10px 10px 0 10px;
-    border-color: #333 transparent transparent transparent;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  #invit1::before {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-width: 10px 10px 0 10px;
-    border-color: #333 transparent transparent transparent;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  #invit2::after {
-    content: attr(aria-label);
-    position: absolute;
-    background-color: #333;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    white-space: nowrap;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  #invit1::after {
-    content: attr(aria-label);
-    position: absolute;
-    background-color: #333;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    white-space: nowrap;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-</style>
