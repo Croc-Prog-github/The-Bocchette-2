@@ -21,8 +21,8 @@ function cons(pw) {
           <html>
           <head>
           </head>
-          <body style="background: black; color: white;">
-            
+          <body style="background: black; color: white; font-family: monospace; pointer: url(https://static-00.iconduck.com/assets.00/cursor-pointer-mouse-icon-512x512-b5oc5bvn.png), default;">
+            A
           </body>
           </html>
         `);
