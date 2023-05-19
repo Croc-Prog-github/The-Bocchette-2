@@ -1,6 +1,6 @@
 # The-Bocchette-2
 
-Mettiti nei panni di macchine da guerra, completa la storia e gioca in Battle Royale Multiplayer per avazare nel gioco. Usa tecniche molto potenti,ma usano Energia che si ricarica col tempo. 
+Mettiti nei panni di macchine da guerra, completa la storia e gioca in Battle Royale Multiplayer per avazare nel gioco. Usa potenti tecniche che usano Energia, ricaricabile col tempo. 
 
 - Invita player online
 - Crea e pubblica mappe in Creativa,...
