@@ -12,19 +12,26 @@
   <body
     style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin-left: 20px; cursor: default;">
     <h2>Gestione Dati</h2>
-    <hx>Salva</hx>
+    
+    <div style="margin-top: 0px;">
+      <hx>Salva</hx>
+      <li>
+        <button disabled title="Questo è un account Ospite">Salva sul server</button> Server:
+        <select>
+          <option value="Express 1">Express.js - 1</option>
+          <option value="Node 1" disabled>Node.js - 1</option>
+        </select>
+      </li>
 
-    <li>
-      <button disabled title="Questo è un account Ospite">Salva sul server</button> Server:
-      <select>
-        <option value="Express 1">Express.js - 1</option>
-        <option value="Node 1" disabled>Node.js - 1</option>
-      </select>
-    </li>
+      <li>
+        <button style="background: dodgerblue; border-style: double; border-radius: 6px; color: white; cursor: pointer;">Salva sul tuo PC</button>
+      </li>
+    </div>
 
-    <li>
-      <button style="background: dodgerblue; border-style: double; border-radius: 6px; color: white; cursor: pointer;">Salva sul tuo PC</button>
-    </li>
+    <div style="margin-top: 20px;">
+      <hx>Carica</hx>
+      <li><button>Carica dal PC</button></li>
+    </div>
 
   </body>
 </html>
