@@ -21,36 +21,31 @@
       </div>
     </div>
 
-    <div style="position: absolute; z-index: 0">
-      <div style="margin-top: 10%; position: absolute; z-index: 3;" id="MinImpo" hidden>
-        <div style="padding-left: 95.5%; margin-left: 70%; background: white; ">
-          <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="CSett()">X</button>
-        </div>
-        <iframe src="/game/impo.html" frameborder="1.5" style="width: 600px; height: 400px; margin-left: 70%"></iframe>
-      </div>
-
-      <div name="float island" style="background-image: url(https://docs.google.com/drawings/d/e/2PACX-1vRWUZLeo8-c8Nl2rzezCFAMd93CXLX4z-JQBV9z9TI_XolyqFK8unXW052nve0xH44SaFHekNs3UxqH/pub?w=1096&h=516); width: 1095px; height: 516px;">
-
-        <div name="Player" style="margin-top: 50px; margin-left: 20px; position: absolute;">
-          <img src="" alt="Player" style="position: relative; top: 50%; left: 50%;" id="player">
-          <div id="fumetto" aria-label="tasto E" style="margin-left: 30px; position: revert; margin-top: -25px;">-</div>
-          <div name="mire" id="mire" hidden>
-            <div name="miraE" style="background-color: #d6d6d6cc; width: 150px; height: 30px; rotate: 43deg; transform-origin: left; margin-top: -30px;margin-left: 20px;" id="miraE"></div>
-            <div name="miraF" style="" id="miraF"></div>
-          </div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWH_9ZNi6PFSgneXu9NvCXG71x77JwqrHDdQ&usqp=CAU" alt="" style="margin-top: 3%;margin-left: 30%; width: 600px;">
+    <div style="width: 454px; height: 290px; position: absolute; margin-top: -557px; margin-left: 529px; cursor: -webkit-grab; background: dodgerblue;">
+      <div style="display: flex; justify-content: center;">C:\User\Player\Creativa\Home</div>
+      <div style="margin-top: 10px; display: flex; justify-content: space-evenly;">
+        <div style="display: flex; flex-direction: column; align-items: center;" onclick="">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="yellow" width="4em" height="4em">
+            <path d="M6.56 2.48H2.24c-.8 0-1.44.64-1.44 1.44v8.64c0 .79.65 1.44 1.44 1.44h11.52c.79 0 1.44-.65 1.44-1.44v-7.2c0-.8-.65-1.44-1.44-1.44H8L6.56 2.48z"></path>
+          </svg>
+          <hx>Mappe <br> personali</hx>
         </div>
 
+        <div style="display: flex; flex-direction: column; align-items: center;" onclick="">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="yellow" width="4em" height="4em">
+            <path d="M6.56 2.48H2.24c-.8 0-1.44.64-1.44 1.44v8.64c0 .79.65 1.44 1.44 1.44h11.52c.79 0 1.44-.65 1.44-1.44v-7.2c0-.8-.65-1.44-1.44-1.44H8L6.56 2.48z"></path>
+          </svg>
+          <hx>Esplora</hx>
+        </div>
       </div>
-
-      <img src="" alt="La fonte non è disponibile" name="portal" style="position: absolute; z-index: 2; margin-top: -395px; margin-left: 585px;">
-
-      <img src="https://docs.google.com/drawings/d/e/2PACX-1vQWjpgoDtgc_wKaOhOq2GgOm_-XqSNS8zmkPvkqwku38r5Fh3spTChn_bS4wRnDHdPdzMz_4P2Kt0BI/pub?w=50&amp;h=50" alt="La fonte non è disponibile">
     </div>
+
   </body>
 </html>
 
 <script> //Prevede mira in base a tecniche selezionate (tiene premuto tasto sinistro mouse + frecce < o > [per scorrere le tecniche, viste in un fumetto])
-  let mire = document.getElementById("mire");
+  /* let mire = document.getElementById("mire");
   let fumetto = document.getElementById("fumetto");
   let isMouseDown = false;
   let tooltip = null;
@@ -126,7 +121,7 @@
     } else {
       fumetto.setAttribute("aria-hidden", "true");
     }
-  }
+  } */
 </script>
 
 <script> //Apri <iframe> impostazioni
