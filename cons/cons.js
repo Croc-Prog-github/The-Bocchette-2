@@ -21,7 +21,7 @@ function cons(pw) {
           <html>
           <head>
           </head>
-          <body style="background: black; color: white; font-family: monospace; cursor: url('/cons/cursor-console.png'), auto;">
+          <body style="background: black; color: white; font-family: monospace; cursor: url(/cons/cursor-console.png), auto;">
             A
           </body>
           </html>
