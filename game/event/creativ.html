@@ -21,7 +21,15 @@
       </div>
     </div>
 
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWH_9ZNi6PFSgneXu9NvCXG71x77JwqrHDdQ&usqp=CAU" alt="" style="margin-top: 3%;margin-left: 30%; width: 600px;">
+    <div style="position: absolute; z-index: 0">
+      <div style="margin-top: 10%; position: absolute; z-index: 3;" id="MinImpo" hidden>
+      <div style="padding-left: 95.5%; margin-left: 70%; background: white; ">
+        <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="CSett()">X</button>
+      </div>
+      <iframe src="/game/impo.html" frameborder="1.5" style="width: 600px; height: 400px; margin-left: 70%"></iframe>
+    </div>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWH_9ZNi6PFSgneXu9NvCXG71x77JwqrHDdQ&usqp=CAU" alt="" style="margin-top: 3%; margin-left: 76%; width: 600px;">
     <div style="width: 454px; height: 290px; position: absolute; margin-top: -557px; margin-left: 529px; cursor: -webkit-grab; background: dodgerblue;">
       <div style="display: flex; justify-content: center;">C:\User\Player\Creativa\Home</div>
       <div style="margin-top: 10px; display: flex; justify-content: space-evenly;">
@@ -29,7 +37,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="yellow" width="4em" height="4em">
             <path d="M6.56 2.48H2.24c-.8 0-1.44.64-1.44 1.44v8.64c0 .79.65 1.44 1.44 1.44h11.52c.79 0 1.44-.65 1.44-1.44v-7.2c0-.8-.65-1.44-1.44-1.44H8L6.56 2.48z"></path>
           </svg>
-          <hx>Mappe <br> personali</hx>
+          <hx>Mappe personali</hx>
         </div>
 
         <div style="display: flex; flex-direction: column; align-items: center;" onclick="">
@@ -43,86 +51,6 @@
 
   </body>
 </html>
-
-<script> //Prevede mira in base a tecniche selezionate (tiene premuto tasto sinistro mouse + frecce < o > [per scorrere le tecniche, viste in un fumetto])
-  /* let mire = document.getElementById("mire");
-  let fumetto = document.getElementById("fumetto");
-  let isMouseDown = false;
-  let tooltip = null;
-  let text = null;
-  let label = "tasto E";
-  
-  fumetto.style.position = "absolute";
-  fumetto.style.zIndex = "1";
-  fumetto.style.display = "inline-block";
-  fumetto.style.borderBottom = "1px dotted black";
-  
-  document.addEventListener('mousedown', (event) => {
-    if (event.button === 0) { // tasto sinistro del mouse
-      isMouseDown = true;
-      FumF(true);
-      mire.hidden = false;
-  
-      // Crea il tooltip solo se non esiste già
-      if (!tooltip) {
-        tooltip = document.createElement("div");
-        tooltip.style.content = "";
-        tooltip.style.position = "absolute";
-        tooltip.style.borderStyle = 'solid';
-        tooltip.style.borderWidth = "10px 10px 0 10px";
-        tooltip.style.borderColor = "#333 transparent transparent transparent";
-        tooltip.style.bottom = "100%";
-        tooltip.style.left = "50%";
-        tooltip.style.transform = "translateX(-50%)";
-        fumetto.appendChild(tooltip);
-  
-        text = document.createElement("div");
-        text.innerText = label;
-        text.style.position = "absolute";
-        text.style.backgroundColor = "#333";
-        text.style.color = "#fff";
-        text.style.padding = "5px";
-        text.style.borderRadius = "5px";
-        text.style.fontSize = "14px";
-        text.style.fontWeight = "bold";
-        text.style.whiteSpace = "nowrap";
-        text.style.bottom = "120%";
-        text.style.left = "50%";
-        text.style.transform = "translateX(-50%)";
-        fumetto.appendChild(text);
-      }
-    }
-  });
-  
-  document.addEventListener('mouseup', () => {
-    isMouseDown = false;
-    FumF(false);
-    mire.hidden = true;
-  
-    // Rimuovi il tooltip quando viene rilasciato il tasto sinistro
-    if (tooltip) {
-      fumetto.removeChild(tooltip);
-      fumetto.removeChild(text);
-      tooltip = null;
-      text = null;
-    }
-  });
-  
-  document.addEventListener('keydown', (event) => {
-    if (isMouseDown && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
-      label = label === "tasto E" ? "tasto F" : "tasto E";
-      text.innerText = label;
-    }
-  });
-  
-  function FumF(val) {
-    if (val) {
-      fumetto.setAttribute("aria-hidden", "false");
-    } else {
-      fumetto.setAttribute("aria-hidden", "true");
-    }
-  } */
-</script>
 
 <script> //Apri <iframe> impostazioni
   function OSett() {
@@ -147,8 +75,4 @@
       }
     }
   });
-</script>
-
-<script> //Muoviti nella mappa
-  
 </script>
