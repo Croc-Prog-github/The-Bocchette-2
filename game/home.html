@@ -179,11 +179,15 @@
 
     // Crea il div quando il menù è aperto
     let newDiv = document.createElement("div");
+    /*
     newDiv.style.width = "150px";
     newDiv.style.paddingBlock = "230px";
     newDiv.style.background = "black";
     newDiv.style.marginTop = "-255px";
     newDiv.style.marginBottom = "9vh";
+    */
+
+    newDiv.innerHTML = '<div style="width: 150px;height: 460px;background: black;margin-top: -300px;margin-bottom: 15vh;"><button style="margin-left: 20px;margin-top: 15px;">Gestione dati</button><button style="margin-left: 20px;margin-top: 15px;">Guida e assistenza</button><button style="margin-left: 20px;margin-top: 15px;">Modalità di gioco</button></div>';
     // Inserisce il nuovo div all'interno di M_princ
     mPrinc.appendChild(newDiv);
 
