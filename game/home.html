@@ -187,7 +187,7 @@
     newDiv.style.marginBottom = "9vh";
     */
 
-    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -296px; margin-bottom: 15vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch;"><button style="margin-inline: 10px; margin-top: 15px;" onclick="window.location.href = onclick="rend(1)">Gestione dati</button><button style="margin-top: 15px;margin-inline: 10px;">Guida e assistenza</button><button style="margin-inline: 10px;margin-top: 15px;">Modalità di gioco</button></div>';
+    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -296px; margin-bottom: 15vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch;"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button></div>';
     // Inserisce il nuovo div all'interno di M_princ
     mPrinc.appendChild(newDiv);
 
@@ -201,6 +201,12 @@
     switch (n) {
       case 1:
         window.location.href = '/game/menù/GestDat.html';
+      break;
+      case 2:
+        window.location.href = '/game/menù/GuidAss.html';
+      break;
+      case 3:
+        window.location.href = '/game/menù/MoodGame.html';
       break;
     }
   }
