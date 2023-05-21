@@ -6,6 +6,7 @@
 PRIORITARI
 1. Continuare il multiplyer
 2. Completare la prevenzione mira in sopravivenza e aggiornare il div Player in Creativa (dato che arriverà pure lì la prevenzione mira)
+3. Completare eventi dentro le Modalità di gioco
 
 COMPLETATI
 1. Fare il window.confirm per chiedere se uscendo dalla pagina vuole perdere il progresso. X

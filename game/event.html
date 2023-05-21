@@ -17,11 +17,11 @@
   </div>
 
   <div style="display:flex; flex-direction: row; margin-top: 20px;" name="events">
-    <img src="https://docs.google.com/drawings/d/e/2PACX-1vTzKzhT7XZeejUPjRKjRXFYAn3cO00DUf9_A_qO6yc1v7vOeRWL3yl8l9Rr7ztyxeu1DaCQtItO3cl6/pub?w=308&h=102" alt="La fonte non è disponibile" onclick="Se()" name="creativa">
+    <img src="https://docs.google.com/drawings/d/e/2PACX-1vThkYugncXnRrRbAC7ZgdpfKWX2xPDCN_YtkG78Gd4BCEz2D7gCjIrFjaA40TTkpxXoFnNFjq0jP9Cy/pub?w=308&h=102" alt="La fonte non è disponibile" onclick="Se()" id="event">
     
-    <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY5rVGGwFbGX5XBXOTvVzchOT3Ns1WlJVmbP72yYtGgz_f5qv4CCcEDor5Wss2sgDiVhW9lBXlI9wt/pub?w=308&h=102" alt="La fonte non è disponibile" onclick="Se()" name="Sopravvivenza">
+    <img src="" alt="La fonte non è disponibile" onclick="Se()">
 
-    <img src="https://docs.google.com/drawings/d/e/2PACX-1vSH4Gf2hrfwuAf3VJeJ8cIN9kVLz6gWLHYAa4MX52p-6dqU3Ny97Q6BiFIsWLd63d6XU1aJ_MF4SG5v/pub?w=309&h=102" alt="La fonte non è disponibile" onclick="Se()">
+    <img src="" alt="La fonte non è disponibile" onclick="Se()">
   </div>
 
 
@@ -29,11 +29,17 @@
 </html>
 
 <script> //Seleziona Evento
-  let elementS; //Evento selezionato
+  let event;
   function Se() {
-    elementS = event.target.src;
-    console.info("L'evento cliccato ha scr: " + elementS);
-    localStorage.setItem("elementS", elementS); // Memorizza la variabile nello storage locale
+    event = document.getElementById("event").src;
+    console.info("L'evento cliccato ha scr: " + event);
+    localStorage.setItem("event", event); // Memorizza l'URL in Local-Storage
     window.location.href = '/game/home.html'; // Reindirizza all'altra pagina
+  }
+</script>
+
+<script> //Cambia gli scr degli eventi in base alla GameMood (Non necessario da completare: esiste solo 1 GameMood con >1 evento)
+  if (localStorage.getItem("GameMood") ===  "https://docs.google.com/drawings/d/e/2PACX-1vRY5rVGGwFbGX5XBXOTvVzchOT3Ns1WlJVmbP72yYtGgz_f5qv4CCcEDor5Wss2sgDiVhW9lBXlI9wt/pub?w=308&h=102") {
+    event = document.getElementById("event").scr;
   }
 </script>

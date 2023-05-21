@@ -133,20 +133,12 @@
 
 <script> // Ti rendirizza ad un evento
   function play() {
-    let evento = eventS.src;
+    let evento = localStorage.getItem("event");
     console.info("L'evento giocato è: " + evento);
     switch(evento){
-      case "https://docs.google.com/drawings/d/e/2PACX-1vTzKzhT7XZeejUPjRKjRXFYAn3cO00DUf9_A_qO6yc1v7vOeRWL3yl8l9Rr7ztyxeu1DaCQtItO3cl6/pub?w=308&h=102":
-        console.info("Reindirizzo all'evento: Creativa");
-        window.location.href = '/game/event/creativ.html';
-      break;
-      case "https://docs.google.com/drawings/d/e/2PACX-1vRY5rVGGwFbGX5XBXOTvVzchOT3Ns1WlJVmbP72yYtGgz_f5qv4CCcEDor5Wss2sgDiVhW9lBXlI9wt/pub?w=308&h=102":
-        console.info("Reindirizzo all'evento: Sopravvivenza");
+      case "https://docs.google.com/drawings/d/e/2PACX-1vThkYugncXnRrRbAC7ZgdpfKWX2xPDCN_YtkG78Gd4BCEz2D7gCjIrFjaA40TTkpxXoFnNFjq0jP9Cy/pub?w=308&h=102":
+        console.info("Reindirizzo all'evento: Sopravvivenza Singolo");
         window.location.href = '/game/event/sopr.html';
-      break;
-      case "https://docs.google.com/drawings/d/e/2PACX-1vSH4Gf2hrfwuAf3VJeJ8cIN9kVLz6gWLHYAa4MX52p-6dqU3Ny97Q6BiFIsWLd63d6XU1aJ_MF4SG5v/pub?w=309&h=102":
-        console.info("Reindirizzo modalità di gioco: Storia");
-        window.location.href = '/game/event/story.html';
       break;
       default:
         console.error("Reindirizzamento ad un evento fallito!")
@@ -196,7 +188,7 @@
   }
 </script>
 
-<script>
+<script> //Reidirizza alle voci del menù
   function rend(n) {
     switch (n) {
       case 1:
@@ -212,10 +204,10 @@
   }
 </script>
 
-<script> //Riceve il elementS dal local storage (per gli eventi)
-  let elemento = document.querySelector("#eventS"); // Seleziona l'elemento in cui vuoi inserire la variabile
-  let elementS = localStorage.getItem("elementS"); // Recupera la variabile dal storage locale
-  elemento.src = elementS; // Assegna la variabile all'elemento
+<script> //Riceve il event dal local storage (per gli eventi)
+  let elemento = document.getElementById("eventS"); // Seleziona l'elemento in cui vuoi inserire la variabile
+  let event = localStorage.getItem("event"); // Recupera la variabile dal storage locale
+  elemento.src = event; // Assegna la variabile all'elemento
 </script>
 
 <script> //Aggiorna le gemme
