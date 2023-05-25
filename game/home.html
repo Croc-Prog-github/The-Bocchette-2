@@ -56,7 +56,7 @@
       <div style="margin-right: 15px; display: grid; align-content: center; justify-items: center;">
         Seleziona Tecnica per tasto E
         <br>
-        <select id="Tecnic1" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; outline-style: outset; border-right: outset;text-align: center;">
+        <select id="Tecnic1" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; /*outline-style: outset;*/ border-right: outset;text-align: center;">
           <option value="dispersione">dispersione</option>
           <option value="taglio netto">taglio netto</option>
           <option value="super taglio netto">super taglio netto</option>
@@ -67,7 +67,7 @@
       <div style="margin-right: 15px; display: grid; align-content: center; justify-items: center;">
         Seleziona Tecnica per tasto F
         <br>
-        <select id="Tecnic2" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; outline-style: outset; border-right: outset;text-align: center;">
+        <select id="Tecnic2" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; /*outline-style: outset;*/ border-right: outset;text-align: center;">
           <option value="taglio netto">taglio netto</option>
           <option value="dispersione">dispersione</option>
           <option value="super taglio netto">super taglio netto</option>
@@ -179,7 +179,7 @@
     newDiv.style.marginBottom = "9vh";
     */
 
-    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -296px; margin-bottom: 15vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch;"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button></div>';
+    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -296px; margin-bottom: 15vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; z-index: 1; position: relative"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button></div>';
     // Inserisce il nuovo div all'interno di M_princ
     mPrinc.appendChild(newDiv);
 
