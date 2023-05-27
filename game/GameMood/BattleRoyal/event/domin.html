@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <script>//alert("L'imput dalla tastiera è abilitato.");</script>
+    <title>The Bocchette - Dominio</title>
+    <!-- START <meta> -->
+    <meta charset="UTF-8">
+    <!-- END <meta> -->
+
+    <!-- Content -->
+    <script src="/cons/cons.js"></script>
+    <script src="/game/event/tecnic.js"></script>
+    <!-- <script src="/game/event/mira.js"></script> -->
+  </head>
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad;">
+
+    <div name="Terreno" style="width: 950px; height: 700px; background-color: darkkhaki;">
+
+      <div name="Player" style="margin-top: 50px; margin-left: 20px; position: absolute;">
+        <div id="fumetto" aria-label="tasto E" style="margin-left: 30px; position: absolute; margin-top: -25px;">-</div>
+        <progress style="margin-top: -25px; position: absolute; z-index: 1; width: 65px; accent-color: green;" value="100" max="100"></progress>
+        <progress value="0" max="99" style="margin-top: -15px; position: absolute; z-index: 1; width: 65px;" id="YourE"></progress>
+        <img src="#" style="/*position: absolute;*/ top: 50%; left: 50%;" id="player" alt="Player">
+        <div name="mire" id="mire" hidden>
+          <div name="miraE" style="background-color: #d6d6d6cc; width: 150px; height: 30px; rotate: 43deg; transform-origin: left; margin-top: -30px;margin-left: 20px;" id="miraE"></div>
+          <div name="miraF" style="" id="miraF"></div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
