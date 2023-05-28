@@ -5,3 +5,4 @@ Le Bocchette sono i personaggi principali, ogniuno può avere 2 Tecniche persona
 
 EVOLUZIONI DELLE BOCCHETTE
 Per qualsiasi Bocchetta quando usa una tecnica consuma dell'Energia, l'energia massima accumulabile (nella evoluzione: Normale) è di 100. Ma con l'uso di Tecniche di rarità maggiore, esse richedono maggiore energia. Per aumentare la quantità di Energia massima accumulabile è necessaria l'evoluzione delle singole Bocchette. Facendo evolvere le Bocchette potrai sbloccare anche Tecniche che richedono maggiore Enerigia, quindi quelle più rare.
+
