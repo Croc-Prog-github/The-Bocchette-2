@@ -36,7 +36,7 @@
       </svg>
 
       <svg style="height: 1466px; width: 50px; margin-top: -90.8em; margin-left: 25px;">
-        <g transform="translate(26,1450)" onclick="">
+        <g transform="translate(26,1450)" onclick="Tast()">
           <path fill="white" d="M15.5 4h-13C1.67 4 1 4.67 1 5.5v7c0 .83.67 1.5 1.5 1.5h13c.83 0 1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm0 8.5h-13v-7h13v7z"></path><path fill="white" d="M6 10.5h6V12H6zM4 6h1.5v1.5H4zm2.12 0h1.5v1.5h-1.5zm2.13 0h1.5v1.5h-1.5zm2.13 0h1.5v1.5h-1.5zm2.12 0H14v1.5h-1.5zM4 8h1.5v1.5H4zm2.12 0h1.5v1.5h-1.5zm2.13 0h1.5v1.5h-1.5zm2.13 0h1.5v1.5h-1.5zm2.12 0H14v1.5h-1.5z"></path>
         </g>
       </svg>
@@ -87,6 +87,21 @@
           <option value="block">Blocca</option>
         </select>
       </div>
+
+
+      <div style="" name="Imps.Tasti" id="impTast" hidden>
+        <div name="ESCI">
+          <hx>Menù di gioco</hx>
+          <select>
+            <option value="esc">Esc</option>
+            <option value="ctrl">Ctrl</option>
+            <option value="alt">Alt</option>
+            <option value="altGr">Alt Gr</option>
+            <option value="shift">Shift</option>
+          </select>
+        </div>
+      </div>
+
     </div>
 
     <p></p>
@@ -144,20 +159,30 @@
   let acces = document.getElementById("acces");
   let vid = document.getElementById("vid");
   let impSit = document.getElementById("impSit");
+  let impTast = document.getElementById("impTast");
   function Acess() {
     vid.hidden = true;
     impSit.hidden = true;
     acces.hidden = false;
+    impTast.hidden = true;
   }
   function Video() {
     vid.hidden = false;
     impSit.hidden = true;
     acces.hidden = true;
+    impTast.hidden = true;
   }
   function ImpSit() {
     vid.hidden = true;
     impSit.hidden = false;
     acces.hidden = true;
+    impTast.hidden = true;
+  }
+  function Tast() {
+    vid.hidden = true;
+    impSit.hidden = true;
+    acces.hidden = true;
+    impTast.hidden = false;
   }
 </script>
 
