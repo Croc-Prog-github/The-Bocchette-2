@@ -126,7 +126,7 @@ function taglio_netto() { //definisce comportamento di tecnic: taglio netto
       const angle = Math.atan2(mouseY - taglioNettoY, mouseX - taglioNettoX) * (180 / Math.PI);
 
       // Imposta la proprietà CSS 'transform' del div "taglio_netto" per ruotarlo in base all'angolazione
-      taglioNetto.style.transform = `rotate(${-angle}deg)`;
+      taglioNetto.style.transform = `rotate(${angle}deg)`;
     });
   }
 }
