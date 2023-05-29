@@ -2,10 +2,10 @@
 2. Fare le missioni del pass.
 3. Fare gli obbiettivi conquistati nel pass.
 4. Fare la riproduzione delle tecniche in tecnic.js
+5. Continuare la nuova Creativa
 
 PRIORITARI
 1. Continuare il multiplyer
-2. Completare la prevenzione mira in sopravivenza e aggiornare il div Player in Creativa (dato che arriverà pure lì la prevenzione mira)
 3. Completare eventi dentro le Modalità di gioco
 
 COMPLETATI

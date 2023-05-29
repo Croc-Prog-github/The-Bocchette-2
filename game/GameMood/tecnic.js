@@ -81,6 +81,7 @@ function EsecTecnic(tecnic2) { //Riproduce tecnica per slot tecnic2
     case 'super taglio netto':
       if (Energy.value >= 50) {
         Energy.value -= 50;
+
       } else {
         console.log('Energia insufficente');
       }
@@ -94,6 +95,23 @@ function taglio_netto() { //definisce comportamento di tecnic: taglio netto
   if (!document.getElementById('taglio_netto')) {
     console.debug("L' elemento: <div id='taglio_netto' style='width: 5px; height: 2cm; border-radius: 8px; position: relative; background: #1E90FF;'></div> non è presente nel DOM");
   } else {
-    //
+    //Usa la tecnica e gestisce il suo comportamento
+    // Ottieni le coordinate dell'elemento con id "player"
+    const player = document.getElementById("player");
+    const playerRect = player.getBoundingClientRect();
+    const playerX = playerRect.left;
+    const playerY = playerRect.top;
+
+    // Posiziona il div con id "taglio_netto" nelle stesse coordinate del player
+    const taglioNetto = document.getElementById("taglio_netto");
+    taglioNetto.style.position = "absolute";
+    taglioNetto.style.left = playerX + "px";
+    taglioNetto.style.top = playerY + "px";
+    
+    //Mostra taglioNetto
+    taglioNetto.hidden = false;
+
+    
+
   }
 }
