@@ -111,7 +111,22 @@ function taglio_netto() { //definisce comportamento di tecnic: taglio netto
     //Mostra taglioNetto
     taglioNetto.hidden = false;
 
-    
+    // Aggiungi l'evento 'mousemove' all'intero documento
+    document.addEventListener("mousemove", function(event) {  
+      // Calcola le coordinate del punto di riferimento del div "taglio_netto"
+      const taglioNettoRect = taglioNetto.getBoundingClientRect();
+      const taglioNettoX = taglioNettoRect.left + taglioNettoRect.width / 2;
+      const taglioNettoY = taglioNettoRect.top + taglioNettoRect.height / 2;
 
+      // Calcola le coordinate del mouse
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+
+      // Calcola l'angolazione tra il punto di riferimento del div "taglio_netto" e la posizione corrente del mouse
+      const angle = Math.atan2(mouseY - taglioNettoY, mouseX - taglioNettoX) * (180 / Math.PI);
+
+      // Imposta la proprietà CSS 'transform' del div "taglio_netto" per ruotarlo in base all'angolazione
+      taglioNetto.style.transform = `rotate(${-angle}deg)`;
+    });
   }
 }
