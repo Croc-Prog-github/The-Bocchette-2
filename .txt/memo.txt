@@ -6,7 +6,8 @@
 
 PRIORITARI
 1. Continuare il multiplyer
-3. Completare eventi dentro le Modalità di gioco
+2. Completare eventi dentro le Modalità di gioco
+3. Completare le tecniche in sopravivenza
 
 COMPLETATI
 1. Fare il window.confirm per chiedere se uscendo dalla pagina vuole perdere il progresso. X
