@@ -199,19 +199,3 @@ function FumF(val) {
   transform: translateX(-50%);
 }
 </style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Disabilita il pulsante di ricaricamento della pagina
-    disableReloadButton();
-  });
-
-  function disableReloadButton() {
-    if (window.history.replaceState) {
-      window.history.replaceState(null, null, window.location.href);
-      window.addEventListener("beforeunload", function() {
-        window.history.pushState(null, null, window.location.href);
-      });
-    }
-  }
-</script>
