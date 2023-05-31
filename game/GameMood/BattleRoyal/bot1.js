@@ -4,11 +4,11 @@ let bot1 = document.getElementById("bot1");
 
 //Rileva la sua vita
 let vitaBot1 = document.getElementById("vita_bot1").value;
-if(vitaBot1 > 0) {
+if (vitaBot1 > 0) {
   bot1.hidden = false;
 
-  //inizia a cercare power-up
-  //...
+  //Cerca attorno a sè power-up
+
 } else {
   bot1.hidden = true;
 }
