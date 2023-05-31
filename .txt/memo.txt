@@ -8,6 +8,7 @@ PRIORITARI
 1. Continuare il multiplyer
 2. Completare eventi dentro le Modalità di gioco
 3. Completare le tecniche in sopravivenza
+4. Continuare il Bot1 in sopravvivenza
 
 COMPLETATI
 1. Fare il window.confirm per chiedere se uscendo dalla pagina vuole perdere il progresso. X
