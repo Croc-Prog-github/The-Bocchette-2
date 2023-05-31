@@ -8,7 +8,7 @@ if (vitaBot1 > 0) {
   bot1.hidden = false;
 
   //Cerca attorno a sè power-up
-
+  
 } else {
   bot1.hidden = true;
 }
