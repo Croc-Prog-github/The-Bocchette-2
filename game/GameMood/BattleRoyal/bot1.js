@@ -10,11 +10,11 @@ if (vitaBot1 == vitaBot1) {
 
   //Cerca attorno a sè power-up
     bot1 = document.getElementById("bot1");
-    const pwupElement = document.getElementById("PwUP");
+    const PwUP = document.getElementById("PwUP");
 
-    if (bot1 && pwupElement) {
+    if (bot1 && PwUP) {
       const botRect = bot1.getBoundingClientRect();
-      const pwupRect = pwupElement.getBoundingClientRect();
+      const pwupRect = PwUP.getBoundingClientRect();
 
       const distance = getDistance(botRect, pwupRect);
 
