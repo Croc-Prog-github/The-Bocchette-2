@@ -4,7 +4,7 @@ let bot1 = document.getElementById("bot1");
 
 
 //Rileva la sua vita
-let vitaBot1 = document.getElementById('vita_bot1').;
+const vitaBot1 = document.getElementById('vita_bot1');
 if (vitaBot1 > 0) {
   bot1.hidden = false;
 
