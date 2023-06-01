@@ -4,12 +4,11 @@ let bot1 = document.getElementById("bot1");
 
 
 //Rileva la sua vita
-let vitaBot1 = document.getElementById('vita_bot1');
+let vitaBot1 = document.getElementById('vita_bot1').value; //è un progress
 if (vitaBot1 == vitaBot1) {
   bot1.hidden = false;
 
   //Cerca attorno a sè power-up
-    bot1 = document.getElementById("bot1");
     const PwUP = document.getElementById("PwUP");
 
     if (bot1 && PwUP) {
