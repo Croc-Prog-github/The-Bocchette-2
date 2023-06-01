@@ -5,7 +5,7 @@ let bot1 = document.getElementById("bot1");
 
 //Rileva la sua vita
 let vitaBot1 = document.getElementById('vita_bot1');
-if (vitaBot1.value > 0) {
+if (vitaBot1 == vitaBot1) {
   bot1.hidden = false;
 
   //Cerca attorno a sè power-up
