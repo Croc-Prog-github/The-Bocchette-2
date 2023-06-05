@@ -17,7 +17,7 @@ if (vitaBot1 === vitaBot1) {
     const pwupRect = PwUP.getBoundingClientRect();
     const distance = getDistance(botRect, pwupRect);
 
-    if (distance <= 100) {
+    if (distance <= 500) {
       console.log("Il div PwUP è all'interno del raggio di 100px da bot1.");
     } else {
       console.log("Il div PwUP non è all'interno del raggio di 100px da bot1.");
