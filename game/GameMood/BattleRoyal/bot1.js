@@ -1,12 +1,9 @@
 let bot1 = document.getElementById("bot1");
 
-//Sceglie la Bocchetta e la sua evoluzione in base al rango della partita
+// Rileva la vita
+let vitaBot1 = document.getElementById('vita_bot1').value; // è un progress
 
-
-//Rileva la sua vita
-let vitaBot1 = document.getElementById('vita_bot1').value; //è un progress
-
-if (vitaBot1 === vitaBot1) {
+if (vitaBot1 === "100") {
   bot1.hidden = false;
   
   // Cerca attorno a sé un power-up
@@ -17,7 +14,7 @@ if (vitaBot1 === vitaBot1) {
     const pwupRect = PwUP.getBoundingClientRect();
     const distance = getDistance(botRect, pwupRect);
 
-    if (distance <= 500) {
+    if (distance <= 100) {
       console.log("Il div PwUP è all'interno del raggio di 100px da bot1.");
     } else {
       console.log("Il div PwUP non è all'interno del raggio di 100px da bot1.");
