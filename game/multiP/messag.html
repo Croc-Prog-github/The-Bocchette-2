@@ -10,11 +10,11 @@
     <!-- Content -->
   </head>
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, 'monospace', 'math', 'cursive';background-color: #316f87;">
-    <div style="display: flex; flex-direction: row; justify-content: flex-start;">
-      <a href="/game/multiP/onlineUser.html" style="text-decoration: none; font-size: 25px; border: solid 2px black; background: #316f87;" title="Indietro">⬅️</a>
-    </div>
+    
 
-    <div style="display: flex; flex-direction: row; justify-content: center; cursor: default; margin-top: -37px; background: forestgreen; padding-block: 1px; color: white;">
+    <div style="display: flex;flex-direction: row;justify-content: center;cursor: default;margin-top: 0px;background: forestgreen;padding-block: 1px;color: white;">
+      <a href="/game/multiP/onlineUser.html" style="text-decoration: none; font-size: 25px; border: solid 2px black; background: #316f87; position: absolute; left: 8px;top: 8px;" title="Indietro">⬅️</a>
+
       <hx id="evid" style="background: mediumseagreen;">Chat</hx><br>
       <hx id="evid">Amici fidati</hx><br>
       <hx id="evid">Amici</hx><br>
@@ -27,9 +27,23 @@
         <em>~A</em>
       </div>
     </div>
-
   </body>
 </html>
+
+
+<style>
+  #evid {
+    padding-block: 8px;
+    padding-inline: 7%;
+    background: forestgreen;
+  }
+  #evid:hover {
+    padding-block: 8px;
+    padding-inline: 7%; /*11px*/
+    background: mediumseagreen;
+  }
+</style>
+
 
 <style>
   #evid {
