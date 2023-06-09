@@ -179,7 +179,7 @@
     newDiv.style.marginBottom = "9vh";
     */
 
-    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -296px; margin-bottom: 15vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; z-index: 1; position: relative"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button></div>';
+    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -296px; margin-bottom: 15vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; z-index: 1; position: relative"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button><button onclick="rend(4)" style="margin-inline: 10px; margin-top: 15px;">Leave feedback</button></div>';
     // Inserisce il nuovo div all'interno di M_princ
     mPrinc.appendChild(newDiv);
 
@@ -199,6 +199,9 @@
       break;
       case 3:
         window.location.href = '/game/menu/MoodGame.html';
+      break;
+      case 4:
+        window.location.href = 'https://github.com/Croc-Prog-github/The-Bocchette-2/discussions/new?category=feedback';
       break;
     }
   }
