@@ -8,10 +8,10 @@
     <!-- END <meta> -->
 
     <!-- Content -->
-    <script src="/game/GameMood/BattleRoyal/bot1.js"></script>
     <script src="/cons/cons.js"></script>
     <script src="/game/GameMood/tecnic.js"></script>
-    <!-- <script src="/game/event/mira.js"></script> -->
+    <script src="/game/event/mira.js"></script>
+    <!-- I Bots's script declare sono alla fine di <body> -->
   </head>
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; overflow: hidden;">
 
@@ -31,9 +31,9 @@
       <div name="Bot1" style="margin-top: 50px; margin-left: 150px; position: absolute;" id="bot1">
         <progress style="margin-top: -15px; position: absolute; z-index: 1; width: 65px; accent-color: green;" value="100" max="100" id="vita_bot1"></progress>
         <img src="#" style="/*position: absolute;*/ top: 50%; left: 50%;" alt="Bot1">
-
-     <div name="power-up" id="PwUP" style="background-image: url(https://docs.google.com/drawings/d/e/2PACX-1vRBSajVjm8pCR-tiwKCiXW0tp3x6O8L2jJYRIQb2WGZNrHP_njlpTcTtJBaZOlqAKBCaKV-h5UQhmHl/pub?w=960&h=720); width: 60px; height: 60px; background-size: cover; image-rendering: -webkit-optimize-contrast; margin-top: inherit; margin-left: inherit;"></div>
       </div>
+
+      <div name="power-up" id="PwUP" style="background-image: url(https://docs.google.com/drawings/d/e/2PACX-1vRBSajVjm8pCR-tiwKCiXW0tp3x6O8L2jJYRIQb2WGZNrHP_njlpTcTtJBaZOlqAKBCaKV-h5UQhmHl/pub?w=960&h=720); width: 60px; height: 60px; background-size: cover; image-rendering: -webkit-optimize-contrast; position: absolute; top: 82px; left: 230px;"></div>
       
       <div name="tecnic">
         <div id="taglio_netto" style="background: url(https://docs.google.com/drawings/d/e/2PACX-1vRmI7KjnDx_uvg6KZyxEibN-523LxExHFJ-tPGdGg-KVp83nCCEUfkWl6u198uH4FkrtNvzFcaWX_Ld/pub?w=138&h=55); width: 60px; height: 25px; background-size: cover;"></div>
@@ -44,6 +44,8 @@
 
     </div>
 
+    <!-- Bots src script -->
+    <script src="/game/GameMood/BattleRoyal/bot1.js"></script>
   </body>
 </html>
 
