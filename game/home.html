@@ -42,7 +42,6 @@
       <button name="shop" onclick="window.location.href = '/game/shop.html';">Negozio</button>
       <button name="bocch" onclick="window.location.href = '/game/MenuBocch/SelectBocch.html';">Seleziona Bocchetta</button>
       <button name="miss" onclick="window.location.href = '/game/pass/miss.html';">Missioni</button>
-      <button name="impo" onclick="OSett()">Impostazioni</button>
     </div>
 
     <div style="position: absolute; z-index: 3; margin-top: -5%;" id="MinImpo" hidden>
@@ -89,7 +88,7 @@
     </div>
 
     <div style="display: flex; flex-direction: row-reverse;" name="menù princ" id="M_princ">
-      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSxF6EvIMPHfWs1SwY_XPABAJHQQRc0l_-V10auLdTB7dpOhTRPZEt0TWIcr-gAmIAYDYfhSQ3xnQPl/pub?w=100&h=100" alt="La fonte non è disponibile" style="margin-top: -357px;margin-bottom: 74vh;" title="Menù" onclick="OpnM()">
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSxF6EvIMPHfWs1SwY_XPABAJHQQRc0l_-V10auLdTB7dpOhTRPZEt0TWIcr-gAmIAYDYfhSQ3xnQPl/pub?w=100&h=100" alt="La fonte non è disponibile" style="margin-top: -336px; margin-bottom: 74vh;" title="Menù" onclick="OpnM()">
     </div>
 
 
@@ -179,7 +178,7 @@
     newDiv.style.marginBottom = "9vh";
     */
 
-    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -296px; margin-bottom: 15vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; z-index: 1; position: relative"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button><button onclick="rend(4)" style="margin-inline: 10px; margin-top: 15px;">Leave feedback</button></div>';
+    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -296px; margin-bottom: 18vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; z-index: 1; position: relative"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button><button name="impo" onclick="OSett()" style="margin-inline: 10px; margin-top: 15px;">Impostazioni</button><button onclick="rend(4)" style="margin-inline: 10px; margin-top: 15px;">Lascia un feedback</button></div>';
     // Inserisce il nuovo div all'interno di M_princ
     mPrinc.appendChild(newDiv);
 
