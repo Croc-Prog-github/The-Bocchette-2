@@ -10,3 +10,6 @@ INCOMPATIBILITÀ DI RARITÀ DELLE TECNICHE DA EVOLUZIONI COMPATIBILI, IN EVOLUZI
 Però ogni Bocchetta con una evoluzione superiore a Normale, ad esempio Epica, potrà usare solo Tecniche uguali o inferiori alla sua evoluzione attuale. Quindi non potrà usare Tecniche superiori, quindi ad esempio Leggendaria, Immortal,...
 
 Una Bocchetta con rarità di evoluzione: Rara NON potrà usare Tecniche Super-rare o superiori (senza prima sbloccare l'evoluzione: Super-raro, potendo usare così Tecniche Super-rare); ma potrà usare solo Tecniche della stessa rarità corrispondente all'evoluzione Oppure tecniche inferiori alla evoluzione attuale (Rara, quindi: Tecniche Comuni e/o Standard)
+
+PRESENTAZIONE DELLA STORIA DI THE BOCCHETTE 2
+Introdotta da episodi animati (come su Naruto Storm 4) o Da missioni che svelano lentamente la storia (da Fortnite)
