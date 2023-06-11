@@ -1,4 +1,5 @@
-<script> //Full Screen
+<!-- Full Screen -->
+<script>
   function fs() {
     let element = document.documentElement;
     //let element = document.getElementById("body");
@@ -11,6 +12,7 @@
     }
   }
 </script>
+
 
 <!-- Vecchia creativa -->
 <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif; background-color: #195e79ad;">
@@ -51,7 +53,8 @@
     </div>
 </body>
 
-//Vecchio script mira della Creativa
+
+<!-- Vecchio script mira della Creativa -->
 <script> //Prevede mira in base a tecniche selezionate (tiene premuto tasto sinistro mouse + frecce < o > [per scorrere le tecniche, viste in un fumetto])
   let mire = document.getElementById("mire");
   let fumetto = document.getElementById("fumetto");
@@ -130,4 +133,79 @@
       fumetto.setAttribute("aria-hidden", "true");
     }
   }
+</script>
+
+
+<!-- Vecchia GameMood Storia -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Bocchette 2 - Bacheca storia</title>
+    <!-- START <meta> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- END <meta> -->
+
+    <!-- Content -->
+    <script src="/cons/cons.js"></script>
+  </head>
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad;">
+    <div style="width: 220px; background: #ffffff; z-index: 4; position: absolute; margin-bottom: 1.5%; height: 98%;" hidden id="menu">
+      <span style="font-size: xx-large; margin-inline: 60px">STORIA</span>
+        <div style=" display: flex; flex-direction: column; flex-wrap: nowrap; align-items: stretch; margin-inline: 5px; margin-top: 15%;">
+        <button style="background: lightgray; border: solid 3px gray" onclick="OSett()">Impostazioni</button>
+        <button style="background: indianred; border: solid 3px darkred" onclick="let exit=window.confirm('Sei sicuro di voler uscire?');if(exit == true){window.location.href = '/game/home.html';}">ESCI</button>
+      </div>
+    </div>
+    <div style="margin-top: 10%; position: absolute; z-index: 3;" id="MinImpo" hidden>
+
+    <div style="padding-left: 95.5%; margin-left: 70%; background: white; ">
+      <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="CSett()">X</button>
+    </div>
+    <iframe src="/game/impo.html" frameborder="1.5" style="width: 600px; height: 400px; margin-left: 70%"></iframe>
+    </div>
+
+    <div>
+      <button>1: Futuro combattente</button>
+      <button>2: Brutto presentimento</button>
+      <button>3: Intercettamento</button>
+      <button>4: Combattimento da specchio riflesso</button>
+      <button>5: Ospite importante</button>
+      <button>6: Trappola inaspettata</button>
+      <button>7: Protettore extradimensionale</button>
+      <button>8: Battaglia in periferia</button>
+    </div>
+
+
+    <div style="margin-top: 42%; height: 20px; width: 99.5%; background-color: #4343db; border: darkblue solid 5.5px; color: white; cursor: default;">
+      <strong>[Esc] Menù </strong>
+      <strong></strong>
+    </div>
+
+  </body>
+</html>
+
+<script> //Apri <iframe> impostazioni
+  function OSett() {
+    const MinImpo = document.getElementById("MinImpo");
+    MinImpo.style.display = "block";
+  }
+
+  function CSett() {
+    const MinImpo = document.getElementById("MinImpo");
+    MinImpo.style.display = "none";
+  }
+</script>
+
+<script> // apri/chiudi menù
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    const menuDiv = document.getElementById('menu');
+    if (menuDiv.hasAttribute('hidden')) {
+      menuDiv.removeAttribute('hidden');
+    } else {
+      menuDiv.setAttribute('hidden', true);
+    }
+  }
+});
 </script>
