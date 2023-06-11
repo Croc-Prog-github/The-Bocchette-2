@@ -1,14 +1,19 @@
-1. Finire le impostazioni.
-2. Fare le missioni del pass.
+1. Finire le impostazioni
+2. Fare le missioni del pass
 3. Fare gli obbiettivi conquistati nel pass.
 4. Fare la riproduzione delle tecniche in tecnic.js
 5. Continuare la nuova Creativa
+6. Continuare il multiplyer
+7. Completare eventi dentro le Modalità di gioco
+8. Completare le tecniche in sopravivenza
 
 PRIORITARI
-1. Continuare il multiplyer
-2. Completare eventi dentro le Modalità di gioco
-3. Completare le tecniche in sopravivenza
-4. Continuare il Bot1 in sopravvivenza
+1. Continuare il Bot1 in sopravvivenza
+2. Creare casse per Rarità dove ci sono probabilità per Tecniche ed Evoluzioni
+3. Continuare le Missioni-storia
+
+DA INIZIARE
+1. Iniziare il Chats-API
 
 COMPLETATI
 1. Fare il window.confirm per chiedere se uscendo dalla pagina vuole perdere il progresso. X

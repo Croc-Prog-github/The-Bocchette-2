@@ -53,5 +53,51 @@
         A
       </div>
     </details>
+
+    <!--
+    <div style="width: 220px; background: #ffffff; z-index: 4; position: absolute; height: 98%; top: 8px; left: 8px;" hidden id="menu">
+      <span style="font-size: xx-large; margin-inline: 60px">MISSIONI-STORIA</span>
+        <div style=" display: flex; flex-direction: column; flex-wrap: nowrap; align-items: stretch; margin-inline: 5px; margin-top: 15%;">
+        <button style="background: lightgray; border: solid 3px gray" onclick="OSett()">Impostazioni</button>
+        <button style="background: indianred; border: solid 3px darkred" onclick="let exit=window.confirm('Sei sicuro di voler uscire?');if(exit == true){window.location.href = '/game/home.html';}">ESCI</button>
+      </div>
+    </div>
+    <div style="margin-top: 10%; position: absolute; z-index: 3;" id="MinImpo" hidden>
+      <div style="padding-left: 95.5%; margin-left: 70%; background: white; ">
+        <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="CSett()">X</button>
+      </div>
+      <iframe src="/game/impo.html" frameborder="1.5" style="width: 600px; height: 400px; margin-left: 70%"></iframe>
+    </div>
+
+    <div style="margin-top: 31%; height: 20px; width: 99.5%; background-color: #4343db; border: darkblue solid 5.5px; color: white; cursor: default;">
+      <strong>[Esc] Menù </strong>
+      <strong></strong>
+    </div>
+    -->
+
   </body> 
 </html>
+
+<script> /*
+  //Apri <iframe> impostazioni
+  function OSett() {
+    const MinImpo = document.getElementById("MinImpo");
+    MinImpo.style.display = "block";
+  }
+  function CSett() {
+    const MinImpo = document.getElementById("MinImpo");
+    MinImpo.style.display = "none";
+  }
+  
+  // apri/chiudi menù
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      const menuDiv = document.getElementById('menu');
+      if (menuDiv.hasAttribute('hidden')) {
+        menuDiv.removeAttribute('hidden');
+      } else {
+        menuDiv.setAttribute('hidden', true);
+      }
+    }
+  }); */
+</script>
