@@ -5,7 +5,7 @@ const vitaBot1 = document.getElementById('vita_bot1');
 const vitaValue = parseInt(vitaBot1.value);
 
 if (vitaValue === 100) {
-  bot1.removeAttribute("hidden");
+  bot1.hidden = false;
   
   // Cerca attorno a sé un power-up
   const PwUP = document.getElementById("PwUP");
@@ -28,5 +28,5 @@ if (vitaValue === 100) {
     return Math.sqrt(dx * dx + dy * dy);
   }
 } else {
-  bot1.setAttribute("hidden", true);
+  bot1.hidden = true;
 }
