@@ -30,50 +30,50 @@
     <div style="top: 456px;" class="scroll"></div>
   </div>
 
-  <script>
-    let intervalIds = [];
-    const windowHeight = 500;
-    let top = 8;
-
-    function startAnimation() {
-      const scrollElements = document.querySelectorAll('.scroll');
-
-      scrollElements.forEach((element, index) => {
-        animateScroll(element, index);
-      });
-    }
-
-    function animateScroll(element, index) {
-      intervalIds[index] = setInterval(function() {
-        if (top >= windowHeight) {
-          top = 8;
-          element.style.top = top + 'px';
-        } else {
-          top += 2;
-          element.style.top = top + 'px';
-        }
-      }, 10);
-    }
-
-    function stopAnimation() {
-      intervalIds.forEach((intervalId) => {
-        clearInterval(intervalId);
-      });
-    }
-
-    function handleKeyPress(event) {
-      if (event.code === 'Space') {
-        stopAnimation();
-        ABC();
-      }
-    }
-
-    document.addEventListener('keydown', handleKeyPress);
-
-    function ABC() {
-      // La tua funzione ABC()
-    }
-  </script>
-
 </body>
 </html>
+
+<script>
+  let intervalIds = [];
+  const windowHeight = 500;
+  let top = 8;
+
+  function startAnimation() {
+    const scrollElements = document.querySelectorAll('.scroll');
+
+    scrollElements.forEach((element, index) => {
+      animateScroll(element, index);
+    });
+  }
+
+  function animateScroll(element, index) {
+    intervalIds[index] = setInterval(function() {
+      if (top >= windowHeight) {
+        top = 8;
+        element.style.top = top + 'px';
+      } else {
+        top += 2;
+        element.style.top = top + 'px';
+      }
+    }, 10);
+  }
+
+  function stopAnimation() {
+    intervalIds.forEach((intervalId) => {
+      clearInterval(intervalId);
+    });
+  }
+
+  function handleKeyPress(event) {
+    if (event.code === 'Space') {
+      stopAnimation();
+      ABC();
+    }
+  }
+
+  document.addEventListener('keydown', handleKeyPress);
+
+  function ABC() {
+    // La tua funzione ABC()
+  }
+</script>
