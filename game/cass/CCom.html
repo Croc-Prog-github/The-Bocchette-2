@@ -14,7 +14,7 @@
     }
   </style>
 </head>
-<body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #316f87;">
+<body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #316f87;" onload="startAnimation()">
 
   <div style="display: flex; justify-content: center; flex-direction: row; margin-block: 15%;">
     <div style="border: solid 3px; margin-inline: 0%; height: 200px; width: 200px;">
@@ -30,51 +30,51 @@
     <div style="top: 456px;" class="scroll"></div>
   </div>
 
+  <script> /*
+    let intervalIds = [];
+    const windowHeight = 800;
+    let scrollTop = 8;
+
+    function startAnimation() {
+      const scrollElements = document.querySelectorAll('.scroll');
+
+      scrollElements.forEach((element, index) => {
+        animateScroll(element, index);
+      });
+    }
+
+    function animateScroll(element, index) {
+      intervalIds[index] = setInterval(function() {
+        if (scrollTop >= windowHeight) {
+          scrollTop = 8;
+          element.style.top = scrollTop + 'px';
+        } else {
+          scrollTop += 2;
+          element.style.top = scrollTop + 'px';
+        }
+      }, 10);
+    }
+
+    function stopAnimation() {
+      intervalIds.forEach((intervalId) => {
+        clearInterval(intervalId);
+      });
+    }
+
+    function handleKeyPress(event) {
+      if (event.code === 'Space') {
+        stopAnimation();
+        ABC();
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyPress);
+
+    function ABC() {
+      // La tua funzione ABC()
+    }
+    */
+  </script>
+
 </body>
 </html>
-
-<script>
-  let intervalIds = [];
-  const windowHeight = 500;
-  let top = 8;
-
-  function startAnimation() {
-    const scrollElements = document.querySelectorAll('.scroll');
-
-    scrollElements.forEach((element, index) => {
-      animateScroll(element, index);
-    });
-  }
-
-  function animateScroll(element, index) {
-    intervalIds[index] = setInterval(function() {
-      if (top >= windowHeight) {
-        top = 8;
-        element.style.top = top + 'px';
-      } else {
-        top += 2;
-        element.style.top = top + 'px';
-      }
-    }, 10);
-  }
-
-  function stopAnimation() {
-    intervalIds.forEach((intervalId) => {
-      clearInterval(intervalId);
-    });
-  }
-
-  function handleKeyPress(event) {
-    if (event.code === 'Space') {
-      stopAnimation();
-      ABC();
-    }
-  }
-
-  document.addEventListener('keydown', handleKeyPress);
-
-  function ABC() {
-    // La tua funzione ABC()
-  }
-</script>
-
