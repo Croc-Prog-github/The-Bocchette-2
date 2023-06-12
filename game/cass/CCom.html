@@ -35,19 +35,24 @@
 
 <script>
   function startAnimation() {
-    const scroll = document.querySelectorAll('.scroll');
+    let scroll = document.querySelectorAll('.scroll');
+    let n = 100;
+    n = 100 + n;
 
     setInterval(function() {
-      if (scroll.top === '30') {
-        scroll.top++
-      }
-    }, 10);
+    }, 1000);
+
+    scroll.forEach(element => {
+      element.style.top += n + 'px'
+    });
+
+    
     
   }
 
   function handleKeyPress(event) {
     if (event.code === 'Space') {
-      stopAnimation();
+      //stopAnimation();
       ABC();
     }
   }
