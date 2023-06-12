@@ -3,108 +3,16 @@
 <head>
   <title>The Bocchette 2 - Ricompenze</title>
   <meta charset="UTF-8">
-  <style>
-    .scroll {
-      border: solid 3px;
-      height: 100px;
-      width: 100px;
-      position: absolute;
-      right: 47%;
-      transition: top 2s ease-in-out;
-    }
-  </style>
 </head>
-<body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #316f87;">
+<body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #316f87; overflow: hidden;">
 
-  <div style="display: flex; justify-content: center; flex-direction: row; margin-block: 15%;">
-    <div style="border: solid 3px; margin-inline: 0%; height: 200px; width: 200px;">
-      <img src="" alt="this?">
-    </div>
-  </div>
-
-  <div name="scrolled">
-    <div style="top: 8px;" class="scroll"></div>
-    <div style="top: 120px;" class="scroll"></div>
-    <div style="top: 232px;" class="scroll"></div>
-    <div style="top: 344px;" class="scroll"></div>
-    <div style="top: 456px;" class="scroll"></div>
+  <div style="height: 500px; width: 500px; border: solid 3px; border-radius: 50%; position: absolute; top: 60%; right: 35%;">
+    <div style="width: 30px; height: 230px; border: solid 3px; position: relative; top: 0px; left: 230px;"></div>
   </div>
 
 </body>
 </html>
 
 <script>
-  function startAnimation() {
-    let scroll = document.querySelectorAll('.scroll');
-    let n = 100;
 
-    setInterval(function() {
-    }, 1000);
-
-    scroll.forEach(element => {
-      element.style.top += n  + 'px'
-    });
-
-    
-    
-  }
-
-  function handleKeyPress(event) {
-    if (event.code === 'Space') {
-      //stopAnimation();
-      ABC();
-    }
-  }
-  document.addEventListener('keydown', handleKeyPress);
-  function ABC() { //Crea il rallentamento
-    // La tua funzione ABC()
-  }
-
-  startAnimation();
-</script>
-
-<script> /*
-  let intervalIds = [];
-  const windowHeight = 800;
-  let scrollTop = 8;
-
-  function startAnimation() {
-    const scrollElements = document.querySelectorAll('.scroll');
-
-    scrollElements.forEach((element, index) => {
-      animateScroll(element, index);
-    });
-  }
-
-  function animateScroll(element, index) {
-    intervalIds[index] = setInterval(function() {
-      if (scrollTop >= windowHeight) {
-        scrollTop = 8;
-        element.style.top = scrollTop + 'px';
-      } else {
-        scrollTop += 2;
-        element.style.top = scrollTop + 'px';
-      }
-    }, 10);
-  }
-
-  function stopAnimation() {
-    intervalIds.forEach((intervalId) => {
-      clearInterval(intervalId);
-    });
-  }
-
-  function handleKeyPress(event) {
-    if (event.code === 'Space') {
-      stopAnimation();
-      ABC();
-    }
-  }
-
-  document.addEventListener('keydown', handleKeyPress);
-
-  function ABC() {
-    // La tua funzione ABC()
-  }
-  */
 </script>
