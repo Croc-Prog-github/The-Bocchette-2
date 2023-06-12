@@ -24,25 +24,57 @@
     </div>
     <div name="scrolled">
       <div style="border: solid 3px; height: 100px; width: 100px; top: 7px; right: 47%; position: absolute;">
-        <img src="" alt="scroll">
+        <img src="" alt="scroll" id="scroll">
       </div>
 
       <div style="border: solid 3px; height: 100px; width: 100px; top: 110px; right: 47%; position: absolute;">
-        <img src="" alt="scroll">
+        <img src="" alt="scroll" id="scroll">
       </div>
 
       <div style="border: solid 3px; height: 100px; width: 100px; top: 213px; right: 47%; position: absolute;">
-        <img src="" alt="scroll">
+        <img src="" alt="scroll" id="scroll">
       </div>
 
       <div style="border: solid 3px; height: 100px; width: 100px; top: 315px; right: 47%; position: absolute;">
-        <img src="" alt="scroll">
+        <img src="" alt="scroll" id="scroll">
       </div>
 
       <div style="border: solid 3px; height: 100px; width: 100px; top: 418px; right: 47%; position: absolute;">
-        <img src="" alt="scroll">
+        <img src="" alt="scroll" id="scroll">
       </div>
     </div>
 
   </body>
 </html>
+
+<script>
+  let scrollElement = document.getElementById('scroll');
+  let topValue = 0;
+  let intervalId;
+
+  function animateScroll() {
+    intervalId = setInterval(function() {
+      topValue += 2;
+      scrollElement.style.top = topValue + 'px';
+
+      if (topValue >= 200) {
+        topValue = 8;
+      }
+    }, 10);
+  }
+
+  function stopAnimation() {
+    clearInterval(intervalId);
+  }
+  
+  function handleKeyPress(event) {
+    if (event.code === 'Space') {
+      if (intervalId) {
+        stopAnimation();
+      } else {
+        animateScroll();
+      }
+    }
+  }
+  document.addEventListener('keydown', handleKeyPress);
+</script>
