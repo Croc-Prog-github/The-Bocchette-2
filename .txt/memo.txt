@@ -9,7 +9,7 @@
 
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza
-2. Creare casse per Rarità dove ci sono probabilità per Tecniche ed Evoluzioni
+2. Creare casse per Rarità dove ci sono probabilità per Tecniche ed Evoluzioni; Continuare la grafica dei grafici
 3. Continuare le Missioni-storia
 
 DA INIZIARE
