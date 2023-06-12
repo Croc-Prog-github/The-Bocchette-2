@@ -24,23 +24,23 @@
     </div>
     <div name="scrolled">
       <div style="border: solid 3px; height: 100px; width: 100px; top: 7px; right: 47%; position: absolute;">
-        <img src="" alt="scroll" id="scroll">
+        <img src="" alt="scroll" class="scroll">
       </div>
 
       <div style="border: solid 3px; height: 100px; width: 100px; top: 110px; right: 47%; position: absolute;">
-        <img src="" alt="scroll" id="scroll">
+        <img src="" alt="scroll" class="scroll">
       </div>
 
       <div style="border: solid 3px; height: 100px; width: 100px; top: 213px; right: 47%; position: absolute;">
-        <img src="" alt="scroll" id="scroll">
+        <img src="" alt="scroll" class="scroll">
       </div>
 
       <div style="border: solid 3px; height: 100px; width: 100px; top: 315px; right: 47%; position: absolute;">
-        <img src="" alt="scroll" id="scroll">
+        <img src="" alt="scroll" class="scroll">
       </div>
 
       <div style="border: solid 3px; height: 100px; width: 100px; top: 418px; right: 47%; position: absolute;">
-        <img src="" alt="scroll" id="scroll">
+        <img src="" alt="scroll" class="scroll">
       </div>
     </div>
 
@@ -48,33 +48,37 @@
 </html>
 
 <script>
-  let scrollElement = document.getElementById('scroll');
-  let topValue = 0;
-  let intervalId;
+  let scrollElements = document.querySelectorAll('.scroll');
+let topValues = new Array(scrollElements.length).fill(0);
+let intervalIds = [];
 
-  function animateScroll() {
-    intervalId = setInterval(function() {
-      topValue += 2;
-      scrollElement.style.top = topValue + 'px';
+function animateScroll(index) {
+  intervalIds[index] = setInterval(function() {
+    topValues[index] += 2;
+    scrollElements[index].style.top = topValues[index] + 'px';
 
-      if (topValue >= 200) {
-        topValue = 8;
-      }
-    }, 10);
-  }
+    if (topValues[index] >= 200) {
+      topValues[index] = 8;
+    }
+  }, 10);
+}
 
-  function stopAnimation() {
-    clearInterval(intervalId);
-  }
-  
-  function handleKeyPress(event) {
-    if (event.code === 'Space') {
-      if (intervalId) {
-        stopAnimation();
+function stopAnimation(index) {
+  clearInterval(intervalIds[index]);
+}
+
+function handleKeyPress(event) {
+  if (event.code === 'Space') {
+    for (let i = 0; i < scrollElements.length; i++) {
+      if (intervalIds[i]) {
+        stopAnimation(i);
       } else {
-        animateScroll();
+        animateScroll(i);
       }
     }
   }
-  document.addEventListener('keydown', handleKeyPress);
+}
+
+document.addEventListener('keydown', handleKeyPress);
+
 </script>
