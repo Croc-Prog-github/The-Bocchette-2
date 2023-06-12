@@ -117,7 +117,7 @@
         <div name="CASSA TRIX MODE" style="position: absolute; left: 305px; bottom: 67px;" title="Cassa Trix mode">
           <img src="https://docs.google.com/drawings/d/e/2PACX-1vR78PuSNYrGTmF7Ax7HtXRA_ddgxstxRZcQjA_g_k7qjklh8r-wC_Tt_rVdYxP2Y31anVAkpYK1owMD/pub?w=580&h=519" alt="La fonte non è disponibile" style="width: 69px; margin-top: -85px;" onclick="window.location.href = '/game/cass.html';">
           <button style="margin-top: -90px; margin-left: -23px;border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 40px;">Error</button>
-          <div name="effect" style="width: 80px; height: 72px; position: absolute; bottom: 1px; right: -5px; border-radius: 40px; background: radial-gradient(transparent, green); z-index: -1;"></div>
+          <div name="effect" style="width: 80px; height: 72px; position: absolute; bottom: 1px; right: -5px; border-radius: 40px; background: radial-gradient(transparent, green); z-index: -1;" id="effect1"></div>
         </div>
       </div>
 
@@ -137,6 +137,22 @@
 
   </body>
 </html>
+
+<script> //Animazione di Effect per le casse
+  const effect1 = document.getElementById('effect1');
+  const colors = ['azure', 'green', 'yellow', 'purple'];
+  let currentColorIndex = 0;
+  function changeGradientColor() {
+    const currentColor = colors[currentColorIndex];
+    const nextColorIndex = (currentColorIndex + 1) % colors.length;
+    const nextColor = colors[nextColorIndex];
+    const nextNextColorIndex = (currentColorIndex + 2) % colors.length;
+    const nextNextColor = colors[nextNextColorIndex];
+    effect1.style.background = `radial-gradient(${currentColor}, ${nextColor}, ${nextNextColor})`;
+    currentColorIndex = nextColorIndex;
+  }
+  setInterval(changeGradientColor, 150); // Cambia colore ogni secondo
+</script>
 
 <script> //Apri-chiudi Menù multiplayer
   function OpnMP() {
