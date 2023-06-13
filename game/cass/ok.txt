@@ -14,11 +14,12 @@
 
   <div name="scrolled">
     <div style="top: 0px;" class="scroll"></div>
+    <!--
     <div style="top: 120px;" class="scroll"></div>
     <div style="top: 232px;" class="scroll"></div>
     <div style="top: 344px;" class="scroll"></div>
     <div style="top: 456px;" class="scroll"></div>
-    
+    -->
   </div>
 
 </body>
@@ -40,7 +41,6 @@
     const scrollElements = document.querySelectorAll('.scroll');
     for (let i = 0; i < scrollElements.length; i++) {
       const scrollElement = scrollElements[i];
-      //const top = scrollElement.style.top;
       const top = scrollElement.getBoundingClientRect().top;
 
       if (top === 0) {
@@ -56,6 +56,7 @@
   setTimeout(function() {
     requestAnimationFrame(animateScroll);
   }, 1000);
+  setTimeout(animateScroll, 1000);
 
 
   function handleKeyPress(event) {

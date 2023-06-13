@@ -6,6 +6,7 @@
 6. Continuare il multiplyer
 7. Completare eventi dentro le Modalità di gioco
 8. Completare le tecniche in sopravivenza
+9. Continuare il Power-Up
 
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza
