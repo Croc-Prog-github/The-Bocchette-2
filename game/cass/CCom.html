@@ -28,9 +28,16 @@
   const tecnic = 'https://docs.google.com/drawings/d/e/2PACX-1vQM-kWdTzXN5FX-YXJriQcySiTzB-dmzPnTb9RxHpT9EZvY5Ya9KW3BbDaHrbuzvybwkFD_LoPoJ43k/pub?w=256&h=187';
   const evoluz = 'https://docs.google.com/drawings/d/e/2PACX-1vQeZBD2vuiFTXswWU_AsOlwm_YpzIlCcdAessBH_-u9LhhHMX97lq2PptsKu2DUGAHUqq4wewPk8a1P/pub?w=258&h=184';
   const slotC = document.getElementById('slotC');
+  let chosenVariable;
+  const randomNumber = Math.random();
 
-  
+  if (randomNumber < 0.6) {
+  chosenVariable = tecnic;
+  } else {
+    chosenVariable = evoluz;
+  }
 
+  console.log('Variabile scelta:', chosenVariable);
 </script>
 
 <style>
