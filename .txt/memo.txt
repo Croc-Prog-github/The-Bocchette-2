@@ -12,10 +12,12 @@ PRIORITARI
 1. Continuare il Bot1 in sopravvivenza
 2. Continuare le Missioni-storia
 3. Correggere trasazione tra tecnicLock e tecnicUnlock
+4. Aggiungere la ricompensa delle Banconote da dare
 
 DA INIZIARE
 1. Iniziare il Chats-API
 2. Menù per scegliere le Tecniche (e visualizzare i dati); Menù a tendina diventano bottoni
+3. 
 
 COMPLETATI
 1. Fare il window.confirm per chiedere se uscendo dalla pagina vuole perdere il progresso. X
