@@ -34,7 +34,7 @@
   document.addEventListener('keydown', handleKeyPress => {
     if (handleKeyPress.code === 'Space') {
       clearInterval(intervalId);
-      ABC();
+      Choice();
     }
   });
 
@@ -42,11 +42,25 @@
 // END
 
 //Funzione per sciegliere tra le tecniche o le evoluzioni
-function ABC() {
+function Choice() {
   let risult = slotC.src;
   if (risult === 'https://docs.google.com/drawings/d/e/2PACX-1vQM-kWdTzXN5FX-YXJriQcySiTzB-dmzPnTb9RxHpT9EZvY5Ya9KW3BbDaHrbuzvybwkFD_LoPoJ43k/pub?w=256&h=187') { // <-- Tecnic
-
-  } else { //Other (Evoluz)
+    let tecnicSelect = tecnicLock[Math.floor(Math.random() * tecnicLock.length)];
+    if (tecnicUnlock.includes(tecnicSelect)) { //Una tecnica casuale di tecnicLock è contenuta in tecnicUnlock ?
+      Choice();
+    } else {
+      window.alert('Hai tovato la tecnica: ' + tecnicSelect + ' !');
+      //Rimuove tecnicSelect da TecnicLock e lo agiunge in TecnicUnlock
+      let index = tecnicLock.indexOf(tecnicSelect);
+      if (index !== -1) {
+        tecnicLock.splice(index, 1); //Agiunge 
+        tecnicUnlock.push(tecnicSelect);
+      } else {
+        alert("Fatal error: index di tecnicLock è < 1 Cioè l'elemento non è stato trovato");
+      }
+    }
+  }
+  if (risult === '') { // <-- Evoluz 
 
   }
 }
