@@ -34,17 +34,18 @@ function SS() {
 //Da ora il Session Storage non è più controllato dal filtro dei soli numeri interi
 setInterval(function() {
   SS();
-  /*
+  const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme']; // Array delle chiavi da verificare
   for (let key in sessionStorage) {
-    let value = sessionStorage.getItem(key);
-    if (isNaN(parseInt(value))) {
-      for (let key in sessionStorage) {
-        sessionStorage.setItem(key, "0");
-        console.error("La chiave: " + key + " aveva valore != da variabile di tipo int.");
-        console.warn("I valori di tutte le chiavi sono portati a 0.");
+    if (keysToCheck.includes(key)) { // Verifica se la chiave corrente è presente nell'array keysToCheck
+      let value = sessionStorage.getItem(key);
+      if (isNaN(parseInt(value))) {
+        for (let key in sessionStorage) {
+          sessionStorage.setItem(key, "0");
+          console.error("La chiave: " + key + " aveva valore diverso da una variabile di tipo int.");
+          console.warn("I valori di tutte le chiavi sono impostati a 0.");
+        }
+        break;
       }
-      break;
     }
   }
-  */
 }, 100);

@@ -10,8 +10,8 @@
 
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza
-2. Creare casse per Rarità dove ci sono probabilità per Tecniche ed Evoluzioni; Continuare la grafica dei grafici
-3. Continuare le Missioni-storia
+2. Continuare le Missioni-storia
+3. Correggere trasazione tra tecnicLock e tecnicUnlock
 
 DA INIZIARE
 1. Iniziare il Chats-API
@@ -22,3 +22,4 @@ COMPLETATI
 2. Fare articoli nel negozio. FATTO
 3. Mettere le variabili presenti in var.js in Archiviazione di sessione. FATTO
 4. Creare il loging prima di passare a home.html FATTO
+5. Creare casse per Rarità dove ci sono probabilità per Tecniche ed Evoluzioni; Continuare la grafica dei grafici; FATTO

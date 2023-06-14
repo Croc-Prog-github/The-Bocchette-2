@@ -45,7 +45,7 @@
     <div name="Impost.HTML" style="cursor: default;">
       <div style="margin-top: 20px;" name="Accesibilità" id="acces">
         <hx style="">Dimensione caratteri (em)</hx> 
-          <input type="number" style="width: 40px;" value="1.0" min="0.5" max="3" id="DCar"> 
+          <input type="number" style="width: 40px;" value="1" min="0.5" max="3" id="DCar"> 
         <var style="margin-left: 25px;">Descrizione</var>
 
         <p style=""><strong>Sottotitoli</strong></p>
@@ -210,7 +210,7 @@
 </script>
 
 <script> //Salvataggio in session storage
-  /*
+  
   //Quando entri nella pagina carichi i valori: storage --> variabili
   let DCar = sessionStorage.getItem("DCar"); //Dimensione caratteri
   let sott = sessionStorage.getItem("sott"); //Sottotitoli ON-OFF
@@ -224,22 +224,24 @@
   } 
   setInterval(function() {
     Aply();
+    const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme']; // Array delle chiavi da verificare
     let resetValues = false;
-    for (let key in sessionStorage) { 
-      let value = sessionStorage.getItem(key);
-      if (isNaN(parseFloat(value))) {
-        resetValues = true;
-        console.error("La chiave: " + key + " aveva valore != da variabile di tipo int o float.");
+    for (let key in sessionStorage) {
+      if (keysToCheck.includes(key)) { // Verifica se la chiave corrente è presente nell'array keysToCheck
+        let value = sessionStorage.getItem(key);
+        if (isNaN(parseFloat(value))) {
+          resetValues = true;
+          console.error("La chiave: " + key + " aveva valore diverso da una variabile di tipo int o float.");
+        }
       }
     }
     if (resetValues) {
       for (let key in sessionStorage) {
         sessionStorage.setItem(key, "0");
       }
-      console.warn("I valori di tutte le chiavi sono portati a 0.");
-    }  
+      console.warn("I valori di tutte le chiavi sono impostati a 0.");
+    }
   }, 100);
-  */
 </script>
 
 <script> //Aggiorna i valori interf. --> variabili
