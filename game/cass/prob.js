@@ -30,13 +30,6 @@
     }, 10);
   }
 
-  /*
-  function addEventListener(event) {
-    if (event.button === 0) {
-      clearInterval(intervalId);
-      ABC();
-    }
-  } */
   //Interrompe il loop di scorrimento
   document.addEventListener('keydown', handleKeyPress => {
     if (handleKeyPress.code === 'Space') {
@@ -52,9 +45,8 @@
 function ABC() {
   let risult = slotC.src;
   if (risult === 'https://docs.google.com/drawings/d/e/2PACX-1vQM-kWdTzXN5FX-YXJriQcySiTzB-dmzPnTb9RxHpT9EZvY5Ya9KW3BbDaHrbuzvybwkFD_LoPoJ43k/pub?w=256&h=187') { // <-- Tecnic
-    
-    
-  } else { //Other
+
+  } else { //Other (Evoluz)
 
   }
 }

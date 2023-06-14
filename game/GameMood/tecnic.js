@@ -1,6 +1,10 @@
 let tecnic1 = localStorage.getItem('tecnic1'); //Tasto E
 let tecnic2 = localStorage.getItem('tecnic2'); //Tasto F
-let tecnicLock = ['dispersione', 'taglio netto', 'super taglio netto']; //Tecniche Sbloccate (Acquisite)
+let tecnicUnlock = ['dispersione', 'taglio netto', 'super taglio netto']; //Tecniche Sbloccate (Acquisite)
+let tecnicLock = ['rasengan', 'fulmine',  '']; //Tecniche Bloccate (Da trovare o aquistare)
+
+let evoluzUnlock = []; //Evoluzioni Sbloccate
+let evoluzLock = []; //Evoluzioni Bloccate
 
 setInterval(() => {
   localStorage.setItem('tecnic1', tecnic1);
@@ -25,12 +29,12 @@ function STecnic2() { //Sciegli Tecnica2 (nella home)
 function UTecnic() { //Usa tecnica (trasferisce valori da sopr.html)
   document.addEventListener('keydown', function (event) {
     if (event.key == 'e') {
-      if (tecnicLock.includes(tecnic1)) {
+      if (tecnicUnlock.includes(tecnic1)) {
         EsecTecnic(tecnic1);
       }
     }
     if (event.key == 'f') {
-      if (tecnicLock.includes(tecnic2)) {
+      if (tecnicUnlock.includes(tecnic2)) {
         EsecTecnic(tecnic2);
       }
     }
