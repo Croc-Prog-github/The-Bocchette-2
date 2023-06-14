@@ -15,6 +15,7 @@ PRIORITARI
 
 DA INIZIARE
 1. Iniziare il Chats-API
+2. Menù per scegliere le Tecniche (e visualizzare i dati); Menù a tendina diventano bottoni
 
 COMPLETATI
 1. Fare il window.confirm per chiedere se uscendo dalla pagina vuole perdere il progresso. X
