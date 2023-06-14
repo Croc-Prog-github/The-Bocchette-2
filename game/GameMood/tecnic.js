@@ -1,7 +1,7 @@
 let tecnic1 = localStorage.getItem('tecnic1'); //Tasto E
 let tecnic2 = localStorage.getItem('tecnic2'); //Tasto F
 let tecnicUnlock = ['dispersione', 'taglio netto', 'super taglio netto']; //Tecniche Sbloccate (Acquisite)
-let tecnicLock = ['rasengan', 'fulmine',  '']; //Tecniche Bloccate (Da trovare o aquistare)
+let tecnicLock = ['rasengan', 'fulmine']; //Tecniche Bloccate (Da trovare o aquistare)
 
 let evoluzUnlock = []; //Evoluzioni Sbloccate
 let evoluzLock = []; //Evoluzioni Bloccate

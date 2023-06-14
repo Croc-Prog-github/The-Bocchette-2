@@ -50,17 +50,21 @@ function Choice() {
       Choice();
     } else {
       window.alert('Hai tovato la tecnica: ' + tecnicSelect + ' !');
+      window.location.href = '/game/home.html'
+
       //Rimuove tecnicSelect da TecnicLock e lo agiunge in TecnicUnlock
-      let index = tecnicLock.indexOf(tecnicSelect);
+      //let index = tecnicLock.indexOf(tecnicSelect);
+      let index = tecnicSelect;
       if (index !== -1) {
-        tecnicLock.splice(index, 1); //Agiunge 
+        tecnicLock.splice(index, 1); 
         tecnicUnlock.push(tecnicSelect);
       } else {
         alert("Fatal error: index di tecnicLock è < 1 Cioè l'elemento non è stato trovato");
       }
     }
   }
-  if (risult === '') { // <-- Evoluz 
-
+  if (risult === 'https://docs.google.com/drawings/d/e/2PACX-1vQeZBD2vuiFTXswWU_AsOlwm_YpzIlCcdAessBH_-u9LhhHMX97lq2PptsKu2DUGAHUqq4wewPk8a1P/pub?w=258&h=184') { // <-- Evoluz 
+    alert("Nessuna evoluzione agiunta!");
+    window.location.href = '/game/home.html'
   }
 }
