@@ -32,7 +32,7 @@
 
   //Interrompe il loop di scorrimento
   document.addEventListener('keydown', handleKeyPress => {
-    if (handleKeyPress.code === 'Space') {
+    if (handleKeyPress.code === 'Space' && (chosenVariable === evoluz || chosenVariable === tecnic) ) {
       clearInterval(intervalId);
       Choice();
     }
@@ -53,8 +53,8 @@ function Choice() {
       window.location.href = '/game/home.html'
 
       //Rimuove tecnicSelect da TecnicLock e lo agiunge in TecnicUnlock
-      //let index = tecnicLock.indexOf(tecnicSelect);
-      let index = tecnicSelect;
+      let index = tecnicLock.indexOf(tecnicSelect);
+      //let index = tecnicSelect;
       if (index !== -1) {
         tecnicLock.splice(index, 1); 
         tecnicUnlock.push(tecnicSelect);
