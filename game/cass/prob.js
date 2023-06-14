@@ -37,13 +37,15 @@
       ABC();
     }
   } */
-  document.addEventListener('mousedown', (event) => {
-    startLoop();
-    if (event.button === 0) {
+  //Interrompe il loop di scorrimento
+  document.addEventListener('keydown', handleKeyPress => {
+    if (handleKeyPress.code === 'Space') {
       clearInterval(intervalId);
       ABC();
     }
   });
+
+  startLoop();
 // END
 
 //Funzione di rallentamento dei '???'

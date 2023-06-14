@@ -66,17 +66,17 @@
   divN.textContent = randomNumber;
 </script>
 
-<script>// Mostra 2° Skip
+<script>// Vai al 2° Skip
   const Skp1 = document.getElementById('Skp1');
   const Skp2 = document.getElementById('Skp2');
 
   function handleKeyPress(event) {
-    if (event.code === 'Space') {
+    if (event.button === 0) {
       Skp1.hidden = true;
       Skp2.hidden = false;
     }
   }
-  document.addEventListener('keydown', handleKeyPress);
+  document.addEventListener('mousedown', handleKeyPress);
 </script>
 
 <style>
