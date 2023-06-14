@@ -48,7 +48,13 @@
   startLoop();
 // END
 
-//Funzione di rallentamento dei '???'
+//Funzione per sciegliere tra le tecniche o le evoluzioni
 function ABC() {
-  //
+  let risult = slotC.src;
+  if (risult === 'https://docs.google.com/drawings/d/e/2PACX-1vQM-kWdTzXN5FX-YXJriQcySiTzB-dmzPnTb9RxHpT9EZvY5Ya9KW3BbDaHrbuzvybwkFD_LoPoJ43k/pub?w=256&h=187') { // <-- Tecnic
+    
+    
+  } else { //Other
+
+  }
 }
