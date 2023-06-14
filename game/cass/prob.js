@@ -30,14 +30,16 @@
     }, 10);
   }
 
-  function handleKeyPress(event) {
-    if (event.code === 'Space') {
-      clearInterval(intervalId);
-      ABC();
+  intervalId = setInterval(function() {
+    function handleKeyPress(event) {
+      if (event.code === 'Space') {
+        clearInterval(intervalId);
+        ABC();
+      }
     }
-  }
-  document.addEventListener('keydown', handleKeyPress);
-  startLoop();
+    document.addEventListener('keydown', handleKeyPress);
+    startLoop();
+  }, 200);
 
 // END
 
