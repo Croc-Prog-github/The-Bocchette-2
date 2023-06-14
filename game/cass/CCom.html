@@ -13,7 +13,7 @@
 </head>
 <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #316f87; overflow: hidden;">
 
-  <div name="Content1">
+  <div name="Content1" id="Skp1">
     <div style="display: flex; flex-direction: column; margin-block: 15%; position: relative; z-index: 1; flex-wrap: wrap; align-content: center;justify-content: center;">
       <div style="cursor: default; font-size: x-large; display: flex; justify-content: center;">
         <div id="n">Error</div>_Banconote
@@ -24,7 +24,7 @@
     </div>
   </div>
 
-  <div name="Content2" hidden>
+  <div name="Content2" hidden id="Skp2">
     <div style="display: flex; justify-content: center; flex-direction: row; margin-block: 15%; position: relative; z-index: 1;">
       <div style="border: solid 3px; margin-inline: 0%; height: 200px; width: 200px; background: steelblue;">
         <img src="" alt="this?" id="slotC" style="width: 100%; margin-block: 15%;">
@@ -46,8 +46,8 @@
     <script src="/game/cass/prob.js"></script>
   </div>
 
-  <div style="display: flex; justify-content: flex-end; margin-top: -3%;">
-    <div name="Skip" style="cursor: default; background: cornflowerblue; padding-block: 15px; padding-inline: 20px; border: ridge 6px; outline: dashed 5px gold;width: min-content;">2</div>
+  <div style="display: flex; justify-content: flex-end; margin-top: -4%;">
+    <div name="Skip" style="cursor: default; background: cornflowerblue; padding-block: 15px; padding-inline: 20px; border: ridge 6px; outline: dashed 5px gold; width: min-content; font-size: xx-large; text-align: center;">2</div>
   </div>
 
 </body>
@@ -66,8 +66,17 @@
   divN.textContent = randomNumber;
 </script>
 
-<script>// II Skip
-  
+<script>// Mostra 2° Skip
+  const Skp1 = document.getElementById('Skp1');
+  const Skp2 = document.getElementById('Skp2');
+
+  function handleKeyPress(event) {
+    if (event.code === 'Space') {
+      Skp1.hidden = true;
+      Skp2.hidden = false;
+    }
+  }
+  document.addEventListener('keydown', handleKeyPress);
 </script>
 
 <style>
