@@ -16,7 +16,7 @@
   <div name="Content1">
     <div style="display: flex; flex-direction: column; margin-block: 15%; position: relative; z-index: 1; flex-wrap: wrap; align-content: center;justify-content: center;">
       <div style="cursor: default; font-size: x-large; display: flex; justify-content: center;">
-        <div id="n">Error</div>Banconote
+        <div id="n">Error</div>_Banconote
       </div>
       <div style="border: solid 3px; margin-inline: 0%; height: 200px; width: 200px; background: steelblue;">
         <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY0pup0VxjthO6ohSgX3RC29HShZ8JFuoCg7luCeb6Vf4oOkWPGl32GdugLMPkUn56ZmQ-bH9hnLi5/pub?w=100&h=100" alt="n Banconote" id="QNTsold" style="width: 100%; image-rendering: pixelated;">
@@ -55,8 +55,9 @@
   }
   // Ottieni il riferimento al div con l'ID "n"
   const divN = document.getElementById("n");
+
   // Genera un numero casuale tra 50 e 190
-  const randomNumber = getRandomNumber(50, 190);
+  const randomNumber = getRandomNumber(50, 150);
   // Sostituisci il contenuto del div con il numero generato
   divN.textContent = randomNumber;
 </script>

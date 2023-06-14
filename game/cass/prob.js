@@ -7,8 +7,8 @@
 
   // 1° caricamento
     let chosenVariable;
-    let randomNumber = Math.random();
-    if (randomNumber < 0.6) {
+    let randomNumber2 = Math.random();
+    if (randomNumber2 < 0.6) {
         chosenVariable = tecnic;
     } else {
       chosenVariable = evoluz;
@@ -19,8 +19,8 @@
   function startLoop() {
     intervalId = setInterval(function() {
       let chosenVariable;
-      let randomNumber = Math.random();
-      if (randomNumber < 0.6) {
+      let randomNumber2 = Math.random();
+      if (randomNumber2 < 0.6) {
         chosenVariable = tecnic;
       } else {
         chosenVariable = evoluz;
