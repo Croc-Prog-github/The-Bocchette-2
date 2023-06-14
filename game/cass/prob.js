@@ -30,16 +30,20 @@
     }, 10);
   }
 
-  function handleKeyPress(event) {
-  if (event.code === 'Space') {
+  /*
+  function addEventListener(event) {
+    if (event.button === 0) {
       clearInterval(intervalId);
       ABC();
     }
-  }
-  document.addEventListener('keydown', handleKeyPress);
-  startLoop();
-  
-
+  } */
+  document.addEventListener('mousedown', (event) => {
+    startLoop();
+    if (event.button === 0) {
+      clearInterval(intervalId);
+      ABC();
+    }
+  });
 // END
 
 //Funzione di rallentamento dei '???'
