@@ -7,7 +7,7 @@ let gett = sessionStorage.getItem("gett"); //n. di gettoni (pass)
 
 
 let tecnicUnlock =  sessionStorage.getItem("tecnicUnlock");//Tecniche Sbloccate (Acquisite)
-let tecnicLockCom = sessionStorage.getItem("tecnicLockCom"); //Tecniche Bloccate (Da trovare o aquistare)
+let tecnicLockCom = sessionStorage.getItem("tecnicLockCom"); //TecnicheComuni Bloccate (Da trovare o aquistare)
 let evoluzUnlock = sessionStorage.getItem("evoluzUnlock"); //Evoluzioni Sbloccate
 let evoluzLock = sessionStorage.getItem("evoluzLock"); //Evoluzioni Bloccate
 
