@@ -1,0 +1,15 @@
+{
+  "name": "vitejs-vite-fvdunr",
+  "version": "1.0.0",
+  "description": "Mettiti nei panni di macchine da guerra, completa la storia e gioca in Battle Royale Multiplayer per avazare nel gioco. Usa potenti tecniche che usano Energia, ricaricabile col tempo.",
+  "main": "var.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
