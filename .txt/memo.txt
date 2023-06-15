@@ -13,6 +13,7 @@ PRIORITARI
 2. Continuare le Missioni-storia
 3. Correggere trasazione tra tecnicLockCom e tecnicUnlock
 4. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium
+5. Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom
 
 DA INIZIARE
 1. Iniziare il Chats-API
