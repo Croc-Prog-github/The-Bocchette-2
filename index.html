@@ -11,3 +11,17 @@
     
   </body>
 </html>
+
+<script src="/Vanille_3/main.js"></script>
+
+  <!-- Inclusione del contenuto HTML -->
+  <div id="web-container"></div>
+
+  <!-- Script per inizializzare il WebContainer -->
+  <script>
+    const webContainer = new WebContainer({
+      container: '#web-container',
+      entry: 'Vanille_3/index.html'
+    });
+    webContainer.init();
+  </script>
