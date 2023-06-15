@@ -27,3 +27,4 @@ COMPLETATI
 4. Creare il loging prima di passare a home.html FATTO
 5. Creare casse per Rarità dove ci sono probabilità per Tecniche ed Evoluzioni; Continuare la grafica dei grafici; FATTO
 6. Aggiungere la ricompensa delle Banconote da dare FATTO
+7. Corretto errore riscatto delle ricompense nel pass FATTO
