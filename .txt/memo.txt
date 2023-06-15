@@ -13,6 +13,7 @@ PRIORITARI
 2. Continuare le Missioni-storia
 3. Correggere trasazione tra tecnicLock e tecnicUnlock
 4. Aggiungere la ricompensa delle Banconote da dare
+5. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium
 
 DA INIZIARE
 1. Iniziare il Chats-API
