@@ -45,21 +45,21 @@
 function Choice() {
   let risult = slotC.src;
   if (risult === 'https://docs.google.com/drawings/d/e/2PACX-1vQM-kWdTzXN5FX-YXJriQcySiTzB-dmzPnTb9RxHpT9EZvY5Ya9KW3BbDaHrbuzvybwkFD_LoPoJ43k/pub?w=256&h=187') { // <-- Tecnic
-    let tecnicSelect = tecnicLock[Math.floor(Math.random() * tecnicLock.length)];
-    if (tecnicUnlock.includes(tecnicSelect)) { //Una tecnica casuale di tecnicLock è contenuta in tecnicUnlock ?
+    let tecnicSelect = tecnicLockCom[Math.floor(Math.random() * tecnicLockCom.length)];
+    if (tecnicUnlock.includes(tecnicSelect)) { //Una tecnica casuale di tecnicLockCom è contenuta in tecnicUnlock ?
       Choice();
     } else {
       window.alert('Hai tovato la tecnica: ' + tecnicSelect + ' !');
       window.location.href = '/game/home.html'
 
-      //Rimuove tecnicSelect da TecnicLock e lo agiunge in TecnicUnlock
-      let index = tecnicLock.indexOf(tecnicSelect);
+      //Rimuove tecnicSelect da TecnicLockCom e lo agiunge in TecnicUnlock
+      let index = tecnicLockCom.indexOf(tecnicSelect);
       //let index = tecnicSelect;
       if (index !== -1) {
-        tecnicLock.splice(index, 1); 
+        tecnicLockCom.splice(index, 1); 
         tecnicUnlock.push(tecnicSelect);
       } else {
-        alert("Fatal error: index di tecnicLock è < 1 Cioè l'elemento non è stato trovato");
+        alert("Fatal error: index di tecnicLockCom è < 1 Cioè l'elemento non è stato trovato");
       }
     }
   }

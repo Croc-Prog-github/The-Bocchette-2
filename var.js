@@ -7,13 +7,13 @@ let gett = sessionStorage.getItem("gett"); //n. di gettoni (pass)
 
 
 let tecnicUnlock =  sessionStorage.getItem("tecnicUnlock");//Tecniche Sbloccate (Acquisite)
-let tecnicLock = sessionStorage.getItem("tecnicLock"); //Tecniche Bloccate (Da trovare o aquistare)
+let tecnicLockCom = sessionStorage.getItem("tecnicLockCom"); //Tecniche Bloccate (Da trovare o aquistare)
 let evoluzUnlock = sessionStorage.getItem("evoluzUnlock"); //Evoluzioni Sbloccate
 let evoluzLock = sessionStorage.getItem("evoluzLock"); //Evoluzioni Bloccate
 
 if (1 > 0) {
   tecnicUnlock = ['dispersione', 'taglio netto', 'super taglio netto'];
-  tecnicLock = ['rasengan', 'fulmine'];
+  tecnicLockCom = ['rasengan', 'fulmine'];
   evoluzUnlock = [];
   evoluzLock = [];
 }
@@ -27,7 +27,7 @@ function SS() {
   sessionStorage.setItem("gett", gett);
 
   sessionStorage.setItem("tecnicUnlock", tecnicUnlock)
-  sessionStorage.setItem("tecnicLock", tecnicLock)
+  sessionStorage.setItem("tecnicLockCom", tecnicLockCom)
   sessionStorage.setItem("evoluzUnlock", evoluzUnlock)
   sessionStorage.setItem("evoluzLock", evoluzLock)
 }

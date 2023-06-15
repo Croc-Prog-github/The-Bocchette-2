@@ -11,7 +11,7 @@
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza
 2. Continuare le Missioni-storia
-3. Correggere trasazione tra tecnicLock e tecnicUnlock
+3. Correggere trasazione tra tecnicLockCom e tecnicUnlock
 4. Aggiungere la ricompensa delle Banconote da dare
 5. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium
 
