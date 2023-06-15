@@ -12,8 +12,7 @@ PRIORITARI
 1. Continuare il Bot1 in sopravvivenza
 2. Continuare le Missioni-storia
 3. Correggere trasazione tra tecnicLockCom e tecnicUnlock
-4. Aggiungere la ricompensa delle Banconote da dare
-5. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium
+4. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium
 
 DA INIZIARE
 1. Iniziare il Chats-API
@@ -26,3 +25,4 @@ COMPLETATI
 3. Mettere le variabili presenti in var.js in Archiviazione di sessione. FATTO
 4. Creare il loging prima di passare a home.html FATTO
 5. Creare casse per Rarità dove ci sono probabilità per Tecniche ed Evoluzioni; Continuare la grafica dei grafici; FATTO
+6. Aggiungere la ricompensa delle Banconote da dare FATTO
