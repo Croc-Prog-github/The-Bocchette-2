@@ -49,7 +49,7 @@ function Choice() {
     if (tecnicUnlock.includes(tecnicSelect)) { //Una tecnica casuale di tecnicLockCom è contenuta in tecnicUnlock ?
       Choice();
     } else {
-      window.alert('Hai tovato la tecnica: ' + tecnicSelect + ' !');
+      window.alert('Hai tovato la Tecnica: ' + tecnicSelect + ' !');
       window.location.href = '/game/home.html'
 
       //Rimuove tecnicSelect da TecnicLockCom e lo agiunge in TecnicUnlock
@@ -64,7 +64,7 @@ function Choice() {
     }
   }
   if (risult === 'https://docs.google.com/drawings/d/e/2PACX-1vQeZBD2vuiFTXswWU_AsOlwm_YpzIlCcdAessBH_-u9LhhHMX97lq2PptsKu2DUGAHUqq4wewPk8a1P/pub?w=258&h=184') { // <-- Evoluz 
-    alert("Nessuna evoluzione agiunta!");
+    window.alert("Risultato Evoluzione: Nessuna evoluzione aggiunta!");
     window.location.href = '/game/home.html'
   }
 }
