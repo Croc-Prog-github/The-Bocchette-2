@@ -11,12 +11,21 @@ let tecnicLockCom = sessionStorage.getItem("tecnicLockCom"); //TecnicheComuni Bl
 let evoluzUnlock = sessionStorage.getItem("evoluzUnlock"); //Evoluzioni Sbloccate
 let evoluzLock = sessionStorage.getItem("evoluzLock"); //Evoluzioni Bloccate
 
-if (1 > 0) {
+if (true) {
   tecnicUnlock = ['dispersione', 'taglio netto', 'super taglio netto'];
   tecnicLockCom = ['rasengan', 'fulmine'];
   evoluzUnlock = [];
   evoluzLock = [];
 }
+
+//Array totale che contiene gli array tecnicUnlock e tecnicLockCom
+  var data = {
+    tecnicUnlock: tecnicUnlock,
+    tecnicLockCom: tecnicLockCom
+  };
+  sessionStorage.setItem('Tecnic_&_Evoluz', JSON.stringify(data));
+  var storedData = JSON.parse(sessionStorage.getItem('Tecnic_&_Evoluz'));
+//END
 
 function SS() {
   // Session Storage legato alle variabili
@@ -26,15 +35,17 @@ function SS() {
   sessionStorage.setItem("obb", obb);
   sessionStorage.setItem("gett", gett);
 
-  sessionStorage.setItem("tecnicUnlock", tecnicUnlock)
-  sessionStorage.setItem("tecnicLockCom", tecnicLockCom)
-  sessionStorage.setItem("evoluzUnlock", evoluzUnlock)
-  sessionStorage.setItem("evoluzLock", evoluzLock)
+  //Aggiorna i singoli array di dati
+  sessionStorage.setItem("tecnicUnlock", JSON.stringify(tecnicUnlock));
+  sessionStorage.setItem("tecnicLockCom", JSON.stringify(tecnicLockCom));
+
+  sessionStorage.setItem("evoluzUnlock", evoluzUnlock);
+  sessionStorage.setItem("evoluzLock", evoluzLock);
 }
 //Da ora il Session Storage non è più controllato dal filtro dei soli numeri interi
 setInterval(function() {
   SS();
-  const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme']; // Array delle chiavi da verificare
+  const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme']; // Array delle chiavi da verificare (solo variabili Intere)
   for (let key in sessionStorage) {
     if (keysToCheck.includes(key)) { // Verifica se la chiave corrente è presente nell'array keysToCheck
       let value = sessionStorage.getItem(key);
