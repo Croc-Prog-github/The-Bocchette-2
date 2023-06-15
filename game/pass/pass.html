@@ -94,7 +94,7 @@
     if (passP == 1) { //Controlla Premium Pass (riscatto ricomps. pass premium)
       switch (ricomp) {
         case "400 banconote":
-          console.log(soldi = soldi + 400);
+          soldi = parseInt(soldi) + 400;
         break;
         default:
           window.alert("Errore: Ricompensa di switch(), non valida!")

@@ -57,8 +57,8 @@
 <script> //Animazione 3D Banconote
   const element = document.getElementById('QNTsold');
   let angle = 235; // Angolo di partenza
-  const targetAngle = 359; // Angolo di destinazione
-  const speed = 4; // Velocità di cambio in millisecondi
+  const targetAngle = 360 // Angolo di destinazione
+  const speed = 1; // Velocità di cambio in millisecondi
 
   function rotateElement() {
     if (angle < targetAngle) {
@@ -86,6 +86,8 @@
   const randomNumber = getRandomNumber(50, 150);
   // Sostituisci il contenuto del div con il numero generato
   divN.textContent = randomNumber;
+
+  soldi = parseInt(soldi) + parseInt(randomNumber); //Fa la somma matematica (senza unione di strighe)
 </script>
 
 <script>// Vai al 2° Skip
