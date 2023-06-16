@@ -122,39 +122,38 @@
 </html>
 
 <script>
-const elements = document.querySelectorAll('.DivTecnic');
+  const elements = document.querySelectorAll('.DivTecnic');
+  let selectedElement = null;
 
-let selectedElement = null;
-
-elements.forEach(element => {
-  element.addEventListener('click', function() {
-    if (selectedElement === this) {
-      this.classList.remove('clicked');
-      selectedElement = null;
-      // Nascondi i bottoni quando viene deselezionato il div
-      const buttons = this.querySelectorAll('.btnSlot');
-      buttons.forEach(button => {
-        button.style.display = 'none';
-      });
-    } else {
-      if (selectedElement) {
-        selectedElement.classList.remove('clicked');
-        // Nascondi i bottoni dell'elemento precedentemente selezionato
-        const previousButtons = selectedElement.querySelectorAll('.btnSlot');
-        previousButtons.forEach(button => {
+  elements.forEach(element => {
+    element.addEventListener('click', function() {
+      if (selectedElement === this) {
+        this.classList.remove('clicked');
+        selectedElement = null;
+        // Nascondi i bottoni quando viene deselezionato il div
+        const buttons = this.querySelectorAll('.btnSlot');
+        buttons.forEach(button => {
           button.style.display = 'none';
         });
+      } else {
+        if (selectedElement) {
+          selectedElement.classList.remove('clicked');
+          // Nascondi i bottoni dell'elemento precedentemente selezionato
+          const previousButtons = selectedElement.querySelectorAll('.btnSlot');
+          previousButtons.forEach(button => {
+            button.style.display = 'none';
+          });
+        }
+        this.classList.add('clicked');
+        selectedElement = this;
+        // Mostra i bottoni del nuovo elemento selezionato
+        const currentButtons = this.querySelectorAll('.btnSlot');
+        currentButtons.forEach(button => {
+          button.style.display = 'block';
+        });
       }
-      this.classList.add('clicked');
-      selectedElement = this;
-      // Mostra i bottoni del nuovo elemento selezionato
-      const currentButtons = this.querySelectorAll('.btnSlot');
-      currentButtons.forEach(button => {
-        button.style.display = 'block';
-      });
-    }
+    });
   });
-});
 </script>
 
 <style>
