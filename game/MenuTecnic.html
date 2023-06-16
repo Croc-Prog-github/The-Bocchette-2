@@ -122,8 +122,15 @@
 </html>
 
 <script>
-  //const DivTecnic = document.getElementByClass('DivTecnic');
+  const elements = document.querySelectorAll('.DivTecnic');
 
+// Itera su ciascun elemento e aggiungi il listener di clic
+elements.forEach(element => {
+  element.addEventListener('click', function() {
+    // Aggiungi o rimuovi la classe 'clicked' sull'elemento corrente
+    this.classList.toggle('clicked');
+  });
+});
 
 </script>
 
@@ -133,7 +140,7 @@
     height: 150px;
     width: 150px;
   }
-  .DivTecnic:active {
+  .DivTecnic.clicked {
     border: solid yellow;
     height: 145px;
     width: 145.5px;
