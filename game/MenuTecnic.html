@@ -124,14 +124,26 @@
 <script>
   const elements = document.querySelectorAll('.DivTecnic');
 
-// Itera su ciascun elemento e aggiungi il listener di clic
-elements.forEach(element => {
-  element.addEventListener('click', function() {
-    // Aggiungi o rimuovi la classe 'clicked' sull'elemento corrente
-    this.classList.toggle('clicked');
-  });
-});
+  let selectedElement = null;
 
+  // Itera su ciascun elemento e aggiungi il listener di clic
+  elements.forEach(element => {
+    element.addEventListener('click', function() {
+      if (selectedElement === this) {
+        // Deseleziona l'elemento se viene cliccato di nuovo
+        this.classList.remove('clicked');
+        selectedElement = null;
+      } else {
+        // Deseleziona l'elemento precedente se ce n'è uno
+        if (selectedElement) {
+          selectedElement.classList.remove('clicked');
+        }
+        // Seleziona l'elemento corrente
+        this.classList.add('clicked');
+        selectedElement = this;
+      }
+    });
+  });
 </script>
 
 <style>
