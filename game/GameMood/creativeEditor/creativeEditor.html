@@ -17,9 +17,9 @@
       </div>
     </div>
 
-    <div name="interface" style="width: 96em; height: 41em; background: royalblue; position: absolute; top: 1px; left: 0px;">
-      <div name="Creativa">
-
+    <div name="interface">
+      <div name="Creativa" id="creativ" style="width: 96em; height: 44em; background: royalblue; position: absolute; top: 1px; left: 0px;" hidden>
+        <button style="background: indianred; border: solid 3px darkred; font: message-box; margin-left: 98.2%; margin-bottom: 5px;" onclick="WinEdit(0)">X</button>
       </div>
       <div name="Imp_Mappa"></div>
     </div>
@@ -28,7 +28,7 @@
       <span style="font-size: xx-large; text-align: center; display: flex; justify-content: center;">EDITOR CREATIVA</span>
       <div style="display: flex; flex-direction: column; flex-wrap: nowrap; align-items: stretch; margin-inline: 5px; margin-top: 15%;">
         <button style="background: lightgray; border: solid 3px gray" onclick="OSett()">Impostazioni</button>
-        <button style="background: lightgray; border: solid 3px gray">Impostazioni mappa</button>
+        <button style="background: lightgray; border: solid 3px gray" onclick="WinEdit(1)">Impostazioni mappa</button>
         <button style="background: lightgray; border: solid 3px gray">Seleziona squadra</button>
         <button style="background: indianred; border: solid 3px darkred" onclick="let exit=window.confirm('Sei sicuro di voler uscire?');if(exit == true){window.location.href = '/game/GameMood/creativ.html';}">ESCI</button>
       </div>
@@ -45,10 +45,22 @@
 
     <div style="margin-top: 1.2%; height: 20px; width: 99.5%; background-color: #4343db; border: darkblue solid 5.5px; color: white; cursor: default;">
       <strong>[Esc] Menù </strong>
-      <strong></strong>
+      <!-- <strong>[Esc] Chiudi finestra modifiche</strong> -->
     </div>
   </body>
 </html>
+
+<script>
+  function WinEdit(n){
+    const creativ = document.getElementById('creativ');
+    if (n === 1) {
+      creativ.hidden = false;
+    } 
+    if (n === 0) {
+      creativ.hidden = true;
+    }
+  }
+</script>
 
 <script> //Apri <iframe> impostazioni
   function OSett() {
