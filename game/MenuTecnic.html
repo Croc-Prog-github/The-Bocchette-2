@@ -46,8 +46,7 @@
     <div style="overflow-y: auto; height: 35em;">
       <div style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; align-content: center;">
         <div style="display: flex; margin-top: 20px;">
-          <!--<img src="https://docs.google.com/drawings/d/e/2PACX-1vQM-kWdTzXN5FX-YXJriQcySiTzB-dmzPnTb9RxHpT9EZvY5Ya9KW3BbDaHrbuzvybwkFD_LoPoJ43k/pub?w=256&h=187" alt="Err" style="width: 9%; position: absolute; top: 22.2%; right: 70%;">-->
-          <div class="DivTecnic" style="display: flex; flex-direction: row; align-items: flex-end; background: black; margin-right: 100px;">
+          <div class="DivTecnic" style="display: flex; flex-direction: row; align-items: flex-end; background: black; margin-right: 100px;" onclick="info('Dispersione', 'Standard', '10', '10')">
             <button class="btnSlot">Usa in Slot 1</button>
             <button class="btnSlot">Usa in Slot 2</button>
           </div>
@@ -132,6 +131,12 @@
 </html>
 
 <script>
+  function info(nam, rar, dan, Er) {
+
+  }
+</script>
+
+<script> //Seleziona e deseleziona tecnica
   const elements = document.querySelectorAll('.DivTecnic');
   let selectedElement = null;
 
