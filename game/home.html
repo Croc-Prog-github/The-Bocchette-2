@@ -56,18 +56,21 @@
       <div style="margin-right: 15px; display: grid; align-content: center; justify-items: center; cursor: default;">
         Seleziona Tecnica per tasto E
         <br>
+        <button id="Tecnic1" value="dispersione" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; border-right: outset;text-align: center; padding-block: 0px;">dispersione</button>
+        <!--
         <select id="Tecnic1" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; /*outline-style: outset;*/ border-right: outset;text-align: center;">
           <option value="dispersione">dispersione</option>
           <option value="taglio netto">taglio netto</option>
           <option value="super taglio netto">super taglio netto</option>
           <option value="rasengan" disabled title="Tecnica non ancora trovata">rasengan</option>
         </select>
+        -->
       </div>
     
       <div style="margin-right: 15px; display: grid; align-content: center; justify-items: center; cursor: default;">
         Seleziona Tecnica per tasto F
         <br>
-        <button id="Tecnic2" value="?" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; border-right: outset;text-align: center; padding-block: 0px;">?</button>
+        <button id="Tecnic2" value="taglio netto" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; border-right: outset;text-align: center; padding-block: 0px;">taglio netto</button>
         <!--
         <select id="Tecnic2" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; /*outline-style: outset;*/ border-right: outset;text-align: center;">
           <option value="taglio netto">taglio netto</option>
@@ -146,6 +149,40 @@
 
   </body>
 </html>
+
+<script>//Importa la Tecnica 1 in Slot 1
+  // Funzione per impostare il valore del pulsante Tecnic1
+  function setTecnic1Value(value) {
+    const tecnic1Button = document.getElementById('Tecnic1');
+    tecnic1Button.value = value;
+    tecnic1Button.textContent = value;
+  }
+
+  // Recuperare il valore dal localStorage all'avvio della pagina
+  document.addEventListener('DOMContentLoaded', function() {
+    const tecnic1Value = localStorage.getItem('Tecnic1Value');
+    if (tecnic1Value) {
+      setTecnic1Value(tecnic1Value);
+    }
+  });
+</script>
+
+<script>//Importa la Tecnica 2 in Slot 2
+  // Funzione per impostare il valore del pulsante Tecnic2
+  function setTecnic2Value(value) {
+    const tecnic2Button = document.getElementById('Tecnic2');
+    tecnic2Button.value = value;
+    tecnic2Button.textContent = value;
+  }
+
+  // Recuperare il valore dal localStorage all'avvio della pagina
+  document.addEventListener('DOMContentLoaded', function() {
+    const tecnic2Value = localStorage.getItem('Tecnic2Value');
+    if (tecnic2Value) {
+      setTecnic2Value(tecnic2Value);
+    }
+  });
+</script>
 
 <script> //Animazione di Effect per le casse
   const effect1 = document.getElementById('effect1');
