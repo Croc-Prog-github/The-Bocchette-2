@@ -39,10 +39,10 @@
 
     <div style="display: flex; align-items: flex-start; flex-direction: column; margin-top: 15px;" name="butt">
       <button name="news" onclick="window.location.href = '/SITO_NON_PRONTO'">Notizie</button>
-      <button name="shop" onclick="window.location.href = '/game/shop.html';">Negozio</button>
-      <button name="bocch" onclick="window.location.href = '/game/MenuBocch/SelectBocch.html';">Seleziona Bocchetta</button>
-      <button name="MenuTecnic" onclick="window.location.href = '/game/MenuTecnic.html';">Seleziona Tecnica</button>
-      <button name="miss" onclick="window.location.href = '/game/GameMood/Miss_story.html';">Missioni-storia</button>
+      <button name="shop" onclick="window.location.href = '/game/shop.html';" style="background: lightgray; border: solid 3px gray;">Negozio</button>
+      <button name="bocch" onclick="window.location.href = '/game/MenuBocch/SelectBocch.html';" style="background: lightgray; border: solid 3px gray;">Seleziona Bocchetta</button>
+      <button name="MenuTecnic" onclick="window.location.href = '/game/MenuTecnic.html';" style="background: lightgray; border: solid 3px gray;">Seleziona Tecnica</button>
+      <button name="miss" onclick="window.location.href = '/game/GameMood/Miss_story.html';" style="background: lightgray; border: solid 3px gray;">Missioni-storia</button>
     </div>
 
     <div style="position: absolute; z-index: 3; margin-top: -5%;" id="MinImpo" hidden>
@@ -95,7 +95,7 @@
     </div>
 
     <div style="display: flex; flex-direction: row-reverse;" name="menù princ" id="M_princ">
-      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSxF6EvIMPHfWs1SwY_XPABAJHQQRc0l_-V10auLdTB7dpOhTRPZEt0TWIcr-gAmIAYDYfhSQ3xnQPl/pub?w=100&h=100" alt="La fonte non è disponibile" style="margin-top: -357px; margin-bottom: 74vh;" title="Menù" onclick="OpnM()">
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSxF6EvIMPHfWs1SwY_XPABAJHQQRc0l_-V10auLdTB7dpOhTRPZEt0TWIcr-gAmIAYDYfhSQ3xnQPl/pub?w=100&h=100" alt="La fonte non è disponibile" style="margin-top: -357px; margin-bottom: 73vh;" title="Menù" onclick="OpnM()">
     </div>
 
 
@@ -265,7 +265,7 @@
     newDiv.style.marginBottom = "9vh";
     */
 
-    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -296px; margin-bottom: 15vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; z-index: 1; position: relative"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button><button name="impo" onclick="OSett()" style="margin-inline: 10px; margin-top: 15px;">Impostazioni</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button onclick="rend(4)" style="margin-inline: 10px; margin-top: 15px;">Lascia un feedback</button></div>';
+    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -296px; margin-bottom: 14vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; z-index: 1; position: relative"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button><button name="impo" onclick="OSett()" style="margin-inline: 10px; margin-top: 15px;">Impostazioni</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button onclick="rend(4)" style="margin-inline: 10px; margin-top: 15px;">Lascia un feedback</button></div>';
     // Inserisce il nuovo div all'interno di M_princ
     mPrinc.appendChild(newDiv);
 
