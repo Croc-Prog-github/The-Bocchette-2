@@ -36,10 +36,10 @@
 
     <div style="margin-top: 5px; margin-left: 5%; width: 40%; height: auto; background: cornflowerblue; display: flex; flex-direction: row; padding: 9px;border: solid; margin-inline: 33%; justify-content: space-evenly;">
       <div style="display: flex;">
-        <b>Tecnica Slot 1:</b><div>Null</div>
+        <b>Tecnica Slot 1:</b><div id="TS1">Null</div>
       </div>
       <div style="display: flex;">
-        <b>Tecnica Slot 2:</b><div>Null</div>
+        <b>Tecnica Slot 2:</b><div id="TS2">Null</div>
       </div>
     </div>
 
@@ -47,17 +47,17 @@
       <div style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; align-content: center;">
         <div style="display: flex; margin-top: 20px;">
           <div class="DivTecnic" style="display: flex; flex-direction: row; align-items: flex-end; background: black; margin-right: 100px; background-image: url('https://docs.google.com/drawings/d/e/2PACX-1vQM-kWdTzXN5FX-YXJriQcySiTzB-dmzPnTb9RxHpT9EZvY5Ya9KW3BbDaHrbuzvybwkFD_LoPoJ43k/pub?w=256&h=187'); background-position: revert; background-size: contain;" onclick="info('Dispersione', 'Standard', '10', '10')">
-            <button class="btnSlot">Usa in Slot 1</button>
-            <button class="btnSlot">Usa in Slot 2</button>
+            <button class="btnSlot" onclick="STecnicS1('Dispersione')">Usa in Slot 1</button>
+            <button class="btnSlot" onclick="STecnicS2('Dispersione')">Usa in Slot 2</button>
           </div>
           <div class="DivTecnic" style="display: flex; flex-direction: row; align-items: flex-end; background: black;margin-right: 100px; background-image: url('https://docs.google.com/drawings/d/e/2PACX-1vQM-kWdTzXN5FX-YXJriQcySiTzB-dmzPnTb9RxHpT9EZvY5Ya9KW3BbDaHrbuzvybwkFD_LoPoJ43k/pub?w=256&h=187'); background-position: revert; background-size: contain;" onclick="info('Taglio netto', 'Standard', '40', '30')">
-            <button class="btnSlot">Usa in Slot 1</button>
-            <button class="btnSlot">Usa in Slot 2</button>
+            <button class="btnSlot" onclick="STecnicS1('Taglio netto')">Usa in Slot 1</button>
+            <button class="btnSlot" onclick="STecnicS2('Taglio netto')">Usa in Slot 2</button>
           </div>
 
           <div class="DivTecnic" style="display: flex; flex-direction: row; align-items: flex-end; background: black;margin-right: 100px; background-image: url('https://docs.google.com/drawings/d/e/2PACX-1vQM-kWdTzXN5FX-YXJriQcySiTzB-dmzPnTb9RxHpT9EZvY5Ya9KW3BbDaHrbuzvybwkFD_LoPoJ43k/pub?w=256&h=187'); background-position: revert; background-size: contain;" onclick="info('Super taglio netto', 'Standard', '50', '50')">
-            <button class="btnSlot">Usa in Slot 1</button>
-            <button class="btnSlot">Usa in Slot 2</button>
+            <button class="btnSlot" onclick="STecnicS1('Super taglio netto')">Usa in Slot 1</button>
+            <button class="btnSlot" onclick="STecnicS2('Super taglio netto')">Usa in Slot 2</button>
           </div>
           <div class="DivTecnic" style="display: flex; flex-direction: row; align-items: flex-end; background: black; background-image: url('https://docs.google.com/drawings/d/e/2PACX-1vQM-kWdTzXN5FX-YXJriQcySiTzB-dmzPnTb9RxHpT9EZvY5Ya9KW3BbDaHrbuzvybwkFD_LoPoJ43k/pub?w=256&h=187'); background-position: revert; background-size: contain;" onclick="info('?', '?', '?', '?')">
             <button class="btnSlot">Usa in Slot 1</button>
@@ -154,7 +154,14 @@
 </html>
 
 <script>//Inserisce le teniche selezionate nel pannello
-
+  function STecnicS1(ST1) {
+    const TS1Tag = document.getElementById('TS1');
+    TS1Tag.textContent = ST1;
+  }
+  function STecnicS2(ST2) {
+    const TS2Tag = document.getElementById('TS2');
+    TS2Tag.textContent = ST2;
+  }
 </script>
 
 <script> //Inserisce nel pannello delle info le info della tecnica selezionata
