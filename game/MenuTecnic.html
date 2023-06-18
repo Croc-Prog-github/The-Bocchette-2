@@ -19,16 +19,16 @@
       <b style="display: flex; justify-content: center; margin-bottom: 3px;">Statistiche Tecnica selezionata</b>
       <div style="display: flex; justify-content: space-around;">
         <div style="display: flex;">
-          Nome: <div>Error</div>
+          Nome: <div id="nam">Error</div>
         </div>
         <div style="display: flex; ">
-          Rarità: <div>Error</div>
+          Rarità: <div id="rar">Error</div>
         </div>
         <div style="display: flex; ">
-          Danni: <div>Error</div>
+          Danni: <div id="dan">Error</div>
         </div>
         <div style="display: flex; ">
-          Energia richesta: <div>Error</div>
+          Energia richesta: <div id="Er">Error</div>
         </div>
       </div>
       <div style="height: 18.4px; /*margin-top: 3px;*/"></div>
@@ -130,9 +130,17 @@
   </body>
 </html>
 
-<script>
+<script> //Inserisce nel pannello delle info le info della tecnica selezionata
   function info(nam, rar, dan, Er) {
+    const namTag = document.getElementById('nam');
+    const rarTag = document.getElementById('rar');
+    const danTag = document.getElementById('dan');
+    const ErTag = document.getElementById('Er');
 
+    namTag.textContent = nam;
+    rarTag.textContent = rar;
+    danTag.textContent = dan;
+    ErTag.textContent = Er;
   }
 </script>
 
