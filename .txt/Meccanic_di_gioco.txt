@@ -1,10 +1,10 @@
 MECCANICHE DI GIOCO GENERALI
 
 LE TECNICHE APPLICATE ALLE BOCCHETTE
-Le Bocchette sono i personaggi principali, ogniuno può avere 2 Tecniche personalizzabili da un elenco di tecniche (di attacco e difesa) in comune per tutte le Bocchette.
+Le Bocchette sono i personaggi principali, ognuno può avere 2 Tecniche personalizzabili da un elenco di tecniche (di attacco e difesa) in comune per tutte le Bocchette.
 
 EVOLUZIONI DELLE BOCCHETTE
-Per qualsiasi Bocchetta quando usa una tecnica consuma dell'Energia, l'energia massima accumulabile (nella evoluzione: Normale) è di 100. Ma con l'uso di Tecniche di rarità maggiore, esse richedono maggiore energia. Per aumentare la quantità di Energia massima accumulabile è necessaria l'evoluzione delle singole Bocchette. Facendo evolvere le Bocchette potrai sbloccare anche Tecniche che richedono maggiore Enerigia, quindi quelle più rare.
+Per qualsiasi Bocchetta quando usa una tecnica consuma dell'Energia, l'energia massima accumulabile (nella evoluzione: Normale) è di 100. Ma con l'uso di Tecniche di rarità maggiore, esse richiedono maggiore energia. Per aumentare la quantità di Energia massima accumulabile è necessaria l'evoluzione delle singole Bocchette. Facendo evolvere le Bocchette potrai sbloccare anche Tecniche che richiedono maggiore Energia, quindi quelle più rare.
 
 INCOMPATIBILITÀ DI RARITÀ DELLE TECNICHE DA EVOLUZIONI COMPATIBILI, IN EVOLUZIONI INFERIORI
 Però ogni Bocchetta con una evoluzione superiore a Normale, ad esempio Epica, potrà usare solo Tecniche uguali o inferiori alla sua evoluzione attuale. Quindi non potrà usare Tecniche superiori, quindi ad esempio Leggendaria, Immortal,...
