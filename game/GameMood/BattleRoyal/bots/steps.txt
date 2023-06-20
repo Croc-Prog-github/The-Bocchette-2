@@ -1,0 +1,11 @@
+BOT'S STEPS
+
+Start()
+  1: Cerca nel raggio di 100px i Power-up
+  2: Se trova Power-up:
+    2.1: Vai nel Power-up e lo rompi
+  3: Else if: se non trova Power-up
+    3.1: Fà 120px di passi e aziona Start()
+  4: Se mentre rompe Power-up rileva Player: attacca il Player
+    4.1: Se propria vita =< 0: nasconditi
+    4.2: Se uccide Player: Start()
