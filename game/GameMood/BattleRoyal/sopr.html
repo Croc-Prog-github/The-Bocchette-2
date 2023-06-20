@@ -21,7 +21,7 @@
         <div id="fumetto" aria-label="tasto E" style="margin-left: 30px; position: absolute; margin-top: -25px;">-</div>
         <progress style="margin-top: -25px; position: absolute; z-index: 1; width: 65px; accent-color: green;" value="100" max="100"></progress>
         <progress value="0" max="99" style="margin-top: -15px; position: absolute; z-index: 1; width: 65px;" id="YourE"></progress>
-        <img src="#" style="/*position: absolute;*/ top: 50%; left: 50%;" alt="Player">
+        <img src="" style="/*position: absolute;*/ top: 50%; left: 50%;" alt="Player">
         <div name="mire" id="mire" hidden>
           <div name="miraE" style="background-color: #d6d6d6cc; width: 150px; height: 30px; rotate: 43deg; transform-origin: left; margin-top: -30px;margin-left: 20px;" id="miraE"></div>
           <div name="miraF" style="" id="miraF"></div>
@@ -48,6 +48,35 @@
     <script src="/game/GameMood/BattleRoyal/bots/bot1.js"></script>
   </body>
 </html>
+
+<script>//Movimento Player
+  document.addEventListener('keydown', function(event) {
+  const player = document.getElementById('player');
+  const step = 10; // Dimensione del passo di spostamento
+
+  let top = parseInt(player.style.top) || 0;
+  let left = parseInt(player.style.left) || 0;
+
+  // Gestire l'evento di pressione del tasto
+  switch (event.key) {
+    case 'w': // Spostamento verso l'alto
+      top -= step;
+      break;
+    case 'a': // Spostamento verso sinistra
+      left -= step;
+      break;
+    case 's': // Spostamento verso il basso
+      top += step;
+      break;
+    case 'd': // Spostamento verso destra
+      left += step;
+      break;
+  }
+
+  player.style.top = top + 'px';
+  player.style.left = left + 'px';
+});
+</script>
 
 <script> //Ricarica energia
   let Energy = document.getElementById("YourE");
