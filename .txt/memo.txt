@@ -18,7 +18,7 @@ PRIORITARI
 
 DA INIZIARE
 1. Iniziare il Chats-API
-2. 
+2. Luoghi ed edifici in Sopravivenza
 
 COMPLETATI
 1. Fare il window.confirm per chiedere se uscendo dalla pagina vuole perdere il progresso. X
