@@ -18,7 +18,7 @@
           <hx>Sciegli la squadra</hx>
           <input type="number" max="100" min="1" value="1" style="">
           <div style="display: flex; justify-content: space-between;">
-            <button>Annulla</button>
+            <button onclick="SSQ(0)">Annulla</button>
             <button>Applica</button>
           </div>
         </div>
@@ -73,7 +73,7 @@
       <div style="display: flex; flex-direction: column; flex-wrap: nowrap; align-items: stretch; margin-inline: 5px; margin-top: 15%;">
         <button style="background: lightgray; border: solid 3px gray" onclick="OSett()">Impostazioni</button>
         <button style="background: lightgray; border: solid 3px gray" onclick="WinEdit(1)">Impostazioni mappa</button>
-        <button style="background: lightgray; border: solid 3px gray">Seleziona squadra</button>
+        <button style="background: lightgray; border: solid 3px gray" onclick="SSQ(1)">Seleziona squadra</button>
         <button style="background: lightgreen; border: solid forestgreen" onclick="">AVVIA</button>
         <button style="background: indianred; border: solid 3px darkred" onclick="let exit=window.confirm('Sei sicuro di voler uscire?');if(exit == true){window.location.href = '/game/GameMood/creativ.html';}">ESCI</button>
       </div>
@@ -94,6 +94,18 @@
     </div>
   </body>
 </html>
+
+<script>// 
+  function SSQ(n) {
+    let SSQ = document.getElementById('SSQ');
+    if (n == 1) {
+      SSQ.hidden = false;
+    } 
+    if (n == 0) {
+      SSQ.hidden = true;
+    }
+  }
+</script>
 
 <!-- INIZIO cose Player -->
   <script>//Movimento Player
