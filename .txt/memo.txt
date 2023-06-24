@@ -7,14 +7,14 @@
 7. Completare eventi dentro le Modalità di gioco
 8. Completare le tecniche in sopravivenza
 9. Continuare il Power-Up
+10. Continuare le Missioni-storia
 
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza
-2. Continuare le Missioni-storia
-3. Correggere trasazione tra tecnicLockCom e tecnicUnlock
-4. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium
-5. Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom
-6. 
+2. Correggere trasazione tra tecnicLockCom e tecnicUnlock
+3. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium
+4. Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom
+5. 
 
 DA INIZIARE
 1. Iniziare il Chats-API
