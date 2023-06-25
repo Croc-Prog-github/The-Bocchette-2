@@ -11,9 +11,7 @@ Mettiti nei panni di macchine da guerra, completa la storia e gioca in Battle Ro
 - Scontri Multipleyer bilanciati in base al grado e alla rarità.
 
 Per avere info sul bilanciamento del gioco, le probabilità delle casse, le statistiche delle evoluzioni,...
-
 [clicca qui](https://docs.google.com/document/d/1PsYpN7GvzRnKKDpvvbf1r1OtHE_SL6dzfo08ABIh9Zg/edit?usp=sharing)
 
 Invece per avere info sulle meccaniche di gioco attuali:
-
 [clicca qui](https://docs.google.com/document/d/12C7B9nhLu7u6d1-XphUSWcpGSp7YnpcStAfIIHGq-tU/edit?usp=sharing)
