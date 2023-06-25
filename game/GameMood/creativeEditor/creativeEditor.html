@@ -14,12 +14,12 @@
 
     <div name="Scegli Squad" id="SSQ" hidden>
       <div style="display: flex; justify-content: center; align-items: center;">
-        <div style="position: absolute; width: 250px; height: 80px; background: white; border: solid 1.5px; margin-top: 4.3%; display: flex; flex-wrap: wrap;justify-content: center; align-content: center; flex-direction: column;">
+        <div style="position: absolute; width: 250px; height: 80px; background: white; border: solid 1.5px; display: flex; flex-wrap: wrap; justify-content: center; align-content: center; flex-direction: column; top: 0px;  z-index: 1;">
           <hx>Sciegli la squadra</hx>
-          <input type="number" max="100" min="1" value="1" style="">
+          <input type="number" max="100" min="1" value="1">
           <div style="display: flex; justify-content: space-between;">
-            <button onclick="SSQ(0)">Annulla</button>
-            <button>Applica</button>
+            <button onclick="SSQ(0, 1)">Chiudi</button>
+            <button onclick="SSQ(0, /**/);">Applica</button>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div name="interface" style="position: absolute; z-index: 1; top: 0px; left: 0px;">
+    <div name="interface" style="position: absolute; z-index: 2; top: 0px; left: 0px;">
       <div name="Creativa" id="creativ" style="width: 1535px; height: 677px; background: royalblue; position: absolute; top: 1px; left: 0px;" hidden>
         <button style="background: indianred; border: solid 3px darkred; font: message-box; margin-left: 90%; margin-bottom: 5px;" onclick="WinEdit(0)">X</button>
         <div style="display: flex; justify-content: space-evenly;">
@@ -96,13 +96,19 @@
 </html>
 
 <script>// Gestisce il menù di scelta squadra
-  function SSQ(n) {
+  function SSQ(n, sq) {
     let SSQ = document.getElementById('SSQ');
-    if (n == 1) {
+    if (n === 1 || n === '1') {
       SSQ.hidden = false;
     } 
-    if (n == 0) {
+    else {
       SSQ.hidden = true;
+    }
+
+    switch(sq) {
+      case 1:
+        //
+      break;
     }
   }
 </script>
