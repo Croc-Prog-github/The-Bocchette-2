@@ -1,4 +1,3 @@
-
 //Movimento Player
 document.addEventListener('keydown', function (event) {
   const player = document.getElementById('player');
