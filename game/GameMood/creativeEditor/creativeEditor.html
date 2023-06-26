@@ -63,12 +63,12 @@
         </div>
         <div style="display: flex; flex-direction: row; width: max-content; height: 87%; margin-inline: 7px;">
           <div name="Block da costr" id="BlkCost">
-            <button title="Pietra ruvida" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;"><img src="https://docs.google.com/drawings/d/e/2PACX-1vQWjpgoDtgc_wKaOhOq2GgOm_-XqSNS8zmkPvkqwku38r5Fh3spTChn_bS4wRnDHdPdzMz_4P2Kt0BI/pub?w=100&h=100" alt="Err"></button>
+            <button title="Pietra ruvida" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;" onclick="SQOgg('PietRuv')"><img src="https://docs.google.com/drawings/d/e/2PACX-1vQWjpgoDtgc_wKaOhOq2GgOm_-XqSNS8zmkPvkqwku38r5Fh3spTChn_bS4wRnDHdPdzMz_4P2Kt0BI/pub?w=100&h=100" alt="Err"></button>
           </div>
           <div name="Dispositiv" id="disp" style="display: flex; display: none;">
-            <button title="Punto di nascita" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;"><img src="https://docs.google.com/drawings/d/e/2PACX-1vQVgZLcAvOwpSWroShVq4h4TXiMHClF4O2Ozi0RKN7iEX3gL6uyaRlak7g3mB3hQydeutVSviAQ6d-O/pub?w=100&h=100" alt="Err"></button>
+            <button title="Punto di nascita" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;" onclick="SQOgg('PuntNasc')"><img src="https://docs.google.com/drawings/d/e/2PACX-1vQVgZLcAvOwpSWroShVq4h4TXiMHClF4O2Ozi0RKN7iEX3gL6uyaRlak7g3mB3hQydeutVSviAQ6d-O/pub?w=100&h=100" alt="Err"></button>
             
-            <button title="Generatore armi" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;"><img src="https://docs.google.com/drawings/d/e/2PACX-1vQQzkHNEz2ZFwgVNbN961omGj4RtpLOLZK7iJyqMRz04jeA4sCZCqdWGOfv0eWnwW63ZBzc5tqiZiVK/pub?w=100&h=100" alt="Err"></button>
+            <button title="Generatore armi" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;" onclick="SQOgg('GenerArm')"><img src="https://docs.google.com/drawings/d/e/2PACX-1vQQzkHNEz2ZFwgVNbN961omGj4RtpLOLZK7iJyqMRz04jeA4sCZCqdWGOfv0eWnwW63ZBzc5tqiZiVK/pub?w=100&h=100" alt="Err"></button>
           </div>
         </div>
       </div>
@@ -101,6 +101,10 @@
     </div>
   </body>
 </html>
+
+<script>
+
+</script>
 
 <script> //Cambia contenuto delle categorie di creativa
   const BlkCost = document.getElementById('BlkCost');
@@ -150,164 +154,7 @@
 </script>
 
 <!-- INIZIO cose Player -->
-  <script>//Movimento Player
-    document.addEventListener('keydown', function(event) {
-    const player = document.getElementById('player');
-    const step = 10; // Dimensione del passo di spostamento
-
-    let top = parseInt(player.style.top) || 0;
-    let left = parseInt(player.style.left) || 0;
-
-    // Gestire l'evento di pressione del tasto
-    switch (event.key) {
-      case 'w': // Spostamento verso l'alto
-        top -= step;
-        break;
-      case 'a': // Spostamento verso sinistra
-        left -= step;
-        break;
-      case 's': // Spostamento verso il basso
-        top += step;
-        break;
-      case 'd': // Spostamento verso destra
-        left += step;
-        break;
-    }
-
-    player.style.top = top + 'px';
-    player.style.left = left + 'px';
-  });
-  </script>
-
-  <script> //Ricarica energia
-    let Energy = document.getElementById("YourE");
-    Energy.value = 10;
-    if (Energy.value < 100) {
-      const intervalId = setInterval(() => {
-        Energy.value += 1;
-      }, 100);
-    }
-    //clearInterval(intervalId);
-  </script>
-
-  <script> //Comandi per le tecniche
-    document.addEventListener('keydown', function(event) {
-      switch(event.key) {
-        case 'w':
-          // Azione per il tasto w
-        break;
-        case 'a':
-        // Azione per il tasto a
-        break;
-        case 's':
-          // Azione per il tasto s
-        break;
-        case 'd':
-          // Azione per il tasto d
-        break;
-        case 'e': //Tasto tecnica 1
-          console.info("Tasto E, Tecnica: " + tecnic1);
-          EsecTecnic(tecnic1);
-        break;
-        case 'f': //Tasto tecnica 2
-          console.info("Tasto F, Tecnica: " + tecnic2);
-          EsecTecnic(tecnic2);
-        break;
-        default:
-          // Azione per gli altri tasti
-        break;
-      }
-    });
-
-    document.addEventListener('click', function(event) {
-      if (event.button == 0) {
-        //console.info("Tasto Sinistro, Attacco base");
-      }
-      if (event.button == 1) {
-        //azioni click destro mouse
-      }
-    });
-  </script>
-
-  <script> //Prevede mira in base a tecniche selezionate (tiene premuto tasto sinistro mouse + frecce < o > [per scorrere le tecniche, viste in un fumetto])
-    let mire = document.getElementById("mire");
-    let fumetto = document.getElementById("fumetto");
-    let isMouseDown = false;
-    let tooltip = null;
-    let text = null;
-    let label = "tasto E";
-
-    fumetto.style.position = "absolute";
-    fumetto.style.zIndex = "1";
-    fumetto.style.display = "inline-block";
-    fumetto.style.borderBottom = "1px dotted black";
-
-    document.addEventListener('mousedown', (event) => {
-      if (event.button === 0) { // tasto sinistro del mouse
-        isMouseDown = true;
-        FumF(true);
-        mire.hidden = false;
-
-        // Crea il tooltip solo se non esiste già
-        if (!tooltip) {
-          tooltip = document.createElement("div");
-          tooltip.style.content = "";
-          tooltip.style.position = "absolute";
-          tooltip.style.borderStyle = 'solid';
-          tooltip.style.borderWidth = "10px 10px 0 10px";
-          tooltip.style.borderColor = "#333 transparent transparent transparent";
-          tooltip.style.bottom = "100%";
-          tooltip.style.left = "50%";
-          tooltip.style.transform = "translateX(-50%)";
-          fumetto.appendChild(tooltip);
-
-          text = document.createElement("div");
-          text.innerText = label;
-          text.style.position = "absolute";
-          text.style.backgroundColor = "#333";
-          text.style.color = "#fff";
-          text.style.padding = "5px";
-          text.style.borderRadius = "5px";
-          text.style.fontSize = "14px";
-          text.style.fontWeight = "bold";
-          text.style.whiteSpace = "nowrap";
-          text.style.bottom = "120%";
-          text.style.left = "50%";
-          text.style.transform = "translateX(-50%)";
-          fumetto.appendChild(text);
-        }
-      }
-    });
-
-    document.addEventListener('mouseup', () => {
-      isMouseDown = false;
-      FumF(false);
-      mire.hidden = true;
-
-      // Rimuovi il tooltip quando viene rilasciato il tasto sinistro
-      if (tooltip) {
-        fumetto.removeChild(tooltip);
-        fumetto.removeChild(text);
-        tooltip = null;
-        text = null;
-      }
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (isMouseDown && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
-        label = label === "tasto E" ? "tasto F" : "tasto E";
-        text.innerText = label;
-      }
-    });
-
-    function FumF(val) {
-      if (val) {
-        fumetto.setAttribute("aria-hidden", "false");
-      } else {
-        fumetto.setAttribute("aria-hidden", "true");
-      }
-    }
-  </script>
+  <script src="/cosePlayer.js"></script>  
 
   <style>
     #fumetto {
