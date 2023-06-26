@@ -28,7 +28,7 @@
     <div style="overflow-y: auto; height: 40em;">
       <div name="Terreno" style="width: 950px; height: 700px; background-color: darkkhaki;">
 
-        <div name="ombra ogg" style="opacity: 55%; mix-blend-mode: darken; cursor: grabbing; position: relative;">
+        <div name="ombra ogg" style="opacity: 55%; mix-blend-mode: darken; cursor: grabbing; position: relative;" id="SQOggContainer">
           <img src="" alt="Err" id="SQOgg">
         </div>
     
@@ -106,23 +106,46 @@
   </body>
 </html>
 
-<script> //Seleziona un'oggetto dalla creativa e lo porta in mappa
-  function SQOgg(nm) { //Seleziona Questo Oggetto
-    const SQOgg = document.getElementById('SQOgg');
-    switch(nm) {
-      case 'PietRuv': //Pietra ruvida
+<script> //Seleziona un'oggetto dalla creativa, lo porta in mappa e fà anim mouse
+  function SQOgg(nm) {
+    const SQOggContainer = document.getElementById('SQOggContainer');
+    const SQOggImage = document.getElementById('SQOgg');
+
+    switch (nm) {
+      case 'PietRuv':
         WinEdit(0);
-        SQOgg.src = 'https://docs.google.com/drawings/d/e/2PACX-1vQWjpgoDtgc_wKaOhOq2GgOm_-XqSNS8zmkPvkqwku38r5Fh3spTChn_bS4wRnDHdPdzMz_4P2Kt0BI/pub?w=100&h=100';
-      break;
+        SQOggImage.src = 'https://docs.google.com/drawings/d/e/2PACX-1vQWjpgoDtgc_wKaOhOq2GgOm_-XqSNS8zmkPvkqwku38r5Fh3spTChn_bS4wRnDHdPdzMz_4P2Kt0BI/pub?w=100&h=100';
+        break;
       case 'PuntNasc':
         WinEdit(0);
-        SQOgg.src = 'https://docs.google.com/drawings/d/e/2PACX-1vQVgZLcAvOwpSWroShVq4h4TXiMHClF4O2Ozi0RKN7iEX3gL6uyaRlak7g3mB3hQydeutVSviAQ6d-O/pub?w=100&h=100';
-      break;
+        SQOggImage.src = 'https://docs.google.com/drawings/d/e/2PACX-1vQVgZLcAvOwpSWroShVq4h4TXiMHClF4O2Ozi0RKN7iEX3gL6uyaRlak7g3mB3hQydeutVSviAQ6d-O/pub?w=100&h=100';
+        break;
       case 'GenerArm':
         WinEdit(0);
-        SQOgg.src = 'https://docs.google.com/drawings/d/e/2PACX-1vQQzkHNEz2ZFwgVNbN961omGj4RtpLOLZK7iJyqMRz04jeA4sCZCqdWGOfv0eWnwW63ZBzc5tqiZiVK/pub?w=100&h=100';
-      break;
+        SQOggImage.src = 'https://docs.google.com/drawings/d/e/2PACX-1vQQzkHNEz2ZFwgVNbN961omGj4RtpLOLZK7iJyqMRz04jeA4sCZCqdWGOfv0eWnwW63ZBzc5tqiZiVK/pub?w=100&h=100';
+        break;
     }
+
+    // Seguire il mouse e animazione del mouse
+    document.addEventListener('mousemove', function (event) {
+      if (!event.buttons) {
+        var mouseX = event.clientX;
+        var mouseY = event.clientY;
+
+        SQOggContainer.style.left = mouseX + 'px';
+        SQOggContainer.style.top = mouseY + 'px';
+      }
+    });
+
+    document.addEventListener('mousedown', function (event) {
+      if (event.button === 0) {
+        SQOggContainer.style.cursor = 'grab';
+
+        setTimeout(function () {
+          SQOggContainer.style.cursor = 'default';
+        }, 500);
+      }
+    });
   }
 </script>
 
