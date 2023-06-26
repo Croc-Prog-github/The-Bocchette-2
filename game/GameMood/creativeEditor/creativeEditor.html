@@ -65,7 +65,7 @@
           <div name="Block da costr" id="BlkCost">
             <button title="Pietra ruvida" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;"><img src="https://docs.google.com/drawings/d/e/2PACX-1vQWjpgoDtgc_wKaOhOq2GgOm_-XqSNS8zmkPvkqwku38r5Fh3spTChn_bS4wRnDHdPdzMz_4P2Kt0BI/pub?w=100&h=100" alt="Err"></button>
           </div>
-          <div name="Dispositiv" id="disp" hidden style="display: flex;">
+          <div name="Dispositiv" id="disp" style="display: flex; display: none;">
             <button title="Punto di nascita" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;"><img src="https://docs.google.com/drawings/d/e/2PACX-1vQVgZLcAvOwpSWroShVq4h4TXiMHClF4O2Ozi0RKN7iEX3gL6uyaRlak7g3mB3hQydeutVSviAQ6d-O/pub?w=100&h=100" alt="Err"></button>
             
             <button title="Generatore armi" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;"><img src="https://docs.google.com/drawings/d/e/2PACX-1vQQzkHNEz2ZFwgVNbN961omGj4RtpLOLZK7iJyqMRz04jeA4sCZCqdWGOfv0eWnwW63ZBzc5tqiZiVK/pub?w=100&h=100" alt="Err"></button>
@@ -108,24 +108,24 @@
   function SQC(n) {
     switch(n) {
       case 1:
-        BlkCost.hidden = true;
-        disp.hidden = true;
+        BlkCost.style.display = 'none';
+        disp.style.display = 'none';
       break;
       case 2:
-        BlkCost.hidden = false;
-        disp.hidden = true;
+        BlkCost.style.display = 'flex';
+        disp.style.display = 'none';
       break;
       case 3:
-        BlkCost.hidden = true;
-        disp.hidden = false;
+        BlkCost.style.display = 'none';
+        disp.style.display = 'flex';
       break;
       case 4:
-        BlkCost.hidden = true;
-        disp.hidden = true;
+        BlkCost.style.display = 'none';
+        disp.style.display = 'none';
       break;
       case 5:
-        BlkCost.hidden = true;
-        disp.hidden = true;
+        BlkCost.style.display = 'none';
+        disp.style.display = 'none';
       break;
     }
   }
