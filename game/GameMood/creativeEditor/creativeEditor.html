@@ -29,7 +29,7 @@
       <div name="Terreno" style="width: 950px; height: 700px; background-color: darkkhaki;">
 
         <div name="ombra ogg" style="opacity: 55%; mix-blend-mode: darken; cursor: grabbing; position: relative;">
-          <img src="" alt="Err" id="">
+          <img src="" alt="Err" id="SQOgg">
         </div>
     
         <div name="Player" style="margin-top: 15px; top: 30px; margin-left: 40px; position: relative;" id="player">
@@ -108,10 +108,19 @@
 
 <script> //Seleziona un'oggetto dalla creativa e lo porta in mappa
   function SQOgg(nm) { //Seleziona Questo Oggetto
+    const SQOgg = document.getElementById('SQOgg');
     switch(nm) {
       case 'PietRuv': //Pietra ruvida
         WinEdit(0);
-
+        SQOgg.src = 'https://docs.google.com/drawings/d/e/2PACX-1vQWjpgoDtgc_wKaOhOq2GgOm_-XqSNS8zmkPvkqwku38r5Fh3spTChn_bS4wRnDHdPdzMz_4P2Kt0BI/pub?w=100&h=100';
+      break;
+      case 'PuntNasc':
+        WinEdit(0);
+        SQOgg.src = 'https://docs.google.com/drawings/d/e/2PACX-1vQVgZLcAvOwpSWroShVq4h4TXiMHClF4O2Ozi0RKN7iEX3gL6uyaRlak7g3mB3hQydeutVSviAQ6d-O/pub?w=100&h=100';
+      break;
+      case 'GenerArm':
+        WinEdit(0);
+        SQOgg.src = 'https://docs.google.com/drawings/d/e/2PACX-1vQQzkHNEz2ZFwgVNbN961omGj4RtpLOLZK7iJyqMRz04jeA4sCZCqdWGOfv0eWnwW63ZBzc5tqiZiVK/pub?w=100&h=100';
       break;
     }
   }
