@@ -27,6 +27,10 @@
     
     <div style="overflow-y: auto; height: 40em;">
       <div name="Terreno" style="width: 950px; height: 700px; background-color: darkkhaki;">
+
+        <div name="ombra ogg" style="opacity: 55%; mix-blend-mode: darken; cursor: grabbing; position: relative;">
+          <img src="" alt="Err" id="">
+        </div>
     
         <div name="Player" style="margin-top: 15px; top: 30px; margin-left: 40px; position: relative;" id="player">
           <div id="fumetto" aria-label="tasto E" style="margin-left: 30px; position: absolute; margin-top: -25px;">-</div>
@@ -102,8 +106,15 @@
   </body>
 </html>
 
-<script>
+<script> //Seleziona un'oggetto dalla creativa e lo porta in mappa
+  function SQOgg(nm) { //Seleziona Questo Oggetto
+    switch(nm) {
+      case 'PietRuv': //Pietra ruvida
+        WinEdit(0);
 
+      break;
+    }
+  }
 </script>
 
 <script> //Cambia contenuto delle categorie di creativa
