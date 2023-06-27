@@ -20,6 +20,7 @@ DA INIZIARE
 1. Iniziare il Chats-API
 2. Luoghi ed edifici in Sopravivenza
 3. Creare la fisica dei bordi
+4. Iniziare il salvataggio su PC con crypting
 
 COMPLETATI
 1. Fare il window.confirm per chiedere se uscendo dalla pagina vuole perdere il progresso. X

@@ -32,8 +32,8 @@
 
     <div style="margin-top: 20px;">
       <hx>Carica</hx>
-      <li><button style="background: dodgerblue; border-style: double; border-radius: 6px; color: white; cursor: pointer;">Carica un salvataggio dal PC</button></li>
-      <li><button>Carica un salvataggio dal Server</button> Server:
+      <li><button onclick="Load()" style="background: dodgerblue; border-style: double; border-radius: 6px; color: white; cursor: pointer;">Carica un salvataggio dal PC</button></li>
+      <li><button disabled>Carica un salvataggio dal Server</button> Server:
         <select>
           <option value="Express 1">Express.js - 1</option>
           <option value="OneDrive" disabled>OneDrive</option>
@@ -44,3 +44,12 @@
 
   </body>
 </html>
+
+<script>
+  function Load() {
+    let sci = window.confirm('I dati che caricherai dal PC sostituiranno i progressi attuali; continuare?');
+    if (sci == 'true') {
+
+    }
+  }
+</script>
