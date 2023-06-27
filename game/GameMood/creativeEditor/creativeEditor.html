@@ -132,19 +132,13 @@
         var mouseX = event.clientX;
         var mouseY = event.clientY;
 
-        var containerWidth = SQOggContainer.offsetWidth;
-        var containerHeight = SQOggContainer.offsetHeight;
-
-        SQOggContainer.style.left = (mouseX - containerWidth) + 'px';
-        SQOggContainer.style.top = (mouseY - containerHeight) + 'px';
+        SQOggContainer.style.left = mouseX + 'px';
+        SQOggContainer.style.top = mouseY + 'px';
       }
     });
 
-
     document.addEventListener('mousedown', function (event) {
       if (event.button === 0) {
-        SQOggContainer.style.cursor = 'grabbing';
-
         SQOggContainer.style.cursor = 'grab';
 
         setTimeout(function () {
