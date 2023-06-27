@@ -1,31 +1,32 @@
 //Movimento Player
-document.addEventListener('keydown', function (event) {
-  const player = document.getElementById('player');
-  const step = 10; // Dimensione del passo di spostamento
+setTimeout(function () {
+  document.addEventListener('keydown', function (event) {
+    const player = document.getElementById('player');
+    const step = 10; // Dimensione del passo di spostamento
 
-  let top = parseInt(player.style.top) || 0;
-  let left = parseInt(player.style.left) || 0;
+    let top = parseInt(player.style.top) || 0;
+    let left = parseInt(player.style.left) || 0;
 
-  // Gestire l'evento di pressione del tasto
-  switch (event.key) {
-    case 'w': // Spostamento verso l'alto
-      top -= step;
-      break;
-    case 'a': // Spostamento verso sinistra
-      left -= step;
-      break;
-    case 's': // Spostamento verso il basso
-      top += step;
-      break;
-    case 'd': // Spostamento verso destra
-      left += step;
-      break;
-  }
+    // Gestire l'evento di pressione del tasto
+    switch (event.key) {
+      case 'w': // Spostamento verso l'alto
+        top -= step;
+        break;
+      case 'a': // Spostamento verso sinistra
+        left -= step;
+        break;
+      case 's': // Spostamento verso il basso
+        top += step;
+        break;
+      case 'd': // Spostamento verso destra
+        left += step;
+        break;
+    }
 
-  player.style.top = top + 'px';
-  player.style.left = left + 'px';
-});
-
+    player.style.top = top + 'px';
+    player.style.left = left + 'px';
+  });
+}, 1);
 
 //Ricarica energia
 let Energy = document.getElementById('YourE');
@@ -36,7 +37,6 @@ if (Energy.value < 100) {
   }, 100);
 }
 //clearInterval(intervalId);
-
 
 //Comandi per le tecniche
 document.addEventListener('keydown', function (event) {
@@ -75,7 +75,6 @@ document.addEventListener('click', function (event) {
     //azioni click destro mouse
   }
 });
-
 
 //Prevede mira in base a tecniche selezionate (tiene premuto tasto sinistro mouse + frecce < o > [per scorrere le tecniche, viste in un fumetto])
 let mire = document.getElementById('mire');
