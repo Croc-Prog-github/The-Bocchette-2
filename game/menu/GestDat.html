@@ -8,6 +8,7 @@
     <!-- END <meta> -->
 
     <!-- Content -->
+    <script src="/var.js"></script>
   </head>
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin-left: 20px; cursor: default;">
     <div style="display: flex; flex-direction: row; justify-content: flex-start;">
@@ -26,13 +27,13 @@
       </li>
 
       <li>
-        <button style="background: dodgerblue; border-style: double; border-radius: 6px; color: white; cursor: pointer;">Salva sul tuo PC</button>
+        <button style="background: dodgerblue; border-style: double; border-radius: 6px; color: white; cursor: pointer;" onclick="scar('soldi = '+soldi+'gemme = '+gemme);">Salva sul tuo PC</button>
       </li>
     </div>
 
     <div style="margin-top: 20px;">
       <hx>Carica</hx>
-      <li><button onclick="Load();" style="background: dodgerblue; border-style: double; border-radius: 6px; color: white; cursor: pointer;">
+      <li><button onclick="" style="background: dodgerblue; border-style: double; border-radius: 6px; color: white; cursor: pointer;">
         <input id="file-upload" type="file" accept=".encrypt" hidden>
         <label for="file-upload" style="cursor: pointer;">Carica un salvataggio dal PC</label>
       </button></li>
@@ -47,15 +48,6 @@
 
   </body>
 </html>
-
-<script>
-  function Load() {
-    let sci = window.confirm('I dati che caricherai dal PC sostituiranno i progressi attuali; continuare?');
-    if (sci == 'true') {
-
-    }
-  }
-</script>
 
 <script>
   function scar(text) {
@@ -74,30 +66,44 @@
 
 <script>
   function decryptFile(file) {
-    const reader = new FileReader();
-    reader.onload = function(event) {
-      const encryptedText = event.target.result;
-      const decryptedText = atob(encryptedText);
+  const reader = new FileReader();
+  reader.onload = function(event) {
+    const encryptedText = event.target.result;
+    const decryptedText = atob(encryptedText);
 
-      // Fai qualcosa con il testo decriptato
-      console.log(decryptedText);
-    };
+    // Fai qualcosa con il testo decriptato
+    console.log(decryptedText);
+    window.alert('Dati decriptati: ' + decryptedText);
+  };
 
-    reader.readAsText(file);
+  reader.readAsText(file);
+}
+
+function handleFileSelect(event) {
+  const file = event.target.files[0];
+  const fileName = file.name;
+
+  if (!fileName.endsWith('.encrypt')) {
+    alert('Si prega di selezionare un file .encrypt');
+    return;
   }
 
-  function handleFileSelect(event) {
-    const file = event.target.files[0];
-    const fileName = file.name;
-  
-    if (!fileName.endsWith('.encrypt')) {
-      alert('Si prega di selezionare un file .encrypt');
-      return;
-    }
+  // Azzera il valore del campo di input file
+  this.value = null;
 
-    decryptFile(file);
+  decryptFile(file);
+}
+
+const fileInput = document.querySelector('input[type="file"]');
+const label = document.querySelector('label[for="file-upload"]');
+const button = label.parentElement;
+
+button.onclick = function() {
+  const confirmResult = window.confirm('I dati che caricherai dal PC sostituiranno i progressi attuali; continuare?');
+  if (confirmResult) {
+    fileInput.click();
   }
+};
 
-  const fileInput = document.querySelector('input[type="file"]');
-  fileInput.addEventListener('change', handleFileSelect);
+fileInput.addEventListener('change', handleFileSelect);
 </script>
