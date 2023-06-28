@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <head>
-  <script>// Imposta le autorizzazioni a: Consenti
-    //let value = document.getElementById(setting).value;
-  </script>
   <title>The Bocchette 2</title>
   <!-- START <meta> -->
   <meta charset="UTF-8">
@@ -14,40 +11,41 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 <html lang="it">
-<body id="body" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; height: 100%;">
+<body id="body" style='font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; height: 100%; cursor: auto;'>
   <!-- Caricamento -->
-  <hx id="title">The bocchette 2</hx>
+  <hx id="title" style="display: flex; justify-content: center;">The bocchette 2</hx>
 
-  <div style="position: absolute; margin-top: 10%; margin-left: 42%; background: white; width: auto; height: auto; display: block;">
-    <div style="margin: 7px; display: block; cursor: default;" id="login">
-      <x style="font-size: 20px;"> <strong style="margin-inline: 83px;">Accedi</strong> </x> <br> <x style="font-size: 20px; font-size: small;">al tuo account The Bocchette</x> <br>
+  <div style="display: grid; justify-content: center; height: 590px; align-content: center;">
+    <div style="/* position: relative; *//* margin-top: 10%; *//* margin-left: 42%; */background: white; width: auto; height: auto; display: grid; justify-items: center;">
+      <div style="display: none; cursor: default;">
+        <x style="font-size: 20px;"><strong style="margin-inline: 83px;">Accedi</strong></x> <br> 
+        <x style="font-size: small;">al tuo account The Bocchette</x><br>
 
-      <div style="margin-top: 15px;">
-        <x style="font-size: smaller;">Username</x>
-        <input type="text" placeholder="E-mail, Username">
+        <div style="margin-top: 10px;">
+          <x style="font-size: smaller;">Username</x>
+          <input type="text" placeholder="E-mail, Username">
+        </div>
+
+        <div style="margin-top: 10px;">
+          <x style="font-size: smaller;">Password</x>
+          <input type="password" placeholder="Password">
+        </div>
       </div>
 
-      <div style="margin-top: 10px;">
-        <x style="font-size: smaller;">Password</x>
-        <input type="password" placeholder="Password">
-      </div>
+      <div name="main" style="margin: 7px;" id="login">
+        <a onclick="Login();" style="color: -webkit-link; cursor: pointer;text-decoration: underline;">Usa account Ospite</a>
+        |
+        <a style="color: -webkit-link; cursor: pointer;text-decoration: underline;">Carica da PC</a>
+        |
+        <a style="color: -webkit-link; cursor: pointer;text-decoration: underline;">Accedi</a>
 
-      <a onclick="Login();" style="color: -webkit-link; cursor: pointer;text-decoration: underline;">Usa account Ospite</a>
-      |
-      <a style="color: -webkit-link; cursor: pointer;text-decoration: underline;">Registrati</a>
-      <br>
-      Server:
-      <select>
-        <option value="Express 1">Express.js - 1</option>
-        <option value="Node 1" disabled>Node.js - 1</option>
-      </select>
-      <br>
-      <button style="margin-inline: 87px; margin-top: 3px;">Accedi</button>
+        <div style="display: flex; justify-content: center;">
+          <button style="margin-inline: 87px; margin-top: 3px;">Accedi</button>
+        </div>
+      </div>
     </div>
   </div>
-
-  <progress value="1" max="100" id="load"></progress>
-
+  <progress value="100" max="100" id="load"></progress>
 </body>
 </html>
 
