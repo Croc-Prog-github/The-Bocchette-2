@@ -32,7 +32,10 @@
 
     <div style="margin-top: 20px;">
       <hx>Carica</hx>
-      <li><button onclick="Load()" style="background: dodgerblue; border-style: double; border-radius: 6px; color: white; cursor: pointer;">Carica un salvataggio dal PC</button></li>
+      <li><button onclick="Load();" style="background: dodgerblue; border-style: double; border-radius: 6px; color: white; cursor: pointer;">
+        <input id="file-upload" type="file" accept=".encrypt" hidden>
+        <label for="file-upload" style="cursor: pointer;">Carica un salvataggio dal PC</label>
+      </button></li>
       <li><button disabled>Carica un salvataggio dal Server</button> Server:
         <select>
           <option value="Express 1">Express.js - 1</option>
