@@ -22,7 +22,7 @@
         <button disabled title="Questo è un account Ospite">Salva sul server</button> Server:
         <select>
           <option value="Express 1">Express.js - 1</option>
-          <option value="Node 1" disabled>Node.js - 1</option>
+          <option value="Node 1" disabled>OneDrive</option>
         </select>
       </li>
 
@@ -94,16 +94,22 @@ function handleFileSelect(event) {
   decryptFile(file);
 }
 
-const fileInput = document.querySelector('input[type="file"]');
+const fileInput = document.getElementById('file-upload');
 const label = document.querySelector('label[for="file-upload"]');
 const button = label.parentElement;
 
-button.onclick = function() {
+button.addEventListener('mousedown', function(event) {
+  event.stopPropagation(); // Ferma la propagazione dell'evento
+
   const confirmResult = window.confirm('I dati che caricherai dal PC sostituiranno i progressi attuali; continuare?');
-  if (confirmResult) {
-    fileInput.click();
+  if (!confirmResult) {
+    event.preventDefault(); // Ferma l'azione predefinita dell'evento
+    return;
   }
-};
+
+  // Apre il campo di input file
+  fileInput.click();
+});
 
 fileInput.addEventListener('change', handleFileSelect);
 </script>
