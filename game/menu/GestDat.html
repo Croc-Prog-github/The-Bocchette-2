@@ -50,9 +50,9 @@
 </html>
 
 <script>
+const now = new Date();
+const date = now.toLocaleDateString();
 function getCurrentDateTime() {
-  const now = new Date();
-  const date = now.toLocaleDateString();
   const time = now.toLocaleTimeString();
   //const seconds = now.getSeconds() + 1; // Aggiungi 1 secondo
   return date + ' ' + time;
@@ -73,7 +73,7 @@ function downloadFile(text) {
   const fileContent = createFileContent(encryptedText);
   const fileBlob = new Blob([fileContent], { type: 'text/plain' });
   const fileURL = URL.createObjectURL(fileBlob);
-  const fileName = 'file.encrypt';
+  const fileName = 'Salvataggio del '+date+'.encrypt';
 
   const link = document.createElement('a');
   link.href = fileURL;
