@@ -54,8 +54,8 @@ function getCurrentDateTime() {
   const now = new Date();
   const date = now.toLocaleDateString();
   const time = now.toLocaleTimeString();
-  const seconds = parseInt(now.getSeconds()) + 1; // Aggiungi 1 secondo
-  return date + ' ' + time + ':' + seconds;
+  //const seconds = parseInt(now.getSeconds()) + 1; // Aggiungi 1 secondo
+  return date + ' ' + time;
 }
 
 function createFileContent(text) {
@@ -95,6 +95,7 @@ function decryptAndReadFile(file) {
       console.log(decryptedText);
     } else {
       alert('I 2 file non coincidono!');
+      window.location.href = '/game/menu/GestDat.html';
     }
   };
   reader.readAsText(file);
@@ -104,7 +105,7 @@ function handleFileSelect(event) {
   const file = event.target.files[0];
   const fileName = file.name;
   if (!fileName.endsWith('.encrypt')) {
-    alert('Si prega di selezionare un file .encrypt');
+    alert('Selezionare un file .encrypt');
     return;
   }
   decryptAndReadFile(file);
