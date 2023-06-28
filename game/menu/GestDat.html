@@ -8,6 +8,7 @@
     <!-- END <meta> -->
 
     <!-- Content -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
     <script src="/var.js"></script>
   </head>
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin-left: 20px; cursor: default;">
@@ -27,7 +28,7 @@
       </li>
 
       <li>
-        <button style="background: dodgerblue; border-style: double; border-radius: 6px; color: white; cursor: pointer;" onclick="scar('soldi = '+soldi+'gemme = '+gemme);">Salva sul tuo PC</button>
+        <button style="background: dodgerblue; border-style: double; border-radius: 6px; color: white; cursor: pointer;" onclick="scar('soldi = '+soldi+' gemme = '+gemme);">Salva sul tuo PC</button>
       </li>
     </div>
 
@@ -49,7 +50,7 @@
   </body>
 </html>
 
-<script>
+<script>/*
 const now = new Date();
 const date = now.toLocaleDateString();
 
@@ -64,8 +65,9 @@ function createFileContent(text) {
   return fileContent;
 }
 
-function encryptText(text) {
-  return btoa(text);
+function encryptText(text, key) {
+  const encryptedText = CryptoJS.AES.encrypt(text, key).toString();
+  return encryptedText;
 }
 
 function downloadFile(text) {
@@ -117,9 +119,10 @@ function scar(text) {
 
 const fileInput = document.querySelector('input[type="file"]');
 fileInput.addEventListener('change', handleFileSelect);
+*/
 </script>
 
-<script>/*
+<script>
   function scar(text) {
     const encryptedText = btoa(text);
     const fileName = 'file.encrypt';
@@ -182,5 +185,4 @@ button.addEventListener('mousedown', function(event) {
 });
 
 fileInput.addEventListener('change', handleFileSelect);
-*/
 </script>
