@@ -49,12 +49,13 @@
   </body>
 </html>
 
-<script>/*
-  function getCurrentDateTime() {
+<script>
+function getCurrentDateTime() {
   const now = new Date();
   const date = now.toLocaleDateString();
   const time = now.toLocaleTimeString();
-  return date + ' ' + time;
+  const seconds = parseInt(now.getSeconds()) + 1; // Aggiungi 1 secondo
+  return date + ' ' + time + ':' + seconds;
 }
 
 function createFileContent(text) {
@@ -63,8 +64,13 @@ function createFileContent(text) {
   return fileContent;
 }
 
+function encryptText(text) {
+  return btoa(text);
+}
+
 function downloadFile(text) {
-  const fileContent = createFileContent(text);
+  const encryptedText = encryptText(text);
+  const fileContent = createFileContent(encryptedText);
   const fileBlob = new Blob([fileContent], { type: 'text/plain' });
   const fileURL = URL.createObjectURL(fileBlob);
   const fileName = 'file.encrypt';
@@ -110,10 +116,9 @@ function scar(text) {
 
 const fileInput = document.querySelector('input[type="file"]');
 fileInput.addEventListener('change', handleFileSelect);
-*/
 </script>
 
-<script>
+<script>/*
   function scar(text) {
     const encryptedText = btoa(text);
     const fileName = 'file.encrypt';
@@ -176,4 +181,5 @@ button.addEventListener('mousedown', function(event) {
 });
 
 fileInput.addEventListener('change', handleFileSelect);
+*/
 </script>
