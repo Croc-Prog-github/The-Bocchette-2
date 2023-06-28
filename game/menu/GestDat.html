@@ -53,7 +53,7 @@
 function getCurrentDateTime() {
   const now = new Date();
   const date = now.toLocaleDateString();
-  const time = now.toLocaleTimeString();
+  const time = parseInt(now.toLocaleTimeString()) + 1;
   //const seconds = parseInt(now.getSeconds()) + 1; // Aggiungi 1 secondo
   return date + ' ' + time;
 }
