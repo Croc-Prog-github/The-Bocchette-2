@@ -52,9 +52,9 @@
 <script>
 const now = new Date();
 const date = now.toLocaleDateString();
+
 function getCurrentDateTime() {
   const time = now.toLocaleTimeString();
-  //const seconds = now.getSeconds() + 1; // Aggiungi 1 secondo
   return date + ' ' + time;
 }
 
@@ -73,7 +73,7 @@ function downloadFile(text) {
   const fileContent = createFileContent(encryptedText);
   const fileBlob = new Blob([fileContent], { type: 'text/plain' });
   const fileURL = URL.createObjectURL(fileBlob);
-  const fileName = 'Salvataggio del '+date+'.encrypt';
+  const fileName = 'Salvataggio del ' + date + '.encrypt';
 
   const link = document.createElement('a');
   link.href = fileURL;
@@ -87,12 +87,12 @@ function decryptAndReadFile(file) {
     const fileContent = event.target.result;
     const lines = fileContent.split('\n');
     const fileDateTime = lines[0];
+    const fileDate = fileDateTime.split(' ')[0];
 
-    const lastModifiedDateTime = file.lastModifiedDate.toLocaleString();
-    if (fileDateTime === lastModifiedDateTime) {
+    if (fileDate === date) {
       const encryptedText = lines.slice(2).join('\n');
       const decryptedText = atob(encryptedText);
-      console.log(decryptedText);
+      alert(decryptedText);
     } else {
       alert('I 2 file non coincidono!');
       window.location.href = '/game/menu/GestDat.html';
