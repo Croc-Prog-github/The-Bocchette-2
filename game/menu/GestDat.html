@@ -53,3 +53,48 @@
     }
   }
 </script>
+
+<script>
+  function scar(text) {
+    const encryptedText = btoa(text);
+    const fileName = 'file.encrypt';
+
+    const downloadLink = document.createElement('a');
+    downloadLink.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(encryptedText);
+    downloadLink.download = fileName;
+
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  }
+</script>
+
+<script>
+  function decryptFile(file) {
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      const encryptedText = event.target.result;
+      const decryptedText = atob(encryptedText);
+
+      // Fai qualcosa con il testo decriptato
+      console.log(decryptedText);
+    };
+
+    reader.readAsText(file);
+  }
+
+  function handleFileSelect(event) {
+    const file = event.target.files[0];
+    const fileName = file.name;
+  
+    if (!fileName.endsWith('.encrypt')) {
+      alert('Si prega di selezionare un file .encrypt');
+      return;
+    }
+
+    decryptFile(file);
+  }
+
+  const fileInput = document.querySelector('input[type="file"]');
+  fileInput.addEventListener('change', handleFileSelect);
+</script>
