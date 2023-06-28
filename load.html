@@ -13,11 +13,11 @@
 <html lang="it">
 <body id="body" style='font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; height: 100%; cursor: auto;'>
   <!-- Caricamento -->
-  <hx id="title" style="display: flex; justify-content: center;">The bocchette 2</hx>
+  <hx id="title" style="display: flex; justify-content: center;" id="body">The bocchette 2</hx>
 
   <div style="display: grid; justify-content: center; height: 590px; align-content: center;">
     <div style="/* position: relative; *//* margin-top: 10%; *//* margin-left: 42%; */background: white; width: auto; height: auto; display: grid; justify-items: center;">
-      <div style="display: none; cursor: default;">
+      <div style="display: none;">
         <x style="font-size: 20px;"><strong style="margin-inline: 83px;">Accedi</strong></x> <br> 
         <x style="font-size: small;">al tuo account The Bocchette</x><br>
 
@@ -32,7 +32,10 @@
         </div>
       </div>
 
-      <div name="main" style="margin: 7px;" id="login">
+      <div name="main" style="margin: 7px; " id="login">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <x style="font-size: 20px; cursor: default;"><strong style="margin-inline: 83px;">Accedi</strong></x>
+        </div>
         <a onclick="Login();" style="color: -webkit-link; cursor: pointer;text-decoration: underline;">Usa account Ospite</a>
         |
         <a style="color: -webkit-link; cursor: pointer;text-decoration: underline;">Carica da PC</a>
@@ -40,7 +43,7 @@
         <a style="color: -webkit-link; cursor: pointer;text-decoration: underline;">Accedi</a>
 
         <div style="display: flex; justify-content: center;">
-          <button style="margin-inline: 87px; margin-top: 3px;">Accedi</button>
+          <button style="margin-inline: 87px; margin-top: 3px;" hidden>Accedi</button>
         </div>
       </div>
     </div>
@@ -66,7 +69,7 @@ const intervalId = setInterval(() => {
   if (progress.value == 100) {
     clearInterval(intervalId);
     login.style.display = "block";
-    myImage.style.cursor = "auto";
+    myImage.style.cursor = "default";
     //window.location.href = "/game/home.html";
   }
 }, 200);
