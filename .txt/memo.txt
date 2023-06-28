@@ -14,13 +14,13 @@ PRIORITARI
 2. Correggere trasazione tra tecnicLockCom e tecnicUnlock
 3. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium
 4. Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom
-5. 
+5. Mettere il data Cekker nel salvattaggio e confrt. con ultima modific
 
 DA INIZIARE
 1. Iniziare il Chats-API
 2. Luoghi ed edifici in Sopravivenza
 3. Creare la fisica dei bordi
-4. Iniziare il salvataggio su PC con crypting
+4. 
 
 COMPLETATI
 1. Fare il window.confirm per chiedere se uscendo dalla pagina vuole perdere il progresso. X

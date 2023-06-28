@@ -49,6 +49,70 @@
   </body>
 </html>
 
+<script>/*
+  function getCurrentDateTime() {
+  const now = new Date();
+  const date = now.toLocaleDateString();
+  const time = now.toLocaleTimeString();
+  return date + ' ' + time;
+}
+
+function createFileContent(text) {
+  const dateTime = getCurrentDateTime();
+  const fileContent = dateTime + '\n\n' + text;
+  return fileContent;
+}
+
+function downloadFile(text) {
+  const fileContent = createFileContent(text);
+  const fileBlob = new Blob([fileContent], { type: 'text/plain' });
+  const fileURL = URL.createObjectURL(fileBlob);
+  const fileName = 'file.encrypt';
+
+  const link = document.createElement('a');
+  link.href = fileURL;
+  link.download = fileName;
+  link.click();
+}
+
+function decryptAndReadFile(file) {
+  const reader = new FileReader();
+  reader.onload = function(event) {
+    const fileContent = event.target.result;
+    const lines = fileContent.split('\n');
+    const fileDateTime = lines[0];
+
+    const lastModifiedDateTime = file.lastModifiedDate.toLocaleString();
+    if (fileDateTime === lastModifiedDateTime) {
+      const encryptedText = lines.slice(2).join('\n');
+      const decryptedText = atob(encryptedText);
+      console.log(decryptedText);
+    } else {
+      alert('I 2 file non coincidono!');
+    }
+  };
+  reader.readAsText(file);
+}
+
+function handleFileSelect(event) {
+  const file = event.target.files[0];
+  const fileName = file.name;
+  if (!fileName.endsWith('.encrypt')) {
+    alert('Si prega di selezionare un file .encrypt');
+    return;
+  }
+  decryptAndReadFile(file);
+}
+
+function scar(text) {
+  downloadFile(text);
+}
+
+const fileInput = document.querySelector('input[type="file"]');
+fileInput.addEventListener('change', handleFileSelect);
+*/
+</script>
+
 <script>
   function scar(text) {
     const encryptedText = btoa(text);
@@ -62,9 +126,9 @@
     downloadLink.click();
     document.body.removeChild(downloadLink);
   }
-</script>
 
-<script>
+
+
   function decryptFile(file) {
   const reader = new FileReader();
   reader.onload = function(event) {
