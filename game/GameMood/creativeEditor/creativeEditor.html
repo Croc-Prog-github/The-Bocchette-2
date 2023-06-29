@@ -93,6 +93,10 @@
             <button title="Punto di nascita" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;" onclick="SQOgg('PuntNasc')"><img src="https://docs.google.com/drawings/d/e/2PACX-1vQVgZLcAvOwpSWroShVq4h4TXiMHClF4O2Ozi0RKN7iEX3gL6uyaRlak7g3mB3hQydeutVSviAQ6d-O/pub?w=100&h=100" alt="Err"></button>
             
             <button title="Generatore armi" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;" onclick="SQOgg('GenerArm')"><img src="https://docs.google.com/drawings/d/e/2PACX-1vQQzkHNEz2ZFwgVNbN961omGj4RtpLOLZK7iJyqMRz04jeA4sCZCqdWGOfv0eWnwW63ZBzc5tqiZiVK/pub?w=100&h=100" alt="Err"></button>
+
+            <button title="Cassa Power-Up" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: center; align-items: center;" onclick="SQOgg('PwUP')">
+              <img src="https://docs.google.com/drawings/d/e/2PACX-1vRNVrloir3Rv_esBl_LuRsDqpRbTtQAtGBbo32vwz1JkJ0lBjRpYu5zyOW6GafN8-qyLcNKrjESQABO/pub?w=50&h=50" alt="Err">
+            </button>
           </div>
         </div>
       </div>
@@ -143,7 +147,11 @@
       case 'GenerArm':
         WinEdit(0);
         SQOggImage.src = 'https://docs.google.com/drawings/d/e/2PACX-1vQQzkHNEz2ZFwgVNbN961omGj4RtpLOLZK7iJyqMRz04jeA4sCZCqdWGOfv0eWnwW63ZBzc5tqiZiVK/pub?w=100&h=100';
-        break;
+      break;
+      case 'PwUP':
+      WinEdit(0);
+        SQOggImage.src = 'https://docs.google.com/drawings/d/e/2PACX-1vRNVrloir3Rv_esBl_LuRsDqpRbTtQAtGBbo32vwz1JkJ0lBjRpYu5zyOW6GafN8-qyLcNKrjESQABO/pub?w=50&h=50';
+      break;
     }
 
     SQOggContainer.style.display = 'inline-grid';
