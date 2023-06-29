@@ -8,19 +8,20 @@
 8. Completare le tecniche in sopravivenza
 9. Continuare il Power-Up
 10. Continuare le Missioni-storia
+11. Continuare i muri in Sopravivenza Singolo
 
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza
 2. Correggere trasazione tra tecnicLockCom e tecnicUnlock
 3. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium
 4. Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom
-5. Mettere il data Cekker nel salvattaggio e confrt. con ultima modific
+5. Continuare il nuovo script di Gestione dati (cripting avanzato)
+6. 
 
 DA INIZIARE
 1. Iniziare il Chats-API
-2. Luoghi ed edifici in Sopravivenza
-3. Creare la fisica dei bordi
-4. 
+2. Creare la fisica dei bordi
+3. Iniziare il salvataggio (SessionStorage) mappe personali Creativa
 
 COMPLETATI
 1. Fare il window.confirm per chiedere se uscendo dalla pagina vuole perdere il progresso. X
@@ -31,3 +32,4 @@ COMPLETATI
 6. Aggiungere la ricompensa delle Banconote da dare FATTO
 7. Corretto errore riscatto delle ricompense nel pass FATTO
 8. Nuova interfaccia per selezionare le tecniche FATTO
+9. Mettere il data-cecker nel salvattaggio e confrt. con ultima modific. X

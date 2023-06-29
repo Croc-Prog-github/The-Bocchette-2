@@ -15,7 +15,7 @@
     <div name="Scegli Squad" id="SSQ" hidden>
       <div style="display: flex; justify-content: center; align-items: center;">
         <div style="position: absolute; width: 250px; height: 80px; background: white; border: solid 1.5px; display: flex; flex-wrap: wrap; justify-content: center; align-content: center; flex-direction: column; top: 0px;  z-index: 1;">
-          <hx>Sciegli la squadra</hx>
+          <hx>Scegli la squadra</hx>
           <input type="number" max="100" min="1" value="1">
           <div style="display: flex; justify-content: space-between;">
             <button onclick="SSQ(0, 1)">Chiudi</button>
@@ -43,9 +43,29 @@
           </div>
         </div>
 
+        <div name="Bot1" style="margin-top: 50px; margin-left: 150px; position: relative;" id="bot1">
+          <progress style="margin-top: -15px; position: absolute; z-index: 1; width: 65px; accent-color: green;" value="100" max="100" id="vita_bot1"></progress>
+          <img src="#" style="/*position: absolute;*/ top: 50%; left: 50%;" alt="Bot1">
+        </div>
+  
+        <div name="power-up" id="PwUP" style="background-image: url(https://docs.google.com/drawings/d/e/2PACX-1vRBSajVjm8pCR-tiwKCiXW0tp3x6O8L2jJYRIQb2WGZNrHP_njlpTcTtJBaZOlqAKBCaKV-h5UQhmHl/pub?w=960&h=720); width: 60px; height: 60px; background-size: cover; image-rendering: -webkit-optimize-contrast; position: relative; top: 82px; left: 230px;">
+          <progress style="margin-left: 7px; margin-top: 5px; position: relative; z-index: 1; width: 65px; accent-color: green; opacity: 35%;" value="100" max="100"></progress>
+        </div>
+
         <div name="tecnic">
           <div id="taglio_netto" style="background: url(https://docs.google.com/drawings/d/e/2PACX-1vRmI7KjnDx_uvg6KZyxEibN-523LxExHFJ-tPGdGg-KVp83nCCEUfkWl6u198uH4FkrtNvzFcaWX_Ld/pub?w=138&h=55); width: 60px; height: 25px; background-size: cover;"></div>
           <div id="super_taglio_netto" style="background: url(https://docs.google.com/drawings/d/e/1PACX-1vS56IefkAfoPXXixzVmuaW2BwvHc2Q5kbvsaAg9ce7hzz3ZRnDJDiLXOgpdSBHWIrPQO8xTdbkLPqP1/pub?w=276&h=111); width: 60px; height: 25px; background-size: cover;"></div>
+        </div>
+
+        <div name="muri" style="position: relative; top: 40px;">
+          <div name="Muro Legno">
+            <progress style="margin-left: 15px; position: absolute; z-index: 1; width: 65px; accent-color: green; opacity: 35%;" value="100" max="100"></progress>
+            <div style="background: url(https://docs.google.com/drawings/d/e/2PACX-1vS5lScyKu8xDfCnODUQAqZbKWmRAeQIz8nFCGbugMOz3YK86MgBUlp_nFHNIUeTo7OfFoEewj9YpzRv/pub?w=327&h=62); background-size: inherit; height: 61px;width: 327px; zoom: 29.2%;" alt="Muro Legno" style="width: 10%;"></div>
+          </div>
+          <div name="Muro Pietra">
+            <progress style="margin-left: 15px; position: absolute; z-index: 1; width: 65px; accent-color: green; opacity: 35%;" value="100" max="100"></progress>
+            <div style="background: url(https://docs.google.com/drawings/d/e/2PACX-1vRQTsUFRGEvbQRp90UATKh2_4tZsg9UeG4MEnTTq2eIyhnX4EWPAFxRC4Cg-0-h5pnpIbX-MvsAjlj6/pub?w=327&h=62); background-size: inherit; height: 61px;width: 327px; zoom: 29.2%;" alt="Muro Legno" style="width: 10%;"></div>
+          </div>
         </div>
 
       </div>
