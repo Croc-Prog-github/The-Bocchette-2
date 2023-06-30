@@ -10,6 +10,7 @@
   <!-- Content -->
   <script src="/cons/cons.js"></script>
   <link rel="stylesheet" href="/style.css">
+  <script src="/var.js"></script>
 </head>
 <body id="body" style='font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; height: 100%; cursor: auto; overflow-y: hidden;'>
   <!-- Caricamento -->
@@ -99,6 +100,7 @@ const intervalId = setInterval(() => {
       window.location.href = '/';
     } else {
       window.alert("I progressi effettuati non sono collegati ad un server e saranno disponibili finchè la sessione di gioco rimane aperta; per salvare (nella memoria locale del dispositivo) andare su: Menù > Gestione Dati > Salva sul PC. Accetti queste condizioni e Continuare?");
+      setArrayTeE();
       window.location.href = '/game/home.html';
     }
   }

@@ -23,6 +23,9 @@ DA INIZIARE
 2. Creare la fisica dei bordi
 3. Iniziare il salvataggio (SessionStorage) mappe personali Creativa
 
+BLOCCATI
+1. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium
+
 COMPLETATI
 1. Fare il window.confirm per chiedere se uscendo dalla pagina vuole perdere il progresso. X
 2. Fare articoli nel negozio. FATTO
