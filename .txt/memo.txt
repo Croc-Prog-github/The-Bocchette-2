@@ -8,7 +8,7 @@
 8. Completare le tecniche in sopravivenza
 9. Continuare il Power-Up
 10. Continuare le Missioni-storia
-11. Continuare i muri in Sopravivenza Singolo
+11. 
 
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza
@@ -22,6 +22,7 @@ DA INIZIARE
 1. Iniziare il Chats-API
 2. Creare la fisica dei bordi
 3. Iniziare il salvataggio (SessionStorage) mappe personali Creativa
+4. Continuare i muri in Sopravivenza Singolo
 
 BLOCCATI
 1. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium

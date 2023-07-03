@@ -2,8 +2,9 @@
   /*margin-top: 37%;*/
   margin-left: 0%;
   width: 100%;
-  /*padding-block: 19px;*/
   padding-block: 1%;
+  position: absolute;
+  left: 0px;
 }
 
 #title {
