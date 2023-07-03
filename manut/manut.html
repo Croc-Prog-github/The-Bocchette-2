@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>Manutenzione in corso - The Bocchette 2</title>
+    <!-- START <meta> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- END <meta> -->
+
+    <!-- Content -->
+  </head>
+  <body style="background-size: cover; background-image: repeating-linear-gradient(232.2deg, black, #242424 30px); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; height: 1000px; overflow-y: hidden; cursor: default;">
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <div style="height: fit-content; width: fit-content; background: white;">
+        <h2 style="margin-block: 0.1em; text-align: center;">Manutenzione in corso</h2>
+        <hx>
+          È in corso la manutenzione del gioco: stiamo inserendo un aggiornamento, uno snapshot o un binanciamento.
+          <br>
+          The Bocchette 2 torna tra:
+        </hx>
+        <div style="display: flex; justify-content: center; margin-top: 5px;">
+          <div style="width: 50px; height: 50px; border: black solid 4px; border-radius: 50%; display: flex; flex-wrap: wrap; align-content: center;">
+            <div style="width: 25px; height: 5px; background: black; transform-origin: right; rotate: 90deg;" id="rotat"></div>
+          </div>
+        </div>
+        <hx style="display: flex; justify-content: center; font-size: x-large; font-weight: bolder;">Non molto</hx>
+
+        <div style="height: 400px; overflow: hidden;">
+          Ultime notizie:
+          <iframe src="https://sites.google.com/d/1psGNzZlaZABpcHyZVYMsEb-gchHXIWOp/p/10YTY6tQU7PJ_jl3rJKC03dMAQxHi6ojN/edit" frameborder="2" style="width: 100%; height: 100%;"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
+
+<script>
+  const rotat = document.getElementById('rotat');
+  let deg = 0;
+  let rotationCount = 0;
+
+  const rotateElement = setInterval(() => {
+    rotat.style.transform = `rotate(${deg}deg)`;
+    deg += 90;
+  }, 1000);
+</script>

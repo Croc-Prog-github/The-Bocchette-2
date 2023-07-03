@@ -11,6 +11,7 @@
   <script src="/cons/cons.js"></script>
   <link rel="stylesheet" href="/style.css">
   <script src="/var.js"></script>
+  <script src="/manut/manut.js"></script>
 </head>
 <body id="body" style='font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; height: 100%; cursor: auto; overflow-y: hidden;'>
   <!-- Caricamento -->
@@ -59,13 +60,14 @@
 </body>
 </html>
 
-<script>
+<script> //Mostra e gestisce il div per accesso dal server
   const mainDiv = document.getElementById("main");
   const loginDiv = document.getElementById("login");
   function AccServ(dest) {
 
   }
 </script>
+
 
 <script>
   var myImage = document.getElementById("body");
@@ -74,20 +76,23 @@
   login.style.display = "none";
   myImage.style.cursor = "wait";
 
-// Imposta il valore iniziale del progress a 5
-progress.value = 5;
+  // Imposta il valore iniziale del progress a 5
+  progress.value = 5;
 
-// Incrementa il valore del progress di 5 ogni 0.5 secondi
-const intervalId = setInterval(() => {
-  progress.value += 5;
-  // Ferma l'intervallo quando il valore del progress raggiunge il 100%
-  if (progress.value == 100) {
-    clearInterval(intervalId);
-    login.style.display = "block";
-    myImage.style.cursor = "default";
-    //window.location.href = "/game/home.html";
-  }
-}, 200);
+  // Incrementa il valore del progress di 5 ogni 0.5 secondi
+  const intervalId = setInterval(() => {
+    progress.value += 5;
+    // Ferma l'intervallo quando il valore del progress raggiunge il 100%
+    if (progress.value == 100) {
+      clearInterval(intervalId);
+      login.style.display = "block";
+      myImage.style.cursor = "default";
+      //window.location.href = "/game/home.html";
+      if (manut == 1) {
+        window.location.href = "/manut/manut.html";
+      }
+    }
+  }, 200);
 </script>
 
 <script>
