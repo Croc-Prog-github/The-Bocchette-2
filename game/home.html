@@ -101,7 +101,7 @@
 
 
     <div style="display: flex; flex-direction: row; align-items: flex-start;">
-      <div name="Casse varie">
+      <div name="Casse varie" style="position: relative; margin-top: 4%;">
         <div name="CASSA COMUNE" style="position: absolute;bottom: 70px;" title="Cassa Comune">
           <img src="https://docs.google.com/drawings/d/e/2PACX-1vSAWKGdL6u1QeLPv11QKsqqLfctzKkiRfe1Ik1aMrIwOEtXF0uYPuI4u_vVjd7JddMhW8Y2suMl2SgF/pub?w=252&amp;h=242" alt="La fonte non è disponibile" style="width: 69px; margin-top: -85px;" onclick="window.location.href = '/game/cass/CCom.html';">
           <button style="margin-top: -90px; margin-left: -23px; border: 0; background: dodgerblue; color: white; border-radius: 9px; top: 35px; position: absolute; left: 40px;">Error</button>
@@ -134,7 +134,7 @@
         </div>
       </div>
 
-      <div name="pass" style="width: 160px; height: 50px; background-color: gold; border-radius: 8px; margin-right: 35%; margin-left: 0px;" onclick="window.location.href = '/game/pass/pass.html';">
+      <div name="pass" style="width: 160px; height: 50px; background-color: gold; border-radius: 8px; /*margin-right: 35%;*/ margin-left: 0px;" onclick="window.location.href = '/game/pass/pass.html';">
         <hx style="margin-left: 6%; cursor: default;">Bocchet Pass</hx>
         <div style="display: flex; flex-direction: row;align-items: center;">
           <progress value="0" max="50" style="width: 90%; margin-left: 5%; margin-top: -1%; height: 35px;" id="progress"></progress> 
@@ -142,10 +142,12 @@
         </div>
       </div>
 
-      <div style="background: white; width: 200px; height: 55px; /*border: solid 3px black;*/ border-radius: 7px;" onclick="window.location.href = '/game/event.html';">
-        <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY5rVGGwFbGX5XBXOTvVzchOT3Ns1WlJVmbP72yYtGgz_f5qv4CCcEDor5Wss2sgDiVhW9lBXlI9wt/pub?w=308&h=102" alt="La fonte non è disponibile" style="width: 101%; margin-top: -10px;" id="eventS">
+      <div style="display: flex; justify-content: center; width: -webkit-fill-available;">
+        <div style="background: white; width: 200px; height: 55px; /*border: solid 3px black;*/ border-radius: 7px;" onclick="window.location.href = '/game/event.html';">
+          <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY5rVGGwFbGX5XBXOTvVzchOT3Ns1WlJVmbP72yYtGgz_f5qv4CCcEDor5Wss2sgDiVhW9lBXlI9wt/pub?w=308&h=102" alt="La fonte non è disponibile" style="width: 101%; margin-top: -10px;" id="eventS">
+        </div>
+        <button style="margin-left: 5px; padding-block: 24px; margin-top: -17px; padding-inline: 15px; color: white; background-color: dodgerblue; border: solid 3px darkblue; border-radius: 8px; font-size: 20px; border-bottom: solid 6px darkblue;" onclick="play(); STecnic1(); STecnic2();">Gioca</button>
       </div>
-      <button style="margin-left: 5px; padding-block: 24px; margin-top: -17px; padding-inline: 15px; color: white; background-color: dodgerblue; border: solid 3px darkblue; border-radius: 8px; font-size: 20px; border-bottom: solid 6px darkblue;" onclick="play(); STecnic1(); STecnic2();">Gioca</button>
     </div>
 
   </body>
