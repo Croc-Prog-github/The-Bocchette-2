@@ -25,7 +25,7 @@
           </div>
         </div>
         <!-- Scritta timer clock -->
-        <hx style="display: flex; justify-content: center; font-size: x-large; font-weight: bolder;">Non molto</hx>
+        <hx style="display: flex; justify-content: center; font-size: x-large; font-weight: bolder;" id="TR">Script Error</hx>
 
         <div style="height: 400px; overflow: hidden;">
           Ultime notizie:
@@ -34,15 +34,20 @@
       </div>
     </div>
 
+    <script src="/manut/manut.js"></script>
   </body>
 </html>
+
+<script>
+  
+</script>
 
 <script>
   const rotat = document.getElementById('rotat');
   let deg = 0;
   let rotationCount = 0;
 
-  const rotateElement = setInterval(() => {
+  setInterval(() => {
     rotat.style.transform = `rotate(${deg}deg)`;
     deg += 90;
   }, 1000);
