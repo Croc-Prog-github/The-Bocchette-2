@@ -255,7 +255,7 @@
     // Crea il div quando il menù è aperto
     let newDiv = document.createElement("div");
 
-    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -296px; margin-bottom: 14vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; z-index: 1; position: relative"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button><button name="impo" onclick="OSett()" style="margin-inline: 10px; margin-top: 15px;">Impostazioni</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button onclick="rend(4)" style="margin-inline: 10px; margin-top: 15px;">Lascia un feedback</button></div>';
+    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -296px; margin-bottom: 14vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; z-index: 1; position: relative"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button><button name="impo" onclick="OSett()" style="margin-inline: 10px; margin-top: 15px;">Impostazioni</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button onclick="rend(4)" style="margin-inline: 10px; margin-top: 15px;">Lascia un feedback</button><button onclick="rend(5)" style="margin-inline: 10px; margin-top: 15px;">Riconoscimenti</button></div>';
     // Inserisce il nuovo div all'interno di M_princ
     mPrinc.appendChild(newDiv);
   }
@@ -275,6 +275,9 @@
       break;
       case 4:
         window.open("https://github.com/Croc-Prog-github/The-Bocchette-2/discussions/new?category=feedback", "_blank");
+      break;
+      case 5:
+        window.location.href = '/game/menu/Credit.html';
       break;
     }
   }
