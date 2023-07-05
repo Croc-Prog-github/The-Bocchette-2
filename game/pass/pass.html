@@ -31,11 +31,11 @@
           <hx style="color: red; margin-top: 7px; cursor: default;">Ricompense x2</hx>
         </div>
 
-        <div style="display: flex; flex-direction: column; background-color: #daa520ab; height: 100%; width: 100%; justify-content: center; align-items: flex-start;">
+        <!-- Pass premium -->
+        <div style="display: flex; flex-direction: column; background-color: #daa520ab; height: 100%; width: 100%; justify-content: center; align-items: flex-start;" class="PassBar">
           <div style="width: 1050px; height: 5px; background: black; margin-left: 5%; margin-right: 5%; margin-top: 0%;" name="pass premium">
             <div style="display: flex; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
 
-              <!-- Pass premium -->
               <div style="display: flex; flex-direction: column; align-items: center; margin-top: -6px;" name="obb">
                 <button style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">1</button>
                 <div style="background: black; width: 3px; height: 20px;" name="line"></div>
@@ -65,8 +65,8 @@
         </div>
 
         <!-- Pass gratis -->
-        <div style="display: flex;align-items: flex-start;flex-direction: column;height: unset;width: 100%;background-color: #dadadaab;">
-          <div style="width: 1050px; height: 5px; background: black; margin-left: 5%; margin-right: 5%; margin-top: 10%;" name="pass gratis">
+        <div style="display: flex; align-items: flex-start; flex-direction: column; justify-content: center; height: unset; width: 100%; background-color: #dadadaab;" class="PassBar">
+          <div style="width: 1050px; height: 5px; background: black; margin-left: 5%; margin-right: 5%; margin-top: 0%;" name="pass gratis">
             <div style="display: flex; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
               
               <div style="display: flex; flex-direction: column; align-items: center; margin-top: -6px;" name="obb">
@@ -104,6 +104,12 @@
 
   </body>
 </html>
+
+<style>
+  .PassBar  {
+    overflow-x: auto;
+  }
+</style>
 
 <script>// Controlla ricompensa già riscatt.
   //guarda /var.js
