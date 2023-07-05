@@ -214,3 +214,81 @@ document.addEventListener('keydown', function (event) {
 <svg style="width: 160px; height: 30px;">
   <g class="blocklyDraggable blocklySelected" transform="translate(1, 1)"><path class="blocklyPathDark" transform="translate(1, 1)" fill="#5f8934" d="m 0,0 H 52.47500038146973 v 5 c 0,10 -8,-8 -8,7.5 s 8,-2.5 8,7.5 v 4 H 0 V 20 c 0,-10 -8,8 -8,-7.5 s 8,2.5 8,-7.5 z" style="transform: translate(1, 1); fill: rgb(95, 137, 52); d: path(&quot;m 0 0 H 52.475 v 5 c 0 10 -8 -8 -8 7.5 s 8 -2.5 8 7.5 v 4 H 0 V 20 c 0 -10 -8 8 -8 -7.5 s 8 2.5 8 -7.5 Z&quot;);"></path><path class="blocklyPath" fill="#77AB41" d="m 0,0 H 52.47500038146973 v 5 c 0,10 -8,-8 -8,7.5 s 8,-2.5 8,7.5 v 4 H 0 V 20 c 0,-10 -8,8 -8,-7.5 s 8,2.5 8,-7.5 z" style="/*stroke: #fc3;*/ stroke-width: 3px;"></path><path class="blocklyPathLight" stroke="#a0c47a" d="m 0.5,0.5 H 51.97500038146973 M 51.97500038146973,0.5 M 47.47500038146973,19.3 l 3.68,-2.1 M 0.5,23.5 V 18.5 m -7.36,-0.5 q -1.52,-5.5 0,-11 m 7.36,1 V 0.5 H 1" style="display: none;"></path><text class="blocklyText" y="12.5" transform="translate(10, 5)" style="user-select: none; -moz-user-select: none; -webkit-user-select: none;cursor: inherit; display: block; white-space-collapse: collapse; text-wrap: nowrap;">A</text></g>
 </svg>
+
+<!-- Vecchio Pass (tabbing originale)-->
+<div style="display: flex; flex-direction: row;">
+
+      <div style="display: flex; flex-direction: column;">
+        <div style="width: 160px; height: 30vh; background-color: goldenrod; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-block: 25%;">
+          <hx style="cursor: default;">Premium Pass</hx>
+          <img src="https://docs.google.com/drawings/d/e/2PACX-1vRgTEZFPUo2v5QVQkRK3ErSWRAAF_bu4KtuEgY1USJ9XcCztA69Fcw-V93Z8OdqtJ8ZUZzbdAUQGUFc/pub?w=50&h=50" alt="La fonte non è disponibile" style="width: 70px;"><br>
+          <button style="background-color: #edc200; border-radius: 8px; border: solid 2px; cursor: pointer;" onclick="shopPP()" id="butt_APP">Acquista</button>
+          <hx style="color: red; margin-top: 7px; cursor: default;">Ricompense x2</hx>
+        </div>
+      
+        <div style="width: 160px; height: 30vh; background-color: #dadada; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-block: 25%;">
+          <hx style="cursor: default;">Pass Gratuito</hx>
+          <img src="https://docs.google.com/drawings/d/e/2PACX-1vTa_3C3kAN8PMta7BPtFT-dZII25zenKi2aiWuRm4Gy1oxVg5qumnMqzOlt-MJc7Plw-_qsR2C0uNUx/pub?w=50&h=50" alt="La fonte non è disponibile" style="width: 70px;"><br>
+        </div>
+      </div>
+
+      <div style="display: flex; overflow-x: auto; width: 100%; align-items: flex-start; flex-direction: column;">
+        <div style="display: flex; align-items: flex-start; flex-direction: column; background-color: #daa520ab; height: 41.3vh; width: 100%;">
+          <div style="width: 1050px; height: 5px; background: black; margin-left: 5%; margin-right: 5%; margin-top: 10%;" name="pass premium">
+            <div style="display: flex; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
+
+              <!-- Pass premium -->
+              <div style="display: flex; flex-direction: column; align-items: center; margin-top: -6px;" name="obb">
+                <button style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">1</button>
+                <div style="background: black; width: 3px; height: 20px;" name="line"></div>
+                <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur">
+                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY0pup0VxjthO6ohSgX3RC29HShZ8JFuoCg7luCeb6Vf4oOkWPGl32GdugLMPkUn56ZmQ-bH9hnLi5/pub?w=50&h=50" alt="La fonte non è disponibile" style="width: 100%;" title="200 banconote" onclick="RRPP('200 banconote');">
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; margin-top: -6px; margin-left: 15px;" name="obb">
+                <button style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">2</button>
+                <div style="background: black; width: 3px; height: 20px;" name="line"></div>
+                <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur">
+                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vRaxjzpWvxqbCYrZT99Ra65TAUqyAtx4zb3qwYjlNSqjlP0HvlKVUkI9j74ix5d40m3BmMxwGX6VO9x/pub?w=503&h=483" alt="La fonte non è disponibile" style="width: 100%;" title="Cassa Rara" onclick="RRPP('1 CRar');">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pass gratis -->
+        <div style="display: flex; align-items: flex-start; flex-direction: column; height: 41.3vh; width: 100%; background-color: #dadadaab;">
+          <div style="width: 1050px; height: 5px; background: black; margin-left: 5%; margin-right: 5%; margin-top: 10%;" name="pass gratis">
+            <div style="display: flex; flex-direction: row; align-items: flex-end; justify-content: flex-start;">
+              
+              <div style="display: flex; flex-direction: column; align-items: center; margin-top: -6px;" name="obb">
+                <button style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">1</button>
+                <div style="background: black; width: 3px; height: 20px;" name="line"></div>
+                <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur">
+                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY0pup0VxjthO6ohSgX3RC29HShZ8JFuoCg7luCeb6Vf4oOkWPGl32GdugLMPkUn56ZmQ-bH9hnLi5/pub?w=50&h=50" alt="La fonte non è disponibile" style="width: 100%;" title="100 banconote">
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; margin-top: -6px; margin-left: 15px;" name="obb">
+                <button style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">2</button>
+                <div style="background: black; width: 3px; height: 20px;" name="line"></div>
+                <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur">
+                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY0pup0VxjthO6ohSgX3RC29HShZ8JFuoCg7luCeb6Vf4oOkWPGl32GdugLMPkUn56ZmQ-bH9hnLi5/pub?w=50&h=50" alt="La fonte non è disponibile" style="width: 100%;" title="200 banconote">
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; margin-top: -6px; margin-left: 15px;" name="obb">
+                <button style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">3</button>
+                <div style="background: black; width: 3px; height: 20px;" name="line"></div>
+                <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur">
+                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vSAWKGdL6u1QeLPv11QKsqqLfctzKkiRfe1Ik1aMrIwOEtXF0uYPuI4u_vVjd7JddMhW8Y2suMl2SgF/pub?w=252&h=242" alt="La fonte non è disponibile" style="width: 100%;" title="Cassa Comune">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
