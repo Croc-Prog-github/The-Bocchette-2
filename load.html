@@ -99,15 +99,19 @@
 <script>
   let username;
   function AccountOsp() {
-    username = window.prompt('Inserisci il tuo Nome utente');
-    localStorage.setItem("username", username);
-    username = localStorage.getItem('username');
-    if (username == "null" || username == "undefined") {
-      window.location.href = '/';
+    username = window.prompt('Inserisci il tuo Username');
+    if (username.length <= 14) {
+      localStorage.setItem("username", username);
+      username = localStorage.getItem('username');
+      if (username == "null" || username == "undefined") {
+        window.location.href = '/';
+      } else {
+        window.alert("I progressi effettuati non sono collegati ad un server e saranno disponibili finchè la sessione di gioco rimane aperta; per salvare (nella memoria locale del dispositivo) andare su: Menù > Gestione Dati > Salva sul PC. Accetti queste condizioni e Continuare?");
+        setArrayTeE();
+        window.location.href = '/game/home.html';
+      }
     } else {
-      window.alert("I progressi effettuati non sono collegati ad un server e saranno disponibili finchè la sessione di gioco rimane aperta; per salvare (nella memoria locale del dispositivo) andare su: Menù > Gestione Dati > Salva sul PC. Accetti queste condizioni e Continuare?");
-      setArrayTeE();
-      window.location.href = '/game/home.html';
+      window.alert("Il tuo Username è troppo lungo; deve essere massimo 14 lettere.");
     }
   }
 </script>
