@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "express.js": "^1.0.0",
+    "markdown": "^0.5.0",
     "next.js": "^1.0.3",
     "php": "^1.0.2"
   }
