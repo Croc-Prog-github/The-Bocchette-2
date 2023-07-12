@@ -58,6 +58,19 @@
   </body>
 </html>
 
+<script>//Costruzione muri
+  document.addEventListener('keydown', function(event) {
+    switch(event.key) {
+      case 'z':
+        //muro di legno
+      break;
+      case 'x': 
+        //muro di pietra
+      break;
+    }
+  })
+</script>
+
 <script>//Movimento Player
   document.addEventListener('keydown', function(event) {
   const player = document.getElementById('player');
@@ -70,16 +83,16 @@
   switch (event.key) {
     case 'w': // Spostamento verso l'alto
       top -= step;
-      break;
+    break;
     case 'a': // Spostamento verso sinistra
       left -= step;
-      break;
+    break;
     case 's': // Spostamento verso il basso
       top += step;
-      break;
+    break;
     case 'd': // Spostamento verso destra
       left += step;
-      break;
+    break;
   }
 
   player.style.top = top + 'px';
