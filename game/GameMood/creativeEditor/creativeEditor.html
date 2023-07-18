@@ -201,27 +201,33 @@
 <script> //Cambia contenuto delle categorie di creativa
   const BlkCost = document.getElementById('BlkCost');
   const disp = document.getElementById('disp');
+  const consum = document.getElementById('consum');
   function SQC(n) {
     switch(n) {
       case 1:
         BlkCost.style.display = 'none';
         disp.style.display = 'none';
+        consum.style.display = 'none';
       break;
       case 2:
         BlkCost.style.display = 'flex';
         disp.style.display = 'none';
+        consum.style.display = 'none';
       break;
       case 3:
         BlkCost.style.display = 'none';
         disp.style.display = 'flex';
+        consum.style.display = 'none';
       break;
       case 4:
         BlkCost.style.display = 'none';
         disp.style.display = 'none';
+        consum.style.display = 'none';
       break;
       case 5:
         BlkCost.style.display = 'none';
         disp.style.display = 'none';
+        consum.style.display = 'flex';
       break;
     }
   }
