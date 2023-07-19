@@ -75,8 +75,8 @@
       <div name="Creativa" id="creativ" style="width: 1535px; height: 677px; background: royalblue; position: absolute; top: 1px; left: 0px;" hidden>
         <button style="background: indianred; border: solid 3px darkred; font: message-box; margin-left: 90%; margin-bottom: 5px;" onclick="WinEdit(0)">X</button>
         <div style="display: flex; justify-content: space-evenly;">
-          <button>Impostazioni mappa</button>
-          <button style="border: solid darkblue;">Finestra modifiche</button>
+          <button onclick="SQS('IM')">Impostazioni mappa</button>
+          <button style="border: solid darkblue;" onclick="SQS('FM')">Finestra modifiche</button>
         </div>
         <div name="categor" style="display: flex; justify-content: space-evenly; margin-block: 7px;">
           <button onclick="SQC(1)">Strutture Prefabbricate</button>
@@ -123,7 +123,24 @@
 
         </div>
       </div>
-      <div name="Imp_Mappa"></div>
+
+      <div name="Imp_Mappa" id="ImpM" style="width: 1535px; height: 677px; background: royalblue; position: absolute; top: 1px; left: 0px;" hidden>
+        <button style="background: indianred; border: solid 3px darkred; font: message-box; margin-left: 90%; margin-bottom: 5px;" onclick="WinEdit(0)">X</button>
+        <div style="display: flex; justify-content: space-evenly;">
+          <button onclick="SQS('IM')">Impostazioni mappa</button>
+          <button style="border: solid darkblue;" onclick="SQS('FM')">Finestra modifiche</button>
+        </div>
+        <div name="categor" style="display: flex; justify-content: space-evenly; margin-block: 7px;">
+          <button style="border: solid darkblue;">Partita</button>
+          <button>Impostazioni</button>
+          <button>Interfaccia utente</button>
+          <button>Strumenti</button>
+          <button>Descrizione</button>
+          <button>Permessi</button>
+        </div>
+
+
+      </div>
     </div>
 
     <div style="width: 220px; background: #ffffff; z-index: 4; position: absolute; margin-bottom: 1.5%; height: 95%; top: 8px;" hidden id="menu">
@@ -152,6 +169,23 @@
     </div>
   </body>
 </html>
+
+<script> //Cambia contenuto tra FinMod, ImpM
+  const ImpM = document.getElementById('ImpM');
+  const creativ = document.getElementById('creativ');
+  function SQS(n) { // Seleziona Questa Scheda
+    switch(n) {
+      case 'IM':
+        ImpM.style.display = 'block';
+        creativ.style.display = 'none';
+      break;
+      case 'FM':
+        ImpM.style.display = 'none';
+        creativ.style.display = 'block';
+      break;
+    }
+  }
+</script>
 
 <script> //Seleziona un'oggetto dalla creativa, lo porta in mappa e fà anim mouse
   function SQOgg(nm) {
@@ -210,7 +244,7 @@
   const BlkCost = document.getElementById('BlkCost');
   const disp = document.getElementById('disp');
   const consum = document.getElementById('consum');
-  function SQC(n) {
+  function SQC(n) { //Seleziona Questa Categor.
     switch(n) {
       case 1:
         BlkCost.style.display = 'none';
