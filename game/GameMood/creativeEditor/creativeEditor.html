@@ -143,7 +143,7 @@
             <div style="margin-block: 8px; background: cornflowerblue;">
               Quando Avvii la partita Invia su Canale: 
               <input type="number" min="1" max="500" value="0" style="margin-left: 30px;">
-              <hx style="font-size: small; margin-left: 15px;">Quando viene avviata la partita viene inviato un segnale su un canale, sciegli quale. 0: Nessun canale</hx>
+              <hx style="font-size: small; margin-left: 15px;">Quando viene avviata la partita viene inviato un segnale su un canale, sciegli quale. <strong>0: Nessun canale</strong></hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
@@ -154,7 +154,7 @@
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Squadre: 
-              <input type="number" min="1" max="100" value="2" style="margin-left: 30px;">
+              <input type="number" min="1" max="100" value="10" style="margin-left: 30px;">
               <hx style="font-size: small; margin-left: 15px;">I giocatori sono distribuiti in Squadre</hx>
             </div>
 
@@ -165,27 +165,51 @@
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
-              Limite generazioni:
-              <input type="number" min="1" max="10" value="-0" style="margin-left: 30px;">
-              <hx style="font-size: small; margin-left: 15px;">Numero di volte in cui i giocatori si possono rigenerare. -0: Infinito</hx>
+              Limite Rigenerazioni:
+              <input type="number" min="1" max="10" value="0" style="margin-left: 30px;">
+              <hx style="font-size: small; margin-left: 15px;">Numero di volte in cui i giocatori si possono rigenerare dopo la morte. <strong>-0: Infinito; 0: 1 vita totale</strong></hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Dopo ultima rigenerazione passa a Squadra:
-              <input type="number" min="1" max="100" value="-0" style="margin-left: 30px;">
-              <hx style="font-size: small; margin-left: 15px;">Dopo che esaurisci il limite di rigenerazioni passa ad un'altra Squadra. 0: Spettatore</hx>
+              <input type="number" min="1" max="100" value="0" style="margin-left: 30px;">
+              <hx style="font-size: small; margin-left: 15px;">Dopo che esaurisci il limite di rigenerazioni passa ad un'altra Squadra. <strong>0: Spettatore</strong></hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Numero di Round:
-              <input type="number" min="1" max="100" value="1" style="margin-left: 30px;">
-              <hx style="font-size: small; margin-left: 15px;">Numero di volte in cui viene ripetuta la partita</hx>
+              <input type="number" min="1" max="100" value="0" style="margin-left: 30px;">
+              <hx style="font-size: small; margin-left: 15px;">Numero di volte in cui viene ripetuta la partita. <strong>0: 1 partita totale</strong></hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Limite di tempo:
+              <input type="number" min="1" max="120" value="-0" style="margin-left: 30px;">minuti
+              <hx style="font-size: small; margin-left: 15px;">Tempo tra inizio e fine di una partita/round. <strong>-0: Infinito</strong></hx>
+            </div>
+
+            <div style="margin-block: 8px; background: cornflowerblue;">
+              Eliminazioni per finire:
+              <input type="number" min="1" max="1000" value="-0" style="margin-left: 30px;">
+              <hx style="font-size: small; margin-left: 15px;">Quantità di eliminazioni per terminare la partita/round<strong> -0: No</strong></hx>
+            </div>
+
+            <div style="margin-block: 8px; background: cornflowerblue;">
+              Chi sopravvive vince:
+              <input type="number" min="0" max="1" value="1" style="margin-left: 30px;">
+              <hx style="font-size: small; margin-left: 15px;">L'ultimo giocatore che rimane vivo vince la partita/round <strong>1: Sì; 0: No</strong></hx>
+            </div>
+
+            <div style="margin-block: 8px; background: cornflowerblue;">
+              Squadra giocatore ingresso durante partita:
               <input type="number" min="1" max="100" value="1" style="margin-left: 30px;">
-              <hx style="font-size: small; margin-left: 15px;">Tempo tra inizio e fine di una partita/round</hx>
+              <hx style="font-size: small; margin-left: 15px;">Numero Squadra per il giocatore che unisce durante la partita/round <strong>0: Genera prossimo round;</strong></hx>
+            </div>
+
+            <div style="margin-block: 8px; background: cornflowerblue;">
+              Luogo generazione:
+              <input type="number" min="0" max="1" value="1" style="margin-left: 30px;">
+              <hx style="font-size: small; margin-left: 15px;">Luogo dove si generano/rigenerano i giocatori <strong>0: Punto casuale; 1: Pedane di generazione;</strong></hx>
             </div>
           </div>
         </div>
