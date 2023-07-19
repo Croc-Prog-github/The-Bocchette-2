@@ -143,29 +143,52 @@
             <div style="margin-block: 8px; background: cornflowerblue;">
               Quando Avvii la partita Invia su Canale: 
               <input type="number" min="1" max="500" value="0" style="margin-left: 30px;">
-              <hx style="font-size: small; margin-left: 15px;">0: Nessuno</hx>
+              <hx style="font-size: small; margin-left: 15px;">Quando viene avviata la partita viene inviato un segnale su un canale, sciegli quale. 0: Nessun canale</hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Giocatori max: 
               <input type="number" min="1" max="100" value="10" style="margin-left: 30px;">
-              <hx style="font-size: small; margin-left: 15px;">-</hx>
+              <hx style="font-size: small; margin-left: 15px;">Giocatori massimi nella mappa</hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Squadre: 
               <input type="number" min="1" max="100" value="2" style="margin-left: 30px;">
-              <hx style="font-size: small; margin-left: 15px;">-</hx>
+              <hx style="font-size: small; margin-left: 15px;">I giocatori sono distribuiti in Squadre</hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
-              Dimensione Squadre:
-              <input type="number" min="1" max="100" value="2" style="margin-left: 30px;">
-              <hx style="font-size: small; margin-left: 15px;">-</hx>
+              Dimensioni Squadra:
+              <input type="number" min="1" max="4" value="1" style="margin-left: 30px;">
+              <hx style="font-size: small; margin-left: 15px;">Numero persone per ogni squadra</hx>
+            </div>
+
+            <div style="margin-block: 8px; background: cornflowerblue;">
+              Limite generazioni:
+              <input type="number" min="1" max="10" value="-0" style="margin-left: 30px;">
+              <hx style="font-size: small; margin-left: 15px;">Numero di volte in cui i giocatori si possono rigenerare. -0: Infinito</hx>
+            </div>
+
+            <div style="margin-block: 8px; background: cornflowerblue;">
+              Dopo ultima rigenerazione passa a Squadra:
+              <input type="number" min="1" max="100" value="-0" style="margin-left: 30px;">
+              <hx style="font-size: small; margin-left: 15px;">Dopo che esaurisci il limite di rigenerazioni passa ad un'altra Squadra. 0: Spettatore</hx>
+            </div>
+
+            <div style="margin-block: 8px; background: cornflowerblue;">
+              Numero di Round:
+              <input type="number" min="1" max="100" value="1" style="margin-left: 30px;">
+              <hx style="font-size: small; margin-left: 15px;">Numero di volte in cui viene ripetuta la partita</hx>
+            </div>
+
+            <div style="margin-block: 8px; background: cornflowerblue;">
+              Limite di tempo:
+              <input type="number" min="1" max="100" value="1" style="margin-left: 30px;">
+              <hx style="font-size: small; margin-left: 15px;">Tempo tra inizio e fine di una partita/round</hx>
             </div>
           </div>
         </div>
-
 
       </div>
     </div>
