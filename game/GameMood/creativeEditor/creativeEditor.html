@@ -254,6 +254,7 @@
 <script> //Cambia contenuto tra FinMod, ImpM
   const ImpM = document.getElementById('ImpM');
   const creativ = document.getElementById('creativ');
+  ImpM.style.display = 'none';
   function SQS(n) { // Seleziona Questa Scheda
     switch(n) {
       case 'IM':
@@ -414,13 +415,17 @@
 <!-- FINE cose Player -->
 
 <script> //Apre menù creativa
+  creativ.style.display = 'none';
   function WinEdit(n){
     const creativ = document.getElementById('creativ');
+    const ImpM = document.getElementById('ImpM');
     if (n === 1) {
-      creativ.hidden = false;
+      ImpM.style.display = 'block';
+      creativ.style.display = 'block';
     } 
     if (n === 0) {
-      creativ.hidden = true;
+      ImpM.style.display = 'none';
+      creativ.style.display = 'none';
     }
   }
 </script>
