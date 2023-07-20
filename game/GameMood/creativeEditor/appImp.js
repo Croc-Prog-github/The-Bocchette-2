@@ -1,0 +1,3 @@
+function AppImp() { //Applica impostazioni
+
+}
