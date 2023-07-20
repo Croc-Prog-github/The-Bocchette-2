@@ -9,7 +9,7 @@
     <!-- Content -->
     <script src="/cons/cons.js"></script>
     <script src="/game/GameMood/tecnic.js"></script>
-    <script src="/appImp.js"></script>
+    <script src="/game/GameMood/creativeEditor/appImp.js"></script>
   </head>
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif; background-color: #195e79ad; cursor: default; overflow: hidden;">
 
@@ -143,79 +143,79 @@
           <div name="Partita" id="play">
             <div style="margin-block: 8px; background: cornflowerblue;">
               Quando Avvii la partita Invia su Canale: 
-              <input type="number" min="1" max="500" value="0" style="margin-left: 30px;">
+              <input type="number" min="1" max="500" value="0" style="margin-left: 30px;" id="QndStPICh">
               <hx style="font-size: small; margin-left: 15px;">Quando viene avviata la partita viene inviato un segnale su un canale, sciegli quale. <strong>0: Nessun canale</strong></hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Giocatori max: 
-              <input type="number" min="1" max="100" value="10" style="margin-left: 30px;">
+              <input type="number" min="1" max="100" value="10" style="margin-left: 30px;" id="GiocMax">
               <hx style="font-size: small; margin-left: 15px;">Giocatori massimi nella mappa</hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Squadre: 
-              <input type="number" min="1" max="100" value="10" style="margin-left: 30px;">
+              <input type="number" min="1" max="100" value="10" style="margin-left: 30px;" id="Sqad">
               <hx style="font-size: small; margin-left: 15px;">I giocatori sono distribuiti in Squadre</hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Dimensioni Squadra:
-              <input type="number" min="1" max="4" value="1" style="margin-left: 30px;">
+              <input type="number" min="1" max="4" value="1" style="margin-left: 30px;" id="DimSq">
               <hx style="font-size: small; margin-left: 15px;">Numero persone per ogni squadra</hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Limite Rigenerazioni:
-              <input type="number" min="1" max="10" value="0" style="margin-left: 30px;">
+              <input type="number" min="1" max="10" value="0" style="margin-left: 30px;" id="LimGen">
               <hx style="font-size: small; margin-left: 15px;">Numero di volte in cui i giocatori si possono rigenerare dopo la morte. <strong>-0: Infinito; 0: 1 vita totale</strong></hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Dopo ultima rigenerazione passa a Squadra:
-              <input type="number" min="1" max="100" value="0" style="margin-left: 30px;">
+              <input type="number" min="1" max="100" value="0" style="margin-left: 30px;" id="DURPASq">
               <hx style="font-size: small; margin-left: 15px;">Dopo che esaurisci il limite di rigenerazioni passa ad un'altra Squadra. <strong>0: Spettatore</strong></hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Numero di Round:
-              <input type="number" min="1" max="100" value="0" style="margin-left: 30px;">
+              <input type="number" min="1" max="100" value="0" style="margin-left: 30px;" id="NumR">
               <hx style="font-size: small; margin-left: 15px;">Numero di volte in cui viene ripetuta la partita. <strong>0: 1 partita totale</strong></hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Limite di tempo:
-              <input type="number" min="1" max="120" value="-0" style="margin-left: 30px;">minuti
+              <input type="number" min="1" max="120" value="-0" style="margin-left: 30px;" id="LimTemp">minuti
               <hx style="font-size: small; margin-left: 15px;">Tempo tra inizio e fine di una partita/round. <strong>-0: Infinito</strong></hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Eliminazioni per finire:
-              <input type="number" min="1" max="1000" value="-0" style="margin-left: 30px;">
+              <input type="number" min="1" max="1000" value="-0" style="margin-left: 30px;" id="ElimFin">
               <hx style="font-size: small; margin-left: 15px;">Quantità di eliminazioni per terminare la partita/round<strong> -0: No</strong></hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Chi sopravvive vince:
-              <input type="number" min="0" max="1" value="1" style="margin-left: 30px;">
+              <input type="number" min="0" max="1" value="1" style="margin-left: 30px;" id="CSopVin">
               <hx style="font-size: small; margin-left: 15px;">L'ultimo giocatore che rimane vivo vince la partita/round <strong>1: Sì; 0: No</strong></hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Squadra giocatore ingresso durante partita:
-              <input type="number" min="1" max="100" value="1" style="margin-left: 30px;">
+              <input type="number" min="1" max="100" value="1" style="margin-left: 30px;" id="SqGiocIngDP">
               <hx style="font-size: small; margin-left: 15px;">Numero Squadra per il giocatore che unisce durante la partita/round <strong>0: Genera prossimo round; -0: Squadra casule <!--Sq1-SqMax--></strong></hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Luogo generazione:
-              <input type="number" min="0" max="1" value="1" style="margin-left: 30px;">
+              <input type="number" min="0" max="1" value="1" style="margin-left: 30px;" id="LuogGen">
               <hx style="font-size: small; margin-left: 15px;">Luogo dove si generano/rigenerano i giocatori <strong>0: Punto casuale; 1: Pedane di generazione;</strong></hx>
             </div>
 
             <div style="margin-block: 8px; background: cornflowerblue;">
               Spettatore di altre Squadre:
-              <input type="number" min="0" max="1" value="1" style="margin-left: 30px;">
+              <input type="number" min="0" max="1" value="1" style="margin-left: 30px;" id="SpetASq">
               <hx style="font-size: small; margin-left: 15px;">Il giocatore quando è spettatore, può osservare altre squadre? <strong>1: Sì; 0: No</strong><hx>
             </div>
           </div>
