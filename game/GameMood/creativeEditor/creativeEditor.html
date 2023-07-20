@@ -131,15 +131,15 @@
           <button style="border: solid darkblue;" onclick="SQS('FM')">Finestra modifiche</button>
         </div>
         <div name="categor" style="display: flex; justify-content: space-evenly; margin-block: 7px;">
-          <button style="border: solid darkblue;" onclick="" id="play">Partita</button>
-          <button onclick="" id="imp">Impostazioni</button>
-          <button onclick="" id="IU">Interfaccia utente</button>
-          <button onclick="" id="tools">Strumenti</button>
-          <button onclick="" id="desc">Descrizione</button>
-          <button onclick="" id="perm">Permessi</button>
+          <button style="border: solid darkblue;" onclick="SQCI(1)">Partita</button>
+          <button onclick="SQCI(2)">Impostazioni</button>
+          <button onclick="">Interfaccia utente</button>
+          <button onclick="">Strumenti</button>
+          <button onclick="">Descrizione</button>
+          <button onclick="">Permessi</button>
         </div>
         <div style="display: flex; flex-direction: column; width: max-content; height: 87%; margin-inline: 7px; overflow-y: auto;">
-          <div name="Partita">
+          <div name="Partita" id="play">
             <div style="margin-block: 8px; background: cornflowerblue;">
               Quando Avvii la partita Invia su Canale: 
               <input type="number" min="1" max="500" value="0" style="margin-left: 30px;">
@@ -217,8 +217,28 @@
               <input type="number" min="0" max="1" value="1" style="margin-left: 30px;">
               <hx style="font-size: small; margin-left: 15px;">Il giocatore quando è spettatore, può osservare altre squadre? <strong>1: Sì; 0: No</strong><hx>
             </div>
-
           </div>
+
+          <div name="Impostazioni" id="impIU" style="display: none;">
+            <div style="margin-block: 8px; background: cornflowerblue;">
+              Abilita incendio:
+              <input type="number" min="0" max="1" value="1" style="margin-left: 30px;">
+              <hx style="font-size: small; margin-left: 15px;">Le armi incendiarie prossono dare fuoco ai muri <strong>1: Sì; 0: No</strong><hx>
+            </div>
+
+            <div style="margin-block: 8px; background: cornflowerblue;">
+              Salute iniziale:
+              <input type="number" min="1" max="100" value="100" style="margin-left: 30px;">%
+              <hx style="font-size: small; margin-left: 15px;">La percentuale di salute iniziale che ha il giocatore (rispetto a Salute massima)<hx>
+            </div>
+
+            <div style="margin-block: 8px; background: cornflowerblue;">
+              Salute massima:
+              <input type="number" min="2" max="100" value="100" style="margin-left: 30px;">%
+              <hx style="font-size: small; margin-left: 15px;">La percentuale massima di salute che può avere una Bocchetta <strong>100%: max vita della Evoluzione del giocatore</strong><hx>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -252,14 +272,19 @@
 </html>
 
 <script> //Cambia le categorie 
-  function SQCI() { //Seleziona Questa Categoria Impostazioni
+  function SQCI(n) { //Seleziona Questa Categoria Impostazioni
     const play = document.getElementById('play');
-    const imp = document.getElementById('imp');
-    const IU = document.getElementById('UI');
-    const tools = document.getElementById('tools');
-    const desc = document.getElementById('desc');
-    const perm = document.getElementById('perm');
-    
+    const impIU = document.getElementById('impIU');
+    switch(n) {
+      case 1: //1: partita
+        play.style.display = 'block'
+        impIU.style.display = 'none'
+      break;
+      case 2: //2: ImpostIU
+        play.style.display = 'none'
+        impIU.style.display = 'block'
+      break;
+    }
   }
 </script>
 
