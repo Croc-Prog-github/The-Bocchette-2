@@ -131,12 +131,12 @@
           <button style="border: solid darkblue;" onclick="SQS('FM')">Finestra modifiche</button>
         </div>
         <div name="categor" style="display: flex; justify-content: space-evenly; margin-block: 7px;">
-          <button style="border: solid darkblue;">Partita</button>
-          <button>Impostazioni</button>
-          <button>Interfaccia utente</button>
-          <button>Strumenti</button>
-          <button>Descrizione</button>
-          <button>Permessi</button>
+          <button style="border: solid darkblue;" onclick="" id="play">Partita</button>
+          <button onclick="" id="imp">Impostazioni</button>
+          <button onclick="" id="IU">Interfaccia utente</button>
+          <button onclick="" id="tools">Strumenti</button>
+          <button onclick="" id="desc">Descrizione</button>
+          <button onclick="" id="perm">Permessi</button>
         </div>
         <div style="display: flex; flex-direction: column; width: max-content; height: 87%; margin-inline: 7px; overflow-y: auto;">
           <div name="Partita">
@@ -251,6 +251,18 @@
   </body>
 </html>
 
+<script> //Cambia le categorie 
+  function SQCI() { //Seleziona Questa Categoria Impostazioni
+    const play = document.getElementById('play');
+    const imp = document.getElementById('imp');
+    const IU = document.getElementById('UI');
+    const tools = document.getElementById('tools');
+    const desc = document.getElementById('desc');
+    const perm = document.getElementById('perm');
+    
+  }
+</script>
+
 <script> //Cambia contenuto tra FinMod, ImpM
   const ImpM = document.getElementById('ImpM');
   const creativ = document.getElementById('creativ');
@@ -270,7 +282,7 @@
 </script>
 
 <script> //Seleziona un'oggetto dalla creativa, lo porta in mappa e fà anim mouse
-  function SQOgg(nm) {
+  function SQOgg(nm) { //Seleziona Questo Oggetto
     const SQOggContainer = document.getElementById('SQOggContainer');
     const SQOggImage = document.getElementById('SQOgg');
 
