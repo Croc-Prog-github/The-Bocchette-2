@@ -10,6 +10,7 @@
     <script src="/cons/cons.js"></script>
     <script src="/game/GameMood/tecnic.js"></script>
     <script src="/game/GameMood/creativeEditor/appImp.js"></script>
+    <script src="/game/GameMood/creativeEditor/posizOgg.js"></script>
   </head>
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif; background-color: #195e79ad; cursor: default; overflow: hidden;">
 
@@ -27,7 +28,7 @@
     </div>
     
     <div style="overflow-y: auto; height: 40em;">
-      <div name="Terreno" style="width: 950px; height: 700px; background-color: darkkhaki;">
+      <div name="Terreno" style="width: 950px; height: 700px; background-color: darkkhaki;" id="terr">
 
         <div name="ombra ogg" style="opacity: 0.55; mix-blend-mode: darken; cursor: default; position: relative; width: fit-content;height: 100px; direction: rtl; display: none; align-items: end;" id="SQOggContainer" hidden>
           <img src="" alt="Err" id="SQOgg" style="margin-top: -50%; margin-left: -60%;">
@@ -399,18 +400,18 @@
 
     SQOggContainer.style.display = 'inline-grid';
 
+    var mouseX = event.clientX;
+    var mouseY = event.clientY;
+
     // Seguire il mouse e animazione del mouse
     function moveElementWithMouse(event) {
       if (!event.buttons) {
-        var mouseX = event.clientX;
-        var mouseY = event.clientY;
-
         SQOggContainer.style.left = mouseX + 'px';
         SQOggContainer.style.top = mouseY + 'px';
       }
     }
     // Aggiungi l'evento 'mousemove'
-    document.addEventListener('mousemove', moveElementWithMouse);
+    const ClickPosizOgg = document.addEventListener('mousemove', moveElementWithMouse);
     // Definisci la funzione per il click del tasto sinistro
     function handleClick(event) {
       if (event.button === 0) {
@@ -419,6 +420,7 @@
         // Chiama la funzione posizOgg() quando c'è un click con il tasto sinistro
 
         posizOgg((mouseX + 'px'), (mouseY + 'px'), SQOggImage.src);
+        clearInterval(ClickPosizOgg)
       }
     }
     // Aggiungi l'evento 'click' per il tasto sinistro
