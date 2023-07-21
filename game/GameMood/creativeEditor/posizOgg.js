@@ -1,15 +1,12 @@
 function posizOgg(x, y, url) {
-  var nuovoDiv = document.createElement('div');
-    
-  // Aggiungi del contenuto al nuovo div (puoi modificare il contenuto come preferisci)
-  nuovoDiv.innerHTML = 'Questo è un nuovo div creato con JavaScript!';
 
-  // Aggiungi una classe al nuovo div (opzionale, puoi rimuovere questa riga se non serve)
-  nuovoDiv.classList.add('nuovo-div');
+  SQOggContainer.style.opacity = 1;
+  SQOggContainer.style.mixBlendMode = 'normal';
 
-  // Ottieni il div padre con id "terr"
-  var terrDiv = document.getElementById('terr');
+  x = SQOggContainer.style.left;
+  y = SQOggContainer.style.top;
+  //url = SQOggImage.src;
 
-  // Inserisci il nuovo div all'interno del div padre
-  terrDiv.appendChild(nuovoDiv);
+  
+
 }

@@ -31,7 +31,7 @@
       <div name="Terreno" style="width: 950px; height: 700px; background-color: darkkhaki;" id="terr">
 
         <div name="ombra ogg" style="opacity: 0.55; mix-blend-mode: darken; cursor: default; position: relative; width: fit-content;height: 100px; direction: rtl; display: none; align-items: end;" id="SQOggContainer" hidden>
-          <img src="" alt="Err" id="SQOgg" style="margin-top: -50%; margin-left: -60%;">
+          <img src="" alt="Err" id="SQOgg" style="margin-top: -50%; margin-left: -60%; width: 70px;">
         </div>
     
         <div name="Player" style="margin-top: 15px; top: 30px; margin-left: 40px; position: relative; width: fit-content;" id="player">
@@ -50,7 +50,7 @@
           <img src="#" style="/*position: absolute;*/ top: 50%; left: 50%;" alt="Bot1">
         </div>
   
-        <div name="power-up" id="PwUP" style="background-image: url(https://docs.google.com/drawings/d/e/2PACX-1vRBSajVjm8pCR-tiwKCiXW0tp3x6O8L2jJYRIQb2WGZNrHP_njlpTcTtJBaZOlqAKBCaKV-h5UQhmHl/pub?w=960&h=720); width: 60px; height: 60px; background-size: cover; image-rendering: -webkit-optimize-contrast; position: relative; top: 82px; left: 230px;">
+        <div name="power-up" id="PwUP" style="background-image: url(https://docs.google.com/drawings/d/e/2PACX-1vRBSajVjm8pCR-tiwKCiXW0tp3x6O8L2jJYRIQb2WGZNrHP_njlpTcTtJBaZOlqAKBCaKV-h5UQhmHl/pub?w=960&h=720); width: 65px; height: 65px; background-size: cover; image-rendering: -webkit-optimize-contrast; position: relative; top: 82px; left: 230px;">
           <progress style="margin-left: 7px; margin-top: 5px; position: relative; z-index: 1; width: 65px; accent-color: green; opacity: 35%;" value="100" max="100"></progress>
         </div>
 
@@ -410,8 +410,11 @@
         SQOggContainer.style.top = mouseY + 'px';
       }
     }
+    // Aggiungi l'evento 'click' per il tasto sinistro
+    const ClickPosizOgg =  document.addEventListener('mousedown', handleClick);
+
     // Aggiungi l'evento 'mousemove'
-    const ClickPosizOgg = document.addEventListener('mousemove', moveElementWithMouse);
+    document.addEventListener('mousemove', moveElementWithMouse);
     // Definisci la funzione per il click del tasto sinistro
     function handleClick(event) {
       if (event.button === 0) {
@@ -420,15 +423,13 @@
         // Chiama la funzione posizOgg() quando c'è un click con il tasto sinistro
 
         posizOgg((mouseX + 'px'), (mouseY + 'px'), SQOggImage.src);
-        clearInterval(ClickPosizOgg)
+        ClickPosizOgg.removeEventListener('mousedown', handleClick);
       }
     }
-    // Aggiungi l'evento 'click' per il tasto sinistro
-    document.addEventListener('mousedown', handleClick);
 
 
     //Animazione mouse
-    document.addEventListener('mousedown', function (event) {
+    const mouseAnim = document.addEventListener('mousedown', function (event) {
       if (event.button === 0) {
         SQOggContainer.style.cursor = 'grab';
 
@@ -437,6 +438,7 @@
         }, 500);
       }
     });
+    clearInterval(mouseAnim);
   }
 </script>
 
