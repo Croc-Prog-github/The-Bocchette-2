@@ -16,25 +16,30 @@ function AppImp() { //Applica impostazioni
 
   //Controlla che i valori siano corretti
 
-  //Mette le impostazioni nel tree di dati:
+  //Mette le impostazioni nel three di dati:
   const data = {
-    ImpostazioniMappa_Partita: {
-      "QndStPICh": QndStPICh,
-      "GiocMax": GiocMax,
-      "Sqad": Sqad,
-      "DimSq": DimSq,
-      "LimGen": LimGen,
-      "DURPASq": DURPASq,
-      "NumR": NumR,
-      "LimTemp": LimTemp,
-      "ElimFin": ElimFin,
-      "CSopVin": CSopVin,
-      "SqGiocIngDP": SqGiocIngDP,
-      "LuogGen": LuogGen,
-      "SpetASq": SpetASq,
-    },
-    ImpostazioniMappa_Impostazioni: {
-      "a": "a",
+    Mappa_Creativa_senza_nome: {
+      ImpostazioniMappa_Partita: {
+        "QndStPICh": QndStPICh.value,
+        "GiocMax": GiocMax.value,
+        "Sqad": Sqad.value,
+        "DimSq": DimSq.value,
+        "LimGen": LimGen.value,
+        "DURPASq": DURPASq.value,
+        "NumR": NumR.value,
+        "LimTemp": LimTemp.value,
+        "ElimFin": ElimFin.value,
+        "CSopVin": CSopVin.value,
+        "SqGiocIngDP": SqGiocIngDP.value,
+        "LuogGen": LuogGen.value,
+        "SpetASq": SpetASq.value,
+      },
+      ImpostazioniMappa_Impostazioni: {
+        "a": "a",
+      },
+      Terreno_mappa: {
+
+      },
     },
   };
   // Converti l'oggetto in formato JSON

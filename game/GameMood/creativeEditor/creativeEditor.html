@@ -400,7 +400,7 @@
     SQOggContainer.style.display = 'inline-grid';
 
     // Seguire il mouse e animazione del mouse
-    document.addEventListener('mousemove', function (event) {
+    function moveElementWithMouse(event) {
       if (!event.buttons) {
         var mouseX = event.clientX;
         var mouseY = event.clientY;
@@ -408,8 +408,24 @@
         SQOggContainer.style.left = mouseX + 'px';
         SQOggContainer.style.top = mouseY + 'px';
       }
-    });
+    }
+    // Aggiungi l'evento 'mousemove'
+    document.addEventListener('mousemove', moveElementWithMouse);
+    // Definisci la funzione per il click del tasto sinistro
+    function handleClick(event) {
+      if (event.button === 0) {
+        // Rimuovi l'evento 'mousemove' quando c'è un click con il tasto sinistro
+        document.removeEventListener('mousemove', moveElementWithMouse);
+        // Chiama la funzione posizOgg() quando c'è un click con il tasto sinistro
 
+        posizOgg((mouseX + 'px'), (mouseY + 'px'), SQOggImage.src);
+      }
+    }
+    // Aggiungi l'evento 'click' per il tasto sinistro
+    document.addEventListener('mousedown', handleClick);
+
+
+    //Animazione mouse
     document.addEventListener('mousedown', function (event) {
       if (event.button === 0) {
         SQOggContainer.style.cursor = 'grab';
