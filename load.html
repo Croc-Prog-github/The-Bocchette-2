@@ -42,14 +42,26 @@
         <input id="file-upload" type="file" accept=".encrypt" hidden>
         <label for="file-upload" style="color: -webkit-link; cursor: pointer;text-decoration: underline;">Carica dati</label>
         |
-        <hx style="color: -webkit-link; cursor: pointer;text-decoration: underline;" onclick="AccServ('login')">Account server</hx>
+        <hx style="color: -webkit-link; cursor: pointer;text-decoration: underline;" onclick="AccServ('login');">Account server</hx>
+      </div>
 
-        <div style="display: flex; justify-content: center;">
-          <button style="margin-inline: 87px; margin-top: 3px;" hidden>Accedi</button>
+      <div name="loginDiv" style="margin: 7px; text-align: center; flex-direction: column; align-items: center;" id="login" hidden>
+        <strong style="margin-inline: 83px; font-size: 20px; cursor: default;">Accedi</strong>
+        <input type="text" placeholder="Username" maxlength="14">
+        <br>
+        <input type="password" minlength="8" placeholder="Password">
+        <hx style="font-size: small; color: -webkit-link; cursor: pointer;text-decoration: underline;">Password dimenticata</hx>
+        <br>
+        <div style="display: flex; flex-direction: row;">
+          <hx style="color: -webkit-link; cursor: pointer;text-decoration: underline;" title="Indietro" onclick="AccServ('main');"><---</hx>
+          |
+          <button>Accedi</button>
+          |
+          <hx style="color: -webkit-link; cursor: pointer;text-decoration: underline;">Registrati</hx>
         </div>
       </div>
 
-      <div name="loginDiv" id="login">
+      <div name="RegistratiDiv">
 
       </div>
 
@@ -63,10 +75,19 @@
 </html>
 
 <script> //Mostra e gestisce il div per accesso dal server
-  const mainDiv = document.getElementById("main");
-  const loginDiv = document.getElementById("login");
   function AccServ(dest) {
-
+    const mainDiv = document.getElementById("main");
+    const loginDiv = document.getElementById("login");
+    switch(dest) {
+      case 'login':
+        mainDiv.style.display = 'none';
+        loginDiv.style.display = 'flex';
+      break;
+      case 'main':
+        mainDiv.style.display = 'block';
+        loginDiv.style.display = 'none';
+      break;
+    }
   }
 </script>
 
