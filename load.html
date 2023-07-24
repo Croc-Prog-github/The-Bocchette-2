@@ -47,17 +47,23 @@
 
       <div name="loginDiv" style="margin: 7px; text-align: center; flex-direction: column; align-items: center;" id="login" hidden>
         <strong style="margin-inline: 83px; font-size: 20px; cursor: default;">Accedi</strong>
+        <hx style="font-size: small; margin-right: auto;">Bentornato, accedi al tuo account.</hx>
         <input type="text" placeholder="Username" maxlength="14">
         <br>
         <input type="password" minlength="8" placeholder="Password">
-        <hx style="font-size: small; color: -webkit-link; cursor: pointer;text-decoration: underline;">Password dimenticata</hx>
+        <hx style="font-size: small; color: -webkit-link; cursor: pointer; text-decoration: underline;">Password dimenticata</hx>
         <br>
         <div style="display: flex; flex-direction: row;">
           <hx style="color: -webkit-link; cursor: pointer;text-decoration: underline;" title="Indietro" onclick="AccServ('main');"><---</hx>
           |
           <button>Accedi</button>
           |
-          <hx style="color: -webkit-link; cursor: pointer;text-decoration: underline;">Registrati</hx>
+          <hx style="color: -webkit-link; cursor: pointer; text-decoration: underline;">Registrati</hx>
+        </div>
+
+        <div name="OutputDiv">
+          <progress max="10" hidden id="rese"></progress>
+          <hx style="color: red; font-size: small; text-decoration-line: underline; text-underline-position: auto; font-variant: all-petite-caps; font-family: sans-serif;" hidden>Account non trovato!</hx>
         </div>
       </div>
 

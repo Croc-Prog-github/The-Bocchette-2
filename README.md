@@ -1,4 +1,4 @@
-# The-Bocchette-2
+# The Bocchette 2
 
 Mettiti nei panni di macchine da guerra, completa la storia e gioca in Battle Royale Multiplayer per avazare nel gioco. Usa potenti tecniche che usano Energia, ricaricabile col tempo. 
 
