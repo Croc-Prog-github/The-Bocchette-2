@@ -20,23 +20,27 @@
     <script src="/client.js"></script>
     <script src="/game/multiP/UserList.js"></script>
   </head>
-  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin-block: 0px;">
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin-block: 0px; cursor: default;">
+    <!-- <svg style="width: 19px; height: 19px; position: absolute; z-index: 0;" id="mouse">
+      <g transform="translate(0,0)"><path d="M14.4065 5.50975L2.89015 1.00334C1.67206 0.526696 0.470043 1.72871 0.946689 2.9468L5.4531 14.4632C5.96743 15.7776 7.8472 15.7187 8.27829 14.3747L9.66655 10.0466C9.71584 9.89293 9.83628 9.7725 9.98995 9.7232L14.3181 8.33494C15.6621 7.90384 15.7209 6.02408 14.4065 5.50975Z" stroke="#444746" fill="none" transform="translate(2, 2)"/></g>
+    </svg> -->
+    <!--<g transform="translate(0,0)"><path d="M14.4065 5.50975L2.89015 1.00334C1.67206 0.526696 0.470043 1.72871 0.946689 2.9468L5.4531 14.4632C5.96743 15.7776 7.8472 15.7187 8.27829 14.3747L9.66655 10.0466C9.71584 9.89293 9.83628 9.7725 9.98995 9.7232L14.3181 8.33494C15.6621 7.90384 15.7209 6.02408 14.4065 5.50975Z" stroke="#444746" fill="#444746" transform="translate(2 2)"/></g>-->
 
     <div style="display: flex;flex-direction: row;justify-content: space-evenly;align-items: center;background-color: #242424;width: 100%;height: 20px;background-size: cover;flex-wrap: nowrap;" name="up_bar">
       <div name="€" title="Banconote" style="display: flex; align-items: center; height: 20px; background-color: #1159dba3; border-radius: 4px; margin-top: 15px">
-        <hx style="color: white; padding-left: 10px; cursor: default;" id="soldi">Error</hx>
+        <hx style="color: white; padding-left: 10px;" id="soldi">Error</hx>
         <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY0pup0VxjthO6ohSgX3RC29HShZ8JFuoCg7luCeb6Vf4oOkWPGl32GdugLMPkUn56ZmQ-bH9hnLi5/pub?w=50&h=50" style="height: 40px;" alt="La fonte non è disponibile">
       </div>
 
       <div name="Gemme" title="Gemme" style="display: flex; align-items: center; height: 20px; background-color: #1159dba3; border-radius: 4px; margin-top: 15px;">
-        <hx style="color: white; padding-left: 10px; cursor: default;" id="gemme">Error</hx>
+        <hx style="color: white; padding-left: 10px;" id="gemme">Error</hx>
         <img src="https://docs.google.com/drawings/d/e/2PACX-1vQQ42zr_c9L0G-wp60VNXlS7h4fBZjnofJZFcJ9jAVF_Ga8M7LAdoIE40PpWFASQrdFD5e-2CzMwL72/pub?w=50&h=50" style="height: 30px;" alt="La fonte non è disponibile">
       </div>
     </div>
 
-    <div name="Profilo" style="background: black; width: 120px; height: 28px; margin-top: 7px; cursor: pointer;">
+    <div name="Profilo" style="background: black; width: 120px; height: 28px; margin-top: 7px;">
       <progress style="width: 95px; margin-left: 5.5px; accent-color: #5757df; margin-top: 4.5%;" value="0" max="100" title="Exp bar"></progress>
-      <x style="color: white; cursor: default;">1</x>
+      <x style="color: white;">1</x>
     </div>
 
     <div style="display: flex; align-items: flex-start; flex-direction: column; margin-top: 15px;" name="butt">
@@ -44,7 +48,7 @@
       <button name="shop" onclick="window.location.href = '/game/shop.html';" style="background: lightgray; border: solid 3px gray;">Negozio</button>
       <button name="bocch" onclick="window.location.href = '/game/MenuBocch/SelectBocch.html';" style="background: lightgray; border: solid 3px gray;">Seleziona Bocchetta</button>
       <button name="MenuTecnic" onclick="window.location.href = '/game/MenuTecnic.html';" style="background: lightgray; border: solid 3px gray;">Seleziona Tecnica</button>
-      <button name="miss" onclick="window.location.href = '/game/GameMood/Miss_story.html';" style="background: lightgray; border: solid 3px gray;">Missioni-storia</button>
+      <button name="miss" onclick="window.location.href = '/game/GameMood/Miss_story.html';" style="background: lightgray; border: solid 3px gray;">Missioni storia</button>
     </div>
 
     <div style="position: absolute; z-index: 3; margin-top: -5%;" id="MinImpo" hidden>
@@ -55,7 +59,7 @@
     </div>
 
     <div style="/*margin-left: 38%;*/ display: flex; justify-content: center;">
-      <div style="margin-right: 15px; display: grid; align-content: center; justify-items: center; cursor: default;">
+      <div style="margin-right: 15px; display: grid; align-content: center; justify-items: center;">
         Slot tecnica 1 (E)
         <br>
         <button id="Tecnic1" value="dispersione" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; border-right: outset;text-align: center; padding-block: 0px; border-top-style: outset; outline-style: none;">dispersione</button>
@@ -69,7 +73,7 @@
         -->
       </div>
     
-      <div style="margin-right: 15px; display: grid; align-content: center; justify-items: center; cursor: default;">
+      <div style="margin-right: 15px; display: grid; align-content: center; justify-items: center;">
         Slot tecnica 2 (F)
         <br>
         <button id="Tecnic2" value="taglio netto" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; border-right: outset;text-align: center; padding-block: 0px; border-top-style: outset; outline-style: none;">taglio netto</button>
@@ -140,8 +144,8 @@
         </div>
       </div>
 
-      <div name="pass" style="width: 160px; height: 50px; background-color: gold; border-radius: 8px; /*margin-right: 35%;*/ margin-left: 0px;" onclick="window.location.href = '/game/pass/pass.html';">
-        <hx style="margin-left: 6%; cursor: default;">Bocchet Pass</hx>
+      <div name="pass" style="width: 220px; height: 50px; background-color: gold; border-radius: 8px; /*margin-right: 35%;*/ margin-left: 0px;" onclick="window.location.href = '/game/pass/pass.html';">
+        <hx style="margin-left: 6%;">Bocchet Pass</hx>
         <div style="display: flex; flex-direction: row;align-items: center;">
           <progress value="0" max="50" style="width: 90%; margin-left: 5%; margin-top: -1%; height: 35px;" id="progress"></progress> 
           <button style="margin-right: 5%; background-color: darkgoldenrod; border: 0px; border-radius: 10px; color: white;" id="obb">Error</button>
@@ -167,6 +171,19 @@
 
   </body>
 </html>
+
+<script>// Muove il mouse animato
+  /*const mouseDiv = document.getElementById('mouse');
+
+  document.addEventListener('mousemove', function(event) {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    mouseDiv.style.left = mouseX + 'px';
+    mouseDiv.style.top = mouseY + 'px';
+  });
+  */
+</script>
 
 <script>//Importa la Tecnica 1 in Slot 1
   // Funzione per impostare il valore del pulsante Tecnic1
