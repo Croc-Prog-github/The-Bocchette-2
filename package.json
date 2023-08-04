@@ -9,11 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.3.9"
+    "vite": "^4.3.9",
+    "express.js": "^1.0.0"
   },
   "dependencies": {
     "express.js": "^1.0.0",
     "json": "^11.0.0",
+    "next.js": "^1.0.3",
     "php": "^1.0.2"
   }
 }

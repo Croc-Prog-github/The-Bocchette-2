@@ -11,6 +11,7 @@
     <link rel="icon" href="https://docs.google.com/drawings/d/e/2PACX-1vRzg3r27e7_yLyB4m8rlyFHgQ8H5d6IJtW39axawbD5u7S_eX3ezqZdtll3NBLxJYY_OUhuSGJ-jQ8T/pub?w=16&h=16" type="image/x-icon">
     <script src="/var.js"></script>
     <script src="/game/event/tecnic.js"></script>
+
     <script src="/exit.js"></script>
     <script src="/cons/cons.js"></script>
     <script src="/game/mutiP/UserList.js"></script>
@@ -45,10 +46,11 @@
         <div name="player Online" style="position: inherit; overflow: auto; height: -webkit-fill-available;" id="UserOnline">
           <div style="background-color: dodgerblue; margin-inline: 5px; display: flex; flex-direction: row; justify-content: space-between; align-items: flex-end; margin-top: 5px;"><x style="color: white;" id="BUser">_</x> <x title="Non disturbare" style="mix-blend-mode: darken;" id="ND">⛔</x> <button style="background: limegreen; border-style: revert; cursor: pointer;" id="inviteB" aria-label="" onclick="Invite();Fum();">Invita</button></div>
         </div>
+        
       </div>
     </div>
 
-    <div name="NoAccount" id="NAcc" style="cursor: default; display: flex; background: white; align-items: center; color: darkred; height: 25px;" hidden>
+    <div name="NoAccount" id="NAcc" style="cursor: default; display: none; background: white; align-items: center; color: darkred; height: 25px;">
       <svg style="height: 18px; width: 18px; zoom: 1.3; margin-block: -3px;">
         <g transform="translate(0,0)"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 16L9 1l8 15H1zm13-1.65L9 4.5l-5 9.85h10zM8.25 12v1.5h1.5V12h-1.5zm0-4.5h1.5v3h-1.5v-3z" fill="#C5221F"/>
         </g>
@@ -58,16 +60,17 @@
   </body>
 </html>
 
-<script>
+<script>/*
   const NAcc = document.getElementById("NAcc");
   const body = document.getElementById('BODy');
   if (localStorage.getItem('username').length == 0) {
-    body.style.display = 'block';
-    NAcc.hidden = true;
+    body.style.display = 'flex';
+    NAcc.style.display = 'none';
   } else {
     body.style.display = 'none';
-    NAcc.hidden = false;
+    NAcc.style.display = 'flex';
   }
+  */
 </script>
 
 <script> //Gestisce fumetti per l'invito
