@@ -1,4 +1,4 @@
-const socket = new WebSocket('ws://localhost:5173');
+const socket = new WebSocket('ws://localhost:3000');
 
 socket.onopen = function(event) {
   // Dopo aver effettuato il login dell'utente
