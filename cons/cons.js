@@ -14,12 +14,13 @@ function cons(pw) {
   
     function openWindow(title, html) {
       if (!isWindowOpen(title)) {
-        const newWindow = window.open("Console", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=100,left=100,width=800,height=100");
+        const newWindow = window.open("Console", "_blank", "toolbar=no, scrollbars=no, resizable=no, top=100, left=100, width=500, height=200");
         newWindow.document.title = title;
         newWindow.document.write(`
           <!DOCTYPE html>
           <html>
           <head>
+            <title>Console</title>
           </head>
           <body style="background: black; color: white; font-family: monospace; cursor: url(/cons/mouse.svg), default;">
             A
@@ -30,7 +31,7 @@ function cons(pw) {
       }
     }
   
-    openWindow("Console", "");
+    openWindow("Console", "Console");
   
     return "Console_Aperta";
   }
