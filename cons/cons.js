@@ -14,14 +14,14 @@ function cons(pw) {
   
     function openWindow(title, html) {
       if (!isWindowOpen(title)) {
-        const newWindow = window.open("", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=100,width=800,height=600");
+        const newWindow = window.open("Console", "_blank", "toolbar=no,scrollbars=no,resizable=no,top=100,left=100,width=800,height=100");
         newWindow.document.title = title;
         newWindow.document.write(`
           <!DOCTYPE html>
           <html>
           <head>
           </head>
-          <body style="background: black; color: white; font-family: monospace; cursor: url(/cons/cursor-console.png), auto;">
+          <body style="background: black; color: white; font-family: monospace; cursor: url(/cons/mouse.svg), default;">
             A
           </body>
           </html>
