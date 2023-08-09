@@ -136,7 +136,7 @@
   let username;
   function AccountOsp() {
     username = window.prompt('Inserisci il tuo Username');
-    if (username != "null") {
+    if (username.length != 0 && username == null) {
       if (username.length <= 14) {
         localStorage.setItem("username", username);
         username = localStorage.getItem('username');
