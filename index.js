@@ -1,4 +1,4 @@
-//import "/cons/cons.js";
+import "./cons/cons.js";
 
 /*
 import "express.js";
