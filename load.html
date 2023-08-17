@@ -59,7 +59,7 @@
           |
           <button>Accedi</button>
           |
-          <hx style="color: -webkit-link; cursor: pointer; text-decoration: underline;">Registrati</hx>
+          <hx style="color: -webkit-link; cursor: pointer; text-decoration: underline;" onclick="AccServ('regist');">Registrati</hx>
         </div>
         <div>
           <input type="checkbox"><hx style="font-size: small;">Account sviluppatore?</hx>
@@ -75,8 +75,30 @@
         </div>
       </div>
 
-      <div name="RegistratiDiv">
-        
+      <div name="RegistratiDiv" id="regist" hidden style="margin: 7px; text-align: center; flex-direction: column; align-items: center;">
+        <strong style="margin-inline: 83px; font-size: 20px; cursor: default;">Registrati</strong>
+        <hx style="font-size: small; margin-right: auto;">Benvenuto, crea il tuo account qui.</hx>
+        <input type="text" placeholder="Username" maxlength="14">
+        <br>
+        <input type="password" minlength="8" placeholder="Password">
+        <input type="password" minlength="8" placeholder="Conferma Password">
+        <br>
+        <input type="email" placeholder="E-mail di conferma">
+
+        <br>
+        <div style="display: flex; flex-direction: row;">
+          <hx style="color: -webkit-link; cursor: pointer;text-decoration: underline;" title="Indietro" onclick="AccServ('main');">⬅️</hx>
+          |
+          <button>Registrati</button>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <div>
+            <input type="checkbox"><hx style="font-size: small;">Account sviluppatore?</hx>
+          </div>
+          <div>
+            <input type="checkbox"><hx style="font-size: small;">Voglio ricevere News da E-mail?</hx>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -92,13 +114,21 @@
   function AccServ(dest) {
     const mainDiv = document.getElementById("main");
     const loginDiv = document.getElementById("login");
+    const registDiv = document.getElementById("regist");
     switch(dest) {
       case 'login':
         mainDiv.style.display = 'none';
         loginDiv.style.display = 'flex';
+        registDiv.style.display = 'none';
       break;
       case 'main':
         mainDiv.style.display = 'block';
+        loginDiv.style.display = 'none';
+        registDiv.style.display = 'none';
+      break;
+      case 'regist':
+        registDiv.style.display = 'flex';
+        mainDiv.style.display = 'none';
         loginDiv.style.display = 'none';
       break;
     }
