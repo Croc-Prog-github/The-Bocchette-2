@@ -1,9 +1,9 @@
 #load {
   /*margin-top: 37%;*/
-  margin-left: 0%;
+  /*margin-left: 0%;*/
   width: 100%;
-  padding-block: 1%;
-  position: absolute;
+  padding-block: 0.8em;
+  position: relative;
   left: 0px;
 }
 
