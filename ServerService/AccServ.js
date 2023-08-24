@@ -1,25 +1,26 @@
 // Script gestione account server
 
-const fileUrl = 'https://web-platform-a8hddt.stackblitz.io/style.css'; // URL del file da scaricare
+import fs from 'fs';
+import https from 'https';
 
-function Salv() {
+const fileUrl = 'https://example.com'; // URL del file da scaricare
+const savePath = 'C:\\Users\\princ\\Desktop\\TH2_Data\\example.htm'; // Percorso in cui salvare il file
 
-  fetch(fileUrl)
-    .then(response => response.text())
-    .then(data => {
-      const savePath = 'example.htm'; // Non è possibile specificare un percorso su disco da un browser
+const downloadFile = (url, destination) => {
+  const file = fs.createWriteStream(destination);
 
-      const blob = new Blob([data], { type: 'text/plain' });
-      const url = window.URL.createObjectURL(blob);
+  https.get(url, (response) => {
+    response.pipe(file);
 
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'example.htm';
-      a.textContent = 'Scarica il file';
-
-      document.body.appendChild(a);
-    })
-    .catch(error => {
-      console.error('Errore durante il download:', error);
+    file.on('finish', () => {
+      file.close();
+      console.log('File scaricato con successo.');
     });
-}
+  })
+  .on('error', (err) => {
+    fs.unlink(destination, () => {}); // Elimina il file se si verifica un errore durante il download
+    console.error('Errore durante il download:', err.message);
+  });
+};
+
+downloadFile(fileUrl, savePath);
