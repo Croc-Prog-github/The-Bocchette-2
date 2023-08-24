@@ -18,6 +18,6 @@
     "json": "11.0.0",
     "next.js": "1.0.3",
     "node": "^20.5.1",
-    "typescript": "5.1.6"
+    "typescript": "^5.1.6"
   }
 }
