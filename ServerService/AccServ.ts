@@ -1,5 +1,4 @@
 //Script gestione account server
-/*
 import * as fs from 'fs';
 import * as path from 'path';
 import * as https from 'https';
@@ -25,9 +24,9 @@ const downloadFile = (url: string, destination: string) => {
   });
 };
 downloadFile(fileUrl, savePath);
-*/
 
 
+/*
 // Script gestione account server
 import fs from 'fs';
 import https from 'https';
@@ -53,3 +52,4 @@ const downloadFile = (url, destination) => {
 };
 
 downloadFile(fileUrl, savePath);
+*/
