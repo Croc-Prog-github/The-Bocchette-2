@@ -2,6 +2,7 @@
   "name": "starter",
   "private": true,
   "version": "0.0.1",
+  "dependencies": {},
   "scripts": {
     "dev": "starting...",
     "start": "node index.html",
