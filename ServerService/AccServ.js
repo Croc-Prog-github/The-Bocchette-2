@@ -1,4 +1,5 @@
-// 
+// Script gestione account server
+
 import fs from 'fs';
 import https from 'https';
 
