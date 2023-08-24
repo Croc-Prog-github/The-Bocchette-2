@@ -13,11 +13,12 @@
     "vite": "^4.3.9"
   },
   "dependencies": {
-    "@types/node": "^20.5.1",
-    "express": "^4.18.2",
-    "json": "^11.0.0",
-    "next.js": "^1.0.3",
-    "php": "^1.0.2",
-    "typescript": "^5.1.6"
+    "@types/node": "20.5.3",
+    "express": "4.18.2",
+    "https": "^1.0.0",
+    "json": "11.0.0",
+    "next.js": "1.0.3",
+    "php": "1.0.2",
+    "typescript": "5.1.6"
   }
 }
