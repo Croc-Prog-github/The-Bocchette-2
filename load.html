@@ -177,13 +177,14 @@
 </script>
 
 <script>
+  let MUsername;
   function AccountOsp() {
-    username = window.prompt('Inserisci il tuo Username');
-    if (username.length > 0) {
-      if (username.length <= 14) {
-        sessionStorage.setItem("username", username);
+    MUsername = window.prompt('Inserisci il tuo Username');
+    if (MUsername.length > 0) {
+      if (MUsername.length <= 14) {
+        sessionStorage.setItem("username", MUsername);
         username = sessionStorage.getItem('username');
-        /*if (username == "null" || username == "undefined") {
+        /*if (MUsername == "null" || MUsername == "undefined") {
           window.location.href = '/';
         }*/
         window.alert("I progressi effettuati non sono collegati ad un server e saranno disponibili finchè la sessione di gioco rimane aperta; per salvare (nella memoria locale del dispositivo) andare su: Menù > Gestione Dati > Salva sul PC. Accetti queste condizioni e Continuare?");
@@ -201,7 +202,7 @@
 
 <script>
   function UpdateUsername() {
-    username.innerHTML = sessionStorage.setItem("username", username)
+    username = sessionStorage.setItem("username", MUsername)
   }
   setInterval(function() {
     UpdateUsername();
