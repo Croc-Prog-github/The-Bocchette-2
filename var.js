@@ -1,3 +1,5 @@
+let username = sessionStorage.getItem('username');
+
 let gemme = sessionStorage.getItem("gemme");
 let soldi = sessionStorage.getItem("soldi");
 let passP = sessionStorage.getItem("passP"); //Pass premium (aqcuistato)?
@@ -34,6 +36,8 @@ let obbUnlockPP = sessionStorage.getItem("obbUnlockPP"); //obb Unlock Pass Premi
 
 function SS() {
   // Session Storage legato alle variabili
+  sessionStorage.setItem("username", username);
+  
   sessionStorage.setItem("gemme", gemme);
   sessionStorage.setItem("soldi", soldi);
   sessionStorage.setItem("passP", passP);
@@ -50,7 +54,7 @@ function SS() {
 //Da ora il Session Storage non è più controllato dal filtro dei soli numeri interi
 setInterval(function() {
   SS();
-  const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme']; // Array delle chiavi da verificare (solo variabili Int)
+  const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme', 'username']; // Array delle chiavi da verificare (solo variabili Int)
   for (let key in sessionStorage) {
     if (keysToCheck.includes(key)) { // Verifica se la chiave corrente è presente nell'array keysToCheck
       let value = sessionStorage.getItem(key);

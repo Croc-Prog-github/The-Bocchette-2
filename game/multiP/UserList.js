@@ -4,7 +4,7 @@ socket.onopen = function(event) {
   // Dopo aver effettuato il login dell'utente
   socket.send(JSON.stringify({
     type: 'login',
-    username: localStorage.getItem('username')
+    username: sessionStorage.getItem('username')
   }));
 
   // Quando l'utente accede alla pagina degli utenti online

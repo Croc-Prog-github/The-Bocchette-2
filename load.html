@@ -177,13 +177,12 @@
 </script>
 
 <script>
-  let username;
   function AccountOsp() {
     username = window.prompt('Inserisci il tuo Username');
     if (username.length > 0) {
       if (username.length <= 14) {
-        localStorage.setItem("username", username);
-        username = localStorage.getItem('username');
+        sessionStorage.setItem("username", username);
+        username = sessionStorage.getItem('username');
         /*if (username == "null" || username == "undefined") {
           window.location.href = '/';
         }*/
@@ -196,5 +195,15 @@
     } else {
       window.location.href = '/';
     }
+    UpdateUsername();
   }
+</script>
+
+<script>
+  function UpdateUsername() {
+    username.innerHTML = sessionStorage.setItem("username", username)
+  }
+  setInterval(function() {
+    UpdateUsername();
+  }, 100);
 </script>

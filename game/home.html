@@ -20,7 +20,7 @@
     <script src="/client.js"></script>
     <script src="/game/multiP/UserList.js"></script>
   </head>
-  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin-block: 0px; cursor: default;">
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin-block: 0px; cursor: default;" onload="if(sessionStorage.getItem('username').length = 0){window.location.href = '/load.html';}">
     <!-- <svg style="width: 19px; height: 19px; position: absolute; z-index: 0;" id="mouse">
       <g transform="translate(0,0)"><path d="M14.4065 5.50975L2.89015 1.00334C1.67206 0.526696 0.470043 1.72871 0.946689 2.9468L5.4531 14.4632C5.96743 15.7776 7.8472 15.7187 8.27829 14.3747L9.66655 10.0466C9.71584 9.89293 9.83628 9.7725 9.98995 9.7232L14.3181 8.33494C15.6621 7.90384 15.7209 6.02408 14.4065 5.50975Z" stroke="#444746" fill="none" transform="translate(2, 2)"/></g>
     </svg> -->
@@ -152,13 +152,14 @@
         </div>
       </div>
 
-      <div style="display: flex; justify-content: center; width: -webkit-fill-available; margin-left: 15%;">
+      <div style="display: flex; justify-content: center; width: -webkit-fill-available; /*margin-left: 15%;*/">
         <div style="background: white; width: 200px; height: 55px; /*border: solid 3px black;*/ border-radius: 7px;" onclick="window.location.href = '/game/event.html';">
           <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY5rVGGwFbGX5XBXOTvVzchOT3Ns1WlJVmbP72yYtGgz_f5qv4CCcEDor5Wss2sgDiVhW9lBXlI9wt/pub?w=308&h=102" alt="La fonte non è disponibile" style="width: 101%; margin-top: -10px;" id="eventS">
         </div>
         <button style="margin-left: 5px; padding-block: 24px; margin-top: -17px; padding-inline: 15px; color: white; background-color: dodgerblue; border: solid 3px darkblue; border-radius: 8px; font-size: 20px; border-bottom: solid 6px darkblue;" onclick="play(); STecnic1(); STecnic2();">Gioca</button>
       </div>
 
+      <!--
       <div name="Chat" style="display: flex; flex-direction: column; height: 60px; justify-content: center; align-items: flex-start;">
         <div style="width: -webkit-fill-available; height: 80px; position: fixed; bottom: 71px; /*background: linear-gradient(0deg, black, #00000050, transparent);*/ overflow-y: hidden;"></div>
         Chat di gruppo
@@ -167,6 +168,7 @@
           <button style="width: -webkit-fill-available;">Invia</button>
         </div>
       </div>
+      -->
     </div>
 
   </body>
@@ -287,7 +289,7 @@
     // Crea il div quando il menù è aperto
     let newDiv = document.createElement("div");
 
-    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -293px; margin-bottom: 13vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; z-index: 1; position: relative"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button><button name="impo" onclick="OSett()" style="margin-inline: 10px; margin-top: 15px;">Impostazioni</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button onclick="rend(4)" style="margin-inline: 10px; margin-top: 15px;">Lascia un feedback</button><button onclick="rend(5)" style="margin-inline: 10px; margin-top: 15px;">Riconoscimenti</button></div>';
+    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -200%; margin-bottom: 16.5vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; z-index: 1; position: relative"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button><button name="impo" onclick="OSett()" style="margin-inline: 10px; margin-top: 15px;">Impostazioni</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button onclick="rend(4)" style="margin-inline: 10px; margin-top: 15px;">Lascia un feedback</button><button onclick="rend(5)" style="margin-inline: 10px; margin-top: 15px;">Riconoscimenti</button></div>';
     // Inserisce il nuovo div all'interno di M_princ
     mPrinc.appendChild(newDiv);
   }

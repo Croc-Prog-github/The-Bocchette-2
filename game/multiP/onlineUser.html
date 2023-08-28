@@ -63,7 +63,7 @@
 <script>
   const NAcc = document.getElementById("NAcc");
   const body = document.getElementById('BODy');
-  if (localStorage.getItem('username').length == 0) {
+  if (sessionStorage.getItem('username').length == 0) {
     body.style.display = 'flex';
     NAcc.style.display = 'none';
   } else {
@@ -131,7 +131,7 @@
 <script> //Inserisce il tuo username in interfacc.
   function A() {
     let element = document.getElementById("username");
-    let text = localStorage.getItem("username");
+    let text = sessionStorage.getItem("username");
     element.innerText = text;
   }
   setInterval(() => {
