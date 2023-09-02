@@ -46,7 +46,7 @@
     </div>
 
     <div style="display: flex; align-items: flex-start; flex-direction: column; margin-top: 15px;" name="butt">
-      <button name="news" onclick="window.location.href = '/SITO_NON_PRONTO'">Notizie</button>
+      <button name="news" onclick="window.location.href = '/ERROR_404'">Notizie</button>
       <button name="shop" onclick="window.location.href = '/game/shop.html';" style="background: lightgray; border: solid 3px gray;">Negozio</button>
       <button name="bocch" onclick="window.location.href = '/game/MenuBocch/SelectBocch.html';" style="background: lightgray; border: solid 3px gray;">Seleziona Bocchetta</button>
       <button name="MenuTecnic" onclick="window.location.href = '/game/MenuTecnic.html';" style="background: lightgray; border: solid 3px gray;">Seleziona Tecnica</button>
@@ -100,7 +100,7 @@
       <button onclick="OpnMP()" aria-label="1 giocatori online" id="invit2" style="border-radius: 6px; border-style: double; font-variant-caps: small-caps;background-image: linear-gradient(40deg, darkgray, white); border-bottom: solid black 3px; cursor: pointer;">+</button>
     </div>
 
-    <div style="position: absolute; z-index: 3; margin-top: -17%; margin-left: 29%; display: none;" name="Invita player" id="MultiP">
+    <div style="position: fixed; z-index: 3; margin-top: -17%; margin-left: 29%; display: none;" name="Invita player" id="MultiP">
       <div style="padding-left: 95.7%; background: white;">
         <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="ClosMP()">X</button>
       </div>
@@ -124,6 +124,7 @@
           <button style="margin-top: -90px; margin-left: -23px;border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 40px;">Error</button>
         </div>
 
+        <!--
         <div name="CASSA EPICA" style="position: absolute; left: 157px; bottom: 70px;" title="Cassa Epica">
           <img src="https://docs.google.com/drawings/d/e/2PACX-1vR5oliMt5YduJ-xYWw9xTLnRgq-U5pDqVAjyEQhAdgQp4ia5vhTSDXA0men-Up_RxPt9jwMtpHRFIBU/pub?w=503&h=483" alt="La fonte non è disponibile" style="width: 69px; margin-top: -85px;" onclick="window.location.href = '/game/cass/C.html';">
           <button style="margin-top: -90px; margin-left: -23px;border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 40px;">Error</button>
@@ -144,6 +145,7 @@
           <button style="margin-top: -90px; margin-left: -23px;border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 40px;">Error</button>
           <div name="effect" style="width: 80px; height: 72px; position: absolute; bottom: 1px; right: -5px; border-radius: 40px; background: radial-gradient(transparent, green); z-index: -1;" id="effect1"></div>
         </div>
+        -->
       </div>
 
       <div name="pass" style="width: 220px; height: 50px; background-color: gold; border-radius: 8px; /*margin-right: 35%;*/ margin-left: 0px;" onclick="window.location.href = '/game/pass/pass.html';">
@@ -223,7 +225,8 @@
   });
 </script>
 
-<script> //Animazione di Effect per le casse
+<script> //Animazione di Effect per le casse 
+  /*
   const effect1 = document.getElementById('effect1');
   const colors = ['azure', 'green', 'yellow', 'purple'];
   let currentColorIndex = 0;
@@ -237,6 +240,7 @@
     currentColorIndex = nextColorIndex;
   }
   setInterval(changeGradientColor, 150); // Cambia colore ogni secondo
+  */
 </script>
 
 <script> //Apri-chiudi Menù multiplayer
