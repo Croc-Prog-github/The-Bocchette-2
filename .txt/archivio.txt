@@ -47,9 +47,9 @@
 
       </div>
 
-      <img src="" alt="La fonte non è disponibile" name="portal" style="position: absolute; z-index: 2; margin-top: -395px; margin-left: 585px;">
+      <img src="" alt="Errore di fonte" name="portal" style="position: absolute; z-index: 2; margin-top: -395px; margin-left: 585px;">
 
-      <img src="https://docs.google.com/drawings/d/e/2PACX-1vQWjpgoDtgc_wKaOhOq2GgOm_-XqSNS8zmkPvkqwku38r5Fh3spTChn_bS4wRnDHdPdzMz_4P2Kt0BI/pub?w=50&amp;h=50" alt="La fonte non è disponibile">
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vQWjpgoDtgc_wKaOhOq2GgOm_-XqSNS8zmkPvkqwku38r5Fh3spTChn_bS4wRnDHdPdzMz_4P2Kt0BI/pub?w=50&amp;h=50" alt="Errore di fonte">
     </div>
 </body>
 
@@ -221,14 +221,14 @@ document.addEventListener('keydown', function (event) {
       <div style="display: flex; flex-direction: column;">
         <div style="width: 160px; height: 30vh; background-color: goldenrod; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-block: 25%;">
           <hx style="cursor: default;">Premium Pass</hx>
-          <img src="https://docs.google.com/drawings/d/e/2PACX-1vRgTEZFPUo2v5QVQkRK3ErSWRAAF_bu4KtuEgY1USJ9XcCztA69Fcw-V93Z8OdqtJ8ZUZzbdAUQGUFc/pub?w=50&h=50" alt="La fonte non è disponibile" style="width: 70px;"><br>
+          <img src="https://docs.google.com/drawings/d/e/2PACX-1vRgTEZFPUo2v5QVQkRK3ErSWRAAF_bu4KtuEgY1USJ9XcCztA69Fcw-V93Z8OdqtJ8ZUZzbdAUQGUFc/pub?w=50&h=50" alt="Errore di fonte" style="width: 70px;"><br>
           <button style="background-color: #edc200; border-radius: 8px; border: solid 2px; cursor: pointer;" onclick="shopPP()" id="butt_APP">Acquista</button>
           <hx style="color: red; margin-top: 7px; cursor: default;">Ricompense x2</hx>
         </div>
       
         <div style="width: 160px; height: 30vh; background-color: #dadada; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-block: 25%;">
           <hx style="cursor: default;">Pass Gratuito</hx>
-          <img src="https://docs.google.com/drawings/d/e/2PACX-1vTa_3C3kAN8PMta7BPtFT-dZII25zenKi2aiWuRm4Gy1oxVg5qumnMqzOlt-MJc7Plw-_qsR2C0uNUx/pub?w=50&h=50" alt="La fonte non è disponibile" style="width: 70px;"><br>
+          <img src="https://docs.google.com/drawings/d/e/2PACX-1vTa_3C3kAN8PMta7BPtFT-dZII25zenKi2aiWuRm4Gy1oxVg5qumnMqzOlt-MJc7Plw-_qsR2C0uNUx/pub?w=50&h=50" alt="Errore di fonte" style="width: 70px;"><br>
         </div>
       </div>
 
@@ -242,7 +242,7 @@ document.addEventListener('keydown', function (event) {
                 <button style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">1</button>
                 <div style="background: black; width: 3px; height: 20px;" name="line"></div>
                 <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur">
-                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY0pup0VxjthO6ohSgX3RC29HShZ8JFuoCg7luCeb6Vf4oOkWPGl32GdugLMPkUn56ZmQ-bH9hnLi5/pub?w=50&h=50" alt="La fonte non è disponibile" style="width: 100%;" title="200 banconote" onclick="RRPP('200 banconote');">
+                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY0pup0VxjthO6ohSgX3RC29HShZ8JFuoCg7luCeb6Vf4oOkWPGl32GdugLMPkUn56ZmQ-bH9hnLi5/pub?w=50&h=50" alt="Errore di fonte" style="width: 100%;" title="200 banconote" onclick="RRPP('200 banconote');">
                 </div>
               </div>
 
@@ -250,7 +250,7 @@ document.addEventListener('keydown', function (event) {
                 <button style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">2</button>
                 <div style="background: black; width: 3px; height: 20px;" name="line"></div>
                 <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur">
-                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vRaxjzpWvxqbCYrZT99Ra65TAUqyAtx4zb3qwYjlNSqjlP0HvlKVUkI9j74ix5d40m3BmMxwGX6VO9x/pub?w=503&h=483" alt="La fonte non è disponibile" style="width: 100%;" title="Cassa Rara" onclick="RRPP('1 CRar');">
+                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vRaxjzpWvxqbCYrZT99Ra65TAUqyAtx4zb3qwYjlNSqjlP0HvlKVUkI9j74ix5d40m3BmMxwGX6VO9x/pub?w=503&h=483" alt="Errore di fonte" style="width: 100%;" title="Cassa Rara" onclick="RRPP('1 CRar');">
                 </div>
               </div>
             </div>
@@ -266,7 +266,7 @@ document.addEventListener('keydown', function (event) {
                 <button style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">1</button>
                 <div style="background: black; width: 3px; height: 20px;" name="line"></div>
                 <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur">
-                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY0pup0VxjthO6ohSgX3RC29HShZ8JFuoCg7luCeb6Vf4oOkWPGl32GdugLMPkUn56ZmQ-bH9hnLi5/pub?w=50&h=50" alt="La fonte non è disponibile" style="width: 100%;" title="100 banconote">
+                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY0pup0VxjthO6ohSgX3RC29HShZ8JFuoCg7luCeb6Vf4oOkWPGl32GdugLMPkUn56ZmQ-bH9hnLi5/pub?w=50&h=50" alt="Errore di fonte" style="width: 100%;" title="100 banconote">
                 </div>
               </div>
 
@@ -274,7 +274,7 @@ document.addEventListener('keydown', function (event) {
                 <button style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">2</button>
                 <div style="background: black; width: 3px; height: 20px;" name="line"></div>
                 <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur">
-                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY0pup0VxjthO6ohSgX3RC29HShZ8JFuoCg7luCeb6Vf4oOkWPGl32GdugLMPkUn56ZmQ-bH9hnLi5/pub?w=50&h=50" alt="La fonte non è disponibile" style="width: 100%;" title="200 banconote">
+                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY0pup0VxjthO6ohSgX3RC29HShZ8JFuoCg7luCeb6Vf4oOkWPGl32GdugLMPkUn56ZmQ-bH9hnLi5/pub?w=50&h=50" alt="Errore di fonte" style="width: 100%;" title="200 banconote">
                 </div>
               </div>
 
@@ -282,7 +282,7 @@ document.addEventListener('keydown', function (event) {
                 <button style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">3</button>
                 <div style="background: black; width: 3px; height: 20px;" name="line"></div>
                 <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur">
-                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vSAWKGdL6u1QeLPv11QKsqqLfctzKkiRfe1Ik1aMrIwOEtXF0uYPuI4u_vVjd7JddMhW8Y2suMl2SgF/pub?w=252&h=242" alt="La fonte non è disponibile" style="width: 100%;" title="Cassa Comune">
+                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vSAWKGdL6u1QeLPv11QKsqqLfctzKkiRfe1Ik1aMrIwOEtXF0uYPuI4u_vVjd7JddMhW8Y2suMl2SgF/pub?w=252&h=242" alt="Errore di fonte" style="width: 100%;" title="Cassa Comune">
                 </div>
               </div>
 
