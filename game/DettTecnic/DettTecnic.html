@@ -15,7 +15,38 @@
       <a href="/game/MenuTecnic.html" style="text-decoration: none; font-size: 25px; border: solid 2px black;" title="Indietro">⬅️</a>
     </div>
 
-    <hx style="cursor: pointer; text-decoration-line: underline; color: blue;">Seleziona tecnica</hx>
-
+    <h3>Seleziona tecnica per dettagli sull'utilizzo tattico</h3>
+    <select name="Seleziona Tecnica">
+      <option value="opzione1" class="Standard" selected>Dispersione</option>
+      <option value="opzione2" class="Standard">Taglio netto</option>
+      <option value="opzione3" class="Standard">Super Taglio netto</option>
+    </select>
+    
+    <div style="width: revert; height: 600px; resize: vertical; overflow: auto; min-height: 100px;">
+      <h2 id="TecName">Dispersione</h2>
+      Questi sono informazioni e dati riquardanti la tecnica selezionata; ti possono aiutare per un uso e una scelta migliore delle tecniche.<br>
+      <p id="TecIntr">
+        La tecnica Dispersione permette di creare un flusso di Energia verso l'esterno in modo monodirezionale.<br>
+        La portata della tecnica si estende per 50px in lunghezza e 20px in altezza.
+      </p>
+      <strong>Utilizzi:</strong><br>
+      <p id="TecUtilz">
+        <li>Può essere utilizzata per respingere un nemico quando è vicino</li>
+        <li>Puoi utilizzarla per fare danni</li>
+      </p>
+      <p id="TecDati">
+        Il danno che provoca questa tecnica è uniforme ed è: 10.
+      </p>
+    </div>
   </body>
 </html>
+
+<style>
+  .Standard {
+    background-color: lightgray;
+  }
+  li {
+    margin-block-start: -1em;
+    margin-block-end: 1em;
+  }
+</style>
