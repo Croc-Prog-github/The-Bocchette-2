@@ -1,7 +1,7 @@
 # The Bocchette 2
 
 Entra in un gioco mozzafiato: completa la storia e gioca in Battle Royale Multiplayer per avazare nel gioco. 
-Usa potenti tecniche che usano Energia, ricaricabile col tempo. 
+Usa potenti tecniche che consumano Energia; ricaricabile col tempo. 
 
 - Invita Player online
 - Crea e pubblica mappe in Creativa,...

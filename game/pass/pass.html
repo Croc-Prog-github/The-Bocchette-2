@@ -52,6 +52,14 @@
                   <img src="https://docs.google.com/drawings/d/e/2PACX-1vRaxjzpWvxqbCYrZT99Ra65TAUqyAtx4zb3qwYjlNSqjlP0HvlKVUkI9j74ix5d40m3BmMxwGX6VO9x/pub?w=503&h=483" alt="Errore di fonte" style="width: 100%;" title="Cassa Rara" onclick="RRPP('1 CRar');">
                 </div>
               </div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; margin-top: -6px; margin-left: 15px;" name="obb">
+                <button style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">3</button>
+                <div style="background: black; width: 3px; height: 20px;" name="line"></div>
+                <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur">
+                  <img src="https://docs.google.com/drawings/d/e/2PACX-1vQQ42zr_c9L0G-wp60VNXlS7h4fBZjnofJZFcJ9jAVF_Ga8M7LAdoIE40PpWFASQrdFD5e-2CzMwL72/pub?w=50&h=50" alt="Errore di fonte" style="width: 100%;" title="10 Gemme" onclick="RRPP('10 Gem');">
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -125,6 +133,9 @@
         break;
         case '1 CRar':
           //aumenta di +1 le cass rare
+        break;
+        case '10 Gem':
+          gemme = parseInt(gemme) + 10;
         break;
         default:
           window.alert("Errore: Ricompensa di switch(), non valida!")
