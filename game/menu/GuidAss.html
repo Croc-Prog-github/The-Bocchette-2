@@ -20,7 +20,7 @@
       <summary>Account</summary>
       <button>Recupero Account Server</button>
       <button>Recupero Account locale</button>
-      <button onclick="window.location.href = '/'">Log-out dalla sessione attuale</button>
+      <button style="color: red;" onclick="ElimData();">Log-out dalla sessione attuale</button>
       <button style="color: red;">Archivia questo account</button>
     </details>
 
@@ -54,3 +54,13 @@
     
   </body>
 </html>
+
+<script>
+  function ElimData() {
+    let r = window.confirm("Facendo Log-out, se stai usando un account ospite, i progressi andranno persi. Continuare?");
+    if(r == true) {
+      sessionStorage.clear();
+      window.location.href = '/'
+    }
+  }
+</script>
