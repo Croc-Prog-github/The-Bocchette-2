@@ -37,7 +37,7 @@ function Start() {
       }
     } else {
       // 2.3: Altrimenti, sottrai 10 di vita ogni 1.5 sec al Power-up
-      damagePowerUp();
+      attack();
     }
   } else if (isPlayerInRange()) {
     // Step 3: Se rileva il Player nel raggio di 100px
@@ -47,7 +47,7 @@ function Start() {
     approachPlayer();
     
     // 3.2: Sottrai 10 di vita ogni 1.5 sec (Attacca il Player)
-    attackPlayer();
+    attack();
   } else {
     // Step 4: Se non rileva Power-up e non rileva il Player
     console.log("Bot 1 non rileva né il Power-up né il Player.");
@@ -129,4 +129,4 @@ function moveRandomly() {
 }
 
 // Avvio
-Start();
+//Start();

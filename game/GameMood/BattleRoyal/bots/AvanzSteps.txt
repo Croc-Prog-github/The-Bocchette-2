@@ -1,3 +1,9 @@
+Segni del progresso (Riservated):
+| in sviluppo or in controllo;
+!-! Ramo massimo raggiunto sviluppando |;
+# Ramo or azione saltata con un errore;
+
+
 variabili coinvolte:
 bot1 (il "corpo" di bot 1)
 vitaPlayer (la vita del giocatore)
@@ -14,7 +20,7 @@ Start():
         2,231: imposta: bot1.hidden = true;
       2,24: Else if vitaPlayer =< 0:
         2,241: Start()
-    2,3: Else sottrai 10 di vita ogni 1.5 sec al power-up
+    2,3: Else sottrai 10 di vita ogni 1.5 sec al power-up !-!
   3: Else if: se rileva player nel raggio di 100px
     3,1: raggiunge la posizione del Player
     3,2: sottrai 10 di vita ogni 1.5 sec (Attacca il Player)
