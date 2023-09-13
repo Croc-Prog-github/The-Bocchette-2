@@ -1,0 +1,24 @@
+variabili coinvolte:
+bot1 (il "corpo" di bot 1)
+vitaPlayer (la vita del giocatore)
+vitaBot1 (la vita di Bot1)
+
+Start():
+  1: Cerca nel raggio di 100px i Power-up
+  2: Se rileva Power-up:
+    2,1: Vai vicino al Power-up e gli sottrai 10 di vita ogni 1.5 sec
+    2,2: Se, mentre rompe Power-up rileva Player nel raggio di 100px:
+      2,21: raggiunge la posizione del Player
+      2,22: sottrai 10 di vita ogni 1.5 sec (Attacca il Player)
+      2,23: Se vitaBot1 =< 0:
+        2,231: imposta: bot1.hidden = true;
+      2,24: Else if vitaPlayer =< 0:
+        2,241: Start()
+    2,3: Else sottrai 10 di vita ogni 1.5 sec al power-up
+  3: Else if: se rileva player nel raggio di 100px
+    3,1: raggiunge la posizione del Player
+    3,2: sottrai 10 di vita ogni 1.5 sec (Attacca il Player)
+  4: Else if: se non rileva Power-up && non rileva player
+    4,1: Fai 120px in direzione a caso
+    4,2: Start()
+END;

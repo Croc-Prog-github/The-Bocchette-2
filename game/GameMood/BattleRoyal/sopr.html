@@ -2,7 +2,7 @@
 <html lang="it">
   <head>
     <script>//alert("L'imput dalla tastiera è abilitato.");</script>
-    <title>The Bocchette - Sopravvivenza SINGOLO</title>
+    <title>The Bocchette 2 - Sopravvivenza SINGOLO</title>
     <!-- START <meta> -->
     <meta charset="UTF-8">
     <!-- END <meta> -->
@@ -20,7 +20,7 @@
 
       <div name="Player" style="margin-top: 50px; margin-left: 20px; position: absolute; width: fit-content;" id="player">
         <div id="fumetto" aria-label="tasto E" style="margin-left: 30px; position: absolute; margin-top: -25px;">-</div>
-        <progress style="margin-top: -25px; position: absolute; z-index: 1; width: 65px; accent-color: green;" value="100" max="100"></progress>
+        <progress style="margin-top: -25px; position: absolute; z-index: 1; width: 65px; accent-color: green;" value="100" max="100" id="vitaPlayer"></progress>
         <progress value="0" max="99" style="margin-top: -15px; position: absolute; z-index: 1; width: 65px;" id="YourE"></progress>
         <img src="" style="/*position: absolute;*/ top: 50%; left: 50%;" alt="Player">
         <div name="mire" id="mire" hidden>
@@ -60,6 +60,11 @@
     <script src="/game/GameMood/BattleRoyal/bots/bot1.js"></script>
   </body>
 </html>
+
+<script> //Global let vita player
+  let vtPlyId = document.getElementById('vitaPlayer');
+  var vitaPlayer = parseInt(vtPlyId.value); // <---- Vita Player
+</script>
 
 <script>//Costruzione muri
   document.addEventListener('keydown', function(event) {
