@@ -1,11 +1,19 @@
 BOT'S STEPS
 
-Start()
+Start():
   1: Cerca nel raggio di 100px i Power-up
   2: Se trova Power-up:
-    2.1: Vai nel Power-up e lo rompi
-  3: Else if: se non trova Power-up
-    3.1: Fà 120px di passi e aziona Start()
-  4: Se mentre rompe Power-up rileva Player: attacca il Player
-    4.1: Se propria vita =< 0: nasconditi
-    4.2: Se uccide Player: Start()
+    2,1: Vai nel Power-up e lo rompi
+    2,2: Se mentre rompe Power-up rileva Player nel raggio di 100px:
+      2,21: Attacca il Player
+      2,22: Se propria vita =< 0:
+        2,221: nasconditi (muori)
+      2,23: Else if VitaPlayer =< 0:
+        2,221: Start()
+    2,3: Else continua a rompere il power-up
+  3: Else if: se trova player
+    3,1: attacca player
+  4: Else if: se non trova Power-up && non trova player
+    4,1: Fai 120px di passi in direzione caso
+    4,2: Start()
+END;
