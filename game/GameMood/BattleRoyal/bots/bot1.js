@@ -15,8 +15,8 @@ function Start() {
       // Step 2: Se rileva Power-up
       console.log("Bot 1 ha rilevato un Power-up a " + distanceToPwUP + " px di distanza");
       
-      // 2.1: Vai vicino al Power-up e sottrai 10 di vita ogni 1.5 sec
-      approachAndDamagePowerUp();
+      // 2.1: raggiungi il Power-up
+      approachPowerUp();
       
       // 2.2: Se rileva il Player mentre rompe il Power-up
       if (isPlayerInRange()) {
@@ -66,30 +66,60 @@ function getDistance(rect1, rect2) {
   return Math.sqrt(dx * dx + dy * dy);
 }
 
-// Funzione per avvicinarsi al Power-up e sottrarre vita
-function approachAndDamagePowerUp() {
-  // Implementa il comportamento per avvicinarsi al Power-up e sottrarre vita
+// Funzione avvicinarsi a Power-up
+function approachPowerUp() {
+  const botRect = bot1.getBoundingClientRect();
+  const pwupElement = document.getElementById('PwUP');
+
+  // Definisci la velocità del bot
+  const botSpeed = 10;
+
+  if (pwupElement) {
+    const pwupRect = pwupElement.getBoundingClientRect();
+    const dx = pwupRect.x - botRect.x;
+    const dy = pwupRect.y - botRect.y;
+
+    // Calcola l'angolo tra bot1 e il Power-up
+    const angle = Math.atan2(dy, dx);
+
+    // Calcola la distanza tra bot1 e il Power-up
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    // Calcola gli spostamenti su x e y
+    const dxMove = botSpeed * Math.cos(angle);
+    const dyMove = botSpeed * Math.sin(angle);
+
+    // Verifica se il bot è già abbastanza vicino al Power-up
+    if (distance > 10) { // Modifica la distanza minima a tua discrezione
+      // Sposta il bot verso il Power-up
+      bot1.style.left = (botRect.x + dxMove) + 'px';
+      bot1.style.top = (botRect.y + dyMove) + 'px';
+
+      // Richiama la funzione di approachPowerUp() in modo ricorsivo
+      requestAnimationFrame(approachPowerUp);
+    }
+  }
 }
 
 // Funzione per verificare se il Player è nel raggio di 100px
 function isPlayerInRange() {
-  // Implementa la logica per verificare se il Player è nel raggio di 100px
+
 }
 
 // Funzione per avvicinarsi al Player
 function approachPlayer() {
-  // Implementa il comportamento per avvicinarsi al Player
+
 }
 
-// Funzione per attaccare il Player e sottrarre vita
-function attackPlayer() {
-  // Implementa il comportamento per attaccare il Player e sottrarre vita
+// Funzione per attaccare
+function attack() {
+
 }
 
-// Funzione per muoversi casualmente
+// Funzione per muoversi in direzione casuale
 function moveRandomly() {
-  // Implementa il comportamento per muoversi casualmente
+
 }
 
-// Avvia la logica del bot
+// Avvio
 Start();
