@@ -4,8 +4,8 @@ vitaPlayer (la vita del giocatore)
 vitaBot1 (la vita di Bot1)
 
 Start():
-  1: Cerca nel raggio di 100px i Power-up
-  2: Se rileva Power-up:
+  1: Cerca nel raggio di 100px i Power-up |
+  2: Se rileva Power-up: |
     2,1: Vai vicino al Power-up e gli sottrai 10 di vita ogni 1.5 sec
     2,2: Se, mentre rompe Power-up rileva Player nel raggio di 100px:
       2,21: raggiunge la posizione del Player

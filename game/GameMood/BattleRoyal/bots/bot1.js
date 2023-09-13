@@ -2,6 +2,7 @@ const bot1 = document.getElementById('bot1');
 const vitaBot1Element = document.getElementById('vita_bot1');
 const PwUP = document.getElementById('PwUP');
 let vitaBot1 = parseInt(vitaBot1Element.value);
+let botSpeed = 50; // Velocità spostamento bot (px al sec)
 
 function Start() {
   const botRect = bot1.getBoundingClientRect();
@@ -68,36 +69,42 @@ function getDistance(rect1, rect2) {
 
 // Funzione avvicinarsi a Power-up
 function approachPowerUp() {
-  const botRect = bot1.getBoundingClientRect();
-  const pwupElement = document.getElementById('PwUP');
-
-  // Definisci la velocità del bot
-  const botSpeed = 10;
-
-  if (pwupElement) {
-    const pwupRect = pwupElement.getBoundingClientRect();
+  if (PwUP) {
+    const botRect = bot1.getBoundingClientRect();
+    const pwupRect = PwUP.getBoundingClientRect();
+    
+    // Calcola la distanza orizzontale e verticale tra il bot e il Power-up
     const dx = pwupRect.x - botRect.x;
     const dy = pwupRect.y - botRect.y;
-
-    // Calcola l'angolo tra bot1 e il Power-up
-    const angle = Math.atan2(dy, dx);
-
-    // Calcola la distanza tra bot1 e il Power-up
+    
+    // Calcola la distanza totale
     const distance = Math.sqrt(dx * dx + dy * dy);
-
-    // Calcola gli spostamenti su x e y
-    const dxMove = botSpeed * Math.cos(angle);
-    const dyMove = botSpeed * Math.sin(angle);
-
-    // Verifica se il bot è già abbastanza vicino al Power-up
-    if (distance > 10) { // Modifica la distanza minima a tua discrezione
-      // Sposta il bot verso il Power-up
-      bot1.style.left = (botRect.x + dxMove) + 'px';
-      bot1.style.top = (botRect.y + dyMove) + 'px';
-
-      // Richiama la funzione di approachPowerUp() in modo ricorsivo
-      requestAnimationFrame(approachPowerUp);
+    
+    // Calcola il tempo necessario per coprire la distanza con la velocità specificata
+    const timeInSeconds = distance / botSpeed;
+    
+    // Calcola la quantità di spostamento su x e y per ogni intervallo di aggiornamento (per raggiungere la velocità specificata)
+    const dxMove = (dx / timeInSeconds) / 60; // 60 fps
+    const dyMove = (dy / timeInSeconds) / 60; // 60 fps
+    
+    // Esegui la funzione di aggiornamento del movimento a 60 fps
+    const interval = 1000 / 60; // 60 fps
+    let currentTime = 0;
+    
+    function updatePosition() {
+      if (currentTime < timeInSeconds) {
+        botRect.x += dxMove;
+        botRect.y += dyMove;
+        bot1.style.left = botRect.x + 'px';
+        bot1.style.top = botRect.y + 'px';
+        
+        currentTime += interval / 1000;
+        requestAnimationFrame(updatePosition);
+      }
     }
+    
+    // Avvia il movimento
+    updatePosition();
   }
 }
 
