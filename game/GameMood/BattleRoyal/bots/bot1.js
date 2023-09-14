@@ -1,20 +1,26 @@
 const bot1 = document.getElementById('bot1');
+//Variabili primarie
 const vitaBot1Element = document.getElementById('vita_bot1');
 const PwUP = document.getElementById('PwUP');
 let vitaBot1 = parseInt(vitaBot1Element.value);
+
+//Variabili di impostazione
 let botSpeed = 50; // Velocità spostamento bot (px al sec)
+let minDistance = 10; // Distanza minima da PwUP (px)
+
+//Variabili di funzione
+const botRect = bot1.getBoundingClientRect();
+const pwupRect = PwUP.getBoundingClientRect();
+const distanceToPwUP = getDistance(botRect, pwupRect);
 
 function Start() {
-  const botRect = bot1.getBoundingClientRect();
   
   // Step 1: Cerca nel raggio di 100px i Power-up
   if (PwUP) {
-    const pwupRect = PwUP.getBoundingClientRect();
-    const distanceToPwUP = getDistance(botRect, pwupRect);
 
     if (distanceToPwUP <= 100) {
       // Step 2: Se rileva Power-up
-      console.log("Bot 1 ha rilevato un Power-up a " + distanceToPwUP + " px di distanza");
+      console.log("Bot1 ha rilevato un Power-up a " + distanceToPwUP + " px di distanza");
       
       // 2.1: raggiungi il Power-up
       approachPowerUp();
@@ -41,7 +47,7 @@ function Start() {
     }
   } else if (isPlayerInRange()) {
     // Step 3: Se rileva il Player nel raggio di 100px
-    console.log("Bot 1 ha rilevato il Player.");
+    console.log("Bot1 ha rilevato un Player.");
     
     // 3.1: Raggiunge la posizione del Player
     approachPlayer();
@@ -50,7 +56,7 @@ function Start() {
     attack();
   } else {
     // Step 4: Se non rileva Power-up e non rileva il Player
-    console.log("Bot 1 non rileva né il Power-up né il Player.");
+    console.log("Bot1 NON rileva: Power-up or Players.");
     
     // 4.1: Fai 120px in una direzione a caso
     moveRandomly();
@@ -80,31 +86,40 @@ function approachPowerUp() {
     // Calcola la distanza totale
     const distance = Math.sqrt(dx * dx + dy * dy);
     
-    // Calcola il tempo necessario per coprire la distanza con la velocità specificata
-    const timeInSeconds = distance / botSpeed;
+    if (distance > minDistance) {
+      // Calcola il tempo necessario per coprire la distanza con la velocità specificata
+      const timeInSeconds = (distance - minDistance) / botSpeed;
     
-    // Calcola la quantità di spostamento su x e y per ogni intervallo di aggiornamento (per raggiungere la velocità specificata)
-    const dxMove = (dx / timeInSeconds) / 60; // 60 fps
-    const dyMove = (dy / timeInSeconds) / 60; // 60 fps
+      // Calcola la quantità di spostamento su x e y per ogni intervallo di aggiornamento (per raggiungere la velocità specificata)
+      const dxMove = (dx / timeInSeconds) / 60; // 60 fps
+      const dyMove = (dy / timeInSeconds) / 60; // 60 fps
     
-    // Esegui la funzione di aggiornamento del movimento a 60 fps
-    const interval = 1000 / 60; // 60 fps
-    let currentTime = 0;
+      // Esegui la funzione di aggiornamento del movimento a 60 fps
+      const interval = 1000 / 60; // 60 fps
+      let currentTime = 0;
     
-    function updatePosition() {
-      if (currentTime < timeInSeconds) {
-        botRect.x += dxMove;
-        botRect.y += dyMove;
-        bot1.style.left = botRect.x + 'px';
-        bot1.style.top = botRect.y + 'px';
+      function updatePosition() {
+        if (currentTime < timeInSeconds) {
+          botRect.x += dxMove;
+          botRect.y += dyMove;
+
+          // Verifica se il bot si avvicina troppo al Power-up
+          const newDistance = Math.sqrt((pwupRect.x - botRect.x) ** 2 + (pwupRect.y - botRect.y) ** 2);
+          if (newDistance <= minDistance) {
+            return; // Ferma il movimento quando il bot è abbastanza vicino
+          }
+
+          bot1.style.left = botRect.x + 'px';
+          bot1.style.top = botRect.y + 'px';
         
-        currentTime += interval / 1000;
-        requestAnimationFrame(updatePosition);
+          currentTime += interval / 1000;
+          requestAnimationFrame(updatePosition);
+        }
       }
-    }
     
-    // Avvia il movimento
-    updatePosition();
+      // Avvia il movimento
+      updatePosition();
+    }
   }
 }
 
@@ -129,4 +144,12 @@ function moveRandomly() {
 }
 
 // Avvio
-//Start();
+Start();
+
+function OutConsData {
+  console.log("Bot1 ha rilevato ??? a " + distanceToPwUP + " px di distanza");
+  //requestAnimationFrame(OutConsData);
+}
+setInterval(function() {
+  OutConsData();
+}, 100)
