@@ -12,6 +12,7 @@ let minDistance = 10; // Distanza minima da PwUP (px)
 const botRect = bot1.getBoundingClientRect();
 const pwupRect = PwUP.getBoundingClientRect();
 const distanceToPwUP = getDistance(botRect, pwupRect);
+let isMoving = false; // Variabile di stato per  movimento
 
 function Start() {
   
@@ -87,27 +88,38 @@ function approachPowerUp() {
     const distance = Math.sqrt(dx * dx + dy * dy);
     
     if (distance > minDistance) {
-      // Calcola l'angolo tra il bot e il Power-up
-      const angle = Math.atan2(dy, dx);
+      // Calcola il tempo necessario per coprire la distanza con la velocità specificata
+      const timeInSeconds = (distance - minDistance) / botSpeed;
     
       // Calcola la quantità di spostamento su x e y per ogni intervallo di aggiornamento (per raggiungere la velocità specificata)
-      const dxMove = botSpeed * Math.cos(angle);
-      const dyMove = botSpeed * Math.sin(angle);
+      const dxMove = (dx / timeInSeconds) / 60; // 60 fps
+      const dyMove = (dy / timeInSeconds) / 60; // 60 fps
     
-      // Esegui la funzione di aggiornamento del movimento
-      const updateInterval = setInterval(() => {
-        const botRect = bot1.getBoundingClientRect();
-        const currentDistance = Math.sqrt((pwupRect.x - botRect.x) ** 2 + (pwupRect.y - botRect.y) ** 2);
-        
-        if (currentDistance <= minDistance) {
-          clearInterval(updateInterval);
-        } else {
+      // Esegui la funzione di aggiornamento del movimento a 60 fps
+      const interval = 1000 / 60; // 60 fps
+      let currentTime = 0;
+    
+      function updatePosition() {
+        if (currentTime < timeInSeconds) {
           botRect.x += dxMove;
           botRect.y += dyMove;
+
+          // Verifica se il bot si avvicina troppo al Power-up
+          const newDistance = Math.sqrt((pwupRect.x - botRect.x) ** 2 + (pwupRect.y - botRect.y) ** 2);
+          if (newDistance <= minDistance) {
+            return; // Ferma il movimento quando il bot è abbastanza vicino
+          }
+
           bot1.style.left = botRect.x + 'px';
           bot1.style.top = botRect.y + 'px';
+        
+          currentTime += interval / 1000;
+          requestAnimationFrame(updatePosition);
         }
-      }, 1000 / 60); // 60 fps
+      }
+    
+      // Avvia il movimento
+      updatePosition();
     }
   }
 }
@@ -133,7 +145,7 @@ function moveRandomly() {
 }
 
 // Avvio
-//Start();
+Start();
 
 function OutConsData() {
   console.debug("Bot1 ha rilevato ??? a " + distanceToPwUP + " px di distanza");
