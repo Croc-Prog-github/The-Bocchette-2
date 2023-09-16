@@ -7,7 +7,14 @@ let vitaBot1 = parseInt(vitaBot1Element.value);
 let player = document.getElementById('player');
 
 //Variabili di impostazioni
-let closestDistance = 100; // Raggio di ricerca
+  let closestDistance = 100; // Raggio di ricerca
+
+  // Movimento:
+    const duration = 1500; // tempo di movimento in ms
+    const interval = 70; // Intervallo di aggiornamento in ms
+
+  //
+//
 
 //Variabili funzionali
 const botRect = bot1.getBoundingClientRect();
@@ -85,6 +92,44 @@ function approachPwUP() {
 // Fa 120px in direzione a caso
 function RandomRestart() {
 
+  // Trova l'elemento con l'attributo 'name' uguale a 'Terreno'
+  const terrenoElement = document.querySelector('[name="Terreno"]');
+
+  if (!terrenoElement) {
+    console.error("Nessun elemento con attributo 'name' uguale a 'Terreno' trovato.");
+    return;
+  }
+
+  // Recupera le dimensioni dell'elemento Terreno
+  const terrenoRect = terrenoElement.getBoundingClientRect();
+
+  // Genera una posizione casuale all'interno dell'elemento Terreno
+  const destinationLeft = Math.floor(Math.random() * (terrenoRect.width - 0)) + terrenoRect.left;
+  const destinationTop = Math.floor(Math.random() * (terrenoRect.height - 0)) + terrenoRect.top;
+
+  const steps = duration / interval; // Numero di passi
+
+  const currentLeft = parseFloat(getComputedStyle(bot1).left);
+  const currentTop = parseFloat(getComputedStyle(bot1).top);
+
+  const deltaX = (destinationLeft - currentLeft) / steps; // Spostamento orizzontale per passo
+  const deltaY = (destinationTop - currentTop) / steps; // Spostamento verticale per passo
+
+  let step = 0;
+  const moveInterval = setInterval(() => {
+    if (step < steps) {
+      const newLeft = currentLeft + step * deltaX;
+      const newTop = currentTop + step * deltaY;
+
+      bot1.style.left = newLeft + 'px';
+      bot1.style.top = newTop + 'px';
+
+      step++;
+    } else {
+      // Arrivati alla destinazione
+      clearInterval(moveInterval);
+    }
+  }, interval);
 }
 
 
