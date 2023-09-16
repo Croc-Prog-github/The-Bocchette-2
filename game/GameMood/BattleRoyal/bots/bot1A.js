@@ -91,7 +91,6 @@ function approachPwUP() {
 
 // Fa 120px in direzione a caso
 function RandomRestart() {
-
   // Trova l'elemento con l'attributo 'name' uguale a 'Terreno'
   const terrenoElement = document.querySelector('[name="Terreno"]');
 
@@ -134,5 +133,4 @@ function RandomRestart() {
   //Start();
 }
 
-
-Start();
+RandomRestart();
