@@ -1,4 +1,5 @@
 const bot1 = document.getElementById('bot1');
+
 //Variabili primarie
 const vitaBot1Element = document.getElementById('vita_bot1');
 const PwUP = document.getElementById('PwUP');
@@ -10,13 +11,14 @@ let minDistance = 10; // Distanza minima da PwUP (px)
 
 //Variabili di funzione
 const botRect = bot1.getBoundingClientRect();
-const pwupRect = PwUP.getBoundingClientRect();
-const distanceToPwUP = getDistance(botRect, pwupRect);
+const PwUPRect = PwUP.getBoundingClientRect();
+const distanceToPwUP = getDistance(botRect, PwUPRect);
 let isMoving = false; // Variabile di stato per  movimento
 
 function Start() {
   
-  // Step 1: Cerca nel raggio di 100px i Power-up
+  // Step 1: Cerca nel raggio di 100px
+  const distance = Math.sqrt((PwUPRect.x - botRect.x) ** 2 + (PwUPRect.y - botRect.y) ** 2);
   if (PwUP) {
 
     if (distanceToPwUP <= 100) {
@@ -42,6 +44,8 @@ function Start() {
           Start();
         }
       }
+
+      return 'rilevato PwUP';
     } else {
       // 2.3: Altrimenti, sottrai 10 di vita ogni 1.5 sec al Power-up
       attack();
@@ -55,6 +59,8 @@ function Start() {
     
     // 3.2: Sottrai 10 di vita ogni 1.5 sec (Attacca il Player)
     attack();
+
+    return 'Player incursion';
   } else {
     // Step 4: Se non rileva Power-up e non rileva il Player
     console.log("Bot1 NON rileva: Power-up or Players.");
@@ -64,10 +70,14 @@ function Start() {
     
     // 4.2: Ricomincia Start()
     Start();
+
+    return 'reload Start()';
   }
+
+  return 'Funzione terminata';
 }
 
-// Funzione per calcolare la distanza tra due elementi
+// Funzione per calcolare la distanza tra  elementi
 function getDistance(rect1, rect2) {
   const dx = rect1.x - rect2.x;
   const dy = rect1.y - rect2.y;
@@ -149,8 +159,7 @@ Start();
 
 function OutConsData() {
   console.debug("Bot1 ha rilevato ??? a " + distanceToPwUP + " px di distanza");
-  //requestAnimationFrame(OutConsData);
 }
 setInterval(function() {
   //OutConsData();
-}, 100);
+}, 300);
