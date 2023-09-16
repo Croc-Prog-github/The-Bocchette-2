@@ -12,6 +12,7 @@ let closestDistance = 100; // Raggio di ricerca
 //Variabili funzionali
 const botRect = bot1.getBoundingClientRect();
 
+
 //Calcola la distanza tra i 2 elementi in argomento
 function getDistance(rect1, rect2) {
   const dx = rect1.x - rect2.x;
@@ -19,23 +20,15 @@ function getDistance(rect1, rect2) {
   return Math.sqrt(dx * dx + dy * dy);
 }
 
+
 function Start() {
 
-  // Step 1: Cerca nel raggio di 100px
+  //1: Cerca nel raggio di 100px
   if (player || PwUP) {
     let closestElementId = null;
   }
-  
-  if (player) {
-    const playerRect = player.getBoundingClientRect();
-    const distance = getDistance(botRect, playerRect);
-    
-    if (distance <= 100 && distance < closestDistance) {
-      closestElementId = player.id;
-      closestDistance = distance;
-    }
-  }
-  
+
+  //2: Rileva Power-up
   if (PwUP) {
     const pwupRect = PwUP.getBoundingClientRect();
     const distance = getDistance(botRect, pwupRect);
@@ -46,9 +39,42 @@ function Start() {
     }
   }
   
-  if (closestElementId) { // if (var1)... Serve a verificare che la var sia != da null;
-    console.log("ID dell'elemento più vicino:", closestElementId);
+  //3: Rileva Player
+  if (player) {
+    const playerRect = player.getBoundingClientRect();
+    const distance = getDistance(botRect, playerRect);
+    
+    if (distance <= 100 && distance < closestDistance) {
+      closestElementId = player.id;
+      closestDistance = distance;
+    }
   }
+  
+  
+  if (closestElementId) { // if (var1)... Serve a verificare che la var sia != da null;
+    console.log("ID di elemento più vicino:", closestElementId);
+    if (closestElementId === 'player') {
+      approachPlayer();
+    } else if (closestElementId === 'PwUP') {
+      approachPwUP();
+    } else {
+      console.error("L'elemento rilevato non è stato riconosciuto.");
+    }
+  } else {
+    //4: Non rileva Power-up && Non rileva player
+    //RandomRestart();
+  }
+}
+
+
+// Funzione per avvicinarsi al Player
+function approachPlayer() {
+
+}
+
+
+function approachPwUP() {
+
 }
 
 Start();

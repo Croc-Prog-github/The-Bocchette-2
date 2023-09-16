@@ -34,7 +34,7 @@ function Start() {
         approachPlayer();
         
         // 2.22: Sottrai 10 di vita ogni 1.5 sec (Attacca il Player)
-        attackPlayer();
+        attack();
         
         // 2.23: Se vitaBot1 <= 0, imposta bot1.hidden = true;
         if (vitaBot1 <= 0) {
