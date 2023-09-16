@@ -162,4 +162,4 @@ function OutConsData() {
 }
 setInterval(function() {
   //OutConsData();
-}, 300);
+}, 200);

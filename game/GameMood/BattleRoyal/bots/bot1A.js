@@ -11,6 +11,7 @@ let closestDistance = 100; // Raggio di ricerca
 
 //Variabili funzionali
 const botRect = bot1.getBoundingClientRect();
+let closestElementId;
 
 
 //Calcola la distanza tra i 2 elementi in argomento
@@ -25,7 +26,7 @@ function Start() {
 
   //1: Cerca nel raggio di 100px
   if (player || PwUP) {
-    let closestElementId = null;
+    closestElementId = null;
   }
 
   //2: Rileva Power-up
@@ -62,8 +63,16 @@ function Start() {
     }
   } else {
     //4: Non rileva Power-up && Non rileva player
-    //RandomRestart();
+    RandomRestart();
   }
+  
+  return ("ID di elemento più vicino:" + closestElementId);
+}
+
+
+// Fa 120px in direzione a caso
+function RandomRestart() {
+
 }
 
 
@@ -73,8 +82,18 @@ function approachPlayer() {
 }
 
 
+// Funzione per avvicinarsi al Power-up
 function approachPwUP() {
 
 }
 
 Start();
+
+function OutConsData() {
+  //console.debug("Bot1 ha rilevato ??? a " + distanceToPwUP + " px di distanza");
+  //console.log("ID di elemento più vicino:", closestElementId);
+  Start();
+}
+setInterval(function() {
+  //OutConsData();
+}, 200);
