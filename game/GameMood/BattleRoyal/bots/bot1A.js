@@ -130,16 +130,9 @@ function RandomRestart() {
       clearInterval(moveInterval);
     }
   }, interval);
+
+  //Start();
 }
 
 
 Start();
-
-function OutConsData() {
-  //console.debug("Bot1 ha rilevato ??? a " + distanceToPwUP + " px di distanza");
-  //console.log("ID di elemento più vicino:", closestElementId);
-  Start();
-}
-setInterval(function() {
-  //OutConsData();
-}, 200);
