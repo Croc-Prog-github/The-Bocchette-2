@@ -26,7 +26,7 @@ function Start() {
 
   //1: Cerca nel raggio di 100px
   if (player || PwUP) {
-    closestElementId = null;
+    //closestElementId = null;
   }
 
   //2: Rileva Power-up
@@ -66,13 +66,7 @@ function Start() {
     RandomRestart();
   }
   
-  return ("ID di elemento più vicino:" + closestElementId);
-}
-
-
-// Fa 120px in direzione a caso
-function RandomRestart() {
-
+  //return ("ID di elemento più vicino:" + closestElementId);
 }
 
 
@@ -86,6 +80,13 @@ function approachPlayer() {
 function approachPwUP() {
 
 }
+
+
+// Fa 120px in direzione a caso
+function RandomRestart() {
+
+}
+
 
 Start();
 
