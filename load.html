@@ -11,11 +11,12 @@
   <link rel="icon" href="https://docs.google.com/drawings/d/e/2PACX-1vRzg3r27e7_yLyB4m8rlyFHgQ8H5d6IJtW39axawbD5u7S_eX3ezqZdtll3NBLxJYY_OUhuSGJ-jQ8T/pub?w=16&h=16" type="image/x-icon">
   <script src="/cons/cons.js"></script>
   <link rel="stylesheet" href="/style.css">
-  <script src="/var.js"></script>
 
   <script src="/ServerService/AccServ.js">Salve();</script>
 </head>
-<body id="body" style='font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; height: 100%; cursor: auto; overflow-y: auto; display: flex; flex-direction: column; justify-content: flex-end;'>
+<body id="body" style='font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; height: 100%; cursor: auto; overflow-y: auto; display: flex; flex-direction: column; justify-content: flex-end;' onload="ElimData(); sessionStorage.clear();">
+  <script src="/var.js"></script>
+
   <!-- Caricamento -->
   <hx id="title" style="display: flex; justify-content: center;" id="body">The Bocchette 2</hx>
 
@@ -123,6 +124,12 @@
   <script src="/manut/manut.js"></script>
 </body>
 </html>
+
+<script> //Elimina i progressi per evitare il cambio di nome usando la ricarica totale del gioco nel Node-Link
+  function ElimData() {
+    sessionStorage.clear();
+  }
+</script>
 
 <script> //Mostra e gestisce il div per accesso dal server
   function AccServ(dest) {
