@@ -22,6 +22,7 @@
 
   <div style="display: grid; justify-content: center; height: 590px; align-content: center;">
     <div style="/* position: relative; *//* margin-top: 10%; *//* margin-left: 42%; */background: white; width: auto; height: auto; display: grid; justify-items: center;">
+      <!--
       <div style="display: none;">
         <x style="font-size: 20px;"><strong style="margin-inline: 83px;">Accedi</strong></x> <br> 
         <x style="font-size: small;">al tuo account The Bocchette</x><br>
@@ -36,6 +37,7 @@
           <input type="password" placeholder="Password">
         </div>
       </div>
+      -->
 
       <div name="main" style="margin: 7px; text-align: center;" id="main">
         <div style="display: flex; flex-direction: column; align-items: center;">
@@ -65,12 +67,14 @@
           <hx style="color: -webkit-link; cursor: pointer; text-decoration: underline;" onclick="AccServ('regist');">Registrati</hx>
         </div>
         <div>
-          <input type="checkbox"><hx style="font-size: small;">Account sviluppatore?</hx>
+          <input type="checkbox" onclick="AccountSvilup()" class="AcSvChb"><hx style="font-size: small;">Account sviluppatore?</hx>
+        </div>
+        <div class="SvilupDivPsw" style="display: none; height: 30px; width: -webkit-fill-available; flex-direction: column; align-items: center; border-top: black 2px; border-top-style: solid;">
+          <input type="password" placeholder="Password Sviluppatore" style="margin-block: 8px;">
         </div>
 
         <div name="OutputDiv" style="width: -webkit-fill-available; border-top: black 2px; border-top-style: solid;" hidden>
           <progress max="10"></progress>
-
           <div>
             <svg style="height: 13px; width: 13px; zoom: 1.3; margin-block: -3px;"><g transform="translate(0,0)"><g fill="none" fill-rule="evenodd"><polygon points="0 0 14 0 14 14 0 14"/><path fill="red" fill-rule="nonzero" d="M0.583333333,12.25 L13.4166667,12.25 L7,1.16666667 L0.583333333,12.25 Z M7.58333333,10.5 L6.41666667,10.5 L6.41666667,9.33333333 L7.58333333,9.33333333 L7.58333333,10.5 Z M7.58333333,8.16666667 L6.41666667,8.16666667 L6.41666667,5.83333333 L7.58333333,5.83333333 L7.58333333,8.16666667 Z"/></g></g></svg>
             <hx style="color: red; font-size: small; text-decoration-line: underline; text-underline-position: auto; font-variant: all-petite-caps; font-family: sans-serif;">Account non trovato!</hx>
@@ -100,10 +104,10 @@
         </div>
         <div style="display: flex; flex-direction: column; align-items: center;">
           <div>
-            <input type="checkbox"><hx style="font-size: small;">Account sviluppatore?</hx>
+            <input type="checkbox" onclick="AccountSvilup()" class="AcSvChb"><hx style="font-size: small;">Account sviluppatore?</hx>
           </div>
-          <div>
-            <!--<input type="checkbox"><hx style="font-size: small;">A</hx>-->
+          <div class="SvilupDivPsw" style="display: none; height: 30px; width: -webkit-fill-available; flex-direction: column; align-items: center; border-top: black 2px; border-top-style: solid;">
+            <input type="password" placeholder="Password Sviluppatore" style="margin-block: 8px;">
           </div>
         </div>
 
@@ -124,6 +128,24 @@
   <script src="/manut/manut.js"></script>
 </body>
 </html>
+
+<script>
+  function AccountSvilup() {
+    const AcSvChb = document.getElementsByClassName('AcSvChb');
+    const SvilupDivPsw = document.getElementsByClassName('SvilupDivPsw');
+    
+    // Itera attraverso la collezione di elementi AcSvChb
+    for (let i = 0; i < AcSvChb.length; i++) {
+      if (AcSvChb[i].checked) {
+        // Mostra gli elementi SvilupDivPsw corrispondenti
+        SvilupDivPsw[i].style.display = 'flex';
+      } else {
+        // Nascondi gli elementi SvilupDivPsw corrispondenti
+        SvilupDivPsw[i].style.display = 'none';
+      }
+    }
+  }
+</script>
 
 <script> //Elimina i progressi per evitare il cambio di nome usando la ricarica totale del gioco nel Node-Link
   function ElimData() {
