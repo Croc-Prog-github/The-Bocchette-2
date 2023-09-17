@@ -1,6 +1,6 @@
 # Regolamento e penalità
 Qui sono scritte tutte le regole da rispettare e le le panalità per chi non le rispetta.
-## Regolamento
+## Regolamento generale
 - No cheeting, No macro, No aimbot
 - No teaming
 - No linguaggio scurrile e/o insulti.
