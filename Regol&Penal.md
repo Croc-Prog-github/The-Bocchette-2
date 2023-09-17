@@ -17,3 +17,5 @@ Condizioni per la riduzione di pena: ammissione (-10%),
 - Per: `Favoritismo` pena di **ban per 15 giorni**.
 - Per: `Favoritismo Aggravato` pena di **ban per 25 giorni + confisca account Sviluppatore per 15 ore**.
 - Per: `Interferenza con player immotivata` pena di **ban per 3 ore**.
+- Per: `linguaggio scurrile` e/o `insulti` pena di **ban per 5 ore + confisca account Sviluppatore per 1 ora**.
+- Per: `contenuti scurrili` pena di **ban per 6 ore + confisca account Sviluppatore per 2 ore**.
