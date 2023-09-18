@@ -20,7 +20,6 @@ Per una sessione veloce, senza dover accedere, usa l'Account Ospite dove puoi gi
 - Microtransazioni delle risorse
 - Archiviazione Cloud dei tuoi progressi
 - Invitare i giocatori online
-- 
 
 Per avere info sul bilanciamento del gioco, le probabilità delle casse, le statistiche delle evoluzioni,...<br>
 [clicca qui](https://docs.google.com/document/d/1PsYpN7GvzRnKKDpvvbf1r1OtHE_SL6dzfo08ABIh9Zg/edit?usp=sharing)
