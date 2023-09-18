@@ -13,6 +13,7 @@ let player = document.getElementById('player');
     const duration = 1500; // tempo di movimento in ms
     const interval = 70; // Intervallo di aggiornamento in ms
 
+    const steps = duration / interval; // Numero di passi
   //
 //
 
@@ -84,10 +85,37 @@ function approachPlayer() {
 
 
 // Funzione per avvicinarsi al Power-up
-function approachPwUP() {
+function approachPwUP() {  
+  // Controlla se gli elementi esistono
+  if (!bot1 || !PwUP) {
+    console.error("Elementi DOM non trovati.");
+    return;
+  }
+  
+  const currentLeft = parseFloat(getComputedStyle(bot1).left);
+  const currentTop = parseFloat(getComputedStyle(bot1).top);
+  
+  const pwupRect = PwUP.getBoundingClientRect();
+  
+  const deltaX = (pwupRect.x - currentLeft) / steps; // Spostamento orizzontale per passo
+  const deltaY = (pwupRect.y - currentTop) / steps; // Spostamento verticale per passo
+  
+  let step = 0;
+  const moveInterval = setInterval(() => {
+    if (step < steps) {
+      const newLeft = currentLeft + step * deltaX;
+      const newTop = currentTop + step * deltaY;
 
+      bot1.style.left = newLeft + 'px';
+      bot1.style.top = newTop + 'px';
+
+      step++;
+    } else {
+      // Arrivati alla destinazione
+      clearInterval(moveInterval);
+    }
+  }, interval);
 }
-
 
 // Fa 120px in direzione a caso
 function RandomRestart() {
@@ -130,7 +158,6 @@ function RandomRestart() {
     }
   }, interval);
 
-  //Start();
 }
 
-RandomRestart();
+Start();
