@@ -77,6 +77,7 @@ document.addEventListener('click', function (event) {
 });
 
 //Prevede mira in base a tecniche selezionate (tiene premuto tasto sinistro mouse + frecce < o > [per scorrere le tecniche, viste in un fumetto])
+/*
 let mire = document.getElementById('mire');
 let fumetto = document.getElementById('fumetto');
 let isMouseDown = false;
@@ -153,3 +154,4 @@ function FumF(val) {
     fumetto.setAttribute('aria-hidden', 'true');
   }
 }
+*/
