@@ -14,7 +14,7 @@ PwUP (il corpo del power-up)
 Start():
   1: Cerca il più vicino nel raggio di 100px    §
   2: Se rileva Power-up:    §
-    2,1: Vai vicino al Power-up e gli sottrai 10 di vita ogni 1.5 sec 
+    2,1: Vai vicino al Power-up e gli sottrai 10 di vita ogni 1.5 sec |
     2,2: Se, mentre rompe Power-up rileva Player nel raggio di 100px:
       2,21: raggiunge la posizione del Player
       2,22: sottrai 10 di vita ogni 1.5 sec (Attacca il Player)
