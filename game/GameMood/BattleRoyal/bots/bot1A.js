@@ -117,6 +117,10 @@ function approachPwUP() {
   }, interval);
 }
 
+function Attack() {
+  
+}
+
 // Fa 120px in direzione a caso
 function RandomRestart() {
   // Trova l'elemento con l'attributo 'name' uguale a 'Terreno'

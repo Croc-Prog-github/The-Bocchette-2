@@ -20,22 +20,26 @@
 
       <div name="Player" style="margin-top: 50px; margin-left: 20px; position: absolute; width: fit-content;" id="player">
         <div id="fumetto" aria-label="tasto E" style="margin-left: 30px; position: absolute; margin-top: -25px;">-</div>
-        <progress style="margin-top: -25px; position: absolute; z-index: 1; width: 65px; accent-color: green;" value="100" max="100" id="vitaPlayer"></progress>
-        <progress value="0" max="99" style="margin-top: -15px; position: absolute; z-index: 1; width: 65px;" id="YourE"></progress>
+        <progress style="margin-top: -25px; position: absolute; z-index: 2; width: 65px; accent-color: green;" value="100" max="100" id="vitaPlayer"></progress>
+        <progress value="0" max="99" style="margin-top: -15px; position: absolute; z-index: 2; width: 65px;" id="YourE"></progress>
         <img src="" style="/*position: absolute;*/ top: 50%; left: 50%;" alt="Player">
         <div name="mire" id="mire" hidden>
           <div name="miraE" style="background-color: #d6d6d6cc; width: 150px; height: 30px; rotate: 43deg; transform-origin: left; margin-top: -30px;margin-left: 20px;" id="miraE"></div>
           <div name="miraF" style="" id="miraF"></div>
         </div>
+        <div name="Ombra" style="width: 40px; height: 30px; background: #0000003d; border-radius: 60%; transform: rotateX(45deg); position: absolute; left: 10px; top: 15px; z-index: 0;"></div>
       </div>
 
-      <div name="Bot1" style="/*margin-top: 50px; margin-left: 150px;*/ position: absolute; left: 150px; top: 510px;" id="bot1">
-        <progress style="margin-top: -15px; position: absolute; z-index: 1; width: 65px; accent-color: green;" value="100" max="100" id="vita_bot1"></progress>
+      <div name="Bot1" style="/*margin-top: 50px; margin-left: 150px;*/ position: absolute; left: 150px; top: 110px;" id="bot1">
+        <progress style="margin-top: -15px; position: absolute; z-index: 2; width: 65px; accent-color: green;" value="100" max="100" id="vita_bot1"></progress>
         <img src="#" style="/*position: absolute;*/ top: 50%; left: 50%;" alt="Bot1">
+        <div name="Ombra" style="width: 40px; height: 30px; background: #0000003d; border-radius: 60%; transform: rotateX(45deg); position: absolute; left: 10px; top: 15px; z-index: 0;"></div>
       </div>
 
-      <div name="power-up" id="PwUP" style="background-image: url(https://docs.google.com/drawings/d/e/2PACX-1vRBSajVjm8pCR-tiwKCiXW0tp3x6O8L2jJYRIQb2WGZNrHP_njlpTcTtJBaZOlqAKBCaKV-h5UQhmHl/pub?w=960&h=720); width: 60px; height: 60px; background-size: cover; image-rendering: -webkit-optimize-contrast; position: absolute; top: 82px; left: 230px;">
-        <progress value="50" max="50" style="margin-left: 7px; margin-top: 5px; position: relative; width: 65px; accent-color: green; opacity: 35%;"></progress>
+      <div name="power-up" id="PwUP" style="width: 60px; height: 60px; position: absolute; top: 82px; left: 230px;">
+        <progress value="50" max="50" style="margin-top: -7px; position: absolute; width: 65px; accent-color: green; opacity: 35%; z-index: 2"></progress>
+        <img src="https://docs.google.com/drawings/d/e/2PACX-1vRBSajVjm8pCR-tiwKCiXW0tp3x6O8L2jJYRIQb2WGZNrHP_njlpTcTtJBaZOlqAKBCaKV-h5UQhmHl/pub?w=960&amp;h=720" alt="Errore di fonte" style="width: 144%; left: -11px; position: absolute; top: 0px; z-index: 1; image-rendering: pixelated;">
+        <div name="Ombra" style="width: 40px; height: 30px; background: #0000003d; border-radius: 60%; transform: rotateX(45deg); position: absolute; left: 7.5px; top: 40px; z-index: 0;"></div>
       </div>
       <img src="https://docs.google.com/drawings/d/e/2PACX-1vRSLERFjon0_CZ8KKxkWIeBMwBmHSrjTCu_p18NPdsRgu66rI7crhjcOjMZZAzZmsp1ISoSzuzxX-7b/pub?w=236&h=226" alt="Errore di fonte" style="position: absolute; width: 27px; left: 248px; top: 143px;">
       
