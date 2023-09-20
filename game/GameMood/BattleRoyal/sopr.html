@@ -16,7 +16,7 @@
     <script src="/SchedDes.js"></script>
     <!-- I Bots's script declare sono alla fine di <body> -->
   </head>
-  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; overflow: hidden; margin: 3px;">
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; overflow: hidden; margin: 3px;" onload="Timing()">
 
     <div name="Terreno" style="width: 950px; height: 708px; background-color: darkkhaki; background-image: url(https://docs.google.com/drawings/d/e/2PACX-1vRKdalDJH2pv7NExMIYx0evZXAHFFG0FdaD2f-L5WOPEsGSY401SV8XCcKybUDO_TuAuIC4SWEHytXS/pub?w=136&h=136); background-size: 5%;">
 
@@ -63,12 +63,24 @@
       </div>
       -->
 
+      <div name="BlockPietrRuvid" style="width: 60px; height: 60px; position: absolute; top: 85px; left: 178px;">
+        <img src="https://docs.google.com/drawings/d/e/2PACX-1vQWjpgoDtgc_wKaOhOq2GgOm_-XqSNS8zmkPvkqwku38r5Fh3spTChn_bS4wRnDHdPdzMz_4P2Kt0BI/pub?w=100&amp;h=100" alt="Errore di fonte" style="width: 120%;left: -11px;position: absolute;top: 0px;z-index: 1;image-rendering: pixelated;">
+        <div name="Ombra Edificio" style="width: 40px; height: 50px; background-color: #000000b0; position: absolute; left: 7px; top: 51px;"></div>
+      </div>
+
     </div>
 
     <!-- Bots src script -->
     <script src="/game/GameMood/BattleRoyal/bots/bot1A.js"></script>
   </body>
 </html>
+
+
+<script> //Timing per iniziare la partita (conto alla rovescia)
+  function Timing() {
+
+  }
+</script>
 
 <script> //Global let vita player
   let vtPlyId = document.getElementById('vitaPlayer');
