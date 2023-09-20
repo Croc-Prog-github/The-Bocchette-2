@@ -12,6 +12,5 @@ function SchedDes() {
   const titoloPagina = titleElement.textContent;
   document.title = titoloPagina;
 }
-setInterval(function() {
-  SchedDes();
-}, 100)
+//setInterval(function() {}, 100)
+SchedDes();
