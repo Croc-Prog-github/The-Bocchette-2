@@ -109,7 +109,8 @@
     </div>
 
     <div style="display: flex; flex-direction: row-reverse;" name="menù princ" id="M_princ">
-      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSxF6EvIMPHfWs1SwY_XPABAJHQQRc0l_-V10auLdTB7dpOhTRPZEt0TWIcr-gAmIAYDYfhSQ3xnQPl/pub?w=100&h=100" alt="Errore di fonte" style="margin-top: -357px; margin-bottom: 73vh;" title="Menù" id="MenPrinc">
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSxF6EvIMPHfWs1SwY_XPABAJHQQRc0l_-V10auLdTB7dpOhTRPZEt0TWIcr-gAmIAYDYfhSQ3xnQPl/pub?w=100&h=100" alt="Errore di fonte" style="margin-top: -357px; margin-bottom: 73vh; position: relative;
+      right: 0px; transition: 0.2s ease;" title="Menù" id="MenPrinc" onclick="MP(1);">
     </div>
     <div id="menu" style="margin-top: 20px; margin-right: 8px; display: flex; justify-content: flex-start; flex-direction: column;">
       <div name="menùUI" style="display: block; width: fit-content; display: flex; flex-direction: column; align-items: stretch; height: 65%; justify-content: center;">
@@ -189,18 +190,30 @@
   </body>
 </html>
 
-<script> //Script per animazione menù principale
-  // Seleziona l'elemento con id "MenPrinc"
-  const menPrinc = document.getElementById('MenPrinc');
+<script> //Script gestione menù principale
+// Dichiarare il gestore di eventi clickHandler all'esterno di MP
+const clickHandler = function() {
+  MP(0);
+};
 
-  // Seleziona l'elemento del menu
+function MP(n) {
   const menu = document.getElementById('menu');
+  const menuToggle = document.getElementById('MenPrinc'); // Elemento per aprire il menu
 
-  // Aggiungi un gestore di eventi al clic su "MenPrinc"
-  menPrinc.addEventListener('click', function() {
-    // Toggle della classe "open" per attivare o disattivare l'animazione del menu
-    menu.classList.toggle('open');
-  });
+  if (n == 1) {
+    menu.classList.add('open');
+
+    // Aggiungere il gestore di eventi all'elemento per aprire il menu
+    menuToggle.addEventListener('click', clickHandler);
+    menuToggle.style.right = '151px'
+  } else {
+    menu.classList.remove('open');
+
+    // Rimuovere il gestore di eventi quando il menu viene chiuso
+    menuToggle.removeEventListener('click', clickHandler);
+    menuToggle.style.right = '0px'
+  }
+}
 </script>
 
 <script> //Aggiorna Cassa comune

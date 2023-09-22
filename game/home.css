@@ -67,7 +67,7 @@
   position: fixed;
   top: 0;
   right: -8px;
-  transition: 0.3s ease; /* Aggiungi una transizione per l'animazione */
+  transition: 0.4s ease; /* Aggiungi una transizione per l'animazione */
   overflow-x: hidden;
   /* padding-top: 60px; */
   z-index: 1;
