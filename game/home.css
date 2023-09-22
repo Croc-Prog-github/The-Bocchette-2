@@ -58,3 +58,21 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* Animazione Menù */
+#menu {
+  width: 0px; /* Inizialmente, il menu è nascosto */
+  height: 70%;
+  background-color: #575757;
+  position: fixed;
+  top: 0;
+  right: -8px;
+  transition: 0.3s ease; /* Aggiungi una transizione per l'animazione */
+  overflow-x: hidden;
+  /* padding-top: 60px; */
+  z-index: 1;
+}
+#menu.open {
+  width: 150px; /* Larghezza del menu aperto */
+  right: 0px;
+}

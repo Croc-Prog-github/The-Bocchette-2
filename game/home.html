@@ -109,7 +109,17 @@
     </div>
 
     <div style="display: flex; flex-direction: row-reverse;" name="menù princ" id="M_princ">
-      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSxF6EvIMPHfWs1SwY_XPABAJHQQRc0l_-V10auLdTB7dpOhTRPZEt0TWIcr-gAmIAYDYfhSQ3xnQPl/pub?w=100&h=100" alt="Errore di fonte" style="margin-top: -357px; margin-bottom: 73vh;" title="Menù" onclick="MP(1)">
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSxF6EvIMPHfWs1SwY_XPABAJHQQRc0l_-V10auLdTB7dpOhTRPZEt0TWIcr-gAmIAYDYfhSQ3xnQPl/pub?w=100&h=100" alt="Errore di fonte" style="margin-top: -357px; margin-bottom: 73vh;" title="Menù" id="MenPrinc">
+    </div>
+    <div id="menu" style="margin-top: 20px; margin-right: 8px; display: flex; justify-content: flex-start; flex-direction: column;">
+      <div name="menùUI" style="display: block; width: fit-content; display: flex; flex-direction: column; align-items: stretch; height: 65%; justify-content: center;">
+        <button style="margin-inline: 10px;margin-top: 15px; min-inline-size: max-content;" onclick="rend(1)">Gestione dati</button>
+        <button style="margin-inline: 10px;margin-top: 15px; min-inline-size: max-content;" onclick="rend(3)">Modalità di gioco</button>
+        <button name="impo" onclick="OSett()" style="margin-inline: 10px; margin-top: 15px; min-inline-size: max-content;">Impostazioni</button>
+        <button style="margin-top: 15px;margin-inline: 10px; min-inline-size: max-content;" onclick="rend(2)">Guida e assistenza</button>
+        <button onclick="rend(4)" style="margin-inline: 10px; margin-top: 15px; min-inline-size: max-content;">Lascia un feedback</button>
+        <button onclick="rend(5)" style="margin-inline: 10px; margin-top: 15px; min-inline-size: max-content;">Riconoscimenti</button>        
+      </div>
     </div>
 
 
@@ -178,6 +188,20 @@
 
   </body>
 </html>
+
+<script> //Script per animazione menù principale
+  // Seleziona l'elemento con id "MenPrinc"
+  const menPrinc = document.getElementById('MenPrinc');
+
+  // Seleziona l'elemento del menu
+  const menu = document.getElementById('menu');
+
+  // Aggiungi un gestore di eventi al clic su "MenPrinc"
+  menPrinc.addEventListener('click', function() {
+    // Toggle della classe "open" per attivare o disattivare l'animazione del menu
+    menu.classList.toggle('open');
+  });
+</script>
 
 <script> //Aggiorna Cassa comune
   function updateCassCom() {
@@ -301,24 +325,6 @@
   function CSett() {
     const MinImpo = document.getElementById("MinImpo");
     MinImpo.style.display = "none";
-  }
-</script>
-
-<script>
-  function MP(n) { //Apri menù principale
-    const mPrinc = document.getElementById("M_princ");
-
-    // Elimina tutti gli elementi all'interno di M_princ
-    while (mPrinc.firstChild) {
-      mPrinc.removeChild(mPrinc.firstChild);
-    }
-
-    // Crea il div quando il menù è aperto
-    let newDiv = document.createElement("div");
-
-    newDiv.innerHTML = '<div style="width: 150px; height: 460px; background: dimgray; margin-top: -200%; margin-bottom: 16.5vh; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; z-index: 1; position: relative"><button style="margin-inline: 10px; margin-top: 15px;" onclick="rend(1)">Gestione dati</button><button style="margin-inline: 10px;margin-top: 15px;" onclick="rend(3)">Modalità di gioco</button><button name="impo" onclick="OSett()" style="margin-inline: 10px; margin-top: 15px;">Impostazioni</button><button style="margin-top: 15px;margin-inline: 10px;" onclick="rend(2)">Guida e assistenza</button><button onclick="rend(4)" style="margin-inline: 10px; margin-top: 15px;">Lascia un feedback</button><button onclick="rend(5)" style="margin-inline: 10px; margin-top: 15px;">Riconoscimenti</button></div>';
-    // Inserisce il nuovo div all'interno di M_princ
-    mPrinc.appendChild(newDiv);
   }
 </script>
 
