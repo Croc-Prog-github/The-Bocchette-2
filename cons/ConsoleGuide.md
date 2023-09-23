@@ -28,7 +28,7 @@ break
 I comandi di sistema servono per: visualizzare valori e per modificare impostazioni comuni, questi sono i principali comandi:
 <br>
 **`--help`**: Apre la guida dei comandi<br>
-**`--comands`**: attiva/disattiva la cronologia dei comandi<br>
+**`--clear`**: pulisce la console<br>
 
 ## Sottocomandi per `/ path`
 **/ ActualPath/ expl**: Mostra l'elenco di file che sono dento il percorso attuale.

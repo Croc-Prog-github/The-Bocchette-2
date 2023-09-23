@@ -13,7 +13,7 @@
     </div>
 
     <div style="display: flex; flex-direction: row; justify-content: space-between;">
-      <input type="text" placeholder="digita: @, / per iniziare..." style="width: 94.3%; height: 1.5em; background: black; color: white; border: solid 1px white; font-family: monospace;" id="inp"/>
+      <input type="text" id="inp" placeholder="digita: @, / per iniziare..."  autocomplete="off" spellcheck="false" style="width: 94.3%; height: 1.5em; background: black; color: white; border: solid 1px white; font-family: monospace;" />
       <button style="font-family: cursive;" title="Invia" onclick="Enter()"><┘</button>
     </div>
   </body>
@@ -21,10 +21,26 @@
 
 <script>
   const inp = document.getElementById('inp');
-  let out = document.getElementById('out');
+  const out = document.getElementById('out');
 
-  let comand;
   function Enter() {  
-    comand = inp;
+    let comand = inp.value;
+    switch(comand) {
+      case '--help':
+        out.innerText += comand;
+        out.innerHTML += '<br>';
+        window.open('https://github.com/Croc-Prog-github/The-Bocchette-2/blob/main/cons/ConsoleGuide.md#guida-alla-console-the-bocchette-2', '_blank');
+      break;
+      case '--clear':
+        out.innerHTML = 'The Bocchette 2 Console<br>Digita: --help per consultare la guida';
+      break;
+      default:
+        out.innerText += comand;
+        out.innerHTML += '<br>';
+        out.innerText += 'Comando sconosciuto.';
+        out.innerHTML += '<br>';
+      break;
+    }
+    inp.value = '';
   }
 </script>
