@@ -36,3 +36,18 @@ function cons(pw) {
     return "Console_Aperta";
   }
 }
+
+function cons(pw) {
+  if (pw != "Console") {
+    window.alert("Password per apertura Console errata.");
+    return "Password errata";
+  } else {
+    //Apre la finestra per la console
+
+    // Verifica se la finestra con il titolo "Console" è già aperta
+    function isWindowOpen(title) {
+      const windows = Array.from(window.top.window);
+      return windows.some(win => win.document.title === title);
+    }
+  }
+}
