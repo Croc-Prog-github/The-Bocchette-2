@@ -1,5 +1,5 @@
-let out = document.getElementById('out');
-const inp = document.getElementById('inp');
+//const out = document.getElementById('out');
+//const inp = document.getElementById('inp');
 
 function Enter() {  
   let comand = inp.value.toLowerCase();
