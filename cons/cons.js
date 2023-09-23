@@ -1,11 +1,6 @@
-//const out = document.getElementById('out');
-//const inp = document.getElementById('inp');
+let inp = document.getElementById('inp');
+const out = document.getElementById('out');
 
 function Enter() {  
-  let comand = inp.value.toLowerCase();
-  switch(comand) {
-    case '':
-
-    break;
-  }
+  let comand = inp.value;
 }
