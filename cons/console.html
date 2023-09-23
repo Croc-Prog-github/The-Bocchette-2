@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Console</title>
+    <script src="/cons/cons.js"></script>
   </head>
   <body style="background: black; color: white; font-family: monospace; cursor: url(/cons/mouse.svg), default; display: flex; flex-direction: column; justify-content: flex-end;">
     <div id="out" style="width: 99%; height: 360px; overflow: auto;">
@@ -13,8 +14,8 @@
     </div>
 
     <div style="display: flex; flex-direction: row; justify-content: space-between;">
-      <input type="text" value="" placeholder="digita: @, / per iniziare..." style="width: 94.3%; height: 1.5em; background: black; color: white; border: solid 1px white; font-family: monospace;">
-      <button style="font-family: cursive;" title="Invia"><┘</button>
+      <input type="text" id="inp" value="" placeholder="digita: @, / per iniziare..." style="width: 94.3%; height: 1.5em; background: black; color: white; border: solid 1px white; font-family: monospace;">
+      <button style="font-family: cursive;" title="Invia" onclick="Enter();"><┘</button>
     </div>
   </body>
 </html>
