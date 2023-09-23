@@ -8,7 +8,7 @@ Quando inizi una nuova "scrittura" della console dovrai iniziare digitando:
 ```cmd
 @ Username
 ```
-[Scopri sottocomandi per: @ Username]()
+[Scopri sottocomandi per: @ Username](#sottocomandi-per--username)
 
 <p></p>
 
@@ -16,7 +16,7 @@ Quando inizi una nuova "scrittura" della console dovrai iniziare digitando:
 ```
 / path
 ```
-[Scopri sottocomandi per: / path]()
+[Scopri sottocomandi per: / path](#sottocomandi-per--path)
 
 > [!NOTE]
 > Per creare una nuova "scrittura" e interrompere i comandi destinati al riferimento di essa, digitare:
