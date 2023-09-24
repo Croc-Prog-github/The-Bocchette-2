@@ -63,7 +63,7 @@
 
     <div style="position: absolute; z-index: 3; display: block; top: 19%; left: 29%;" name="Console Globale" id="Console">
       <div style="padding-left: 95.7%; background: white;">
-        <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="ClosMP()">X</button>
+        <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="Cons(0)">X</button>
       </div>
       <iframe src="/cons/console.html" height="400px" width="650px"></iframe>
     </div>
@@ -126,7 +126,8 @@
         <button name="impo" onclick="OSett()" style="margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;">Impostazioni</button>
         <button style="margin-top: 15px; margin-inline: 10px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="rend(2)">Guida e assistenza</button>
         <button onclick="rend(4)" style="margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;">Lascia un feedback</button>
-        <button onclick="rend(5)" style="margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;">Riconoscimenti</button>        
+        <button onclick="rend(5)" style="margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;">Riconoscimenti</button>
+        <button onclick="" style="margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;">Console</button>      
       </div>
     </div>
 
@@ -197,12 +198,22 @@
   </body>
 </html>
 
+<script>
+  const cons = document.getElementById('Console');
+  function Cons(n) {
+    if (n == 0) {
+      cons.style.display = 'none';
+    } else if (n == 1) {
+      cons.style.display = 'block';
+    }
+  }
+</script>
+
 <script> //Script gestione menù principale
 // Dichiarare il gestore di eventi clickHandler all'esterno di MP
 const clickHandler = function() {
   MP(0);
 };
-
 function MP(n) {
   const menu = document.getElementById('menu');
   const menuToggle = document.getElementById('MenPrinc'); // Elemento per aprire il menu
