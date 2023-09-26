@@ -11,15 +11,15 @@
 11. 
 
 PRIORITARI
-1. Continuare il Bot1 in sopravvivenza
-2. Correggere trasazione tra tecnicLockCom e tecnicUnlock
+1. Continuare il Bot1 in sopravvivenza (40%)
+2. Correggere trasazione tra tecnicLockCom e tecnicUnlock (posticipata)
 3. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium
 4. Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom
 5. Continuare il nuovo script di Gestione dati (cripting avanzato)
 6. 
 
 DA INIZIARE
-1. Iniziare il Chats-API
+1. Iniziare il Chats-API (sopeso a lungo termine)
 2. Creare la fisica dei bordi
 3. Iniziare il salvataggio (SessionStorage) mappe personali Creativa
 4. Continuare i muri in Sopravivenza Singolo

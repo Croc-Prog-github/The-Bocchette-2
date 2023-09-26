@@ -14,7 +14,7 @@
     <script src="/SchedDes.js"></script>
 
     <script>
-      if (NCassCom == 0) {
+      if (NCassCom === 0 || NCassCom <= 0) {
         window.location.href = '/game/home.html';
       } else {
         NCassCom = parseInt(NCassCom) - 1;
