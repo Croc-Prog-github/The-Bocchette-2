@@ -16,7 +16,7 @@
   "dependencies": {
     "express.js": "^1.0.0",
     "json": "^11.0.0",
-    "node": "^20.6.0",
+    "node": "^20.7.0",
     "typescript": "^5.2.2"
   }
 }
