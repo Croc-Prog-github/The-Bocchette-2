@@ -1,0 +1,47 @@
+hx[rank] {
+  padding-inline: 3px;
+  border-radius: 5px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+hx[rank="NOVIZIO"] {
+  background: gray;
+  color: white;
+  font-family: cursive;
+}
+hx[rank="MEDIO"] {
+  background: darkslateblue;
+  color: white;
+  font-family: monospace;
+}
+hx[rank="PRO"] {
+  background: blueviolet;
+  color: white;
+  font-family: revert;
+}
+hx[rank="LEGGENDA"] {
+  background: forestgreen;
+  color: white;
+  font-family: math;
+}
+hx[rank="SUPREMO"] {
+  background: violet;
+  color: black;
+  font-family: serif;
+}
+hx[rank="ADMIN"] {
+  background: royalblue;
+  color: black;
+  font-family: system-ui;
+}
+hx[rank="SRADMIN"] {
+  background: indianred;
+  color: black;
+  font-family: sans-serif;
+}
+hx[rank="OWNER"] {
+  background: gold;
+  color: black;
+  font-family: ui-serif;
+}
