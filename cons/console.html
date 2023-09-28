@@ -33,10 +33,10 @@
       out.innerHTML += '<br>';
       window.open('https://github.com/Croc-Prog-github/The-Bocchette-2/blob/main/cons/ConsoleGuide.md#guida-alla-console-the-bocchette-2', '_blank');
     }
-    if (comand == '--clear') {
-      out.innerHTML = 'The Bocchette 2 Console<br>Digita: --help per consultare la guida';
+    else if (comand == '--clear') {
+      out.innerHTML = 'The Bocchette 2 Console<br>Digita: --help per consultare la guida<br>';
     }
-    if (/^@ [^\s]+$/.test(comand)) {
+    else if (/^@ [^\s]+$/.test(comand)) {
       inp.placeholder = 'Digita: break per dissociare utente; comandi indirizzati a:' + comand;
 
       out.innerText += comand;
