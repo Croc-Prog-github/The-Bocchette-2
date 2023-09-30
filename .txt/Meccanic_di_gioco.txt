@@ -1,10 +1,13 @@
 MECCANICHE DI GIOCO GENERALI
 
+
 LE TECNICHE APPLICATE ALLE BOCCHETTE
 Le Bocchette sono i personaggi principali, ognuno può avere 2 Tecniche personalizzabili da un elenco di tecniche (di attacco e difesa) in comune per tutte le Bocchette.
 
+
 EVOLUZIONI DELLE BOCCHETTE
 Per qualsiasi Bocchetta quando usa una tecnica consuma dell'Energia, l'energia massima accumulabile (nella evoluzione: Normale) è di 100. Ma con l'uso di Tecniche di rarità maggiore, esse richiedono maggiore energia. Per aumentare la quantità di Energia massima accumulabile è necessaria l'evoluzione delle singole Bocchette. Facendo evolvere le Bocchette potrai sbloccare anche Tecniche che richiedono maggiore Energia, quindi quelle più rare.
+
 
 INCOMPATIBILITÀ DI RARITÀ DELLE TECNICHE DA EVOLUZIONI COMPATIBILI, IN EVOLUZIONI INFERIORI
 Però ogni Bocchetta con una evoluzione superiore a Normale, ad esempio Epica, potrà usare solo Tecniche uguali o inferiori alla sua evoluzione attuale. Quindi non potrà usare Tecniche superiori, quindi ad esempio Leggendaria, Immortal,...
@@ -16,3 +19,13 @@ Introdotta da episodi animati (come su Naruto Storm 4) o Da missioni che svelano
 Missioni che svelano lentamente la storia!
 
 Quando completi una di queste missioni-storia ricevi molti punti exp.
+
+
+BOCCHETTE CON ABILITA' PERSONALE (2.)
+Dato che le tecniche sono applicabili alle Bocchette solo con una variabilità (cioè l'Energia, da cui dipendono Evoluzioni e Rarità delle tecniche); sarebbe inutile (per i principi del Battle Royale) creare più Bocchette univoche.
+Qundi ogni Bocchetta deve avere qualcosa di unico (diversa dalle evoluzioni che permettono un'aumentare della QntMax di Energia e la ricarica)
+
+3 OPZIONI POSSIBILI:
+1. 1 Bocchetta (con Evoluzioni) che può usare tutte le Tecniche
+2. Tante Bocchette (con evoluzioni), senza Tecnche con Attacco unico e personale
+3. Tante Bocchette (senza evoluzioni), senza Tecniche con Attacco unico e personale [The Bocchette (1)]
