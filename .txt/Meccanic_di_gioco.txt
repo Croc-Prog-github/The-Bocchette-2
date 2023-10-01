@@ -29,3 +29,10 @@ Qundi ogni Bocchetta deve avere qualcosa di unico (diversa dalle evoluzioni che 
 1. 1 Bocchetta (con Evoluzioni) che può usare tutte le Tecniche [--SCIELTA--]
 2. Tante Bocchette (con evoluzioni), senza Tecnche con Attacco unico e personale
 3. Tante Bocchette (senza evoluzioni), senza Tecniche con Attacco unico e personale [The Bocchette (1)]
+
+Altra variabilità per le Tecniche: l'Elemento:
+- Acqua
+- Fuoco
+- Terra
+- Fulmine
+Gli elementi non si possono combinare tra loro, ma (con le Evoluzioni si può avere + di 1 elemento).
