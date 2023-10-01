@@ -21,12 +21,14 @@ Prova subito The Bocchette 2 anche senza registrarti: con l'Account ospite.
 - Scontri in Battle Royale Multipleyer bilanciati in base al grado e alla rarità della Bocchetta.
 - Microtransazioni per comprare le risorse (disponibili con Google Play).
 
-Per una sessione veloce, senza dover accedere, usa l'Account Ospite dove puoi giocare senza avere un account reggistrato.<br>
+Per una sessione veloce, senza dover accedere, usa l'Account Ospite dove puoi giocare senza avere un account registrato.<br>
 
 **Registrati con Accout server** per poter usare queste funzioni esclusive:
 - Microtransazioni delle risorse
 - Archiviazione Cloud dei tuoi progressi
 - Invitare i giocatori online
+- Multiplayer online nel Battle Royale
+- Eventi mensili esclusivi
 
 Per avere info sul bilanciamento del gioco, le probabilità delle casse, le statistiche delle evoluzioni,...<br>
 [clicca qui](https://docs.google.com/document/d/1PsYpN7GvzRnKKDpvvbf1r1OtHE_SL6dzfo08ABIh9Zg/edit?usp=sharing)
