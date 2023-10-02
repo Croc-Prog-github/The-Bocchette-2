@@ -29,6 +29,7 @@ Per una sessione veloce, senza dover accedere, usa l'Account Ospite dove puoi gi
 - Invitare i giocatori online
 - Multiplayer online nel Battle Royale
 - Eventi mensili esclusivi
+- Profilo personale: con statistiche e classifiche
 
 Per avere info sul bilanciamento del gioco, le probabilità delle casse, le statistiche delle evoluzioni,...<br>
 [clicca qui](https://docs.google.com/document/d/1PsYpN7GvzRnKKDpvvbf1r1OtHE_SL6dzfo08ABIh9Zg/edit?usp=sharing)
