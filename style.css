@@ -22,16 +22,3 @@ body {
   background-size: cover;
   background-image: repeating-linear-gradient(232.2deg, black, #242424 30px);
 }
-
-progresBar[max=""][value=""][color="green"] {
-  width: 100%;
-  height: 1em;
-  background: whitesmoke;
-  appearance: auto;
-  box-sizing: border-box;
-  display: inline-block;
-  block-size: 1em;
-  vertical-align: -0.2em;
-  
-}
-
