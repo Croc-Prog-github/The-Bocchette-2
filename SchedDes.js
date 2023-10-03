@@ -23,42 +23,75 @@ window.onpopstate = function() {
 
 
 // Disattiva Tasto destro + Menù manipolato
+let isContextMenuOpen = false; // Variabile per tracciare lo stato del menu
+
 document.addEventListener("contextmenu", function (e) {
   e.preventDefault(); // Previeni l'apertura del menu del tasto destro predefinito
 
-  // crea il <div>
-  const customContextMenu = document.createElement("div");
-  customContextMenu.style.position = "absolute";
-  customContextMenu.style.backgroundColor = "white";
-  customContextMenu.style.border = "1px solid #ccc";
-  customContextMenu.style.padding = "5px";
-  customContextMenu.style.boxShadow = "3px 3px 5px #888";
-  customContextMenu.style.zIndex = "1000";
-  customContextMenu.style.borderRadius = "5px";
+  if (!isContextMenuOpen) {
+    // Crea il <div> del menu personalizzato solo se non è già aperto
+    const customContextMenu = document.createElement("div");
+    customContextMenu.style.position = "absolute";
+    customContextMenu.style.backgroundColor = "white";
+    customContextMenu.style.border = "1px solid #ccc";
+    customContextMenu.style.padding = "5px";
+    customContextMenu.style.boxShadow = "3px 3px 5px #888";
+    customContextMenu.style.zIndex = "1000";
+    customContextMenu.style.borderRadius = "5px";
 
-  // Voce: "Web console"
-  const webConsoleItem = document.createElement("div");
-  webConsoleItem.className = "MenuLabel"
-  webConsoleItem.textContent = "Web console";
-  webConsoleItem.style.cursor = "pointer";
-  webConsoleItem.style.padding = "5px";
-  webConsoleItem.addEventListener("click", function () {
-    // Apre la console del browser
+    // Voce: "Web console"
+    const webConsoleItem = document.createElement("div");
+    webConsoleItem.className = "MenuLabel";
+    webConsoleItem.textContent = "Web console";
+    webConsoleItem.style.cursor = "pointer";
+    webConsoleItem.style.padding = "5px";
+    webConsoleItem.addEventListener("click", function () {
+      // Apre la console del browser
+    });
 
-  });
+    // Voce: "View source code"
+    /*
+    const ViewSourceCode = document.createElement("div");
+    ViewSourceCode.className = "MenuLabel";
+    ViewSourceCode.textContent = "View source code";
+    ViewSourceCode.style.cursor = "pointer";
+    ViewSourceCode.style.padding = "5px";
+    ViewSourceCode.addEventListener("click", function () {
+      // Apre il codice sorgente (Ctrl + U)
+      const newTab = window.open("", "_blank");
+      newTab.document.write("<pre>" + escapeHtml(document.documentElement.outerHTML) + "</pre>");
+    });
+    */
 
-  // Aggiungi la voce "Web console" al menu personalizzato
-  customContextMenu.appendChild(webConsoleItem);
 
-  // Posiziona il menu personalizzato dove è stato fatto clic con il tasto destro
-  customContextMenu.style.left = e.clientX + "px";
-  customContextMenu.style.top = e.clientY + "px";
+    // Aggiungi le voci al menu
+    customContextMenu.appendChild(webConsoleItem);
+    //customContextMenu.appendChild(ViewSourceCode);
 
-  // Aggiungi il menu personalizzato al documento
-  document.body.appendChild(customContextMenu);
+    // Posiziona il menu dove è stato fatto clic con il tasto destro
+    customContextMenu.style.left = e.clientX + "px";
+    customContextMenu.style.top = e.clientY + "px";
 
-  // Chiudi il menu personalizzato quando si fa clic altrove sulla pagina
-  document.addEventListener("click", function () {
-    document.body.removeChild(customContextMenu);
-  });
+    // Aggiungi il menu al documento
+    document.body.appendChild(customContextMenu);
+
+    // Imposta lo stato del menu come aperto
+    isContextMenuOpen = true;
+
+    // Chiudi il menu personalizzato quando si fa clic altrove sulla pagina
+    const closeContextMenu = function () {
+      document.body.removeChild(customContextMenu);
+      document.removeEventListener("click", closeContextMenu);
+      // Imposta lo stato del menu come chiuso
+      isContextMenuOpen = false;
+    };
+
+    document.addEventListener("click", closeContextMenu);
+  }
 });
+
+function escapeHtml(html) {
+  const escapeEl = document.createElement("textarea");
+  escapeEl.textContent = html;
+  return escapeEl.innerHTML;
+}
