@@ -1,11 +1,11 @@
-import('./cons/cons.js')
+/*import('./cons/cons.js')
 .then(module => {
   //
 })
 .catch(error => {
   console.error('Errore caricamento Console, errore: ', error);
 });
-
+*/
 /*
 import "express.js";
 import "json";
