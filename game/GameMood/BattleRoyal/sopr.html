@@ -18,11 +18,11 @@
   </head>
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; overflow: hidden; margin: 3px;" onload="Timing()">
 
-    <div style="position: absolute; width: 100%; height: 100%; background: yellowgreen; z-index: 10;">
+    <div style="position: absolute; width: 100%; height: 100%; background: yellowgreen; z-index: 10;" id="MatchDiv">
       <hx style="text-align: center; margin-block: 8px; width: 100%; display: block; font-size: xx-large; font-weight: bolder;">Matchmaking</hx>
       <hx style="text-align: center; display: block;">Il Matchmaking cerca giocatori del tuo stesso livello, in modo da avere scontri bilanciati.</hx>
 
-      <hx style="display: flex; flex-direction: column; align-items: center; margin-top: 63%; font-weight: bold; border: solid 3px white; padding-block: 10px;">
+      <hx style="display: flex; flex-direction: column; align-items: center; margin-top: 39%; font-weight: bold; border: solid 3px white; padding-block: 10px;">
         Caricamento in corso...
         <progress value="1" max="100" style="width: 80%;"></progress> 
       </hx>
@@ -37,7 +37,7 @@
         <img src="" style="/*position: absolute;*/ top: 50%; left: 50%;" alt="Player">
         <div name="mire" id="mire" hidden>
           <div name="miraE" style="background-color: #d6d6d6cc; width: 150px; height: 30px; rotate: 43deg; transform-origin: left; margin-top: -30px;margin-left: 20px;" id="miraE"></div>
-          <div name="miraF" style="" id="miraF"></div>
+          <div name="miraF" id="miraF"></div>
         </div>
         <div name="Ombra" style="width: 40px; height: 30px; background: #0000003d; border-radius: 60%; transform: rotateX(45deg); position: absolute; left: 10px; top: 15px; z-index: 0;"></div>
       </div>
