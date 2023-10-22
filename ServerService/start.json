@@ -2,7 +2,9 @@
   "name": "starter",
   "private": true,
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "colyseus": "^0.15.9"
+  },
   "scripts": {
     "dev": "starting...",
     "start": "node index.html",
