@@ -4,22 +4,17 @@ Entra in un gioco Battle Royal: completa la storia e gioca in mappe Multiplayer 
 Usa potenti attacchi che consumano Energia; ricaricabile col tempo.<br>
 Prova subito The Bocchette 2 anche senza registrarti: con l'Account ospite.
 <p align="center">
-  ![Version](https://img.shields.io/github/v/release/Croc-Prog-github/The-Bocchette-2)
+  ![Repo stars](https://img.shields.io/github/stars/Croc-Prog-github/The-Bocchette-2)
 
+  ![Downloads](https://img.shields.io/github/downloads/NOME_UTENTE/NOME_REPO/total)
 
-  <a href="https://github.com/Croc-Prog-github/The-Bocchette-2/graphs/commit-activity">
-    <img src="https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg" alt="Maintenance" />
-  </a>
-
-  ![License](https://img.shields.io/github/license/Croc-Prog-github/The-Bocchette-2)
+  ![Repo size](https://img.shields.io/github/repo-size/Croc-Prog-github/The-Bocchette-2)
 
   ![Contributors](https://img.shields.io/github/contributors/Croc-Prog-github/The-Bocchette-2)
-  
-  ![GitHub Issues](https://img.shields.io/github/issues/Croc-Prog-github/The-Bocchette-2)
 
-  ![GitHub Stars](https://img.shields.io/github/stars/Croc-Prog-github/The-Bocchette-2?style=social)
+  ![Manteined](https://img.shields.io/badge/Aggiornamenti-SI!-green)
 
-
+  ![Licenze](https://img.shields.io/badge/licenze-MIT-blue)
 </p>
 
 **Caratteristiche principali:**
