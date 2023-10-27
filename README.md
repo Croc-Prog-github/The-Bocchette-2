@@ -5,7 +5,8 @@ Usa potenti attacchi che consumano Energia; ricaricabile col tempo.<br>
 Prova subito The Bocchette 2 anche senza registrarti: con l'Account ospite.
 
 <div align="center">
-  <img alt="State" src="https://img.shields.io/badge/State-BETA-mediumseagreen">
+
+  ![State](https://img.shields.io/badge/State%3A-Making-white)
 </div>
 <hr>
 <div align="center">
