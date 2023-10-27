@@ -4,13 +4,22 @@ Entra in un gioco Battle Royal: completa la storia e gioca in mappe Multiplayer 
 Usa potenti attacchi che consumano Energia; ricaricabile col tempo.<br>
 Prova subito The Bocchette 2 anche senza registrarti: con l'Account ospite.
 <p align="center">
-  <a href="https://github.com/Croc-Prog-github/The-Bocchette-2/releases">
-    <img src="https://camo.githubusercontent.com/8fa8b50edbee2a4d6ba820e946b35d474d769e359a338b43ecb2e39aeefacc3c/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f646f776e6c6f6164732f72617973616e352f7261796c69622f746f74616c" alt="Downloads" data-canonical-src="https://img.shields.io/github/downloads/raysan5/raylib/total" style="max-width: 100%;" />
-  </a>
+  ![Version](https://img.shields.io/github/v/release/Croc-Prog-github/The-Bocchette-2)
+
 
   <a href="https://github.com/Croc-Prog-github/The-Bocchette-2/graphs/commit-activity">
     <img src="https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg" alt="Maintenance" />
   </a>
+
+  ![License](https://img.shields.io/github/license/Croc-Prog-github/The-Bocchette-2)
+
+  ![Contributors](https://img.shields.io/github/contributors/Croc-Prog-github/The-Bocchette-2)
+  
+  ![GitHub Issues](https://img.shields.io/github/issues/Croc-Prog-github/The-Bocchette-2)
+
+  ![GitHub Stars](https://img.shields.io/github/stars/Croc-Prog-github/The-Bocchette-2?style=social)
+
+
 </p>
 
 **Caratteristiche principali:**
