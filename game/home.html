@@ -54,11 +54,11 @@
       <button name="miss" onclick="window.location.href = '/game/GameMood/Miss_story.html';" style="background: lightgray; border: solid 3px gray;">Missioni storia</button>
     </div>
 
-    <div style="position: fixed; z-index: 3; margin-top: -5%;" id="MinImpo" hidden>
-      <div style="padding-left: 95.5%; margin-left: 70%; background: white; ">
-        <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="CSett()">X</button>
-      </div>
-      <iframe src="/game/impo.html" frameborder="1.5" style="width: 600px; height: 400px; margin-left: 70%;"></iframe>
+    <div style="position: fixed; z-index: 3;margin-top: -5%; display: none; margin-left: 30%;flex-direction: column;align-items: stretch;" id="MinImpo" hidden="true">
+      <div style="width: 95.5%;height: 25px;background: white;" hidden="true"></div>
+
+      <button style="background: indianred;border: solid 3px darkred;font: message-box;position: relative;" onclick="CSett()">X</button>
+      <iframe src="/game/impo.html" frameborder="1.5" style="width: 600px;height: 400px;"></iframe>
     </div>
 
     <div style="position: absolute; z-index: 3; display: none; top: 19%; left: 29%;" name="Console Globale" id="Console">
@@ -108,9 +108,9 @@
       <button onclick="OpnMP()" aria-label="1 giocatori online" id="invit2" style="border-radius: 6px; border-style: double; font-variant-caps: small-caps;background-image: linear-gradient(40deg, darkgray, white); border-bottom: solid black 3px; cursor: pointer;">+</button>
     </div>
 
-    <div style="position: fixed; z-index: 3; margin-top: -17%; margin-left: 29%; display: none;" name="Invita player" id="MultiP">
-      <div style="padding-left: 95.7%; background: white;">
-        <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="ClosMP()">X</button>
+    <div style="position: fixed; z-index: 3; margin-top: -19%; margin-left: 28%; display: none; flex-direction: column;" name="Invita player" id="MultiP">
+      <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="ClosMP()">X</button><div style="padding-left: 95.7%; background: white;" hidden="">
+        
       </div>
       <iframe src="/game/multiP/onlineUser.html" height="400px" width="650px"></iframe>
     </div>
@@ -322,7 +322,7 @@ function MP(n) {
 <script> //Apri-chiudi Menù multiplayer
   function OpnMP() {
     const MultiP = document.getElementById("MultiP");
-    MultiP.style.display = "block";
+    MultiP.style.display = "flex";
   }
   function ClosMP() {
     const MultiP = document.getElementById("MultiP");
@@ -350,7 +350,7 @@ function MP(n) {
 <script> //Apri-chiudi <iframe> impostazioni
   function OSett() {
     const MinImpo = document.getElementById("MinImpo");
-    MinImpo.style.display = "block";
+    MinImpo.style.display = "flex";
   }
   
   function CSett() {
