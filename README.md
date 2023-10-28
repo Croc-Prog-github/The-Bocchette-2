@@ -38,5 +38,3 @@ Per una sessione veloce, senza dover accedere, usa l'Account Ospite dove puoi gi
 - Multiplayer online nel Battle Royale
 - Eventi mensili esclusivi
 - Profilo personale: con statistiche e classifiche
-
-
