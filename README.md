@@ -1,6 +1,6 @@
 # The Bocchette 2
 
-Entra in un gioco Battle Royale: guarda la stori, gioca in mappe Multiplayer per avanzare nel gioco.<br>
+Entra in un gioco Battle Royale: vivi la storia, gioca in mappe Multiplayer per avanzare nel gioco.<br>
 Usa potenti Tecniche che consumano Energia, ricaricabile col tempo.<br>
 Prova subito The Bocchette 2 anche senza registrarti: con **l'Account ospite**.
 
