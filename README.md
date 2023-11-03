@@ -11,8 +11,8 @@ Prova subito The Bocchette 2 anche senza registrarti: con **l'Account ospite**.
 <hr>
 <div align="center">
 
+  <!-- ![Downloads](https://img.shields.io/github/downloads/Croc-Prog-github/The-Bocchette-2/total) -->
   ![Repo stars](https://img.shields.io/github/stars/Croc-Prog-github/The-Bocchette-2)
-  ![Downloads](https://img.shields.io/github/downloads/NOME_UTENTE/NOME_REPO/total)
   ![Repo size](https://img.shields.io/github/repo-size/Croc-Prog-github/The-Bocchette-2)
   ![Manteined](https://img.shields.io/badge/Aggiornamenti-SI!-green)
   ![Contributors](https://img.shields.io/github/contributors/Croc-Prog-github/The-Bocchette-2)
