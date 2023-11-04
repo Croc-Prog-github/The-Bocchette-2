@@ -1,4 +1,4 @@
-/*import('./cons/console.js.js.js.js.js.js')
+/*import('./cons/console.js')
 .then(module => {
   //
 })
