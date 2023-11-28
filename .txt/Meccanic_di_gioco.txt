@@ -25,12 +25,15 @@ BOCCHETTE CON ABILITA' PERSONALE (2.)
 Dato che le tecniche sono applicabili alle Bocchette solo con una variabilità (cioè l'Energia, da cui dipendono Evoluzioni e Rarità delle tecniche); sarebbe inutile (per i principi del Battle Royale) creare più Bocchette univoche.
 Quindi ogni Bocchetta deve avere qualcosa di unico (diversa dalle evoluzioni che permettono un aumentare della QntMax di Energia e la ricarica)
 
-3 OPZIONI POSSIBILI:
-1. 1 Bocchetta (con Evoluzioni) che può usare tutte le Tecniche
-2. Tante Bocchette (con evoluzioni), senza Tecniche con Attacco unico e personale
-3. Tante Bocchette (senza evoluzioni), senza Tecniche con Attacco unico e personale [The Bocchette (1)]
+5 OPZIONI POSSIBILI:
+1. 1 Bocchetta (con Evoluzioni) che può usare tutte le Tecniche.
+2. Tante Bocchette (con evoluzioni), senza Tecniche con Attacco unico e personale.
+3. Tante Bocchette (senza evoluzioni), senza Tecniche con Attacco unico e personale [The Bocchette (1)].
 
-4. Tante Bocchette (con evoluzioni), con Tecniche con Attacco unico e personale (+ gradi e statistiche attacco personale) [--SCELTA--]
+4. Tante Bocchette (con evoluzioni), con Tecniche con Attacco unico e personale (+ gradi e statistiche attacco personale).
+
+NEW 5. Tante Bocchette (con evoluzioni), con Tecniche, No attacco personale !(ogni Bocchetta selezionata ha un punto di vista diverso nella mappa [per le missioni storia] nel Battle Royale). 
+
 
 Altra variabilità per le Tecniche: l'Elemento:
 - Acqua
