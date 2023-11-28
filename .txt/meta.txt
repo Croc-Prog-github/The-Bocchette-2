@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 <meta name="description" content="(Descrizione lunga) Entra in un Battle Royale 2D dove per combattere devi usare l'Energia che permette di dare vita ad attacchi e difese. Puoi anche giocare in Multiplayer con giocatori di tutto il mondo e fare richedergli l'amicizia. Il gioco The Bocchette 2 contiene molte modalità di gioco tra cui Creativa, Storia e molto altro. E' presente anche una chat interna per comunicare con i tuoi amici fedeli in tempo reale">
-<meta name="keywords" content="(Parole chiave relative al gioco) The Bocchette 2, the bocchette 2, gioco online multiplayer, gioco online multiplayer node.js, gioco online, giochi online battaglia reale">
+<meta name="keywords" content="(Parole chiave relative al gioco) The Bocchette 2, the bocchette 2, gioco online multiplayer, gioco online multiplayer node.js, gioco online, giochi online battaglia reale, FPS online">
 <meta property="og:title" content="The Bocchette 2">
 <meta property="og:description" content="(Descrizione breve) The Bocchette 2: gioco online Battle Royale Multiplayer competitivo in Node.js">
 <meta property="og:image" content="https://docs.google.com/drawings/d/e/2PACX-1vRzg3r27e7_yLyB4m8rlyFHgQ8H5d6IJtW39axawbD5u7S_eX3ezqZdtll3NBLxJYY_OUhuSGJ-jQ8T/pub?w=16&h=16">
