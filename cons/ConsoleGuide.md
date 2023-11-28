@@ -40,3 +40,4 @@ I comandi di sistema servono per: visualizzare valori e per modificare impostazi
 **/ MultipServ**: Vai al percorso per il server dedicato al multiplayer, dove sono in esecuzione tutte le partite Multiplayer.
 
 ## Sottocomandi per `@ Username`
+**ban ${motivazione} ${tempo(m, h, d)}**: banna il giocatore dal gioco con una motivazione per un dato tempo (scrivi %p) per ban permanente.
