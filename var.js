@@ -25,7 +25,7 @@ evoluzLock = [];
 
 let obbUnlockPG = sessionStorage.getItem("obbUnlockPG"); //obb Unlock Pass Gratis
 let obbUnlockPP = sessionStorage.getItem("obbUnlockPP"); //obb Unlock Pass Premium
-//Non posso continuare dato che gli obbiettivi sono array e creano bug nel Session Storage come questi array sopra.
+//Non posso continuare dato che gli obbiettivi sono array e creano bug nel Session Storage come questi array sopra.-----------------------------------
 
 
 //Array totale che contiene gli array tecnicUnlock e tecnicLockCom
