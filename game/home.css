@@ -1,3 +1,7 @@
+* {
+  user-select: none;
+}
+
 #invit2 {
   position: relative;
   /*display: inline-block;*/
