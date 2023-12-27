@@ -1,3 +1,7 @@
+* {
+  user-select: none;
+}
+
 #load {
   /*margin-top: 37%;*/
   /*margin-left: 0%;*/
