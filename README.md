@@ -1,4 +1,8 @@
 # The Bocchette 2
+<!-- 
+[![Main-Background](https://docs.google.com/drawings/d/e/2PACX-1vRWRSRkIcWafi4aizPRm6sHtJleHPepMcy88ZQ9UX3AhNIVTnKyhxNrIsfAU4LcKdr4JWxVRsUImpv0/pub?w=690&h=571)](url)
+============== 
+-->
 
 Entra in un gioco Battle Royale: vivi la storia, gioca in mappe Multiplayer per avanzare nel gioco.<br>
 Usa potenti Tecniche che consumano Energia, ricaricabile col tempo.<br>
