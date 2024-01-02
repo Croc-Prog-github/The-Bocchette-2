@@ -6,7 +6,7 @@
 
 Entra in un gioco Battle Royale: vivi la storia, gioca in mappe Multiplayer per avanzare nel gioco.<br>
 Usa potenti Tecniche che consumano Energia, ricaricabile col tempo.<br>
-Prova subito The Bocchette 2 anche senza registrarti: con **l'Account ospite**.
+Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
 
 <div align="center">
 
@@ -36,7 +36,7 @@ Prova subito The Bocchette 2 anche senza registrarti: con **l'Account ospite**.
 
 Per una sessione veloce, senza dover accedere, usa l'Account Ospite dove puoi giocare senza avere un account registrato.<br>
 
-**Registrati con Accout server** per poter usare queste funzioni esclusive:
+**Registrati con l'Accout server** per poter usare queste funzioni esclusive:
 - Microtransazioni delle risorse
 - Archiviazione Cloud dei tuoi progressi
 - Invitare i giocatori online
