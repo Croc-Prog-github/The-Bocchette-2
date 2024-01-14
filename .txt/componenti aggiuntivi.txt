@@ -1,0 +1,22 @@
+Creare una UI Armadietto nella home (sopra gli slot delle tecniche).
+- Modulatori (accessori extra)
+  - Scettri
+    - Anelli
+      - Fuoco
+      - Anima
+      - Materia
+      - Antimateria
+      - Energia
+      - Vita
+      - Tempo
+  - Spade
+   - Materiali
+      - Oro
+      - Diamante
+      - Titanio
+      - Energia pura
+- Sfere degli elementi
+  - Fuoco
+  - Aria
+  - Acqua
+  - Terra
