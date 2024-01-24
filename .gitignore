@@ -3,7 +3,10 @@
 /node_modules
 
 # Git hub
-/.github
+/.github/workflows
+/.github/ISSUE_TEMPLATE
+
+!/.github/github wiki/*
 
 # Vscode
 /.vs
