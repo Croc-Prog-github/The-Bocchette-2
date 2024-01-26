@@ -20,3 +20,4 @@ Creare una UI Armadietto nella home (sopra gli slot delle tecniche).
   - Aria
   - Acqua
   - Terra
+  - Energia
