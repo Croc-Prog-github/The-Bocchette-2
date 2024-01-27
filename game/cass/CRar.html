@@ -14,10 +14,10 @@
     <script src="/SchedDes.js"></script>
 
     <script>
-      if (NCassRar == 0 || NCassRar <= 0){
-        window.location.href = '/game/home.html';
+      if (!isNaN(NCassRar) && parseInt(NCassRar) > 0){
+        NCassRar = parseInt(NCassRar, 10) - 1;
       }  else {
-        NCassRar = parseInt(NCassRar) - 1;
+        window.location.href = '/game/home.html';
       }
       </script>
   </head>

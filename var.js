@@ -76,7 +76,7 @@ setInterval(function() {
   }
 }, 100);
 
-// Categorizzare contatori delle casse come Int
+// Categorizzare contatori delle casse come Int (Micro debug)
 parseInt(NCassCom, 10);
 parseInt(NCassRar, 10);
 NCassCom += 0;
