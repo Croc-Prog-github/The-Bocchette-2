@@ -6,8 +6,8 @@ let passP = sessionStorage.getItem("passP"); //Pass premium (aqcuistato)?
 let obb = sessionStorage.getItem("obb"); //(n.) obbiettivi (del pass) conquistati
 let gett = sessionStorage.getItem("gett"); //n. di gettoni (pass)
 
-let NCassCom = parseInt(sessionStorage.getItem("NCassCom"), 10); //n. casse comuni (il n. 10 è inteso come b dei logaritmi)
-let NCassRar = parseInt(sessionStorage.getItem("NCassRar"), 10); //n. casse comuni (il n. 10 è inteso come b dei logaritmi)
+let NCassCom = sessionStorage.getItem("NCassCom"); //n. casse comuni
+let NCassRar = sessionStorage.getItem("NCassRar"); //n. casse comuni
 
 
 let tecnicUnlock = sessionStorage.getItem("tecnicUnlock");//Tecniche Sbloccate (Acquisite)
@@ -56,19 +56,24 @@ function SS() {
 
   sessionStorage.setItem("evoluzUnlock", evoluzUnlock);
   sessionStorage.setItem("evoluzLock", evoluzLock);
-};
-//Ulime modifiche: solo le chiavi nominate in keysToCheck sono soggette a controllo del valore 0, le alte vengono ignorate
-const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme', 'NCassCom', 'NCassRar'];
-setInterval(function () {
-  for (let key of keysToCheck) {
-    let value = sessionStorage.getItem(key);
-    if (value === null || isNaN(parseInt(value))) {
-      sessionStorage.setItem(key, "0");
-      console.error("La chiave: " + key + " aveva un valore non valido o mancante.");
-      console.warn("Il valore di " + key + " è stato impostato a 0.");
+}
+//Da ora il Session Storage non è più controllato dal filtro dei soli numeri interi
+setInterval(function() {
+  SS();
+  const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme', 'NCassCom', 'NCassRar']; // Array delle chiavi da verificare (solo variabili Int)
+  for (let key in sessionStorage) {
+    if (keysToCheck.includes(key)) { // Verifica se la chiave corrente è presente nell'array keysToCheck
+      let value = sessionStorage.getItem(key);
+      if (isNaN(parseInt(value))) {
+        for (let key in sessionStorage) {
+          sessionStorage.setItem(key, "0");
+          console.error("La chiave: " + key + " aveva valore diverso da una variabile di tipo int.");
+          console.warn("I valori di tutte le chiavi sono impostati a 0.");
+        }
+        break;
+      }
     }
   }
-  SS();
 }, 100);
 
 // Categorizzare contatori delle casse come Int (Micro debug)
