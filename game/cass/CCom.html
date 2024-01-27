@@ -14,10 +14,10 @@
     <script src="/SchedDes.js"></script>
 
     <script>
-      if (NCassCom == 0 || NCassCom < 0) {
+      if (!isNaN(NCassCom) && parseInt(NCassCom) > 0) {
+        NCassCom = parseInt(NCassCom, 10) - 1;
+      } else {
         window.location.href = '/game/home.html';
-      } else if (NCassCom > 0) {
-        NCassCom = parseInt(NCassCom) - 1;
       }
     </script>
   </head>

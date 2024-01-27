@@ -6,8 +6,8 @@ let passP = sessionStorage.getItem("passP"); //Pass premium (aqcuistato)?
 let obb = sessionStorage.getItem("obb"); //(n.) obbiettivi (del pass) conquistati
 let gett = sessionStorage.getItem("gett"); //n. di gettoni (pass)
 
-let NCassCom = sessionStorage.getItem("NCassCom"); //n. casse comuni
-let NCassRar = sessionStorage.getItem("NCassRar"); //n. casse comuni
+let NCassCom = parseInt(sessionStorage.getItem("NCassCom"), 10); //n. casse comuni (il n. 10 è inteso come b dei logaritmi)
+let NCassRar = parseInt(sessionStorage.getItem("NCassRar"), 10); //n. casse comuni (il n. 10 è inteso come b dei logaritmi)
 
 
 let tecnicUnlock = sessionStorage.getItem("tecnicUnlock");//Tecniche Sbloccate (Acquisite)
@@ -56,7 +56,7 @@ function SS() {
 
   sessionStorage.setItem("evoluzUnlock", evoluzUnlock);
   sessionStorage.setItem("evoluzLock", evoluzLock);
-}
+};
 //Da ora il Session Storage non è più controllato dal filtro dei soli numeri interi
 setInterval(function() {
   SS();
@@ -75,3 +75,11 @@ setInterval(function() {
     }
   }
 }, 100);
+
+// Categorizzare contatori delle casse come Int
+parseInt(NCassCom, 10);
+parseInt(NCassRar, 10);
+NCassCom += 0;
+NCassRar += 0;
+if (NCassCom < 0) {NCassCom = 0};
+if (NCassRar < 0) {NCassRar = 0};
