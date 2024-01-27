@@ -1,0 +1,2 @@
+NCassRar = parseInt(NCassRar) + 10;
+NCassCom = parseInt(NCassCom) + 10;
