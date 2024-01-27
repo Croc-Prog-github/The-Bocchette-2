@@ -37,7 +37,10 @@
     </div>
 
     <div name="Impost.HTML" style="cursor: default;">
+
       <div style="margin-top: 20px;" name="Accesibilità" id="acces">
+        <h2>Accesibilità</h2>
+
         <hx>Dimensione caratteri (em)</hx> 
           <input type="number" style="width: 40px;" value="1" min="0.5" max="3" id="DCar"> 
         <var style="margin-left: 25px;">Descrizione</var>
@@ -59,10 +62,40 @@
       </div>
 
       <div style="margin-top: 20px;" name="Video" id="vid" hidden>
+        <h2>Impostazioni Grafiche</h2>
 
+        <hx>Hz dello schermo: </hx> 
+          <select>
+            <option value="opzione1" >90 Hz</option>
+            <option value="opzione2" selected>60 Hz</option>
+            <option value="opzione3">30 Hz</option>
+          </select>
+        <var style="margin-left: 25px;">Descrizione</var>
+        
+        <p></p>
+
+        <hx>Limite FPS: </hx> 
+          <select>
+            <option value="opzione1" >ILLIMITATI</option>
+            <option value="opzione2">120 FPS</option>
+            <option value="opzione3">90 FPS</option>
+            <option value="opzione3" selected>60 FPS</option>
+          </select>
+        <var style="margin-left: 25px;">Descrizione</var>
+        
+        <p></p>
+
+        <hx>Frame Generator</hx>
+          <div class="switch">
+            <input type="checkbox" id="switch-2">
+            <label for="switch-2"></label>
+          </div>
+        <var style="margin-left: 25px;">Descrizione</var>
       </div>
 
       <div style="margin-top: 20px;" name="Impost.sito" id="impSit" hidden>
+        <h2>Impostazioni Avanzate</h2>
+
         <label for="imageSetting">Immagini:</label>
         <select id="imageSetting" onchange="updateSetting('imageSetting')">
           <option value="allow">Consenti</option>
@@ -80,18 +113,17 @@
           <option value="allow">Consenti</option>
           <option value="block">Blocca</option>
         </select>
+
       </div>
 
 
       <div name="Imps.Tasti" id="impTast" hidden>
-        <p></p>
+        <h2>Impostazioni Tastiera</h2>
         <div name="ESCI">
           <hx>Menù di gioco</hx>
           <select>
-            <option value="esc">Esc</option>
+            <option value="esc" selected>Esc</option>
             <option value="ctrl">Ctrl</option>
-            <option value="alt">Alt</option>
-            <option value="altGr">Alt Gr</option>
             <option value="shift">Shift</option>
           </select>
         </div>
