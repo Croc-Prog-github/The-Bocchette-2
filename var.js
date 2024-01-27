@@ -57,23 +57,18 @@ function SS() {
   sessionStorage.setItem("evoluzUnlock", evoluzUnlock);
   sessionStorage.setItem("evoluzLock", evoluzLock);
 };
-//Da ora il Session Storage non è più controllato dal filtro dei soli numeri interi
-setInterval(function() {
-  SS();
-  const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme', 'NCassCom', 'NCassRar']; // Array delle chiavi da verificare (solo variabili Int)
-  for (let key in sessionStorage) {
-    if (keysToCheck.includes(key)) { // Verifica se la chiave corrente è presente nell'array keysToCheck
-      let value = sessionStorage.getItem(key);
-      if (isNaN(parseInt(value))) {
-        for (let key in sessionStorage) {
-          sessionStorage.setItem(key, "0");
-          console.error("La chiave: " + key + " aveva valore diverso da una variabile di tipo int.");
-          console.warn("I valori di tutte le chiavi sono impostati a 0.");
-        }
-        break;
-      }
+//Ulime modifiche: solo le chiavi nominate in keysToCheck sono soggette a controllo del valore 0, le alte vengono ignorate
+const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme', 'NCassCom', 'NCassRar'];
+setInterval(function () {
+  for (let key of keysToCheck) {
+    let value = sessionStorage.getItem(key);
+    if (value === null || isNaN(parseInt(value))) {
+      sessionStorage.setItem(key, "0");
+      console.error("La chiave: " + key + " aveva un valore non valido o mancante.");
+      console.warn("Il valore di " + key + " è stato impostato a 0.");
     }
   }
+  SS();
 }, 100);
 
 // Categorizzare contatori delle casse come Int (Micro debug)
