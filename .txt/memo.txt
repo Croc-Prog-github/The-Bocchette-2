@@ -37,3 +37,4 @@ COMPLETATI
 7. Corretto errore riscatto delle ricompense nel pass FATTO
 8. Nuova interfaccia per selezionare le tecniche FATTO
 9. Mettere il data-cecker nel salvattaggio e confrt. con ultima modific. X
+Ridotto o risolto il bug apertura casse. FATTO
