@@ -1,0 +1,61 @@
+~/Croc-Prog-github/The-Bocchette-2 main
+❯ cd ServerService/Account-Server
+
+~/Croc-Prog-github/The-Bocchette-2/ServerService/Account-Server main
+❯ tsc AccServ.ts
+
+
+
+^C
+
+~/Croc-Prog-github/The-Bocchette-2/ServerService/Account-Server main 24s
+❯ tsc AccServ.ts
+
+~/Croc-Prog-github/The-Bocchette-2/ServerService/Account-Server main 25s
+❯ node AccServ.js
+Error: exports is not defined
+    at file:///home/Croc-Prog-github/The-Bocchette-2/ServerService/Account-Server/AccServ.js
+    at _0x345efc._evaluate (https://thebocchette2-ojiv.w-credentialless.staticblitz.com/blitz.6854296d.js:352:378687)
+    at async ModuleJob.run (https://thebocchette2-ojiv.w-credentialless.staticblitz.com/blitz.6854296d.js:181:2372)
+
+~/Croc-Prog-github/The-Bocchette-2/ServerService/Account-Server main
+❯ tsc start.ts
+start.ts:1:28 - error TS5097: An import path can only end with a '.ts' extension when 'allowImportingTsExtensions' is enabled.
+
+1 import { uploadToS3 } from './AccServ.ts';
+                             ~~~~~~~~~~~~~~
+
+
+Found 1 error in start.ts:1
+
+
+~/Croc-Prog-github/The-Bocchette-2/ServerService/Account-Server main 23s
+❯ tsc start.ts
+start.ts:1:28 - error TS5097: An import path can only end with a '.ts' extension when 'allowImportingTsExtensions' is enabled.
+
+1 import { uploadToS3 } from './AccServ.ts';
+                             ~~~~~~~~~~~~~~
+
+
+Found 1 error in start.ts:1
+
+
+~/Croc-Prog-github/The-Bocchette-2/ServerService/Account-Server main 25s
+❯ tsc start.ts
+
+~/Croc-Prog-github/The-Bocchette-2/ServerService/Account-Server main 14s
+❯ node start.js
+Error: exports is not defined
+    at file:///home/Croc-Prog-github/The-Bocchette-2/ServerService/Account-Server/start.js
+    at _0x345efc._evaluate (https://thebocchette2-ojiv.w-credentialless.staticblitz.com/blitz.6854296d.js:352:378687)
+    at async ModuleJob.run (https://thebocchette2-ojiv.w-credentialless.staticblitz.com/blitz.6854296d.js:181:2372)
+
+~/Croc-Prog-github/The-Bocchette-2/ServerService/Account-Server main
+❯ node AccServ.js
+Error: exports is not defined
+    at file:///home/Croc-Prog-github/The-Bocchette-2/ServerService/Account-Server/AccServ.js
+    at _0x345efc._evaluate (https://thebocchette2-ojiv.w-credentialless.staticblitz.com/blitz.6854296d.js:352:378687)
+    at async ModuleJob.run (https://thebocchette2-ojiv.w-credentialless.staticblitz.com/blitz.6854296d.js:181:2372)
+
+~/Croc-Prog-github/The-Bocchette-2/ServerService/Account-Server main
+❯ 
