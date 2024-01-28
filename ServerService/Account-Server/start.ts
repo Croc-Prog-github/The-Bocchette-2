@@ -1,4 +1,4 @@
-import { uploadToS3 } from './AccServ.ts';
+import { uploadToS3 } from './AccServ';
 
 // Chiamata alla funzione
 uploadToS3();

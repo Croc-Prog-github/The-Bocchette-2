@@ -17,5 +17,5 @@
 /.vs
 
 # Credenziali server
-!/ServerService/Account-Server/AccServ.ts
+/ServerService/Account-Server/AccServ.ts
 /ServerService/Account-Server/AccServ.js
