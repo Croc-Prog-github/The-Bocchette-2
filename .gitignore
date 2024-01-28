@@ -10,3 +10,6 @@
 
 # Vscode
 /.vs
+
+# Secret values
+/ServerService/Account-Server/AccServ.ts
