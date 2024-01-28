@@ -13,4 +13,4 @@
 
 # Credenziali
 /ServerService/Account-Server/AccServ.ts
-/ServerService/Account-Server/AccServ.js
+#/ServerService/Account-Server/AccServ.js
