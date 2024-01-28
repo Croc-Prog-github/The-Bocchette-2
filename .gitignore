@@ -3,9 +3,9 @@
 /node_modules/*
 
 # Main Node Dependence Packages
-!/node_modules/call-bind
-!/node_modules/functional-bind
-!/node_modules/get-intrinsic
+!/node_modules/call-bind/*
+!/node_modules/function-bind/*
+!/node_modules/get-intrinsic/*
 
 # Git hub
 /.github/workflows
