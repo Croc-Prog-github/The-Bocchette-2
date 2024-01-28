@@ -6,8 +6,8 @@ import * as fs from 'fs';
 export function myFunction() {
   // Credenziali AWS
   AWS.config.update({
-    accessKeyId: '',
-    secretAccessKey: '',
+    accessKeyId: 'ACCESS_KEY',
+    secretAccessKey: 'SEACRET_KEY',
     region: 'us-east-1',
   });
 
