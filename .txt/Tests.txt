@@ -1,0 +1,7 @@
+// Test Casse
+NCassRar = parseInt(NCassRar) + 10;
+NCassCom = parseInt(NCassCom) + 10;
+
+// Server Archiviaz. AWS (IDE console)
+cd ServerService/Account-Server
+tsc AccServ.ts

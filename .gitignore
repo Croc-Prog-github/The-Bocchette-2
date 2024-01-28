@@ -11,5 +11,6 @@
 # Vscode
 /.vs
 
-# Secret values
+# Credenziali
 /ServerService/Account-Server/AccServ.ts
+/ServerService/Account-Server/AccServ.js
