@@ -1,6 +1,11 @@
 # File IDE
 .env
-/node_modules
+/node_modules/*
+
+# Main Node Dependence Packages
+!/node_modules/call-bind
+!/node_modules/functional-bind
+!/node_modules/get-intrinsic
 
 # Git hub
 /.github/workflows
@@ -11,6 +16,6 @@
 # Vscode
 /.vs
 
-# Credenziali
+# Credenziali server
 /ServerService/Account-Server/AccServ.ts
-#/ServerService/Account-Server/AccServ.js
+/ServerService/Account-Server/AccServ.js
