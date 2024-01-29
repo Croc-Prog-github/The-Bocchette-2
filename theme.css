@@ -1,0 +1,25 @@
+/* Stile di base per il corpo della pagina */
+[theme="default"] {
+    background-color: #195e79ad;
+    color: #000000;
+}
+[theme="darkness"] {
+    background-color: #092631ad;
+    color: #ffffff;
+}
+[theme="blu-darkness"] {
+    background-color: #040c31ba;
+    color: #ffffff;
+}
+
+
+body [theme="default"] > * {
+    background-color: #f0f0f0; /* Colore di sfondo chiaro predefinito */
+    color: #000000; /* Testo nero su sfondo chiaro */
+}
+body [theme="darkness"] > * {
+    background-color: #333; /* Colore di sfondo scuro per elementi figli */
+}
+body [theme="blu-darkness"] > * {
+background-color: #2c2c7e; /* Altro colore di sfondo scuro per elementi figli */
+}  

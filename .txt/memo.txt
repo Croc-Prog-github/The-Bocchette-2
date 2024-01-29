@@ -8,7 +8,8 @@
 8. Completare le tecniche in sopravivenza
 9. Continuare il Power-Up
 10. Continuare le Missioni-storia
-11. 
+
+11. Completare theme.css + js nelle impo
 
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza (40%)
