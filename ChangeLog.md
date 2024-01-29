@@ -10,4 +10,7 @@ I file delle versioni precedenti sono disponibili nel Relase di GitHub.
 ## Issues risolti
 - @Issues Risolto!
 
+## Pull Request
+- Unione ramo Main con X per Y motivi.
+
 Grazie per la lettura.
