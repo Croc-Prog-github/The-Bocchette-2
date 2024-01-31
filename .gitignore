@@ -9,8 +9,12 @@
 
 # Updates
 !/node_modules/@colyseus
-!/node_modules/colyseus
-!/
+#!/node_modules/colyseus
+!/node_modules/node-gyp-build-optional-packages
+!/node_modules/npm-run-path
+!/node_modules/.bin
+!/node_modules/npm-run-path
+
 
 # Git hub
 /.github/workflows
