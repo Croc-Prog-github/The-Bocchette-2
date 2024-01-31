@@ -7,6 +7,11 @@
 !/node_modules/function-bind/*
 !/node_modules/get-intrinsic/*
 
+# Updates
+!/node_modules/@colyseus
+!/node_modules/colyseus
+!/
+
 # Git hub
 /.github/workflows
 /.github/ISSUE_TEMPLATE
