@@ -13,35 +13,55 @@
     <script src="/SchedDes.js"></script>
   </head>
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad;">
-    
-  <div style="display: flex; flex-direction: row; justify-content: flex-start;">
-    <a href="/game/home.html" style="text-decoration: none; font-size: 25px; border: solid 2px black;" title="Indietro">⬅️</a>
-  </div>
+    <div style="display: flex; flex-direction: row; justify-content: flex-start;">
+      <a href="/game/home.html" style="text-decoration: none; font-size: 25px; border: solid 2px black;" title="Indietro">⬅️</a>
+    </div>
 
-  <div style="display:flex; flex-direction: row; margin-top: 20px;" name="events">
-    <img src="https://docs.google.com/drawings/d/e/2PACX-1vThkYugncXnRrRbAC7ZgdpfKWX2xPDCN_YtkG78Gd4BCEz2D7gCjIrFjaA40TTkpxXoFnNFjq0jP9Cy/pub?w=308&h=102" alt="Errore di fonte" onclick="Se()" id="event" style="margin-right: 30px;">
-    
-    <img src="#" alt="Errore di fonte" onclick="Se()" style="margin-right: 30px;">
+    <div name="BattleRoyale_Event">
+      <div style="display:flex; flex-direction: row; margin-top: 20px;">
+        <img src="https://docs.google.com/drawings/d/e/2PACX-1vThkYugncXnRrRbAC7ZgdpfKWX2xPDCN_YtkG78Gd4BCEz2D7gCjIrFjaA40TTkpxXoFnNFjq0jP9Cy/pub?w=308&h=102" alt="Errore di fonte" onclick="Se('https://docs.google.com/drawings/d/e/2PACX-1vThkYugncXnRrRbAC7ZgdpfKWX2xPDCN_YtkG78Gd4BCEz2D7gCjIrFjaA40TTkpxXoFnNFjq0jP9Cy/pub?w=308&h=102')" style="margin-right: 30px;">
+          
+        <img src="#" alt="Errore di fonte" onclick="Se('')" style="margin-right: 30px;">
 
-    <img src="#" alt="Errore di fonte" onclick="Se()" style="margin-right: 30px;">
-  </div>
+        BattleRoyale
+      </div>
+    </div>
 
 
+    <div name="CampoDiProva_Event">
+      <div style="display: flex; flex-direction: row; margin-top: 20px;">
+        <img src="" alt="Errore di fonte" onclick="Se('')" style="margin-right: 30px;">
+
+        <img src="#" alt="Errore di fonte" onclick="Se('')" style="margin-right: 30px;">
+
+        CampoDiProva
+      </div>
+    </div>
+  
   </body>
 </html>
 
 <script> //Seleziona Evento
-  let event;
-  function Se() {
-    event = document.getElementById("event").src;
+  function Se(event) {
     console.info("L'evento cliccato ha scr: " + event);
     localStorage.setItem("event", event); // Memorizza l'URL in Local-Storage
-    window.location.href = '/game/home.html'; // Reindirizza all'altra pagina
+    window.location.href = '/game/home.html';
   }
 </script>
 
-<script> //Cambia gli scr degli eventi in base alla GameMood (Non necessario da completare: esiste solo 1 GameMood con >1 evento)
-  if (localStorage.getItem("GameMood") ===  "https://docs.google.com/drawings/d/e/2PACX-1vRY5rVGGwFbGX5XBXOTvVzchOT3Ns1WlJVmbP72yYtGgz_f5qv4CCcEDor5Wss2sgDiVhW9lBXlI9wt/pub?w=308&h=102") {
-    event = document.getElementById("event").scr;
+<script> //Nasconde i div in base alla GameMode
+  let DivBattleRoyale_Event;
+  let DivCampoDiProva_Event;
+  if (localStorage.getItem("GameMode") == "BattleRoyale") {
+    DivBattleRoyale_Event = document.querySelector('[name="BattleRoyale_Event"]');
+
+    DivCampoDiProva_Event.style.display = 'none';
+    DivBattleRoyale_Event.style.display = 'block';
+  }
+  if (localStorage.getItem("GameMode") == "CampoDiProva") {
+    DivCampoDiProva_Event = document.querySelector('[name="CampoDiProva_Event"]');
+
+    DivCampoDiProva_Event.style.display = 'block';
+    DivBattleRoyale_Event.style.display = 'none';
   }
 </script>
