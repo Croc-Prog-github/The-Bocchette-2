@@ -147,7 +147,7 @@
     <!-- END <meta> -->
 
     <!-- Content -->
-    <script src="/cons/console.js.js.js.js.js.js.js"></script>
+    <script src="/cons/console.js"></script>
   </head>
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad;">
     <div style="width: 220px; background: #ffffff; z-index: 4; position: absolute; margin-bottom: 1.5%; height: 98%;" hidden id="menu">
