@@ -18,29 +18,39 @@
     <h3 style="text-transform: uppercase;">Scegli una modalità di gioco</h3>
     <div style="margin-top: 20px; display: flex;">
 
-      <div style="border: solid black 3px; margin-right: 20px; display: flex;">
-        <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY5rVGGwFbGX5XBXOTvVzchOT3Ns1WlJVmbP72yYtGgz_f5qv4CCcEDor5Wss2sgDiVhW9lBXlI9wt/pub?w=308&h=102" alt="Errore di fonte" onclick="SMG()" name="BattleRoyale" id="GameMood">
+      <div style="border: solid black 3px; margin-right: 20px; display: flex;" onclick="SMG('BattleRoyale')" name="BattleRoyale">
+        <img src="https://docs.google.com/drawings/d/e/2PACX-1vRY5rVGGwFbGX5XBXOTvVzchOT3Ns1WlJVmbP72yYtGgz_f5qv4CCcEDor5Wss2sgDiVhW9lBXlI9wt/pub?w=308&h=102" alt="Errore di fonte">
       </div>
 
       <div style="border: solid black 3px; margin-right: 20px; display: flex;">
-        <img src="https://docs.google.com/drawings/d/e/2PACX-1vTzKzhT7XZeejUPjRKjRXFYAn3cO00DUf9_A_qO6yc1v7vOeRWL3yl8l9Rr7ztyxeu1DaCQtItO3cl6/pub?w=308&h=102" alt="Errore di fonte" onclick="/*alert('La modalità Creativa è disattivata, priorità: Battle Royale > Bots.');*/ window.location.href = '/game/GameMood/creativ.html';" name="Creativa">
+        <img src="https://docs.google.com/drawings/d/e/2PACX-1vTzKzhT7XZeejUPjRKjRXFYAn3cO00DUf9_A_qO6yc1v7vOeRWL3yl8l9Rr7ztyxeu1DaCQtItO3cl6/pub?w=308&h=102" alt="Errore di fonte" onclick="/*alert('La modalità Creativa è disattivata.');*/ window.location.href = '/game/GameMood/creativ.html';" name="Creativa">
       </div>
 
+      <div style="background: lightskyblue; border: solid 4px black; margin-right: 20px; width: 308px; color: royalblue; text-align: center;" onclick="SMG('CampoDiProva')" name="">Terreno di prova</div>
+      
       <div style="/*border: solid black 1px;*/ margin-right: 20px; display: flex;">
         <div style="background: lightskyblue; border: solid 4px black; width: 308px; color: royalblue; text-align: center;" onclick="window.location.href = '/game/GameMood/story.html';">Storia</div>
       </div>
-
-      <div style="background: lightskyblue; border: solid 4px black; width: 308px; color: royalblue; text-align: center;">Battaglia brutale</div>
+      
     </div>
   </body>
 </html>
 
 <script>
-  let GameMood;
-  function SMG() { //Seleziona GameMood
-    GameMood = document.getElementById("GameMood").src;
-    console.info("L'url della GameMood cliccata ha scr: " + GameMood);
-    localStorage.setItem("GameMood", GameMood); // Memorizza la variabile nello storage locale
-    window.location.href = '/game/home.html'; // Reindirizza all'altra pagina
+  function SMG(GameMode) { //Seleziona ModeGame
+    switch(GameMode) {
+      case 'BattleRoyale':
+        console.info("Il nome della GameMode cliccata e': " + GameMode);
+        localStorage.setItem("GameMode", GameMode); // Memorizza la var in storage locale
+        window.location.href = '/game/home.html'; // Reindirizza
+      break;
+      case 'CampoDiProva':
+        console.info("Il nome della GameMode cliccata e': " + GameMode);
+        localStorage.setItem("GameMode", GameMode);
+      break;
+      default:
+        console.error('Errore, evento non tracciabie dallo switch di MoodGame.html');
+      break;
+    }
   }
 </script>
