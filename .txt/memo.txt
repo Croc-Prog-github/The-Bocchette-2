@@ -9,7 +9,7 @@
 9. Continuare il Power-Up
 10. Continuare le Missioni-storia
 
-11. Completare theme.css + js nelle impo
+11. 
 
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza (40%)
@@ -38,4 +38,5 @@ COMPLETATI
 7. Corretto errore riscatto delle ricompense nel pass FATTO
 8. Nuova interfaccia per selezionare le tecniche FATTO
 9. Mettere il data-cecker nel salvattaggio e confrt. con ultima modific. X
-Ridotto o risolto il bug apertura casse. FATTO
+10. Ridotto o risolto il bug apertura casse. FATTO
+11. Completare theme.css + js nelle impo X
