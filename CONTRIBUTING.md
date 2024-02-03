@@ -1,9 +1,10 @@
 # Contribuisci a The-Bocchette-2
 Il team di The Bocchette 2, è felice per tua iniziativa di contribuire, ma prima ti chiediamo di seguire le istruzioni qui per avere info su come contribuire al meglio.
-<!--
-> [!WARNING]
-> Attendi il primo Rilascio ufficiale del codice. Prima di quel momento ti chiediamo di non iniziare il tuo contibuto, dato che il codice potrebbe essere ancora instabile.
--->
+
+## Prima di iniziare
+- Assicurati di avere una versione aggiornata di Git nel tuo PC.
+- Clona il repository da Git
+
 ## Passaggi per contribuire
 1. **Sciegli un Issue**: Scegli un problema dal [registro degli Issue](https://github.com/Croc-Prog-github/The-Bocchette-2/issues) o apri un nuovo issue per discutere delle modifiche proposte.
 2. **Indica il tuo impegno**: Assegna a te stesso l'Issue per indicare che stai lavorando su di esso.
@@ -22,5 +23,4 @@ Il team di The Bocchette 2, è felice per tua iniziativa di contribuire, ma prim
 ```
 7. **Pull Request**: Apri una Pull Request sul repository. Assicurati di descrivere chiaramente le tue modifiche.
 
-
-Grazie per contribuire a rendere The-Bocchette-2 ancora migliore! 🚀
+Grazie per aver contribuito a rendere The Bocchette 2 ancora migliore! 🚀🎉
