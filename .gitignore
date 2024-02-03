@@ -10,6 +10,9 @@
 !/node_modules/rollup
 !/node_modules/vite
 
+!/node_modules/.package-lock.json
+!/node_modules/@esbuild/linux-x64/package.json
+
 
 # Git hub
 /.github/workflows
