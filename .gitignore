@@ -4,12 +4,11 @@
 /node_modules/.bin
 
 # Updates
-#!/node_modules/@colyseus
-#!/node_modules/colyseus
-#!/node_modules/node-gyp-build-optional-packages
-#!/node_modules/npm-run-path
-#!/node_modules/@gamestdio
-#!/node_modules/npm-run-path
+!/node_modules/esbuild
+!/node_modules/nanoid
+!/node_modules/postcss
+!/node_modules/rollup
+!/node_modules/vite
 
 
 # Git hub
