@@ -1,3 +1,21 @@
+/*
+----------Libreria per Player Functions-----------
+Ha bisogno di:
+- Div Player
+- Dichiara mira.js
+- Dichiara tecnic.js
+
+Consente:
+- Movimento WASD
+
+- Globalizzazione var Vita player
+
+Non consente:
+- Ricarica energia (commented)
+- Tecniche e tasti mouse (commented)
+- Script Mira (commented)
+*/
+
 //Movimento Player
 setTimeout(function () {
   document.addEventListener('keydown', function (event) {
@@ -28,6 +46,11 @@ setTimeout(function () {
   });
 }, 1);
 
+//Global let vita player
+let vtPlyId = document.getElementById('vitaPlayer');
+var vitaPlayer = parseInt(vtPlyId.value); // <---- Vita Player
+
+/*
 //Ricarica energia
 let Energy = document.getElementById('YourE');
 Energy.value = 10;
@@ -37,22 +60,12 @@ if (Energy.value < 100) {
   }, 100);
 }
 //clearInterval(intervalId);
+*/
 
+/*
 //Comandi per le tecniche
 document.addEventListener('keydown', function (event) {
   switch (event.key) {
-    case 'w':
-      // Azione per il tasto w
-      break;
-    case 'a':
-      // Azione per il tasto a
-      break;
-    case 's':
-      // Azione per il tasto s
-      break;
-    case 'd':
-      // Azione per il tasto d
-      break;
     case 'e': //Tasto tecnica 1
       console.info('Tasto E, Tecnica: ' + tecnic1);
       EsecTecnic(tecnic1);
@@ -75,6 +88,7 @@ document.addEventListener('click', function (event) {
     //azioni click destro mouse
   }
 });
+*/
 
 //Prevede mira in base a tecniche selezionate (tiene premuto tasto sinistro mouse + frecce < o > [per scorrere le tecniche, viste in un fumetto])
 /*

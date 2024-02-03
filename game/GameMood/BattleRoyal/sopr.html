@@ -140,6 +140,7 @@
 });
 </script>
 
+
 <script> //Ricarica energia
   let Energy = document.getElementById("YourE");
   Energy.value = 10;
@@ -154,18 +155,6 @@
 <script> //Comandi per le tecniche
   document.addEventListener('keydown', function(event) {
     switch(event.key) {
-      case 'w':
-        // Azione per il tasto w
-      break;
-      case 'a':
-        // Azione per il tasto a
-      break;
-      case 's':
-        // Azione per il tasto s
-      break;
-      case 'd':
-        // Azione per il tasto d
-      break;
       case 'e': //Tasto tecnica 1
         console.info("Tasto E, Tecnica: " + tecnic1);
         EsecTecnic(tecnic1);
@@ -305,4 +294,10 @@ function FumF(val) {
   left: 50%;
   transform: translateX(-50%);
 }
+</style>
+
+<style>
+  * {
+    user-select: none;
+  }
 </style>
