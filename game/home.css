@@ -1,6 +1,9 @@
 * {
   user-select: none;
 }
+body {
+  cursor: url('/cons/mouse.svg'), default;
+}
 
 #invit2 {
   position: relative;
