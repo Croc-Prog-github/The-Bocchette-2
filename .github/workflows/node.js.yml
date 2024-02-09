@@ -1,5 +1,3 @@
-"""
-
 name: The-Bocchette-2 Actions
 on:
   push:
@@ -24,5 +22,3 @@ jobs:
 
     - name: Esegui i test
       run: npm test
-
-"""

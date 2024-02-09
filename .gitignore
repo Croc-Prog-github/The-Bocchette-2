@@ -7,7 +7,7 @@
 
 
 # Git hub
-/.github/workflows
+#/.github/workflows
 /.github/ISSUE_TEMPLATE
 
 !/.github/github wiki/*
