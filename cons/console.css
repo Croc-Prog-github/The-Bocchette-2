@@ -1,0 +1,10 @@
+.name_console {
+  user-select: none;
+  outline-style: none;
+  /* border-top-right-radius: 7px; */
+  /* border-top-left-radius: 7px; */
+  border-style: none;
+  background: black;
+  color: white;
+  white-space: nowrap;
+}
