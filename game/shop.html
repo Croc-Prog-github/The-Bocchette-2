@@ -12,24 +12,24 @@
     <script src="/cons/console.js"></script>
     <script src="/SchedDes.js"></script>
   </head>
-  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; cursor: default; overflow: hidden;">
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;background-color: #195e79ad;cursor: default;overflow: auto;margin-top: 0px;margin-inline: 8px;">
 
-    <div style="margin-bottom: 5px;">
-      <div style="display: flex; flex-direction: row; justify-content: flex-start;">
+    <div style="position: fixed;width: -webkit-fill-available;z-index: 1;">
+      <div style="display: flex;flex-direction: row;justify-content: flex-start;background: #6291a4;padding-top: 8px;padding-inline: 8px;">
         <a href="/game/home.html" style="text-decoration: none; font-size: 25px; border: solid 2px black;" title="Indietro">⬅️</a>
       </div>
     
-      <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: space-between; margin-top: -21px; overflow-x: auto; margin-left: 38px;">
-        <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px;">Offerte</button>
-        <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px;">Oggetto gratis</button>
-        <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px;">Tecniche & Evoluzioni</button>
-        <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px;">Skin</button>
-        <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px;">Risorse</button>
-        <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px;">Codice riscatto</button>
+      <div style="display: flex;flex-direction: row;justify-content: space-between;margin-top: -31px;overflow-x: auto;margin-left: 41px;">
+        <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer;">Offerte</button>
+        <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer;">Oggetto gratis</button>
+        <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer;">Tecniche &amp; Evoluzioni</button>
+        <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer;">Skin</button>
+        <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer;">Risorse</button>
+        <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer;">Codice riscatto</button>
       </div>
     </div>
 
-    <div style="height: 41em; overflow-y: auto;">
+    <div style="overflow-y: hidden;top: 25px;position: relative;z-index: 0;">
     <div name="Offerte">
       <div style="display: flex; flex-direction: row; align-items: center; margin-top: 20px; font-size: 2em;">Offerte</div>
       <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
@@ -80,7 +80,7 @@
       </div>
     </div>
 
-    <div name="Tecniche & Evoluzioni">
+    <div name="Tecniche &amp; Evoluzioni">
       <div style="display: flex; flex-direction: row; align-items: center; margin-top: 20px; font-size: 2em;">Tecniche ed Evoluzioni</div>
       <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
 
@@ -247,6 +247,5 @@
       </div>
     </div>
     </div>
-
   </body>
 </html>
