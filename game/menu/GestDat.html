@@ -22,10 +22,12 @@
     <div style="margin-top: 0px;">
       <hx>Salva</hx>
       <li>
-        <button disabled title="Questo è un account Ospite">Salva sul server</button> Server:
+        <button disabled title="Questo è un account Ospite">Salva sul server</button> Autosalvataggio ogni:
         <select>
-          <option value="Express 1">Express.js - 1</option>
-          <option value="Node 1" disabled>OneDrive</option>
+          <option value="1min" selected>1 minuto</option>
+          <option value="5min">5 minuti</option>
+          <option value="10min">10 minuti</option>
+          <option value="1ora">1 ora</option>
         </select>
       </li>
 
@@ -40,11 +42,7 @@
         <input id="file-upload" type="file" accept=".encrypt" hidden>
         <label for="file-upload" style="cursor: pointer;">Carica da Download</label>
       </button></li>
-      <li><button disabled>Carica dal Server</button> Server:
-        <select>
-          <option value="Express 1">Express.js - 1</option>
-          <option value="OneDrive" disabled>OneDrive</option>
-        </select>
+      <li><button disabled>Carica dal Server</button>
       </li> 
     </div>
 

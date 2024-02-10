@@ -1,0 +1,3 @@
+Weight: 400
+Grade: 0
+Optical Size: 24

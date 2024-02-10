@@ -47,9 +47,19 @@
       <x style="color: white; width: 16px; height: 23px; margin-block: 3px; margin-inline: 3px; background: royalblue; border-radius: 28%; text-align: center;">1</x>
     </div>
 
-    <div style="display: flex; align-items: flex-start; flex-direction: column; margin-top: 15px;" name="butt">
-      <button name="news" onclick="window.location.href = '/ERROR_404'" style="background-color: lightgray;" disabled >Notizie</button>
-      <button name="shop" onclick="window.location.href = '/game/shop.html';" style="background: lightgray; border: solid 3px gray;">Negozio</button>
+    <div style="display: flex; align-items: flex-start; flex-direction: column; margin-top: 5px;" name="butt">
+      <div name="news" style="display: flex; flex-direction: row-reverse; align-items: stretch;">
+        <button name="news" onclick="window.location.href = '/ERROR_404'" style="background-color: lightgray; border: solid 3px #9E9E9E; border-left: none;" disabled >Notizie</button>
+        <svg height="24" viewBox="0 -960 960 960" width="24" style="background: lightgrey; border: solid 3px #9E9E9E; border-right: none;">
+          <path style="fill: darkgray;" d="M160-120q-33 0-56.5-23.5T80-200v-640l67 67 66-67 67 67 67-67 66 67 67-67 67 67 66-67 67 67 67-67 66 67 67-67v640q0 33-23.5 56.5T800-120H160Zm0-80h280v-240H160v240Zm360 0h280v-80H520v80Zm0-160h280v-80H520v80ZM160-520h640v-120H160v120Z"/>
+        </svg>
+      </div>
+      <div name="shop" style="display: flex; flex-direction: row-reverse; align-items: stretch;">
+        <button name="shop" onclick="window.location.href = '/game/shop.html';" style="background: lightgray;border: solid 3px gray;border-left: none;">Negozio</button>
+        <svg height="24" viewBox="0 -960 960 960" width="24" style="background: lightgrey; border: solid 3px gray; border-right: none;">
+          <path d="M160-720v-80h640v80H160Zm0 560v-240h-40v-80l40-200h640l40 200v80h-40v240h-80v-240H560v240H160Zm80-80h240v-160H240v160Zm-38-240h556-556Zm0 0h556l-24-120H226l-24 120Z"></path>
+        </svg>
+      </div>
       <button name="bocch" onclick="window.location.href = '/game/MenuBocch/SelectBocch.html';" style="background: lightgray; border: solid 3px gray;" >Seleziona Bocchetta</button>
       <button name="MenuTecnic" onclick="window.location.href = '/game/MenuTecnic.html';" style="background: lightgray; border: solid 3px gray;">Seleziona Tecnica</button>
       <button name="miss" onclick="window.location.href = '/game/GameMood/Miss_story.html';" style="background: lightgray; border: solid 3px gray;">Missioni storia</button>
