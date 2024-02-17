@@ -80,6 +80,6 @@ body {
   z-index: 1;
 }
 #menu.open {
-  width: 150px; /* Larghezza del menu aperto */
+  width: 170px; /* Larghezza del menu aperto */
   right: 0px;
 }
