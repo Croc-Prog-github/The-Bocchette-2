@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "build",
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "strict": true,
     "allowJs": true,
@@ -11,8 +11,7 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "useDefineForClassFields": false,
-    "allowImportingTsExtensions": true
+    "useDefineForClassFields": false
   },
   "include": [
     "src"

@@ -1,5 +1,7 @@
 import { Room, RoomAvailable } from './Room';
 import { SchemaConstructor } from './serializer/SchemaSerializer';
+import { HTTP } from "./HTTP";
+import { Auth } from './Auth';
 export type JoinOptions = any;
 export declare class MatchMakeError extends Error {
     code: number;
@@ -12,6 +14,8 @@ export interface EndpointSettings {
     pathname?: string;
 }
 export declare class Client {
+    http: HTTP;
+    auth: Auth;
     protected settings: EndpointSettings;
     constructor(settings?: string | EndpointSettings);
     joinOrCreate<T>(roomName: string, options?: JoinOptions, rootSchema?: SchemaConstructor<T>): Promise<Room<T>>;

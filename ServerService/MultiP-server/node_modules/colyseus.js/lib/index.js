@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SchemaSerializer = exports.registerSerializer = exports.Platform = exports.Auth = exports.Room = exports.ErrorCode = exports.Protocol = exports.Client = void 0;
+exports.SchemaSerializer = exports.registerSerializer = exports.Auth = exports.Room = exports.ErrorCode = exports.Protocol = exports.Client = void 0;
 require("./legacy");
 var Client_1 = require("./Client");
 Object.defineProperty(exports, "Client", { enumerable: true, get: function () { return Client_1.Client; } });
@@ -11,7 +11,6 @@ var Room_1 = require("./Room");
 Object.defineProperty(exports, "Room", { enumerable: true, get: function () { return Room_1.Room; } });
 var Auth_1 = require("./Auth");
 Object.defineProperty(exports, "Auth", { enumerable: true, get: function () { return Auth_1.Auth; } });
-Object.defineProperty(exports, "Platform", { enumerable: true, get: function () { return Auth_1.Platform; } });
 /*
  * Serializers
  */

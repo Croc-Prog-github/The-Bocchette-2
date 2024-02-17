@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.ts"],
+  "sourcesContent": ["import { Request } from 'express-jwt';\n\nimport { JWT, JwtPayload, Jwt } from './JWT';\nimport { auth, AuthSettings, RegisterWithEmailAndPasswordCallback, FindUserByEmailCallback, ParseTokenCallback, GenerateTokenCallback, HashPasswordCallback,} from './auth';\n\nimport { OAuthProviderCallback } from './oauth';\nimport { Hash } from './Hash';\n\nexport type {\n  Request, JwtPayload, Jwt,\n\n  AuthSettings,\n  RegisterWithEmailAndPasswordCallback,\n  FindUserByEmailCallback,\n  ParseTokenCallback,\n  GenerateTokenCallback,\n  HashPasswordCallback,\n\n  OAuthProviderCallback,\n};\n\nexport { Hash, JWT, auth, };\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAEA,iBAAqC;AACrC,kBAAmK;AAGnK,kBAAqB;",
+  "names": []
+}
