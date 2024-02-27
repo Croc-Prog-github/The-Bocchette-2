@@ -1,5 +1,5 @@
 <meta charset="UTF-8">
-<meta name="description" content="(Descrizione lunga) Entra in un Battle Royale 3D in terzza persona, per combattere usa l'Energia che permette di dare vita ad attacchi e difese. Possibilità di giocare in Multiplayer + sistema di amicizie. Molte modalità di gioco tra cui: Creativa, Storia,.. Chat interna per comunicare con i tuoi amici fedeli in tempo reale">
+<meta name="description" content="(Descrizione lunga) Entra in un Battle Royale 3D in terza persona, per combattere usa l'Energia che permette di dare vita ad attacchi e difese. Possibilità di giocare in Multiplayer. Molte modalità di gioco tra cui: Creativa, Storia,.. Chat interna per comunicare con i tuoi amici in tempo reale.">
 <meta name="keywords" content="(Parole chiave relative al gioco) The Bocchette 2, the bocchette 2, TB2, tb2, gioco online multiplayer, gioco online multiplayer node.js, gioco online, giochi online battaglia reale, FPS online">
 <meta property="og:title" content="The Bocchette 2">
 <meta property="og:description" content="(Descrizione breve) The Bocchette 2: gioco online Battle Royale Multiplayer competitivo evolutosi con Node.js">
