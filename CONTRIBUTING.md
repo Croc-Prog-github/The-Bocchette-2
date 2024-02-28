@@ -6,7 +6,7 @@ Il team di The Bocchette 2, è felice per tua iniziativa di contribuire, ma prim
 - Clona il repository da Git
 
 ## Passaggi per contribuire
-1. **Sciegli un Issue**: Scegli un problema dal [registro degli Issue](https://github.com/Croc-Prog-github/The-Bocchette-2/issues) o apri un nuovo issue per discutere delle modifiche proposte.
+1. **Sciegli un Issue**: Scegli un problema dal [registro degli Issue](https://github.com/Croc-Prog-github/The-Bocchette-2/issues) o apri un nuovo issue.
 2. **Indica il tuo impegno**: Assegna a te stesso l'Issue per indicare che stai lavorando su di esso.
 3. **Crea il tuo ramo**: Crea un nuovo Branch separato, per implementare Commits sul tuo contributo. Per creare un nuovo ramo usa il comando:
 ```git_bash
