@@ -18,7 +18,7 @@
   <script type="module" src="/ServerService/Account-Server/start.js"></script>
 </head>
 <body id="body" onload="ElimData(); sessionStorage.clear();" style='font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; height: 100%; cursor: auto; overflow-y: auto; display: flex; flex-direction: column; justify-content: flex-end;'>
- <script src="/var.js"></script>
+  <script src="/var.js"></script>
 
   <!-- Caricamento -->
   <hx id="title" style="display: flex; justify-content: center;" id="body">The Bocchette 2</hx>
@@ -46,12 +46,12 @@
         <div style="display: flex; flex-direction: column; align-items: center;">
           <x style="font-size: 20px; cursor: default;"><strong style="margin-inline: 83px;">Scegli un'opzione</strong></x>
         </div>
-        <a onclick="AccountOsp()" style="color: -webkit-link; cursor: pointer;text-decoration: underline;">Usa account Ospite</a>
+        <a onclick="AccountOsp()" style="color: -webkit-link; cursor: pointer;text-decoration: underline; -webkit-text-stroke-width: thin;">Usa account Ospite</a>
         |
         <input id="file-upload" type="file" accept=".encrypt" hidden>
-        <label for="file-upload" style="color: -webkit-link; cursor: pointer;text-decoration: underline;">Carica dati</label>
+        <label for="file-upload" style="color: -webkit-link; cursor: pointer;text-decoration: underline; -webkit-text-stroke-width: thin;">Carica dati</label>
         |
-        <hx style="color: -webkit-link; cursor: pointer;text-decoration: underline;" onclick="AccServ('login');">Account server</hx>
+        <hx style="color: -webkit-link; cursor: pointer;text-decoration: underline; -webkit-text-stroke-width: thin;" onclick="AccServ('login');">Account server</hx>
       </div>
 
       <div name="loginDiv" style="margin: 7px; text-align: center; flex-direction: column; align-items: center;" id="login" hidden>
