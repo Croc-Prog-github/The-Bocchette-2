@@ -4,8 +4,6 @@
 /node_modules/.bin
 
 # Updates
-!/node_modules/.vite
-!/node_modules/@msgpackr-extract
 
 # Git hub
 /.github/workflows
