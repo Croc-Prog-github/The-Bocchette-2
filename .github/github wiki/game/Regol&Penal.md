@@ -19,7 +19,7 @@ Condizioni per la riduzione di pena: ammissione (-5%), inconsapevolezza verifica
 - Per: `Interferenza con player immotivata` pena di **ban per 5 ore**.
 - Per: `linguaggio scurrile` e/o `insulti` pena di **ban per 6 ore + confisca account Sviluppatore per 1 ora**.
 - Per: `contenuti scurrili` pena di **ban per 6 ore + confisca account Sviluppatore per 2 ore**.
-- Per: `Sabotaggio` pena di **ban per 35 giorni + confisca account Sviluppatore PERMANENTE**.
+- Per: `Sabotaggio` pena di **ban per 35 giorni + confisca account Sviluppatore permanente**.
 
 ### Penalità (ambo parti) avanzate
 - Per: `Truffa` pena di **ban per 25 giorni**.
