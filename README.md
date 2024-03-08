@@ -4,8 +4,8 @@
 ============== 
 -->
 
-Entra in un gioco Battle Royale in 3°persona. Vivi la storia, gioca in mappe Multiplayer per avanzare nel gioco.<br>
-Per combattere usa potenti attacchi e difese che consumano Energia, ricaricabile col tempo.<br>
+Entra in un gioco Battle Royale in 3°persona. Vivi la storia e gioca in mappe Multiplayer per avanzare nel gioco.<br>
+Per combattere usa potenti attacchi e difese che consumano Energia, ricaricabile nel tempo.<br>
 Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
 
 <div align="center">
