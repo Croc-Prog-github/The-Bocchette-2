@@ -44,18 +44,20 @@
     </details>
 
     <details style="display: flex;">
-    <summary>Errori (Per l'Utente)</summary>
+    <summary hidden>Errori (Per l'Utente)</summary>
     <ol>
       <li><strong>Reindirizzamento ad un evento fallito!</strong><br>L'evento che si sta provando a giocare è scaduto o non corrisponde alla copertina</li>
-      
     </ol>
     </details>
 
     <details style="display: flex;">
-    <summary>Errori (Per gli sviluppatori)</summary>
-    <ol>
-      <li><strong>Reindirizzamento ad un evento fallito!</strong><br>Nello switch dello script di home.html, l'URL non è tra i case. Probabilmente l'URL dell'evento e dello switch non corrispondono oppure .src è scritto sbagliato.</li>
-
+    <summary>Errori (per gli Sviluppatori)</summary>
+    <ol style="margin-block: 10px;">
+      <li><strong>Reindirizzamento ad un evento fallito! </strong><hx style="color: lightgray;">Proveniente da file: home.html</hx><br>Nello switch() dello script di home.html, l'URL non è tra i case. Probabilmente l'URL dell'evento e dello switch non corrispondono oppure .src è scritto sbagliato.</li>
+      <li><strong>La chiave: ... aveva valore diverso da una variabile di tipo int. </strong><hx style="color: lightgray;">Proveniente da file: var.js</hx><br>La variabile ... presente in Session Storage, ha assunto un valore diverso da un numero Intero Reale.</li>
+      <li><strong>L'elemento rilevato non è stato riconosciuto. </strong><hx style="color: lightgray;">Proveniente da file: bot1A.js</hx><br>Il Bot mentre era in modalità: Radar, non ha rilevato nessuno degli elementi inseriti nello switch().</li>
+      <li><strong>Elementi DOM non trovati. </strong><hx style="color: lightgray;">Proveniente da file: bot1A.js</hx><br>Il Bot mente verificava l'esistenza di un elemento, rilevato con la modalità Radar, non lo ha trovato nel cod HTML della pagina in cui esiste (il bot).</li>
+      <li><strong>Nessun elemento con attributo 'name' uguale a 'Terreno' trovato. </strong><hx style="color: lightgray;">Proveniente da file: bot1A.js</hx><br>Il Bot non ha rilevato il terreno della mappa nel cod HTML della pagina in cui esiste (il bot).</li>
     </ol>
     </details>
 
