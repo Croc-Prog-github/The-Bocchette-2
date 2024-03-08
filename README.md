@@ -4,8 +4,8 @@
 ============== 
 -->
 
-Entra in un gioco Battle Royale: vivi la storia, gioca in mappe Multiplayer per avanzare nel gioco.<br>
-Usa potenti Tecniche che consumano Energia, ricaricabile col tempo.<br>
+Entra in un gioco Battle Royale in 3°persona. Vivi la storia, gioca in mappe Multiplayer per avanzare nel gioco.<br>
+Per combattere usa potenti attacchi e difese che consumano Energia, ricaricabile col tempo.<br>
 Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
 
 <div align="center">
@@ -28,7 +28,7 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
 - Invita Player online.
 - Crea e pubblica mappe in Creativa.
 - Risorse sbloccabili o acquistabili dal negozio.
-- Notizie sugli ultimi aggiornamenti. 
+- Notizie sugli ultimi aggiornamenti.
 - Completa missioni del Bocchet Pass per ricevere ricompense
 - Usa Bocchette con evoluzioni uniche, legate alla Storyline.
 - Scontri in Battle Royale Multipleyer bilanciati in base al grado e alla rarità della Bocchetta.
@@ -41,6 +41,7 @@ Per una sessione veloce, senza dover accedere, usa l'Account Ospite dove puoi gi
 - Microtransazioni delle risorse
 - Archiviazione Cloud dei tuoi progressi
 - Invitare i giocatori online
+- Chat per comunicare con gli amici in tempo reale
 - Multiplayer online nel Battle Royale
 - Eventi mensili esclusivi
 - Profilo personale: con Rank, statistiche, classifiche,...
