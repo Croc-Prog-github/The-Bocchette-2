@@ -13,7 +13,7 @@ I comandi di sistema servono per visualizzare valori e per modificare impostazio
 Quando scrivi un nuovo comando nel Terminale di TB2, puoi iniziare da questi comandi di partenza, dalla quale si diramano altri sotto-comandi.
 
 ### Citazione utente: 
-Serve per _targhettare_ un utente, tutti i comandi successivi saranno applicati all'utente che è stato nominato. Usa:
+Serve per _targhettare_ un utente, tutti i comandi successivi saranno applicati all'utente che è stato nominato. Utilizza:
 ```cmd
 @ Username
 ```
