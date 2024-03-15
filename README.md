@@ -24,6 +24,13 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
   ![Licenze](https://img.shields.io/badge/licenze-MIT-blue?link=https%3A%2F%2Fgithub.com%2FCroc-Prog-github%2FThe-Bocchette-2%2Fblob%2Fmain%2FLICENSE.md)
 </div>
 
+<table>
+  <tr>
+    <td><img src="/resources/img/Shop.png" alt="Shop"><td>
+    <td><img src="/resources/img/Pass.png" alt="Pass"><td>
+  </tr>
+</table>
+
 **Caratteristiche principali:**
 - Invita Player online.
 - Crea e pubblica mappe in Creativa.
