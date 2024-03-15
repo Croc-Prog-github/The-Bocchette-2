@@ -26,8 +26,8 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
 
 <table>
   <tr>
-    <td><img src="/resources/img/Shop.png" alt="Shop"></td>
-    <td><img src="/resources/img/Pass.png" alt="Pass"></td>
+    <td style="overflow: hidden;"><img src="/resources/img/Shop.png" alt="Shop"></td>
+    <td style="overflow: hidden;"><img src="/resources/img/Pass.png" alt="Pass"></td>
   </tr>
 </table>
 
