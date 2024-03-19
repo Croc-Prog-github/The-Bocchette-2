@@ -19,7 +19,7 @@
         <button style="background: lightgray; border: solid 3px gray" onclick="OSett()">Impostazioni</button>
         <button disabled>Impostazioni mappa</button>
         <button disabled>Seleziona squadra</button>
-        <button style="background: indianred; border: solid 3px darkred" onclick="let exit=window.confirm('Sei sicuro di voler uscire?');if(exit == true){window.location.href = '/game/home.html';}">ESCI</button>
+        <button style="background: indianred; border: solid 3px darkred" onclick="let exit=window.confirm('Sei sicuro di voler uscire? Tornerai nella GameMode BattleRoyale.');if(exit == true){localStorage.setItem('GameMode', 'BattleRoyale'); window.location.href = '/game/home.html';}">ESCI</button>
       </div>
     </div>
 
