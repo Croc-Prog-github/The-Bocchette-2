@@ -4,6 +4,23 @@
 /node_modules/.bin
 
 # Updates
+!/node_modules/.vite
+!/node_modules/@colyseus
+!/node_modules/@gamestdio
+!/node_modules/@types
+!/node_modules/body-parser
+!/node_modules/call-bind
+!/node_modules/colyseus
+!/node_modules/express
+!/node_modules/get-intrinsic
+!/node_modules/has-proto
+!/node_modules/ms
+!/node_modules/node
+!/node_modules/object-inspect
+!/node_modules/postcss
+!/node_modules/raw-body
+!/node_modules/side-channel
+!/node_modules/typescript
 
 # Git hub
 /.github/workflows

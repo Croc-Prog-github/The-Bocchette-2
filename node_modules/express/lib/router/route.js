@@ -60,10 +60,7 @@ Route.prototype._handles_method = function _handles_method(method) {
     return true;
   }
 
-  // normalize name
-  var name = typeof method === 'string'
-    ? method.toLowerCase()
-    : method
+  var name = method.toLowerCase();
 
   if (name === 'head' && !this.methods['head']) {
     name = 'get';
@@ -106,10 +103,8 @@ Route.prototype.dispatch = function dispatch(req, res, done) {
   if (stack.length === 0) {
     return done();
   }
-  var method = typeof req.method === 'string'
-    ? req.method.toLowerCase()
-    : req.method
 
+  var method = req.method.toLowerCase();
   if (method === 'head' && !this.methods['head']) {
     method = 'get';
   }
