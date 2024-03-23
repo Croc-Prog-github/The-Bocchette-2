@@ -7,11 +7,14 @@ Il team di The Bocchette 2, è felice per tua iniziativa di contribuire, ma prim
 - Se è un **problema riguardante la sicurezza**, usa: [Segnala una vulnerabilità di sicurezza](https://github.com/Croc-Prog-github/The-Bocchette-2/security/advisories/new). Si prega di non segnalare vulnerabilità di sicurezza tramite Issue pubblici.
 
 ### Passaggi per contribuire
-1. **Sciegli il tipo di Issue**: 
-  - Hai una idea per una nuova funzionalità? Utilizza: [Richiedi nuova funzionalità](https://github.com/Croc-Prog-github/The-Bocchette-2/issues/new?assignees=&labels=Richiedi+funzionalit%C3%A0&projects=&template=richiedi-funzionalit%C3%A0.md&title=)
-  - Hai trovato un errore/problema? Utilizza: [Segnala un Bug](https://github.com/Croc-Prog-github/The-Bocchette-2/issues/new?assignees=&labels=Bug&projects=&template=segnala-un-bug.md&title=)
-  - Hai trovato errori/imprecisioni nella documentazione (contenuta nella Wiki di GitHub)? Utilizza: [Problemi nella documentazione]()
+- **Sciegli il tipo di Issue**: 
+  - Hai una idea per una **nuova funzionalità**? Utilizza: [Richiedi nuova funzionalità](https://github.com/Croc-Prog-github/The-Bocchette-2/issues/new?assignees=&labels=Richiedi+funzionalit%C3%A0&projects=&template=richiedi-funzionalit%C3%A0.md&title=)
+  - Hai trovato un **errore/problema**? Utilizza: [Segnala un Bug](https://github.com/Croc-Prog-github/The-Bocchette-2/issues/new?assignees=&labels=Bug&projects=&template=segnala-un-bug.md&title=)
+  - Hai trovato errori/imprecisioni nella **documentazione** (contenuta nella Wiki di GitHub)? Utilizza: [Problemi nella documentazione](https://github.com/Croc-Prog-github/The-Bocchette-2/issues/new?assignees=&labels=Docs+Issue&projects=&template=problemi-documentazione.md&title=)
+- **Compila il modulo**: Completa le informazioni richieste nel modulo, fornisci abbastanza informazioni in maniera chiara. Seguendo questi requisiti è più probabile che il tuo problema/richiesta venga compreso e implementato/risolto.
 
+Grazie per aver contribuito a rendere The Bocchette 2 ancora meglio! 🚀🎉
+<hr>
 
 ## Risolvi un Issue
 ### Prima di iniziare
@@ -36,4 +39,4 @@ Il team di The Bocchette 2, è felice per tua iniziativa di contribuire, ma prim
 ```
 7. **Pull Request**: Apri una Pull Request sul repository. Assicurati di descrivere chiaramente le tue modifiche.
 
-Grazie per aver contribuito a rendere The Bocchette 2 ancora migliore! 🚀🎉
+Grazie per aver contribuito a rendere The Bocchette 2 ancora meglio! 🚀🎉

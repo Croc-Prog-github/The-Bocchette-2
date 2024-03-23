@@ -6,9 +6,9 @@
 # Updates
 
 # Git hub
-/.github/workflows
+/.github/github wiki
 !/.github/ISSUE_TEMPLATE
-!/.github/github wiki/*
+/.github/workflows
 
 # Vscode
 /.vs
