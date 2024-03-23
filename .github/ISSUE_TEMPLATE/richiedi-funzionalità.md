@@ -1,6 +1,6 @@
 ---
-name: Richiesta di funzionalità
-about: Hai un suggerimento per una richiesta di funzionalità? Facci sapere!
+name: Richiedi nuova funzionalità🚀
+about: Hai un suggerimento/idea per una nuova funzionalità? Facci sapere!
 title: ''
 labels: 'Richiedi funzionalità'
 assignees: ''

@@ -1,5 +1,5 @@
 ---
-name: Segnala un Bug
+name: Segnala un Bug🐛
 about: Fai la segnalazione di un errore/problema qui.
 title: ''
 labels: 'Bug'
