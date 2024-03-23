@@ -1,5 +1,5 @@
 # Contribuisci a The-Bocchette-2
-Il team di The Bocchette 2, è felice per tua iniziativa di contribuire, ma prima ti chiediamo di seguire le istruzioni qui per avere info su come contribuire al meglio.
+Il team di The Bocchette 2 è felice per tua iniziativa di contribuire, ma prima ti chiediamo di seguire le istruzioni qui per avere info su come contribuire al meglio.
 
 ## Nuovo Issue
 ### Prima di inizare
