@@ -4,6 +4,14 @@
 /node_modules/.bin
 
 # Updates
+!/node_modules/.vite
+!/node_modules/@colyseus
+!/node_modules/body-parser
+!/node_modules/cookie
+!/node_modules/express
+!/node_modules/postcss
+!/node_modules/raw-body
+!/node_modules/vite
 
 # Git hub
 /.github/github wiki
