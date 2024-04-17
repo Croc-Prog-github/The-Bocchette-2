@@ -34,12 +34,12 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
-          subfolder: 'path/to/your/subfolder'
+          subfolder: '/.github/github_pages'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload only the specified subfolder
-          path: 'path/to/your/subfolder'
+          path: '/.github/github_pages'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
