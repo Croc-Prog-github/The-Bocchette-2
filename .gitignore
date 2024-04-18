@@ -5,10 +5,10 @@
 
 # Updates
 
-# GitHub
+# Git hub
 /.github/github wiki
 !/.github/ISSUE_TEMPLATE
-!/.github/workflows
+/.github/workflows
 
 # Vscode
 /.vs
