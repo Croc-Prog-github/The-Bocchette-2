@@ -4,11 +4,6 @@
 /node_modules/.bin
 
 # Updates
-!/node_modules/.vite/deps
-!/node_modules/@colyseus
-!/node_modules/esbuild
-!/node_modules/postcss
-!/node_modules/vite
 
 # Git hub
 /.github/github wiki
