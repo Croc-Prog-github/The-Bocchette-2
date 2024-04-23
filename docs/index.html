@@ -10,15 +10,64 @@
   <!-- Content -->
    <link rel="icon" href="https://docs.google.com/drawings/d/e/2PACX-1vRzg3r27e7_yLyB4m8rlyFHgQ8H5d6IJtW39axawbD5u7S_eX3ezqZdtll3NBLxJYY_OUhuSGJ-jQ8T/pub?w=16&h=16" type="image/x-icon">
 </head>
-<body style="background: white;margin: 0;cursor: default;font-family: sans-serif;">
-   <div name="head" style="height: 340px;width: 100%;background-image: url('/resources/TB2/Sfondo_loading.jpg');background-position-x: center;background-position-y: bottom;background-size: cover;">
-      <hx style="width: 100%;height: 100%;display: flex;font-size: 64pt;letter-spacing: 2px;line-height: 1;color: rgba(255, 255, 255, 1);font-weight: normal;word-wrap: break-word;font-family: sans-serif;-webkit-text-size-adjust: 100%;align-items: center;justify-content: center;">The Bocchette 2</hx>
+<body style="background: white; margin: 0; cursor: default; font-family: sans-serif; overflow: visible;">
+   <div name="head" style="height: 340px; width: -webkit-fill-available; background-image: url('/resources/TB2/Sfondo_loading.jpg'); background-position-x: center; background-position-y: bottom; background-size: cover;">
+      <hx style="width: 100%;height: 100%; display: flex; font-size: 64pt; letter-spacing: 2px; line-height: 1; color: rgba(255, 255, 255, 1); font-weight: normal; word-wrap: break-word; font-family: sans-serif; -webkit-text-size-adjust: 100%; align-items: center; justify-content: center; text-align: -webkit-center;">The Bocchette 2</hx>
    </div>
-   <div name="body" style="width: -webkit-fill-available;display: flex;flex-direction: column;padding-inline: 9.5rem;">
-      <div style="padding: 14px 8px;font-size: 25px;">
-         Anticipazioni e News
+   <div name="body" style="width: -webkit-fill-available; display: flex; flex-direction: column; padding-inline: 15%; margin-top: 25px;">
+      <div name="Notizie">
+         <div style="padding: 14px 8px; font-size: 25pt;">
+            Notizie e Anticipazioni
+         </div>
+         <div style="padding: 14px 8px; font-size: 10pt; padding-top: 0;">
+            Dall'alto verso il basso le notizie più recenti.
+         </div>
+         <div name="Contenuti Notizie" style="display: flex; flex-direction: column; align-items: center;">
+            <div style="display: flex; flex-direction: column; padding: 8px; align-items: flex-start; margin-block: 15px;">
+               <tit>
+                  Le armi saranno apparte. Si migliorano IU delle tecniche
+               </tit>
+               <desc>
+                  Nel frattempo i Creatori hanno sviluppato nuove interfaccie: infatti ora per selezionare le tecniche puoi visualizzarle dettagliatamente una per una.
+                  Inoltre è si annuncia che la presenza di armi ci sarà in una modalità di gioco apparte.
+               </desc>
+            </div>
+
+            <div style="display: flex; flex-direction: column; padding: 8px; align-items: flex-start; margin-block: 15px;">
+               <tit>
+                  No armi iper-particolari: si vira all'Energia
+               </tit>
+               <desc>
+                  Col tempo si è però fatta strada un alto tipo di meccanica di gioco: magia e tecniche di combattimento, ancora non abbiamo chiarito dettagli, ma sveliamo che: ogni personaggio avrà abilità uniche + la scielta di tecniche configurabili in tasti della tastiera.
+                  Inoltre per eseguire queste tecniche il personaggio avrà a disposizione una barra di energia ricaricabile col tempo.
+                  Progettiamo che il tempo di ricarica sia variato dal grado o dalla rarità del personaggio.
+               </desc>
+            </div>
+         </div>
       </div>
+      
    </div>
 
 </body>
 </html>
+
+<style>
+   tit{
+      font-family: 'Times New Roman', Arial;
+      vertical-align: baseline;
+      font-size: 20.0pt;
+      padding-bottom: 18px;
+   }
+   desc{
+      font-family: Arial;
+      font-size: 14pt;
+      font-weight: 400; 
+      vertical-align: baseline;
+   }
+
+   ::-webkit-scrollbar {
+      height: 16px;
+      overflow: visible;
+      width: 16px;
+   }
+</style>
