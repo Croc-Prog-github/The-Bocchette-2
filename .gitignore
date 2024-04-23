@@ -4,6 +4,22 @@
 /node_modules/.bin
 
 # Updates
+!/node_modules/.vite/deps
+!/node_modules/@colyseusnode_modules/@colyseus
+!/node_modules/@gamestdio
+!/node_modules/@types
+!/node_modules/call-bind
+!/node_modules/colyseus
+!/node_modules/get-intrinsic
+!/node_modules/has-proto
+!/node_modules/ms
+!/node_modules/node
+!/node_modules/object-inspect
+!/node_modules/postcss
+!/node_modules/side-channel
+!/node_modules/source-map-js
+!/node_modules/typescriptnode_modules/typescript
+!/node_modules/vite
 
 # Git hub
 /.github/github wiki
