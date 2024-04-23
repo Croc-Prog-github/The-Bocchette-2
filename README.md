@@ -34,6 +34,8 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
 </table>
 -->
 
+[Approfondimenti e Statistiche](https://repo-tracker.com/r/gh/Croc-Prog-github/The-Bocchette-2)
+
 **Caratteristiche principali:**
 - Invita Player online.
 - Crea e pubblica mappe in Creativa.
