@@ -3,10 +3,10 @@
   <head>
     <title>Console</title>
     <link rel="stylesheet" href="console.css">
-    <script src="/cons/comands.js"></script>
     <script>document.addEventListener("contextmenu", function (e) {e.preventDefault();});</script>
+    
   </head>
-  <body style="background: rgb(50, 50, 50);color: white;font-family: monospace;display: flex;flex-direction: column;margin: 0;align-items: flex-start;overflow: hidden;">
+  <body style="background: rgb(50, 50, 50);color: white; font-family: monospace; display: flex; flex-direction: column; margin: 0; align-items: flex-start; overflow: hidden;">
     
     <div style="display: flex; flex-direction: row; justify-content: flex-start; width: 100%; overflow: auto;">
       <button class="name_console">Main Console</button>
@@ -21,10 +21,55 @@
 
       </div>
 
-      <div style="display: flex; flex-direction: row; justify-content: space-between;">
-        <input type="text" id="inp" placeholder="digita: @, / per iniziare..." autocomplete="off" spellcheck="false" style="width: 94.3%; height: 1.5em; background: black; color: white; border: solid 1px white; font-family: monospace;">
-        <button style="font-family: cursive;" title="Enter" onclick="Enter()">&lt;┘</button>
+      <div style="display: flex; flex-direction: row; justify-content: space-between; width: -webkit-fill-available;">
+        <input type="text" id="inp" placeholder="digita: @, / per iniziare..." autocomplete="off" spellcheck="false" style="width: -webkit-fill-available; height: 1.5em; background: black; color: white; border: solid 1px white; font-family: monospace;">
+        <button style="font-family: cursive; background-image: url('/cons/Keyboard_return.svg'); background-repeat: round; width: 50px; background-size: cover; outline: none; border-style: ridge; background-color: white;" title="Enter" onclick="Enter()">
+          <!-- &lt;┘ -->
+          
+        </button>
       </div>
     </div>
+
   </body>
 </html>
+
+<script>
+  const inp = document.getElementById('inp');
+const out = document.getElementById('out');
+
+inp.placeholder = 'digita: @, / per iniziare...';
+
+function Enter() {
+    let comand = inp.value;
+
+    if (comand == '--help') {
+        out.innerText += comand;
+        out.innerHTML += '<br>';
+        window.open('https://github.com/Croc-Prog-github/The-Bocchette-2/wiki/Guida-Terminale-The-Bocchette-2', '_blank');
+    }
+    else if (comand == '--clear') {
+        out.innerHTML = 'The Bocchette 2 Console<br>Digita: --help per consultare la guida<br>';
+    }
+    else if (/^@ [^\s]+$/.test(comand)) {
+        inp.placeholder = 'Digita: break per dissociare utente; comandi indirizzati a:' + comand;
+
+        out.innerText += comand;
+        out.innerHTML += '<br>';
+        out.innerText += 'Comandi indirizzati a utente:' + comand;
+        out.innerHTML += '<br>';
+    } if (comand == 'break') {
+        out.innerText += comand;
+        out.innerHTML += '<br>';
+        inp.placeholder = 'digita: @, / per iniziare...';
+    }
+    else {
+        out.innerText += comand;
+        out.innerHTML += '<br>';
+        out.innerText += 'Comando sconosciuto.';
+        out.innerHTML += '<br>';
+    }
+
+
+    inp.value = '';
+}
+</script>
