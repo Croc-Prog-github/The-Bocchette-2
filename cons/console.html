@@ -3,6 +3,7 @@
   <head>
     <title>Console</title>
     <link rel="stylesheet" href="console.css">
+    <script src="/cons/comands.js"></script>
     <script>document.addEventListener("contextmenu", function (e) {e.preventDefault();});</script>
   </head>
   <body style="background: rgb(50, 50, 50);color: white;font-family: monospace;display: flex;flex-direction: column;margin: 0;align-items: flex-start;overflow: hidden;">
@@ -27,44 +28,3 @@
     </div>
   </body>
 </html>
-
-<script>
-  const inp = document.getElementById('inp');
-  const out = document.getElementById('out');
-
-  inp.placeholder = 'digita: @, / per iniziare...';
-
-  function Enter() { 
-    let comand = inp.value;
-
-    if (comand == '--help') {
-      out.innerText += comand;
-      out.innerHTML += '<br>';
-      window.open('https://github.com/Croc-Prog-github/The-Bocchette-2/wiki/Guida-Terminale-The-Bocchette-2', '_blank');
-    }
-    else if (comand == '--clear') {
-      out.innerHTML = 'The Bocchette 2 Console<br>Digita: --help per consultare la guida<br>';
-    }
-    else if (/^@ [^\s]+$/.test(comand)) {
-      inp.placeholder = 'Digita: break per dissociare utente; comandi indirizzati a:' + comand;
-
-      out.innerText += comand;
-      out.innerHTML += '<br>';
-      out.innerText += 'Comandi indirizzati a utente:' + comand;
-      out.innerHTML += '<br>';
-    } if (comand == 'break') {
-      out.innerText += comand;
-      out.innerHTML += '<br>';
-      inp.placeholder = 'digita: @, / per iniziare...';
-    }
-    else {
-      out.innerText += comand;
-      out.innerHTML += '<br>';
-      out.innerText += 'Comando sconosciuto.';
-      out.innerHTML += '<br>';
-    }
-
-
-    inp.value = '';
-  }
-</script>
