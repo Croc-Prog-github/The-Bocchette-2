@@ -15,7 +15,7 @@ jobs:
     - name: Setup di Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '14'
+        node-version: '20'
 
     - name: Installa dipendenze
       run: npm install
