@@ -69,11 +69,13 @@
       <button name="miss" onclick="window.location.href = '/game/GameMood/Miss_story.html';" style="background: lightgray; border: solid 3px gray;">Missioni storia</button>
     </div>
 
-    <div style="position: fixed; z-index: 4 ;margin-top: -5%; display: none; margin-left: 30%;flex-direction: column;align-items: stretch;" id="MinImpo" hidden="true">
-      <div style="width: 95.5%;height: 25px;background: white;" hidden="true"></div>
+    <div id="MinImpo" style="display: none; justify-content: center; align-content: center; flex-wrap: wrap; width: -webkit-fill-available; height: -webkit-fill-available; position: absolute; top: 0; /*z-index: 2;*/">
+      <div style="display: flex; z-index: 2; flex-direction: column;">
+        <div style="width: 95.5%; height: 25px; background: white;" hidden="true"></div>
 
-      <button style="background: indianred;border: solid 3px darkred;font: message-box;position: relative;" onclick="CSett()">X</button>
-      <iframe src="/game/impo.html" frameborder="1.5" style="width: 600px;height: 400px;"></iframe>
+        <button style="background: indianred;border: solid 3px darkred;font: message-box;position: relative;" onclick="CSett()">X</button>
+        <iframe src="/game/impo.html" frameborder="1.5" style="width: 600px;height: 400px;"></iframe>
+      </div>
     </div>
 
     <div style="position: absolute; z-index: 3; display: none; top: 19%; left: 29%;" name="Console Globale" id="Console">
@@ -135,11 +137,12 @@
       <button onclick="OpnMP()" aria-label="1 giocatori online" id="invit2" style="border-radius: 6px; border-style: double; font-variant-caps: small-caps;background-image: linear-gradient(40deg, darkgray, white); border-bottom: solid black 3px; cursor: pointer;">+</button>
     </div>
 
-    <div style="position: fixed; z-index: 3; margin-top: -19%; margin-left: 28%; display: none; flex-direction: column;" name="Invita player" id="MultiP">
-      <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="ClosMP()">X</button><div style="padding-left: 95.7%; background: white;" hidden="">
-        
+    <div name="Invita player" id="MultiP" style="position: absolute;  top: 0; display: none; flex-direction: row; width: -webkit-fill-available; justify-content: center; height: -webkit-fill-available; align-content: center; flex-wrap: wrap;">
+      <div style="/*position: absolute;*/ z-index: 3; display: flex; flex-direction: column;">
+        <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="ClosMP()">X</button>
+        <div style="padding-left: 95.7%; background: white;" hidden=""></div>
+        <iframe src="/game/multiP/onlineUser.html" height="400px" width="650px"></iframe>
       </div>
-      <iframe src="/game/multiP/onlineUser.html" height="400px" width="650px"></iframe>
     </div>
 
     <div style="display: flex;flex-direction: row-reverse;" name="menù princ" id="M_princ">
