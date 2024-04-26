@@ -25,6 +25,14 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
   ![Licenze](https://img.shields.io/badge/licenze-MIT-blue?link=https%3A%2F%2Fgithub.com%2FCroc-Prog-github%2FThe-Bocchette-2%2Fblob%2Fmain%2FLICENSE.md)
 </div>
 
+<div align="center">
+
+  **Altri siti:**
+  [TB2 Extra website](https://croc-prog-github.github.io/The-Bocchette-2/)
+  |
+  [Statistiche](https://repo-tracker.com/r/gh/Croc-Prog-github/The-Bocchette-2)
+</div>
+
 <!--
 <table>
   <tr>
@@ -33,8 +41,6 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
   </tr>
 </table>
 -->
-
-[Approfondimenti e Statistiche](https://repo-tracker.com/r/gh/Croc-Prog-github/The-Bocchette-2)
 
 **Caratteristiche principali:**
 - Invita Player online.
