@@ -78,11 +78,13 @@
       </div>
     </div>
 
-    <div style="position: absolute; z-index: 3; display: none; top: 19%; left: 29%;" name="Console Globale" id="Console">
-      <div style="display: flex; justify-content: flex-end;background: white;">
-        <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="Cons(0)">X</button>
+    <div style="width: -webkit-fill-available; display: flex; flex-wrap: wrap; align-content: center; justify-content: center;">
+      <div style="position: absolute; z-index: 2; display: none; top: 19%;" name="Console Globale" id="Console">
+        <div style="display: flex; justify-content: flex-end;background: white;">
+          <button style="background: indianred; border: solid 3px darkred; font: message-box;" onclick="Cons(0)">X</button>
+        </div>
+        <iframe src="/cons/console.html" height="400px" width="650px" style="border-style: solid;"></iframe>
       </div>
-      <iframe src="/cons/console.html" height="400px" width="650px" style="border-style: solid;"></iframe>
     </div>
 
     <div style="display: flex; justify-content: center;">
