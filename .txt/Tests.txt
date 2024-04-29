@@ -1,7 +1,11 @@
-// Test Casse
+// Test Casse (JS)
 NCassRar = parseInt(NCassRar) + 10;
 NCassCom = parseInt(NCassCom) + 10;
 
-// Server Archiviaz. AWS (IDE console)
+// Server Archiviaz. AWS (bash/zsh)
 cd ServerService/Account-Server
 tsc AccServ.ts
+
+// 2 porte contemporaneamente (bash)
+chmod +x ServerService/start.sh   //permessi di esecuzione
+./ServerService/start.sh     //esegue start.sh

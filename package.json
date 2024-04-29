@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "yarn install && yarn run dev && cd ServerService/MultiP-server && npm start",
+    "start": "yarn install && yarn run dev && cd /The-Bocchette-2/ServerService/MultiP-server && sleep 5 && npm start",  
     "test": "jest"
   },
   "devDependencies": {
