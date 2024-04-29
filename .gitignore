@@ -7,8 +7,8 @@
 
 # Git hub
 /.github/github wiki
-!/.github/ISSUE_TEMPLATE
-/.github/workflows
+/.github/ISSUE_TEMPLATE
+!/.github/workflows
 
 # Vscode
 /.vs
