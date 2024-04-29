@@ -19,10 +19,10 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
   <!-- ![Downloads](https://img.shields.io/github/downloads/Croc-Prog-github/The-Bocchette-2/total) -->
   ![GitHub Repo stars](https://img.shields.io/github/stars/Croc-Prog-github/The-Bocchette-2?style=flat&color=yellow)
   ![Repo size](https://img.shields.io/github/repo-size/Croc-Prog-github/The-Bocchette-2)
-  ![Manteined](https://img.shields.io/badge/Aggiornamenti-SI!-green)
   ![Contributors](https://img.shields.io/github/contributors/Croc-Prog-github/The-Bocchette-2)
   ![Code quality](https://img.shields.io/badge/Code%20Quality-A-lighgreen?style=flat)
   ![Licenze](https://img.shields.io/badge/licenze-MIT-blue?link=https%3A%2F%2Fgithub.com%2FCroc-Prog-github%2FThe-Bocchette-2%2Fblob%2Fmain%2FLICENSE.md)
+  <!-- ![Manteined](https://img.shields.io/badge/Aggiornamenti-SI!-green) -->
 </div>
 
 <div align="center">
