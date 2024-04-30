@@ -12,6 +12,8 @@
 
 # Vscode
 /.vs
+/dist
+/.Vscode
 
 # Credenziali server
 /ServerService/Account-Server/AccServ.ts
