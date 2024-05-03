@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "chmod +x ServerService/start.sh && ./ServerService/start.sh",  
+    "start": "chmod +x ServerService/start.sh && ./ServerService/start.sh",
     "test": "jest"
   },
   "devDependencies": {
@@ -25,5 +25,9 @@
     "json": "^11.0.0",
     "node": "^20.7.0",
     "typescript": "^5.2.2"
-  }
+  },
+  "main": "index.js || index.html",
+  "repository": "https://github.com/Croc-Prog-github/The-Bocchette-2",
+  "author": "Croc-Prog-github <119326147+Croc-Prog-github@users.noreply.github.com>",
+  "license": "MIT"
 }
