@@ -1,7 +1,5 @@
 #!/bin/bash
 
-npm start
-
 # Avvia yarn install e yarn run dev in background
 (yarn install && yarn run dev) &
 
