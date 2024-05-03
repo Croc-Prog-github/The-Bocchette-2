@@ -40,6 +40,8 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
     <td style="overflow: auto;"><img src="/resources/img/Pass.png" alt="Pass"></td>
   </tr>
 </table>
+
+  'For starting: npm start'
 -->
 
 **Caratteristiche principali:**
