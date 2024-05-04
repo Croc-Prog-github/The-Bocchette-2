@@ -52,22 +52,22 @@
     </div>
 
     <div style="display: flex; align-items: flex-start; flex-direction: column; margin-top: 5px;" name="butt">
-      <div name="news" style="display: flex; flex-direction: row-reverse; align-items: stretch;">
-        <button name="news" onclick="window.location.href = '/ERROR_404'" style="background-color: lightgray; border: solid 3px #9E9E9E; border-left: none;" disabled >Notizie</button>
+      <div tabindex="-1" name="news" style="display: flex; flex-direction: row-reverse; align-items: stretch;">
+        <button name="news" onclick="window.location.href = '/ERROR_404'" style="background-color: lightgray; border: solid 3px #9E9E9E; border-left: none;" disabled>Notizie</button>
         <svg height="24" viewBox="0 -960 960 960" width="24" style="background: lightgrey; border: solid 3px #9E9E9E; border-right: none;">
           <path style="fill: darkgray;" d="M160-120q-33 0-56.5-23.5T80-200v-640l67 67 66-67 67 67 67-67 66 67 67-67 67 67 66-67 67 67 67-67 66 67 67-67v640q0 33-23.5 56.5T800-120H160Zm0-80h280v-240H160v240Zm360 0h280v-80H520v80Zm0-160h280v-80H520v80ZM160-520h640v-120H160v120Z"/>
         </svg>
       </div>
       <div name="shop" onclick="window.location.href = '/game/shop.html';" style="display: flex; flex-direction: row-reverse; align-items: stretch;">
         <div id="ShopLabel" data-html="NUOVO" style="width: auto; height: 20px; font-size: small; box-shadow: -1px 2px 1px rgba(0, 0, 0, 0.25); border-radius: 1px; display: flex; align-items: center; outline: solid 1px black;">NUOVO</div>
-        <button name="shop" style="background: lightgray;border: solid 3px gray;border-left: none;">Negozio</button>
+        <button tabindex="-1" name="shop" style="background: lightgray;border: solid 3px gray;border-left: none;">Negozio</button>
         <svg height="24" viewBox="0 -960 960 960" width="24" style="background: lightgrey; border: solid 3px gray; border-right: none;">
           <path d="M160-720v-80h640v80H160Zm0 560v-240h-40v-80l40-200h640l40 200v80h-40v240h-80v-240H560v240H160Zm80-80h240v-160H240v160Zm-38-240h556-556Zm0 0h556l-24-120H226l-24 120Z"></path>
         </svg>
       </div>
-      <button name="bocch" onclick="window.location.href = '/game/MenuBocch/SelectBocch.html';" style="background: lightgray; border: solid 3px gray;" >Seleziona Bocchetta</button>
-      <button name="MenuTecnic" onclick="window.location.href = '/game/MenuTecnic.html';" style="background: lightgray; border: solid 3px gray;">Seleziona Tecnica</button>
-      <button name="miss" onclick="window.location.href = '/game/GameMood/Miss_story.html';" style="background: lightgray; border: solid 3px gray;">Missioni storia</button>
+      <button tabindex="-1" name="bocch" onclick="window.location.href = '/game/MenuBocch/SelectBocch.html';" style="background: lightgray; border: solid 3px gray;" >Seleziona Bocchetta</button>
+      <button tabindex="-1" name="MenuTecnic" onclick="window.location.href = '/game/MenuTecnic.html';" style="background: lightgray; border: solid 3px gray;">Seleziona Tecnica</button>
+      <button tabindex="-1" name="miss" onclick="window.location.href = '/game/GameMood/Miss_story.html';" style="background: lightgray; border: solid 3px gray;">Missioni storia</button>
     </div>
 
     <div id="MinImpo" style="display: none; justify-content: center; align-content: center; flex-wrap: wrap; width: -webkit-fill-available; height: -webkit-fill-available; position: absolute; top: 0; /*z-index: 2;*/">
@@ -91,7 +91,7 @@
     <div style="display: flex; justify-content: center;">
       <div style="display: grid; align-content: center; justify-items: center;">
         Componenti extra:<!--<br>-->
-        <select name="Seleziona Tecnica" style="border-radius: 5px; border-bottom: solid black 3px; /*appearance: none;*/ border-right: outset; text-align: center; padding-block: 0px; border-top-style: outset; outline-style: none;">
+        <select name="Seleziona Tecnica" tabindex="-1" style="border-radius: 5px; border-bottom: solid black 3px; /*appearance: none;*/ border-right: outset; text-align: center; padding-block: 0px; border-top-style: outset; /*outline-style: none;*/">
           <option value="opzione1" selected>Scettro: Oro, 5 Anelli</option>
           <option value="opzione2">Sfere elementi: Fuoco, Energia</option>
           <option value="opzione3">Occhio premonitore (aimbot)</option>
@@ -104,7 +104,7 @@
       <div style="margin-right: 15px; display: grid; align-content: center; justify-items: center;">
         Slot tecnica 1 (E)
         <!--<br>-->
-        <button id="Tecnic1" value="dispersione" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; border-right: outset;text-align: center; padding-block: 0px; border-top-style: outset; outline-style: none;">dispersione</button>
+        <button tabindex="-1" id="Tecnic1" value="dispersione" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; border-right: outset;text-align: center; padding-block: 0px; border-top-style: outset; outline-style: none;">dispersione</button>
         <!--
         <select id="Tecnic1" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; /*outline-style: outset;*/ border-right: outset;text-align: center;">
           <option value="dispersione">dispersione</option>
@@ -118,7 +118,7 @@
       <div style="/*margin-right: 15px;*/ display: grid; align-content: center; justify-items: center;">
         Slot tecnica 2 (F)
         <!--<br>-->
-        <button id="Tecnic2" value="taglio netto" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; border-right: outset;text-align: center; padding-block: 0px; border-top-style: outset; outline-style: none;">taglio netto</button>
+        <button tabindex="-1" id="Tecnic2" value="taglio netto" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; border-right: outset;text-align: center; padding-block: 0px; border-top-style: outset; outline-style: none;">taglio netto</button>
         <!--
         <select id="Tecnic2" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; /*outline-style: outset;*/ border-right: outset;text-align: center;">
           <option value="taglio netto">taglio netto</option>
@@ -131,13 +131,13 @@
     </div>
 
     <div style="display: flex; flex-direction: row; justify-content: space-around; margin-top: 15vh;">
-      <button onclick="OpnMP()" aria-label="1 giocatori online" id="invit1" style="border-radius: 6px; border-style: double; font-variant-caps: small-caps;background-image: linear-gradient(40deg, darkgray, white); border-bottom: solid black 3px; cursor: pointer; background-image: url('/resources/SVG/Add_circle.svg'); background-repeat: round; width: 23px;">-</button>
+      <button tabindex="-1" onclick="OpnMP()" aria-label="1 giocatori online" id="invit1" style="border-radius: 6px; border-style: double; font-variant-caps: small-caps;background-image: linear-gradient(40deg, darkgray, white); border-bottom: solid black 3px; cursor: pointer; background-image: url('/resources/SVG/Add_circle.svg'); background-repeat: round; width: 23px;">-</button>
 
       <div style="position: absolute; width: 34%; height: 44%; top: 39%; background: aqua;">
         <!--<iframe src="https://stackblitz.com/edit/stackblitz-starters-zngytt?ctl=1&embed=1&hideExplorer=1&hideNavigation=1&view=preview" frameborder="0" style="width: -webkit-fill-available; height: -webkit-fill-available;"></iframe>-->
       </div>
 
-      <button onclick="OpnMP()" aria-label="1 giocatori online" id="invit2" style="border-radius: 6px; border-style: double; font-variant-caps: small-caps;background-image: linear-gradient(40deg, darkgray, white); border-bottom: solid black 3px; cursor: pointer; background-image: url('/resources/SVG/Add_circle.svg'); background-repeat: round; width: 23px;">-</button>
+      <button tabindex="-1" onclick="OpnMP()" aria-label="1 giocatori online" id="invit2" style="border-radius: 6px; border-style: double; font-variant-caps: small-caps;background-image: linear-gradient(40deg, darkgray, white); border-bottom: solid black 3px; cursor: pointer; background-image: url('/resources/SVG/Add_circle.svg'); background-repeat: round; width: 23px;">-</button>
     </div>
 
     <div name="Invita player" id="MultiP" style="position: absolute;  top: 0; display: none; flex-direction: row; width: -webkit-fill-available; justify-content: center; height: -webkit-fill-available; align-content: center; flex-wrap: wrap;">
@@ -153,13 +153,13 @@
     </div>
     <div id="menu" style="margin-top: 20px; margin-right: 8px; display: flex; justify-content: flex-start; flex-direction: column;">
       <div name="menùUI" style="display: block; width: fit-content; display: flex; flex-direction: column; align-items: stretch; height: 65%; justify-content: center;">
-        <button style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="rend(1)"><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h480l160 160v212q-19-8-39.5-10.5t-40.5.5v-169L647-760H200v560h240v80H200Zm0-640v560-560ZM520-40v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T863-260L643-40H520Zm300-263-37-37 37 37ZM580-100h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19ZM240-560h360v-160H240v160Zm240 320h4l116-115v-5q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"/></svg> Gestione dati</button>
-        <button style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="rend(3)"><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-200v-560 560-1 1Zm0 80q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v334q-19-7-39-10.5t-41-3.5v-320H200v560h320q0 21 3.5 41t10.5 39H200Zm560 80-56-56 63-64H600v-80h167l-63-64 56-56 160 160L760-40ZM440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Z"/></svg> Modalità di gioco</button>
-        <button style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="OSett()"><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-280h80l12-60q12-5 22.5-10.5T576-364l58 18 40-68-46-40q2-14 2-26t-2-26l46-40-40-68-58 18q-11-8-21.5-13.5T532-620l-12-60h-80l-12 60q-12 5-22.5 10.5T384-596l-58-18-40 68 46 40q-2 14-2 26t2 26l-46 40 40 68 58-18q11 8 21.5 13.5T428-340l12 60Zm40-120q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg> Impostazioni</button>
-        <button style="display: flex; align-items: center; justify-content: center; margin-top: 15px; margin-inline: 10px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="rend(2)"><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg> Guida e assistenza</button>
-        <button style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="rend(4)"><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="m320-240 160-122 160 122-60-198 160-114H544l-64-208-64 208H220l160 114-60 198ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg> Lascia un feedback</button>
-        <button style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="rend(5)"><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="M560-680v-80h320v80H560Zm0 160v-80h320v80H560Zm0 160v-80h320v80H560Zm-240-40q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-160v-76q0-21 10-40t28-30q45-27 95.5-40.5T320-360q56 0 106.5 13.5T522-306q18 11 28 30t10 40v76H80Zm86-80h308q-35-20-74-30t-80-10q-41 0-80 10t-74 30Zm154-240q17 0 28.5-11.5T360-520q0-17-11.5-28.5T320-560q-17 0-28.5 11.5T280-520q0 17 11.5 28.5T320-480Zm0-40Zm0 280Z"/></svg> Riconoscimenti</button>
-        <button style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick=""><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm140-40-56-56 103-104-104-104 57-56 160 160-160 160Zm180 0v-80h240v80H480Z"/></svg> Console</button>      
+        <button tabindex="-1" style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="rend(1)"><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h480l160 160v212q-19-8-39.5-10.5t-40.5.5v-169L647-760H200v560h240v80H200Zm0-640v560-560ZM520-40v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T863-260L643-40H520Zm300-263-37-37 37 37ZM580-100h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19ZM240-560h360v-160H240v160Zm240 320h4l116-115v-5q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"/></svg> Gestione dati</button>
+        <button tabindex="-1" style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="rend(3)"><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-200v-560 560-1 1Zm0 80q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v334q-19-7-39-10.5t-41-3.5v-320H200v560h320q0 21 3.5 41t10.5 39H200Zm560 80-56-56 63-64H600v-80h167l-63-64 56-56 160 160L760-40ZM440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Z"/></svg> Modalità di gioco</button>
+        <button tabindex="-1" style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="OSett()"><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-280h80l12-60q12-5 22.5-10.5T576-364l58 18 40-68-46-40q2-14 2-26t-2-26l46-40-40-68-58 18q-11-8-21.5-13.5T532-620l-12-60h-80l-12 60q-12 5-22.5 10.5T384-596l-58-18-40 68 46 40q-2 14-2 26t2 26l-46 40 40 68 58-18q11 8 21.5 13.5T428-340l12 60Zm40-120q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg> Impostazioni</button>
+        <button tabindex="-1" style="display: flex; align-items: center; justify-content: center; margin-top: 15px; margin-inline: 10px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="rend(2)"><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg> Guida e assistenza</button>
+        <button tabindex="-1" style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="rend(4)"><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="m320-240 160-122 160 122-60-198 160-114H544l-64-208-64 208H220l160 114-60 198ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg> Lascia un feedback</button>
+        <button tabindex="-1" style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="rend(5)"><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="M560-680v-80h320v80H560Zm0 160v-80h320v80H560Zm0 160v-80h320v80H560Zm-240-40q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-160v-76q0-21 10-40t28-30q45-27 95.5-40.5T320-360q56 0 106.5 13.5T522-306q18 11 28 30t10 40v76H80Zm86-80h308q-35-20-74-30t-80-10q-41 0-80 10t-74 30Zm154-240q17 0 28.5-11.5T360-520q0-17-11.5-28.5T320-560q-17 0-28.5 11.5T280-520q0 17 11.5 28.5T320-480Zm0-40Zm0 280Z"/></svg> Riconoscimenti</button>
+        <button tabindex="-1" style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick=""><svg fill="#535252" height="24" viewBox="0 -960 960 960" width="24"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm140-40-56-56 103-104-104-104 57-56 160 160-160 160Zm180 0v-80h240v80H480Z"/></svg> Console</button>      
       </div>
     </div>
 
@@ -168,33 +168,33 @@
       <div name="Casse varie" style="position: relative; margin-top: 60px;">
         <div name="CASSA COMUNE" style="position: absolute;bottom: 70px;" title="Cassa Comune">
           <img src="/resources/TB2/Casse/Cassa_Comune.png" alt="Errore di fonte" style="width: 69px; margin-top: -85px;" onclick="window.location.href = '/game/cass/CCom.html';">
-          <button style="margin-top: -90px; margin-left: -23px; border: 0; background: dodgerblue; color: white; border-radius: 9px; top: 35px; position: absolute; left: 45px;" id="contaCasCom">Error</button>
+          <button tabindex="-1" style="margin-top: -90px; margin-left: -23px; border: 0; background: dodgerblue; color: white; border-radius: 9px; top: 35px; position: absolute; left: 45px;" id="contaCasCom">Error</button>
         </div>
 
         <div name="CASSA RARA" style="position: absolute;left: 82px;bottom: 70px;" title="Cassa Rara">
           <img src="/resources/TB2/Casse/Cassa_Rara.png" alt="Errore di fonte" style="width: 69px; margin-top: -85px;" onclick="window.location.href = '/game/cass/CRar.html';">
-          <button style="margin-top: -90px; margin-left: -23px;border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 45px;" id="contaCasRar">Error</button>
+          <button tabindex="-1" style="margin-top: -90px; margin-left: -23px; border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 45px;" id="contaCasRar">Error</button>
         </div>
 
         <!--
         <div name="CASSA EPICA" style="position: absolute; left: 157px; bottom: 70px;" title="Cassa Epica">
           <img src="https://docs.google.com/drawings/d/e/2PACX-1vR5oliMt5YduJ-xYWw9xTLnRgq-U5pDqVAjyEQhAdgQp4ia5vhTSDXA0men-Up_RxPt9jwMtpHRFIBU/pub?w=503&h=483" alt="Errore di fonte" style="width: 69px; margin-top: -85px;" onclick="window.location.href = '/game/cass/C.html';">
-          <button style="margin-top: -90px; margin-left: -23px;border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 45px;">Error</button>
+          <button tabindex="-1" style="margin-top: -90px; margin-left: -23px; border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 45px;">Error</button>
         </div>
 
         <div name="CASSA LEGGENDARIA" style="position: absolute; left: 231px; bottom: 70px;" title="Cassa Leggendaria">
           <img src="https://docs.google.com/drawings/d/e/2PACX-1vSayQkuTIWt9cFXplIdqjmBSqGDwnvejYTDLM38G0JJMtmcbOhcJi2eNB0u_rJfOx_G3c3ERTDstqX1/pub?w=503&h=483" alt="Errore di fonte" style="width: 69px; margin-top: -85px;" onclick="window.location.href = '/game/cass/C.html';">
-          <button style="margin-top: -90px; margin-left: -23px;border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 45px;">Error</button>
+          <button tabindex="-1" style="margin-top: -90px; margin-left: -23px; border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 45px;">Error</button>
         </div>
 
         <div name="CASSA TRIX MODE" style="position: absolute; left: 305px; bottom: 67px;" title="Cassa Trix mode">
           <img src="https://docs.google.com/drawings/d/e/2PACX-1vQ1cHRzGZaGCISyg1hEeLCWzbskb4NpiSEVCf5H9IUqI-abKId729DWveBTDeHEuBDnGp4khglDEXnJ/pub?w=503&h=482" alt="Errore di fonte" style="width: 69px; margin-top: -85px;" onclick="window.location.href = '/game/cass/C.html';">
-          <button style="margin-top: -90px; margin-left: -23px;border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 45px;">Error</button>
+          <button tabindex="-1" style="margin-top: -90px; margin-left: -23px; border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 45px;">Error</button>
         </div>
 
         <div name="CASSA INFINITY" style="position: absolute; left: 380px; bottom: 67px;" title="Cassa Infinity">
           <img src="https://docs.google.com/drawings/d/e/2PACX-1vR78PuSNYrGTmF7Ax7HtXRA_ddgxstxRZcQjA_g_k7qjklh8r-wC_Tt_rVdYxP2Y31anVAkpYK1owMD/pub?w=503&h=482" alt="Errore di fonte" style="width: 69px; margin-top: -85px;" onclick="window.location.href = '/game/cass/C.html';">
-          <button style="margin-top: -90px; margin-left: -23px;border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 45px;">Error</button>
+          <button tabindex="-1" style="margin-top: -90px; margin-left: -23px; border: 0; background: dodgerblue; color: white; border-radius: 9px ;top: 35px; position: absolute; left: 45px;">Error</button>
           <div name="effect" style="width: 80px; height: 72px; position: absolute; bottom: 1px; right: -5px; border-radius: 40px; background: radial-gradient(transparent, green); z-index: -1;" id="effect1"></div>
         </div>
         -->
@@ -204,7 +204,7 @@
         <hx style="margin-left: 6%;">Bocchet Pass</hx>
         <div style="display: flex; flex-direction: row;align-items: center;">
           <progress value="0" max="50" style="width: 90%; margin-left: 5%; margin-top: -1%; height: 35px;" id="progress"></progress> 
-          <button style="margin-right: 5%; background-color: darkgoldenrod; border: 0px; border-radius: 10px; color: white;" id="obb">Error</button>
+          <button tabindex="-1" style="margin-right: 5%; background-color: darkgoldenrod; border: 0px; border-radius: 10px; color: white;" id="obb">Error</button>
         </div>
         <img src="/resources/TB2/Pass_Premium_icon.png" alt="Errore di fonte" style="position: relative; width: 57px; bottom: 75px; left: 115px;">
       </div>
@@ -213,7 +213,7 @@
         <div style="background: white; width: 200px; height: 55px; /*border: solid 3px black;*/ border-radius: 7px;" onclick="window.location.href = '/game/event.html';">
           <img src="/resources/TB2/Game-Mode/GameMode(Battle_Royale)/Event_Sopravvivenza_Singolo.png" alt="Errore di fonte" style="width: 101%; margin-top: -10px;" id="eventS">
         </div>
-        <button style="margin-left: 5px; padding-block: 24px; margin-top: -17px; padding-inline: 15px; color: white; background-color: dodgerblue; border: solid 3px darkblue; border-radius: 8px; font-size: 20px; border-bottom: solid 6px darkblue;" onclick="play(); STecnic1(); STecnic2();">Gioca</button>
+        <button tabindex="-1" style="margin-left: 5px; padding-block: 24px; margin-top: -17px; padding-inline: 15px; color: white; background-color: dodgerblue; border: solid 3px darkblue; border-radius: 8px; font-size: 20px; border-bottom: solid 6px darkblue;" onclick="play(); STecnic1(); STecnic2();">Gioca</button>
       </div>
 
       <!--
@@ -222,7 +222,7 @@
         Chat di gruppo
         <div style="display: flex; flex-direction: row;">
           <input type="text" maxlength="100" style="height: fit-content; width: 190px; opacity: 60%; border: solid 2px black;">
-          <button style="width: -webkit-fill-available;">Invia</button>
+          <button tabindex="-1" style="width: -webkit-fill-available;">Invia</button>
         </div>
       </div>
       -->
