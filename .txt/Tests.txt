@@ -2,10 +2,22 @@
 NCassRar = parseInt(NCassRar) + 10;
 NCassCom = parseInt(NCassCom) + 10;
 
+
 // Server Archiviaz. AWS (bash/zsh)
 cd ServerService/Account-Server
 tsc AccServ.ts
 
+
 // 2 porte contemporaneamente (bash)
 chmod +x ServerService/start.sh   //permessi di esecuzione
 ./ServerService/start.sh     //esegue start.sh
+
+
+// Cambia etichetta Negozio
+let ShopLabel = document.getElementById('ShopLabel');
+ShopLabel.setAttribute('data-html', 'GRATIS');
+ShopLabel.innerText = 'GRATIS';
+
+let ShopLabel = document.getElementById('ShopLabel');
+ShopLabel.setAttribute('data-html', 'NUOVO');
+ShopLabel.innerText = 'NUOVO';

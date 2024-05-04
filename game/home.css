@@ -1,6 +1,6 @@
 #ShopLabel[data-html="NUOVO"]{
   background: orangered;
-  border-top: #ff8c8c solid 2px;
+  border-top: rgb(255, 140, 140) solid 2px;
   color: white;
   /*
   width: auto;
@@ -14,8 +14,8 @@
   */
 }
 #ShopLabel[data-html="GRATIS"]{
-  background: lightgreen;
-  border-top: rgb(157, 255, 144) solid 2px;
+  background: yellowgreen;
+  border-top: #d5f38c solid 2px;
   color: white;
 }
 
