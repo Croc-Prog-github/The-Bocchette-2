@@ -214,9 +214,9 @@
 
       <div style="display: flex;width: -webkit-fill-available;/* margin-left: 15%; */justify-content: center;margin-top: -20px;align-items: flex-end;">
         <div style="display: flex;flex-direction: column;justify-items: end;align-items: flex-end;">
-          <div style="background: lightgray;/* font-size: smaller; */width: -webkit-fill-available;">Gettoni raddoppiati rimanenti: <hx>0</hx> </div>
+          <div style="background: lightgray;/* font-size: smaller; */width: -webkit-fill-available; padding-inline: 4px;">Gettoni raddoppiati rimanenti: <hx>0</hx> </div>
           <div style="background: lightgray;width: -webkit-fill-available;height: auto;/*border: solid 3px black; border-radius: 7px;*/display: flex;flex-direction: row;justify-content: center;" onclick="window.location.href = '/game/event.html';">
-            <img src="" alt="Errore di fonte" style="width: 200px;display: block;" id="eventS">
+            <img src="" alt="Errore di fonte" style="width: 200px; height: 62px; border: solid 3px; display: block;" id="eventS">
           </div>
         </div>
 
@@ -396,7 +396,7 @@ function MP(n) {
     let evento = localStorage.getItem("event");
     console.info("L'URL dell'evento giocato è: " + evento);
     switch(evento){
-      case "https://docs.google.com/drawings/d/e/2PACX-1vThkYugncXnRrRbAC7ZgdpfKWX2xPDCN_YtkG78Gd4BCEz2D7gCjIrFjaA40TTkpxXoFnNFjq0jP9Cy/pub?w=308&h=102":
+      case "308&h=102":
         console.info("Reindirizzo all'evento: Sopravvivenza Singolo");
         window.location.href = '/game/GameMood/BattleRoyal/sopr.html';
       break;
