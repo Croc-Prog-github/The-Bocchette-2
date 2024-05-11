@@ -10,8 +10,8 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
 
 <div align="center">
 
-  ![State](https://img.shields.io/badge/State%3A-Making-white)
-  [![CodeQL](https://github.com/Croc-Prog-github/The-Bocchette-2/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)](https://github.com/Croc-Prog-github/The-Bocchette-2/actions/workflows/github-code-scanning/codeql)
+  ![State](https://img.shields.io/badge/State%3A-Making-white?style=flat-square)
+  [![CodeQL](https://github.com/Croc-Prog-github/The-Bocchette-2/actions/workflows/github-code-scanning/codeql/badge.svg?style=flat-square&branch=main)](https://github.com/Croc-Prog-github/The-Bocchette-2/actions/workflows/github-code-scanning/codeql)
 </div>
 <hr>
 <div align="center">
