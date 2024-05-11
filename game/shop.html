@@ -225,31 +225,31 @@
     <div name="Risorse">
       <div style="display: flex; flex-direction: row; align-items: center; margin-top: 20px; font-size: 2em;">Risorse</div>
       <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
-        <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
-          3 Gemme<br>
+        <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          3 Gemme
           <hr>
-          0,50 €
+          <button class="buy_it">0,50 €</button>
         </div>
 
-        <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+        <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
           10 Banconote<br>
           <hr>
           <button class="buy_it"><img src="/resources/SVG/Gemme_icon-SVG.svg"> 3</button>
         </div>
 
-        <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+        <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
           1 cassa Comune<br>
           <hr>
           <button class="buy_it"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 20</button>
         </div>
 
-        <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+        <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
           1 cassa Rara<br>
           <hr>
           <button class="buy_it"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 50</button>
         </div>
 
-        <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+        <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
           1 Livello Exp<br>
           <hr>
           <button class="buy_it"><img src="/resources/SVG/Gemme_icon-SVG.svg"> 5</button>
@@ -268,13 +268,21 @@
         </div>
       </div>
     </div>
+
+    Seleziona valùta
+    <select>
+      <option value="€" selected>Unione Europea (Euro)| €</option>
+      <option value="$">America (Dollaro) | $</option>
+      <option value="£">Inghilterra (Sterline) | £</option>
+    </select>
   </div>
 </body>
 
 </html>
 
 <style>
-  .buy_it {
+  button.buy_it {
+    height: 23.6px;
     cursor: pointer;
     background: #414c66;
     color: #fefafc;
@@ -286,7 +294,6 @@
     align-items: center;
     width: -webkit-fill-available;
   }
-
   * {
     user-select: none;
   }
