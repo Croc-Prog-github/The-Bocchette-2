@@ -1,277 +1,290 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-   <title>The Bocchette 2 - Negozio</title>
-   <!-- START <meta> -->
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- END <meta> -->
+  <title>The Bocchette 2 - Negozio</title>
+  <!-- START <meta> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- END <meta> -->
 
-   <!-- Content -->
-   <link rel="icon" href="https://docs.google.com/drawings/d/e/2PACX-1vRzg3r27e7_yLyB4m8rlyFHgQ8H5d6IJtW39axawbD5u7S_eX3ezqZdtll3NBLxJYY_OUhuSGJ-jQ8T/pub?w=16&h=16" type="image/x-icon">
-   <script src="/cons/console.js"></script>
-   <script src="/SchedDes.js"></script>
+  <!-- Content -->
+  <link rel="icon" href="https://docs.google.com/drawings/d/e/2PACX-1vRzg3r27e7_yLyB4m8rlyFHgQ8H5d6IJtW39axawbD5u7S_eX3ezqZdtll3NBLxJYY_OUhuSGJ-jQ8T/pub?w=16&h=16" type="image/x-icon">
+  <script src="/cons/console.js"></script>
+  <script src="/SchedDes.js"></script>
 </head>
 <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;background-color: #195e79ad;cursor: default;overflow: auto;margin-top: 0px;margin-inline: 8px;">
-   
-   <div style="position: fixed;width: -webkit-fill-available;z-index: 1;">
-      <div style="display: flex;flex-direction: row;justify-content: flex-start;background: #6291a4;padding-top: 8px;padding-inline: 8px;">
-         <a href="/game/home.html" style="text-decoration: none; font-size: 25px; border: solid 2px black;" title="Indietro">⬅️</a>
+
+  <div style="position: fixed;width: -webkit-fill-available;z-index: 1;">
+    <div style="display: flex;flex-direction: row;justify-content: flex-start;background: #6291a4;padding-top: 8px;padding-inline: 8px;">
+      <a href="/game/home.html" style="text-decoration: none; font-size: 25px; border: solid 2px black;" title="Indietro">⬅️</a>
+    </div>
+
+    <div style="display: flex;flex-direction: row;justify-content: space-between;margin-top: -31px;overflow-x: auto;margin-left: 41px;">
+      <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer; text-shadow: none; font-weight: normal; width: auto;">Offerte</button>
+      <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer; text-shadow: none; font-weight: normal; width: auto;">Oggetto gratis</button>
+      <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer; text-shadow: none; font-weight: normal; width: auto;">Tecniche &amp; Evoluzioni</button>
+      <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer; text-shadow: none; font-weight: normal; width: auto;">Skin</button>
+      <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer; text-shadow: none; font-weight: normal; width: auto;">Risorse</button>
+      <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer; text-shadow: none; font-weight: normal; width: auto;">Codice riscatto</button>
+    </div>
+  </div>
+
+  <div style="overflow-y: hidden;top: 25px;position: relative;z-index: 0;">
+
+    <div name="Offerte">
+      <div style="display: flex; flex-direction: row; align-items: center; margin-top: 20px; font-size: 2em;">Offerte</div>
+      <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: flex-start; overflow-x: auto; margin-top: 20px;">
+
+        <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; /*min-width: fit-content;*/">
+          <strong>Pacchetto Mega Offerte</strong><br>
+          15 Casse, 2.000 Banconote
+          <hr>
+          Costo: 3.000 Gemme<br>
+          <hx style="color: red;">Occasione</hx>
+          <details>
+            <summary style="cursor: pointer;">Visualizza</summary>
+            <div style="display: flex; flex-direction: column; cursor: default;">
+              <div style="overflow-x: auto; display: flex;">
+                <img style="width: 25%; margin-left: 5px; border: solid 2px; margin-block: 2px;" src="/resources/TB2/Casse/Cassa_Rara.png" alt="Errore di fonte">
+              </div>
+              <button class="buy_it">
+                3.000 <img src="/resources/SVG/Gemme_icon-SVG.svg">
+              </button>
+            </div>
+          </details>
+        </div>
+
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          3 Tecniche comuni<br>
+          (Casuali)
+          <hr>
+          <hx style="color: red;">Occasione</hx><br>
+          <button class="buy_it">300 <img src="/resources/SVG/Soldi_icon-SVG.svg"> (-0%)</button>
+        </div>
+
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          1 Evoluzione Rara <br>
+          Per (Bocchetta casuale)
+          <hr>
+          240 banconote (-20%)<br>
+          <hx style="color: red; text-decoration-line: line-through;">300 banconote</hx>
+        </div>
+
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          1 Tecnica Epica <br>
+          (Casuale)
+          <hr>
+          400 banconote (-20%)<br>
+          <hx style="color: red; text-decoration-line: line-through;">500 banconote</hx>
+        </div>
+
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          4 Gemme<br>
+          <hr>
+          1.45 € (-3%)<br>
+          <hx style="color: red; text-decoration-line: line-through;">1.50 €</hx>
+        </div>
+
       </div>
-
-      <div style="display: flex;flex-direction: row;justify-content: space-between;margin-top: -31px;overflow-x: auto;margin-left: 41px;">
-         <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer;">Offerte</button>
-         <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer;">Oggetto gratis</button>
-         <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer;">Tecniche &amp; Evoluzioni</button>
-         <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer;">Skin</button>
-         <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer;">Risorse</button>
-         <button style="padding-inline: 20px; background-color: dodgerblue; border: 0px; border-radius: 7px; color: white;padding-block: 5px; margin-inline: 5px; cursor: pointer;">Codice riscatto</button>
-      </div>
-   </div>
-
-   <div style="overflow-y: hidden;top: 25px;position: relative;z-index: 0;">
-      
-      <div name="Offerte">
-         <div style="display: flex; flex-direction: row; align-items: center; margin-top: 20px; font-size: 2em;">Offerte</div>
-         <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: flex-start; overflow-x: auto; margin-top: 20px;">
-
-            <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; /*min-width: fit-content;*/">
-               <strong>Pacchetto Mega Offerte</strong><br>
-               15 Casse, 2.000 Banconote
-               <hr>
-               Costo: 3.000 Gemme<br>
-               <hx style="color: red;">Occasione</hx>
-               <details>
-                  <summary style="cursor: pointer;">Visualizza</summary>
-                     <div style="display: flex; flex-direction: column; cursor: default;">
-                        <div style="overflow-x: auto; display: flex;">
-                           <img style="width: 25%; margin-left: 5px; border: solid 2px; margin-block: 2px;" src="/resources/TB2/Casse/Cassa_Rara.png" alt="Errore di fonte">
-                        </div>
-                        <button style="cursor: pointer; background: #414c66; color: #fefafc; font-weight: bold; text-shadow: 0px 2px black; border: solid 1px black; display: flex; justify-content: center; align-items: center;">
-                           3.000 <img src="/resources/SVG/Gemme_icon-SVG.svg">
-                        </button>
-                     </div>
-               </details>
-            </div>
-            
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               3 Tecniche comuni<br>
-               (Casuali)
-               <hr>
-               300 banconote (-0%)<br>
-               <hx style="color: red;">Occasione</hx>
-            </div>
-
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               1 Evoluzione Rara <br>
-               Per (Bocchetta casuale)
-               <hr>
-               240 banconote (-20%)<br>
-               <hx style="color: red; text-decoration-line: line-through;">300 banconote</hx>
-            </div>
-
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               1 Tecnica Epica <br>
-               (Casuale)
-               <hr>
-               400 banconote (-20%)<br>
-               <hx style="color: red; text-decoration-line: line-through;">500 banconote</hx>
-            </div>
-
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               4 Gemme<br>
-               <hr>
-               1.45 € (-3%)<br>
-               <hx style="color: red; text-decoration-line: line-through;">1.50 €</hx>
-            </div>
-         </div>
-      </div>
+    </div>
 
 
-      <div name="Oggetto gratis">
+    <div name="Oggetto gratis">
       <div style="display: flex; flex-direction: row; align-items: center; margin-top: 20px; font-size: 2em;">Oggetto gratis</div>
-         <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
+      <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
 
-            <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               20 Gettoni Pass<br>
-               <hr>
-               Gratuito<br>
-            </div>
-         </div>
+        <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          20 Gettoni Pass<br>
+          <hr>
+          Gratuito<br>
+        </div>
       </div>
+    </div>
 
-      <div name="Tecniche &amp; Evoluzioni">
+    <div name="Tecniche &amp; Evoluzioni">
       <div style="display: flex; flex-direction: row; align-items: center; margin-top: 20px; font-size: 2em;"> Tecniche ed Evoluzioni</div>
-         <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
+      <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
 
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Tecnica Comune<br>
-               (Casuale)
-               <hr>
-               100 banconote<br>
-            </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Tecnica Comune<br>
+          (Casuale)
+          <hr>
+          100 banconote<br>
+        </div>
 
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Tecnica Rara<br>
-               (Casuale)
-               <hr>
-               300 banconote<br>
-            </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Tecnica Rara<br>
+          (Casuale)
+          <hr>
+          300 banconote<br>
+        </div>
 
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Tecnica Epica<br>
-               (Casuale)
-               <hr>
-               500 banconote<br>
-            </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Tecnica Epica<br>
+          (Casuale)
+          <hr>
+          500 banconote<br>
+        </div>
 
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Tecnica Leggendaria<br>
-               (Casuale)
-               <hr>
-               1.000 banconote<br>
-            </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Tecnica Leggendaria<br>
+          (Casuale)
+          <hr>
+          1.000 banconote<br>
+        </div>
 
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Tecnica 6 vie<br>
-               (Casuale)
-               <hr>
-               3.000 banconote<br>
-            </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Tecnica 6 vie<br>
+          (Casuale)
+          <hr>
+          3.000 banconote<br>
+        </div>
 
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Tecnica Infinity<br>
-               (Casuale)
-               <hr>
-               5.000 banconote<br>
-            </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Tecnica Infinity<br>
+          (Casuale)
+          <hr>
+          5.000 banconote<br>
+        </div>
 
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Evoluzione Rara<br>
-               Per (Bocchetta casuale)
-               <hr>
-               300 banconote<br>
-            </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Evoluzione Rara<br>
+          Per (Bocchetta casuale)
+          <hr>
+          300 banconote<br>
+        </div>
 
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Evoluzione Super-rara<br>
-               Per (Bocchetta casuale)
-               <hr>
-               500 banconote<br>
-            </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Evoluzione Super-rara<br>
+          Per (Bocchetta casuale)
+          <hr>
+          500 banconote<br>
+        </div>
 
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Evoluzione Epica<br>
-               Per (Bocchetta casuale)
-               <hr>
-               900 banconote<br>
-            </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Evoluzione Epica<br>
+          Per (Bocchetta casuale)
+          <hr>
+          900 banconote<br>
+        </div>
 
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Evoluzione Leggendaria<br>
-               Per (Bocchetta casuale)
-               <hr>
-               1.200 banconote<br>
-            </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Evoluzione Leggendaria<br>
+          Per (Bocchetta casuale)
+          <hr>
+          1.200 banconote<br>
+        </div>
 
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Evoluzione Immortal<br>
-               Per (Bocchetta casuale)
-               <hr>
-               2.000 banconote<br>
-            </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Evoluzione Immortal<br>
+          Per (Bocchetta casuale)
+          <hr>
+          2.000 banconote<br>
+        </div>
 
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Evoluzione 6 vie<br>
-               Per (Bocchetta casuale)
-               <hr>
-               5.000 banconote<br>
-            </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Evoluzione 6 vie<br>
+          Per (Bocchetta casuale)
+          <hr>
+          5.000 banconote<br>
+        </div>
 
-            <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Evoluzione Trix Mode<br>
-               Per (Bocchetta casuale)
-               <hr>
-               10.000 banconote<br>
-            </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Evoluzione Trix Mode<br>
+          Per (Bocchetta casuale)
+          <hr>
+          10.000 banconote<br>
+        </div>
 
-            <div style="width: 210px; height: 100px; background: white; /*margin-right: 7px;*/ cursor: pointer; min-width: fit-content;">
-               Evoluzione Infinity<br>
-               Per (Bocchetta casuale)
-               <hr>
-               100.000 banconote<br>
-            </div>
-         </div>
+        <div style="width: 210px; height: 100px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Evoluzione Infinity<br>
+          Per (Bocchetta casuale)
+          <hr>
+          100.000 banconote<br>
+        </div>
       </div>
+    </div>
 
-      <div name="Skin">
+    <div name="Skin">
       <div style="display: flex; flex-direction: row; align-items: center; margin-top: 20px; font-size: 2em;">Skin</div>
-         <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
-            <div style="width: 210px; height: 150px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               Skin Name<br>
-               <hr>
-               <img src="" alt="Errore di fonte">
-               <hr>
-               150 Gemme
-            </div>
-
-         </div>
+      <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
+        <div style="width: 210px; height: 150px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          Skin Name<br>
+          <hr>
+          <img src="" alt="Errore di fonte">
+          <hr>
+          150 Gemme
+        </div>
       </div>
+    </div>
 
-      <div name="Risorse">
+    <div name="Risorse">
       <div style="display: flex; flex-direction: row; align-items: center; margin-top: 20px; font-size: 2em;">Risorse</div>
-         <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
-            <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               3 Gemme<br>
-               <hr>
-               0,50 €
-            </div>
+      <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
+        <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          3 Gemme<br>
+          <hr>
+          0,50 €
+        </div>
 
-            <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               10 banconote<br>
-               <hr>
-               3 Gemme
-            </div>
+        <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          10 banconote<br>
+          <hr>
+          3 Gemme
+        </div>
 
-            <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               1 cassa Comune<br>
-               <hr>
-               20 banconote
-            </div>
+        <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          1 cassa Comune<br>
+          <hr>
+          20 banconote
+        </div>
 
-            <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               1 cassa Rara<br>
-               <hr>
-               50 banconote
-            </div>
+        <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          1 cassa Rara<br>
+          <hr>
+          50 banconote
+        </div>
 
-            <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: pointer; min-width: fit-content;">
-               1 Livello Exp<br>
-               <hr>
-               5 Gemme
-            </div>
-         </div>
+        <div style="width: 210px; height: 60px; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          1 Livello Exp<br>
+          <hr>
+          5 Gemme
+        </div>
       </div>
+    </div>
 
-      <div name="Codice riscatto">
+    <div name="Codice riscatto">
       <div style="display: flex; flex-direction: row; align-items: center; margin-top: 20px; font-size: 2em;">Codice riscatto</div>
-         <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
+      <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
 
-            <div style="width: 210px; height: 150px; background: white;">
-               Digita un codice valido per riscattare una ricompensa <br>
-               <input type="text" maxlength="10" placeholder=""
-                  style="margin-top: 46px; margin-inline: 20px; text-transform: uppercase;">
-               <button style="margin-inline: 64px;" onclick="alert('Il codice è errato, riprova.');">Usa codice</button>
-            </div>
-         </div>
+        <div style="width: 210px; height: 150px; background: white;">
+          Digita un codice valido per riscattare una ricompensa <br>
+          <input type="text" maxlength="10" placeholder=""
+            style="margin-top: 46px; margin-inline: 20px; text-transform: uppercase;">
+          <button style="margin-inline: 64px;" onclick="alert('Il codice è errato, riprova.');">Usa codice</button>
+        </div>
       </div>
-   </div>
+    </div>
+  </div>
 </body>
 
 </html>
 
 <style>
-   * {
-      user-select: none;
-   }
+  .buy_it {
+    cursor: pointer;
+    background: #414c66;
+    color: #fefafc;
+    font-weight: bold;
+    text-shadow: 0px 2px black;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: -webkit-fill-available;
+  }
+
+  * {
+    user-select: none;
+  }
 </style>
