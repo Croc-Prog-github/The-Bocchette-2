@@ -102,7 +102,15 @@
     let regex = /^[a-zA-Z]{3}[0-9]{3}$/; // Verifica se ci sono 3 lettere seguite da 3 numeri
     if (regex.test(SquadInp.value)) {
       console.log("Controllo formato codice superato, inizializzo...");
-      
+
+      //Passa ad un'altro script
+      import('./game/multiP/ConnectWithCode.js')
+      .then(module => {
+        //
+      })
+      .catch(error => {
+        console.error('Errore nel caricamento di file di gioco, errore: ', error);
+      });
     } else {
       window.alert('Formato non valido');
     }
