@@ -22,14 +22,20 @@
         <img src="/resources/TB2/Game-Mode/Modalità_Battle_Royale.png" alt="Errore di fonte">
       </div>
 
-      <div style="border: solid black 3px; margin-right: 20px; display: flex;">
-        <img src="/resources/TB2/Game-Mode/Modalità_Creativa.png" alt="Errore di fonte" onclick="/*alert('La modalità Creativa è disattivata.');*/ window.location.href = '/game/GameMood/creativ.html';" name="Creativa">
+      <div name="Creativa" style="border: solid black 3px; margin-right: 20px; display: flex;">
+        <img src="/resources/TB2/Game-Mode/Modalità_Creativa.png" alt="Errore di fonte" onclick="/*alert('La modalità Creativa è disattivata.');*/ window.location.href = '/game/GameMood/creativ.html';">
       </div>
 
-      <div style="background: lightskyblue; border: solid 4px black; margin-right: 20px; width: 308px; color: royalblue; text-align: center;" onclick="SMG('CampoDiProva')" name="">Campo di prova</div>
+      <div style="/*border: solid black 1px;*/ margin-right: 20px; display: flex;" onclick="SMG('CampoDiProva')">
+        <div style="background: lightskyblue; border: solid 4px black; width: 308px; color: royalblue; text-align: center; display: flex; align-items: center; justify-content: center;">
+          Campo di prova
+        </div>
+      </div>
       
       <div style="/*border: solid black 1px;*/ margin-right: 20px; display: flex;">
-        <div style="background: lightskyblue; border: solid 4px black; width: 308px; color: royalblue; text-align: center;" onclick="window.location.href = '/game/GameMood/story.html';">Storia</div>
+        <div style="background: lightskyblue; border: solid 4px black; width: 308px; color: royalblue; text-align: center; display: flex; align-items: center; justify-content: center;" onclick="window.location.href = '/game/GameMood/story.html';">
+          Storia
+        </div>
       </div>
       
     </div>
@@ -55,3 +61,9 @@
     }
   }
 </script>
+
+<style>
+  * {
+    user-select: none;
+  }
+</style>
