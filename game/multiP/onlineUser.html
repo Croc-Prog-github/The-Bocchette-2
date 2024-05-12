@@ -96,7 +96,7 @@
   }
 
   function ControlFormato() {
-    let regex = /^[a-zA-Z0-9]{3}$/; // Verifica se ci sono 3 lettere e 3 numeri senza spazi o caratteri speciali
+    let regex = /^[a-zA-Z]{3}[0-9]{3}$/; // Verifica se ci sono 3 lettere seguite da 3 numeri
     if (regex.test(SquadInp.value)) {
       window.alert(':)')
     } else {
