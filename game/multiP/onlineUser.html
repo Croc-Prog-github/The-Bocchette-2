@@ -84,23 +84,27 @@
 </html>
 
 <script> // Mostra/Nasconde EntraInSquad e verifica formato
-  function EntraInSquad() {
+document.getElementById('SquadInp').addEventListener('input', EntraInSquad);
+
+function EntraInSquad() {
     let SquadInput = document.getElementById('SquadInp');
     let EntraInSquad = document.getElementById('EntraInSquad');
 
     if (SquadInput.value.length > 0) {
-      EntraInSquad.hidden = false;
+        EntraInSquad.hidden = false;
 
-      let regex = /^[a-zA-Z0-9]{3}$/; // Verifica se ci sono 3 lettere e 3 numeri senza spazi o caratteri speciali
-      if (regex.test(SquadInput.value)) {
-          // Formato valido
-      } else {
-        window.alert("Formato non valido");
-      }
+        let regex = /^[a-zA-Z0-9]{3}$/; // Verifica se ci sono 3 lettere e 3 numeri senza spazi o caratteri speciali
+        if (regex.test(SquadInput.value)) {
+            // Inserisci un commento se il formato è valido
+            console.log('Formato valido');
+        } else {
+            // Mostra un messaggio di avviso se il formato non è valido
+            window.alert('Formato non valido');
+        }
     } else {
-      EntraInSquad.hidden = true;
+        EntraInSquad.hidden = true;
     }
-  }
+}
 </script>
 
 <script>
