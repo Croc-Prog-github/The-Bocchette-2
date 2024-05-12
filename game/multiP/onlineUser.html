@@ -84,9 +84,8 @@
 </html>
 
 <script> // Mostra/Nasconde EntraInSquad e verifica formato
-document.getElementById('SquadInp').addEventListener('input', EntraInSquad);
-
-function EntraInSquad() {
+  document.getElementById('SquadInp').addEventListener('input', EntraInSquad);
+  function EntraInSquad() {
     let SquadInput = document.getElementById('SquadInp');
     let EntraInSquad = document.getElementById('EntraInSquad');
 
@@ -104,7 +103,7 @@ function EntraInSquad() {
     } else {
         EntraInSquad.hidden = true;
     }
-}
+  }
 </script>
 
 <script>
