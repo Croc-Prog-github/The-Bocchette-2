@@ -16,6 +16,9 @@
 /dist
 /.Vscode
 
+# Colyseus
+/game/multiP/colyseus.js
+
 # Credenziali server
 /ServerService/Account-Server/AccServ.ts
 /ServerService/Account-Server/AccServ.js
