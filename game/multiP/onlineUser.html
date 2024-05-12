@@ -15,10 +15,9 @@
 
   <script src="/exit.js"></script>
   <script src="/cons/console.js"></script>
-  <script src="/game/mutiP/UserList.js"></script>
+  <script src="/game/multiP/UserList.js"></script>
   <!-- Muliplayer -->
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="client.js"></script>
+  <script src="/game/multiP/ConnectWithCode.js"></script>
 </head>
 <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, 'monospace', 'math', 'cursive';background-color: #195e79ad; display: block; opacity: 100%;">
   
@@ -101,7 +100,7 @@
   function ControlFormato() {
     let regex = /^[a-zA-Z]{3}[0-9]{3}$/; // Verifica se ci sono 3 lettere seguite da 3 numeri
     if (regex.test(SquadInp.value)) {
-      window.alert(':)');
+      console.log("Controllo formato codice superato, inizializzo...");
     } else {
       window.alert('Formato non valido');
     }
