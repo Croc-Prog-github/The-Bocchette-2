@@ -62,9 +62,18 @@
 
 
   <div name="account ospite">
-    <div style="width: -webkit-fill-available; margin-top: 0.5em; display: flex; justify-content: center;">
-      <button style="margin-inline: 5px;border: solid 1px black;border-bottom: solid 2px black;border-radius: 3px;text-shadow: 0px 1.4px 0px black;box-shadow: 0 2px 1px 0px #0000004d;color: white;background: dodgerblue;text-transform: uppercase;/*font-weight: bold;*/ cursor: pointer;">Crea codice squadra</button>
-      <button style="margin-inline: 5px;border: solid 1px black;border-bottom: solid 2px black;border-radius: 3px;text-shadow: 0px 1.4px 0px black;box-shadow: 0 2px 1px 0px #0000004d;color: white;background: dodgerblue;text-transform: uppercase;/*font-weight: bold;*/ cursor: pointer;">Entra con codice</button>
+    <div style="width: -webkit-fill-available; margin-top: 0.5em; display: flex;flex-direction: column;align-items: center;">
+      <div style="display: flex;">
+        <button style="margin-inline: 5px;border: solid 1px black;border-bottom: solid 2px black;border-radius: 3px;text-shadow: 0px 1.4px 0px black;box-shadow: 0 2px 1px 0px #0000004d;color: white;background: dodgerblue;text-transform: uppercase;/*font-weight: bold;*/ cursor: pointer;">Crea codice squadra</button>
+        <button style="margin-inline: 5px;border: solid 1px black;border-bottom: solid 2px black;border-radius: 3px;text-shadow: 0px 1.4px 0px black;box-shadow: 0 2px 1px 0px #0000004d;color: white;background: dodgerblue;text-transform: uppercase;/*font-weight: bold;*/ cursor: pointer;">Entra con codice</button>
+      </div>
+
+      <input type="text" maxlength="6" value="" placeholder="ABC123" style="margin-top: 10px; width: 50%; font-size: 1.5em; text-transform: uppercase; user-select: all; outline-style: none; letter-spacing: 6px; text-align: center; font-weight: bold;">
+
+      <div style="display: flex; margin-top: 0.5em;">
+        <button hidden id="EntraInSquad" style="margin-inline: 5px;border: solid 1px black;border-bottom: solid 2px black;border-radius: 3px;text-shadow: 0px 1.4px 0px black;box-shadow: 0 2px 1px 0px #0000004d;color: white; background: indianred; text-transform: uppercase;/*font-weight: bold;*/ cursor: pointer;">Esci dalla squadra</button>
+        <button id="EsciDaSquad" style="margin-inline: 5px;border: solid 1px black;border-bottom: solid 2px black;border-radius: 3px;text-shadow: 0px 1.4px 0px black;box-shadow: 0 2px 1px 0px #0000004d;color: white; background: mediumseagreen; text-transform: uppercase;/*font-weight: bold;*/ cursor: pointer;">Entra nella squadra</button>
+      </div>
     </div>
 
     <div name="NoAccount"></div>
