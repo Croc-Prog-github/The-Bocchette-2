@@ -19,6 +19,7 @@
   <!-- Muliplayer -->
   <script src="https://unpkg.com/colyseus.js@^0.15.0/dist/colyseus.js"></script>
   <script src="/game/multiP/ConnectWithCode.js"></script>
+  <script src="/game/multiP/example.js"></script>
 </head>
 <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, 'monospace', 'math', 'cursive';background-color: #195e79ad; display: block; opacity: 100%;">
   
@@ -82,7 +83,7 @@
     <div name="NoAccount"></div>
   </div>
 
-
+  
 </body>
 </html>
 
@@ -103,14 +104,7 @@
     if (regex.test(SquadInp.value)) {
       console.log("Controllo formato codice superato, inizializzo...");
 
-      //Passa ad un'altro script
-      import('./game/multiP/ConnectWithCode.js')
-      .then(module => {
-        //
-      })
-      .catch(error => {
-        console.error('Errore nel caricamento di file di gioco, errore: ', error);
-      });
+      ConnectWithCode();
     } else {
       window.alert('Formato non valido');
     }
