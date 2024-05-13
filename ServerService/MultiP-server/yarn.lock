@@ -826,9 +826,9 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-axios@^0.18.0:
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.1.tgz#ff3f0de2e7b5d180e757ad98000f1081b87bcea3"
+axios@^0.21.2:
+  version "0.21.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.2.tgz#ff3f0de2e7b5d180e757ad98000f1081b87bcea3"
   integrity sha512-0BfJq4NSfQXd+SkFdrvFbG7addhYSBA2mQwISr46pD6E5iqkWg02RAs8vyTT/j0RTnoYmeXauBuSv1qKwR179g==
   dependencies:
     follow-redirects "1.5.10"
@@ -3750,7 +3750,7 @@ ts@^0.2.2:
   resolved "https://registry.yarnpkg.com/ts/-/ts-0.2.2.tgz#62124118ef6212297ab7e959906b324dabf6832d"
   integrity sha512-cftcjXvrxBi6TJxwXjKZXm9g8eNClLQuEN+Yt90o0baDCpRDCCYsDEz3Uhpc5D2Wx1IZE1G1B4M8GY3OLsczzQ==
   dependencies:
-    axios "^0.18.0"
+    axios "^0.21.2"
     figures "^2.0.0"
     find-package-json "^1.1.0"
     glob "^7.1.3"
