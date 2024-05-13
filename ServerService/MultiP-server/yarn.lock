@@ -2612,7 +2612,7 @@ meow@^5.0.0:
     read-pkg-up "^3.0.0"
     redent "^2.0.0"
     trim-newlines "^3.0.1"
-    yargs-parser "^10.0.0"
+    yargs-parser "^13.1.2"
 
 meow@^6.0.0:
   version "6.1.1"
