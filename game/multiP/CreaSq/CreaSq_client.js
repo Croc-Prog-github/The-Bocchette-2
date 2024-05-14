@@ -1,7 +1,7 @@
 // Funzione per gestire la creazione di una nuova stanza
-function createNewRoom() {
+function CreaCodSq() {
   // Fai una richiesta al server per creare una nuova stanza
-  fetch('http://localhost:2567/createRoom')
+  fetch('http://127.0.0.1:2567/')
     .then(response => response.json())
     .then(data => {
       // Aggiorna l'interfaccia utente con RoomId e SessionId ottenuti dal server
