@@ -2,6 +2,8 @@
 function CreaCodSq() {
   EntraInSq(0);
   document.getElementById('roomId').style.display = 'block';
+  document.getElementById('SquadInp').value = '';
+  ToggleButton()
 
   // Fai una richiesta al server per creare una nuova stanza
   fetch('http://127.0.0.1:2567/')
