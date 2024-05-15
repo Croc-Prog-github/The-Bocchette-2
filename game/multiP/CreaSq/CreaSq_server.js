@@ -28,3 +28,14 @@ server.define("my_room", MyRoom);
 
 // Avvia il server sulla porta desiderata
 server.listen(2567);
+
+
+/*
+const reservation = await matchMaker.create("battle", { mode: "duo" });
+console.log(reservation);
+/*
+  {
+    "sessionId": "zzzzzzzzz",
+    "room": { "roomId": "xxxxxxxxx", "processId": "yyyyyyyyy", "name": "battle", "locked": false }
+  }
+*/
