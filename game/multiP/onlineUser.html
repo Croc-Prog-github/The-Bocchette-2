@@ -71,13 +71,19 @@
 
       <input type="text" maxlength="6" id="SquadInp" oninput="ToggleButton();" autocomplete="off" placeholder="ABC123" style="display: none; margin-top: 10px; width: 50%; font-size: 1.5em; text-transform: uppercase; user-select: all; outline-style: none; letter-spacing: 6px; text-align: center; font-weight: bold;">
 
-      <div style="display: flex; margin-top: 0.5em;">
-        <button hidden id="EsciDaSquad" style="margin-inline: 5px;border: solid 1px black;border-bottom: solid 2px black;border-radius: 3px;text-shadow: 0px 1.4px 0px black;box-shadow: 0 2px 1px 0px #0000004d;color: white; background: indianred; text-transform: uppercase;/*font-weight: bold;*/ cursor: pointer;">Esci dalla squadra</button>
+      <div id="EntraInSqButts" style="display: flex; margin-top: 0.5em;">
+        <button hidden style="margin-inline: 5px;border: solid 1px black;border-bottom: solid 2px black;border-radius: 3px;text-shadow: 0px 1.4px 0px black;box-shadow: 0 2px 1px 0px #0000004d;color: white; background: indianred; text-transform: uppercase;/*font-weight: bold;*/ cursor: pointer;">Esci dalla squadra</button>
         <button hidden id="EntraNellaSquadra" onclick="ControlFormato()" style="margin-inline: 5px;border: solid 1px black;border-bottom: solid 2px black;border-radius: 3px;text-shadow: 0px 1.4px 0px black;box-shadow: 0 2px 1px 0px #0000004d;color: white; background: mediumseagreen; text-transform: uppercase;/*font-weight: bold;*/ cursor: pointer;">Entra nella squadra</button>
       </div>
 
+      <div id="roomId" style="border: solid;">
+        <div style="display: none; display: block;font-size: xx-large;text-transform: uppercase;font-weight: bold;margin-inline: 45px;margin-block: 10px;background: darkseagreen;">
+          Error
+        </div>
+      </div>
+
+      <div style="font-weight: bolder;" hidden>InstanceID <hx style="font-weight: normal;">null</hx></div>
       <div style="font-weight: bolder;">SessionID: <hx id="sessionId" style="font-weight: normal;">Error</hx></div>
-      <div style="font-weight: bolder;">InstanceID <hx id="roomId" style="font-weight: normal;">null</hx></div>
     </div>
 
     <div name="NoAccount"></div>
@@ -89,6 +95,7 @@
 
 <script>
   let SquadInp = document.getElementById('SquadInp');
+  let EntraInSqButts = document.getElementById('EntraInSqButts');
 
   function EntraInSq(n) {
     if (n == 1) {

@@ -1,6 +1,8 @@
 // Funzione per gestire la creazione di una nuova stanza
 function CreaCodSq() {
   EntraInSq(0);
+  let roomId = document.getElementById('roomId');
+  roomId.style.display = 'block';
 
   // Fai una richiesta al server per creare una nuova stanza
   fetch('http://127.0.0.1:2567/')
