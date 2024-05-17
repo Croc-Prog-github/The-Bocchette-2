@@ -8,11 +8,6 @@ const client = new Colyseus.Client('ws://localhost:2567');
 document.getElementById('createRoom').addEventListener('click', async () => { 
 });
 
-EntraInSq(0);
-  document.getElementById('roomId').style.display = 'block';
-  document.getElementById('SquadInp').value = '';
-  ToggleButton();
-
 async function EntraInSq() {
   try {
     const room = await client.create('my_room');
