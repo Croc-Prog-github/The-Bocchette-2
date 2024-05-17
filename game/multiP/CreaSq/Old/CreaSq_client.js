@@ -4,7 +4,7 @@
 
 // Funzione per gestire la creazione di una nuova stanza
 function CreaCodSq() {
-  EntraInSq(0);
+  EntraInSqButt(0);
   document.getElementById('roomId').style.display = 'block';
   document.getElementById('SquadInp').value = '';
   ToggleButton()
