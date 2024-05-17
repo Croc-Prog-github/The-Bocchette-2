@@ -21,7 +21,9 @@
   <!--<script src="/game/multiP/CreaSq/Old/CreaSq_server.js"></script>
   <script src="/game/multiP/CreaSq/Old/CreaSq_client.js"></script>-->
   <script src="/game/multiP/CreaSq/New/CreaSq_server.js"></script>
-  <script src="/game/multiP/CreaSq/New/CreaSq_client.js"></script>
+  <script src="/game/multiP/CreaSq/Old/CreaSq_client.js"></script>
+
+  <script src="/game/multiP/EntraInSq/New/EntraInSq.js"></script>
 </head>
 <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, 'monospace', 'math', 'cursive';background-color: #195e79ad; display: block; opacity: 100%;">
   
@@ -72,11 +74,11 @@
       </div>
 
       <input type="text" maxlength="6" id="SquadInp" oninput="ToggleButton();" autocomplete="off" placeholder="ABC123" style="display: block; margin-top: 10px; width: 50%; font-size: 1.5em; text-transform: uppercase; user-select: all; outline-style: none; letter-spacing: 6px; text-align: center; font-weight: bold;">
-
       <div id="EntraInSqButtS" style="display: flex; margin-top: 0.5em;">
         <button hidden style="margin-inline: 5px;border: solid 1px black;border-bottom: solid 2px black;border-radius: 3px;text-shadow: 0px 1.4px 0px black;box-shadow: 0 2px 1px 0px #0000004d;color: white; background: indianred; text-transform: uppercase;/*font-weight: bold;*/ cursor: pointer;">Esci dalla squadra</button>
         <button hidden id="EntraNellaSquadra" onclick="ControlFormato()" style="margin-inline: 5px;border: solid 1px black;border-bottom: solid 2px black;border-radius: 3px;text-shadow: 0px 1.4px 0px black;box-shadow: 0 2px 1px 0px #0000004d;color: white; background: mediumseagreen; text-transform: uppercase;/*font-weight: bold;*/ cursor: pointer;">Entra nella squadra</button>
       </div>
+
 
       <div id="roomId" style="display: none; border: solid;">
         <hx style="text-align: center;width: -webkit-fill-available;display: block;color: white;font-size: 16px;">Codice squadra:</hx>
