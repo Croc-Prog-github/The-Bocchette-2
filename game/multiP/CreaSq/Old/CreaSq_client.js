@@ -1,3 +1,7 @@
+/*Old ID
+  roomId; SquadInp
+*/
+
 // Funzione per gestire la creazione di una nuova stanza
 function CreaCodSq() {
   EntraInSq(0);
