@@ -1,5 +1,5 @@
 const colyseus = require('colyseus');
-const http = require('http');
+const http = require('https');
 const express = require('express');
 const port = process.env.PORT || 2567;
 
