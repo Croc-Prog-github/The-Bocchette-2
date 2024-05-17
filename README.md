@@ -63,7 +63,7 @@ Creare un Account Server è totalmente gratuito, serve però anche inserire la p
 **Registrati con l'Accout server** per poter usare queste funzioni esclusive:
 - Microtransazioni delle risorse dal Negozio
 - Archiviazione Cloud dei tuoi progressi
-- Invitare amici online e usare chat
+- Invitare in squadra amici online
 - Chat per comunicare con gli amici in tempo reale
 - Multiplayer online nel Battle Royale
 - Eventi mensili esclusivi
