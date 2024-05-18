@@ -131,10 +131,6 @@
     if (regex.test(SquadInp.value)) {
       console.log("Controllo formato codice superato, inizializzo...");
       //Continua da qui
-      import('./game/multiP/EntraInSq/New/EntraInSq.js')
-      .catch(error => {
-        console.error('Errore nel caricamento di file di gioco, errore: ', error);
-      });
       EntraInSq();
     } else {
       window.alert('Formato codice non valido');
