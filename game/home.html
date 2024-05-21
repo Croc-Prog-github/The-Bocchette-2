@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
+  <head>
     <title>The Bocchette 2</title>
     <!-- START <meta> -->
     <meta charset="UTF-8">
@@ -26,8 +26,8 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="/client.js"></script>
     <script src="/game/multiP/UserList.js"></script>
-</head>
-<body onload="if(sessionStorage.getItem('username').length=0){window.location.href='/load.html'}; ZonaAddestramentoLayout();" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin-block: 0px; cursor: default; overflow: hidden;">
+  </head>
+  <body onload="if(sessionStorage.getItem('username').length=0){window.location.href='/load.html'}; ZonaAddestramentoLayout();" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin-block: 0px; cursor: default; overflow: hidden;">
     <!-- <svg style="width: 19px; height: 19px; position: absolute; z-index: 0;" id="mouse">
       <g transform="translate(0,0)"><path d="M14.4065 5.50975L2.89015 1.00334C1.67206 0.526696 0.470043 1.72871 0.946689 2.9468L5.4531 14.4632C5.96743 15.7776 7.8472 15.7187 8.27829 14.3747L9.66655 10.0466C9.71584 9.89293 9.83628 9.7725 9.98995 9.7232L14.3181 8.33494C15.6621 7.90384 15.7209 6.02408 14.4065 5.50975Z" stroke="#444746" fill="none" transform="translate(2, 2)"/></g>
     </svg> -->
@@ -47,12 +47,12 @@
       </div>
     </div>
 
-    <div name="Profilo" style="background: black; width: 120px; height: 28px; margin-top: 7px; display: flex;" onclick="window.location.href = '/game/profil.html'">
+    <div name="Profilo" style="background: black; width: 120px; height: 28px; margin-top: 7px; display: flex; position: relative; z-index: 1;" onclick="window.location.href = '/game/profil.html'">
       <progress style="width: 95px; margin-left: 5.5px; accent-color: #5757df; margin-top: 4.5%;" value="0" max="100" title="Exp bar"></progress>
       <x style="color: white; width: 16px; height: 23px; margin-block: 3px; margin-inline: 3px; background: royalblue; border-radius: 28%; text-align: center;">1</x>
     </div>
 
-    <div style="display: flex; align-items: flex-start; flex-direction: column; margin-top: 5px;" name="DXTopButts">
+    <div style="display: flex; align-items: flex-start; flex-direction: column; margin-top: 5px; width: max-content;" name="DXTopButts">
       
       <div name="news" onclick="window.open('https://croc-prog-github.github.io/The-Bocchette-2/', '_blank');"  style="display: flex; flex-direction: row-reverse; align-items: stretch;">
         <div id="ShopLabel" data-html="NUOVO" style="width: auto; height: 20px; font-size: small; box-shadow: -1px 2px 1px rgba(0, 0, 0, 0.25); border-radius: 1px; display: flex; align-items: center; outline: solid 1px black;">NUOVO</div>
@@ -92,7 +92,7 @@
       </div>
     </div>
 
-    <div name="Layout Zona Addestramento" id="LayoutZonAddestr" style="width: -webkit-fill-available; display: flex; justify-content: center;">
+    <div name="Layout Zona Addestramento" id="LayoutZonAddestr" style="width: -webkit-fill-available; display: flex; justify-content: center; position: relative; top: -69px;">
       <div style="width: 67%;height: auto;border: 1px solid #ffffffb5;border-radius: 5px;/*padding-inline: 25%;*/">
         <div style="text-transform: uppercase; text-align: center; text-shadow: 0 2px black; color: white; width: -webkit-fill-available; background: #8e39f354;">
           Zona Addestramento
@@ -165,8 +165,8 @@
       </div>
     </div>
 
-    <div style="display: flex; flex-direction: row-reverse; position: relative; z-index: 0; top: -505px;" name="menù princ" id="M_princ">
-      <img src="/resources/TB2/Menù_princ_home.png" alt="Errore di fonte" style="margin-top: 0px;margin-bottom: 0px;position: relative;right: 0px;transition: all 0.2s ease 0s;" title="Menù" id="MenPrinc" onclick="MP(1);">
+    <div style="/*display: flex;*/ flex-direction: row-reverse;position: relative; left: 92%; width: fit-content; z-index: 1; top: -505px;" name="menù princ" id="M_princ">
+      <img src="/resources/TB2/Menù_princ_home.png" alt="Errore di fonte" style="margin-top: 0px; margin-bottom: 0px; position: relative; right: 0px; transition: all 0.2s ease 0s;" title="Menù" id="MenPrinc" onclick="MP(1);">
     </div>
     <div id="menu" style="margin-top: 20px; margin-right: 8px; display: flex; justify-content: flex-start; flex-direction: column;">
       <div name="menùUI" style="display: block; width: 174px; height: auto; display: flex; flex-direction: column; align-items: stretch; justify-content: center;">
