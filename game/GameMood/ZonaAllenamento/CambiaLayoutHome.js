@@ -7,6 +7,9 @@ function ZonaAddestramentoLayout() {
     document.getElementById('LayoutZonAddestr').style.display = 'flex';
   }
   if (localStorage.getItem('GameMode') == 'BattleRoyale' || localStorage.getItem('GameMode') == 'CampoDiProva') {
+    document.getElementById('M_princ').style.top = '-368px';
+    document.getElementById('M_princ').style.marginBottom = '140px'
+
     document.getElementById('LayoutZonAddestr').style.display = 'none';
   }
 }
