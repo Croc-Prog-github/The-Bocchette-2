@@ -33,6 +33,21 @@
         <img src="#" alt="Errore di fonte" onclick="Se('')" style="margin-right: 30px;">
       </div>
     </div>
+
+
+    <div name="ZonaAddestramento">
+      <div style="display: flex; flex-direction: column; margin-top: 20px;" id="ZonaAddestramento_Event">
+        <details>
+          <summary>Sopravvivenza</summary>
+          <img src="/resources/TB2/Game-Mode/GameMode(Battle_Royale)/Event_Sopravvivenza_Singolo.png" alt="Errore di fonte" onclick="Se('/resources/TB2/Game-Mode/GameMode(Battle_Royale)/Event_Sopravvivenza_Singolo.png')" style="margin-right: 30px;">
+        </details>
+
+        <details>
+          <summary>...</summary>
+          
+        </details>
+      </div>
+    </div>
   
   </body>
 </html>
@@ -48,12 +63,27 @@
 <script> //Nasconde i div in base alla GameMode
   let DivBattleRoyale_Event = document.getElementById('BattleRoyale_Event');
   let DivCampoDiProva_Event = document.getElementById('CampoDiProva_Event');
+  let DivZonaAddestramento_Event = document.getElementById('ZonaAddestramento_Event');
+
   if (localStorage.getItem("GameMode") == "BattleRoyale") {
     DivCampoDiProva_Event.style.display = 'none';
     DivBattleRoyale_Event.style.display = 'flex';
+    DivZonaAddestramento_Event.style.display = 'none';
   }
   if (localStorage.getItem("GameMode") == "CampoDiProva") {
     DivCampoDiProva_Event.style.display = 'flex';
     DivBattleRoyale_Event.style.display = 'none';
+    DivZonaAddestramento_Event.style.display = 'none';
+  }
+  if (localStorage.getItem('GameMode') == 'ZonaAddestramento') {
+    DivBattleRoyale_Event.style.display = 'none';
+    DivCampoDiProva_Event.style.display = 'none';
+    DivZonaAddestramento_Event.style.display = 'flex';
   }
 </script>
+
+<style>
+  * {
+    user-select: none;
+  }
+</style>

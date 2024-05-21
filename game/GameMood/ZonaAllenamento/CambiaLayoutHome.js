@@ -6,4 +6,3 @@ function ZonaAddestramentoLayout() {
     document.getElementById('BocchettaRender+Inviti').style.display = 'none';
   }
 }
-
