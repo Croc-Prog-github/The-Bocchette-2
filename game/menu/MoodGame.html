@@ -32,8 +32,8 @@
         </div>
       </div>
       
-      <div style="/*border: solid black 1px;*/ margin-right: 20px; display: flex;">
-        <div style="background: lightskyblue; border: solid 4px black; width: 308px; color: royalblue; text-align: center; display: flex; align-items: center; justify-content: center;" onclick="window.location.href = '/game/GameMood/story.html';">
+      <div style="/*border: solid black 1px;*/ margin-right: 20px; display: flex;" onclick="SMG('ZonaAddestramento')">
+        <div style="background: lightskyblue; border: solid 4px black; width: 308px; color: royalblue; text-align: center; display: flex; align-items: center; justify-content: center;">
           Zona Addestramento
         </div>
       </div>
@@ -51,6 +51,11 @@
         window.location.href = '/game/home.html'; // Reindirizza
       break;
       case 'CampoDiProva':
+        console.info("Il nome della GameMode cliccata e': " + GameMode);
+        localStorage.setItem("GameMode", GameMode);
+        window.location.href = '/game/home.html';
+      break;
+      case 'ZonaAddestramento':
         console.info("Il nome della GameMode cliccata e': " + GameMode);
         localStorage.setItem("GameMode", GameMode);
         window.location.href = '/game/home.html';
