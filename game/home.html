@@ -27,7 +27,7 @@
     <script src="/client.js"></script>
     <script src="/game/multiP/UserList.js"></script>
 </head>
-<body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin-block: 0px; cursor: default; overflow: hidden;" onload="if(sessionStorage.getItem('username').length = 0){window.location.href = '/load.html';}">
+<body onload="if(sessionStorage.getItem('username').length=0){window.location.href='/load.html'}; ZonaAddestramentoLayout();" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin-block: 0px; cursor: default; overflow: hidden;">
     <!-- <svg style="width: 19px; height: 19px; position: absolute; z-index: 0;" id="mouse">
       <g transform="translate(0,0)"><path d="M14.4065 5.50975L2.89015 1.00334C1.67206 0.526696 0.470043 1.72871 0.946689 2.9468L5.4531 14.4632C5.96743 15.7776 7.8472 15.7187 8.27829 14.3747L9.66655 10.0466C9.71584 9.89293 9.83628 9.7725 9.98995 9.7232L14.3181 8.33494C15.6621 7.90384 15.7209 6.02408 14.4065 5.50975Z" stroke="#444746" fill="none" transform="translate(2, 2)"/></g>
     </svg> -->
@@ -92,8 +92,8 @@
       </div>
     </div>
 
-    <div name="Zona Addestramento">
-      
+    <div name="Layout Zona Addestramento" style="width: -webkit-fill-available; display: flex; justify-content: center;">
+
     </div>
 
     <div id="Component+Slots">
@@ -139,7 +139,6 @@
       </div>
     </div>
 
-    
 
     <div id="BocchettaRender+Inviti" style="display: flex; flex-direction: row; justify-content: space-around; margin-top: 15vh;">
       <button tabindex="-1" onclick="OpnMP()" aria-label="1 giocatori online" id="invit1" style="border-radius: 6px; border-style: double; font-variant-caps: small-caps;background-image: linear-gradient(40deg, darkgray, white); border-bottom: solid black 3px; cursor: pointer; background-image: url('/resources/SVG/Add_circle.svg'); background-repeat: round; width: 23px;">-</button>
@@ -159,7 +158,7 @@
       </div>
     </div>
 
-    <div style="display: flex;flex-direction: row-reverse;" name="menù princ" id="M_princ">
+    <div style="display: flex; flex-direction: row-reverse; position: relative; z-index: 0;" name="menù princ" id="M_princ">
       <img src="/resources/TB2/Menù_princ_home.png" alt="Errore di fonte" style="margin-top: -368px;margin-bottom: 73vh;position: relative;right: 0px;transition: all 0.2s ease 0s;" title="Menù" id="MenPrinc" onclick="MP(1);">
     </div>
     <div id="menu" style="margin-top: 20px; margin-right: 8px; display: flex; justify-content: flex-start; flex-direction: column;">
@@ -177,7 +176,7 @@
 
 
     <div style="display: flex; flex-direction: row; align-items: flex-start;">
-      <div name="Casse varie" style="position: relative; margin-top: 60px;">
+      <div name="Casse varie" style="position: relative; margin-top: 60px; z-index: 1;">
         <div name="CASSA COMUNE" style="position: absolute;bottom: 70px;" title="Cassa Comune">
           <img src="/resources/TB2/Casse/Cassa_Comune.png" alt="Errore di fonte" style="width: 69px; margin-top: -85px;" onclick="window.location.href = '/game/cass/CCom.html';">
           <button tabindex="-1" style="margin-top: -90px; margin-left: -23px; border: 0; background: dodgerblue; color: white; border-radius: 9px; top: 35px; position: absolute; left: 45px;" id="contaCasCom">Error</button>
@@ -212,7 +211,7 @@
         -->
       </div>
 
-      <div name="pass" style="width: 220px; height: 50px; background-color: gold; border-radius: 8px; /*margin-right: 35%;*/ margin-left: 0px;" onclick="window.location.href = '/game/pass/pass.html';">
+      <div name="pass" style="width: 220px; height: 50px; background-color: gold; border-radius: 8px; /*margin-right: 35%;*/ margin-left: 0px; position: relative;" onclick="window.location.href = '/game/pass/pass.html';">
         <hx style="margin-left: 6%;">Bocchet Pass</hx>
         <div style="display: flex; flex-direction: row;align-items: center;">
           <progress value="0" max="50" style="width: 90%; margin-left: 5%; margin-top: -1%; height: 35px;" id="progress"></progress> 
@@ -221,7 +220,7 @@
         <img src="/resources/TB2/Pass_Premium_icon.png" alt="Errore di fonte" style="position: relative; width: 57px; bottom: 75px; left: 115px;">
       </div>
 
-      <div style="display: flex;width: -webkit-fill-available;/* margin-left: 15%; */margin-top: -33px;align-items: flex-end;justify-content: center;">
+      <div style="display: flex;width: -webkit-fill-available;/* margin-left: 15%; */margin-top: -33px;align-items: flex-end;justify-content: center; position: relative;">
         <div style="display: flex;justify-items: end;flex-direction: column;">
           <div style="background: #808080; font-size: smaller;width: -webkit-fill-available;padding-inline: 4px;"><hx>Gettoni raddoppiati rimasti: <hx>0</hx> </hx></div>
           <div style="width: -webkit-fill-available;height: auto;/*border: solid 3px black; border-radius: 7px;*/display: flex;" onclick="window.location.href = '/game/event.html';">
