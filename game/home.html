@@ -91,49 +91,56 @@
       </div>
     </div>
 
-    <div style="display: flex; justify-content: center;">
-      <div style="display: grid; align-content: center; justify-items: center;">
-        Componenti extra:<!--<br>-->
-        <select name="Seleziona Tecnica" tabindex="-1" style="border-radius: 5px; border-bottom: solid black 3px; /*appearance: none;*/ border-right: outset; text-align: center; padding-block: 0px; border-top-style: outset; /*outline-style: none;*/">
-          <option value="opzione1" selected>Scettro: Oro, 5 Anelli</option>
-          <option value="opzione2">Sfere elementi: Fuoco, Energia</option>
-          <option value="opzione3">Occhio premonitore (aimbot)</option>
-        </select>
-      </div>
+    <div name="Zona Addestramento">
       
     </div>
 
-    <div style="/*margin-left: 38%;*/ display: flex; justify-content: center;">
-      <div style="margin-right: 15px; display: grid; align-content: center; justify-items: center;">
-        Slot tecnica 1 (E)
-        <!--<br>-->
-        <button tabindex="-1" id="Tecnic1" value="dispersione" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; border-right: outset;text-align: center; padding-block: 0px; border-top-style: outset; outline-style: none;">dispersione</button>
-        <!--
-        <select id="Tecnic1" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; /*outline-style: outset;*/ border-right: outset;text-align: center;">
-          <option value="dispersione">dispersione</option>
-          <option value="taglio netto">taglio netto</option>
-          <option value="super taglio netto">super taglio netto</option>
-          <option value="rasengan" disabled title="Tecnica non ancora trovata">rasengan</option>
-        </select>
-        -->
+    <div id="Component+Slots">
+      <div style="display: flex; justify-content: center;">
+        <div style="display: grid; align-content: center; justify-items: center;">
+          Componenti extra:<!--<br>-->
+          <select name="Seleziona Tecnica" tabindex="-1" style="border-radius: 5px; border-bottom: solid black 3px; /*appearance: none;*/ border-right: outset; text-align: center; padding-block: 0px; border-top-style: outset; /*outline-style: none;*/">
+            <option value="opzione1" selected>Scettro: Oro, 5 Anelli</option>
+            <option value="opzione2">Sfere elementi: Fuoco, Energia</option>
+            <option value="opzione3">Occhio premonitore (aimbot)</option>
+          </select>
+        </div>  
       </div>
-    
-      <div style="/*margin-right: 15px;*/ display: grid; align-content: center; justify-items: center;">
-        Slot tecnica 2 (F)
-        <!--<br>-->
-        <button tabindex="-1" id="Tecnic2" value="taglio netto" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; border-right: outset;text-align: center; padding-block: 0px; border-top-style: outset; outline-style: none;">taglio netto</button>
-        <!--
-        <select id="Tecnic2" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; /*outline-style: outset;*/ border-right: outset;text-align: center;">
-          <option value="taglio netto">taglio netto</option>
-          <option value="dispersione">dispersione</option>
-          <option value="super taglio netto">super taglio netto</option>
-          <option value="rasengan" disabled title="Tecnica non ancora trovata">rasengan</option>
-        </select>
-        -->
+
+      <div style="/*margin-left: 38%;*/ display: flex; justify-content: center;">
+        <div style="margin-right: 15px; display: grid; align-content: center; justify-items: center;">
+          Slot tecnica 1 (E)
+          <!--<br>-->
+          <button tabindex="-1" id="Tecnic1" value="dispersione" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; border-right: outset;text-align: center; padding-block: 0px; border-top-style: outset; outline-style: none;">dispersione</button>
+          <!--
+          <select id="Tecnic1" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; /*outline-style: outset;*/ border-right: outset;text-align: center;">
+            <option value="dispersione">dispersione</option>
+            <option value="taglio netto">taglio netto</option>
+            <option value="super taglio netto">super taglio netto</option>
+            <option value="rasengan" disabled title="Tecnica non ancora trovata">rasengan</option>
+          </select>
+          -->
+        </div>
+          
+        <div style="/*margin-right: 15px;*/ display: grid; align-content: center; justify-items: center;">
+          Slot tecnica 2 (F)
+          <!--<br>-->
+          <button tabindex="-1" id="Tecnic2" value="taglio netto" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; border-right: outset;text-align: center; padding-block: 0px; border-top-style: outset; outline-style: none;">taglio netto</button>
+          <!--
+          <select id="Tecnic2" style="border-radius: 5px; border-bottom: solid black 3px; appearance: none; /*outline-style: outset;*/ border-right: outset;text-align: center;">
+            <option value="taglio netto">taglio netto</option>
+            <option value="dispersione">dispersione</option>
+            <option value="super taglio netto">super taglio netto</option>
+            <option value="rasengan" disabled title="Tecnica non ancora trovata">rasengan</option>
+          </select>
+          -->
+        </div>
       </div>
     </div>
 
-    <div style="display: flex; flex-direction: row; justify-content: space-around; margin-top: 15vh;">
+    
+
+    <div id="BocchettaRender+Inviti" style="display: flex; flex-direction: row; justify-content: space-around; margin-top: 15vh;">
       <button tabindex="-1" onclick="OpnMP()" aria-label="1 giocatori online" id="invit1" style="border-radius: 6px; border-style: double; font-variant-caps: small-caps;background-image: linear-gradient(40deg, darkgray, white); border-bottom: solid black 3px; cursor: pointer; background-image: url('/resources/SVG/Add_circle.svg'); background-repeat: round; width: 23px;">-</button>
 
       <div style="position: absolute; width: 34%; height: 44%; top: 39%; background: aqua;">
