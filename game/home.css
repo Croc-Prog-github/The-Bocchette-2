@@ -37,6 +37,7 @@
   visibility: hidden;
   transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
   z-index: 1;
+  text-transform: math-auto;
 }
 #Info_aria-label_Addestramento:hover::before,
 #Info_aria-label_Addestramento:hover::after {
