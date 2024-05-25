@@ -31,7 +31,7 @@
 <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, 'monospace', 'math', 'cursive';background-color: #195e79ad; display: block; opacity: 100%;">
   
   <div name="account server">
-    <div style="display: flex;" id="BODy">
+    <div style="display: flex;" id="AccServ">
       <div style="display: flex; flex-direction: row; justify-content: flex-start; background-color: steelblue; width: 150px; height: 24em;">
         <div style="color: white; cursor: default;">
           <hx>Il tuo nome:</hx> <x id="username" style="color: lawngreen;">_</x>
@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <div name="NoAccount" id="NAcc" style="cursor: default; display: none; background: white; align-items: center; /*color: darkred;*/ color: black; height: 25px;">
+    <div name="NoAccount" id="NAccServ" style="cursor: default; display: none; background: white; align-items: center; /*color: darkred;*/ color: black; height: 25px;">
       <img src="/resources/SVG/InfoBlu-icon.svg">
       Utilizza l'Account Server per maggiori funzioni.
     </div>
@@ -69,7 +69,7 @@
 
 
 
-  <div name="account ospite">
+  <div name="account ospite" id="AccOspit">
     <div style="width: -webkit-fill-available; margin-top: 0.5em; display: flex;flex-direction: column;align-items: center;">
       <div style="display: flex;">
         <button class="NewButt" onclick="CreaCodSq()" style="outline: none; margin-inline: 5px;border: solid 1px black;border-bottom: solid 2px black;border-radius: 3px;text-shadow: 0px 1.4px 0px black;box-shadow: 0 2px 1px 0px #0000004d;color: white;background: dodgerblue;text-transform: uppercase;/*font-weight: bold;*/ cursor: pointer;">Crea codice squadra</button>
@@ -145,14 +145,17 @@
 </style>
 
 <script>
-  const NAcc = document.getElementById("NAcc");
-  const body = document.getElementById('BODy');
+  let NAccServ = document.getElementById("NAccServ");
+  let AccServ = document.getElementById('AccServ');
+  let AccOspit = document.getElementById('AccOspit')
   if (sessionStorage.getItem('username').length == 0) {
-    body.style.display = 'flex';
-    NAcc.style.display = 'none';
+    AccServ.style.display = 'flex';
+    NAccServ.style.display = 'none';
+    AccOspit.style.display = 'none';
   } else {
-    body.style.display = 'none';
-    NAcc.style.display = 'flex';
+    AccServ.style.display = 'none';
+    NAccServ.style.display = 'flex';
+    AccOspit.style.display = 'block';
   }
 </script>
 
