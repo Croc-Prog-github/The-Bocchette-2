@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "chmod +x ServerService/start.sh && ./ServerService/start.sh",
+    "start": "npm install && npm run dev",
+    "//": "chmod +x ServerService/start.sh && ./ServerService/start.sh",
     "//": "&& chmod +x ServerService/NewStart.sh && ./ServerService/NewStart.sh",
     "test": "jest"
   },

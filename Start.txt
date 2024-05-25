@@ -1,0 +1,6 @@
+Using cmd.exe:
+nodevars.bat
+
+Using nodevars.bat:
+cd C:\Users\princ\Downloads\The-Bocchette-2
+npm start
