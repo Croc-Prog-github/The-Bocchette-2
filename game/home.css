@@ -9,12 +9,14 @@
   position: absolute;
   background-color: #333;
   color: #fff;
-  padding: 5px;
+  padding: 10px; /* Maggiore padding per migliorare la leggibilità */
   border-radius: 5px;
   font-size: 14px;
   font-weight: bold;
-  white-space: nowrap;
-  bottom: 150%; /* Adjust as needed */
+  white-space: normal; /* Permette l'avvolgimento del testo */
+  max-width: 200px; /* Larghezza massima del tooltip, puoi regolare secondo necessità */
+  text-align: left; /* Allinea il testo a sinistra */
+  bottom: 150%; /* Regola come necessario */
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -28,7 +30,7 @@
   border-style: solid;
   border-width: 5px 5px 0 5px;
   border-color: #333 transparent transparent transparent;
-  bottom: 140%; /* Adjust as needed */
+  bottom: 140%; /* Regola come necessario */
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
