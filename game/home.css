@@ -1,3 +1,47 @@
+#Info_aria-label_Addestramento {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px dotted black;
+}
+#Info_aria-label_Addestramento::after {
+  content: attr(aria-label);
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  bottom: 150%; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  z-index: 1;
+}
+#Info_aria-label_Addestramento::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #333 transparent transparent transparent;
+  bottom: 140%; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  z-index: 1;
+}
+#Info_aria-label_Addestramento:hover::before,
+#Info_aria-label_Addestramento:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 #ShopLabel[data-html="NUOVO"]{
   background: orangered;
   border-top: rgb(255, 140, 140) solid 2px;
