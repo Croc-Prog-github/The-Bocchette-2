@@ -7,5 +7,5 @@
 sleep 1
 
 # Cambia directory e avvia npm start nello stesso terminale
-cd ServerService/MultiP-server
+cd /ServerService/MultiP-server
 npm start
