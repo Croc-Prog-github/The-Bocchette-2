@@ -4,7 +4,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Launch.json",
       "skipFiles": ["<node_internals>/**"],
       "program": "/The-Bocchette-2(Main)/index.js", // Modifica con il tuo file di ingresso
       "runtimeExecutable": "D:/nodejs/node.exe" // Percorso completo dell'eseguibile Node.js
