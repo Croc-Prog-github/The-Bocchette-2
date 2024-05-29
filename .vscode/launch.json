@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "/The-Bocchette-2(Main)/index.js", // Modifica con il tuo file di ingresso
+      "runtimeExecutable": "D:/nodejs/node.exe" // Percorso completo dell'eseguibile Node.js
+    }
+  ]
+}
