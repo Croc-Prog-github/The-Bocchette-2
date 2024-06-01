@@ -1,13 +1,7 @@
-/*Old ID
-  roomId; SquadInp; createRoom
-*/
-//import Colyseus from "https://unpkg.com/colyseus.js@^0.15.0/dist/colyseus.js";
-
 const Colyseus = require('colyseus.js');
-const client = new Colyseus.Client('ws://localhost:2567');
 
-document.getElementById('createRoom').addEventListener('click', async () => { 
-});
+// Inizializza il client Colyseus
+const client = new Colyseus.Client('ws://localhost:2567');
 
 async function EntraInSq() {
   try {
@@ -20,6 +14,10 @@ async function EntraInSq() {
     });
 
   } catch (e) {
+    // Gestisci eventuali errori
     console.error("Join error", e);
   }
 }
+
+// Esporta la funzione se necessario
+module.exports = { EntraInSq };
