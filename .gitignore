@@ -13,7 +13,8 @@
 
 # Vscode
 /.vs
-/dist
+!/dist
+/dist/index.html
 !/.vscode
 
 # Colyseus
