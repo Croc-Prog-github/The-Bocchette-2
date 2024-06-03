@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <title>The Bocchette 2</title>
+  <!-- START <meta> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- END <meta> -->
+
+  <!-- Content -->
+  <link rel="icon" href="https://docs.google.com/drawings/d/e/2PACX-1vRzg3r27e7_yLyB4m8rlyFHgQ8H5d6IJtW39axawbD5u7S_eX3ezqZdtll3NBLxJYY_OUhuSGJ-jQ8T/pub?w=16&h=16" type="image/x-icon">
+  <script src="/cons/console.js"></script>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/ServerService/Account-Server/AccServ.js">Salve();</script>
+  <script src="/SchedDes.js"></script>
+  <script type="module" src="/ServerService/Account-Server/start.js"></script>
+  <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+</head>
+<body id="body" onload="ElimData(); sessionStorage.clear();" style='font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; height: 100%; cursor: auto; overflow-y: auto; display: flex; flex-direction: column; justify-content: flex-end;'>
+  <script src="/var.js"></script>
+
+  <!-- Caricamento -->
+  <hx id="title" style="display: flex; justify-content: center;" id="body">The Bocchette 2</hx>
+
+  <div style="display: grid; justify-content: center; height: 590px; align-content: center;">
+    <div style="/* position: relative; *//* margin-top: 10%; *//* margin-left: 42%; */background: white; width: auto; height: auto; display: grid; justify-items: center;">
+      <!--
+      <div style="display: none;">
+        <x style="font-size: 20px;"><strong style="margin-inline: 83px;">Accedi</strong></x> <br> 
+        <x style="font-size: small;">al tuo account The Bocchette</x><br>
+
+        <div style="margin-top: 10px;">
+          <x style="font-size: smaller;">Username</x>
+          <input type="text" placeholder="E-mail, Username">
+        </div>
+
+        <div style="margin-top: 10px;">
+          <x style="font-size: smaller;">Password</x>
+          <input type="password" placeholder="Password">
+        </div>
+      </div>
+      -->
+
+      <div name="main" style="margin: 7px; text-align: center;" id="main">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <x style="font-size: 20px; cursor: default;"><strong style="margin-inline: 83px;">Scegli un'opzione</strong></x>
+        </div>
+        <a onclick="AccountOsp()" style="color: -webkit-link; cursor: pointer;text-decoration: underline; -webkit-text-stroke-width: thin;">Usa account Ospite</a>
+        |
+        <input id="file-upload" type="file" accept=".encrypt" hidden>
+        <label for="file-upload" style="color: -webkit-link; cursor: pointer;text-decoration: underline; -webkit-text-stroke-width: thin;">Carica dati</label>
+        |
+        <hx style="color: -webkit-link; cursor: pointer;text-decoration: underline; -webkit-text-stroke-width: thin;" onclick="AccServ('login');">Account server</hx>
+      </div>
+
+      <div name="loginDiv" style="margin: 7px; text-align: center; flex-direction: column; align-items: center;" id="login" hidden>
+        <strong style="margin-inline: 83px; font-size: 20px; cursor: default;">Accedi</strong>
+        <hx style="font-size: small; margin-right: auto;">Bentornato, accedi al tuo account.</hx>
+        <input type="text" placeholder="Username" maxlength="14">
+        <br>
+        <input type="password" minlength="8" placeholder="Password">
+        <hx style="font-size: small; color: -webkit-link; cursor: pointer; text-decoration: underline;">Password dimenticata</hx>
+        <br>
+        <div style="display: flex; flex-direction: row;">
+          <hx style="color: -webkit-link; cursor: pointer;text-decoration: underline;" title="Indietro" onclick="AccServ('main');">⬅️</hx>
+          |
+          <button>Accedi</button>
+          |
+          <hx style="color: -webkit-link; cursor: pointer; text-decoration: underline;" onclick="AccServ('regist');">Registrati</hx>
+        </div>
+        <div>
+          <input type="checkbox" onclick="AccountSvilup()" class="AcSvChb"><hx style="font-size: small;">Account sviluppatore?</hx>
+        </div>
+        <div class="SvilupDivPsw" style="display: none; height: 30px; width: -webkit-fill-available; flex-direction: column; align-items: center; border-top: black 2px; border-top-style: solid;">
+          <input type="password" placeholder="Password Sviluppatore" style="margin-block: 8px;">
+        </div>
+
+        <div name="OutputDiv" style="width: -webkit-fill-available; border-top: black 2px; border-top-style: solid;" hidden>
+          <progress max="10"></progress>
+          <div>
+            <svg style="height: 13px; width: 13px; zoom: 1.3; margin-block: -3px;"><g transform="translate(0,0)"><g fill="none" fill-rule="evenodd"><polygon points="0 0 14 0 14 14 0 14"/><path fill="red" fill-rule="nonzero" d="M0.583333333,12.25 L13.4166667,12.25 L7,1.16666667 L0.583333333,12.25 Z M7.58333333,10.5 L6.41666667,10.5 L6.41666667,9.33333333 L7.58333333,9.33333333 L7.58333333,10.5 Z M7.58333333,8.16666667 L6.41666667,8.16666667 L6.41666667,5.83333333 L7.58333333,5.83333333 L7.58333333,8.16666667 Z"/></g></g></svg>
+            <hx style="color: red; font-size: small; text-decoration-line: underline; text-underline-position: auto; font-variant: all-petite-caps; font-family: sans-serif;">Account non trovato!</hx>
+          </div>
+        </div>
+      </div>
+
+      <div name="RegistratiDiv" id="regist" hidden style="margin: 7px; text-align: center; flex-direction: column; align-items: center;">
+        <strong style="margin-inline: 83px; font-size: 20px; cursor: default;">Registrati</strong>
+        <hx style="font-size: small; margin-right: auto;">Benvenuto, crea il tuo account qui.</hx>
+        <input type="text" placeholder="Username" maxlength="14">
+        <br>
+        <input type="password" minlength="8" placeholder="Password">
+        <input type="password" minlength="8" placeholder="Conferma Password">
+        <!--
+        <br>
+        <input type="email" placeholder="E-mail di conferma">
+        -->
+
+        <br>
+        <div style="display: flex; flex-direction: row;">
+          <hx style="color: -webkit-link; cursor: pointer;text-decoration: underline;" title="Indietro" onclick="AccServ('main');">⬅️</hx>
+          |
+          <button>Registrati</button>
+          |
+          <hx style="color: -webkit-link; cursor: pointer;text-decoration: underline;" onclick="AccServ('login');">Accedi</hx>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <div>
+            <input type="checkbox" onclick="AccountSvilup()" class="AcSvChb"><hx style="font-size: small;">Account sviluppatore?</hx>
+          </div>
+          <div class="SvilupDivPsw" style="display: none; height: 30px; width: -webkit-fill-available; flex-direction: column; align-items: center; border-top: black 2px; border-top-style: solid;">
+            <input type="password" placeholder="Password Sviluppatore" style="margin-block: 8px;">
+          </div>
+        </div>
+
+        <div name="OutputDiv">
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <progress value="100" max="100" id="load"></progress>
+  <!--<progresBar max="100" value="0" color="green"></progresBar>-->
+
+  <script src="/manut/manut.js"></script>
+</body>
+</html>
+
+<script>
+  localStorage.setItem("GameMode", "BattleRoyale");
+  const audio = new Audio('/resources/audio/Loading.wav'); audio.play();
+</script>
+
+<script>
+  function AccountSvilup() {
+    const AcSvChb = document.getElementsByClassName('AcSvChb');
+    const SvilupDivPsw = document.getElementsByClassName('SvilupDivPsw');
+    
+    // Itera attraverso la collezione di elementi AcSvChb
+    for (let i = 0; i < AcSvChb.length; i++) {
+      if (AcSvChb[i].checked) {
+        // Mostra gli elementi SvilupDivPsw corrispondenti
+        SvilupDivPsw[i].style.display = 'flex';
+      } else {
+        // Nascondi gli elementi SvilupDivPsw corrispondenti
+        SvilupDivPsw[i].style.display = 'none';
+      }
+    }
+  }
+</script>
+
+<script> //Elimina i progressi per evitare il cambio di nome usando la ricarica totale del gioco nel Node-Link
+  function ElimData() {
+    sessionStorage.clear();
+  }
+</script>
+
+<script> //Mostra e gestisce il div per accesso dal server
+  function AccServ(dest) {
+    const mainDiv = document.getElementById("main");
+    const loginDiv = document.getElementById("login");
+    const registDiv = document.getElementById("regist");
+    switch(dest) {
+      case 'login':
+        mainDiv.style.display = 'none';
+        loginDiv.style.display = 'flex';
+        registDiv.style.display = 'none';
+      break;
+      case 'main':
+        mainDiv.style.display = 'block';
+        loginDiv.style.display = 'none';
+        registDiv.style.display = 'none';
+      break;
+      case 'regist':
+        registDiv.style.display = 'flex';
+        mainDiv.style.display = 'none';
+        loginDiv.style.display = 'none';
+      break;
+    }
+  }
+</script>
+
+
+<script>
+  var myImage = document.getElementById("body");
+  const progress = document.querySelector("#load");
+  let login = document.getElementById("main");
+  login.style.display = "none";
+  myImage.style.cursor = "wait";
+
+  // Imposta il valore iniziale del progress a 5
+  progress.value = 5;
+
+  // Incrementa il valore del progress di 5 ogni 0.5 secondi
+  const intervalId = setInterval(() => {
+    progress.value += 5;
+    // Ferma l'intervallo quando il valore del progress raggiunge il 100%
+    if (progress.value == 100) {
+      clearInterval(intervalId);
+      login.style.display = "block";
+      myImage.style.cursor = "default";
+      //window.location.href = "/game/home.html";
+      if (manut == 1) {
+        window.location.href = "/manut/manut.html";
+      }
+    }
+  }, 200);
+</script>
+
+<script>
+  let MUsername;
+  function AccountOsp() {
+    MUsername = window.prompt('Inserisci il tuo Username');
+    if (MUsername.length > 0) {
+      if (MUsername.length <= 14) {
+        sessionStorage.setItem("username", MUsername);
+        username = sessionStorage.getItem('username');
+        /*if (MUsername == "null" || MUsername == "undefined") {
+          window.location.href = '/';
+        }*/
+        window.alert("I progressi effettuati non sono collegati ad un server e saranno disponibili finchè la sessione di gioco rimane aperta; per salvare (nella memoria locale del dispositivo) andare su: Menù > Gestione Dati > Salva sul PC. Accetti queste condizioni e Continuare?");
+        setArrayTeE();
+        window.location.href = '/game/home.html';
+      } else {
+        window.alert("Il tuo Username è troppo lungo; deve essere massimo 14 lettere.");
+      }
+    } else {
+      window.location.href = '/';
+    }
+    UpdateUsername();
+  }
+</script>
+
+<script>
+  function UpdateUsername() {
+    username = sessionStorage.setItem("username", MUsername)
+  }
+  setInterval(function() {
+    UpdateUsername();
+  }, 100);
+</script>
