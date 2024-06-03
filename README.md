@@ -1,4 +1,4 @@
-# The Bocchette 2
+<h1 align="center">The Bocchette 2</h1>
 <!-- 
 [![Main-Background](https://docs.google.com/drawings/d/e/2PACX-1vRWRSRkIcWafi4aizPRm6sHtJleHPepMcy88ZQ9UX3AhNIVTnKyhxNrIsfAU4LcKdr4JWxVRsUImpv0/pub?w=690&h=571)](url)
 ============== 
