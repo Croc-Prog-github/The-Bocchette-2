@@ -7,8 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "chmod +x ServerService/start.sh && ./ServerService/start.sh",
-    "//": "&& chmod +x ServerService/NewStart.sh && ./ServerService/NewStart.sh",
+    "start": "npm install && npm run dev",
+    "//(Codespace)": "chmod +x ServerService/start.sh && ./ServerService/start.sh",
+    "//(Failure)": "&& chmod +x ServerService/NewStart.sh && ./ServerService/NewStart.sh",
     "test": "jest"
   },
   "devDependencies": {
