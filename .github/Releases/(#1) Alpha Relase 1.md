@@ -1,6 +1,6 @@
-# Novità: Alpha Relase 1.0.0
-La versione: **Alpha Relase 1.0.0** è stata rilasciata il 05/06/2024.<br>
-I file delle versioni precedenti sono disponibili nel Relase di GitHub.
+# Novità: Alpha Release 1.0.0
+La versione: **Alpha Release 1.0.0** è stata rilasciata il 05/06/2024.<br>
+I file delle versioni precedenti sono disponibili nel Release di GitHub.
 
 ## Istallazione ed Eseguire
 
