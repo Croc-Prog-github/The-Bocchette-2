@@ -13,14 +13,15 @@
 
 # Vscode
 /.vs
-!/dist
-!/.vscode
+/dist
+/.vscode
 
 # Colyseus
 /game/multiP/colyseus.js
 
 # Anti-npm
-\package-lock.json
+/package-lock.json
+# 2404 file npm transformated
 
 # Credenziali server
 /ServerService/Account-Server/AccServ.ts
