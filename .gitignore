@@ -1,6 +1,6 @@
 # File IDE
 .env
-/node_modules/*
+!/node_modules/*
 /node_modules/.bin
 !/node_modules/.yarn-integrity
 
@@ -21,6 +21,7 @@
 
 # Anti-npm
 /package-lock.json
+/node_modules/.package-lock.json
 # 2404 file npm transformated
 
 # Credenziali server
