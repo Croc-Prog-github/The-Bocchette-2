@@ -1,10 +1,9 @@
 {
-  "name": "vite-starter",
+  "name": "starter",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
     "start": "npm install && npm run dev",
