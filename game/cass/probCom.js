@@ -31,10 +31,11 @@ function startLoop() {
 }
 
 //Interrompe il loop di scorrimento
-document.addEventListener('keydown', handleKeyPress => {
-  if (handleKeyPress.code === 'Space' && (chosenVariable === evoluz || chosenVariable === tecnic) ) {
+document.addEventListener('mousedown', handleKeyPress => {
+  if ( /*handleKeyPress.code === 'Space'*/ true) {
     clearInterval(intervalId);
-    Choice();
+    //Choice();
+    window.location.href = '/game/home.html'
   }
 });
 
