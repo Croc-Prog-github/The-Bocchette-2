@@ -21,7 +21,7 @@
       }
     </script>
   </head>
-  <body style=" font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif; background-color: #316f87; overflow: hidden;">
+  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif; user-select: none; background-color: #316f87; overflow: hidden;">
     <div name="Content1" id="Skp1">
       <div style="display: flex; flex-direction: column; margin-block: 15%; position: relative; z-index: 1; flex-wrap: wrap; align-content: center;justify-content: center;">
         <div style=" cursor: default; font-size: x-large; display: flex; justify-content: center;">
@@ -35,20 +35,21 @@
     </div>
 
     <div name="Content2" hidden id="Skp2">
-      <div style="display: flex; justify-content: center; flex-direction: row; margin-block: 15%; position: relative; z-index: 1;">
+      <div style="display: flex;flex-direction: column;margin-block: 15%;position: relative;z-index: 1;align-items: center;">
+        <div style="cursor: default; font-size: x-large; display: flex; justify-content: center;">X Punti Ottimizzazione</div>
         <div style="border: solid 3px; margin-inline: 0%; height: 200px; width: 200px; background: steelblue;">
-          <img src="" alt="this?" id="slotC" style="width: 100%; margin-block: 15%"/>
+          <img src="/resources/TB2/Casse/Ricompense/Punti ottimiz.svg" alt="Punti Ottimiz" style="width: 80%; margin: 10%;"/>
         </div>
+        Clicca per continuare
       </div>
-      <div name="Stop" style="cursor: default; display: flex; justify-content: center; font-size: xx-large; -webkit-text-stroke-width: thin;">
-        Press SPACE for stop
-      </div>
+      
       <!-- probCom.js -->
       <script src="/game/cass/probCom.js"></script>
     </div>
 
     <div style="display: none; justify-content: flex-end; margin-top: -5.4%">
-      <div name="Skip" style="cursor: default; background: cornflowerblue; padding-block: 15px; padding-inline: 20px; border: ridge 6px; outline: dashed 5px gold; width: min-content; font-size: xx-large; text-align: center;">2
+      <div name="Skip" style="cursor: default; background: cornflowerblue; padding-block: 15px; padding-inline: 20px; border: ridge 6px; outline: dashed 5px gold; width: min-content; font-size: xx-large; text-align: center;">
+        2
       </div>
     </div>
   </body>

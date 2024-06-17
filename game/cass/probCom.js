@@ -1,7 +1,7 @@
 //Cambia lo slot centrale principale con tecniche ed evoluzioni casual
-const tecnic = 'https://docs.google.com/drawings/d/e/2PACX-1vQM-kWdTzXN5FX-YXJriQcySiTzB-dmzPnTb9RxHpT9EZvY5Ya9KW3BbDaHrbuzvybwkFD_LoPoJ43k/pub?w=256&h=187';
-const evoluz = 'https://docs.google.com/drawings/d/e/2PACX-1vQeZBD2vuiFTXswWU_AsOlwm_YpzIlCcdAessBH_-u9LhhHMX97lq2PptsKu2DUGAHUqq4wewPk8a1P/pub?w=258&h=184';
-const slotC = document.getElementById('slotC');
+const tecnic = '\resources\TB2\Casse\Ricompense\Tecnica.png';
+const evoluz = '\resources\TB2\Casse\Ricompense\Evoluzione.png';
+const slotC = document.getElementById('');
 
 let intervalId;
 
@@ -38,33 +38,33 @@ document.addEventListener('keydown', handleKeyPress => {
   }
 });
 
-startLoop();
+//startLoop();
 // END
 
 //Funzione per sciegliere tra le tecniche o le evoluzioni
 function Choice() {
-let risult = slotC.src;
-if (risult === 'https://docs.google.com/drawings/d/e/2PACX-1vQM-kWdTzXN5FX-YXJriQcySiTzB-dmzPnTb9RxHpT9EZvY5Ya9KW3BbDaHrbuzvybwkFD_LoPoJ43k/pub?w=256&h=187') { // <-- Tecnic
-  let tecnicSelect = tecnicLockCom[Math.floor(Math.random() * tecnicLockCom.length)];
-  if (tecnicUnlock.includes(tecnicSelect)) { //Una tecnica casuale di tecnicLockCom è contenuta in tecnicUnlock ?
-    Choice();
-  } else {
-    window.alert('Hai tovato la Tecnica: ' + tecnicSelect + ' !');
-    window.location.href = '/game/home.html'
-
-    //Rimuove tecnicSelect da TecnicLockCom e lo agiunge in TecnicUnlock
-    let index = tecnicLockCom.indexOf(tecnicSelect);
-    //let index = tecnicSelect;
-    if (index !== -1) {
-      tecnicLockCom.splice(index, 1); 
-      tecnicUnlock.push(tecnicSelect);
+  let risult = slotC.src;
+  if (risult === '\resources\TB2\Casse\Ricompense\Tecnica.png') { // <-- Tecnic
+    let tecnicSelect = tecnicLockCom[Math.floor(Math.random() * tecnicLockCom.length)];
+    if (tecnicUnlock.includes(tecnicSelect)) { //Una tecnica casuale di tecnicLockCom è contenuta in tecnicUnlock ?
+      Choice();
     } else {
-      alert("Fatal error: index di tecnicLockCom è < 1 Cioè l'elemento non è stato trovato");
+      window.alert('Hai tovato la Tecnica: ' + tecnicSelect + ' !');
+      window.location.href = '/game/home.html'
+
+      //Rimuove tecnicSelect da TecnicLockCom e lo agiunge in TecnicUnlock
+      let index = tecnicLockCom.indexOf(tecnicSelect);
+      //let index = tecnicSelect;
+      if (index !== -1) {
+        tecnicLockCom.splice(index, 1); 
+        tecnicUnlock.push(tecnicSelect);
+      } else {
+        alert("Fatal error: index di tecnicLockCom è < 1 Cioè l'elemento non è stato trovato");
+      }
     }
   }
-}
-if (risult === 'https://docs.google.com/drawings/d/e/2PACX-1vQeZBD2vuiFTXswWU_AsOlwm_YpzIlCcdAessBH_-u9LhhHMX97lq2PptsKu2DUGAHUqq4wewPk8a1P/pub?w=258&h=184') { // <-- Evoluz 
-  window.alert("Risultato Evoluzione: Nessuna evoluzione aggiunta!");
-  window.location.href = '/game/home.html'
-}
+  if (risult === '\resources\TB2\Casse\Ricompense\Evoluzione.png') { // <-- Evoluz 
+    window.alert("Risultato Evoluzione: Nessuna evoluzione aggiunta!");
+    window.location.href = '/game/home.html'
+  }
 }
