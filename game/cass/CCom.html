@@ -91,6 +91,7 @@
   divN.textContent = randomNumber;
 
   soldi = parseInt(soldi) + parseInt(randomNumber); //Fa la somma matematica (senza unione di strighe)
+  
 </script>
 
 <script>
@@ -102,10 +103,12 @@
     if (event.button === 0) {
       Skp1.hidden = true;
       Skp2.hidden = false;
+
+      alert("Continuare la gestione probab nel proggetto: Probability-Manager.js")
+      window.location.href = '/game/home.html'
     }
   }
   document.addEventListener('mousedown', handleKeyPress);
-  alert("Continuare la gestione probab nel proggetto: Probability-Manager.js")
 </script>
 
 <style>

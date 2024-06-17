@@ -35,7 +35,6 @@ document.addEventListener('mousedown', handleKeyPress => {
   if ( /*handleKeyPress.code === 'Space'*/ true) {
     clearInterval(intervalId);
     //Choice();
-    window.location.href = '/game/home.html'
   }
 });
 
