@@ -21,10 +21,10 @@ probManager.addObject('CassComun', '2', 'Nulla', 50)
 
 // Estrazione di un oggetto casuale
 let randomEvent = probManager.getRandomObject('CassComun', '1');
-console.log(`Oggetto estratto Lista 1: `+ randomEvent);
+console.log(`Oggetto estratto Lista 1 (Skip 1): `+ randomEvent);
 
 randomEvent = probManager.getRandomObject('CassComun', '2');
-console.log(`Oggetto estratto Lista 2: `+ randomEvent);
+console.log(`Oggetto estratto Lista 2 (Skip 2): `+ randomEvent);
 
 
 // Pulizia delle istanze
