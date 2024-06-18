@@ -1,9 +1,9 @@
-//const probManager = new ProbabilityManager();
-import probManager from "https://raw.githubusercontent.com/Croc-Prog-github/Probability-Manager.js/main/core/Probability-Manager.js";
+const probManager = new ProbabilityManager();
 
 // Creazione di istanze e liste
-probManager.addList('CassComun', '1');
-probManager.addList('CassComun', '2');
+probManager.addList('CassComun', 1); //Banconote
+probManager.addList('CassComun', 2); // Evoluz, Tecnic, Punt_Ottim, Null
+probManager.addList('CassComun_PntOtm', 1); //Range punti ottimizzazione
 
 console.log("Elementi di Cassa Comune:")
 
@@ -21,8 +21,21 @@ probManager.addObject('CassComun', '2', 'Nulla', 50)
 let randomEvent = probManager.getRandomObject('CassComun', '1');
 console.log(`Oggetto estratto Lista 1 (Skip 1): `+ randomEvent);
 
+
 randomEvent = probManager.getRandomObject('CassComun', '2');
-console.log(`Oggetto estratto Lista 2 (Skip 2): `+ randomEvent);
+
+//Ramificazione ricompense Skip 1
+if (randomEvent == 'Punti ottimizzazione') {
+  probManager.addObject('CassComun_PntOtm', '1', '10-50', 'auto_InversProp');
+  let NPuntEner = probManager.getRandomObject('CassComun_PntOtm', '1')
+  console.log(`Oggetto estratto Lista 1 (Skip 1): `+ NPuntEner + ' ' + randomEvent);
+} else if (randomEvent == 'Tecnica') {
+  console.log(`Oggetto estratto Lista 1 (Skip 1): `+ randomEvent + ' Comune');
+} else if (randomEvent == 'Evoluzione') {
+  console.log(`Oggetto estratto Lista 1 (Skip 1): `+ randomEvent + ' Comune');
+} else {
+  console.log(`Oggetto estratto Lista 1 (Skip 1): `+ randomEvent);
+}
 
 
 // Pulizia delle istanze
