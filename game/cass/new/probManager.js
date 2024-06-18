@@ -5,7 +5,7 @@ import probManager from "https://raw.githubusercontent.com/Croc-Prog-github/Prob
 probManager.addList('CassComun', '1');
 probManager.addList('CassComun', '2');
 
-console.log("Elementi di Istanza1 (Cassa Comune):")
+console.log("Elementi di Cassa Comune:")
 
 
 // Aggiunta di oggetti con probabilità
