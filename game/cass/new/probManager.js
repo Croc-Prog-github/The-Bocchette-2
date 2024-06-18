@@ -9,9 +9,7 @@ console.log("Elementi di Cassa Comune:")
 
 
 // Aggiunta di oggetti con probabilità
-probManager.addObject('CassComun', '1', '100 Banconote', 13);
-probManager.addObject('CassComun', '1', '50 Banconote', 27);
-probManager.addObject('CassComun', '1', '25 Banconote', 60);
+probManager.addObject('CassComun', '1', '30-100', 'auto_InversProp');
 
 probManager.addObject('CassComun', '2', 'Evoluzione', 10)
 probManager.addObject('CassComun', '2', 'Tecnica', 15)
