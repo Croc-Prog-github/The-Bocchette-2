@@ -10,7 +10,7 @@ console.log("Elementi di Cassa Comune:")
 
 
 // Aggiunta di oggetti con probabilità
-probManager.addObject('CassComun', '1', '30-100', 'auto_InversProp');
+probManager.addObject('CassComun', '1', '30-100', 'auto_InversProp'); //Estrazione Banconote
 
 probManager.addObject('CassComun', '2', 'Evoluzione', 10)
 probManager.addObject('CassComun', '2', 'Tecnica', 15)
@@ -19,11 +19,13 @@ probManager.addObject('CassComun', '2', 'Nulla', 50)
 
 
 // Estrazione di un oggetto casuale
-let randomEvent = probManager.getRandomObject('CassComun', '1');
-console.log(`Oggetto estratto Lista 1 (Skip 1): `+ randomEvent + ' Banconote');
+let nBanconoteEstratt = probManager.getRandomObject('CassComun', '1');
+document.getElementById('n').textContent = nBanconoteEstratt; // Sostituisci il contenuto del div con il numero generato
+soldi = parseInt(soldi) + parseInt(nBanconoteEstratt); //Somma matematica, senza unione di strighe
+console.log(`Oggetto estratto Lista 1 (Skip 1): `+ nBanconoteEstratt + ' Banconote');
 
 
-randomEvent = probManager.getRandomObject('CassComun', '2');
+let randomEvent = probManager.getRandomObject('CassComun', '2');
 
 //Ramificazione ricompense Skip 1
 if (randomEvent == 'Punti ottimizzazione') {

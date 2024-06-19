@@ -12,6 +12,7 @@
     <link rel="icon" href="https://docs.google.com/drawings/d/e/2PACX-1vRzg3r27e7_yLyB4m8rlyFHgQ8H5d6IJtW39axawbD5u7S_eX3ezqZdtll3NBLxJYY_OUhuSGJ-jQ8T/pub?w=16&h=16" type="image/x-icon">
     <script src="/var.js"></script>
     <script src="/SchedDes.js"></script>
+    <script src="/game/cass/new/Probability-Manager.js"></script>
 
     <script>
       if (!isNaN(NCassCom) && parseInt(NCassCom) > 0) {
@@ -22,9 +23,6 @@
     </script>
   </head>
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif; user-select: none; background-color: #316f87; overflow: hidden;">
-    <script src="/game/cass/new/Probability-Manager.js"></script>
-    <script src="/game/cass/new/probCassCom.js"></script>
-
     <div name="Content1" id="Skp1">
       <div style="display: flex; flex-direction: column; margin-block: 15%; position: relative; z-index: 1; flex-wrap: wrap; align-content: center;justify-content: center;">
         <div style=" cursor: default; font-size: x-large; display: flex; justify-content: center;">
@@ -44,10 +42,7 @@
           <img src="/resources/TB2/Casse/Ricompense/Punti ottimiz.svg" alt="Punti Ottimiz" style="width: 80%; margin: 10%;"/>
         </div>
         Clicca per continuare
-      </div>
-      
-      <!-- probCom.js -->
-      <script src="/game/cass/probCom.js"></script>
+      </div>     
     </div>
 
     <div style="display: none; justify-content: flex-end; margin-top: -5.4%">
@@ -55,6 +50,10 @@
         2
       </div>
     </div>
+
+    <!-- Content -->
+    <!-- <script src="/game/cass/probCom.js"></script> --->
+    <script src="/game/cass/new/probCassCom.js"></script>
   </body>
 </html>
 
@@ -81,6 +80,7 @@
 </script>
 
 <script>
+/*
   //Scielta casuale Banconote
   function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -94,7 +94,7 @@
   divN.textContent = randomNumber;
 
   soldi = parseInt(soldi) + parseInt(randomNumber); //Fa la somma matematica (senza unione di strighe)
-  
+*/
 </script>
 
 <script>
@@ -128,6 +128,7 @@
 </style>
 
 <script>
+/*
   // Content2: Animazione '???'
   function animateScroll() {
     const scrollElements = document.querySelectorAll('.scroll');
@@ -149,4 +150,5 @@
   setTimeout(function () {
     requestAnimationFrame(animateScroll);
   }, 0);
+*/
 </script>
