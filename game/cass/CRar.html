@@ -35,23 +35,24 @@
       </div>
     </div>
   
-    <div name="Content2" hidden id="Skp2">
-      <div style="display: flex; justify-content: center; flex-direction: row; margin-block: 15%; position: relative; z-index: 1;">
-        <div style="border: solid 3px; margin-inline: 0%; height: 200px; width: 200px; background: steelblue;">
-          <img src="" alt="this?" id="slotC" style="width: 100%; margin-block: 15%;">
+    <div name="Skip2" hidden id="Skp2">
+      <div style="display: flex;flex-direction: column;margin-block: 15%;position: relative;z-index: 1;align-items: center;">
+        <div style="cursor: default; font-size: x-large; display: flex; justify-content: center;">
+          <div id="TextSkip2">Error</div> 
         </div>
-      </div>
-      <div name="Stop" style="cursor: default; display: flex; justify-content: center; font-size: xx-large; -webkit-text-stroke-width: thin;">
-        Press SPACE for stop
-      </div>
-      <!-- prob.js -->
-      <script src="/game/cass/probRar.js"></script>
+        <div style="border: solid 3px; margin-inline: 0%; height: 200px; width: 200px; background: steelblue; align-content: center;">
+          <img id="ImgSkip2" src="" alt="Ricompensa_Skip2" style="width: 100%;"/>
+        </div>
+        Clicca per continuare
+      </div>     
     </div>
   
     <div style="display: none; justify-content: flex-end; margin-top: -5.4%;">
       <div name="Skip" style="cursor: default; background: cornflowerblue; padding-block: 15px; padding-inline: 20px; border: ridge 6px; outline: dashed 5px gold; width: min-content; font-size: xx-large; text-align: center;">2</div>
     </div>
     
+    <!-- Content -->
+    <script src="/game/cass/probCassRar.js"></script>
   </body>
 </html>
 
@@ -76,7 +77,9 @@
   rotateElement();
 </script>
 
-<script>//Scielta casuale Banconote
+<script>
+/*
+  //Scielta casuale Banconote
   function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
@@ -89,35 +92,45 @@
   divN.textContent = randomNumber;
 
   soldi = parseInt(soldi) + parseInt(randomNumber); //Fa la somma matematica (senza unione di strighe)
+*/
 </script>
 
-<script>// Vai al 2° Skip
-  const Skp1 = document.getElementById('Skp1');
-  const Skp2 = document.getElementById('Skp2');
+<script>// Gestisce il click muose per gli Skips
+  let firstClick = false;
+  let skipN2Value = typeof SkipN2 !== 'undefined' ? SkipN2 : 'Nulla';
 
-  function handleKeyPress(event) {
-    if (event.button === 0) {
-      Skp1.hidden = true;
-      Skp2.hidden = false;
+  function VaiSkip2(event) {
+    if (event.button === 0 && !firstClick) {
+      if (skipN2Value === 'Nulla') {
+        window.location.href = '/game/home.html';
+      } else {
+        document.getElementById('Skp1').hidden = true;
+        document.getElementById('Skp2').hidden = false;
+        firstClick = true;
+      }
     }
   }
-  document.addEventListener('mousedown', handleKeyPress);
+  function ReurnHome(event) {
+    if (event.button === 0 && firstClick) {
+      window.location.href = '/game/home.html';
+    }
+  }
+  document.addEventListener('mousedown', (event) => {
+    if (!firstClick) {
+      VaiSkip2(event);
+    } else {
+      // Introduce a small delay between clicks
+      setTimeout(() => {
+        ReurnHome(event);
+      }, 3);
+    }
+  });
 </script>
 
-<style>
-  /*
-  .scroll {
-    border: solid 3px;
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    right: 47%;
-    transition: top 0.5s cubic-bezier(0.5, 0.5, 0.5, 0.5);
-  }
-  */
-</style>
 
-<script> // Content2: Animazione '???'
+<script>
+/*
+  // Content2: Animazione '???'
   function animateScroll() {
     const scrollElements = document.querySelectorAll('.scroll');
     for (let i = 0; i < scrollElements.length; i++) {
@@ -138,4 +151,5 @@
   setTimeout(function() {
     requestAnimationFrame(animateScroll);
   }, 0);
+*/
 </script>
