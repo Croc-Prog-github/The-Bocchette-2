@@ -100,31 +100,41 @@
 */
 </script>
 
-<script>// Gestisce il click muose per gli Skips
+<!-- Gestisce il click muose per gli Skips -->
+<script>
   let firstClick = false;
+  let skipN2Value = typeof SkipN2 !== 'undefined' ? SkipN2 : 'Nulla';
 
   function VaiSkip2(event) {
     if (event.button === 0 && !firstClick) {
-      document.getElementById('Skp1').hidden = true;
-      document.getElementById('Skp2').hidden = false;
-      firstClick = true;
-
-      // Abilita il secondo clic dopo un ritardo di 3 ms
-      setTimeout(() => {
-        firstClick = 'readyForSecondClick';
-      }, 3);
+      if (skipN2Value === 'Nulla') {
+        window.location.href = '/game/home.html';
+      } else {
+        document.getElementById('Skp1').hidden = true;
+        document.getElementById('Skp2').hidden = false;
+        firstClick = true;
+      }
     }
   }
 
   function ReurnHome(event) {
-    if (event.button === 0 && firstClick === 'readyForSecondClick') {
+    if (event.button === 0 && firstClick) {
       window.location.href = '/game/home.html';
     }
   }
 
-  document.addEventListener('mousedown', VaiSkip2);
-  document.addEventListener('mousedown', ReurnHome);
+  document.addEventListener('mousedown', (event) => {
+    if (!firstClick) {
+      VaiSkip2(event);
+    } else {
+      // Introduce a small delay between clicks
+      setTimeout(() => {
+        ReurnHome(event);
+      }, 3);
+    }
+  });
 </script>
+
 
 <script>
 /*

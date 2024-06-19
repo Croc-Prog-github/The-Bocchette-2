@@ -1,4 +1,4 @@
-//import probManager from "/game/cass/new/Probability-Manager.js";
+//import probManager from "https://raw.githubusercontent.com/Croc-Prog-github/Probability-Manager.js/main/core/Probability-Manager.js";
 const probManager = new ProbabilityManager();
 
 // Creazione di istanze e liste
@@ -30,10 +30,19 @@ if (SkipN2 == 'Punti ottimizzazione') {
   probManager.addObject('CassComun_PntOtm', '1', '10-50', 'auto_InversProp');
   let NPuntEner = probManager.getRandomObject('CassComun_PntOtm', '1')
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ NPuntEner + ' ' + SkipN2);
+
+  document.getElementById('TextSkip2').textContent = (NPuntEner + ' ' + SkipN2);
+  //Dà i punti ottimizz.
 } else if (SkipN2 == 'Tecnica') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
+
+  document.getElementById('TextSkip2').textContent = 'Tecnica comune: X';
+  //Dà la tecnica
 } else if (SkipN2 == 'Evoluzione') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
+
+  document.getElementById('TextSkip2').textContent = 'Evoluzione comune: X';
+  //Dà l'evoluz.
 } else {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2);
 }
