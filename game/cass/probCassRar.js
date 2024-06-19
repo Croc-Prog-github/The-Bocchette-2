@@ -35,15 +35,15 @@ if (SkipN2 == 'Punti ottimizzazione') {
   document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Punti ottimiz.svg';
   //Dà i punti ottimizz.
 } else if (SkipN2 == 'Tecnica') {
-  console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
+  console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Rara');
 
-  document.getElementById('TextSkip2').textContent = 'Tecnica comune: X';
+  document.getElementById('TextSkip2').textContent = 'Tecnica Rara: X';
   document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Tecnica.png';
   //Dà la tecnica
 } else if (SkipN2 == 'Evoluzione') {
-  console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
+  console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Rara');
 
-  document.getElementById('TextSkip2').textContent = 'Evoluzione comune: X';
+  document.getElementById('TextSkip2').textContent = 'Evoluzione Rara: X';
   document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Evoluzione.png';
   //Dà l'evoluz.
 } else {
