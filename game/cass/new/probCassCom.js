@@ -6,8 +6,6 @@ probManager.addList('CassComun', 1); //Banconote
 probManager.addList('CassComun', 2); // Evoluz, Tecnic, Punt_Ottim, Null
 probManager.addList('CassComun_PntOtm', 1); //Range punti ottimizzazione
 
-console.log("Elementi di Cassa Comune:")
-
 
 // Aggiunta di oggetti con probabilità
 probManager.addObject('CassComun', '1', '30-100', 'auto_InversProp'); //Estrazione Banconote

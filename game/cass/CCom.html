@@ -67,7 +67,7 @@
   const targetAngle = 360; // Angolo di destinazione
   const speed = 1; // Velocità di cambio in millisecondi
 
-  function rotateElement() {
+  function AnimationRotation() {
     if (angle < targetAngle) {
       angle += 1; // Incremento l'angolo di 1 grado
 
@@ -75,11 +75,11 @@
       element.style.transform = `rotate3d(1, 1, 1, ${angle}deg)`;
 
       // Richiamo la funzione dopo un intervallo di tempo (speed)
-      setTimeout(rotateElement, speed);
+      setTimeout(AnimationRotation, speed);
     }
   }
   // Avvio l'animazione
-  rotateElement();
+  AnimationRotation();
 </script>
 
 <script>
@@ -100,35 +100,31 @@
 */
 </script>
 
-<script>
-  // Vai al 2° Skip
-  const Skp1 = document.getElementById('Skp1');
-  const Skp2 = document.getElementById('Skp2');
+<script>// Gestisce il click muose per gli Skips
+  let firstClick = false;
 
-  function handleKeyPress(event) {
-    if (event.button === 0) {
-      Skp1.hidden = true;
-      Skp2.hidden = false;
+  function VaiSkip2(event) {
+    if (event.button === 0 && !firstClick) {
+      document.getElementById('Skp1').hidden = true;
+      document.getElementById('Skp2').hidden = false;
+      firstClick = true;
 
-      alert("Continuare la gestione probab nel proggetto: Probability-Manager.js")
-      window.location.href = '/game/home.html'
+      // Abilita il secondo clic dopo un ritardo di 3 ms
+      setTimeout(() => {
+        firstClick = 'readyForSecondClick';
+      }, 3);
     }
   }
-  document.addEventListener('mousedown', handleKeyPress);
-</script>
 
-<style>
-  /*
-  .scroll {
-    border: solid 3px;
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    right: 47%;
-    transition: top 0.5s cubic-bezier(0.5, 0.5, 0.5, 0.5);
+  function ReurnHome(event) {
+    if (event.button === 0 && firstClick === 'readyForSecondClick') {
+      window.location.href = '/game/home.html';
+    }
   }
-  */
-</style>
+
+  document.addEventListener('mousedown', VaiSkip2);
+  document.addEventListener('mousedown', ReurnHome);
+</script>
 
 <script>
 /*
