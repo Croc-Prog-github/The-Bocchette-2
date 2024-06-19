@@ -25,19 +25,19 @@ soldi = parseInt(soldi) + parseInt(nBanconoteEstratt); //Somma matematica, senza
 console.log(`Oggetto estratto Lista 1 (Skip 1): `+ nBanconoteEstratt + ' Banconote');
 
 
-let randomEvent = probManager.getRandomObject('CassComun', '2');
+let SkipN2 = probManager.getRandomObject('CassComun', '2');
 
-//Ramificazione ricompense Skip 1
-if (randomEvent == 'Punti ottimizzazione') {
+//Ramificazione ricompense Skip 2
+if (SkipN2 == 'Punti ottimizzazione') {
   probManager.addObject('CassComun_PntOtm', '1', '10-50', 'auto_InversProp');
   let NPuntEner = probManager.getRandomObject('CassComun_PntOtm', '1')
-  console.log(`Oggetto estratto Lista 1 (Skip 1): `+ NPuntEner + ' ' + randomEvent);
-} else if (randomEvent == 'Tecnica') {
-  console.log(`Oggetto estratto Lista 1 (Skip 1): `+ randomEvent + ' Comune');
-} else if (randomEvent == 'Evoluzione') {
-  console.log(`Oggetto estratto Lista 1 (Skip 1): `+ randomEvent + ' Comune');
+  console.log(`Oggetto estratto Lista 1 (Skip 2): `+ NPuntEner + ' ' + SkipN2);
+} else if (SkipN2 == 'Tecnica') {
+  console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
+} else if (SkipN2 == 'Evoluzione') {
+  console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
 } else {
-  console.log(`Oggetto estratto Lista 1 (Skip 1): `+ randomEvent);
+  console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2);
 }
 
 
