@@ -28,12 +28,12 @@ let SkipN2 = probManager.getRandomObject('CassRar', '2');
 //Ramificazione ricompense Skip 2
 if (SkipN2 == 'Punti ottimizzazione') {
   probManager.addObject('CassRar_PntOtm', '1', '10-50', 'auto_InversProp');
-  let NPuntEner = probManager.getRandomObject('CassRar_PntOtm', '1')
-  console.log(`Oggetto estratto Lista 1 (Skip 2): `+ NPuntEner + ' ' + SkipN2);
+  let NPuntOttim = probManager.getRandomObject('CassRar_PntOtm', '1')
+  console.log(`Oggetto estratto Lista 1 (Skip 2): `+ NPuntOttim + ' ' + SkipN2);
 
-  document.getElementById('TextSkip2').textContent = (NPuntEner + ' ' + SkipN2);
+  document.getElementById('TextSkip2').textContent = (NPuntOttim + ' ' + SkipN2);
   document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Punti ottimiz.svg';
-  //Dà i punti ottimizz.
+  PuntOtimizz = parseInt(PuntOtimizz) + parseInt(NPuntOttim); //Dà i punti ottimizz.
 } else if (SkipN2 == 'Tecnica') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Rara');
 
