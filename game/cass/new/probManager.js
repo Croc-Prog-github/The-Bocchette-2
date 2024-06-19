@@ -1,4 +1,4 @@
-import probManager from "https://raw.githubusercontent.com/Croc-Prog-github/Probability-Manager.js/main/core/Probability-Manager.js";
+//import probManager from "https://raw.githubusercontent.com/Croc-Prog-github/Probability-Manager.js/main/core/Probability-Manager.js";
 const probManager = new ProbabilityManager();
 
 // Creazione di istanze e liste
