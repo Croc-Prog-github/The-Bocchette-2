@@ -39,3 +39,4 @@ COMPLETATI
 9. Mettere il data-cecker nel salvattaggio e confrt. con ultima modific. X
 10. Ridotto o risolto il bug apertura casse. FATTO
 11. Completare theme.css + js nelle impo X
+12. Migliorare la gestione probabilità e l'apertura delle casse. FATTO
