@@ -33,7 +33,7 @@ if (SkipN2 == 'Punti ottimizzazione') {
 
   document.getElementById('TextSkip2').textContent = (NPuntEner + ' ' + SkipN2);
   document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Punti ottimiz.svg';
-  //Dà i punti ottimizz.
+  PuntOtimizz = parseInt(PuntOtimizz) + parseInt(NPuntEner); //Dà i punti ottimizz.
 } else if (SkipN2 == 'Tecnica') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
 

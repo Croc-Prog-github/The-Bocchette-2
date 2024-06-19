@@ -5,6 +5,7 @@ let soldi = sessionStorage.getItem("soldi");
 let passP = sessionStorage.getItem("passP"); //Pass premium (aqcuistato)?
 let obb = sessionStorage.getItem("obb"); //(n.) obbiettivi (del pass) conquistati
 let gett = sessionStorage.getItem("gett"); //n. di gettoni (pass)
+let PuntOttimizz = sessionStorage.getItem("PuntOttimizz") //Punti ottimizzazione per migliorare le Tecniche
 
 let NCassCom = sessionStorage.getItem("NCassCom"); //n. casse comuni
 let NCassRar = sessionStorage.getItem("NCassRar"); //n. casse comuni
@@ -46,6 +47,7 @@ function SS() {
   sessionStorage.setItem("passP", passP);
   sessionStorage.setItem("obb", obb);
   sessionStorage.setItem("gett", gett);
+  sessionStorage.setItem("PuntOttimizz", PuntOttimizz);
 
   sessionStorage.setItem("NCassCom", NCassCom);
   sessionStorage.setItem("NCassRar", NCassRar)
@@ -60,7 +62,7 @@ function SS() {
 //Da ora il Session Storage non è più controllato dal filtro dei soli numeri interi
 setInterval(function() {
   SS();
-  const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme', 'NCassCom', 'NCassRar']; // Array delle chiavi da verificare (solo variabili Int)
+  const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme', 'NCassCom', 'NCassRar', 'PuntOttimizz']; // Array delle chiavi da verificare (solo variabili Int)
   for (let key in sessionStorage) {
     if (keysToCheck.includes(key)) { // Verifica se la chiave corrente è presente nell'array keysToCheck
       let value = sessionStorage.getItem(key);
@@ -76,8 +78,5 @@ setInterval(function() {
   }
 }, 300);
 
-// Categorizzare contatori delle casse come Int (Micro debug)
-//parseInt(NCassCom, 10) += 0;
-//parseInt(NCassRar, 10) += 0;
 if (NCassCom < 0) {NCassCom = 0};
 if (NCassRar < 0) {NCassRar = 0};
