@@ -32,16 +32,19 @@ if (SkipN2 == 'Punti ottimizzazione') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ NPuntEner + ' ' + SkipN2);
 
   document.getElementById('TextSkip2').textContent = (NPuntEner + ' ' + SkipN2);
+  document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Punti ottimiz.svg';
   //Dà i punti ottimizz.
 } else if (SkipN2 == 'Tecnica') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
 
   document.getElementById('TextSkip2').textContent = 'Tecnica comune: X';
+  document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Tecnica.png';
   //Dà la tecnica
 } else if (SkipN2 == 'Evoluzione') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
 
   document.getElementById('TextSkip2').textContent = 'Evoluzione comune: X';
+  document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Evoluzione.png';
   //Dà l'evoluz.
 } else {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2);

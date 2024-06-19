@@ -41,8 +41,8 @@
         <div style="cursor: default; font-size: x-large; display: flex; justify-content: center;">
           <div id="TextSkip2">Error</div> 
         </div>
-        <div style="border: solid 3px; margin-inline: 0%; height: 200px; width: 200px; background: steelblue;">
-          <img src="" alt="Ricompensa_Skip2" style="width: 80%; margin: 10%;"/>
+        <div style="border: solid 3px; margin-inline: 0%; height: 200px; width: 200px; background: steelblue; align-content: center;">
+          <img id="ImgSkip2" src="" alt="Ricompensa_Skip2" style="width: 100%;"/>
         </div>
         Clicca per continuare
       </div>     
@@ -100,8 +100,7 @@
 */
 </script>
 
-<!-- Gestisce il click muose per gli Skips -->
-<script>
+<script>// Gestisce il click muose per gli Skips
   let firstClick = false;
   let skipN2Value = typeof SkipN2 !== 'undefined' ? SkipN2 : 'Nulla';
 
@@ -116,13 +115,11 @@
       }
     }
   }
-
   function ReurnHome(event) {
     if (event.button === 0 && firstClick) {
       window.location.href = '/game/home.html';
     }
   }
-
   document.addEventListener('mousedown', (event) => {
     if (!firstClick) {
       VaiSkip2(event);
