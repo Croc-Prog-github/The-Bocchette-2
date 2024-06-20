@@ -32,7 +32,7 @@ if (SkipN2 == 'Punti ottimizzazione') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ NPuntOttim + ' ' + SkipN2);
 
   document.getElementById('TextSkip2').textContent = (NPuntOttim + ' ' + SkipN2);
-  document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Punti ottimiz.svg';
+  document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Punti-ottimiz.png';
   PuntOttimizz = parseInt(PuntOttimizz) + parseInt(NPuntOttim); //Dà i punti ottimizz.
 } else if (SkipN2 == 'Tecnica') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
