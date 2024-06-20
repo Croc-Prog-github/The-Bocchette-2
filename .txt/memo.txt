@@ -8,7 +8,6 @@
 8. Completare le tecniche in sopravivenza
 9. Continuare il Power-Up
 10. Continuare le Missioni-storia
-11. Creare contatore Punti Ottimizzazione in home (50%)
 
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza (40%)
@@ -41,4 +40,4 @@ COMPLETATI
 11. Completare theme.css + js nelle impo X
 12. Migliorare la gestione probabilità e l'apertura delle casse. FATTO
 13. Correggere bug non-assegnazione PuntiOttim in SessionStorage FATTO
-14. 
+14. Creare contatore Punti Ottimizzazione in home FATTO
