@@ -33,7 +33,8 @@ if (SkipN2 == 'Punti ottimizzazione') {
 
   document.getElementById('TextSkip2').textContent = (NPuntOttim + ' ' + SkipN2);
   document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Punti ottimiz.svg';
-  PuntOtimizz = parseInt(PuntOtimizz) + parseInt(NPuntOttim); //Dà i punti ottimizz.
+  PuntOttimizz = parseInt(PuntOttimizz) + parseInt(NPuntOttim); //Dà i punti ottimizz.
+  sessionStorage.setItem("PuntOttimizz", PuntOttimizz);
 } else if (SkipN2 == 'Tecnica') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
 
