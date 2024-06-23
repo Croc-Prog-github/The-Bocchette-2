@@ -22,7 +22,7 @@
 # Anti-npm
 /package-lock.json
 /node_modules/.package-lock.json
-# 2404 file npm transformated
+# <=2404 file npm transformated
 
 # Credenziali server
 /ServerService/Account-Server/AccServ.ts
