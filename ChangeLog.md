@@ -1,6 +1,6 @@
 # Novità: Beta Publicazione 1.0.0
 La versione: **Beta Publicazione 1.0.0** è stata rilasciata il --/--/----.<br>
-I file delle versioni precedenti sono disponibili nel Relase di GitHub.
+Le Distribuzioni precedenti sono disponibili nella sezione Release di GitHub.
 ## Aggiunte
 - 
 ## Rimozioni
