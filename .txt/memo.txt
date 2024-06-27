@@ -22,6 +22,8 @@ DA INIZIARE
 2. Creare la fisica dei bordi
 3. Iniziare il salvataggio (SessionStorage) mappe personali Creativa
 4. Continuare i muri in Sopravivenza Singolo
+5. Iniziare sviluppare i sotto-rami per rarità selezionate delle Tecniche o Evoluzioni della stessa rarità -> Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom
+
 
 BLOCCATI
 1. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium
