@@ -152,12 +152,15 @@
         break;
         case '1 CRar':
           //aumenta di +1 le cass rare
+          NCassRar = parseInt(NCassRar) + 1;
+          window.location.href;
         break;
         case '10 Gem':
           gemme = parseInt(gemme) + 10;
         break;
         default:
-          window.alert("Errore: Ricompensa di switch(), non valida!");
+          //window.alert("Errore: Ricompensa di switch(), non valida!");
+          console.error("Ricompensa di switch(), non valida!")
         break;
       }
     } else {
