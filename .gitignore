@@ -14,7 +14,7 @@
 # Vscode
 /.vs
 /dist
-!/.vscode
+/.vscode
 
 # Colyseus
 /game/multiP/colyseus.js
