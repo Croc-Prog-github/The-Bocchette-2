@@ -4,6 +4,10 @@
 /node_modules/.bin
 !/node_modules/.package-lock.json
 
+/node_modules/.vite/deps/_metadata.json
+/node_modules/.vite/deps/aws-sdk.js.map
+/node_modules/.vite/deps/aws-sdk.js
+
 # Updates
 
 # Git hub
@@ -22,7 +26,6 @@
 # npm
 !/package-lock.json
 # <=2404 file npm transformated
-# 1742 file rimanenti
 
 # Credenziali server
 /ServerService/Account-Server/AccServ.ts
