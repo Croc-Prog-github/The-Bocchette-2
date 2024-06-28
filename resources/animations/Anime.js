@@ -1,2 +1,8 @@
 const anime = require('animejs');
-anime
+
+var elements = document.querySelectorAll('.');
+
+anime({
+  targets: elements,
+  translateX: 270
+});
