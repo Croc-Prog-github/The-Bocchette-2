@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Avvia yarn install e yarn run dev in background
-(yarn install && yarn run dev) &
+(npm install && npm run publish) &
 
 # Attendi 1 secondi
 sleep 1
