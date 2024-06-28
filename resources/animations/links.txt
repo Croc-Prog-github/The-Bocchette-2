@@ -1,0 +1,81 @@
+Libreria anime.js per animazioni web su github.
+Documentazione ordinato per capitoli:
+TARGETS:
+  https://animejs.com/documentation/#cssSelector
+  https://animejs.com/documentation/#domNode
+  https://animejs.com/documentation/#JSobject
+  https://animejs.com/documentation/#array
+PROPERTIES:
+  https://animejs.com/documentation/#cssProperties
+  https://animejs.com/documentation/#CSStransforms
+  https://animejs.com/documentation/#JSobjProp
+  https://animejs.com/documentation/#domAttr
+  https://animejs.com/documentation/#svgAttr
+PROPERTY PARAMETERS:
+  https://animejs.com/documentation/#duration
+  https://animejs.com/documentation/#delay
+  https://animejs.com/documentation/#endDelay
+  https://animejs.com/documentation/#easing
+  https://animejs.com/documentation/#round
+  https://animejs.com/documentation/#specificPropParameters
+  https://animejs.com/documentation/#functionBasedParameters
+ANIMATION PARAMETERS:
+  https://animejs.com/documentation/#direction
+  https://animejs.com/documentation/#loop
+  https://animejs.com/documentation/#autoplay
+VALUES:
+  https://animejs.com/documentation/#unitlessValue
+  https://animejs.com/documentation/#specificUnitValue
+  https://animejs.com/documentation/#relativeValues
+  https://animejs.com/documentation/#colors
+  https://animejs.com/documentation/#fromToValues
+  https://animejs.com/documentation/#functionBasedPropVal
+KEYFRAMES:
+  https://animejs.com/documentation/#animationKeyframes
+  https://animejs.com/documentation/#propertyKeyframes
+STAGGERING:
+  https://animejs.com/documentation/#staggeringBasics
+  https://animejs.com/documentation/#staggeringStartValue
+  https://animejs.com/documentation/#rangeValueStaggering
+  https://animejs.com/documentation/#staggeringFrom
+  https://animejs.com/documentation/#staggeringDirection
+  https://animejs.com/documentation/#staggeringEasing
+  https://animejs.com/documentation/#gridStaggering
+  https://animejs.com/documentation/#gridAxisStaggering
+TIMELINE:
+  https://animejs.com/documentation/#timelineBasics
+  https://animejs.com/documentation/#timelineOffsets
+  https://animejs.com/documentation/#TLParamsInheritance
+CONTROLS:
+  https://animejs.com/documentation/#playPause
+  https://animejs.com/documentation/#restartAnim
+  https://animejs.com/documentation/#reverseAnim
+  https://animejs.com/documentation/#seekAnim
+  https://animejs.com/documentation/#TLcontrols
+CALLBACKS & PROMISES:
+  https://animejs.com/documentation/#update
+  https://animejs.com/documentation/#beginComplete
+  https://animejs.com/documentation/#loopBeginLoopComplete
+  https://animejs.com/documentation/#change
+  https://animejs.com/documentation/#changeBeginChangeComplete
+  https://animejs.com/documentation/#finishedPromise
+SVG:
+  https://animejs.com/documentation/#motionPath
+  https://animejs.com/documentation/#morphing
+  https://animejs.com/documentation/#lineDrawing
+EASINGS:
+  https://animejs.com/documentation/#linearEasing
+  https://animejs.com/documentation/#pennerFunctions
+  https://animejs.com/documentation/#cubicBezier
+  https://animejs.com/documentation/#springPhysicsEasing
+  https://animejs.com/documentation/#elasticEasing
+  https://animejs.com/documentation/#stepEasing
+  https://animejs.com/documentation/#customEasing
+HELPERS:
+  https://animejs.com/documentation/#remove
+  https://animejs.com/documentation/#get
+  https://animejs.com/documentation/#set
+  https://animejs.com/documentation/#random
+  https://animejs.com/documentation/#tick
+  https://animejs.com/documentation/#running
+  https://animejs.com/documentation/#visibilitychange
