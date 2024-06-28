@@ -19,9 +19,9 @@
 # Colyseus
 /game/multiP/colyseus.js
 
-# Anti-npm
-/package-lock.json
-/node_modules/.package-lock.json
+# npm
+!/package-lock.json
+!/node_modules/.package-lock.json
 # <=2404 file npm transformated
 
 # Credenziali server
