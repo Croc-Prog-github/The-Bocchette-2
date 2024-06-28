@@ -54,14 +54,14 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
 - Completa missioni del Bocchet Pass per ricevere ricompense
 - Usa Bocchette con evoluzioni uniche, legate alla Storyline
 - Scontri in Battle Royale bilanciati in base al grado e alla rarità della Bocchetta
-- Microtransazioni per comprare le risorse (disponibili con Google Play)
+<!-- - Microtransazioni per comprare le risorse (disponibili con Google Play) -->
 - Salvataggio in Cloud dei tuoi progressi
 
 Per una sessione veloce, senza dover accedere, usa l'Account Ospite dove puoi giocare senza avere un account registrato.<br>
 Creare un Account Server è totalmente gratuito, serve però anche inserire la propria e-mail.
 
 **Registrati con l'Accout server** per poter usare queste funzioni esclusive:
-- Microtransazioni delle risorse dal Negozio
+<!-- - Microtransazioni delle risorse dal Negozio -->
 - Archiviazione Cloud dei tuoi progressi
 - Invitare in squadra amici online
 - Chat per comunicare con gli amici in tempo reale
