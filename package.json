@@ -30,7 +30,20 @@
     "typescript": "^5.2.2"
   },
   "main": "index.js || index.html",
-  "repository": "https://github.com/Croc-Prog-github/The-Bocchette-2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Croc-Prog-github/The-Bocchette-2.git"
+  },
   "author": "Croc-Prog-github <119326147+Croc-Prog-github@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "<h1 align=\"center\">The Bocchette 2</h1> <!--  [![Main-Background](https://docs.google.com/drawings/d/e/2PACX-1vRWRSRkIcWafi4aizPRm6sHtJleHPepMcy88ZQ9UX3AhNIVTnKyhxNrIsfAU4LcKdr4JWxVRsUImpv0/pub?w=690&h=571)](url) ==============  -->",
+  "bugs": {
+    "url": "https://github.com/Croc-Prog-github/The-Bocchette-2/issues"
+  },
+  "homepage": "https://github.com/Croc-Prog-github/The-Bocchette-2#readme",
+  "version": "1.0.0",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": []
 }
