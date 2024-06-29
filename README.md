@@ -1,8 +1,4 @@
 <h1 align="center">The Bocchette 2</h1>
-<!-- 
-[![Main-Background](https://docs.google.com/drawings/d/e/2PACX-1vRWRSRkIcWafi4aizPRm6sHtJleHPepMcy88ZQ9UX3AhNIVTnKyhxNrIsfAU4LcKdr4JWxVRsUImpv0/pub?w=690&h=571)](url)
-============== 
--->
 
 Entra in un gioco Battle Royale in 3°persona. Vivi la storia e gioca in mappe Multiplayer per avanzare nel gioco.<br>
 Per combattere usa potenti attacchi e difese che consumano Energia, ricaricabile nel tempo.<br>
@@ -34,17 +30,6 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
   |
   [Wiki](https://github.com/Croc-Prog-github/The-Bocchette-2/wiki)
 </div>
-
-<!--
-<table>
-  <tr>
-    <td style="overflow: auto;"><img src="/resources/img/Shop.png" alt="Shop"></td>
-    <td style="overflow: auto;"><img src="/resources/img/Pass.png" alt="Pass"></td>
-  </tr>
-</table>
-
-  'For starting: npm start'
--->
 
 **Caratteristiche principali:**
 - Invita gli amici/player online
