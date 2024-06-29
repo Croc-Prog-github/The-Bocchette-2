@@ -42,7 +42,7 @@
                 <button tabindex="-1" style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">1</button>
                 <div style="background: black; width: 3px; height: 20px;" name="line"></div>
                 <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur" id="SfObb1">
-                  <img src="/resources/TB2/Valùta_icon.png" alt="Errore di fonte" style="width: 100%;" title="200 banconote" onclick="RRPP('200 banconote', 'SfObb1');">
+                  <img src="/resources/TB2/Valùta_icon.png" alt="Errore di fonte" style="width: 100%;" title="200 banconote" onclick="RRPP('200 banconote', 'SfObb1', '1');">
                 </div>
               </div>
 
@@ -50,7 +50,7 @@
                 <button tabindex="-1" style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">2</button>
                 <div style="background: black; width: 3px; height: 20px;" name="line"></div>
                 <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur" id="SfObb2">
-                  <img src="/resources/TB2/Casse/Cassa_Rara.png" alt="Errore di fonte" style="width: 100%;" title="Cassa Rara" onclick="RRPP('1 CRar', 'SfObb2');">
+                  <img src="/resources/TB2/Casse/Cassa_Rara.png" alt="Errore di fonte" style="width: 100%;" title="Cassa Rara" onclick="RRPP('1 CRar', 'SfObb2', '2');">
                 </div>
               </div>
 
@@ -58,7 +58,7 @@
                 <button tabindex="-1" style="border-radius: 10px; border: 0px; background-color: dodgerblue; color: white;">3</button>
                 <div style="background: black; width: 3px; height: 20px;" name="line"></div>
                 <div style="background: gray; width: 60px; height: 60px; border: solid 3px black;" name="figur" id="SfObb3">
-                  <img src="/resources/TB2/Gemme_Icon.png" alt="Errore di fonte" style="width: 100%;" title="10 Gemme" onclick="RRPP('10 Gem', 'SfObb3');">
+                  <img src="/resources/TB2/Gemme_Icon.png" alt="Errore di fonte" style="width: 100%;" title="10 Gemme" onclick="RRPP('10 Gem', 'SfObb3', '3');">
                 </div>
               </div>
               
@@ -137,32 +137,36 @@
 </script>
 
 <script>
-  function RRPP(ricomp, id) { // Riscatta Ricompensa Pass Premium
+  function RRPP(ricomp, id, obbRicomp) { // Riscatta Ricompensa Pass Premium
     if (passP == 1) { //Controlla Premium Pass (riscatto ricomps. pass premium)
       let SfObbId = document.getElementById(id).style;
-      switch (ricomp) {
-        case "200 banconote":
-          
-          if (SfObbId.background == 'gray') {
-            soldi = parseInt(soldi) + 200;
-            SfObbId.background = 'green';
-          } else {
-            window.alert("Ricompensa già riscattata.");
-          }
-        break;
-        case '1 CRar':
-          //aumenta di +1 le cass rare
-          NCassRar = parseInt(NCassRar) + 1;
-          window.location.href;
-        break;
-        case '10 Gem':
-          gemme = parseInt(gemme) + 10;
-        break;
-        default:
-          //window.alert("Errore: Ricompensa di switch(), non valida!");
-          console.error("Ricompensa di switch(), non valida!")
-        break;
+      if (obbRicomp == obb) {
+        switch (ricomp) {
+          case "200 banconote":
+            if (SfObbId.background == 'gray') {
+              soldi = parseInt(soldi) + 200;
+              SfObbId.background = 'green';
+            } else {
+              window.alert("Ricompensa già riscattata.");
+            }
+          break;
+          case '1 CRar':
+            //aumenta di +1 le cass rare
+            NCassRar = parseInt(NCassRar) + 1;
+            window.location.href;
+          break;
+          case '10 Gem':
+            gemme = parseInt(gemme) + 10;
+          break;
+          default:
+            //window.alert("Errore: Ricompensa di switch(), non valida!");
+            console.error("Ricompensa di switch(), non valida!")
+          break;
+        }
+      } else {
+        alert("Devi raggiungere l'obbiettivo "+obbRicomp+" per riscattare questa ricompensa.")
       }
+      
     } else {
       window.alert("Devi acquistare il Pass Premium per riscattare questa ricompensa")
     }
