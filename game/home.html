@@ -576,12 +576,12 @@ function MP(n) {
 <script> //Visualizza obbiettivo Bocchet pass
   function updateObb() {
     const obbTag = document.getElementById("obb");
-    obb = obb + 1;
+    obb = parseInt(obb) + 1;
     obbTag.innerHTML = obb.toString();
   }
   setInterval(function() {
     updateObb();
-    obb = obb - 1;
+    obb = parseInt(obb) - 1;
   }, 200);
 </script>
 
