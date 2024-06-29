@@ -4,10 +4,6 @@
 /node_modules/.bin
 !/node_modules/.package-lock.json
 
-/node_modules/.vite/deps/_metadata.json
-/node_modules/.vite/deps/aws-sdk.js.map
-/node_modules/.vite/deps/aws-sdk.js
-
 # Updates
 
 # Git hub
@@ -23,8 +19,10 @@
 # Colyseus
 /game/multiP/colyseus.js
 
-# npm
-!/package-lock.json
+# npm start
+/node_modules/.vite/deps/_metadata.json
+/node_modules/.vite/deps/aws-sdk.js.map
+/node_modules/.vite/deps/aws-sdk.js
 # <=2404 file npm transformated
 
 # Credenziali server
