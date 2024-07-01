@@ -30,7 +30,7 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
   |
   [Wiki](https://github.com/Croc-Prog-github/The-Bocchette-2/wiki)
   |
-  [Contribuire.md](https://github.com/Croc-Prog-github/The-Bocchette-2/blob/main/CONTRIBUTING.md)
+  [Contribuire.md](https://github.com/Croc-Prog-github/The-Bocchette-2/blob/main/CONTRIBUTING.md#contribuisci-a-the-bocchette-2)
 </div>
 
 **Caratteristiche principali:**
