@@ -13,22 +13,22 @@ Il team di The Bocchette 2 è felice per tua iniziativa di contribuire, ma prima
   - Hai trovato errori/imprecisioni nella **documentazione** (contenuta nella Wiki di GitHub)? Utilizza: [Problemi nella documentazione](https://github.com/Croc-Prog-github/The-Bocchette-2/issues/new?assignees=&labels=Docs+Issue&projects=&template=problemi-documentazione.md&title=)
 - **Compila il modulo**: Completa le informazioni richieste nel modulo, fornisci abbastanza informazioni in maniera chiara. Seguendo questi requisiti è più probabile che il tuo problema/richiesta venga compreso e implementato/risolto.
 
-Grazie per aver contribuito a rendere The Bocchette 2 ancora meglio! 🚀🎉
+Grazie per aver contribuito a rendere migliore The Bocchette 2! 🚀🎉
 <hr>
 
 ## Risolvi un Issue
 ### Prima di iniziare
-- Assicurati di avere una versione aggiornata di Git nel tuo PC.
-- Clona il repository da Git
+- Assicurati di avere istallato [Git](https://git-scm.com/downloads) nel tuo PC.
+- Clona il repository da GitHub usando il comando: `git clone https://github.com/Croc-Prog-github/The-Bocchette-2.git`
 
 ### Passaggi per contribuire
-1. **Sciegli un Issue**: Scegli un problema dal [registro degli Issue](https://github.com/Croc-Prog-github/The-Bocchette-2/issues) o apri un nuovo issue.
+1. **Sciegli un Issue**: Scegli un problema dal [registro degli Issue](https://github.com/Croc-Prog-github/The-Bocchette-2/issues) o apri un [nuovo issue](#nuovo-issue).
 2. **Indica il tuo impegno**: Assegna a te stesso l'Issue per indicare che stai lavorando su di esso.
 3. **Crea il tuo ramo**: Crea un nuovo Branch separato, per implementare Commits sul tuo contributo. Per creare un nuovo ramo usa il comando:
 ```git_bash
   git checkout -b branch-name
 ```
-4. **Modifica**: Fai le tue modifiche, seguendo le linee guida del repository (da definire).
+4. **Modifica**: Fai le tue modifiche, seguendo le linee guida del repository **(da definire)**.
 5. **Commissiona**: Fai il commit delle tue modifiche, usa il comando:
 ```git_bash
   git commit -m "Description of your commit"
@@ -37,6 +37,6 @@ Grazie per aver contribuito a rendere The Bocchette 2 ancora meglio! 🚀🎉
 ```git_bash
   git push origin branch-name
 ```
-7. **Pull Request**: Apri una Pull Request sul repository. Assicurati di descrivere chiaramente le tue modifiche.
+7. **Pull Request**: Apri una [Pull Request](https://github.com/Croc-Prog-github/The-Bocchette-2/compare) sul repository. Assicurati di descrivere chiaramente le tue modifiche.
 
-Grazie per aver contribuito a rendere The Bocchette 2 ancora meglio! 🚀🎉
+Grazie per aver contribuito a rendere migliore The Bocchette 2! 🚀🎉
