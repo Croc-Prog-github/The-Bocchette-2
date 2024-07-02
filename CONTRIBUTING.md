@@ -73,8 +73,16 @@ Regole per ottimizzare lo stile del codice per il linguaggio HTML:
 - Per tutti gli altri elementi, predefinitivamente, l'ordine degli attributi è: `<div name="" id="" class="" style=""></div>`.
   - L'attributo `name=""` è utilizzato come annotazione a scopo di riferimento per un particolare punto di codice.
   - Non preferiamo usare `id` per assegnare css ai singoli elementi, ma usiamo direttamente per i singoli elementi l'attibuto `style=""`. Ovviamente per elementi che si ripetono si utilizza `class=""`.
-<!--
-### JavaScript/TypeScript
 
+### JavaScript/TypeScript
+Regole per ottimizzare lo stile del codice per il linguaggio JS/TS:
+- Quando bisogna effettuare un'unione, stringa-numero, preferiamo utilizzare `console.log("Counter: " + VarCounter)` anzichè `console.log(Counter: ${VarCounter})`.
+- Quando bisogna interaggire con l'ID di qualcosa, preferiamo evitare l'uso di variabili e di aquisirlo direttamente, così, esempio:
+```JS
+  document.getElementById("ID").innerText = "New text";
+```
+Ovviamente se è necessario usare delle variabili, si può bypassare questa regola.
+
+<!--
 ### CSS
 -->
