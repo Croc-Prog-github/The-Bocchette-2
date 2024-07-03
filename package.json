@@ -28,6 +28,7 @@
     "express.js": "^1.0.0",
     "json": "^11.0.0",
     "node": "^20.7.0",
+    "puppeteer": "^22.12.1",
     "typescript": "^5.2.2"
   },
   "main": "index.js || index.html",
