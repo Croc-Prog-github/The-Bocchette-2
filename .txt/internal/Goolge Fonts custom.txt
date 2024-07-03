@@ -1,3 +1,5 @@
 Weight: 400
 Grade: 0
 Optical Size: 24
+Color: #5F6368
+Size: 24

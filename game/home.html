@@ -246,7 +246,8 @@
     </div>
     <div id="menu" style="margin-top: 20px; margin-right: 8px; display: flex; justify-content: flex-start; flex-direction: column;">
       <div name="menùUI" style="display: block; width: 174px; height: auto; display: flex; flex-direction: column; align-items: stretch; justify-content: center;">
-        <button tabindex="-1" style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick=""><svg fill="#535252" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg> Messaggi</button>
+        <!-- <button tabindex="-1" style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick=""><svg fill="#535252" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg> Messaggi</button> -->
+        <button tabindex="-1" style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="Tutorial()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-640v560h560v-560h-80v280l-100-60-100 60v-280H200Zm0 560v-560 560Z"/></svg><strong> Tutorial</strong></button>
         <button tabindex="-1" style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="rend(1)"><svg fill="#535252" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h480l160 160v212q-19-8-39.5-10.5t-40.5.5v-169L647-760H200v560h240v80H200Zm0-640v560-560ZM520-40v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T863-260L643-40H520Zm300-263-37-37 37 37ZM580-100h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19ZM240-560h360v-160H240v160Zm240 320h4l116-115v-5q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"/></svg> Gestione dati</button>
         <button tabindex="-1" style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="rend(3)"><svg fill="#535252" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M200-200v-560 560-1 1Zm0 80q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v334q-19-7-39-10.5t-41-3.5v-320H200v560h320q0 21 3.5 41t10.5 39H200Zm560 80-56-56 63-64H600v-80h167l-63-64 56-56 160 160L760-40ZM440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Z"/></svg> <strong>Modalità di gioco</strong></button>
         <button tabindex="-1" style="display: flex; align-items: center; justify-content: center; margin-inline: 10px; margin-top: 15px; min-inline-size: max-content; background: lightgray; border: solid 3px gray;" onclick="OSett()"><svg fill="#535252" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-280h80l12-60q12-5 22.5-10.5T576-364l58 18 40-68-46-40q2-14 2-26t-2-26l46-40-40-68-58 18q-11-8-21.5-13.5T532-620l-12-60h-80l-12 60q-12 5-22.5 10.5T384-596l-58-18-40 68 46 40q-2 14-2 26t2 26l-46 40 40 68 58-18q11 8 21.5 13.5T428-340l12 60Zm40-120q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg> Impostazioni</button>
@@ -328,6 +329,21 @@
 
   </body>
 </html>
+
+<script>
+  function Tutorial() {
+    let r = window.confirm("Vuoi leggere il tutorial?");
+    if (r == true) {
+      window.alert("In alto, in orizzontale, c'è la barra delle valùte, dove sono rappresentati contatori delle valùte principali del gioco.")
+      window.alert("In alto a sinistra ci sono i bottoni che servono per portarti nelle sezioni centrali del gioco, dove potrai cambiare armi e personaggi.")
+      window.alert("Al centro, in alto, ci sono gli indicatori delle Tecniche cha hai selezionato dal bottone: Seleziona una tecnica.")
+      window.alert("Al centro c'è la riproduzione 3D del personaggio selezionato dal bottone: Seleziona Bocchetta.")
+      window.alert("Al centro, rispettivamente a destra e sinistra, ci sono i pulsanti per invitare in squadra amici/player che giocano contemporaneamente a te.")
+      window.alert("In basso a sinistra ci sono le Casse, ordinate per rarità (da sinistra verso destra) e sotto c'è il Bocchet Pass dove potrai riscattare le ricompense completando le Missioni.")
+      window.alert("")
+    }
+  }
+</script>
 
 <script> //Aggiorna PuntOttimizz.
   function updatePuntOttimizz() {
