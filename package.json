@@ -7,7 +7,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "publish": "vite --host",
-    "start": "npm install && npm run publish",
+    "start": "npm install && npm run publish && node /automate.js",
     "//(Codespace)": "chmod +x ServerService/start.sh && ./ServerService/start.sh",
     "//(Failure)": "&& chmod +x ServerService/NewStart.sh && ./ServerService/NewStart.sh",
     "test": "jest"
