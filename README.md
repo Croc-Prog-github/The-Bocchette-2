@@ -36,25 +36,25 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
 **Caratteristiche principali:**
 - Invita gli amici/player online
 - Crea e pubblica mappe in Creativa
-- Risorse sbloccabili o acquistabili dal negozio
+- Risorse sbloccabili o acquistabili dal Negozio
 - Notizie sugli ultimi aggiornamenti
 - Completa missioni del Bocchet Pass per ricevere ricompense
-- Usa Bocchette con evoluzioni uniche, legate alla Storyline
+- Usa Bocchette con Evoluzioni uniche, legate alla Storyline
 - Scontri in Battle Royale bilanciati in base al grado e alla rarità della Bocchetta
+- Salvataggio in Cloud o locale dei tuoi progressi
 <!-- - Microtransazioni per comprare le risorse (disponibili con Google Play) -->
-- Salvataggio in Cloud dei tuoi progressi
 
 Per una sessione veloce, senza dover accedere, usa l'Account Ospite dove puoi giocare senza avere un account registrato.<br>
-Creare un Account Server è totalmente gratuito, serve però anche inserire la propria e-mail.
+Creare un Account Server è gratuito e ti garantisce un identificativo e l'accesso ad un cloud dove archiviare i tuoi progressi.
 
 **Registrati con l'Accout server** per poter usare queste funzioni esclusive:
-<!-- - Microtransazioni delle risorse dal Negozio -->
-- Archiviazione Cloud dei tuoi progressi
+- Archiviazione nel Cloud dei tuoi progressi
 - Invitare in squadra amici online
 - Chat per comunicare con gli amici in tempo reale
-- Multiplayer online nel Battle Royale
+- Multiplayer online in tutte le modalità di gioco
 - Eventi mensili esclusivi
 - Profilo personale: con Rank, statistiche, classifiche,...
+<!-- - Microtransazioni delle risorse dal Negozio -->
 
 Caratteristiche base per **Account Ospite**:
 - Invita player solo con Codice Squadra
