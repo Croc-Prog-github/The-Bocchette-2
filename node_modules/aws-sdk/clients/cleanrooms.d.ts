@@ -28,6 +28,14 @@ declare class CleanRooms extends Service {
    */
   batchGetSchema(callback?: (err: AWSError, data: CleanRooms.Types.BatchGetSchemaOutput) => void): Request<CleanRooms.Types.BatchGetSchemaOutput, AWSError>;
   /**
+   * Retrieves multiple analysis rule schemas.
+   */
+  batchGetSchemaAnalysisRule(params: CleanRooms.Types.BatchGetSchemaAnalysisRuleInput, callback?: (err: AWSError, data: CleanRooms.Types.BatchGetSchemaAnalysisRuleOutput) => void): Request<CleanRooms.Types.BatchGetSchemaAnalysisRuleOutput, AWSError>;
+  /**
+   * Retrieves multiple analysis rule schemas.
+   */
+  batchGetSchemaAnalysisRule(callback?: (err: AWSError, data: CleanRooms.Types.BatchGetSchemaAnalysisRuleOutput) => void): Request<CleanRooms.Types.BatchGetSchemaAnalysisRuleOutput, AWSError>;
+  /**
    * Creates a new analysis template.
    */
   createAnalysisTemplate(params: CleanRooms.Types.CreateAnalysisTemplateInput, callback?: (err: AWSError, data: CleanRooms.Types.CreateAnalysisTemplateOutput) => void): Request<CleanRooms.Types.CreateAnalysisTemplateOutput, AWSError>;
@@ -618,11 +626,11 @@ declare namespace CleanRooms {
   export type AnalysisRuleColumnName = string;
   export interface AnalysisRuleCustom {
     /**
-     * The analysis templates that are allowed by the custom analysis rule.
+     * The ARN of the analysis templates that are allowed by the custom analysis rule.
      */
     allowedAnalyses: AnalysisRuleCustomAllowedAnalysesList;
     /**
-     * The Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when allowedAnalyses is ANY_QUERY.
+     * The IDs of the Amazon Web Services accounts that are allowed to query by the custom analysis rule. Required when allowedAnalyses is ANY_QUERY.
      */
     allowedAnalysisProviders?: AnalysisRuleCustomAllowedAnalysisProvidersList;
     /**
@@ -738,6 +746,10 @@ declare namespace CleanRooms {
      * The parameters of the analysis template.
      */
     analysisParameters?: AnalysisParameterList;
+    /**
+     * Information about the validations performed on the analysis template.
+     */
+    validations?: AnalysisTemplateValidationStatusDetailList;
   }
   export type AnalysisTemplateArn = string;
   export type AnalysisTemplateArnList = AnalysisTemplateArn[];
@@ -787,6 +799,30 @@ declare namespace CleanRooms {
   }
   export type AnalysisTemplateSummaryList = AnalysisTemplateSummary[];
   export type AnalysisTemplateText = string;
+  export type AnalysisTemplateValidationStatus = "VALID"|"INVALID"|"UNABLE_TO_VALIDATE"|string;
+  export interface AnalysisTemplateValidationStatusDetail {
+    /**
+     * The type of validation that was performed.
+     */
+    type: AnalysisTemplateValidationType;
+    /**
+     * The status of the validation.
+     */
+    status: AnalysisTemplateValidationStatus;
+    /**
+     * The reasons for the validation results.
+     */
+    reasons?: AnalysisTemplateValidationStatusReasonList;
+  }
+  export type AnalysisTemplateValidationStatusDetailList = AnalysisTemplateValidationStatusDetail[];
+  export interface AnalysisTemplateValidationStatusReason {
+    /**
+     * The validation message.
+     */
+    message: String;
+  }
+  export type AnalysisTemplateValidationStatusReasonList = AnalysisTemplateValidationStatusReason[];
+  export type AnalysisTemplateValidationType = "DIFFERENTIAL_PRIVACY"|string;
   export interface BatchGetCollaborationAnalysisTemplateError {
     /**
      * The Amazon Resource Name (ARN) of the analysis template.
@@ -822,6 +858,45 @@ declare namespace CleanRooms {
      */
     errors: BatchGetCollaborationAnalysisTemplateErrorList;
   }
+  export interface BatchGetSchemaAnalysisRuleError {
+    /**
+     * An error name for the error.
+     */
+    name: TableAlias;
+    /**
+     * The analysis rule type.
+     */
+    type: AnalysisRuleType;
+    /**
+     * An error code for the error.
+     */
+    code: String;
+    /**
+     * A description of why the call failed.
+     */
+    message: String;
+  }
+  export type BatchGetSchemaAnalysisRuleErrorList = BatchGetSchemaAnalysisRuleError[];
+  export interface BatchGetSchemaAnalysisRuleInput {
+    /**
+     * The unique identifier of the collaboration that contains the schema analysis rule.
+     */
+    collaborationIdentifier: CollaborationIdentifier;
+    /**
+     * The information that's necessary to retrieve a schema analysis rule.
+     */
+    schemaAnalysisRuleRequests: SchemaAnalysisRuleRequestList;
+  }
+  export interface BatchGetSchemaAnalysisRuleOutput {
+    /**
+     * The retrieved list of analysis rules.
+     */
+    analysisRules: SchemaAnalysisRuleList;
+    /**
+     * Error reasons for schemas that could not be retrieved. One error is returned for every schema that could not be retrieved.
+     */
+    errors: BatchGetSchemaAnalysisRuleErrorList;
+  }
   export interface BatchGetSchemaError {
     /**
      * An error name for the error.
@@ -843,7 +918,7 @@ declare namespace CleanRooms {
      */
     collaborationIdentifier: CollaborationIdentifier;
     /**
-     * The names for the schema objects to retrieve.&gt;
+     * The names for the schema objects to retrieve.
      */
     names: TableAliasList;
   }
@@ -966,6 +1041,10 @@ declare namespace CleanRooms {
      * The analysis parameters that have been specified in the analysis template.
      */
     analysisParameters?: AnalysisParameterList;
+    /**
+     * The validations that were performed.
+     */
+    validations?: AnalysisTemplateValidationStatusDetailList;
   }
   export type CollaborationAnalysisTemplateList = CollaborationAnalysisTemplate[];
   export interface CollaborationAnalysisTemplateSummary {
@@ -3259,7 +3338,7 @@ declare namespace CleanRooms {
   export type ResourceDescription = string;
   export type ResultFormat = "CSV"|"PARQUET"|string;
   export type RoleArn = string;
-  export type ScalarFunctions = "TRUNC"|"ABS"|"CEILING"|"FLOOR"|"LN"|"LOG"|"ROUND"|"SQRT"|"CAST"|"LOWER"|"RTRIM"|"UPPER"|"COALESCE"|string;
+  export type ScalarFunctions = "ABS"|"CAST"|"CEILING"|"COALESCE"|"CONVERT"|"CURRENT_DATE"|"DATEADD"|"EXTRACT"|"FLOOR"|"GETDATE"|"LN"|"LOG"|"LOWER"|"ROUND"|"RTRIM"|"SQRT"|"SUBSTRING"|"TO_CHAR"|"TO_DATE"|"TO_NUMBER"|"TO_TIMESTAMP"|"TRIM"|"TRUNC"|"UPPER"|string;
   export type ScalarFunctionsList = ScalarFunctions[];
   export interface Schema {
     /**
@@ -3310,8 +3389,58 @@ declare namespace CleanRooms {
      * The type of schema. The only valid value is currently `TABLE`.
      */
     type: SchemaType;
+    /**
+     * Details about the status of the schema. Currently, only one entry is present.
+     */
+    schemaStatusDetails: SchemaStatusDetailList;
   }
+  export type SchemaAnalysisRuleList = AnalysisRule[];
+  export interface SchemaAnalysisRuleRequest {
+    /**
+     * The name of the analysis rule schema that you are requesting.
+     */
+    name: TableAlias;
+    /**
+     * The type of analysis rule schema that you are requesting.
+     */
+    type: AnalysisRuleType;
+  }
+  export type SchemaAnalysisRuleRequestList = SchemaAnalysisRuleRequest[];
+  export type SchemaConfiguration = "DIFFERENTIAL_PRIVACY"|string;
+  export type SchemaConfigurationList = SchemaConfiguration[];
   export type SchemaList = Schema[];
+  export type SchemaStatus = "READY"|"NOT_READY"|string;
+  export interface SchemaStatusDetail {
+    /**
+     * The status of the schema.
+     */
+    status: SchemaStatus;
+    /**
+     * The reasons why the schema status is set to its current state.
+     */
+    reasons?: SchemaStatusReasonList;
+    /**
+     * The analysis rule type for which the schema status has been evaluated.
+     */
+    analysisRuleType?: AnalysisRuleType;
+    /**
+     * The configuration details of the schema analysis rule for the given type.
+     */
+    configurations?: SchemaConfigurationList;
+  }
+  export type SchemaStatusDetailList = SchemaStatusDetail[];
+  export interface SchemaStatusReason {
+    /**
+     * The schema status reason code.
+     */
+    code: SchemaStatusReasonCode;
+    /**
+     * An explanation of the schema status reason code.
+     */
+    message: String;
+  }
+  export type SchemaStatusReasonCode = "ANALYSIS_RULE_MISSING"|"ANALYSIS_TEMPLATES_NOT_CONFIGURED"|"ANALYSIS_PROVIDERS_NOT_CONFIGURED"|"DIFFERENTIAL_PRIVACY_POLICY_NOT_CONFIGURED"|string;
+  export type SchemaStatusReasonList = SchemaStatusReason[];
   export interface SchemaSummary {
     /**
      * The name for the schema object.

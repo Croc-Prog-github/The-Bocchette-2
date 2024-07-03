@@ -477,7 +477,7 @@ declare namespace RedshiftServerless {
   export type Boolean = boolean;
   export interface ConfigParameter {
     /**
-     * The key of the parameter. The options are auto_mv, datestyle, enable_case_sensitive_identifier, enable_user_activity_logging, query_group, search_path, require_ssl, and query monitoring metrics that let you define performance boundaries. For more information about query monitoring rules and available metrics, see Query monitoring metrics for Amazon Redshift Serverless.
+     * The key of the parameter. The options are auto_mv, datestyle, enable_case_sensitive_identifier, enable_user_activity_logging, query_group, search_path, require_ssl, use_fips_ssl, and query monitoring metrics that let you define performance boundaries. For more information about query monitoring rules and available metrics, see Query monitoring metrics for Amazon Redshift Serverless.
      */
     parameterKey?: ParameterKey;
     /**
@@ -644,7 +644,7 @@ declare namespace RedshiftServerless {
      */
     roleArn: IamRoleArn;
     /**
-     * The schedule for a one-time (at format) or recurring (cron format) scheduled action. Schedule invocations must be separated by at least one hour. Format of at expressions is "at(yyyy-mm-ddThh:mm:ss)". For example, "at(2016-03-04T17:27:00)". Format of cron expressions is "cron(Minutes Hours Day-of-month Month Day-of-week Year)". For example, "cron(0 10 ? * MON *)". For more information, see Cron Expressions in the Amazon CloudWatch Events User Guide.
+     * The schedule for a one-time (at timestamp format) or recurring (cron format) scheduled action. Schedule invocations must be separated by at least one hour. Times are in UTC.   Format of at timestamp is yyyy-mm-ddThh:mm:ss. For example, 2016-03-04T17:27:00.   Format of cron expression is (Minutes Hours Day-of-month Month Day-of-week Year). For example, "(0 10 ? * MON *)". For more information, see Cron Expressions in the Amazon CloudWatch Events User Guide.  
      */
     schedule: Schedule;
     /**
@@ -767,7 +767,7 @@ declare namespace RedshiftServerless {
      */
     baseCapacity?: Integer;
     /**
-     * An array of parameters to set for advanced control over a database. The options are auto_mv, datestyle, enable_case_sensitive_identifier, enable_user_activity_logging, query_group, search_path, require_ssl, and query monitoring metrics that let you define performance boundaries. For more information about query monitoring rules and available metrics, see  Query monitoring metrics for Amazon Redshift Serverless.
+     * An array of parameters to set for advanced control over a database. The options are auto_mv, datestyle, enable_case_sensitive_identifier, enable_user_activity_logging, query_group, search_path, require_ssl, use_fips_ssl, and query monitoring metrics that let you define performance boundaries. For more information about query monitoring rules and available metrics, see  Query monitoring metrics for Amazon Redshift Serverless.
      */
     configParameters?: ConfigParameterList;
     /**
@@ -1313,7 +1313,7 @@ declare namespace RedshiftServerless {
      */
     nextToken?: PaginationToken;
     /**
-     * All of the returned scheduled action objects.
+     * All of the returned scheduled action association objects.
      */
     scheduledActions?: ScheduledActionsList;
   }
@@ -1776,13 +1776,23 @@ declare namespace RedshiftServerless {
   }
   export interface Schedule {
     /**
-     * The timestamp of when Amazon Redshift Serverless should run the scheduled action. Format of at expressions is "at(yyyy-mm-ddThh:mm:ss)". For example, "at(2016-03-04T17:27:00)".
+     * The timestamp of when Amazon Redshift Serverless should run the scheduled action. Timestamp is in UTC. Format of at expression is yyyy-mm-ddThh:mm:ss. For example, 2016-03-04T17:27:00.
      */
     at?: Timestamp;
     /**
-     * The cron expression to use to schedule a recurring scheduled action. Schedule invocations must be separated by at least one hour. Format of cron expressions is "cron(Minutes Hours Day-of-month Month Day-of-week Year)". For example, "cron(0 10 ? * MON *)". For more information, see Cron Expressions in the Amazon CloudWatch Events User Guide.
+     * The cron expression to use to schedule a recurring scheduled action. Schedule invocations must be separated by at least one hour. Times are in UTC. Format of cron expressions is (Minutes Hours Day-of-month Month Day-of-week Year). For example, "(0 10 ? * MON *)". For more information, see Cron Expressions in the Amazon CloudWatch Events User Guide.
      */
     cron?: String;
+  }
+  export interface ScheduledActionAssociation {
+    /**
+     * Name of associated Amazon Redshift Serverless namespace.
+     */
+    namespaceName?: NamespaceName;
+    /**
+     * Name of associated scheduled action.
+     */
+    scheduledActionName?: ScheduledActionName;
   }
   export type ScheduledActionName = string;
   export interface ScheduledActionResponse {
@@ -1803,7 +1813,7 @@ declare namespace RedshiftServerless {
      */
     roleArn?: IamRoleArn;
     /**
-     * The schedule for a one-time (at format) or recurring (cron format) scheduled action. Schedule invocations must be separated by at least one hour. Format of at expressions is "at(yyyy-mm-ddThh:mm:ss)". For example, "at(2016-03-04T17:27:00)". Format of cron expressions is "cron(Minutes Hours Day-of-month Month Day-of-week Year)". For example, "cron(0 10 ? * MON *)". For more information, see Cron Expressions in the Amazon CloudWatch Events User Guide.
+     * The schedule for a one-time (at timestamp format) or recurring (cron format) scheduled action. Schedule invocations must be separated by at least one hour. Times are in UTC.   Format of at timestamp is yyyy-mm-ddThh:mm:ss. For example, 2016-03-04T17:27:00.   Format of cron expression is (Minutes Hours Day-of-month Month Day-of-week Year). For example, "(0 10 ? * MON *)". For more information, see Cron Expressions in the Amazon CloudWatch Events User Guide.  
      */
     schedule?: Schedule;
     /**
@@ -1828,7 +1838,7 @@ declare namespace RedshiftServerless {
     state?: State;
     targetAction?: TargetAction;
   }
-  export type ScheduledActionsList = ScheduledActionName[];
+  export type ScheduledActionsList = ScheduledActionAssociation[];
   export type SecurityGroupId = string;
   export type SecurityGroupIdList = SecurityGroupId[];
   export interface Snapshot {
@@ -2171,7 +2181,7 @@ declare namespace RedshiftServerless {
      */
     roleArn?: IamRoleArn;
     /**
-     * The schedule for a one-time (at format) or recurring (cron format) scheduled action. Schedule invocations must be separated by at least one hour. Format of at expressions is "at(yyyy-mm-ddThh:mm:ss)". For example, "at(2016-03-04T17:27:00)". Format of cron expressions is "cron(Minutes Hours Day-of-month Month Day-of-week Year)". For example, "cron(0 10 ? * MON *)". For more information, see Cron Expressions in the Amazon CloudWatch Events User Guide.
+     * The schedule for a one-time (at timestamp format) or recurring (cron format) scheduled action. Schedule invocations must be separated by at least one hour. Times are in UTC.   Format of at timestamp is yyyy-mm-ddThh:mm:ss. For example, 2016-03-04T17:27:00.   Format of cron expression is (Minutes Hours Day-of-month Month Day-of-week Year). For example, "(0 10 ? * MON *)". For more information, see Cron Expressions in the Amazon CloudWatch Events User Guide.  
      */
     schedule?: Schedule;
     /**
@@ -2252,7 +2262,7 @@ declare namespace RedshiftServerless {
      */
     baseCapacity?: Integer;
     /**
-     * An array of parameters to set for advanced control over a database. The options are auto_mv, datestyle, enable_case_sensitive_identifier, enable_user_activity_logging, query_group, search_path, require_ssl, and query monitoring metrics that let you define performance boundaries. For more information about query monitoring rules and available metrics, see  Query monitoring metrics for Amazon Redshift Serverless.
+     * An array of parameters to set for advanced control over a database. The options are auto_mv, datestyle, enable_case_sensitive_identifier, enable_user_activity_logging, query_group, search_path, require_ssl, use_fips_ssl, and query monitoring metrics that let you define performance boundaries. For more information about query monitoring rules and available metrics, see  Query monitoring metrics for Amazon Redshift Serverless.
      */
     configParameters?: ConfigParameterList;
     /**
@@ -2359,7 +2369,7 @@ declare namespace RedshiftServerless {
      */
     baseCapacity?: Integer;
     /**
-     * An array of parameters to set for advanced control over a database. The options are auto_mv, datestyle, enable_case_sensitive_identifier, enable_user_activity_logging, query_group, search_path, require_ssl, and query monitoring metrics that let you define performance boundaries. For more information about query monitoring rules and available metrics, see  Query monitoring metrics for Amazon Redshift Serverless.
+     * An array of parameters to set for advanced control over a database. The options are auto_mv, datestyle, enable_case_sensitive_identifier, enable_user_activity_logging, query_group, search_path, require_ssl, use_fips_ssl, and query monitoring metrics that let you define performance boundaries. For more information about query monitoring rules and available metrics, see  Query monitoring metrics for Amazon Redshift Serverless.
      */
     configParameters?: ConfigParameterList;
     /**
@@ -2407,7 +2417,7 @@ declare namespace RedshiftServerless {
      */
     port?: Integer;
     /**
-     * A value that specifies whether the workgroup can be accessible from a public network
+     * A value that specifies whether the workgroup can be accessible from a public network.
      */
     publiclyAccessible?: Boolean;
     /**

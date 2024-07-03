@@ -2025,6 +2025,10 @@ declare namespace Pinpoint {
      */
     FromAddress?: __string;
     /**
+     * The list of MessageHeaders for the email. You can have up to 15 MessageHeaders for each email.
+     */
+    Headers?: ListOfMessageHeader;
+    /**
      * The body of the email, in HTML format, for recipients whose email clients render HTML content.
      */
     HtmlBody?: __string;
@@ -2928,6 +2932,10 @@ declare namespace Pinpoint {
      *  The ARN of the AWS Identity and Access Management (IAM) role that you want Amazon Pinpoint to use when it submits email-related event data for the channel.
      */
     RoleArn?: __string;
+    /**
+     * The ARN of an IAM role for Amazon Pinpoint to use to send email from your campaigns or journeys through Amazon SES.
+     */
+    OrchestrationSendingRoleArn?: __string;
   }
   export interface EmailChannelResponse {
     /**
@@ -2986,6 +2994,10 @@ declare namespace Pinpoint {
      *  The ARN of the AWS Identity and Access Management (IAM) role that Amazon Pinpoint uses to submit email-related event data for the channel.
      */
     RoleArn?: __string;
+    /**
+     * The ARN of an IAM role for Amazon Pinpoint to use to send email from your campaigns or journeys through Amazon SES.
+     */
+    OrchestrationSendingRoleArn?: __string;
     /**
      * The current version of the email channel.
      */
@@ -3057,6 +3069,10 @@ declare namespace Pinpoint {
      */
     Subject?: __string;
     /**
+     * The list of MessageHeaders for the email. You can have up to 15 Headers.
+     */
+    Headers?: ListOfMessageHeader;
+    /**
      * As of 22-05-2023 tags has been deprecated for update operations. After this date any value in tags is not processed and an error code is not returned. To manage tags we recommend using either Tags in the API Reference for Amazon Pinpoint, resourcegroupstaggingapi commands in the AWS Command Line Interface Documentation or resourcegroupstaggingapi in the AWS SDK. (Deprecated) A string-to-string map of key-value pairs that defines the tags to associate with the message template. Each tag consists of a required tag key and an associated tag value.
      */
     tags?: MapOf__string;
@@ -3098,6 +3114,10 @@ declare namespace Pinpoint {
      * The subject line, or title, that's used in email messages that are based on the message template.
      */
     Subject?: __string;
+    /**
+     * The list of MessageHeaders for the email. You can have up to 15 Headers.
+     */
+    Headers?: ListOfMessageHeader;
     /**
      * A string-to-string map of key-value pairs that identifies the tags that are associated with the message template. Each tag consists of a required tag key and an associated tag value.
      */
@@ -3255,7 +3275,7 @@ declare namespace Pinpoint {
      */
     Address?: __string;
     /**
-     * The delivery status of the message. Possible values are:  DUPLICATE - The endpoint address is a duplicate of another endpoint address. Amazon Pinpoint won't attempt to send the message again. OPT_OUT - The user who's associated with the endpoint has opted out of receiving messages from you. Amazon Pinpoint won't attempt to send the message again. PERMANENT_FAILURE - An error occurred when delivering the message to the endpoint. Amazon Pinpoint won't attempt to send the message again.    SUCCESSFUL - The message was successfully delivered to the endpoint. TEMPORARY_FAILURE - A temporary error occurred. Amazon Pinpoint won't attempt to send the message again. THROTTLED - Amazon Pinpoint throttled the operation to send the message to the endpoint. TIMEOUT - The message couldn't be sent within the timeout period. UNKNOWN_FAILURE - An unknown error occurred.
+     * The delivery status of the message. Possible values are:  DUPLICATE - The endpoint address is a duplicate of another endpoint address. Amazon Pinpoint won't attempt to send the message again. OPT_OUT - The user who's associated with the endpoint has opted out of receiving messages from you. Amazon Pinpoint won't attempt to send the message again. PERMANENT_FAILURE - An error occurred when delivering the message to the endpoint. Amazon Pinpoint won't attempt to send the message again.    SUCCESSFUL - The message was successfully delivered to the endpoint. TEMPORARY_FAILURE - A temporary error occurred. Amazon Pinpoint won't attempt to send the message again. THROTTLED - Amazon Pinpoint throttled the operation to send the message to the endpoint. UNKNOWN_FAILURE - An unknown error occurred.
      */
     DeliveryStatus: DeliveryStatus;
     /**
@@ -5534,7 +5554,7 @@ declare namespace Pinpoint {
   }
   export interface MessageResult {
     /**
-     * The delivery status of the message. Possible values are:  DUPLICATE - The endpoint address is a duplicate of another endpoint address. Amazon Pinpoint won't attempt to send the message again.   OPT_OUT - The user who's associated with the endpoint address has opted out of receiving messages from you. Amazon Pinpoint won't attempt to send the message again. PERMANENT_FAILURE - An error occurred when delivering the message to the endpoint address. Amazon Pinpoint won't attempt to send the message again.   SUCCESSFUL - The message was successfully delivered to the endpoint address. TEMPORARY_FAILURE - A temporary error occurred. Amazon Pinpoint won't attempt to send the message again. THROTTLED - Amazon Pinpoint throttled the operation to send the message to the endpoint address. TIMEOUT - The message couldn't be sent within the timeout period. UNKNOWN_FAILURE - An unknown error occurred.
+     * The delivery status of the message. Possible values are:  DUPLICATE - The endpoint address is a duplicate of another endpoint address. Amazon Pinpoint won't attempt to send the message again.   OPT_OUT - The user who's associated with the endpoint address has opted out of receiving messages from you. Amazon Pinpoint won't attempt to send the message again. PERMANENT_FAILURE - An error occurred when delivering the message to the endpoint address. Amazon Pinpoint won't attempt to send the message again.   SUCCESSFUL - The message was successfully delivered to the endpoint address. TEMPORARY_FAILURE - A temporary error occurred. Amazon Pinpoint won't attempt to send the message again. THROTTLED - Amazon Pinpoint throttled the operation to send the message to the endpoint address. UNKNOWN_FAILURE - An unknown error occurred.
      */
     DeliveryStatus: DeliveryStatus;
     /**
@@ -6587,6 +6607,21 @@ declare namespace Pinpoint {
      * The body of the email message, in plain text format. We recommend using plain text format for email clients that don't render HTML content and clients that are connected to high-latency networks, such as mobile devices.
      */
     TextPart?: SimpleEmailPart;
+    /**
+     * The list of MessageHeaders for the email. You can have up to 15 Headers.
+     */
+    Headers?: ListOfMessageHeader;
+  }
+  export type ListOfMessageHeader = MessageHeader[];
+  export interface MessageHeader {
+    /**
+     * The name of the message header. The header name can contain up to 126 characters.
+     */
+    Name?: __string;
+    /**
+     * The value of the message header. The header value can contain up to 870 characters, including the length of any rendered attributes. For example if you add the {CreationDate} attribute, it renders as YYYY-MM-DDTHH:MM:SS.SSSZ and is 24 characters in length.
+     */
+    Value?: __string;
   }
   export interface SimpleEmailPart {
     /**

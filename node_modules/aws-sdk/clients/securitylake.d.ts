@@ -295,7 +295,7 @@ declare namespace SecurityLake {
     sourceVersion?: AwsLogSourceVersion;
   }
   export type AwsLogSourceConfigurationList = AwsLogSourceConfiguration[];
-  export type AwsLogSourceName = "ROUTE53"|"VPC_FLOW"|"SH_FINDINGS"|"CLOUD_TRAIL_MGMT"|"LAMBDA_EXECUTION"|"S3_DATA"|string;
+  export type AwsLogSourceName = "ROUTE53"|"VPC_FLOW"|"SH_FINDINGS"|"CLOUD_TRAIL_MGMT"|"LAMBDA_EXECUTION"|"S3_DATA"|"EKS_AUDIT"|"WAF"|string;
   export interface AwsLogSourceResource {
     /**
      * The name for a Amazon Web Services source. This must be a Regionally unique value.
@@ -325,7 +325,7 @@ declare namespace SecurityLake {
     /**
      * The configuration for the third-party custom source.
      */
-    configuration?: CustomLogSourceConfiguration;
+    configuration: CustomLogSourceConfiguration;
     /**
      * The Open Cybersecurity Schema Framework (OCSF) event classes which describes the type of data that the custom source will send to Security Lake. The supported event classes are:    ACCESS_ACTIVITY     FILE_ACTIVITY     KERNEL_ACTIVITY     KERNEL_EXTENSION     MEMORY_ACTIVITY     MODULE_ACTIVITY     PROCESS_ACTIVITY     REGISTRY_KEY_ACTIVITY     REGISTRY_VALUE_ACTIVITY     RESOURCE_ACTIVITY     SCHEDULED_JOB_ACTIVITY     SECURITY_FINDING     ACCOUNT_CHANGE     AUTHENTICATION     AUTHORIZATION     ENTITY_MANAGEMENT_AUDIT     DHCP_ACTIVITY     NETWORK_ACTIVITY     DNS_ACTIVITY     FTP_ACTIVITY     HTTP_ACTIVITY     RDP_ACTIVITY     SMB_ACTIVITY     SSH_ACTIVITY     CONFIG_STATE     INVENTORY_INFO     EMAIL_ACTIVITY     API_ACTIVITY     CLOUD_API   
      */
@@ -366,7 +366,7 @@ declare namespace SecurityLake {
     /**
      * Enable Security Lake with the specified configuration settings, to begin collecting security data for new accounts in your organization.
      */
-    autoEnableNewAccount: DataLakeAutoEnableNewAccountConfigurationList;
+    autoEnableNewAccount?: DataLakeAutoEnableNewAccountConfigurationList;
   }
   export interface CreateDataLakeOrganizationConfigurationResponse {
   }
@@ -420,7 +420,7 @@ declare namespace SecurityLake {
      */
     subscriberDescription?: DescriptionString;
     /**
-     * The AWS identity used to access your data.
+     * The Amazon Web Services identity used to access your data.
      */
     subscriberIdentity: AwsIdentity;
     /**
@@ -585,7 +585,7 @@ declare namespace SecurityLake {
   export type DataLakeLifecycleTransitionList = DataLakeLifecycleTransition[];
   export interface DataLakeReplicationConfiguration {
     /**
-     * Replication enables automatic, asynchronous copying of objects across Amazon S3 buckets. Amazon S3 buckets that are configured for object replication can be owned by the same Amazon Web Services account or by different accounts. You can replicate objects to a single destination bucket or to multiple destination buckets. The destination buckets can be in different Amazon Web Services Regions or within the same Region as the source bucket. Set up one or more rollup Regions by providing the Region or Regions that should contribute to the central rollup Region.
+     * Specifies one or more centralized rollup Regions. The Amazon Web Services Region specified in the region parameter of the  CreateDataLake  or  UpdateDataLake  operations contributes data to the rollup Region or Regions specified in this parameter. Replication enables automatic, asynchronous copying of objects across Amazon S3 buckets. S3 buckets that are configured for object replication can be owned by the same Amazon Web Services account or by different accounts. You can replicate objects to a single destination bucket or to multiple destination buckets. The destination buckets can be in different Regions or within the same Region as the source bucket.
      */
     regions?: RegionList;
     /**
@@ -716,7 +716,7 @@ declare namespace SecurityLake {
     /**
      * Turns off automatic enablement of Security Lake for member accounts that are added to an organization.
      */
-    autoEnableNewAccount: DataLakeAutoEnableNewAccountConfigurationList;
+    autoEnableNewAccount?: DataLakeAutoEnableNewAccountConfigurationList;
   }
   export interface DeleteDataLakeOrganizationConfigurationResponse {
   }
@@ -848,7 +848,7 @@ declare namespace SecurityLake {
      */
     nextToken?: NextToken;
     /**
-     * List the Amazon Web Services Regions from which exceptions are retrieved.
+     * The Amazon Web Services Regions from which exceptions are retrieved.
      */
     regions?: RegionList;
   }
@@ -864,7 +864,7 @@ declare namespace SecurityLake {
   }
   export interface ListDataLakesRequest {
     /**
-     * The list of regions where Security Lake is enabled.
+     * The list of Regions where Security Lake is enabled.
      */
     regions?: RegionList;
   }
@@ -888,7 +888,7 @@ declare namespace SecurityLake {
      */
     nextToken?: NextToken;
     /**
-     * The list of regions for which log sources are displayed.
+     * The list of Regions for which log sources are displayed.
      */
     regions?: RegionList;
     /**
@@ -928,7 +928,7 @@ declare namespace SecurityLake {
   }
   export interface ListTagsForResourceRequest {
     /**
-     * The Amazon Resource Name (ARN) of the Amazon Security Lake resource to retrieve the tags for.
+     * The Amazon Resource Name (ARN) of the Amazon Security Lake resource for which you want to retrieve the tags.
      */
     resourceArn: AmazonResourceName;
   }
@@ -1009,7 +1009,7 @@ declare namespace SecurityLake {
      */
     createdAt?: SyntheticTimestamp_date_time;
     /**
-     * The Amazon Resource Name (ARN) which uniquely defines the AWS RAM resource share. Before accepting the RAM resource share invitation, you can view details related to the RAM resource share. This field is available only for Lake Formation subscribers created after March 8, 2023.
+     * The Amazon Resource Name (ARN) which uniquely defines the Amazon Web Services RAM resource share. Before accepting the RAM resource share invitation, you can view details related to the RAM resource share. This field is available only for Lake Formation subscribers created after March 8, 2023.
      */
     resourceShareArn?: ResourceShareArn;
     /**
@@ -1045,7 +1045,7 @@ declare namespace SecurityLake {
      */
     subscriberId: UUID;
     /**
-     * The AWS identity used to access your data.
+     * The Amazon Web Services identity used to access your data.
      */
     subscriberIdentity: AwsIdentity;
     /**
@@ -1126,6 +1126,10 @@ declare namespace SecurityLake {
      * Specify the Region or Regions that will contribute data to the rollup region.
      */
     configurations: DataLakeConfigurationList;
+    /**
+     * The Amazon Resource Name (ARN) used to create and update the Glue table. This table contains partitions generated by the ingestion and normalization of Amazon Web Services log sources and custom sources.
+     */
+    metaStoreManagerRoleArn?: RoleArn;
   }
   export interface UpdateDataLakeResponse {
     /**

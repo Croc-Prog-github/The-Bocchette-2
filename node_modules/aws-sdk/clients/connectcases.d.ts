@@ -84,6 +84,30 @@ declare class ConnectCases extends Service {
    */
   deleteDomain(callback?: (err: AWSError, data: ConnectCases.Types.DeleteDomainResponse) => void): Request<ConnectCases.Types.DeleteDomainResponse, AWSError>;
   /**
+   * Deletes a field from a cases template. You can delete up to 100 fields per domain. After a field is deleted:   You can still retrieve the field by calling BatchGetField.   You cannot update a deleted field by calling UpdateField; it throws a ValidationException.   Deleted fields are not included in the ListFields response.   Calling CreateCase with a deleted field throws a ValidationException denoting which field IDs in the request have been deleted.   Calling GetCase with a deleted field ID returns the deleted field's value if one exists.   Calling UpdateCase with a deleted field ID throws a ValidationException if the case does not already contain a value for the deleted field. Otherwise it succeeds, allowing you to update or remove (using emptyValue: {}) the field's value from the case.    GetTemplate does not return field IDs for deleted fields.    GetLayout does not return field IDs for deleted fields.   Calling SearchCases with the deleted field ID as a filter returns any cases that have a value for the deleted field that matches the filter criteria.   Calling SearchCases with a searchTerm value that matches a deleted field's value on a case returns the case in the response.   Calling BatchPutFieldOptions with a deleted field ID throw a ValidationException.   Calling GetCaseEventConfiguration does not return field IDs for deleted fields.  
+   */
+  deleteField(params: ConnectCases.Types.DeleteFieldRequest, callback?: (err: AWSError, data: ConnectCases.Types.DeleteFieldResponse) => void): Request<ConnectCases.Types.DeleteFieldResponse, AWSError>;
+  /**
+   * Deletes a field from a cases template. You can delete up to 100 fields per domain. After a field is deleted:   You can still retrieve the field by calling BatchGetField.   You cannot update a deleted field by calling UpdateField; it throws a ValidationException.   Deleted fields are not included in the ListFields response.   Calling CreateCase with a deleted field throws a ValidationException denoting which field IDs in the request have been deleted.   Calling GetCase with a deleted field ID returns the deleted field's value if one exists.   Calling UpdateCase with a deleted field ID throws a ValidationException if the case does not already contain a value for the deleted field. Otherwise it succeeds, allowing you to update or remove (using emptyValue: {}) the field's value from the case.    GetTemplate does not return field IDs for deleted fields.    GetLayout does not return field IDs for deleted fields.   Calling SearchCases with the deleted field ID as a filter returns any cases that have a value for the deleted field that matches the filter criteria.   Calling SearchCases with a searchTerm value that matches a deleted field's value on a case returns the case in the response.   Calling BatchPutFieldOptions with a deleted field ID throw a ValidationException.   Calling GetCaseEventConfiguration does not return field IDs for deleted fields.  
+   */
+  deleteField(callback?: (err: AWSError, data: ConnectCases.Types.DeleteFieldResponse) => void): Request<ConnectCases.Types.DeleteFieldResponse, AWSError>;
+  /**
+   * Deletes a layout from a cases template. You can delete up to 100 layouts per domain.  &lt;p&gt;After a layout is deleted:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;You can still retrieve the layout by calling &lt;code&gt;GetLayout&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;You cannot update a deleted layout by calling &lt;code&gt;UpdateLayout&lt;/code&gt;; it throws a &lt;code&gt;ValidationException&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Deleted layouts are not included in the &lt;code&gt;ListLayouts&lt;/code&gt; response.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; 
+   */
+  deleteLayout(params: ConnectCases.Types.DeleteLayoutRequest, callback?: (err: AWSError, data: ConnectCases.Types.DeleteLayoutResponse) => void): Request<ConnectCases.Types.DeleteLayoutResponse, AWSError>;
+  /**
+   * Deletes a layout from a cases template. You can delete up to 100 layouts per domain.  &lt;p&gt;After a layout is deleted:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;You can still retrieve the layout by calling &lt;code&gt;GetLayout&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;You cannot update a deleted layout by calling &lt;code&gt;UpdateLayout&lt;/code&gt;; it throws a &lt;code&gt;ValidationException&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Deleted layouts are not included in the &lt;code&gt;ListLayouts&lt;/code&gt; response.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; 
+   */
+  deleteLayout(callback?: (err: AWSError, data: ConnectCases.Types.DeleteLayoutResponse) => void): Request<ConnectCases.Types.DeleteLayoutResponse, AWSError>;
+  /**
+   * Deletes a cases template. You can delete up to 100 templates per domain.  &lt;p&gt;After a cases template is deleted:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;You can still retrieve the template by calling &lt;code&gt;GetTemplate&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;You cannot update the template. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;You cannot create a case by using the deleted template.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Deleted templates are not included in the &lt;code&gt;ListTemplates&lt;/code&gt; response.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; 
+   */
+  deleteTemplate(params: ConnectCases.Types.DeleteTemplateRequest, callback?: (err: AWSError, data: ConnectCases.Types.DeleteTemplateResponse) => void): Request<ConnectCases.Types.DeleteTemplateResponse, AWSError>;
+  /**
+   * Deletes a cases template. You can delete up to 100 templates per domain.  &lt;p&gt;After a cases template is deleted:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;You can still retrieve the template by calling &lt;code&gt;GetTemplate&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;You cannot update the template. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;You cannot create a case by using the deleted template.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Deleted templates are not included in the &lt;code&gt;ListTemplates&lt;/code&gt; response.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; 
+   */
+  deleteTemplate(callback?: (err: AWSError, data: ConnectCases.Types.DeleteTemplateResponse) => void): Request<ConnectCases.Types.DeleteTemplateResponse, AWSError>;
+  /**
    * Returns information about a specific case if it exists. 
    */
   getCase(params: ConnectCases.Types.GetCaseRequest, callback?: (err: AWSError, data: ConnectCases.Types.GetCaseResponse) => void): Request<ConnectCases.Types.GetCaseResponse, AWSError>;
@@ -655,6 +679,43 @@ declare namespace ConnectCases {
   }
   export interface DeleteDomainResponse {
   }
+  export interface DeleteFieldRequest {
+    /**
+     * The unique identifier of the Cases domain.
+     */
+    domainId: DomainId;
+    /**
+     * Unique identifier of the field.
+     */
+    fieldId: FieldId;
+  }
+  export interface DeleteFieldResponse {
+  }
+  export interface DeleteLayoutRequest {
+    /**
+     * The unique identifier of the Cases domain.
+     */
+    domainId: DomainId;
+    /**
+     * The unique identifier of the layout.
+     */
+    layoutId: LayoutId;
+  }
+  export interface DeleteLayoutResponse {
+  }
+  export interface DeleteTemplateRequest {
+    /**
+     * The unique identifier of the Cases domain.
+     */
+    domainId: DomainId;
+    /**
+     * A unique identifier of a template.
+     */
+    templateId: TemplateId;
+  }
+  export interface DeleteTemplateResponse {
+  }
+  export type Deleted = boolean;
   export type DomainArn = string;
   export type DomainId = string;
   export type DomainName = string;
@@ -853,6 +914,19 @@ declare namespace ConnectCases {
     userArnValue?: String;
   }
   export type FieldValueUnionStringValueString = string;
+  export type FileArn = string;
+  export interface FileContent {
+    /**
+     * The Amazon Resource Name (ARN) of a File in Amazon Connect.
+     */
+    fileArn: FileArn;
+  }
+  export interface FileFilter {
+    /**
+     * The Amazon Resource Name (ARN) of the file.
+     */
+    fileArn?: FileArn;
+  }
   export interface GetCaseAuditEventsRequest {
     /**
      * A unique identifier of the case.
@@ -967,6 +1041,14 @@ declare namespace ConnectCases {
   }
   export interface GetFieldResponse {
     /**
+     * Timestamp at which the resource was created.
+     */
+    createdTime?: CreatedTime;
+    /**
+     * Denotes whether or not the resource has been deleted.
+     */
+    deleted?: Deleted;
+    /**
      * Description of the field.
      */
     description?: FieldDescription;
@@ -978,6 +1060,10 @@ declare namespace ConnectCases {
      * Unique identifier of the field.
      */
     fieldId: FieldId;
+    /**
+     * Timestamp at which the resource was created or last modified.
+     */
+    lastModifiedTime?: LastModifiedTime;
     /**
      * Name of the field.
      */
@@ -1011,6 +1097,18 @@ declare namespace ConnectCases {
      */
     content: LayoutContent;
     /**
+     * Timestamp at which the resource was created.
+     */
+    createdTime?: CreatedTime;
+    /**
+     * Denotes whether or not the resource has been deleted.
+     */
+    deleted?: Deleted;
+    /**
+     * Timestamp at which the resource was created or last modified.
+     */
+    lastModifiedTime?: LastModifiedTime;
+    /**
      * The Amazon Resource Name (ARN) of the newly created layout.
      */
     layoutArn: LayoutArn;
@@ -1039,9 +1137,21 @@ declare namespace ConnectCases {
   }
   export interface GetTemplateResponse {
     /**
+     * Timestamp at which the resource was created.
+     */
+    createdTime?: CreatedTime;
+    /**
+     * Denotes whether or not the resource has been deleted.
+     */
+    deleted?: Deleted;
+    /**
      * A brief description of the template.
      */
     description?: TemplateDescription;
+    /**
+     * Timestamp at which the resource was created or last modified.
+     */
+    lastModifiedTime?: LastModifiedTime;
     /**
      * Configuration of layouts associated to the template.
      */
@@ -1072,6 +1182,7 @@ declare namespace ConnectCases {
     templateId: TemplateId;
   }
   export type IamPrincipalArn = string;
+  export type LastModifiedTime = Date;
   export type LayoutArn = string;
   export interface LayoutConfiguration {
     /**
@@ -1303,6 +1414,10 @@ declare namespace ConnectCases {
      * Represents the content of a contact to be returned to agents.
      */
     contact?: ContactContent;
+    /**
+     * Represents the content of a File to be returned to agents.
+     */
+    file?: FileContent;
   }
   export interface RelatedItemEventIncludedData {
     /**
@@ -1320,8 +1435,12 @@ declare namespace ConnectCases {
      * Object representing a contact in Amazon Connect as an API request field.
      */
     contact?: Contact;
+    /**
+     * A file of related items.
+     */
+    file?: FileContent;
   }
-  export type RelatedItemType = "Contact"|"Comment"|string;
+  export type RelatedItemType = "Contact"|"Comment"|"File"|string;
   export interface RelatedItemTypeFilter {
     /**
      * A filter for related items of type Comment.
@@ -1331,6 +1450,10 @@ declare namespace ConnectCases {
      * A filter for related items of type Contact.
      */
     contact?: ContactFilter;
+    /**
+     * A filter for related items of this type of File.
+     */
+    file?: FileFilter;
   }
   export interface RequiredField {
     /**
