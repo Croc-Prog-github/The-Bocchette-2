@@ -34,11 +34,11 @@
   "main": "index.js || index.html",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Croc-Prog-github/The-Bocchette-2.git"
+    "url": "https://github.com/Croc-Prog-github/The-Bocchette-2.git"
   },
   "author": "Croc-Prog-github <119326147+Croc-Prog-github@users.noreply.github.com>",
   "license": "MIT",
-  "description": "<h1 align=\"center\">The Bocchette 2</h1> <!--  [![Main-Background](https://docs.google.com/drawings/d/e/2PACX-1vRWRSRkIcWafi4aizPRm6sHtJleHPepMcy88ZQ9UX3AhNIVTnKyhxNrIsfAU4LcKdr4JWxVRsUImpv0/pub?w=690&h=571)](url) ==============  -->",
+  "description": "Web Videogame: multiplayer Battle Royal in 3rd person. To fight, use Energy to create attacks and defenses. Game modes like as: Creative or Story. Chat included to communicate with friends in real time. The link doesn't work, we're working on it. Download the game and follow the instructions.",
   "bugs": {
     "url": "https://github.com/Croc-Prog-github/The-Bocchette-2/issues"
   },
@@ -47,5 +47,5 @@
   "directories": {
     "doc": "docs"
   },
-  "keywords": []
+  "keywords": ["The Bocchette 2", "the bocchette 2", "TB2", "tb2", "gioco online multiplayer", "gioco online multiplayer node.js", "gioco online", "giochi online battaglia reale", "FPS online"]
 }
