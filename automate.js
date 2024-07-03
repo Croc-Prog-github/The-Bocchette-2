@@ -15,13 +15,16 @@ const puppeteer = require('puppeteer');
   });
 
   const page = await browser.newPage();
-  await page.goto('http://localhost:3000'); // Cambia l'URL se necessario
+  await page.goto('http://localhost:5173'); // Cambia l'URL se necessario
 
   // Aspetta che la pagina si carichi
   await page.waitForSelector('body');
 
   // Simula il clic del tasto sinistro del mouse
   await page.mouse.click(100, 100); // Cambia le coordinate se necessario
+
+  // Simula il clic del tasto "o" nella console
+  page.keyboard.press('o');
 
   // Simula il clic del tasto "r" nella console
   page.keyboard.press('r');
