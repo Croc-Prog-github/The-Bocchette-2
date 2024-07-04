@@ -286,26 +286,30 @@
 
 <script>
   function BuyThis(qnt, obj, price, valuta) {
-    if (valuta == 'soldi') {
+    if (valuta === 'soldi') {
       if (price <= soldi) {
-        obj = parseInt(obj) + qnt;
-        valuta = parseInt(valuta) - price;
+        // Incrementa l'oggetto e decrementa la valuta
+        window[obj] = parseInt(window[obj]) + parseInt(qnt);
+        soldi = parseInt(soldi) - parseInt(price);
 
-        console.info("Aquisto riuscito.")
+        console.info("Aquisto riuscito.");
+        console.log(`Nuovi valori - ${obj}: ${window[obj]}, soldi: ${soldi}`);
       } else {
-        window.alert("Banconote insufficenti!")
+        window.alert("Banconote insufficienti!");
       }
-    } else if (valuta == 'gemme') {
+    } else if (valuta === 'gemme') {
       if (price <= gemme) {
-        obj = parseInt(obj) + qnt;
-        valuta = parseInt(valuta) - price;
+        // Incrementa l'oggetto e decrementa la valuta
+        window[obj] = parseInt(window[obj]) + parseInt(qnt);
+        gemme = parseInt(gemme) - parseInt(price);
 
-        console.info("Aquisto riuscito.")
+        console.info("Aquisto riuscito.");
+        console.log(`Nuovi valori - ${obj}: ${window[obj]}, gemme: ${gemme}`);
       } else {
-        window.alert("Gemme insufficenti!")
-      } 
+        window.alert("Gemme insufficienti!");
+      }
     } else {
-      console.error("Il tipo di valùta usata non è presente nello switch()");
+      console.error("Il tipo di valuta usata non è presente nello switch().");
     }
   }
 </script>
