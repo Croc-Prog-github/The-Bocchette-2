@@ -15,7 +15,7 @@ PRIORITARI
 3. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium (2% [bug SessionStorage Array che memor. obb già riscatt.])
 4. Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom
 5. Continuare il nuovo script di Gestione dati (cripting avanzato)
-6. Continuare CONTRIBUTING.md (50%)
+6. 
 
 DA INIZIARE
 1. Iniziare il Chats-API (sopeso a lungo termine)
@@ -43,3 +43,4 @@ COMPLETATI
 12. Migliorare la gestione probabilità e l'apertura delle casse. FATTO
 13. Correggere bug non-assegnazione PuntiOttim in SessionStorage FATTO
 14. Creare contatore Punti Ottimizzazione in home FATTO
+15. Aggiornare CONTRIBUTING.md FATTO
