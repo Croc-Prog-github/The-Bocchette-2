@@ -286,26 +286,22 @@
 
 <script>
   function BuyThis(objVar, qnt, price, valuta) {
-    switch (valuta) {
-      case 'soldi':
-        if (price <= soldi) {
-          objVar = parseInt(objVar) + qnt;
-          console.info("Aquisto riuscito.")
-        } else {
-          window.alert("Banconote insufficenti!")
-        }
-      break;
-      case 'gemme':
+    if (valuta == 'soldi') {
+      if (price <= soldi) {
+        objVar = parseInt(objVar) + qnt;
+        console.info("Aquisto riuscito.")
+      } else {
+        window.alert("Banconote insufficenti!")
+      }
+    } else if (valuta == 'gemme') {
       if (price <= gemme) {
-          objVar = parseInt(objVar) + qnt;
-          console.info("Aquisto riuscito.")
-        } else {
-          window.alert("Gemme insufficenti!")
-        }
-      break;
-      default:
-        console.error("Il tipo di valùta usata non è presente nello switch()");
-      break;
+        objVar = parseInt(objVar) + qnt;
+        console.info("Aquisto riuscito.")
+      } else {
+        window.alert("Gemme insufficenti!")
+      } 
+    } else {
+      console.error("Il tipo di valùta usata non è presente nello switch()");
     }
   }
 </script>
