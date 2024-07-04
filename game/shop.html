@@ -286,32 +286,36 @@
 
 <script>
   function BuyThis(qnt, obj, price, valuta) {
-    if (valuta === 'soldi') {
-      if (price <= soldi) {
-        // Incrementa l'oggetto e decrementa la valuta
-        window[obj] = parseInt(window[obj]) + parseInt(qnt);
-        soldi = parseInt(soldi) - parseInt(price);
+      // Converte le variabili di input in numeri interi
+      qnt = parseInt(qnt);
+      price = parseInt(price);
 
-        console.info("Aquisto riuscito.");
-        console.log(`Nuovi valori - ${obj}: ${window[obj]}, soldi: ${soldi}`);
-      } else {
-        window.alert("Banconote insufficienti!");
-      }
-    } else if (valuta === 'gemme') {
-      if (price <= gemme) {
-        // Incrementa l'oggetto e decrementa la valuta
-        window[obj] = parseInt(window[obj]) + parseInt(qnt);
-        gemme = parseInt(gemme) - parseInt(price);
+      if (valuta === 'soldi') {
+        if (price <= soldi) {
+          // Incrementa l'oggetto e decrementa la valuta
+          window[obj] = parseInt(window[obj]) + qnt;
+          soldi = soldi - price;
 
-        console.info("Aquisto riuscito.");
-        console.log(`Nuovi valori - ${obj}: ${window[obj]}, gemme: ${gemme}`);
+          console.info("Acquisto riuscito.");
+          console.log(`Nuovi valori - ${obj}: ${window[obj]}, soldi: ${soldi}`);
+        } else {
+          window.alert("Banconote insufficienti!");
+        }
+      } else if (valuta === 'gemme') {
+        if (price <= gemme) {
+          // Incrementa l'oggetto e decrementa la valuta
+          window[obj] = parseInt(window[obj]) + qnt;
+          gemme = gemme - price;
+
+          console.info("Acquisto riuscito.");
+          console.log(`Nuovi valori - ${obj}: ${window[obj]}, gemme: ${gemme}`);
+        } else {
+          window.alert("Gemme insufficienti!");
+        }
       } else {
-        window.alert("Gemme insufficienti!");
+        console.error("Il tipo di valuta usata non è presente nello switch().");
       }
-    } else {
-      console.error("Il tipo di valuta usata non è presente nello switch().");
     }
-  }
 </script>
 
 <style>
