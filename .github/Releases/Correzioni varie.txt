@@ -1,6 +1,7 @@
 Elenco di bug, correzioni e rework non segnalati in memo.txt o negli Issues; da sintetizzare, aggiungere e cancellare ogni relase.
 
 - Risolta la duplicazione scheda dal tasto della rotella mouse su elementi <a> sul bottone Indietro.
-- Glitch grafico nell'assegnazione dell'obbiettivo del pass
+- Risolto glitch grafico nell'assegnazione dell'obbiettivo del pass
 - Rework grafico e aggiunta di progress bar nel pass (non funzionante se aumenta l'obbiettivo)
+- Corretto bug del riscatto di ricompense in obbiettivi minori a obbiettivo attuale
 - 
