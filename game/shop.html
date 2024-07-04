@@ -289,14 +289,18 @@
     if (valuta == 'soldi') {
       if (price <= soldi) {
         objVar = parseInt(objVar) + qnt;
-        console.info("Aquisto riuscito.")
+        valuta = parseInt(valuta) - price;
+
+        return "Aquisto riuscito."
       } else {
         window.alert("Banconote insufficenti!")
       }
     } else if (valuta == 'gemme') {
       if (price <= gemme) {
         objVar = parseInt(objVar) + qnt;
-        console.info("Aquisto riuscito.")
+        valuta = parseInt(valuta) - price;
+        
+        return "Aquisto riuscito."
       } else {
         window.alert("Gemme insufficenti!")
       } 
