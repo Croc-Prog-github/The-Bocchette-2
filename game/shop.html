@@ -294,7 +294,7 @@
         if (price <= soldi) {
           // Incrementa l'oggetto e decrementa la valuta
           window[obj] = parseInt(window[obj]) + qnt;
-          soldi = soldi - price;
+          soldi = parseInt(soldi) - price;
 
           console.info("Acquisto riuscito.");
           console.log(`Nuovi valori - ${obj}: ${window[obj]}, soldi: ${soldi}`);
@@ -305,7 +305,7 @@
         if (price <= gemme) {
           // Incrementa l'oggetto e decrementa la valuta
           window[obj] = parseInt(window[obj]) + qnt;
-          gemme = gemme - price;
+          gemme = parseInt(gemme) - price;
 
           console.info("Acquisto riuscito.");
           console.log(`Nuovi valori - ${obj}: ${window[obj]}, gemme: ${gemme}`);
