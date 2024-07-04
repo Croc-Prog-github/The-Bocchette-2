@@ -285,24 +285,25 @@
 </html>
 
 <script>
-  function BuyThis(obj, price, valuta) {
+  function BuyThis(objVar, qnt, price, valuta) {
     switch (valuta) {
       case 'soldi':
         if (price <= soldi) {
-          
+          objVar = parseInt(objVar) + qnt;
         } else {
           window.alert("Banconote insufficenti!")
         }
       break;
       case 'gemme':
       if (price <= gemme) {
-          
+          objVar = parseInt(objVar) + qnt;
         } else {
-          window.alert("Banconote insufficenti!")
+          window.alert("Gemme insufficenti!")
         }
       break;
       default:
-        console.error("Il tipo di valùta usata non è presente nello switch()")
+        console.error("Il tipo di valùta usata non è presente nello switch()");
+      break;
     }
   }
 </script>
