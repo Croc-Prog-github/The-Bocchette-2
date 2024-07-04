@@ -26,17 +26,17 @@ Grazie per aver contribuito a rendere migliore The Bocchette 2! 🚀🎉
 1. **Sciegli un Issue**: Scegli un problema dal [registro degli Issue](https://github.com/Croc-Prog-github/The-Bocchette-2/issues) o apri un [nuovo issue](#nuovo-issue).
 2. **Indica il tuo impegno**: Assegna a te stesso l'Issue per indicare che stai lavorando su di esso.
 3. **Crea il tuo ramo**: Crea un nuovo Branch separato, per implementare Commits sul tuo contributo. Per creare un nuovo ramo usa il comando:
-```git_bash
-  git checkout -b branch-name
+```ps
+git checkout -b branch-name
 ```
 4. **Modifica**: Fai le tue modifiche, seguendo, possibilmente lo [stile di programmazione](#stile-di-programmazione) e utilizzando le informazioni fornite nel Issue.
 5. **Commissiona**: Fai il commit delle tue modifiche, usa il comando:
-```git_bash
-  git commit -m "Description of your commit"
+```ps
+git commit -m "Description of your commit"
 ```
 6. **Update nel tuo branch**: Pusha il tuo branch, usa il comando:
-```git_bash
-  git push origin branch-name
+```ps
+git push origin branch-name
 ```
 7. **Pull Request**: Apri una [Pull Request](https://github.com/Croc-Prog-github/The-Bocchette-2/compare) sul repository. Assicurati di descrivere chiaramente le tue modifiche.
 
@@ -79,10 +79,32 @@ Regole per ottimizzare lo stile del codice per il linguaggio JS/TS:
 - Quando bisogna effettuare un'unione, stringa-numero, preferiamo utilizzare `console.log("Counter: " + VarCounter)` anzichè `console.log(Counter: ${VarCounter})`.
 - Quando bisogna interaggire con l'ID di qualcosa, preferiamo evitare l'uso di variabili e di aquisirlo direttamente, così, esempio:
 ```JS
-  document.getElementById("ID").innerText = "New text";
+document.getElementById("ID").innerText = "New text";
 ```
 Ovviamente se è necessario usare delle variabili, si può bypassare questa regola.
+- Se una funzione ha un ruolo determinante ed è lunga, è preferibile inserire un commento, subito dopo la parentesi graffa, che ne descriva brevemente il comportamento, così:
+```JS
+function name(params) { //Compotamento della funzione
+  // JS
+}
+```
+- Preferibilmente vi chiediamo di evitare di inserire troppi commenti, specialmente per le singole righe di codice. In questo modo il codice diventa più fluido da leggere. Inserite commenti per le righe quando necessario.
 
-<!--
 ### CSS
--->
+Regole per ottimizzare lo stile del codice per il linguaggio CSS:
+- Preferibilmente, quando ci sono molte Regole di css, usate 2 andate a capo per spaziare Regole che riguardano altri elementi, invece mettete vicine le regole per lo stesso elemento.
+```CSS
+body {
+  cursor: default;
+}
+body:after{
+  cursor: pointer;
+}
+
+#OtherElement{
+  background: red;
+}
+#OtherElement:hover{
+  background: blue;
+}
+``` 
