@@ -297,9 +297,9 @@
           soldi = parseInt(soldi) - price;
 
           console.info("Acquisto riuscito.");
-          console.log(`Nuovi valori - ${obj}: ${window[obj]}, soldi: ${soldi}`);
+          console.log(`Nuovi valori - ${obj}: ${window[obj]}; soldi: ${soldi}`);
         } else {
-          window.alert("Banconote insufficienti!");
+          window.alert("Banconote insufficienti!")
         }
       } else if (valuta === 'gemme') {
         if (price <= gemme) {
