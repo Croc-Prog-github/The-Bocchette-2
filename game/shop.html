@@ -285,22 +285,24 @@
 </html>
 
 <script>
-  function BuyThis(qnt, objVar, price, valuta) {
+  fetch('/var.js');
+
+  function BuyThis(qnt, obj, price, valuta) {
     if (valuta == 'soldi') {
       if (price <= soldi) {
-        objVar = parseInt(objVar) + qnt;
+        obj = parseInt(obj) + qnt;
         valuta = parseInt(valuta) - price;
 
-        return "Aquisto riuscito."
+        console.info("Aquisto riuscito.")
       } else {
         window.alert("Banconote insufficenti!")
       }
     } else if (valuta == 'gemme') {
       if (price <= gemme) {
-        objVar = parseInt(objVar) + qnt;
+        obj = parseInt(obj) + qnt;
         valuta = parseInt(valuta) - price;
-        
-        return "Aquisto riuscito."
+
+        console.info("Aquisto riuscito.")
       } else {
         window.alert("Gemme insufficenti!")
       } 
