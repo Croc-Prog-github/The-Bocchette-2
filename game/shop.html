@@ -10,6 +10,7 @@
   <!-- Content -->
   <link rel="icon" href="https://docs.google.com/drawings/d/e/2PACX-1vRzg3r27e7_yLyB4m8rlyFHgQ8H5d6IJtW39axawbD5u7S_eX3ezqZdtll3NBLxJYY_OUhuSGJ-jQ8T/pub?w=16&h=16" type="image/x-icon">
   <script src="/SchedDes.js"></script>
+  <script src="/var.js"></script>
 </head>
 <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;background-color: #195e79ad;cursor: default;overflow: auto;margin-top: 0px;margin-inline: 8px;">
   <div style="position: fixed;width: -webkit-fill-available;z-index: 1;">
@@ -229,10 +230,16 @@
           <button class="buy_it">0,50 €</button>
         </div>
 
-        <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+        <!--<div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
           10 Banconote<br>
           <hr>
           <button class="buy_it"><img src="/resources/SVG/Gemme_icon-SVG.svg"> 3</button>
+        </div>-->
+
+        <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+          3 Gemme<br>
+          <hr>
+          <button class="buy_it"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 10</button>
         </div>
 
         <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
@@ -275,8 +282,30 @@
     </select>
   </div>
 </body>
-
 </html>
+
+<script>
+  function BuyThis(obj, price, valuta) {
+    switch (valuta) {
+      case 'soldi':
+        if (price <= soldi) {
+          
+        } else {
+          window.alert("Banconote insufficenti!")
+        }
+      break;
+      case 'gemme':
+      if (price <= gemme) {
+          
+        } else {
+          window.alert("Banconote insufficenti!")
+        }
+      break;
+      default:
+        console.error("Il tipo di valùta usata non è presente nello switch()")
+    }
+  }
+</script>
 
 <style>
   button.buy_it {
