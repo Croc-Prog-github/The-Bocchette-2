@@ -144,7 +144,7 @@
   function RRPP(ricomp, id, obbRicomp) { // Riscatta Ricompensa Pass Premium
     if (passP == 1) { //Controlla Premium Pass (riscatto ricomps. pass premium)
       let SfObbId = document.getElementById(id).style;
-      if (obbRicomp == obb) {
+      if (obbRicomp <= obb) {
         switch (ricomp) {
           case "200 banconote":
             if (SfObbId.background == 'gray') {
