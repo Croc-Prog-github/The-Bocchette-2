@@ -236,7 +236,7 @@
           <button class="buy_it"><img src="/resources/SVG/Gemme_icon-SVG.svg"> 3</button>
         </div>-->
 
-        <div onclick="BuyThis('gemme', 3, 10, 'soldi')" style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+        <div onclick="BuyThis('3', 'gemme', '10', 'soldi')" style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
           3 Gemme<br>
           <hr>
           <button class="buy_it"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 10</button>
@@ -285,7 +285,7 @@
 </html>
 
 <script>
-  function BuyThis(objVar, qnt, price, valuta) {
+  function BuyThis(qnt, objVar, price, valuta) {
     if (valuta == 'soldi') {
       if (price <= soldi) {
         objVar = parseInt(objVar) + qnt;
