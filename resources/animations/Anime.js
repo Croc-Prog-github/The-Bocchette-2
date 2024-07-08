@@ -4,5 +4,5 @@ var element = document.getElementById('element');
 
 anime({
   targets: element,
-  translateX: 270
+  translateX: 270,
 });
