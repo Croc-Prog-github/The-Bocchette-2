@@ -1,8 +1,8 @@
 const anime = require('animejs');
 
-var element = document.getElementById('element');
+//var element = document.getElementById('element');
 
 anime({
-  targets: element,
-  translateX: 270,
+  targets: '#element',
+  translateX: 270
 });
