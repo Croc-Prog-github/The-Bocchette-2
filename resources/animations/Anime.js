@@ -4,5 +4,5 @@ const anime = require('animejs');
 
 anime({
   targets: '#element',
-  translateX: 270
+  translateX: 250
 });
