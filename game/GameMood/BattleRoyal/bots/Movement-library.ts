@@ -3,7 +3,9 @@ class MoverTS {
 
   constructor(element: HTMLElement) {
     this.element = element;
-    this.element.style.position = 'absolute'; // Imposta position: absolute
+    document.addEventListener('DOMContentLoaded', () => {
+      this.element.style.position = 'absolute'; // Imposta position: absolute
+    })
   }
 
   achieve = {

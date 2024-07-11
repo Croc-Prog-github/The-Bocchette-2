@@ -1,5 +1,7 @@
-const bot1 = document.getElementById('bot1');
-const mover = new MoverTS(bot1);
+document.addEventListener('DOMContentLoaded', () => {
+  const bot1 = document.getElementById('bot1');
+  const mover = new MoverTS(bot1);
+})
 
 //Calcola la distanza tra i 2 elementi in argomento
 function getDistance(rect1, rect2) {
@@ -36,16 +38,31 @@ function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwUP
   }
 
   if (foundElement) {
-    console.info("Elemento più vicino trovato nel raggio: "+radius+"): ", foundElement.id);
+    console.info("Elemento più vicino trovato nel raggio: "+radius+"): " + foundElement.id);
+    return (foundElement.id);
   } else {
     console.warn("RadarMode(): Nessun elemento nel raggio di: "+radius+"px");
     mover.glideAt(mover.getRandomX, mover.getRandomY, 3); // Va in una posizione a caso
     RadarMode();
+    return false;
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   
   // Si sposta verso la cassa più vicina
-  mover.glideAtIdElement('PwUP', 3)
+  //mover.glideAtIdElement('PwUP', 3)
+
+  RadarMode();
+  switch (RadarMode()) {
+    case 'player':
+      
+    break;
+    case 'PwUP':
+    
+    break;
+    default:
+      console.warn("MainFlow: Nessun elemento definito rilevato da RadarMode()")
+    break;
+  }
 })
