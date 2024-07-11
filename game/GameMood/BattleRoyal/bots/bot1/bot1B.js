@@ -42,7 +42,16 @@ function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwUP
     return (foundElement.id);
   } else {
     console.warn("RadarMode(): Nessun elemento nel raggio di: "+radius+"px");
-    mover.glideAt(mover.getRandomX, mover.getRandomY, 3); // Va in una posizione a caso
+
+    // Recupera le dimensioni dell'elemento Terreno
+    const terrenoElement = document.querySelector('[name="Terreno"]');
+    const terrenoRect = terrenoElement.getBoundingClientRect();
+    // Genera una posizione casuale all'interno dell'elemento Terreno
+    const destinationLeft = Math.floor(Math.random() * (terrenoRect.width - 0)) + terrenoRect.left;
+    const destinationTop = Math.floor(Math.random() * (terrenoRect.height - 0)) + terrenoRect.top;
+
+    mover.glideAt(destinationLeft, destinationTop, 3); // Va in una posizione a caso (nel Terreno)
+        
     RadarMode();
     return false;
   }
@@ -51,9 +60,6 @@ function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwUP
 document.addEventListener('DOMContentLoaded', () => {
   const bot1 = document.getElementById('bot1');
   const mover = new MoverTS(bot1);
-
-  // Si sposta verso la cassa più vicina
-  //mover.glideAtIdElement('PwUP', 3)
 
   RadarMode();
   switch (RadarMode()) {
