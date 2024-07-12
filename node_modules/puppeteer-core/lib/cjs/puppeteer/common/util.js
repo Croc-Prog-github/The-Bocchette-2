@@ -325,6 +325,7 @@ function parsePDFOptions(options = {}, lengthUnit = 'in') {
         omitBackground: false,
         outline: false,
         tagged: true,
+        waitForFonts: true,
     };
     let width = 8.5;
     let height = 11;

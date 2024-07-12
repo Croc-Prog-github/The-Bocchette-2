@@ -153,11 +153,10 @@ export class BidiHTTPRequest extends HTTPRequest {
     }
     async _respond(response, _priority) {
         this.interception.handled = true;
-        const responseBody = response.body && response.body instanceof Uint8Array
-            ? response.body.toString('base64')
-            : response.body
-                ? btoa(response.body)
-                : undefined;
+        let parsedBody;
+        if (response.body) {
+            parsedBody = HTTPRequest.getResponse(response.body);
+        }
         const headers = getBidiHeaders(response.headers);
         const hasContentLength = headers.some(header => {
             return header.name === 'content-length';
@@ -171,13 +170,12 @@ export class BidiHTTPRequest extends HTTPRequest {
                 },
             });
         }
-        if (responseBody && !hasContentLength) {
-            const encoder = new TextEncoder();
+        if (parsedBody?.contentLength && !hasContentLength) {
             headers.push({
                 name: 'content-length',
                 value: {
                     type: 'string',
-                    value: String(encoder.encode(responseBody).byteLength),
+                    value: String(parsedBody.contentLength),
                 },
             });
         }
@@ -187,10 +185,10 @@ export class BidiHTTPRequest extends HTTPRequest {
             statusCode: status,
             headers: headers.length > 0 ? headers : undefined,
             reasonPhrase: STATUS_TEXTS[status],
-            body: responseBody
+            body: parsedBody?.base64
                 ? {
                     type: 'base64',
-                    value: responseBody,
+                    value: parsedBody?.base64,
                 }
                 : undefined,
         })
