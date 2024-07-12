@@ -15,7 +15,7 @@
     <script src="/SchedDes.js"></script>
 
     <!-- Bots src script -->
-    <script src="/game/GameMood/BattleRoyal/bots/bot1/bot1A.js"></script>
+    <script src="/game/GameMood/BattleRoyal/bots/bot1/bot1B.js"></script>
   </head>
   <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande','Lucida Sans', Arial, sans-serif; background-color: #195e79ad; cursor: default; overflow: hidden;">
 
@@ -50,7 +50,7 @@
           </div>
         </div>
 
-        <div name="Bot1" style="margin-top: 50px; margin-left: 150px; position: relative;" id="bot1" hidden>
+        <div name="Bot1" style="margin-top: 50px; margin-left: 150px; position: relative;" id="bot1">
           <progress style="margin-top: -15px; position: absolute; z-index: 1; width: 65px; accent-color: green;" value="100" max="100" id="vita_bot1"></progress>
           <img src="#" style="/*position: absolute;*/ top: 50%; left: 50%;" alt="Bot1">
         </div>
@@ -102,7 +102,7 @@
             </div>
           </div>
           <div name="Block da costr" id="BlkCost">
-            <button title="Pietra ruvida" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;" onclick="SQOgg('PietRuv')"><img src="https://docs.google.com/drawings/d/e/2PACX-1vQWjpgoDtgc_wKaOhOq2GgOm_-XqSNS8zmkPvkqwku38r5Fh3spTChn_bS4wRnDHdPdzMz_4P2Kt0BI/pub?w=100&h=100" alt="Err"></button>
+            <button title="Pietra ruvida" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;" onclick="SQOgg('PietRuv')"><img src="/resources/TB2/Blocchi_e_desing_mappe/Block_Pietra_ruvida.png" alt="Err"></button>
           </div>
           <div name="Dispositiv" id="disp" style="display: flex; display: none;">
             <button title="Punto di nascita" style="width: 100px; height: 100px; padding: 1px; display: flex; justify-content: flex-end; align-items: flex-start;" onclick="SQOgg('PuntNasc')">
@@ -383,23 +383,23 @@
     switch (nm) {
       case 'PietRuv':
         WinEdit(0);
-        SQOggImage.src = 'https://docs.google.com/drawings/d/e/2PACX-1vQWjpgoDtgc_wKaOhOq2GgOm_-XqSNS8zmkPvkqwku38r5Fh3spTChn_bS4wRnDHdPdzMz_4P2Kt0BI/pub?w=100&h=100';
+        SQOggImage.src = '/resources/TB2/Blocchi_e_desing_mappe/Block_Pietra_ruvida.png';
       break;
       case 'PuntNasc':
         WinEdit(0);
-        SQOggImage.src = 'https://docs.google.com/drawings/d/e/2PACX-1vQVgZLcAvOwpSWroShVq4h4TXiMHClF4O2Ozi0RKN7iEX3gL6uyaRlak7g3mB3hQydeutVSviAQ6d-O/pub?w=100&h=100';
+        SQOggImage.src = '/resources/TB2/Game-Mode/GameMode(Creativa)/Dispositivi/Dispositivo_Punto_di_nascita.png';
       break;
       case 'GenerArm':
         WinEdit(0);
-        SQOggImage.src = 'https://docs.google.com/drawings/d/e/2PACX-1vQQzkHNEz2ZFwgVNbN961omGj4RtpLOLZK7iJyqMRz04jeA4sCZCqdWGOfv0eWnwW63ZBzc5tqiZiVK/pub?w=100&h=100';
+        SQOggImage.src = '/resources/TB2/Game-Mode/GameMode(Creativa)/Dispositivi/Dispositivo_Generatore_di_armi.png';
       break;
       case 'PwUP':
         WinEdit(0);
-        SQOggImage.src = 'https://docs.google.com/drawings/d/e/2PACX-1vRNVrloir3Rv_esBl_LuRsDqpRbTtQAtGBbo32vwz1JkJ0lBjRpYu5zyOW6GafN8-qyLcNKrjESQABO/pub?w=50&h=50';
+        SQOggImage.src = '/resources/TB2/Blocchi_e_desing_mappe/Cassa_power-up.png';
       break;
       case 'GenerBot':
         WinEdit(0);
-        SQOggImage.src = 'https://docs.google.com/drawings/d/e/2PACX-1vRrglwOCqyf7UnmjWcRbAd0Nd91t-xA74tfj70DbTPdLRF1-4EXpKdW-aV0HRnb9UXApYRibHdkP4KQ/pub?w=100&h=100';
+        SQOggImage.src = '/resources/TB2/Game-Mode/GameMode(Creativa)/Dispositivi/Dispositivo_Generatore_di_Bot.png';
       break;
     }
 
