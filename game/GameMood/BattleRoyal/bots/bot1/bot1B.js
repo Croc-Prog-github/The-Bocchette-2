@@ -1,7 +1,9 @@
 /*document.addEventListener('DOMContentLoaded', () => {
   const bot1 = document.getElementById('bot1');
+  //import { mover } from '../Movement-library.ts';
   const mover = new MoverTS(bot1);
 })*/
+
 
 //Calcola la distanza tra i 2 elementi in argomento
 function getDistance(rect1, rect2) {
@@ -11,6 +13,9 @@ function getDistance(rect1, rect2) {
 }
 
 function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwUP
+  const bot1 = document.getElementById('bot1');
+  const mover = new MoverTS(bot1);
+
   const radius = 100; // Raggio di ricerca in pixel
   const botRect = bot1.getBoundingClientRect();
 
