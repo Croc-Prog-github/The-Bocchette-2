@@ -32,7 +32,7 @@
 
     <div name="Terreno" style="width: 950px; height: 708px; background-color: darkkhaki; background-image: url('/resources/TB2/Pavimento/Pavimento_Sabbia.png'); background-size: 5%;">
 
-      <div name="Player" style="margin-top: 50px; margin-left: 20px; position: absolute; width: fit-content;" id="player">
+      <div name="Player" id="player" style="/*margin-top: 50px; margin-left: 20px;*/ position: absolute; width: fit-content;">
         <div id="fumetto" aria-label="tasto E" style="margin-left: 30px; position: absolute; margin-top: -25px;">-</div>
         <progress style="margin-top: -25px; position: absolute; z-index: 2; width: 65px; accent-color: green;" value="100" max="100" id="vitaPlayer"></progress>
         <progress value="0" max="99" style="margin-top: -15px; position: absolute; z-index: 2; width: 65px;" id="YourE"></progress>
@@ -44,7 +44,7 @@
         <div name="Ombra" style="width: 40px; height: 30px; background: #0000003d; border-radius: 60%; transform: rotateX(45deg); position: absolute; left: 10px; top: 15px; z-index: 0;"></div>
       </div>
 
-      <div name="Bot1" style="/*margin-top: 50px; margin-left: 150px;*/ position: absolute; left: 150px; top: 110px;" id="bot1">
+      <div name="Bot1" style="/*margin-top: 50px; margin-left: 150px;*/ width: fit-content; position: absolute; left: 150px; top: 110px;" id="bot1">
         <progress style="margin-top: -15px; position: absolute; z-index: 2; width: 65px; accent-color: green;" value="100" max="100" id="vita_bot1"></progress>
         <img src="#" style="/*position: absolute;*/ top: 50%; left: 50%;" alt="Bot1">
         <div name="Ombra" style="width: 40px; height: 30px; background: #0000003d; border-radius: 60%; transform: rotateX(45deg); position: absolute; left: 10px; top: 15px; z-index: 0;"></div>

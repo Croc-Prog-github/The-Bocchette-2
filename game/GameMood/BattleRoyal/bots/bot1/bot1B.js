@@ -70,7 +70,7 @@ async function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwU
       const destinationTop = Math.floor(Math.random() * (terrenoRect.height - 0)) + terrenoRect.top;
 
       try {
-        await glideToPosition(bot1, destinationLeft, destinationTop, 3); // Va in una posizione a caso (nel Terreno)
+        await mover.glideAt(destinationLeft, destinationTop, 3); // Va in una posizione a caso (nel Terreno)
         return;
       } catch (error) {
         return;
