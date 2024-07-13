@@ -1,5 +1,5 @@
-const vitaBot1Element = document.getElementById('vita_bot1');
-let vitaBot1 = parseInt(vitaBot1Element.value);
+/*const vitaBot1Element = document.getElementById('vita_bot1');
+let vitaBot1 = parseInt(vitaBot1Element.value);*/
 
 document.addEventListener('DOMContentLoaded', async () => {
   const bot1 = document.getElementById('bot1');
@@ -50,7 +50,7 @@ async function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwU
   const bot1 = document.getElementById('bot1');
   const mover = new MoverTS(bot1);
 
-  const radius = 200; // Raggio di ricerca in pixel
+  const radius = 100; // Raggio di ricerca in pixel
   const botRect = bot1.getBoundingClientRect();
 
   const player = document.getElementById('player');
@@ -65,7 +65,8 @@ async function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwU
     if (distanceToPlayer <= radius) {
       foundElement = player;
     }
-  } else if (PwUP/* && !foundElement*/) { // Se non ha già trovato il player, Verifica se l'elemento PwUP è entro il raggio
+  } 
+  if (PwUP && !foundElement) { // Se non ha già trovato il player, Verifica se l'elemento PwUP è entro il raggio
     const pwupRect = PwUP.getBoundingClientRect();
     const distanceToPwUP = getDistance(botRect, pwupRect);
     if (distanceToPwUP <= radius) {
