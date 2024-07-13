@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     switch (radarMode) {
       case 'player':
-      case 'player2':
         mover.glideAtIdElement(radarMode, 3);
       break;
       case 'PwUP':
@@ -48,7 +47,7 @@ async function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwU
   const bot1 = document.getElementById('bot1');
   const mover = new MoverTS(bot1);
 
-  const radius = 100; // Raggio di ricerca in pixel
+  const radius = 200; // Raggio di ricerca in pixel
   const botRect = bot1.getBoundingClientRect();
 
   const player = document.getElementById('player');
@@ -87,6 +86,7 @@ async function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwU
 
       try {
         await glideToPosition(bot1, destinationLeft, destinationTop, 3); // Va in una posizione a caso (nel Terreno)
+        RadarMode()
       } catch (error) {
         //console.error("Errore durante l'animazione:", error);
       }
