@@ -29,7 +29,7 @@ Grazie per aver contribuito a rendere migliore The Bocchette 2! 🚀🎉
 ```ps
 git checkout -b branch-name
 ```
-4. **Modifica**: Fai le tue modifiche, seguendo, possibilmente lo [stile di programmazione](#stile-di-programmazione) e utilizzando le informazioni fornite nel Issue.
+4. **Modifica**: Fai le tue modifiche/implementazioni seguendo lo [stile di programmazione](#stile-di-programmazione) e usando le informazioni fornite nel Issue.
 5. **Commissiona**: Fai il commit delle tue modifiche, usa il comando:
 ```ps
 git commit -m "Description of your commit"
