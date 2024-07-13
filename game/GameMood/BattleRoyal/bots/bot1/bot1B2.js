@@ -1,3 +1,6 @@
+const vitaBot1Element = document.getElementById('vita_bot1');
+let vitaBot1 = parseInt(vitaBot1Element.value);
+
 document.addEventListener('DOMContentLoaded', async () => {
   const bot1 = document.getElementById('bot1');
   const mover = new MoverTS(bot1);
