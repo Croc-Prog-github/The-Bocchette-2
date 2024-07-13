@@ -74,6 +74,7 @@ async function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwU
     }
   }
 
+  
   if (foundElement) { // Verifica l'esistenza dell'elemento cercato
     console.info("RadarMode(): Elemento più vicino trovato nel raggio: " + radius + "): " + foundElement.id);
     return foundElement.id;

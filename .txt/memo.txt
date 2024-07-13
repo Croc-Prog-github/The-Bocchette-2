@@ -10,7 +10,7 @@
 10. Continuare le Missioni-storia
 
 PRIORITARI
-1. Continuare il Bot1 in sopravvivenza (40%)
+1. Continuare il Bot1 in sopravvivenza (60%)
 2. Correggere trasazione tra tecnicLockCom e tecnicUnlock (posticipata)
 3. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium (2% [bug SessionStorage Array che memor. obb già riscatt.])
 4. Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom
