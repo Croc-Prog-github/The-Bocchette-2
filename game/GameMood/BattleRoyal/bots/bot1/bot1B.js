@@ -87,16 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const bot1 = document.getElementById('bot1');
   const mover = new MoverTS(bot1);
 
+  let radarMode = String(RadarMode());
+
   //RadarMode();
-  switch (RadarMode()) {
+  switch (radarMode) {
     case 'player' | 'player2':
-      mover.glideAtIdElement(RadarMode(), 3)
+      mover.glideAtIdElement(radarMode, 3)
     break;
     case 'PwUP':
-      mover.glideAtIdElement('PwUP', 3)
+      mover.glideAtIdElement(radarMode, 3)
     break;
     default:
-      console.warn("MainFlow: Nessun elemento definito rilevato da RadarMode(), return: "+RadarMode())
+      console.warn("MainFlow: Nessun elemento definito rilevato da RadarMode(), return: "+radarMode)
     break;
   }
 })
