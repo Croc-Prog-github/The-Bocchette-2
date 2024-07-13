@@ -10,16 +10,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       case 'player':
       case 'player2':
         mover.glideAtIdElement(radarMode, 3);
-        break;
+      break;
       case 'PwUP':
         mover.glideAtIdElement(radarMode, 3);
-        break;
+      break;
       default:
-        console.warn("MainFlow: Nessun elemento definito rilevato da RadarMode(), return: " + radarMode);
-        break;
+        console.warn("MainFlow: Nessun elemento definito rilevato da RadarMode(); return: " + radarMode);
+      break;
     }
   } catch (error) {
-    console.error("Errore durante l'esecuzione di RadarMode:", error);
+    //console.error("Catch: Errore durante l'esecuzione di RadarMode(): ", error);
   }
 });
 
@@ -32,7 +32,7 @@ function getDistance(rect1, rect2) {
 function glideToPosition(element, destinationLeft, destinationTop, duration) {
   return new Promise((resolve) => {
     element.style.transition = `left ${duration}s, top ${duration}s`; // Imposta la transizione CSS per l'animazione
-    
+
     element.style.left = `${destinationLeft}px`; // Imposta la nuova posizione orizzontale
     element.style.top = `${destinationTop}px`; // Imposta la nuova posizione verticale
 
@@ -48,7 +48,7 @@ async function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwU
   const bot1 = document.getElementById('bot1');
   const mover = new MoverTS(bot1);
 
-  const radius = 200; // Raggio di ricerca in pixel
+  const radius = 100; // Raggio di ricerca in pixel
   const botRect = bot1.getBoundingClientRect();
 
   const player = document.getElementById('player');
@@ -72,10 +72,10 @@ async function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwU
   }
 
   if (foundElement) { // Verifica l'esistenza dell'elemento cercato
-    console.info("RadarMode(): Elemento più vicino trovato nel raggio: "+radius+"): " + foundElement.id);
+    console.info("RadarMode(): Elemento più vicino trovato nel raggio: " + radius + "): " + foundElement.id);
     return foundElement.id;
   } else {
-    console.warn("RadarMode(): Nessun elemento nel raggio di: "+radius+"px");
+    console.warn("RadarMode(): Nessun elemento nel raggio di: " + radius + "px");
 
     // Recupera le dimensioni dell'elemento Terreno
     const terrenoElement = document.getElementById('terr');
@@ -88,12 +88,12 @@ async function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwU
       try {
         await glideToPosition(bot1, destinationLeft, destinationTop, 3); // Va in una posizione a caso (nel Terreno)
       } catch (error) {
-        console.error("Errore durante l'animazione:", error);
+        //console.error("Errore durante l'animazione:", error);
       }
     } else {
       console.error("RadarMode(): Nessun elemento con attributo 'name' uguale a 'Terreno' trovato.");
     }
-    
+
     return 'false';
   }
 }
