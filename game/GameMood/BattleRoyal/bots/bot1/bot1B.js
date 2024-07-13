@@ -4,7 +4,6 @@
   const mover = new MoverTS(bot1);
 })*/
 
-
 //Calcola la distanza tra i 2 elementi in argomento
 function getDistance(rect1, rect2) {
   const dx = rect1.x - rect2.x;
@@ -27,11 +26,11 @@ function glideToPosition(element, destinationLeft, destinationTop, duration) {
   });
 }
 
-async function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwUP
+function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwUP
   const bot1 = document.getElementById('bot1');
   const mover = new MoverTS(bot1);
 
-  const radius = 100; // Raggio di ricerca in pixel
+  const radius = 200; // Raggio di ricerca in pixel
   const botRect = bot1.getBoundingClientRect();
 
   const player = document.getElementById('player');
@@ -70,10 +69,9 @@ async function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwU
       const destinationTop = Math.floor(Math.random() * (terrenoRect.height - 0)) + terrenoRect.top;
 
       try {
-        await mover.glideAt(destinationLeft, destinationTop, 3); // Va in una posizione a caso (nel Terreno)
-        return;
+        mover.glideAt(destinationLeft, destinationTop, 3); // Va in una posizione a caso (nel Terreno)
       } catch (error) {
-        return;
+        //
       }
       
     } else {
@@ -81,7 +79,7 @@ async function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwU
     }
     
     RadarMode();
-    return false;
+    return 'false';
   }
 }
 
@@ -89,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const bot1 = document.getElementById('bot1');
   const mover = new MoverTS(bot1);
 
-  RadarMode();
+  //RadarMode();
   switch (RadarMode()) {
     case 'player' | 'player2':
       mover.glideAtIdElement(RadarMode(), 3)
@@ -98,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mover.glideAtIdElement('PwUP', 3)
     break;
     default:
-      console.warn("MainFlow: Nessun elemento definito rilevato da RadarMode()")
+      console.warn("MainFlow: Nessun elemento definito rilevato da RadarMode(), return: "+RadarMode())
     break;
   }
 })
