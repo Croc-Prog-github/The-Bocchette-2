@@ -32,16 +32,7 @@ class MoverTS {
       const x = mouseEvent.clientX;
       const y = mouseEvent.clientY;
       this.achieve.setXY(x, y);
-    },
-
-    /*mouse: (): void => {
-      const moveToMouse = (event: MouseEvent): void => {
-        const x = event.clientX;
-        const y = event.clientY;
-        this.achieve.setXY(x, y);
-      };
-      document.addEventListener('mousemove', moveToMouse, { once: true });
-    }*/
+    }
   }
 
   getRandomX(): number {

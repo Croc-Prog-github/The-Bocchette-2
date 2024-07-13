@@ -12,7 +12,22 @@ function getDistance(rect1, rect2) {
   return Math.sqrt(dx * dx + dy * dy);
 }
 
-function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwUP
+function glideToPosition(element, destinationLeft, destinationTop, duration) {
+  return new Promise((resolve) => {
+    element.style.transition = `left ${duration}s, top ${duration}s`; // Imposta la transizione CSS per l'animazione
+    
+    element.style.left = `${destinationLeft}px`; // Imposta la nuova posizione orizzontale
+    element.style.top = `${destinationTop}px`; // Imposta la nuova posizione verticale
+
+    // Attende che l'animazione sia completata
+    setTimeout(() => {
+      element.style.transition = ''; // Rimuove la transizione dopo che è completata
+      resolve(); // Risolve la promessa dopo la fine dell'animazione
+    }, duration * 1000);
+  });
+}
+
+async function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwUP
   const bot1 = document.getElementById('bot1');
   const mover = new MoverTS(bot1);
 
@@ -24,17 +39,14 @@ function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwUP
 
   let foundElement = null;
 
-  // Verifica se l'elemento player è entro il raggio
+  // Verifica se l'elemento 'player' è entro il raggio
   if (player) {
     const playerRect = player.getBoundingClientRect();
     const distanceToPlayer = getDistance(botRect, playerRect);
     if (distanceToPlayer <= radius) {
       foundElement = player;
     }
-  }
-
-  // Verifica se l'elemento PwUP è entro il raggio
-  if (PwUP && !foundElement) { // Se non ha già trovato il player
+  } else if (PwUP/* && !foundElement*/) { // Se non ha già trovato il player, Verifica se l'elemento PwUP è entro il raggio
     const pwupRect = PwUP.getBoundingClientRect();
     const distanceToPwUP = getDistance(botRect, pwupRect);
     if (distanceToPwUP <= radius) {
@@ -42,21 +54,32 @@ function RadarMode() { //Cerca in un raggio di 100px gli id: player || PwUP
     }
   }
 
-  if (foundElement) {
-    console.info("Elemento più vicino trovato nel raggio: "+radius+"): " + foundElement.id);
+
+  if (foundElement) { // Verifica l'esistenza dell'elemento cercato
+    console.info("RadarMode(): Elemento più vicino trovato nel raggio: "+radius+"): " + foundElement.id);
     return (foundElement.id);
   } else {
     console.warn("RadarMode(): Nessun elemento nel raggio di: "+radius+"px");
 
     // Recupera le dimensioni dell'elemento Terreno
-    const terrenoElement = document.querySelector('[name="Terreno"]');
-    const terrenoRect = terrenoElement.getBoundingClientRect();
-    // Genera una posizione casuale all'interno dell'elemento Terreno
-    const destinationLeft = Math.floor(Math.random() * (terrenoRect.width - 0)) + terrenoRect.left;
-    const destinationTop = Math.floor(Math.random() * (terrenoRect.height - 0)) + terrenoRect.top;
+    const terrenoElement = document.getElementById('terr');
+    if (terrenoElement) {
+      const terrenoRect = terrenoElement.getBoundingClientRect();
+      // Genera una posizione casuale all'interno dell'elemento Terreno
+      const destinationLeft = Math.floor(Math.random() * (terrenoRect.width - 0)) + terrenoRect.left;
+      const destinationTop = Math.floor(Math.random() * (terrenoRect.height - 0)) + terrenoRect.top;
 
-    mover.glideAt(destinationLeft, destinationTop, 3); // Va in una posizione a caso (nel Terreno)
-        
+      try {
+        await glideToPosition(bot1, destinationLeft, destinationTop, 3); // Va in una posizione a caso (nel Terreno)
+        return;
+      } catch (error) {
+        return;
+      }
+      
+    } else {
+      console.error("RadarMode(): Nessun elemento con attributo 'name' uguale a 'Terreno' trovato.")
+    }
+    
     RadarMode();
     return false;
   }
