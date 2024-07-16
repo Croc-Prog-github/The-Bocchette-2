@@ -1,3 +1,5 @@
+//UNWORKED VERTION
+
 /*document.addEventListener('DOMContentLoaded', () => {
   const bot1 = document.getElementById('bot1');
   //import { mover } from '../Movement-library.ts';

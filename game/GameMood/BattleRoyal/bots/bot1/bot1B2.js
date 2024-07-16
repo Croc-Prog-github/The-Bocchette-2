@@ -1,3 +1,5 @@
+//STABLE MAIN VERSION
+
 /*const vitaBot1Element = document.getElementById('vita_bot1');
 let vitaBot1 = parseInt(vitaBot1Element.value);*/
 
