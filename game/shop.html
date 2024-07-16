@@ -224,39 +224,39 @@
     <div name="Risorse">
       <div style="display: flex; flex-direction: row; align-items: center; margin-top: 20px; font-size: 2em;">Risorse</div>
       <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; overflow-x: auto; margin-top: 20px;">
-        <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
-          100 Gemme
-          <hr>
-          <button class="buy_it">0,50 €</button>
+
+        <div style="display: flex;border: solid 1.5px darkblue;margin-right: 7px;justify-content: center;flex-direction: column;">
+          <div onclick="BuyThis('3', 'gemme', '10', 'soldi')" style="width: inherit;height: auto;background: white;margin: 7px; margin-bottom: 3.5px; cursor: default;min-width: fit-content;">
+            3 Gemme<br>
+            <hr>
+            <button class="buy_it"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 10</button>
+          </div>
+          
+          <div style="width: fit-content;height: auto;background: white;margin: 7px; margin-top: 3.5px; cursor: default;min-width: fit-content;">
+            100 Gemme
+            <hr>
+            <button class="buy_it">0,50 €</button>
+          </div>
         </div>
+        
 
-        <!--<div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
-          10 Banconote<br>
-          <hr>
-          <button class="buy_it"><img src="/resources/SVG/Gemme_icon-SVG.svg"> 3</button>
-        </div>-->
+        <div style="display: flex; flex-direction: column;">
+          <div style="width: auto;height: auto;background: white;cursor: default;min-width: fit-content;margin-right: 7px;margin-bottom: 7px;">
+            1 cassa Comune<br>
+            <hr>
+            <button class="buy_it"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 20</button>
+          </div>
 
-        <div onclick="BuyThis('3', 'gemme', '10', 'soldi')" style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
-          3 Gemme<br>
-          <hr>
-          <button class="buy_it"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 10</button>
+          <div style="width: auto;height: auto;background: white;margin-right: 7px;cursor: default;min-width: fit-content;">
+            1 cassa Rara<br>
+            <hr>
+            <button class="buy_it"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 50</button>
+          </div>
         </div>
-
-        <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
-          1 cassa Comune<br>
-          <hr>
-          <button class="buy_it"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 20</button>
-        </div>
-
-        <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
-          1 cassa Rara<br>
-          <hr>
-          <button class="buy_it"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 50</button>
-        </div>
-
-        <div style="width: 210px; height: auto; background: white; margin-right: 7px; cursor: default; min-width: fit-content;">
+        
+        <div style="width: 120px;height: 126px;background: white;margin-right: 7px;cursor: default;min-width: fit-content;display: flex;flex-direction: column;justify-content: space-between;align-items: center;">
           1 Livello Exp<br>
-          <hr>
+          <!--<hr style="width: -webkit-fill-available;">-->
           <button class="buy_it"><img src="/resources/SVG/Gemme_icon-SVG.svg"> 5</button>
         </div>
       </div>
