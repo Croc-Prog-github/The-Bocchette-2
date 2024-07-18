@@ -47,5 +47,15 @@
   "directories": {
     "doc": "docs"
   },
-  "keywords": ["The Bocchette 2", "the bocchette 2", "TB2", "tb2", "gioco online multiplayer", "gioco online multiplayer node.js", "gioco online", "giochi online battaglia reale", "FPS online"]
+  "keywords": [
+    "The Bocchette 2",
+    "the bocchette 2",
+    "TB2",
+    "tb2",
+    "gioco online multiplayer",
+    "gioco online multiplayer node.js",
+    "gioco online",
+    "giochi online battaglia reale",
+    "FPS online"
+  ]
 }
