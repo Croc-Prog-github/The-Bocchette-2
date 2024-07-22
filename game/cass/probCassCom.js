@@ -9,7 +9,7 @@ function EstrazTecnica() {
   probManager.addObject('tecnicLockCom', 1, 'Stalagmiti', 25)
   probManager.addObject('tecnicLockCom', 1, 'CeneriBollenti', 25)
 
-  
+  return probManager.getRandomObject('tecnicLockCom', 1)
 }
 
 
@@ -49,7 +49,7 @@ if (SkipN2 == 'Punti ottimizzazione') {
 } else if (SkipN2 == 'Tecnica') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
 
-
+  EstrazTecnica()
   document.getElementById('TextSkip2').textContent = 'Tecnica comune: X';
   document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Tecnica.png';
   //Dà la tecnica
