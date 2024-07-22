@@ -10,19 +10,17 @@ let PuntOttimizz = sessionStorage.getItem("PuntOttimizz") //Punti ottimizzazione
 let NCassCom = sessionStorage.getItem("NCassCom"); //n. casse comuni
 let NCassRar = sessionStorage.getItem("NCassRar"); //n. casse comuni
 
-
 let tecnicUnlock = sessionStorage.getItem("tecnicUnlock");//Tecniche Sbloccate (Acquisite)
 let tecnicLockCom = sessionStorage.getItem("tecnicLockCom"); //TecnicheComuni Bloccate (Da trovare o aquistare)
 let evoluzUnlock = sessionStorage.getItem("evoluzUnlock"); //Evoluzioni Sbloccate
 let evoluzLock = sessionStorage.getItem("evoluzLock"); //Evoluzioni Bloccate
 
 function setArrayTeE() { //Settig iniziale Tecniche e Evoluzioni
-  //
+  tecnicUnlock = [/*'dispersione', 'taglio netto', 'super taglio netto'*/];
+  tecnicLockCom = [/*'rasengan', 'fulmine'*/];
+  evoluzUnlock = [];
+  evoluzLock = [];
 }
-tecnicUnlock = ['dispersione', 'taglio netto', 'super taglio netto'];
-tecnicLockCom = ['rasengan', 'fulmine'];
-evoluzUnlock = [];
-evoluzLock = [];
 
 let obbUnlockPG = sessionStorage.getItem("obbUnlockPG"); //obb Unlock Pass Gratis
 let obbUnlockPP = sessionStorage.getItem("obbUnlockPP"); //obb Unlock Pass Premium
