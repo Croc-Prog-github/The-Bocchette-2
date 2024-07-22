@@ -1,6 +1,18 @@
 //import probManager from "https://raw.githubusercontent.com/Croc-Prog-github/Probability-Manager.js/main/core/Probability-Manager.js";
 const probManager = new ProbabilityManager();
 
+function EstrazTecnica() {
+  tecnicLockCom = probManager.addList('tecnicLockCom', 1);
+
+  probManager.addObject('tecnicLockCom', 1, 'Fulmine', 25)
+  probManager.addObject('tecnicLockCom', 1, 'AcquaSchizzo', 25)
+  probManager.addObject('tecnicLockCom', 1, 'Stalagmiti', 25)
+  probManager.addObject('tecnicLockCom', 1, 'CeneriBollenti', 25)
+
+  
+}
+
+
 // Creazione di istanze e liste
 probManager.addList('CassComun', 1); //Banconote
 probManager.addList('CassComun', 2); // Evoluz, Tecnic, Punt_Ottim, Null
@@ -36,6 +48,7 @@ if (SkipN2 == 'Punti ottimizzazione') {
   PuntOttimizz = parseInt(PuntOttimizz) + parseInt(NPuntOttim); //Dà i punti ottimizz.
 } else if (SkipN2 == 'Tecnica') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
+
 
   document.getElementById('TextSkip2').textContent = 'Tecnica comune: X';
   document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Tecnica.png';
