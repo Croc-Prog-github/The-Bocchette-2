@@ -14,7 +14,6 @@ function EstrazTecnica() {
   return Return;
 }
 
-
 // Creazione di istanze e liste
 probManager.addList('CassComun', 1); //Banconote
 probManager.addList('CassComun', 2); // Evoluz, Tecnic, Punt_Ottim, Null

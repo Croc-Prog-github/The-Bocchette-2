@@ -19,6 +19,9 @@
 # Colyseus
 /game/multiP/colyseus.js
 
+# Probability-Manager.js
+/game/cass/new/Probability-Manager.js
+
 # npm start
 /node_modules/.vite/deps/_metadata.json
 /node_modules/.vite/deps/aws-sdk.js.map
