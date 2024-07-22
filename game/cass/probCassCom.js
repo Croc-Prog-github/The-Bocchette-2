@@ -2,7 +2,7 @@
 const probManager = new ProbabilityManager();
 
 function EstrazTecnica() {
-  tecnicLockCom = probManager.addList('tecnicLockCom', 1);
+  probManager.addList('tecnicLockCom', 1);
 
   probManager.addObject('tecnicLockCom', 1, 'Fulmine', 25)
   probManager.addObject('tecnicLockCom', 1, 'AcquaSchizzo', 25)
