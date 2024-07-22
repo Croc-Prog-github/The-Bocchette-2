@@ -8,8 +8,10 @@ function EstrazTecnica() {
   probManager.addObject('tecnicLockCom', 1, 'AcquaSchizzo', 25)
   probManager.addObject('tecnicLockCom', 1, 'Stalagmiti', 25)
   probManager.addObject('tecnicLockCom', 1, 'CeneriBollenti', 25)
-
-  return probManager.getRandomObject('tecnicLockCom', 1)
+  
+  let r = probManager.getRandomObject('tecnicLockCom', 1);
+  console.log(r)
+  return r;
 }
 
 
@@ -47,11 +49,12 @@ if (SkipN2 == 'Punti ottimizzazione') {
   document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Punti-ottimiz.png';
   PuntOttimizz = parseInt(PuntOttimizz) + parseInt(NPuntOttim); //Dà i punti ottimizz.
 } else if (SkipN2 == 'Tecnica') {
-  console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
+  let tecScielt = EstrazTecnica();
+  console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune: '+ tecScielt);
 
-  EstrazTecnica()
-  document.getElementById('TextSkip2').textContent = 'Tecnica comune: X';
+  document.getElementById('TextSkip2').textContent = 'Tecnica comune: '+ tecScielt;
   document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Tecnica.png';
+  probManager.clearInstance('tecnicLockCom')
   //Dà la tecnica
 } else if (SkipN2 == 'Evoluzione') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
