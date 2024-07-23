@@ -10,6 +10,9 @@ function EstrazTecnica() {
   probManager.addObject('tecnicLockCom', 1, 'CeneriBollenti', 25)
   
   let Return = probManager.getRandomObject('tecnicLockCom', 1); //
+
+  //Cancella Return da array tecnicLockCom in SesStorage; Aggiungi Return in array SesStorage tecnicUnlock
+
   //console.log(Return)
   return Return;
 }
