@@ -91,4 +91,16 @@ class ProbabilityManager {
   clearAll() {
     this.instances = {};
   }
+
+  toArray() {
+    const result = [];
+    for (const [instanceName, lists] of Object.entries(this.instances)) {
+      for (const [listName, list] of Object.entries(lists)) {
+        for (const { object, probability } of list.objects) {
+          result.push([instanceName, listName, object, probability]);
+        }
+      }
+    }
+    return result;
+  }
 }
