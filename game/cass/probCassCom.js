@@ -9,7 +9,7 @@ function EstrazTecnica() {
   probManager.addObject('tecnicLockCom', 1, 'Stalagmiti', 25)
   probManager.addObject('tecnicLockCom', 1, 'CeneriBollenti', 25)
   
-  let Return = probManager.getRandomObject('tecnicLockCom', 1);
+  let Return = probManager.getRandomObject('tecnicLockCom', 1); //
   //console.log(Return)
   return Return;
 }

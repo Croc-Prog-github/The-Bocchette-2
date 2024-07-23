@@ -103,4 +103,18 @@ class ProbabilityManager {
     }
     return result;
   }
+
+  toArrayForInstance(instanceName) {
+    const result = [];
+    const lists = this.instances[instanceName];
+    if (!lists) {
+      throw new Error(`Instance does not exist. Instance: ${instanceName}`);
+    }
+    for (const [listName, list] of Object.entries(lists)) {
+      for (const { object, probability } of list.objects) {
+        result.push([instanceName, listName, object, probability]);
+      }
+    }
+    return result;
+  }
 }
