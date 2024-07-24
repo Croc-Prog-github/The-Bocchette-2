@@ -8,9 +8,9 @@ function EstrazTecnica() {
   let tecnicLockComArr = JSON.parse(sessionStorage.getItem('tecnicLockCom')) || []; //Recup array da SS e verif se exist
   for (let i = 0; i < tecnicLockComArr.length; i++) {
     const element = tecnicLockComArr[i];
-    probManager.addObject('tecnicLockCom', 1, element, (tecnicLockComArr.length / 100));
+    probManager.addObject('tecnicLockCom', 1, element, (tecnicLockComArr.length / tecnicLockComArr.length * 100));
   }
-  if (tecnicLockComArr != null || tecnicLockComArr != undefined) {
+  if (tecnicLockComArr == null || tecnicLockComArr == undefined) {
     console.error('Impossibile leggere array: tecnicLockComArr')
   }
   /*probManager.addObject('tecnicLockCom', 1, 'Fulmine', 25)
