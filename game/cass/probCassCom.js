@@ -4,14 +4,30 @@ const probManager = new ProbabilityManager();
 function EstrazTecnica() {
   probManager.addList('tecnicLockCom', 1);
 
+  //Script che legge array tecnicLockCom e con for usa probManager.addObject per impostare tutti gli elementi
+  let tecnicLockCom = JSON.parse(sessionStorage.getItem('tecnicLockCom')) || []; //Recup array da SS e verif se exist
+  for (let i = 0; i < tecnicLockCom.length; i++) {
+    const element = tecnicLockCom[i];
+    probManager.addObject('tecnicLockCom', 1, element, 'divide');
+  }
+  /*
   probManager.addObject('tecnicLockCom', 1, 'Fulmine', 25)
   probManager.addObject('tecnicLockCom', 1, 'AcquaSchizzo', 25)
   probManager.addObject('tecnicLockCom', 1, 'Stalagmiti', 25)
   probManager.addObject('tecnicLockCom', 1, 'CeneriBollenti', 25)
+  */
   
   let Return = probManager.getRandomObject('tecnicLockCom', 1); //
 
-  //Cancella Return da array tecnicLockCom in SesStorage; Aggiungi Return in array SesStorage tecnicUnlock
+  //Cancella Return da array tecnicLockCom in SesStorage; 
+    //let tecnicLockCom = JSON.parse(sessionStorage.getItem('tecnicLockCom')); // Recupera l'array dal sessionStorage
+    const index = tecnicLockCom.indexOf(Return); // Trova l'indice dell'elemento (dato da Return)
+    tecnicLockCom.splice(index, 1); // Rimuove l'elemento dall'array
+  //END
+  //Aggiungi Return in array SesStorage tecnicUnlock
+    let tecnicUnlock = JSON.parse(sessionStorage.getItem('tecnicUnlock'))
+    sessionStorage.setItem(tecnicUnlock, Return)
+  //END
 
   //console.log(Return)
   return Return;
