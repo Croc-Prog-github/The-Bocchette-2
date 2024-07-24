@@ -18,8 +18,8 @@ let evoluzLock = sessionStorage.getItem("evoluzLock"); //Evoluzioni Bloccate
 function setArrayTeE() { //Settig iniziale Tecniche e Evoluzioni
   //
 }
-tecnicUnlock = ['Dispersione', 'TaglioNetto', 'SuperTaglioNetto'];
-tecnicLockCom = ['Fulmine', 'AcquaSchizzo', 'Stalagmiti', 'CeneriBollenti'];
+tecnicUnlock = ['Dispersione', 'Taglio Netto', 'Super Taglio Netto'];
+tecnicLockCom = ['Fulmine', 'Acqua Schizzo', 'Stalagmiti', 'Ceneri Bollenti'];
 evoluzUnlock = [];
 evoluzLock = [];
 
