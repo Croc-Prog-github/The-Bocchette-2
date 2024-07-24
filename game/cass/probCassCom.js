@@ -5,18 +5,17 @@ function EstrazTecnica() {
   probManager.addList('tecnicLockCom', 1);
 
   //Script che legge array tecnicLockCom e con for usa probManager.addObject per impostare tutti gli elementi
-  let tecnicLockComArr = JSON.parse(sessionStorage.getItem('tecnicLockCom')) || []; //Recup array da SS e verif se exist
+  let tecnicLockComArr = JSON.parse(sessionStorage.getItem('tecnicLockCom')) || []; // Recupera l'array dal sessionStorage e verifica se esiste
   for (let i = 0; i < tecnicLockComArr.length; i++) {
     const element = tecnicLockComArr[i];
-    probManager.addObject('tecnicLockCom', 1, element, (tecnicLockComArr.length / tecnicLockComArr.length * 100));
-  }
-  if (tecnicLockComArr == null || tecnicLockComArr == undefined) {
-    console.error('Impossibile leggere array: tecnicLockComArr')
+    // Usa la percentuale calcolata per ogni elemento
+    probManager.addObject('tecnicLockCom', 1, element, (100 / tecnicLockComArr.length));
   }
   /*probManager.addObject('tecnicLockCom', 1, 'Fulmine', 25)
   probManager.addObject('tecnicLockCom', 1, 'AcquaSchizzo', 25)
   probManager.addObject('tecnicLockCom', 1, 'Stalagmiti', 25)
   probManager.addObject('tecnicLockCom', 1, 'CeneriBollenti', 25)*/
+
   console.log(probManager.toArrayForInstance('tecnicLockCom'))
   
   let Return = probManager.getRandomObject('tecnicLockCom', 1);
