@@ -5,7 +5,7 @@ function EstrazTecnica() {
   probManager.addList('tecnicLockCom', 1);
 
   //Script che legge array tecnicLockCom e con for usa probManager.addObject per impostare tutti gli elementi
-  let tecnicLockComArr = JSON.parse(sessionStorage.getItem('tecnicLockCom')) || []; // Recupera l'array dal sessionStorage e verifica se esiste
+  let tecnicLockComArr = JSON.parse(sessionStorage.getItem('tecnicLockCom'))/* || []*/; // Recupera array da sessionStorage e verif se exist
   for (let i = 0; i < tecnicLockComArr.length; i++) {
     const element = tecnicLockComArr[i]; //Usa la percentuale calcolata per ogni elemento
     probManager.addObject('tecnicLockCom', 1, element, (100 / tecnicLockComArr.length));
@@ -17,17 +17,17 @@ function EstrazTecnica() {
   
   let Return = probManager.getRandomObject('tecnicLockCom', 1);
 
-  //Cancella Return da array tecnicLockCom in SesStorage; 
-    //let tecnicLockCom = JSON.parse(sessionStorage.getItem('tecnicLockCom')); // Recupera l'array dal sessionStorage
+  //Cancella Return da array tecnicLockCom in SesStorage;
     const index = tecnicLockComArr.indexOf(Return); // Trova l'indice dell'elemento (dato da Return)
     tecnicLockComArr.splice(index, 1); // Rimuove l'elemento dall'array
   //END
   //Aggiungi Return in array SesStorage tecnicUnlock
-    let tecnicUnlock = JSON.parse(sessionStorage.getItem('tecnicUnlock'))
-    sessionStorage.setItem(tecnicUnlock, Return)
+    //let tecnicUnlock = JSON.parse(sessionStorage.getItem('tecnicUnlock'))
+    sessionStorage.setItem('tecnicUnlock', (Return + sessionStorage.getItem('tecnicUnlock')))
   //END
   
   console.log(probManager.toArrayForInstance('tecnicLockCom'))
+  //console.log(probManager.toArrayForInstance('tecnicUnlock'))
 
   //console.log(Return)
   return Return;

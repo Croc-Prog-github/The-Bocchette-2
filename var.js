@@ -16,13 +16,11 @@ let evoluzUnlock = sessionStorage.getItem("evoluzUnlock"); //Evoluzioni Sbloccat
 let evoluzLock = sessionStorage.getItem("evoluzLock"); //Evoluzioni Bloccate
 
 function setArrayTeE() { //Settig iniziale Tecniche e Evoluzioni
-  //
+  tecnicUnlock = [/*'Dispersione', 'Taglio Netto', 'Super Taglio Netto'*/];
+  tecnicLockCom = [/*'Fulmine', 'Acqua Schizzo', 'Stalagmiti', 'Ceneri Bollenti'*/];
+  evoluzUnlock = [];
+  evoluzLock = [];
 }
-tecnicUnlock = ['Dispersione', 'Taglio Netto', 'Super Taglio Netto'];
-tecnicLockCom = ['Fulmine', 'Acqua Schizzo', 'Stalagmiti', 'Ceneri Bollenti'];
-evoluzUnlock = [];
-evoluzLock = [];
-
 
 let obbUnlockPG = sessionStorage.getItem("obbUnlockPG"); //obb Unlock Pass Gratis
 let obbUnlockPP = sessionStorage.getItem("obbUnlockPP"); //obb Unlock Pass Premium
@@ -68,7 +66,7 @@ setInterval(function() {
       let value = sessionStorage.getItem(key);
       if (isNaN(parseInt(value))) {
         for (let key in sessionStorage) {
-          sessionStorage.setItem(key, "0");
+          sessionStorage.setItem(key, 0);
           console.error("La chiave: " + key + " aveva valore diverso da una variabile di tipo int.");
           console.warn("I valori di tutte le chiavi sono impostati a 0.");
         }
