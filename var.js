@@ -90,7 +90,7 @@ setInterval(function() {
   }
 }, 300);
 
-setInterval(SS, 1000);
+//setInterval(SS, 1000);
 
 if (NCassCom < 0) {NCassCom = 0};
 if (NCassRar < 0) {NCassRar = 0};

@@ -4,4 +4,5 @@ Elenco di bug, correzioni e rework non segnalati in memo.txt o negli Issues; da 
 - Risolto glitch grafico nell'assegnazione dell'obbiettivo del pass
 - Rework grafico e aggiunta di progress bar nel pass (non funzionante se aumenta l'obbiettivo)
 - Corretto bug del riscatto di ricompense in obbiettivi minori a obbiettivo attuale
+- Corretto il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom (PRESENTE IN MEMO.TXT)
 - 

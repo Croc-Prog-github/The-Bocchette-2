@@ -16,13 +16,14 @@ PRIORITARI
 4. Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom
 5. Continuare il nuovo script di Gestione dati (cripting avanzato)
 6. Continuare BuyThis() in shop.html (30%)
+7. Correggere quando tecnicLockCom.length è 0 quindi, quando trova una Tecnica, mostra alt (da <img>) e Error (da .textContent)
 
 DA INIZIARE
 1. Iniziare il Chats-API (sopeso a lungo termine)
 2. Creare la fisica dei bordi
 3. Iniziare il salvataggio (SessionStorage) mappe personali Creativa
 4. Continuare i muri in Sopravivenza Singolo
-5. Iniziare sviluppare i sotto-rami per rarità selezionate delle Tecniche o Evoluzioni della stessa rarità (5%) -> Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom
+5. Iniziare sviluppare i sotto-rami per rarità selezionate delle Tecniche o Evoluzioni della stessa rarità (Man mano che il aumenta tecnicUnlock diminuisce probabilità di trovare Tecniche)
 
 BLOCCATI
 1. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium
@@ -43,3 +44,4 @@ COMPLETATI
 13. Correggere bug non-assegnazione PuntiOttim in SessionStorage FATTO
 14. Creare contatore Punti Ottimizzazione in home FATTO
 15. Aggiornare CONTRIBUTING.md FATTO
+16. Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom FATTO
