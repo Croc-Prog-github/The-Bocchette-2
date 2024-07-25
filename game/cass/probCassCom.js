@@ -2,11 +2,8 @@
 const probManager = new ProbabilityManager();
 
 function EstrazTecnica() {
-  // Inizializza la lista nel gestore delle probabilità
   probManager.addList('tecnicLockCom', 1);
-
-  // Recupera l'array dal sessionStorage e verifica se esiste
-  let tecnicLockComArr = JSON.parse(sessionStorage.getItem('tecnicLockCom')) || [];
+  let tecnicLockComArr = JSON.parse(sessionStorage.getItem('tecnicLockCom')) || []; // Recupera l'array dal sessionStorage e verifica se esiste
 
   // Aggiungi gli elementi all'oggetto del gestore delle probabilità
   for (let i = 0; i < tecnicLockComArr.length; i++) {
@@ -14,15 +11,14 @@ function EstrazTecnica() {
     probManager.addObject('tecnicLockCom', 1, element, 100 / tecnicLockComArr.length);
   }
 
-  // Seleziona un elemento casuale e lo rimuove dall'array
+  // Seleziona un elemento (secondo probManager) e lo rimuove dall'array
   let Return = probManager.getRandomObject('tecnicLockCom', 1);
   const index = tecnicLockComArr.indexOf(Return);
   if (index !== -1) {
     tecnicLockComArr.splice(index, 1);
   }
 
-  // Aggiorna l'array rimosso nel sessionStorage
-  sessionStorage.setItem('tecnicLockCom', JSON.stringify(tecnicLockComArr));
+  sessionStorage.setItem('tecnicLockCom', JSON.stringify(tecnicLockComArr)); // Aggiorna l'array rimosso nel sessionStorage
 
   // Aggiungi l'elemento a tecnicUnlock
   let tecnicUnlockArr = JSON.parse(sessionStorage.getItem('tecnicUnlock')) || [];
