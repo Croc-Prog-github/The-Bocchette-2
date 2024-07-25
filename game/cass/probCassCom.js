@@ -2,34 +2,34 @@
 const probManager = new ProbabilityManager();
 
 function EstrazTecnica() {
+  // Inizializza la lista nel gestore delle probabilità
   probManager.addList('tecnicLockCom', 1);
 
-  //Script che legge array tecnicLockCom e con for usa probManager.addObject per impostare tutti gli elementi
-  let tecnicLockComArr = JSON.parse(sessionStorage.getItem('tecnicLockCom'))/* || []*/; // Recupera array da sessionStorage e verif se exist
+  // Recupera l'array dal sessionStorage e verifica se esiste
+  let tecnicLockComArr = JSON.parse(sessionStorage.getItem('tecnicLockCom')) || [];
+
+  // Aggiungi gli elementi all'oggetto del gestore delle probabilità
   for (let i = 0; i < tecnicLockComArr.length; i++) {
-    const element = tecnicLockComArr[i]; //Usa la percentuale calcolata per ogni elemento
-    probManager.addObject('tecnicLockCom', 1, element, (100 / tecnicLockComArr.length));
+    const element = tecnicLockComArr[i];
+    probManager.addObject('tecnicLockCom', 1, element, 100 / tecnicLockComArr.length);
   }
-  /*probManager.addObject('tecnicLockCom', 1, 'Fulmine', 25)
-  probManager.addObject('tecnicLockCom', 1, 'AcquaSchizzo', 25)
-  probManager.addObject('tecnicLockCom', 1, 'Stalagmiti', 25)
-  probManager.addObject('tecnicLockCom', 1, 'CeneriBollenti', 25)*/
-  
+
+  // Seleziona un elemento casuale e lo rimuove dall'array
   let Return = probManager.getRandomObject('tecnicLockCom', 1);
+  const index = tecnicLockComArr.indexOf(Return);
+  if (index !== -1) {
+    tecnicLockComArr.splice(index, 1);
+  }
 
-  //Cancella Return da array tecnicLockCom in SesStorage;
-    const index = tecnicLockComArr.indexOf(Return); // Trova l'indice dell'elemento (dato da Return)
-    tecnicLockComArr.splice(index, 1); // Rimuove l'elemento dall'array
-  //END
-  //Aggiungi Return in array SesStorage tecnicUnlock
-    //let tecnicUnlock = JSON.parse(sessionStorage.getItem('tecnicUnlock'))
-    sessionStorage.setItem('tecnicUnlock', (Return + sessionStorage.getItem('tecnicUnlock')))
-  //END
-  
-  console.log(probManager.toArrayForInstance('tecnicLockCom'))
-  //console.log(probManager.toArrayForInstance('tecnicUnlock'))
+  // Aggiorna l'array rimosso nel sessionStorage
+  sessionStorage.setItem('tecnicLockCom', JSON.stringify(tecnicLockComArr));
 
-  //console.log(Return)
+  // Aggiungi l'elemento a tecnicUnlock
+  let tecnicUnlockArr = JSON.parse(sessionStorage.getItem('tecnicUnlock')) || [];
+  tecnicUnlockArr.push(Return);
+  sessionStorage.setItem('tecnicUnlock', JSON.stringify(tecnicUnlockArr));
+
+  console.log(probManager.toArrayForInstance('tecnicLockCom'));
   return Return;
 }
 

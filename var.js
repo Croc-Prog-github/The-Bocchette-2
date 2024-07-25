@@ -10,8 +10,8 @@ let PuntOttimizz = sessionStorage.getItem("PuntOttimizz") //Punti ottimizzazione
 let NCassCom = sessionStorage.getItem("NCassCom"); //n. casse comuni
 let NCassRar = sessionStorage.getItem("NCassRar"); //n. casse comuni
 
-let tecnicUnlock = sessionStorage.getItem("tecnicUnlock");//Tecniche Sbloccate (Acquisite)
-let tecnicLockCom = sessionStorage.getItem("tecnicLockCom"); //TecnicheComuni Bloccate (Da trovare o aquistare)
+let tecnicUnlock = JSON.parse(sessionStorage.getItem('tecnicUnlock')) || ['Dispersione', 'Taglio Netto', 'Super Taglio Netto']; //Tecniche Sbloccate (Acquisite)
+let tecnicLockCom = JSON.parse(sessionStorage.getItem('tecnicLockCom')) || ['Fulmine', 'Acqua Schizzo', 'Stalagmiti', 'Ceneri Bollenti']; //TecnicheComuni Bloccate (Da trovare o aquistare)
 let evoluzUnlock = sessionStorage.getItem("evoluzUnlock"); //Evoluzioni Sbloccate
 let evoluzLock = sessionStorage.getItem("evoluzLock"); //Evoluzioni Bloccate
 
@@ -77,6 +77,8 @@ setInterval(function() {
     }
   }
 }, 300);
+
+setInterval(SS, 300);
 
 if (NCassCom < 0) {NCassCom = 0};
 if (NCassRar < 0) {NCassRar = 0};
