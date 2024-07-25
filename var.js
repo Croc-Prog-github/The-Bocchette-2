@@ -16,10 +16,12 @@ let evoluzUnlock = sessionStorage.getItem("evoluzUnlock"); //Evoluzioni Sbloccat
 let evoluzLock = sessionStorage.getItem("evoluzLock"); //Evoluzioni Bloccate
 
 function setArrayTeE() { //Settig iniziale Tecniche e Evoluzioni
-  tecnicUnlock = [/*'Dispersione', 'Taglio Netto', 'Super Taglio Netto'*/];
-  tecnicLockCom = [/*'Fulmine', 'Acqua Schizzo', 'Stalagmiti', 'Ceneri Bollenti'*/];
+  tecnicUnlock = ['Dispersione', 'Taglio Netto', 'Super Taglio Netto'];
+  tecnicLockCom = ['Fulmine', 'Acqua Schizzo', 'Stalagmiti', 'Ceneri Bollenti'];
   evoluzUnlock = [];
   evoluzLock = [];
+  sessionStorage.setItem('tecnicUnlock', tecnicUnlock)
+  sessionStorage.setItem('tecnicLockCom', tecnicLockCom)
 }
 
 let obbUnlockPG = sessionStorage.getItem("obbUnlockPG"); //obb Unlock Pass Gratis
