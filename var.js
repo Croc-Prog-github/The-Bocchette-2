@@ -59,20 +59,22 @@ function SS() {
   //Aggiorna i singoli array di dati
   sessionStorage.setItem("tecnicUnlock", JSON.stringify(tecnicUnlock));
   sessionStorage.setItem("tecnicLockCom", JSON.stringify(tecnicLockCom));
-
   sessionStorage.setItem("evoluzUnlock", evoluzUnlock);
   sessionStorage.setItem("evoluzLock", evoluzLock);
 
-  if (Array.isArray(tecnicUnlock) && Array.isArray(tecnicLockCom)) {
+  /*if (Array.isArray(tecnicUnlock) && Array.isArray(tecnicLockCom)) {
     sessionStorage.setItem("tecnicUnlock", JSON.stringify(tecnicUnlock));
     sessionStorage.setItem("tecnicLockCom", JSON.stringify(tecnicLockCom));
   } else {
     console.error("I dati tecnicUnlock o tecnicLockCom non sono array. Verifica il codice.");
+  }*/
+  if (soldi == null) {
+    window.location.href = window.location.href;
   }
+  syncWithSessionStorage();
 }
 //Da ora il Session Storage non è più controllato dal filtro dei soli numeri interi
 setInterval(function() {
-  syncWithSessionStorage();
   SS();
   const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme', 'NCassCom', 'NCassRar', 'PuntOttimizz']; // Array delle chiavi da verificare (solo variabili Int)
   for (let key in sessionStorage) {
@@ -90,7 +92,7 @@ setInterval(function() {
   }
 }, 300);
 
-setInterval(SS, 1000);
+setInterval(SS, 500);
 
 if (NCassCom < 0) {NCassCom = 0};
 if (NCassRar < 0) {NCassRar = 0};
