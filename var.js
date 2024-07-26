@@ -71,10 +71,10 @@ function SS() {
   if (soldi == null) {
     window.location.href = window.location.href;
   }
-  syncWithSessionStorage();
 }
 //Da ora il Session Storage non è più controllato dal filtro dei soli numeri interi
 setInterval(function() {
+  syncWithSessionStorage()
   SS();
   const keysToCheck = ['obb', 'gett', 'soldi', 'passP', 'gemme', 'NCassCom', 'NCassRar', 'PuntOttimizz']; // Array delle chiavi da verificare (solo variabili Int)
   for (let key in sessionStorage) {

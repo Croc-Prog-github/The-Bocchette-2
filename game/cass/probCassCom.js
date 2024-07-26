@@ -2,11 +2,9 @@
 const probManager = new ProbabilityManager();
 
 function EstrazTecnica() {
-  // Inizializza la lista nel gestore delle probabilità
   probManager.addList('tecnicLockCom', 1);
 
-  // Recupera l'array dal sessionStorage e verifica se esiste
-  let tecnicLockComArr = JSON.parse(sessionStorage.getItem('tecnicLockCom')) || [];
+  let tecnicLockComArr = JSON.parse(sessionStorage.getItem('tecnicLockCom')) || [];// Recupera array da sessionStorage e verif if exist
 
   // Aggiungi gli elementi all'oggetto del gestore delle probabilità
   for (let i = 0; i < tecnicLockComArr.length; i++) {
@@ -21,8 +19,7 @@ function EstrazTecnica() {
     tecnicLockComArr.splice(index, 1);
   }
 
-  // Aggiorna l'array rimosso nel sessionStorage
-  sessionStorage.setItem('tecnicLockCom', JSON.stringify(tecnicLockComArr));
+  sessionStorage.setItem('tecnicLockCom', JSON.stringify(tecnicLockComArr));// Aggiorna l'array rimosso nel sessionStorage
 
   // Aggiungi l'elemento a tecnicUnlock
   let tecnicUnlockArr = JSON.parse(sessionStorage.getItem('tecnicUnlock')) || [];
@@ -66,14 +63,18 @@ if (SkipN2 == 'Punti ottimizzazione') {
   document.getElementById('TextSkip2').textContent = (NPuntOttim + ' ' + SkipN2);
   document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Punti-ottimiz.png';
   PuntOttimizz = parseInt(PuntOttimizz) + parseInt(NPuntOttim); //Dà i punti ottimizz.
-} else if (SkipN2 == 'Tecnica') {
-  let tecScielt = EstrazTecnica();
-  console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune: '+ tecScielt);
+} else if (SkipN2 == 'Tecnica') { // Tecnica
+  if (tecnicLockCom.length > 0) {
+    let tecScielt = EstrazTecnica();
+    console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune: '+ tecScielt);
 
-  document.getElementById('TextSkip2').textContent = 'Tecnica comune: '+ tecScielt;
-  document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Tecnica.png';
-  probManager.clearInstance('tecnicLockCom')
-  //Dà la tecnica
+    document.getElementById('TextSkip2').textContent = 'Tecnica comune: '+ tecScielt;
+    document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Tecnica.png';
+    probManager.clearInstance('tecnicLockCom')
+  } else {
+    probManager.clearInstance('tecnicLockCom')
+    window.location.href = '/game/home.html'
+  }
 } else if (SkipN2 == 'Evoluzione') {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
 
