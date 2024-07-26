@@ -64,7 +64,7 @@ if (SkipN2 == 'Punti ottimizzazione') {
   document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Punti-ottimiz.png';
   PuntOttimizz = parseInt(PuntOttimizz) + parseInt(NPuntOttim); //Dà i punti ottimizz.
 } else if (SkipN2 == 'Tecnica') { // Tecnica
-  if (tecnicLockCom.length > 0) {
+  if (Array.isArray(tecnicLockCom) && tecnicLockCom.length > 0) {
     let tecScielt = EstrazTecnica();
     console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune: '+ tecScielt);
 
@@ -72,15 +72,14 @@ if (SkipN2 == 'Punti ottimizzazione') {
     document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Tecnica.png';
     probManager.clearInstance('tecnicLockCom')
   } else {
-    probManager.clearInstance('tecnicLockCom')
-    window.location.href = '/game/home.html'
+    SkipN2 = 'Nulla';
+    console.log("Skip2 contiene Tecnica, ma sono già tutte trovate.")
   }
-} else if (SkipN2 == 'Evoluzione') {
+} else if (SkipN2 == 'Evoluzione') { // Evoluzione
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2 + ' Comune');
 
   document.getElementById('TextSkip2').textContent = 'Evoluzione comune: X';
   document.getElementById('ImgSkip2').src = '/resources/TB2/Casse/Ricompense/Evoluzione.png';
-  //Dà l'evoluz.
 } else {
   console.log(`Oggetto estratto Lista 1 (Skip 2): `+ SkipN2);
 }
