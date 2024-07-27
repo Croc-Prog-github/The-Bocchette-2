@@ -6,3 +6,5 @@ Elenco di bug, correzioni e rework non segnalati in memo.txt o negli Issues; da 
 - Corretto bug del riscatto di ricompense in obbiettivi minori a obbiettivo attuale
 - Corretto il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom (PRESENTE IN MEMO.TXT)
 - Corretto quando tecnicLockCom.length è 0 quindi, quando trovava una Tecnica, mostrava Error (PRESENTE IN MEMO.TXT)
+- Migliorato algoritmo di Bot1
+- 
