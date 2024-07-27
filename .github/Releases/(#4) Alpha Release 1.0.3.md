@@ -7,9 +7,9 @@ Le Distribuzioni precedenti sono disponibili nella [sezione Release di GitHub](h
 - Risolta duplicazione della scheda usando il tasto della rotella mouse sul bottone Indietro
 - Risolto glitch grafico nell'assegnazione dell'obbiettivo del pass
 - Rework grafico: aggiunta di progress bar nel pass (non funziona se aumenta l'obbiettivo)
-- Corretto bug del riscatto di ricompense in obbiettivi minori a obbiettivo attuale
+- Corretto bug del Pass per il riscatto di ricompense di obbiettivi minori a obbiettivo attuale
 - Corretto salvataggio nel SessionStorage di tecnicUnlock e tecnicLockCom
-- Corretto errore grafico quando trovi Tecnica e tecnicLockCom.length è 0
+<!-- - Corretto errore grafico quando trovi Tecnica e tecnicLockCom.length è 0 -->
 
 ## Installazione ed Eseguire
 1. Scarica il file **.zip** che c'è in fondo.
