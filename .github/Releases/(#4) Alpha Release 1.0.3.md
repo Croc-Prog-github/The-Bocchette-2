@@ -1,5 +1,5 @@
 # Alpha Release 1.0.3
-La versione: **Alpha Release 1.0.3** è stata rilasciata il --/--/2024.
+La versione: **Alpha Release 1.0.3** è stata rilasciata il 27/07/2024.
 Le Distribuzioni precedenti sono disponibili nella [sezione Release di GitHub](https://github.com/Croc-Prog-github/The-Bocchette-2/tags).
 
 ## Modifiche
