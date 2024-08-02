@@ -12,10 +12,9 @@
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza (60%)
 2. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium (2% [bug SessionStorage Array che memor. obb già riscatt.])
-3. Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom
-4. Continuare il nuovo script di Gestione dati (cripting avanzato)
-5. Continuare BuyThis() in shop.html (30%)
-6. 
+3. Continuare il nuovo script di Gestione dati (cripting avanzato)
+4. Continuare BuyThis() in shop.html (30%)
+5. 
 
 DA INIZIARE
 1. Iniziare il Chats-API (sopeso a lungo termine)
@@ -44,5 +43,5 @@ COMPLETATI
 14. Creare contatore Punti Ottimizzazione in home FATTO
 15. Aggiornare CONTRIBUTING.md FATTO
 16. Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom FATTO
-17. 2. Correggere trasazione tra tecnicLockCom e tecnicUnlock FATTO
+17. Correggere trasazione tra tecnicLockCom e tecnicUnlock FATTO
 18. Correggere quando tecnicLockCom.length è 0 quindi, quando trova una Tecnica, mostrando Error FATTO
