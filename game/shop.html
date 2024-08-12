@@ -229,7 +229,7 @@
           <div style="width: inherit;height: auto;background: white;margin: 7px; margin-bottom: 3.5px; cursor: default;min-width: fit-content;">
             3 Gemme<br>
             <hr>
-            <button class="buy_it" onclick="BuyThis('3', gemme, '10', 'soldi')"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 10</button>
+            <button class="buy_it" onclick="BuyThis('3', 'gemme', '10', 'soldi')"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 10</button>
           </div>
           
           <div style="width: fit-content;height: auto;background: white;margin: 7px; margin-top: 3.5px; cursor: default;min-width: fit-content;">
@@ -286,10 +286,50 @@
 
 <script>
   function BuyThis2(qnt, obj, price, valuta) {
-    
+    // Converte le variabili di input in numeri interi
+    qnt = parseInt(qnt);
+    price = parseInt(price);
+
+    if (valuta === 'soldi') {
+      if (price <= soldi) {
+        // Incrementa l'oggetto e decrementa la valuta
+        window[obj] = parseInt(window[obj]) + qnt;
+        soldi = parseInt(soldi) - price;
+
+        console.info("Acquisto riuscito.");
+        console.log(`Nuovi valori - ${obj}: ${window[obj]}; soldi: ${soldi}`);
+      } else {
+        window.alert("Banconote insufficienti!")
+      }
+    } else if (valuta === 'gemme') {
+      if (price <= gemme) {
+        // Incrementa l'oggetto e decrementa la valuta
+        window[obj] = parseInt(window[obj]) + qnt;
+        gemme = parseInt(gemme) - price;
+
+        console.info("Acquisto riuscito.");
+        console.log(`Nuovi valori - ${obj}: ${window[obj]}, gemme: ${gemme}`);
+      } else {
+        window.alert("Gemme insufficienti!");
+      }
+    } else {
+      console.error("Il tipo di valuta usata non è presente nello switch().");
+    }
   }
 
   function BuyThis(qnt, obj, price, valuta) {
+    function window(obj) {
+      let r;
+      switch (obj) {
+        case 'gemme':
+          r = gemme
+        break;
+        default:
+          console.error("BuyThis() > window(): Variabile nello switch() non supportata come obj.")
+        break;
+      }
+    }
+
       // Converte le variabili di input in numeri interi
       qnt = parseInt(qnt);
       price = parseInt(price);
