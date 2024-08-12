@@ -286,35 +286,7 @@
 
 <script>
   function BuyThis2(qnt, obj, price, valuta) {
-    // Converte le variabili di input in numeri interi
-    qnt = parseInt(qnt);
-    price = parseInt(price);
-
-    if (valuta === 'soldi') {
-      if (price <= soldi) {
-        // Incrementa l'oggetto e decrementa la valuta
-        window[obj] = parseInt(window[obj]) + qnt;
-        soldi = parseInt(soldi) - price;
-
-        console.info("Acquisto riuscito.");
-        console.log(`Nuovi valori - ${obj}: ${window[obj]}; soldi: ${soldi}`);
-      } else {
-        window.alert("Banconote insufficienti!")
-      }
-    } else if (valuta === 'gemme') {
-      if (price <= gemme) {
-        // Incrementa l'oggetto e decrementa la valuta
-        window[obj] = parseInt(window[obj]) + qnt;
-        gemme = parseInt(gemme) - price;
-
-        console.info("Acquisto riuscito.");
-        console.log(`Nuovi valori - ${obj}: ${window[obj]}, gemme: ${gemme}`);
-      } else {
-        window.alert("Gemme insufficienti!");
-      }
-    } else {
-      console.error("Il tipo di valuta usata non è presente nello switch().");
-    }
+    
   }
 
   function BuyThis(qnt, obj, price, valuta) {
@@ -328,6 +300,7 @@
           console.error("BuyThis() > window(): Variabile nello switch() non supportata come obj.")
         break;
       }
+      return r;
     }
 
       // Converte le variabili di input in numeri interi
