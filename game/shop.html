@@ -296,7 +296,7 @@
           r = soldi = parseInt(soldi) + qnt;
         break;
         default:
-          console.error("BuyThis() > window(): Variabile nello switch() non supportata come obj.")
+          console.error("BuyThis() > Add(): Variabile nello switch() non supportata come obj.")
         break;
       }
       return r
@@ -314,7 +314,7 @@
         
 
         console.info("Acquisto riuscito.");
-        console.log(`Nuovi valori - ${obj}: ${Window(obj)}; soldi: ${soldi}`);
+        console.log(`Nuovi valori - ${obj}: ${Add(obj)}; soldi: ${soldi}`);
       } else {
         window.alert("Banconote insufficienti!")
       }
@@ -326,7 +326,7 @@
 
 
         console.info("Acquisto riuscito.");
-        console.log(`Nuovi valori - ${obj}: ${Window(obj)}, gemme: ${gemme}`);
+        console.log(`Nuovi valori - ${obj}: ${Add(obj)}, gemme: ${gemme}`);
       } else {
         window.alert("Gemme insufficienti!");
       }
@@ -335,7 +335,7 @@
     }
   }
 
-  function BuyThis(qnt, obj, price, valuta) {
+  /*function BuyThis(qnt, obj, price, valuta) {
     function Window(obj2) {
       let r;
       switch (obj2) {
@@ -382,6 +382,7 @@
         console.error("Il tipo di valuta usata non è definita.");
       }
     }
+    */
 </script>
 
 <style>
