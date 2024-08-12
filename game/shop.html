@@ -286,15 +286,68 @@
 
 <script>
   function BuyThis2(qnt, obj, price, valuta) {
-    
+    // Converte le variabili di input in numeri interi
+    qnt = parseInt(qnt);
+    price = parseInt(price);
+
+    if (valuta === 'soldi') {
+      if (price <= soldi) {
+        // Incrementa l'oggetto e decrementa la valuta
+        soldi = parseInt(soldi) - price;
+        switch (obj) {
+          case 'gemme':
+            gemme = parseInt(gemme) + qnt;
+          break;
+          case 'soldi':
+            soldi = parseInt(soldi) + qnt;
+          break;
+          default:
+            console.error("BuyThis() > window(): Variabile nello switch() non supportata come obj.")
+          break;
+        }
+        
+
+        console.info("Acquisto riuscito.");
+        console.log(`Nuovi valori - ${obj}: ${Window(obj)}; soldi: ${soldi}`);
+      } else {
+        window.alert("Banconote insufficienti!")
+      }
+    } else if (valuta === 'gemme') {
+      if (price <= gemme) {
+        // Incrementa l'oggetto e decrementa la valuta
+        gemme = parseInt(gemme) - price;
+        switch (obj) {
+          case 'gemme':
+            gemme = parseInt(gemme) + qnt;
+          break;
+          case 'soldi':
+            soldi = parseInt(soldi) + qnt;
+          break;
+          default:
+            console.error("BuyThis() > window(): Variabile nello switch() non supportata come obj.")
+          break;
+        }
+                
+
+        console.info("Acquisto riuscito.");
+        console.log(`Nuovi valori - ${obj}: ${Window(obj)}, gemme: ${gemme}`);
+      } else {
+        window.alert("Gemme insufficienti!");
+      }
+    } else {
+      console.error("Il tipo di valuta usata non è definita.");
+    }
   }
 
   function BuyThis(qnt, obj, price, valuta) {
-    function window(obj) {
+    function Window(obj2) {
       let r;
-      switch (obj) {
+      switch (obj2) {
         case 'gemme':
           r = gemme
+        break;
+        case 'soldi':
+          r = soldi
         break;
         default:
           console.error("BuyThis() > window(): Variabile nello switch() non supportata come obj.")
@@ -310,27 +363,27 @@
       if (valuta === 'soldi') {
         if (price <= soldi) {
           // Incrementa l'oggetto e decrementa la valuta
-          window[obj] = parseInt(window[obj]) + qnt;
+          Window(obj) = parseInt(Window(obj)) + qnt;
           soldi = parseInt(soldi) - price;
 
           console.info("Acquisto riuscito.");
-          console.log(`Nuovi valori - ${obj}: ${window[obj]}; soldi: ${soldi}`);
+          console.log(`Nuovi valori - ${obj}: ${Window(obj)}; soldi: ${soldi}`);
         } else {
           window.alert("Banconote insufficienti!")
         }
       } else if (valuta === 'gemme') {
         if (price <= gemme) {
           // Incrementa l'oggetto e decrementa la valuta
-          window[obj] = parseInt(window[obj]) + qnt;
+          Window(obj) = parseInt(Window(obj)) + qnt;
           gemme = parseInt(gemme) - price;
 
           console.info("Acquisto riuscito.");
-          console.log(`Nuovi valori - ${obj}: ${window[obj]}, gemme: ${gemme}`);
+          console.log(`Nuovi valori - ${obj}: ${Window(obj)}, gemme: ${gemme}`);
         } else {
           window.alert("Gemme insufficienti!");
         }
       } else {
-        console.error("Il tipo di valuta usata non è presente nello switch().");
+        console.error("Il tipo di valuta usata non è definita.");
       }
     }
 </script>
