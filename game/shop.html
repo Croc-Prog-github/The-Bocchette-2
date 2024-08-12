@@ -229,7 +229,7 @@
           <div style="width: inherit;height: auto;background: white;margin: 7px; margin-bottom: 3.5px; cursor: default;min-width: fit-content;">
             3 Gemme<br>
             <hr>
-            <button class="buy_it" onclick="BuyThis('3', 'gemme', '10', 'soldi')"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 10</button>
+            <button class="buy_it" onclick="BuyThis2('3', 'gemme', '10', 'soldi')"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 10</button>
           </div>
           
           <div style="width: fit-content;height: auto;background: white;margin: 7px; margin-top: 3.5px; cursor: default;min-width: fit-content;">
@@ -286,6 +286,22 @@
 
 <script>
   function BuyThis2(qnt, obj, price, valuta) {
+    function Add(obj2) {
+      let r;
+      switch (obj2) {
+        case 'gemme':
+          r = gemme = parseInt(gemme) + qnt;
+        break;
+        case 'soldi':
+          r = soldi = parseInt(soldi) + qnt;
+        break;
+        default:
+          console.error("BuyThis() > window(): Variabile nello switch() non supportata come obj.")
+        break;
+      }
+      return r
+    }
+
     // Converte le variabili di input in numeri interi
     qnt = parseInt(qnt);
     price = parseInt(price);
@@ -294,17 +310,7 @@
       if (price <= soldi) {
         // Incrementa l'oggetto e decrementa la valuta
         soldi = parseInt(soldi) - price;
-        switch (obj) {
-          case 'gemme':
-            gemme = parseInt(gemme) + qnt;
-          break;
-          case 'soldi':
-            soldi = parseInt(soldi) + qnt;
-          break;
-          default:
-            console.error("BuyThis() > window(): Variabile nello switch() non supportata come obj.")
-          break;
-        }
+        Add(obj)
         
 
         console.info("Acquisto riuscito.");
@@ -316,18 +322,8 @@
       if (price <= gemme) {
         // Incrementa l'oggetto e decrementa la valuta
         gemme = parseInt(gemme) - price;
-        switch (obj) {
-          case 'gemme':
-            gemme = parseInt(gemme) + qnt;
-          break;
-          case 'soldi':
-            soldi = parseInt(soldi) + qnt;
-          break;
-          default:
-            console.error("BuyThis() > window(): Variabile nello switch() non supportata come obj.")
-          break;
-        }
-                
+        Add(obj)
+
 
         console.info("Acquisto riuscito.");
         console.log(`Nuovi valori - ${obj}: ${Window(obj)}, gemme: ${gemme}`);
