@@ -229,7 +229,7 @@
           <div style="width: inherit;height: auto;background: white;margin: 7px; margin-bottom: 3.5px; cursor: default;min-width: fit-content;">
             3 Gemme<br>
             <hr>
-            <button class="buy_it" onclick="BuyThis('3', 'gemme', '10', 'soldi')"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 10</button>
+            <button class="buy_it" onclick="BuyThis('3', gemme, '10', 'soldi')"><img src="/resources/SVG/Soldi_icon-SVG.svg"> 10</button>
           </div>
           
           <div style="width: fit-content;height: auto;background: white;margin: 7px; margin-top: 3.5px; cursor: default;min-width: fit-content;">
@@ -285,6 +285,10 @@
 </html>
 
 <script>
+  function BuyThis2(qnt, obj, price, valuta) {
+    
+  }
+
   function BuyThis(qnt, obj, price, valuta) {
       // Converte le variabili di input in numeri interi
       qnt = parseInt(qnt);
