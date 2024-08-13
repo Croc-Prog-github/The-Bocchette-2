@@ -44,4 +44,5 @@ COMPLETATI
 15. Aggiornare CONTRIBUTING.md FATTO
 16. Correggere il salvataggio nel Session storage di tecnicUnlock e tecnicLockCom FATTO
 17. Correggere trasazione tra tecnicLockCom e tecnicUnlock FATTO
+-NUOVI
 18. Correggere quando tecnicLockCom.length è 0 quindi, quando trova una Tecnica, mostrando Error FATTO
