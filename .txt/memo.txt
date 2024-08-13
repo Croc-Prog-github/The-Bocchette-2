@@ -8,13 +8,13 @@
 8. Completare le tecniche in sopravivenza
 9. Continuare il Power-Up
 10. Continuare le Missioni-storia
+11. Continuare il nuovo script di Gestione dati (cripting avanzato)
 
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza (60%)
 2. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium (2% [bug SessionStorage Array che memor. obb già riscatt.])
-3. Continuare il nuovo script di Gestione dati (cripting avanzato)
-4. Continuare BuyThis() in shop.html (99%)
-5. 
+3. Continuare BuyThis() in shop.html (99%)
+4. 
 
 DA INIZIARE
 1. Iniziare il Chats-API (sopeso a lungo termine)
