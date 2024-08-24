@@ -1,3 +1,9 @@
+//LoadTest Colyseus (shell)
+../The-Bocchette-2/ServerService/MultiP-server> npm start
+//NUOVO TERMINALE
+../The-Bocchette-2/ServerService/MultiP-server> npm run loadtest
+
+
 // Test Casse (JS)
 NCassRar = parseInt(NCassRar) + 10;
 NCassCom = parseInt(NCassCom) + 10;
