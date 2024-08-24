@@ -13,7 +13,7 @@
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza (60%)
 2. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium (2% [bug SessionStorage Array che memor. obb già riscatt.])
-3. Continuare BuyThis() in shop.html (100%)
+3. Iniziare la manutenzione dell'avvio di Colyseus (0%)
 4. 
 
 DA INIZIARE
@@ -46,3 +46,4 @@ COMPLETATI
 17. Correggere trasazione tra tecnicLockCom e tecnicUnlock FATTO
 -NUOVI
 18. Correggere quando tecnicLockCom.length è 0 quindi, quando trova una Tecnica, mostrando Error FATTO
+19. Completare BuyThis() in shop.html FATTO
