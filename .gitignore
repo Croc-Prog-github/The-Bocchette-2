@@ -19,6 +19,7 @@
 # Colyseus
 /game/multiP/colyseus.js
 /ServerService/MultiP-server/node_modules
+/ServerService/MultiP-server/loadtest.log
 
 # npm start
 /node_modules/.vite/deps/_metadata.json
