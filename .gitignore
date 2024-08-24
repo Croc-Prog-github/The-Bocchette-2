@@ -18,6 +18,7 @@
 
 # Colyseus
 /game/multiP/colyseus.js
+/ServerService/MultiP-server/node_modules
 
 # npm start
 /node_modules/.vite/deps/_metadata.json
