@@ -13,7 +13,7 @@
 PRIORITARI
 1. Continuare il Bot1 in sopravvivenza (60%)
 2. Aggiungere "Ricompensa già riscattata" nelle ricompense del Pass Premium (2% [bug SessionStorage Array che memor. obb già riscatt.])
-3. 
+3. Continuare ProgressLine nel pass
 
 DA INIZIARE
 1. Iniziare il Chats-API (sopeso a lungo termine)
