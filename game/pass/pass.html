@@ -13,7 +13,7 @@
     <script src="/cons/console.js"></script>
     <script src="/SchedDes.js"></script>
   </head>
-  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin: 0px;">
+  <body onload="updateProgressLine(obb);" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin: 0px;">
 
     <div style="display: flex; flex-direction: row; justify-content: flex-start;">
       <back onclick="window.location.href = '/game/home.html';" style="cursor: pointer; text-decoration: none; font-size: 25px; border: solid 2px black;" title="Indietro">⬅️</back>
@@ -128,16 +128,34 @@
 </html>
 
 <script>
-  let progressLine = document.querySelectorAll('.ProgressLine')
-  let oldObb = 0
-  if (obb == 0) {
-    oldObb = 0
-  } else if (obb > 0) {
-    oldObb = obb - 1;
-  }
-  
-  if (obb != oldObb) {
-    progressLine.style.width =+ "4%"
+  let progressLines = document.querySelectorAll('.ProgressLine');
+
+  // Variabile per memorizzare il vecchio valore di obb
+  let oldObb = 0; // Assume che all'inizio obb sia 0
+
+  // Funzione per aggiornare la barra di progresso
+  function updateProgressLine(newObb) {
+    // Confronta l'attuale valore di obb con il vecchio valore
+    if (newObb !== oldObb) {
+      // Calcola la differenza tra il nuovo e il vecchio valore di obb
+      let difference = newObb - oldObb;
+
+      // Itera su tutte le linee di progresso
+      progressLines.forEach(progressLine => {
+        // Verifica se la larghezza della linea è già impostata, in caso contrario imposta a 0
+        let currentWidth = parseInt(progressLine.style.width) || 0;
+
+        // Aumenta o diminuisce la larghezza in base alla differenza di obb
+        if (difference > 0) {
+          progressLine.style.width = (currentWidth + 4) + "%"; // Aumenta di 4%
+        } else if (difference < 0) {
+          progressLine.style.width = (currentWidth - 4) + "%"; // Diminuisce di 4%
+        }
+      });
+
+      // Aggiorna il vecchio valore di obb
+      oldObb = newObb;
+    }
   }
 </script>
 
