@@ -13,7 +13,7 @@
     <script src="/cons/console.js"></script>
     <script src="/SchedDes.js"></script>
   </head>
-  <body style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin: 0px;">
+  <body onpageshow="updateProgressLine(obb);" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #195e79ad; margin: 0px;">
 
     <div style="display: flex; flex-direction: row; justify-content: flex-start;">
       <back onclick="window.location.href = '/game/home.html';" style="cursor: pointer; text-decoration: none; font-size: 25px; border: solid 2px black;" title="Indietro">⬅️</back>
@@ -128,40 +128,6 @@
 </html>
 
 <script>
-  function createReactiveVar(initialValue) {
-    let value = initialValue;
-    let onChangeCallback = null;
-
-    const reactiveVar = {
-      get value() {
-        return value;
-      },
-      set value(newValue) {
-        if (value !== newValue) {
-          value = newValue;
-          if (onChangeCallback) {
-            onChangeCallback(newValue);
-          }
-        }
-      },
-      set onChange(callback) {
-        if (typeof callback === 'function') {
-          onChangeCallback = callback;
-        }
-      },
-      get onChange() {
-        return !!onChangeCallback;
-      }
-    };
-
-    return reactiveVar;
-  }
-
-  obb.onChange = function() {
-    updateProgressLine(obb);
-  };
-
-
   let progressLines = document.querySelectorAll('.ProgressLine');
   let oldObb = 0;
 
