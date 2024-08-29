@@ -142,10 +142,24 @@
         let currentWidth = parseInt(progressLine.style.width) || 0;
 
         // Aumenta o diminuisce la larghezza in base alla differenza di obb
-        if (difference > 0) {
+        /*if (difference > 0) {
           progressLine.style.width = (currentWidth + 4) + "%";
         } else if (difference < 0) {
           progressLine.style.width = (currentWidth - 4) + "%";
+        }*/
+        switch (parseInt(obb)) {
+          case 0:
+            progressLine.style.width = "1%"
+          break
+          case 1:
+            progressLine.style.width = "5%"
+          break
+          case 2:
+            progressLine.style.width = "13%"
+          break
+          case 3:
+            progressLine.style.width = "20%"
+          break
         }
       });
 
