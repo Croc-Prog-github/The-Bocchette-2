@@ -21,6 +21,11 @@
 /ServerService/MultiP-server/node_modules
 /ServerService/MultiP-server/loadtest.log
 
+# Replit
+/node_modules/.bin/*
+.replit
+.breakpoints
+
 # npm start
 /node_modules/.vite/deps/_metadata.json
 /node_modules/.vite/deps/aws-sdk.js.map
