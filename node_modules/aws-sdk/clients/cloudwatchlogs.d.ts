@@ -197,6 +197,14 @@ declare class CloudWatchLogs extends Service {
    */
   describeAccountPolicies(callback?: (err: AWSError, data: CloudWatchLogs.Types.DescribeAccountPoliciesResponse) => void): Request<CloudWatchLogs.Types.DescribeAccountPoliciesResponse, AWSError>;
   /**
+   * Use this operation to return the valid and default values that are used when creating delivery sources, delivery destinations, and deliveries. For more information about deliveries, see CreateDelivery.
+   */
+  describeConfigurationTemplates(params: CloudWatchLogs.Types.DescribeConfigurationTemplatesRequest, callback?: (err: AWSError, data: CloudWatchLogs.Types.DescribeConfigurationTemplatesResponse) => void): Request<CloudWatchLogs.Types.DescribeConfigurationTemplatesResponse, AWSError>;
+  /**
+   * Use this operation to return the valid and default values that are used when creating delivery sources, delivery destinations, and deliveries. For more information about deliveries, see CreateDelivery.
+   */
+  describeConfigurationTemplates(callback?: (err: AWSError, data: CloudWatchLogs.Types.DescribeConfigurationTemplatesResponse) => void): Request<CloudWatchLogs.Types.DescribeConfigurationTemplatesResponse, AWSError>;
+  /**
    * Retrieves a list of the deliveries that have been created in the account. A delivery is a connection between a  delivery source  and a  delivery destination . A delivery source represents an Amazon Web Services resource that sends logs to an logs delivery destination. The destination can be CloudWatch Logs, Amazon S3, or Firehose. Only some Amazon Web Services services support being configured as a delivery source. These services are listed in Enable logging from Amazon Web Services services. 
    */
   describeDeliveries(params: CloudWatchLogs.Types.DescribeDeliveriesRequest, callback?: (err: AWSError, data: CloudWatchLogs.Types.DescribeDeliveriesResponse) => void): Request<CloudWatchLogs.Types.DescribeDeliveriesResponse, AWSError>;
@@ -421,11 +429,11 @@ declare class CloudWatchLogs extends Service {
    */
   listTagsLogGroup(callback?: (err: AWSError, data: CloudWatchLogs.Types.ListTagsLogGroupResponse) => void): Request<CloudWatchLogs.Types.ListTagsLogGroupResponse, AWSError>;
   /**
-   * Creates an account-level data protection policy or subscription filter policy that applies to all log groups or a subset of log groups in the account.  Data protection policy  A data protection policy can help safeguard sensitive data that's ingested by your log groups by auditing and masking the sensitive log data. Each account can have only one account-level data protection policy.  Sensitive data is detected and masked when it is ingested into a log group. When you set a data protection policy, log events ingested into the log groups before that time are not masked.  If you use PutAccountPolicy to create a data protection policy for your whole account, it applies to both existing log groups and all log groups that are created later in this account. The account-level policy is applied to existing log groups with eventual consistency. It might take up to 5 minutes before sensitive data in existing log groups begins to be masked. By default, when a user views a log event that includes masked data, the sensitive data is replaced by asterisks. A user who has the logs:Unmask permission can use a GetLogEvents or FilterLogEvents operation with the unmask parameter set to true to view the unmasked log events. Users with the logs:Unmask can also view unmasked data in the CloudWatch Logs console by running a CloudWatch Logs Insights query with the unmask query command. For more information, including a list of types of data that can be audited and masked, see Protect sensitive log data with masking. To use the PutAccountPolicy operation for a data protection policy, you must be signed on with the logs:PutDataProtectionPolicy and logs:PutAccountPolicy permissions. The PutAccountPolicy operation applies to all log groups in the account. You can use PutDataProtectionPolicy to create a data protection policy that applies to just one log group. If a log group has its own data protection policy and the account also has an account-level data protection policy, then the two policies are cumulative. Any sensitive term specified in either policy is masked.  Subscription filter policy  A subscription filter policy sets up a real-time feed of log events from CloudWatch Logs to other Amazon Web Services services. Account-level subscription filter policies apply to both existing log groups and log groups that are created later in this account. Supported destinations are Kinesis Data Streams, Firehose, and Lambda. When log events are sent to the receiving service, they are Base64 encoded and compressed with the GZIP format. The following destinations are supported for subscription filters:   An Kinesis Data Streams data stream in the same account as the subscription policy, for same-account delivery.   An Firehose data stream in the same account as the subscription policy, for same-account delivery.   A Lambda function in the same account as the subscription policy, for same-account delivery.   A logical destination in a different account created with PutDestination, for cross-account delivery. Kinesis Data Streams and Firehose are supported as logical destinations.   Each account can have one account-level subscription filter policy. If you are updating an existing filter, you must specify the correct name in PolicyName. To perform a PutAccountPolicy subscription filter operation for any destination except a Lambda function, you must also have the iam:PassRole permission.
+   * Creates an account-level data protection policy or subscription filter policy that applies to all log groups or a subset of log groups in the account.  Data protection policy  A data protection policy can help safeguard sensitive data that's ingested by your log groups by auditing and masking the sensitive log data. Each account can have only one account-level data protection policy.  Sensitive data is detected and masked when it is ingested into a log group. When you set a data protection policy, log events ingested into the log groups before that time are not masked.  If you use PutAccountPolicy to create a data protection policy for your whole account, it applies to both existing log groups and all log groups that are created later in this account. The account-level policy is applied to existing log groups with eventual consistency. It might take up to 5 minutes before sensitive data in existing log groups begins to be masked. By default, when a user views a log event that includes masked data, the sensitive data is replaced by asterisks. A user who has the logs:Unmask permission can use a GetLogEvents or FilterLogEvents operation with the unmask parameter set to true to view the unmasked log events. Users with the logs:Unmask can also view unmasked data in the CloudWatch Logs console by running a CloudWatch Logs Insights query with the unmask query command. For more information, including a list of types of data that can be audited and masked, see Protect sensitive log data with masking. To use the PutAccountPolicy operation for a data protection policy, you must be signed on with the logs:PutDataProtectionPolicy and logs:PutAccountPolicy permissions. The PutAccountPolicy operation applies to all log groups in the account. You can use PutDataProtectionPolicy to create a data protection policy that applies to just one log group. If a log group has its own data protection policy and the account also has an account-level data protection policy, then the two policies are cumulative. Any sensitive term specified in either policy is masked.  Subscription filter policy  A subscription filter policy sets up a real-time feed of log events from CloudWatch Logs to other Amazon Web Services services. Account-level subscription filter policies apply to both existing log groups and log groups that are created later in this account. Supported destinations are Kinesis Data Streams, Firehose, and Lambda. When log events are sent to the receiving service, they are Base64 encoded and compressed with the GZIP format. The following destinations are supported for subscription filters:   An Kinesis Data Streams data stream in the same account as the subscription policy, for same-account delivery.   An Firehose data stream in the same account as the subscription policy, for same-account delivery.   A Lambda function in the same account as the subscription policy, for same-account delivery.   A logical destination in a different account created with PutDestination, for cross-account delivery. Kinesis Data Streams and Firehose are supported as logical destinations.   Each account can have one account-level subscription filter policy per Region. If you are updating an existing filter, you must specify the correct name in PolicyName. To perform a PutAccountPolicy subscription filter operation for any destination except a Lambda function, you must also have the iam:PassRole permission.
    */
   putAccountPolicy(params: CloudWatchLogs.Types.PutAccountPolicyRequest, callback?: (err: AWSError, data: CloudWatchLogs.Types.PutAccountPolicyResponse) => void): Request<CloudWatchLogs.Types.PutAccountPolicyResponse, AWSError>;
   /**
-   * Creates an account-level data protection policy or subscription filter policy that applies to all log groups or a subset of log groups in the account.  Data protection policy  A data protection policy can help safeguard sensitive data that's ingested by your log groups by auditing and masking the sensitive log data. Each account can have only one account-level data protection policy.  Sensitive data is detected and masked when it is ingested into a log group. When you set a data protection policy, log events ingested into the log groups before that time are not masked.  If you use PutAccountPolicy to create a data protection policy for your whole account, it applies to both existing log groups and all log groups that are created later in this account. The account-level policy is applied to existing log groups with eventual consistency. It might take up to 5 minutes before sensitive data in existing log groups begins to be masked. By default, when a user views a log event that includes masked data, the sensitive data is replaced by asterisks. A user who has the logs:Unmask permission can use a GetLogEvents or FilterLogEvents operation with the unmask parameter set to true to view the unmasked log events. Users with the logs:Unmask can also view unmasked data in the CloudWatch Logs console by running a CloudWatch Logs Insights query with the unmask query command. For more information, including a list of types of data that can be audited and masked, see Protect sensitive log data with masking. To use the PutAccountPolicy operation for a data protection policy, you must be signed on with the logs:PutDataProtectionPolicy and logs:PutAccountPolicy permissions. The PutAccountPolicy operation applies to all log groups in the account. You can use PutDataProtectionPolicy to create a data protection policy that applies to just one log group. If a log group has its own data protection policy and the account also has an account-level data protection policy, then the two policies are cumulative. Any sensitive term specified in either policy is masked.  Subscription filter policy  A subscription filter policy sets up a real-time feed of log events from CloudWatch Logs to other Amazon Web Services services. Account-level subscription filter policies apply to both existing log groups and log groups that are created later in this account. Supported destinations are Kinesis Data Streams, Firehose, and Lambda. When log events are sent to the receiving service, they are Base64 encoded and compressed with the GZIP format. The following destinations are supported for subscription filters:   An Kinesis Data Streams data stream in the same account as the subscription policy, for same-account delivery.   An Firehose data stream in the same account as the subscription policy, for same-account delivery.   A Lambda function in the same account as the subscription policy, for same-account delivery.   A logical destination in a different account created with PutDestination, for cross-account delivery. Kinesis Data Streams and Firehose are supported as logical destinations.   Each account can have one account-level subscription filter policy. If you are updating an existing filter, you must specify the correct name in PolicyName. To perform a PutAccountPolicy subscription filter operation for any destination except a Lambda function, you must also have the iam:PassRole permission.
+   * Creates an account-level data protection policy or subscription filter policy that applies to all log groups or a subset of log groups in the account.  Data protection policy  A data protection policy can help safeguard sensitive data that's ingested by your log groups by auditing and masking the sensitive log data. Each account can have only one account-level data protection policy.  Sensitive data is detected and masked when it is ingested into a log group. When you set a data protection policy, log events ingested into the log groups before that time are not masked.  If you use PutAccountPolicy to create a data protection policy for your whole account, it applies to both existing log groups and all log groups that are created later in this account. The account-level policy is applied to existing log groups with eventual consistency. It might take up to 5 minutes before sensitive data in existing log groups begins to be masked. By default, when a user views a log event that includes masked data, the sensitive data is replaced by asterisks. A user who has the logs:Unmask permission can use a GetLogEvents or FilterLogEvents operation with the unmask parameter set to true to view the unmasked log events. Users with the logs:Unmask can also view unmasked data in the CloudWatch Logs console by running a CloudWatch Logs Insights query with the unmask query command. For more information, including a list of types of data that can be audited and masked, see Protect sensitive log data with masking. To use the PutAccountPolicy operation for a data protection policy, you must be signed on with the logs:PutDataProtectionPolicy and logs:PutAccountPolicy permissions. The PutAccountPolicy operation applies to all log groups in the account. You can use PutDataProtectionPolicy to create a data protection policy that applies to just one log group. If a log group has its own data protection policy and the account also has an account-level data protection policy, then the two policies are cumulative. Any sensitive term specified in either policy is masked.  Subscription filter policy  A subscription filter policy sets up a real-time feed of log events from CloudWatch Logs to other Amazon Web Services services. Account-level subscription filter policies apply to both existing log groups and log groups that are created later in this account. Supported destinations are Kinesis Data Streams, Firehose, and Lambda. When log events are sent to the receiving service, they are Base64 encoded and compressed with the GZIP format. The following destinations are supported for subscription filters:   An Kinesis Data Streams data stream in the same account as the subscription policy, for same-account delivery.   An Firehose data stream in the same account as the subscription policy, for same-account delivery.   A Lambda function in the same account as the subscription policy, for same-account delivery.   A logical destination in a different account created with PutDestination, for cross-account delivery. Kinesis Data Streams and Firehose are supported as logical destinations.   Each account can have one account-level subscription filter policy per Region. If you are updating an existing filter, you must specify the correct name in PolicyName. To perform a PutAccountPolicy subscription filter operation for any destination except a Lambda function, you must also have the iam:PassRole permission.
    */
   putAccountPolicy(callback?: (err: AWSError, data: CloudWatchLogs.Types.PutAccountPolicyResponse) => void): Request<CloudWatchLogs.Types.PutAccountPolicyResponse, AWSError>;
   /**
@@ -485,11 +493,11 @@ declare class CloudWatchLogs extends Service {
    */
   putLogEvents(callback?: (err: AWSError, data: CloudWatchLogs.Types.PutLogEventsResponse) => void): Request<CloudWatchLogs.Types.PutLogEventsResponse, AWSError>;
   /**
-   * Creates or updates a metric filter and associates it with the specified log group. With metric filters, you can configure rules to extract metric data from log events ingested through PutLogEvents. The maximum number of metric filters that can be associated with a log group is 100. When you create a metric filter, you can also optionally assign a unit and dimensions to the metric that is created.  Metrics extracted from log events are charged as custom metrics. To prevent unexpected high charges, do not specify high-cardinality fields such as IPAddress or requestID as dimensions. Each different value found for a dimension is treated as a separate metric and accrues charges as a separate custom metric.  CloudWatch Logs might disable a metric filter if it generates 1,000 different name/value pairs for your specified dimensions within one hour. You can also set up a billing alarm to alert you if your charges are higher than expected. For more information, see  Creating a Billing Alarm to Monitor Your Estimated Amazon Web Services Charges.  
+   * Creates or updates a metric filter and associates it with the specified log group. With metric filters, you can configure rules to extract metric data from log events ingested through PutLogEvents. The maximum number of metric filters that can be associated with a log group is 100. Using regular expressions to create metric filters is supported. For these filters, there is a quotas of quota of two regular expression patterns within a single filter pattern. There is also a quota of five regular expression patterns per log group. For more information about using regular expressions in metric filters, see  Filter pattern syntax for metric filters, subscription filters, filter log events, and Live Tail. When you create a metric filter, you can also optionally assign a unit and dimensions to the metric that is created.  Metrics extracted from log events are charged as custom metrics. To prevent unexpected high charges, do not specify high-cardinality fields such as IPAddress or requestID as dimensions. Each different value found for a dimension is treated as a separate metric and accrues charges as a separate custom metric.  CloudWatch Logs might disable a metric filter if it generates 1,000 different name/value pairs for your specified dimensions within one hour. You can also set up a billing alarm to alert you if your charges are higher than expected. For more information, see  Creating a Billing Alarm to Monitor Your Estimated Amazon Web Services Charges.  
    */
   putMetricFilter(params: CloudWatchLogs.Types.PutMetricFilterRequest, callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
-   * Creates or updates a metric filter and associates it with the specified log group. With metric filters, you can configure rules to extract metric data from log events ingested through PutLogEvents. The maximum number of metric filters that can be associated with a log group is 100. When you create a metric filter, you can also optionally assign a unit and dimensions to the metric that is created.  Metrics extracted from log events are charged as custom metrics. To prevent unexpected high charges, do not specify high-cardinality fields such as IPAddress or requestID as dimensions. Each different value found for a dimension is treated as a separate metric and accrues charges as a separate custom metric.  CloudWatch Logs might disable a metric filter if it generates 1,000 different name/value pairs for your specified dimensions within one hour. You can also set up a billing alarm to alert you if your charges are higher than expected. For more information, see  Creating a Billing Alarm to Monitor Your Estimated Amazon Web Services Charges.  
+   * Creates or updates a metric filter and associates it with the specified log group. With metric filters, you can configure rules to extract metric data from log events ingested through PutLogEvents. The maximum number of metric filters that can be associated with a log group is 100. Using regular expressions to create metric filters is supported. For these filters, there is a quotas of quota of two regular expression patterns within a single filter pattern. There is also a quota of five regular expression patterns per log group. For more information about using regular expressions in metric filters, see  Filter pattern syntax for metric filters, subscription filters, filter log events, and Live Tail. When you create a metric filter, you can also optionally assign a unit and dimensions to the metric that is created.  Metrics extracted from log events are charged as custom metrics. To prevent unexpected high charges, do not specify high-cardinality fields such as IPAddress or requestID as dimensions. Each different value found for a dimension is treated as a separate metric and accrues charges as a separate custom metric.  CloudWatch Logs might disable a metric filter if it generates 1,000 different name/value pairs for your specified dimensions within one hour. You can also set up a billing alarm to alert you if your charges are higher than expected. For more information, see  Creating a Billing Alarm to Monitor Your Estimated Amazon Web Services Charges.  
    */
   putMetricFilter(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
@@ -517,11 +525,11 @@ declare class CloudWatchLogs extends Service {
    */
   putRetentionPolicy(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
-   * Creates or updates a subscription filter and associates it with the specified log group. With subscription filters, you can subscribe to a real-time stream of log events ingested through PutLogEvents and have them delivered to a specific destination. When log events are sent to the receiving service, they are Base64 encoded and compressed with the GZIP format. The following destinations are supported for subscription filters:   An Amazon Kinesis data stream belonging to the same account as the subscription filter, for same-account delivery.   A logical destination created with PutDestination that belongs to a different account, for cross-account delivery. We currently support Kinesis Data Streams and Firehose as logical destinations.   An Amazon Kinesis Data Firehose delivery stream that belongs to the same account as the subscription filter, for same-account delivery.   An Lambda function that belongs to the same account as the subscription filter, for same-account delivery.   Each log group can have up to two subscription filters associated with it. If you are updating an existing filter, you must specify the correct name in filterName.  To perform a PutSubscriptionFilter operation for any destination except a Lambda function, you must also have the iam:PassRole permission.
+   * Creates or updates a subscription filter and associates it with the specified log group. With subscription filters, you can subscribe to a real-time stream of log events ingested through PutLogEvents and have them delivered to a specific destination. When log events are sent to the receiving service, they are Base64 encoded and compressed with the GZIP format. The following destinations are supported for subscription filters:   An Amazon Kinesis data stream belonging to the same account as the subscription filter, for same-account delivery.   A logical destination created with PutDestination that belongs to a different account, for cross-account delivery. We currently support Kinesis Data Streams and Firehose as logical destinations.   An Amazon Kinesis Data Firehose delivery stream that belongs to the same account as the subscription filter, for same-account delivery.   An Lambda function that belongs to the same account as the subscription filter, for same-account delivery.   Each log group can have up to two subscription filters associated with it. If you are updating an existing filter, you must specify the correct name in filterName.  Using regular expressions to create subscription filters is supported. For these filters, there is a quotas of quota of two regular expression patterns within a single filter pattern. There is also a quota of five regular expression patterns per log group. For more information about using regular expressions in subscription filters, see  Filter pattern syntax for metric filters, subscription filters, filter log events, and Live Tail. To perform a PutSubscriptionFilter operation for any destination except a Lambda function, you must also have the iam:PassRole permission.
    */
   putSubscriptionFilter(params: CloudWatchLogs.Types.PutSubscriptionFilterRequest, callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
-   * Creates or updates a subscription filter and associates it with the specified log group. With subscription filters, you can subscribe to a real-time stream of log events ingested through PutLogEvents and have them delivered to a specific destination. When log events are sent to the receiving service, they are Base64 encoded and compressed with the GZIP format. The following destinations are supported for subscription filters:   An Amazon Kinesis data stream belonging to the same account as the subscription filter, for same-account delivery.   A logical destination created with PutDestination that belongs to a different account, for cross-account delivery. We currently support Kinesis Data Streams and Firehose as logical destinations.   An Amazon Kinesis Data Firehose delivery stream that belongs to the same account as the subscription filter, for same-account delivery.   An Lambda function that belongs to the same account as the subscription filter, for same-account delivery.   Each log group can have up to two subscription filters associated with it. If you are updating an existing filter, you must specify the correct name in filterName.  To perform a PutSubscriptionFilter operation for any destination except a Lambda function, you must also have the iam:PassRole permission.
+   * Creates or updates a subscription filter and associates it with the specified log group. With subscription filters, you can subscribe to a real-time stream of log events ingested through PutLogEvents and have them delivered to a specific destination. When log events are sent to the receiving service, they are Base64 encoded and compressed with the GZIP format. The following destinations are supported for subscription filters:   An Amazon Kinesis data stream belonging to the same account as the subscription filter, for same-account delivery.   A logical destination created with PutDestination that belongs to a different account, for cross-account delivery. We currently support Kinesis Data Streams and Firehose as logical destinations.   An Amazon Kinesis Data Firehose delivery stream that belongs to the same account as the subscription filter, for same-account delivery.   An Lambda function that belongs to the same account as the subscription filter, for same-account delivery.   Each log group can have up to two subscription filters associated with it. If you are updating an existing filter, you must specify the correct name in filterName.  Using regular expressions to create subscription filters is supported. For these filters, there is a quotas of quota of two regular expression patterns within a single filter pattern. There is also a quota of five regular expression patterns per log group. For more information about using regular expressions in subscription filters, see  Filter pattern syntax for metric filters, subscription filters, filter log events, and Live Tail. To perform a PutSubscriptionFilter operation for any destination except a Lambda function, you must also have the iam:PassRole permission.
    */
   putSubscriptionFilter(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
@@ -597,6 +605,14 @@ declare class CloudWatchLogs extends Service {
    */
   updateAnomaly(callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
   /**
+   * Use this operation to update the configuration of a delivery to change either the S3 path pattern or the format of the delivered logs. You can't use this operation to change the source or destination of the delivery.
+   */
+  updateDeliveryConfiguration(params: CloudWatchLogs.Types.UpdateDeliveryConfigurationRequest, callback?: (err: AWSError, data: CloudWatchLogs.Types.UpdateDeliveryConfigurationResponse) => void): Request<CloudWatchLogs.Types.UpdateDeliveryConfigurationResponse, AWSError>;
+  /**
+   * Use this operation to update the configuration of a delivery to change either the S3 path pattern or the format of the delivered logs. You can't use this operation to change the source or destination of the delivery.
+   */
+  updateDeliveryConfiguration(callback?: (err: AWSError, data: CloudWatchLogs.Types.UpdateDeliveryConfigurationResponse) => void): Request<CloudWatchLogs.Types.UpdateDeliveryConfigurationResponse, AWSError>;
+  /**
    * Updates an existing log anomaly detector.
    */
   updateLogAnomalyDetector(params: CloudWatchLogs.Types.UpdateLogAnomalyDetectorRequest, callback?: (err: AWSError, data: {}) => void): Request<{}, AWSError>;
@@ -641,6 +657,9 @@ declare namespace CloudWatchLogs {
     accountId?: AccountId;
   }
   export type AccountPolicyDocument = string;
+  export type AllowedActionForAllowVendedLogsDeliveryForResource = string;
+  export type AllowedFieldDelimiters = FieldDelimiter[];
+  export type AllowedFields = RecordField[];
   export type AmazonResourceName = string;
   export type Anomalies = Anomaly[];
   export interface Anomaly {
@@ -788,6 +807,63 @@ declare namespace CloudWatchLogs {
     taskId: ExportTaskId;
   }
   export type ClientToken = string;
+  export interface ConfigurationTemplate {
+    /**
+     * A string specifying which service this configuration template applies to. For more information about supported services see Enable logging from Amazon Web Services services..
+     */
+    service?: Service;
+    /**
+     * A string specifying which log type this configuration template applies to.
+     */
+    logType?: LogType;
+    /**
+     * A string specifying which resource type this configuration template applies to.
+     */
+    resourceType?: ResourceType;
+    /**
+     * A string specifying which destination type this configuration template applies to.
+     */
+    deliveryDestinationType?: DeliveryDestinationType;
+    /**
+     * A mapping that displays the default value of each property within a delivery’s configuration, if it is not specified in the request.
+     */
+    defaultDeliveryConfigValues?: ConfigurationTemplateDeliveryConfigValues;
+    /**
+     * The allowed fields that a caller can use in the recordFields parameter of a CreateDelivery or UpdateDeliveryConfiguration operation.
+     */
+    allowedFields?: AllowedFields;
+    /**
+     * The list of delivery destination output formats that are supported by this log source.
+     */
+    allowedOutputFormats?: OutputFormats;
+    /**
+     * The action permissions that a caller needs to have to be able to successfully create a delivery source on the desired resource type when calling PutDeliverySource.
+     */
+    allowedActionForAllowVendedLogsDeliveryForResource?: AllowedActionForAllowVendedLogsDeliveryForResource;
+    /**
+     * The valid values that a caller can use as field delimiters when calling CreateDelivery or UpdateDeliveryConfiguration on a delivery that delivers in Plain, W3C, or Raw format.
+     */
+    allowedFieldDelimiters?: AllowedFieldDelimiters;
+    /**
+     * The list of variable fields that can be used in the suffix path of a delivery that delivers to an S3 bucket.
+     */
+    allowedSuffixPathFields?: RecordFields;
+  }
+  export interface ConfigurationTemplateDeliveryConfigValues {
+    /**
+     * The default record fields that will be delivered when a list of record fields is not provided in a CreateDelivery operation.
+     */
+    recordFields?: RecordFields;
+    /**
+     * The default field delimiter that is used in a CreateDelivery operation when the field delimiter is not specified in that operation. The field delimiter is used only when the final output delivery is in Plain, W3C, or Raw format.
+     */
+    fieldDelimiter?: FieldDelimiter;
+    /**
+     * The delivery parameters that are used when you create a delivery to a delivery destination that is an S3 Bucket.
+     */
+    s3DeliveryConfiguration?: S3DeliveryConfiguration;
+  }
+  export type ConfigurationTemplates = ConfigurationTemplate[];
   export type Count = number;
   export interface CreateDeliveryRequest {
     /**
@@ -798,6 +874,18 @@ declare namespace CloudWatchLogs {
      * The ARN of the delivery destination to use for this delivery.
      */
     deliveryDestinationArn: Arn;
+    /**
+     * The list of record fields to be delivered to the destination, in order. If the delivery’s log source has mandatory fields, they must be included in this list.
+     */
+    recordFields?: RecordFields;
+    /**
+     * The field delimiter to use between record fields when the final output format of a delivery is in Plain, W3C, or Raw format.
+     */
+    fieldDelimiter?: FieldDelimiter;
+    /**
+     * This structure contains parameters that are valid only when the delivery’s delivery destination is an S3 bucket.
+     */
+    s3DeliveryConfiguration?: S3DeliveryConfiguration;
     /**
      * An optional list of key-value pairs to associate with the resource. For more information about tagging, see Tagging Amazon Web Services resources 
      */
@@ -1048,6 +1136,18 @@ declare namespace CloudWatchLogs {
      */
     deliveryDestinationType?: DeliveryDestinationType;
     /**
+     * The record fields used in this delivery.
+     */
+    recordFields?: RecordFields;
+    /**
+     * The field delimiter that is used between record fields when the final output format of a delivery is in Plain, W3C, or Raw format.
+     */
+    fieldDelimiter?: FieldDelimiter;
+    /**
+     * This structure contains delivery configurations that apply only when the delivery destination resource is an S3 bucket.
+     */
+    s3DeliveryConfiguration?: S3DeliveryConfiguration;
+    /**
      * The tags that have been assigned to this delivery.
      */
     tags?: Tags;
@@ -1087,6 +1187,7 @@ declare namespace CloudWatchLogs {
   export type DeliveryDestinationName = string;
   export type DeliveryDestinationPolicy = string;
   export type DeliveryDestinationType = "S3"|"CWL"|"FH"|string;
+  export type DeliveryDestinationTypes = DeliveryDestinationType[];
   export type DeliveryDestinations = DeliveryDestination[];
   export type DeliveryId = string;
   export interface DeliverySource {
@@ -1117,6 +1218,7 @@ declare namespace CloudWatchLogs {
   }
   export type DeliverySourceName = string;
   export type DeliverySources = DeliverySource[];
+  export type DeliverySuffixPath = string;
   export type Descending = boolean;
   export interface DescribeAccountPoliciesRequest {
     /**
@@ -1137,6 +1239,36 @@ declare namespace CloudWatchLogs {
      * An array of structures that contain information about the CloudWatch Logs account policies that match the specified filters.
      */
     accountPolicies?: AccountPolicies;
+  }
+  export interface DescribeConfigurationTemplatesRequest {
+    /**
+     * Use this parameter to filter the response to include only the configuration templates that apply to the Amazon Web Services service that you specify here.
+     */
+    service?: Service;
+    /**
+     * Use this parameter to filter the response to include only the configuration templates that apply to the log types that you specify here.
+     */
+    logTypes?: LogTypes;
+    /**
+     * Use this parameter to filter the response to include only the configuration templates that apply to the resource types that you specify here.
+     */
+    resourceTypes?: ResourceTypes;
+    /**
+     * Use this parameter to filter the response to include only the configuration templates that apply to the delivery destination types that you specify here.
+     */
+    deliveryDestinationTypes?: DeliveryDestinationTypes;
+    nextToken?: NextToken;
+    /**
+     * Use this parameter to limit the number of configuration templates that are returned in the response.
+     */
+    limit?: DescribeLimit;
+  }
+  export interface DescribeConfigurationTemplatesResponse {
+    /**
+     * An array of objects, where each object describes one configuration template that matches the filters that you specified in the request.
+     */
+    configurationTemplates?: ConfigurationTemplates;
+    nextToken?: NextToken;
   }
   export interface DescribeDeliveriesRequest {
     nextToken?: NextToken;
@@ -1461,6 +1593,23 @@ declare namespace CloudWatchLogs {
   export type Distribution = "Random"|"ByLogStream"|string;
   export type DynamicTokenPosition = number;
   export type EncryptionKey = string;
+  export interface Entity {
+    /**
+     * Reserved for internal use.
+     */
+    keyAttributes?: EntityKeyAttributes;
+    /**
+     * Reserved for internal use.
+     */
+    attributes?: EntityAttributes;
+  }
+  export type EntityAttributes = {[key: string]: EntityAttributesValue};
+  export type EntityAttributesKey = string;
+  export type EntityAttributesValue = string;
+  export type EntityKeyAttributes = {[key: string]: EntityKeyAttributesValue};
+  export type EntityKeyAttributesKey = string;
+  export type EntityKeyAttributesValue = string;
+  export type EntityRejectionErrorType = "InvalidEntity"|"InvalidTypeValue"|"InvalidKeyAttributes"|"InvalidAttributes"|"EntitySizeTooLarge"|"UnsupportedLogGroupType"|"MissingRequiredFields"|string;
   export type Enumerations = {[key: string]: TokenValue};
   export type EpochMillis = number;
   export type EvaluationFrequency = "ONE_MIN"|"FIVE_MIN"|"TEN_MIN"|"FIFTEEN_MIN"|"THIRTY_MIN"|"ONE_HOUR"|string;
@@ -1535,6 +1684,8 @@ declare namespace CloudWatchLogs {
   export type ExportTasks = ExportTask[];
   export type ExtractedValues = {[key: string]: Value};
   export type Field = string;
+  export type FieldDelimiter = string;
+  export type FieldHeader = string;
   export type FilterCount = number;
   export interface FilterLogEventsRequest {
     /**
@@ -1546,11 +1697,11 @@ declare namespace CloudWatchLogs {
      */
     logGroupIdentifier?: LogGroupIdentifier;
     /**
-     * Filters the results to only logs from the log streams in this list. If you specify a value for both logStreamNamePrefix and logStreamNames, the action returns an InvalidParameterException error.
+     * Filters the results to only logs from the log streams in this list. If you specify a value for both logStreamNames and logStreamNamePrefix, the action returns an InvalidParameterException error.
      */
     logStreamNames?: InputLogStreamNames;
     /**
-     * Filters the results to include only events from log streams that have names starting with this prefix. If you specify a value for both logStreamNamePrefix and logStreamNames, but the value for logStreamNamePrefix does not match any log stream names specified in logStreamNames, the action returns an InvalidParameterException error.
+     * Filters the results to include only events from log streams that have names starting with this prefix. If you specify a value for both logStreamNamePrefix and logStreamNames, the action returns an InvalidParameterException error.
      */
     logStreamNamePrefix?: LogStreamName;
     /**
@@ -2109,6 +2260,7 @@ declare namespace CloudWatchLogs {
   export type LogStreamSearchedCompletely = boolean;
   export type LogStreams = LogStream[];
   export type LogType = string;
+  export type LogTypes = LogType[];
   export type Message = string;
   export interface MetricFilter {
     /**
@@ -2178,6 +2330,7 @@ declare namespace CloudWatchLogs {
   export type NextToken = string;
   export type OrderBy = "LogStreamName"|"LastEventTime"|string;
   export type OutputFormat = "json"|"plain"|"w3c"|"raw"|"parquet"|string;
+  export type OutputFormats = OutputFormat[];
   export interface OutputLogEvent {
     /**
      * The time the event occurred, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
@@ -2232,7 +2385,7 @@ declare namespace CloudWatchLogs {
      */
     policyName: PolicyName;
     /**
-     * Specify the policy, in JSON.  Data protection policy  A data protection policy must include two JSON blocks:   The first block must include both a DataIdentifer array and an Operation property with an Audit action. The DataIdentifer array lists the types of sensitive data that you want to mask. For more information about the available options, see Types of data that you can mask. The Operation property with an Audit action is required to find the sensitive data terms. This Audit action must contain a FindingsDestination object. You can optionally use that FindingsDestination object to list one or more destinations to send audit findings to. If you specify destinations such as log groups, Firehose streams, and S3 buckets, they must already exist.   The second block must include both a DataIdentifer array and an Operation property with an Deidentify action. The DataIdentifer array must exactly match the DataIdentifer array in the first block of the policy. The Operation property with the Deidentify action is what actually masks the data, and it must contain the  "MaskConfig": {} object. The  "MaskConfig": {} object must be empty.   For an example data protection policy, see the Examples section on this page.  The contents of the two DataIdentifer arrays must match exactly.  In addition to the two JSON blocks, the policyDocument can also include Name, Description, and Version fields. The Name is different than the operation's policyName parameter, and is used as a dimension when CloudWatch Logs reports audit findings metrics to CloudWatch. The JSON specified in policyDocument can be up to 30,720 characters long.  Subscription filter policy  A subscription filter policy can include the following attributes in a JSON block:    DestinationArn The ARN of the destination to deliver log events to. Supported destinations are:   An Kinesis Data Streams data stream in the same account as the subscription policy, for same-account delivery.   An Firehose data stream in the same account as the subscription policy, for same-account delivery.   A Lambda function in the same account as the subscription policy, for same-account delivery.   A logical destination in a different account created with PutDestination, for cross-account delivery. Kinesis Data Streams and Firehose are supported as logical destinations.      RoleArn The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log events to the destination stream. You don't need to provide the ARN when you are working with a logical destination for cross-account delivery.    FilterPattern A filter pattern for subscribing to a filtered stream of log events.    DistributionThe method used to distribute log data to the destination. By default, log data is grouped by log stream, but the grouping can be set to Random for a more even distribution. This property is only applicable when the destination is an Kinesis Data Streams data stream.  
+     * Specify the policy, in JSON.  Data protection policy  A data protection policy must include two JSON blocks:   The first block must include both a DataIdentifer array and an Operation property with an Audit action. The DataIdentifer array lists the types of sensitive data that you want to mask. For more information about the available options, see Types of data that you can mask. The Operation property with an Audit action is required to find the sensitive data terms. This Audit action must contain a FindingsDestination object. You can optionally use that FindingsDestination object to list one or more destinations to send audit findings to. If you specify destinations such as log groups, Firehose streams, and S3 buckets, they must already exist.   The second block must include both a DataIdentifer array and an Operation property with an Deidentify action. The DataIdentifer array must exactly match the DataIdentifer array in the first block of the policy. The Operation property with the Deidentify action is what actually masks the data, and it must contain the  "MaskConfig": {} object. The  "MaskConfig": {} object must be empty.   For an example data protection policy, see the Examples section on this page.  The contents of the two DataIdentifer arrays must match exactly.  In addition to the two JSON blocks, the policyDocument can also include Name, Description, and Version fields. The Name is different than the operation's policyName parameter, and is used as a dimension when CloudWatch Logs reports audit findings metrics to CloudWatch. The JSON specified in policyDocument can be up to 30,720 characters long.  Subscription filter policy  A subscription filter policy can include the following attributes in a JSON block:    DestinationArn The ARN of the destination to deliver log events to. Supported destinations are:   An Kinesis Data Streams data stream in the same account as the subscription policy, for same-account delivery.   An Firehose data stream in the same account as the subscription policy, for same-account delivery.   A Lambda function in the same account as the subscription policy, for same-account delivery.   A logical destination in a different account created with PutDestination, for cross-account delivery. Kinesis Data Streams and Firehose are supported as logical destinations.      RoleArn The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log events to the destination stream. You don't need to provide the ARN when you are working with a logical destination for cross-account delivery.    FilterPattern A filter pattern for subscribing to a filtered stream of log events.    Distribution The method used to distribute log data to the destination. By default, log data is grouped by log stream, but the grouping can be set to Random for a more even distribution. This property is only applicable when the destination is an Kinesis Data Streams data stream.  
      */
     policyDocument: AccountPolicyDocument;
     /**
@@ -2328,7 +2481,7 @@ declare namespace CloudWatchLogs {
      */
     resourceArn: Arn;
     /**
-     * Defines the type of log that the source is sending.   For Amazon CodeWhisperer, the valid value is EVENT_LOGS.   For IAM Identity Centerr, the valid value is ERROR_LOGS.   For Amazon WorkMail, the valid values are ACCESS_CONTROL_LOGS, AUTHENTICATION_LOGS, WORKMAIL_AVAILABILITY_PROVIDER_LOGS, and WORKMAIL_MAILBOX_ACCESS_LOGS.  
+     * Defines the type of log that the source is sending.   For Amazon Bedrock, the valid value is APPLICATION_LOGS.   For Amazon CodeWhisperer, the valid value is EVENT_LOGS.   For IAM Identity Center, the valid value is ERROR_LOGS.   For Amazon WorkMail, the valid values are ACCESS_CONTROL_LOGS, AUTHENTICATION_LOGS, WORKMAIL_AVAILABILITY_PROVIDER_LOGS, and WORKMAIL_MAILBOX_ACCESS_LOGS.  
      */
     logType: LogType;
     /**
@@ -2397,6 +2550,10 @@ declare namespace CloudWatchLogs {
      * The sequence token obtained from the response of the previous PutLogEvents call.  The sequenceToken parameter is now ignored in PutLogEvents actions. PutLogEvents actions are now accepted and never return InvalidSequenceTokenException or DataAlreadyAcceptedException even if the sequence token is not valid. 
      */
     sequenceToken?: SequenceToken;
+    /**
+     * Reserved for internal use.
+     */
+    entity?: Entity;
   }
   export interface PutLogEventsResponse {
     /**
@@ -2407,6 +2564,10 @@ declare namespace CloudWatchLogs {
      * The rejected events.
      */
     rejectedLogEventsInfo?: RejectedLogEventsInfo;
+    /**
+     * Reserved for internal use.
+     */
+    rejectedEntityInfo?: RejectedEntityInfo;
   }
   export interface PutMetricFilterRequest {
     /**
@@ -2570,6 +2731,23 @@ declare namespace CloudWatchLogs {
   }
   export type QueryStatus = "Scheduled"|"Running"|"Complete"|"Failed"|"Cancelled"|"Timeout"|"Unknown"|string;
   export type QueryString = string;
+  export interface RecordField {
+    /**
+     * The name to use when specifying this record field in a CreateDelivery or UpdateDeliveryConfiguration operation. 
+     */
+    name?: FieldHeader;
+    /**
+     * If this is true, the record field must be present in the recordFields parameter provided to a CreateDelivery or UpdateDeliveryConfiguration operation.
+     */
+    mandatory?: Boolean;
+  }
+  export type RecordFields = FieldHeader[];
+  export interface RejectedEntityInfo {
+    /**
+     * Reserved for internal use.
+     */
+    errorType: EntityRejectionErrorType;
+  }
   export interface RejectedLogEventsInfo {
     /**
      * The index of the first log event that is too new. This field is inclusive.
@@ -2602,6 +2780,8 @@ declare namespace CloudWatchLogs {
      */
     lastUpdatedTime?: Timestamp;
   }
+  export type ResourceType = string;
+  export type ResourceTypes = ResourceType[];
   export interface ResultField {
     /**
      * The log event field.
@@ -2614,6 +2794,16 @@ declare namespace CloudWatchLogs {
   }
   export type ResultRows = ResultField[];
   export type RoleArn = string;
+  export interface S3DeliveryConfiguration {
+    /**
+     * This string allows re-configuring the S3 object prefix to contain either static or variable sections. The valid variables to use in the suffix path will vary by each log source. See ConfigurationTemplate$allowedSuffixPathFields for more info on what values are supported in the suffix path for each log source.
+     */
+    suffixPath?: DeliverySuffixPath;
+    /**
+     * This parameter causes the S3 objects that contain delivered logs to use a prefix structure that allows for integration with Apache Hive.
+     */
+    enableHiveCompatiblePath?: Boolean;
+  }
   export type Scope = "ALL"|string;
   export interface SearchedLogStream {
     /**
@@ -2841,6 +3031,26 @@ declare namespace CloudWatchLogs {
      * If you are temporarily suppressing an anomaly or pattern, use this structure to specify how long the suppression is to last.
      */
     suppressionPeriod?: SuppressionPeriod;
+  }
+  export interface UpdateDeliveryConfigurationRequest {
+    /**
+     * The ID of the delivery to be updated by this request.
+     */
+    id: DeliveryId;
+    /**
+     * The list of record fields to be delivered to the destination, in order. If the delivery’s log source has mandatory fields, they must be included in this list.
+     */
+    recordFields?: RecordFields;
+    /**
+     * The field delimiter to use between record fields when the final output format of a delivery is in Plain, W3C, or Raw format.
+     */
+    fieldDelimiter?: FieldDelimiter;
+    /**
+     * This structure contains parameters that are valid only when the delivery’s delivery destination is an S3 bucket.
+     */
+    s3DeliveryConfiguration?: S3DeliveryConfiguration;
+  }
+  export interface UpdateDeliveryConfigurationResponse {
   }
   export interface UpdateLogAnomalyDetectorRequest {
     /**

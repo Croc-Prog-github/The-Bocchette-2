@@ -485,11 +485,11 @@ declare class IoTSiteWise extends Service {
    */
   listAssets(callback?: (err: AWSError, data: IoTSiteWise.Types.ListAssetsResponse) => void): Request<IoTSiteWise.Types.ListAssetsResponse, AWSError>;
   /**
-   * Retrieves a paginated list of associated assets. You can use this operation to do the following:   List child assets associated to a parent asset by a hierarchy that you specify.   List an asset's parent asset.  
+   * Retrieves a paginated list of associated assets. You can use this operation to do the following:    CHILD - List all child assets associated to the asset.    PARENT - List the asset's parent asset.  
    */
   listAssociatedAssets(params: IoTSiteWise.Types.ListAssociatedAssetsRequest, callback?: (err: AWSError, data: IoTSiteWise.Types.ListAssociatedAssetsResponse) => void): Request<IoTSiteWise.Types.ListAssociatedAssetsResponse, AWSError>;
   /**
-   * Retrieves a paginated list of associated assets. You can use this operation to do the following:   List child assets associated to a parent asset by a hierarchy that you specify.   List an asset's parent asset.  
+   * Retrieves a paginated list of associated assets. You can use this operation to do the following:    CHILD - List all child assets associated to the asset.    PARENT - List the asset's parent asset.  
    */
   listAssociatedAssets(callback?: (err: AWSError, data: IoTSiteWise.Types.ListAssociatedAssetsResponse) => void): Request<IoTSiteWise.Types.ListAssociatedAssetsResponse, AWSError>;
   /**
@@ -621,11 +621,11 @@ declare class IoTSiteWise extends Service {
    */
   updateAsset(callback?: (err: AWSError, data: IoTSiteWise.Types.UpdateAssetResponse) => void): Request<IoTSiteWise.Types.UpdateAssetResponse, AWSError>;
   /**
-   * Updates an asset model and all of the assets that were created from the model. Each asset created from the model inherits the updated asset model's property and hierarchy definitions. For more information, see Updating assets and models in the IoT SiteWise User Guide.  This operation overwrites the existing model with the provided model. To avoid deleting your asset model's properties or hierarchies, you must include their IDs and definitions in the updated asset model payload. For more information, see DescribeAssetModel. If you remove a property from an asset model, IoT SiteWise deletes all previous data for that property. If you remove a hierarchy definition from an asset model, IoT SiteWise disassociates every asset associated with that hierarchy. You can't change the type or data type of an existing property. 
+   * Updates an asset model and all of the assets that were created from the model. Each asset created from the model inherits the updated asset model's property and hierarchy definitions. For more information, see Updating assets and models in the IoT SiteWise User Guide.  If you remove a property from an asset model, IoT SiteWise deletes all previous data for that property. You can’t change the type or data type of an existing property. To replace an existing asset model property with a new one with the same name, do the following:   Submit an UpdateAssetModel request with the entire existing property removed.   Submit a second UpdateAssetModel request that includes the new property. The new asset property will have the same name as the previous one and IoT SiteWise will generate a new unique id.   
    */
   updateAssetModel(params: IoTSiteWise.Types.UpdateAssetModelRequest, callback?: (err: AWSError, data: IoTSiteWise.Types.UpdateAssetModelResponse) => void): Request<IoTSiteWise.Types.UpdateAssetModelResponse, AWSError>;
   /**
-   * Updates an asset model and all of the assets that were created from the model. Each asset created from the model inherits the updated asset model's property and hierarchy definitions. For more information, see Updating assets and models in the IoT SiteWise User Guide.  This operation overwrites the existing model with the provided model. To avoid deleting your asset model's properties or hierarchies, you must include their IDs and definitions in the updated asset model payload. For more information, see DescribeAssetModel. If you remove a property from an asset model, IoT SiteWise deletes all previous data for that property. If you remove a hierarchy definition from an asset model, IoT SiteWise disassociates every asset associated with that hierarchy. You can't change the type or data type of an existing property. 
+   * Updates an asset model and all of the assets that were created from the model. Each asset created from the model inherits the updated asset model's property and hierarchy definitions. For more information, see Updating assets and models in the IoT SiteWise User Guide.  If you remove a property from an asset model, IoT SiteWise deletes all previous data for that property. You can’t change the type or data type of an existing property. To replace an existing asset model property with a new one with the same name, do the following:   Submit an UpdateAssetModel request with the entire existing property removed.   Submit a second UpdateAssetModel request that includes the new property. The new asset property will have the same name as the previous one and IoT SiteWise will generate a new unique id.   
    */
   updateAssetModel(callback?: (err: AWSError, data: IoTSiteWise.Types.UpdateAssetModelResponse) => void): Request<IoTSiteWise.Types.UpdateAssetModelResponse, AWSError>;
   /**
@@ -990,6 +990,14 @@ declare namespace IoTSiteWise {
   }
   export interface AssetModelCompositeModelDefinition {
     /**
+     * The ID to assign to the composite model, if desired. IoT SiteWise automatically generates a unique ID for you, so this parameter is never required. However, if you prefer to supply your own ID instead, you can specify it here in UUID format. If you specify your own ID, it must be globally unique.
+     */
+    id?: ID;
+    /**
+     * An external ID to assign to the composite model. The external ID must be unique among composite models within this asset model. For more information, see Using external IDs in the IoT SiteWise User Guide.
+     */
+    externalId?: ExternalId;
+    /**
      * The name of the composite model.
      */
     name: Name;
@@ -1005,14 +1013,6 @@ declare namespace IoTSiteWise {
      * The asset property definitions for this composite model.
      */
     properties?: AssetModelPropertyDefinitions;
-    /**
-     * The ID to assign to the composite model, if desired. IoT SiteWise automatically generates a unique ID for you, so this parameter is never required. However, if you prefer to supply your own ID instead, you can specify it here in UUID format. If you specify your own ID, it must be globally unique.
-     */
-    id?: ID;
-    /**
-     * An external ID to assign to the composite model. The external ID must be unique among composite models within this asset model. For more information, see Using external IDs in the IoT SiteWise User Guide.
-     */
-    externalId?: ExternalId;
   }
   export type AssetModelCompositeModelDefinitions = AssetModelCompositeModelDefinition[];
   export type AssetModelCompositeModelPath = AssetModelCompositeModelPathSegment[];
@@ -1029,7 +1029,7 @@ declare namespace IoTSiteWise {
   export type AssetModelCompositeModelSummaries = AssetModelCompositeModelSummary[];
   export interface AssetModelCompositeModelSummary {
     /**
-     * The ID of the the composite model that this summary describes..
+     * The ID of the composite model that this summary describes..
      */
     id: ID;
     /**
@@ -1037,15 +1037,15 @@ declare namespace IoTSiteWise {
      */
     externalId?: ExternalId;
     /**
-     * The name of the the composite model that this summary describes..
+     * The name of the composite model that this summary describes..
      */
     name: Name;
     /**
-     * The type of asset model.    ASSET_MODEL – (default) An asset model that you can use to create assets. Can't be included as a component in another asset model.    COMPONENT_MODEL – A reusable component that you can include in the composite models of other asset models. You can't create assets directly from this type of asset model.   
+     * The composite model type. Valid values are AWS/ALARM, CUSTOM, or  AWS/L4E_ANOMALY.
      */
     type: Name;
     /**
-     * The description of the the composite model that this summary describes..
+     * The description of the composite model that this summary describes..
      */
     description?: Description;
     /**
@@ -1061,6 +1061,10 @@ declare namespace IoTSiteWise {
      */
     id?: CustomID;
     /**
+     * The external ID (if any) provided in the CreateAssetModel or UpdateAssetModel operation. You can assign an external ID by specifying this value as part of a call to UpdateAssetModel. However, you can't change the external ID if one is already assigned. For more information, see Using external IDs in the IoT SiteWise User Guide.
+     */
+    externalId?: ExternalId;
+    /**
      * The name of the asset model hierarchy that you specify by using the CreateAssetModel or UpdateAssetModel API operation.
      */
     name: Name;
@@ -1068,20 +1072,8 @@ declare namespace IoTSiteWise {
      * The ID of the asset model, in UUID format. All assets in this hierarchy must be instances of the childAssetModelId asset model. IoT SiteWise will always return the actual asset model ID for this value. However, when you are specifying this value as part of a call to UpdateAssetModel, you may provide either the asset model ID or else externalId: followed by the asset model's external ID. For more information, see Using external IDs in the IoT SiteWise User Guide. 
      */
     childAssetModelId: CustomID;
-    /**
-     * The external ID (if any) provided in the CreateAssetModel or UpdateAssetModel operation. You can assign an external ID by specifying this value as part of a call to UpdateAssetModel. However, you can't change the external ID if one is already assigned. For more information, see Using external IDs in the IoT SiteWise User Guide.
-     */
-    externalId?: ExternalId;
   }
   export interface AssetModelHierarchyDefinition {
-    /**
-     * The name of the asset model hierarchy definition (as specified in the CreateAssetModel or UpdateAssetModel API operation).
-     */
-    name: Name;
-    /**
-     * The ID of an asset model for this hierarchy. This can be either the actual ID in UUID format, or else externalId: followed by the external ID, if it has one. For more information, see Referencing objects with external IDs in the IoT SiteWise User Guide.
-     */
-    childAssetModelId: CustomID;
     /**
      * The ID to assign to the asset model hierarchy, if desired. IoT SiteWise automatically generates a unique ID for you, so this parameter is never required. However, if you prefer to supply your own ID instead, you can specify it here in UUID format. If you specify your own ID, it must be globally unique.
      */
@@ -1090,6 +1082,14 @@ declare namespace IoTSiteWise {
      * An external ID to assign to the asset model hierarchy. The external ID must be unique among asset model hierarchies within this asset model. For more information, see Using external IDs in the IoT SiteWise User Guide.
      */
     externalId?: ExternalId;
+    /**
+     * The name of the asset model hierarchy definition (as specified in the CreateAssetModel or UpdateAssetModel API operation).
+     */
+    name: Name;
+    /**
+     * The ID of an asset model for this hierarchy. This can be either the actual ID in UUID format, or else externalId: followed by the external ID, if it has one. For more information, see Referencing objects with external IDs in the IoT SiteWise User Guide.
+     */
+    childAssetModelId: CustomID;
   }
   export type AssetModelHierarchyDefinitions = AssetModelHierarchyDefinition[];
   export type AssetModelProperties = AssetModelProperty[];
@@ -1098,6 +1098,10 @@ declare namespace IoTSiteWise {
      * The ID of the asset model property.   If you are callling UpdateAssetModel to create a new property: You can specify its ID here, if desired. IoT SiteWise automatically generates a unique ID for you, so this parameter is never required. However, if you prefer to supply your own ID instead, you can specify it here in UUID format. If you specify your own ID, it must be globally unique.   If you are calling UpdateAssetModel to modify an existing property: This can be either the actual ID in UUID format, or else externalId: followed by the external ID, if it has one. For more information, see Referencing objects with external IDs in the IoT SiteWise User Guide.  
      */
     id?: CustomID;
+    /**
+     * The external ID (if any) provided in the CreateAssetModel or UpdateAssetModel operation. You can assign an external ID by specifying this value as part of a call to UpdateAssetModel. However, you can't change the external ID if one is already assigned. For more information, see Using external IDs in the IoT SiteWise User Guide.
+     */
+    externalId?: ExternalId;
     /**
      * The name of the asset model property.
      */
@@ -1122,12 +1126,16 @@ declare namespace IoTSiteWise {
      * The structured path to the property from the root of the asset model.
      */
     path?: AssetModelPropertyPath;
-    /**
-     * The external ID (if any) provided in the CreateAssetModel or UpdateAssetModel operation. You can assign an external ID by specifying this value as part of a call to UpdateAssetModel. However, you can't change the external ID if one is already assigned. For more information, see Using external IDs in the IoT SiteWise User Guide.
-     */
-    externalId?: ExternalId;
   }
   export interface AssetModelPropertyDefinition {
+    /**
+     * The ID to assign to the asset model property, if desired. IoT SiteWise automatically generates a unique ID for you, so this parameter is never required. However, if you prefer to supply your own ID instead, you can specify it here in UUID format. If you specify your own ID, it must be globally unique.
+     */
+    id?: ID;
+    /**
+     * An external ID to assign to the property definition. The external ID must be unique among property definitions within this asset model. For more information, see Using external IDs in the IoT SiteWise User Guide.
+     */
+    externalId?: ExternalId;
     /**
      * The name of the property definition.
      */
@@ -1148,14 +1156,6 @@ declare namespace IoTSiteWise {
      * The property definition type (see PropertyType). You can only specify one type in a property definition.
      */
     type: PropertyType;
-    /**
-     * The ID to assign to the asset model property, if desired. IoT SiteWise automatically generates a unique ID for you, so this parameter is never required. However, if you prefer to supply your own ID instead, you can specify it here in UUID format. If you specify your own ID, it must be globally unique.
-     */
-    id?: ID;
-    /**
-     * An external ID to assign to the property definition. The external ID must be unique among property definitions within this asset model. For more information, see Using external IDs in the IoT SiteWise User Guide.
-     */
-    externalId?: ExternalId;
   }
   export type AssetModelPropertyDefinitions = AssetModelPropertyDefinition[];
   export type AssetModelPropertyPath = AssetModelPropertyPathSegment[];
@@ -1175,6 +1175,10 @@ declare namespace IoTSiteWise {
      * The ID of the property.
      */
     id?: ID;
+    /**
+     * The external ID of the property. For more information, see Using external IDs in the IoT SiteWise User Guide.
+     */
+    externalId?: ExternalId;
     /**
      * The name of the property.
      */
@@ -1200,10 +1204,6 @@ declare namespace IoTSiteWise {
      * The structured path to the property from the root of the asset model.
      */
     path?: AssetModelPropertyPath;
-    /**
-     * The external ID of the property. For more information, see Using external IDs in the IoT SiteWise User Guide.
-     */
-    externalId?: ExternalId;
   }
   export type AssetModelState = "CREATING"|"ACTIVE"|"UPDATING"|"PROPAGATING"|"DELETING"|"FAILED"|string;
   export interface AssetModelStatus {
@@ -1223,6 +1223,10 @@ declare namespace IoTSiteWise {
      */
     id: ID;
     /**
+     * The external ID of the asset model. For more information, see Using external IDs in the IoT SiteWise User Guide.
+     */
+    externalId?: ExternalId;
+    /**
      * The ARN of the asset model, which has the following format.  arn:${Partition}:iotsitewise:${Region}:${Account}:asset-model/${AssetModelId} 
      */
     arn: ARN;
@@ -1230,6 +1234,10 @@ declare namespace IoTSiteWise {
      * The name of the asset model.
      */
     name: Name;
+    /**
+     * The type of asset model.    ASSET_MODEL – (default) An asset model that you can use to create assets. Can't be included as a component in another asset model.    COMPONENT_MODEL – A reusable component that you can include in the composite models of other asset models. You can't create assets directly from this type of asset model.   
+     */
+    assetModelType?: AssetModelType;
     /**
      * The asset model description.
      */
@@ -1247,15 +1255,13 @@ declare namespace IoTSiteWise {
      */
     status: AssetModelStatus;
     /**
-     * The type of asset model.    ASSET_MODEL – (default) An asset model that you can use to create assets. Can't be included as a component in another asset model.    COMPONENT_MODEL – A reusable component that you can include in the composite models of other asset models. You can't create assets directly from this type of asset model.   
+     * The version number of the asset model.
      */
-    assetModelType?: AssetModelType;
-    /**
-     * The external ID of the asset model. For more information, see Using external IDs in the IoT SiteWise User Guide.
-     */
-    externalId?: ExternalId;
+    version?: Version;
   }
   export type AssetModelType = "ASSET_MODEL"|"COMPONENT_MODEL"|string;
+  export type AssetModelVersionFilter = string;
+  export type AssetModelVersionType = "LATEST"|"ACTIVE"|string;
   export type AssetProperties = AssetProperty[];
   export interface AssetProperty {
     /**
@@ -1932,7 +1938,7 @@ declare namespace IoTSiteWise {
   export type Bucket = string;
   export type CapabilityConfiguration = string;
   export type CapabilityNamespace = string;
-  export type CapabilitySyncStatus = "IN_SYNC"|"OUT_OF_SYNC"|"SYNC_FAILED"|"UNKNOWN"|string;
+  export type CapabilitySyncStatus = "IN_SYNC"|"OUT_OF_SYNC"|"SYNC_FAILED"|"UNKNOWN"|"NOT_APPLICABLE"|string;
   export type ClientToken = string;
   export interface ColumnInfo {
     /**
@@ -2061,13 +2067,13 @@ declare namespace IoTSiteWise {
      */
     assetModelId: CustomID;
     /**
-     * The ID of the parent composite model in this asset model relationship.
-     */
-    parentAssetModelCompositeModelId?: CustomID;
-    /**
      * An external ID to assign to the composite model. If the composite model is a derived composite model, or one nested inside a component model, you can only set the external ID using UpdateAssetModelCompositeModel and specifying the derived ID of the model or property from the created model it's a part of.
      */
     assetModelCompositeModelExternalId?: ExternalId;
+    /**
+     * The ID of the parent composite model in this asset model relationship.
+     */
+    parentAssetModelCompositeModelId?: CustomID;
     /**
      * The ID of the composite model. IoT SiteWise automatically generates a unique ID for you, so this parameter is never required. However, if you prefer to supply your own ID instead, you can specify it here in UUID format. If you specify your own ID, it must be globally unique.
      */
@@ -2077,7 +2083,7 @@ declare namespace IoTSiteWise {
      */
     assetModelCompositeModelDescription?: Description;
     /**
-     * A unique, friendly name for the composite model.
+     * A unique name for the composite model.
      */
     assetModelCompositeModelName: Name;
     /**
@@ -2089,13 +2095,25 @@ declare namespace IoTSiteWise {
      */
     clientToken?: ClientToken;
     /**
-     * The ID of a composite model on this asset.
+     * The ID of a component model which is reused to create this composite model.
      */
     composedAssetModelId?: CustomID;
     /**
-     * The property definitions of the composite model. For more information, see &lt;LINK&gt;. You can specify up to 200 properties per composite model. For more information, see Quotas in the IoT SiteWise User Guide.
+     * The property definitions of the composite model. For more information, see  Inline custom composite models in the IoT SiteWise User Guide. You can specify up to 200 properties per composite model. For more information, see Quotas in the IoT SiteWise User Guide.
      */
     assetModelCompositeModelProperties?: AssetModelPropertyDefinitions;
+    /**
+     * The expected current entity tag (ETag) for the asset model’s latest or active version (specified using matchForVersionType). The create request is rejected if the tag does not match the latest or active version's current entity tag. See Optimistic locking for asset model writes in the IoT SiteWise User Guide.
+     */
+    ifMatch?: ETag;
+    /**
+     * Accepts * to reject the create request if an active version (specified using matchForVersionType as ACTIVE) already exists for the asset model.
+     */
+    ifNoneMatch?: SelectAll;
+    /**
+     * Specifies the asset model version type (LATEST or ACTIVE) used in conjunction with If-Match or If-None-Match headers to determine the target ETag for the create operation.
+     */
+    matchForVersionType?: AssetModelVersionType;
   }
   export interface CreateAssetModelCompositeModelResponse {
     /**
@@ -2110,9 +2128,21 @@ declare namespace IoTSiteWise {
   }
   export interface CreateAssetModelRequest {
     /**
-     * A unique, friendly name for the asset model.
+     * A unique name for the asset model.
      */
     assetModelName: Name;
+    /**
+     * The type of asset model.    ASSET_MODEL – (default) An asset model that you can use to create assets. Can't be included as a component in another asset model.    COMPONENT_MODEL – A reusable component that you can include in the composite models of other asset models. You can't create assets directly from this type of asset model.   
+     */
+    assetModelType?: AssetModelType;
+    /**
+     * The ID to assign to the asset model, if desired. IoT SiteWise automatically generates a unique ID for you, so this parameter is never required. However, if you prefer to supply your own ID instead, you can specify it here in UUID format. If you specify your own ID, it must be globally unique.
+     */
+    assetModelId?: ID;
+    /**
+     * An external ID to assign to the asset model. The external ID must be unique within your Amazon Web Services account. For more information, see Using external IDs in the IoT SiteWise User Guide.
+     */
+    assetModelExternalId?: ExternalId;
     /**
      * A description for the asset model.
      */
@@ -2126,7 +2156,7 @@ declare namespace IoTSiteWise {
      */
     assetModelHierarchies?: AssetModelHierarchyDefinitions;
     /**
-     * The composite models that are part of this asset model. It groups properties (such as attributes, measurements, transforms, and metrics) and child composite models that model parts of your industrial equipment. Each composite model has a type that defines the properties that the composite model supports. Use composite models to define alarms on this asset model.  When creating custom composite models, you need to use CreateAssetModelCompositeModel. For more information, see &lt;LINK&gt;. 
+     * The composite models that are part of this asset model. It groups properties (such as attributes, measurements, transforms, and metrics) and child composite models that model parts of your industrial equipment. Each composite model has a type that defines the properties that the composite model supports. Use composite models to define alarms on this asset model.  When creating custom composite models, you need to use CreateAssetModelCompositeModel. For more information, see Creating custom composite models (Components) in the IoT SiteWise User Guide. 
      */
     assetModelCompositeModels?: AssetModelCompositeModelDefinitions;
     /**
@@ -2137,18 +2167,6 @@ declare namespace IoTSiteWise {
      * A list of key-value pairs that contain metadata for the asset model. For more information, see Tagging your IoT SiteWise resources in the IoT SiteWise User Guide.
      */
     tags?: TagMap;
-    /**
-     * The ID to assign to the asset model, if desired. IoT SiteWise automatically generates a unique ID for you, so this parameter is never required. However, if you prefer to supply your own ID instead, you can specify it here in UUID format. If you specify your own ID, it must be globally unique.
-     */
-    assetModelId?: ID;
-    /**
-     * An external ID to assign to the asset model. The external ID must be unique within your Amazon Web Services account. For more information, see Using external IDs in the IoT SiteWise User Guide.
-     */
-    assetModelExternalId?: ExternalId;
-    /**
-     * The type of asset model.    ASSET_MODEL – (default) An asset model that you can use to create assets. Can't be included as a component in another asset model.    COMPONENT_MODEL – A reusable component that you can include in the composite models of other asset models. You can't create assets directly from this type of asset model.   
-     */
-    assetModelType?: AssetModelType;
   }
   export interface CreateAssetModelResponse {
     /**
@@ -2290,9 +2308,9 @@ declare namespace IoTSiteWise {
   }
   export interface CreateGatewayRequest {
     /**
-     * A unique, friendly name for the gateway.
+     * A unique name for the gateway.
      */
-    gatewayName: Name;
+    gatewayName: GatewayName;
     /**
      * The gateway's platform. You can only specify one platform in a gateway.
      */
@@ -2494,6 +2512,18 @@ declare namespace IoTSiteWise {
      * A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
      */
     clientToken?: ClientToken;
+    /**
+     * The expected current entity tag (ETag) for the asset model’s latest or active version (specified using matchForVersionType). The delete request is rejected if the tag does not match the latest or active version's current entity tag. See Optimistic locking for asset model writes in the IoT SiteWise User Guide.
+     */
+    ifMatch?: ETag;
+    /**
+     * Accepts * to reject the delete request if an active version (specified using matchForVersionType as ACTIVE) already exists for the asset model.
+     */
+    ifNoneMatch?: SelectAll;
+    /**
+     * Specifies the asset model version type (LATEST or ACTIVE) used in conjunction with If-Match or If-None-Match headers to determine the target ETag for the delete operation.
+     */
+    matchForVersionType?: AssetModelVersionType;
   }
   export interface DeleteAssetModelCompositeModelResponse {
     assetModelStatus: AssetModelStatus;
@@ -2507,6 +2537,18 @@ declare namespace IoTSiteWise {
      * A unique case-sensitive identifier that you can provide to ensure the idempotency of the request. Don't reuse this client token if a new idempotent request is required.
      */
     clientToken?: ClientToken;
+    /**
+     * The expected current entity tag (ETag) for the asset model’s latest or active version (specified using matchForVersionType). The delete request is rejected if the tag does not match the latest or active version's current entity tag. See Optimistic locking for asset model writes in the IoT SiteWise User Guide.
+     */
+    ifMatch?: ETag;
+    /**
+     * Accepts * to reject the delete request if an active version (specified using matchForVersionType as ACTIVE) already exists for the asset model.
+     */
+    ifNoneMatch?: SelectAll;
+    /**
+     * Specifies the asset model version type (LATEST or ACTIVE) used in conjunction with If-Match or If-None-Match headers to determine the target ETag for the delete operation.
+     */
+    matchForVersionType?: AssetModelVersionType;
   }
   export interface DeleteAssetModelResponse {
     /**
@@ -2720,6 +2762,10 @@ declare namespace IoTSiteWise {
      * The ID of a composite model on this asset model. This can be either the actual ID in UUID format, or else externalId: followed by the external ID, if it has one. For more information, see Referencing objects with external IDs in the IoT SiteWise User Guide.
      */
     assetModelCompositeModelId: CustomID;
+    /**
+     * The version alias that specifies the latest or active version of the asset model. The details are returned in the response. The default value is LATEST. See  Asset model versions in the IoT SiteWise User Guide.
+     */
+    assetModelVersion?: AssetModelVersionFilter;
   }
   export interface DescribeAssetModelCompositeModelResponse {
     /**
@@ -2776,12 +2822,20 @@ declare namespace IoTSiteWise {
      *  Whether or not to exclude asset model properties from the response. 
      */
     excludeProperties?: ExcludeProperties;
+    /**
+     * The version alias that specifies the latest or active version of the asset model. The details are returned in the response. The default value is LATEST. See  Asset model versions in the IoT SiteWise User Guide.
+     */
+    assetModelVersion?: AssetModelVersionFilter;
   }
   export interface DescribeAssetModelResponse {
     /**
      * The ID of the asset model, in UUID format.
      */
     assetModelId: ID;
+    /**
+     * The external ID of the asset model, if any.
+     */
+    assetModelExternalId?: ExternalId;
     /**
      * The ARN of the asset model, which has the following format.  arn:${Partition}:iotsitewise:${Region}:${Account}:asset-model/${AssetModelId} 
      */
@@ -2790,6 +2844,10 @@ declare namespace IoTSiteWise {
      * The name of the asset model.
      */
     assetModelName: Name;
+    /**
+     * The type of asset model.    ASSET_MODEL – (default) An asset model that you can use to create assets. Can't be included as a component in another asset model.    COMPONENT_MODEL – A reusable component that you can include in the composite models of other asset models. You can't create assets directly from this type of asset model.   
+     */
+    assetModelType?: AssetModelType;
     /**
      * The asset model's description.
      */
@@ -2807,6 +2865,10 @@ declare namespace IoTSiteWise {
      */
     assetModelCompositeModels?: AssetModelCompositeModels;
     /**
+     * The list of the immediate child custom composite model summaries for the asset model.
+     */
+    assetModelCompositeModelSummaries?: AssetModelCompositeModelSummaries;
+    /**
      * The date the asset model was created, in Unix epoch time.
      */
     assetModelCreationDate: Timestamp;
@@ -2819,17 +2881,13 @@ declare namespace IoTSiteWise {
      */
     assetModelStatus: AssetModelStatus;
     /**
-     * The type of asset model.    ASSET_MODEL – (default) An asset model that you can use to create assets. Can't be included as a component in another asset model.    COMPONENT_MODEL – A reusable component that you can include in the composite models of other asset models. You can't create assets directly from this type of asset model.   
+     * The version of the asset model. See  Asset model versions in the IoT SiteWise User Guide.
      */
-    assetModelType?: AssetModelType;
+    assetModelVersion?: Version;
     /**
-     * The list of the immediate child custom composite model summaries for the asset model.
+     * The entity tag (ETag) is a hash of the retrieved version of the asset model. It's used to make concurrent updates safely to the resource. See Optimistic locking for asset model writes in the IoT SiteWise User Guide.  See  Optimistic locking for asset model writes in the IoT SiteWise User Guide.
      */
-    assetModelCompositeModelSummaries?: AssetModelCompositeModelSummaries;
-    /**
-     * The external ID of the asset model, if any.
-     */
-    assetModelExternalId?: ExternalId;
+    eTag?: ETag;
   }
   export interface DescribeAssetPropertyRequest {
     /**
@@ -3081,7 +3139,7 @@ declare namespace IoTSiteWise {
     /**
      * The name of the gateway.
      */
-    gatewayName: Name;
+    gatewayName: GatewayName;
     /**
      * The ARN of the gateway, which has the following format.  arn:${Partition}:iotsitewise:${Region}:${Account}:gateway/${GatewayId} 
      */
@@ -3351,6 +3409,7 @@ declare namespace IoTSiteWise {
     clientToken?: ClientToken;
   }
   export type DisassociatedDataStorageState = "ENABLED"|"DISABLED"|string;
+  export type ETag = string;
   export type Email = string;
   export type EncryptionType = "SITEWISE_DEFAULT_ENCRYPTION"|"KMS_BASED_ENCRYPTION"|string;
   export type EntryId = string;
@@ -3491,6 +3550,7 @@ declare namespace IoTSiteWise {
      */
     capabilitySyncStatus: CapabilitySyncStatus;
   }
+  export type GatewayName = string;
   export interface GatewayPlatform {
     /**
      * A gateway that runs on IoT Greengrass.
@@ -3500,6 +3560,10 @@ declare namespace IoTSiteWise {
      * A gateway that runs on IoT Greengrass V2.
      */
     greengrassV2?: GreengrassV2;
+    /**
+     * A SiteWise Edge gateway that runs on a Siemens Industrial Edge Device.
+     */
+    siemensIE?: SiemensIE;
   }
   export type GatewaySummaries = GatewaySummary[];
   export interface GatewaySummary {
@@ -3508,9 +3572,9 @@ declare namespace IoTSiteWise {
      */
     gatewayId: ID;
     /**
-     * The name of the asset.
+     * The name of the gateway.
      */
-    gatewayName: Name;
+    gatewayName: GatewayName;
     gatewayPlatform?: GatewayPlatform;
     /**
      * A list of gateway capability summaries that each contain a namespace and status. Each gateway capability defines data sources for the gateway. To retrieve a capability configuration's definition, use DescribeGatewayCapabilityConfiguration.
@@ -3717,7 +3781,7 @@ declare namespace IoTSiteWise {
   }
   export interface Greengrass {
     /**
-     * The ARN of the Greengrass group. For more information about how to find a group's ARN, see ListGroups and GetGroup in the IoT Greengrass API Reference.
+     * The ARN of the Greengrass group. For more information about how to find a group's ARN, see ListGroups and GetGroup in the IoT Greengrass V1 API Reference.
      */
     groupArn: ARN;
   }
@@ -3805,6 +3869,7 @@ declare namespace IoTSiteWise {
   export type Interval = string;
   export type IntervalInSeconds = number;
   export type IntervalWindowInSeconds = number;
+  export type IotCoreThingName = string;
   export interface JobConfiguration {
     /**
      * The file format of the data in S3.
@@ -3909,6 +3974,10 @@ declare namespace IoTSiteWise {
      * The maximum number of results to return for each paginated request. Default: 50
      */
     maxResults?: MaxResults;
+    /**
+     * The version alias that specifies the latest or active version of the asset model. The details are returned in the response. The default value is LATEST. See  Asset model versions in the IoT SiteWise User Guide.
+     */
+    assetModelVersion?: AssetModelVersionFilter;
   }
   export interface ListAssetModelCompositeModelsResponse {
     /**
@@ -3938,6 +4007,10 @@ declare namespace IoTSiteWise {
      *  Filters the requested list of asset model properties. You can choose one of the following options:    ALL – The list includes all asset model properties for a given asset model ID.     BASE – The list includes only base asset model properties for a given asset model ID.    Default: BASE 
      */
     filter?: ListAssetModelPropertiesFilter;
+    /**
+     * The version alias that specifies the latest or active version of the asset model. The details are returned in the response. The default value is LATEST. See  Asset model versions in the IoT SiteWise User Guide.
+     */
+    assetModelVersion?: AssetModelVersionFilter;
   }
   export interface ListAssetModelPropertiesResponse {
     /**
@@ -3951,6 +4024,10 @@ declare namespace IoTSiteWise {
   }
   export interface ListAssetModelsRequest {
     /**
+     * The type of asset model. If you don't provide an assetModelTypes, all types of asset models are returned.    ASSET_MODEL – An asset model that you can use to create assets. Can't be included as a component in another asset model.    COMPONENT_MODEL – A reusable component that you can include in the composite models of other asset models. You can't create assets directly from this type of asset model.   
+     */
+    assetModelTypes?: ListAssetModelsTypeFilter;
+    /**
      * The token to be used for the next set of paginated results.
      */
     nextToken?: NextToken;
@@ -3959,9 +4036,9 @@ declare namespace IoTSiteWise {
      */
     maxResults?: MaxResults;
     /**
-     * The type of asset model.    ASSET_MODEL – (default) An asset model that you can use to create assets. Can't be included as a component in another asset model.    COMPONENT_MODEL – A reusable component that you can include in the composite models of other asset models. You can't create assets directly from this type of asset model.   
+     * The version alias that specifies the latest or active version of the asset model. The details are returned in the response. The default value is LATEST. See  Asset model versions in the IoT SiteWise User Guide.
      */
-    assetModelTypes?: ListAssetModelsTypeFilter;
+    assetModelVersion?: AssetModelVersionFilter;
   }
   export interface ListAssetModelsResponse {
     /**
@@ -4066,11 +4143,11 @@ declare namespace IoTSiteWise {
      */
     assetId: CustomID;
     /**
-     * The ID of the hierarchy by which child assets are associated to the asset. (This can be either the actual ID in UUID format, or else externalId: followed by the external ID, if it has one. For more information, see Referencing objects with external IDs in the IoT SiteWise User Guide.) To find a hierarchy ID, use the DescribeAsset or DescribeAssetModel operations. This parameter is required if you choose CHILD for traversalDirection. For more information, see Asset hierarchies in the IoT SiteWise User Guide.
+     * (Optional) If you don't provide a hierarchyId, all the immediate assets in the traversalDirection will be returned.   The ID of the hierarchy by which child assets are associated to the asset. (This can be either the actual ID in UUID format, or else externalId: followed by the external ID, if it has one. For more information, see Referencing objects with external IDs in the IoT SiteWise User Guide.) For more information, see Asset hierarchies in the IoT SiteWise User Guide.
      */
     hierarchyId?: CustomID;
     /**
-     * The direction to list associated assets. Choose one of the following options:    CHILD – The list includes all child assets associated to the asset. The hierarchyId parameter is required if you choose CHILD.    PARENT – The list includes the asset's parent asset.   Default: CHILD 
+     * The direction to list associated assets. Choose one of the following options:    CHILD – The list includes all child assets associated to the asset.    PARENT – The list includes the asset's parent asset.   Default: CHILD 
      */
     traversalDirection?: TraversalDirection;
     /**
@@ -4668,6 +4745,13 @@ declare namespace IoTSiteWise {
   export type SSOApplicationId = string;
   export type ScalarType = "BOOLEAN"|"INT"|"DOUBLE"|"TIMESTAMP"|"STRING"|string;
   export type ScalarValue = string;
+  export type SelectAll = string;
+  export interface SiemensIE {
+    /**
+     * The name of the IoT Thing for your SiteWise Edge gateway.
+     */
+    iotCoreThingName: IotCoreThingName;
+  }
   export type StorageType = "SITEWISE_DEFAULT_STORAGE"|"MULTI_LAYER_STORAGE"|string;
   export type String = string;
   export type TagKey = string;
@@ -4835,7 +4919,7 @@ declare namespace IoTSiteWise {
      */
     assetModelCompositeModelDescription?: Description;
     /**
-     * A unique, friendly name for the composite model.
+     * A unique name for the composite model.
      */
     assetModelCompositeModelName: Name;
     /**
@@ -4843,9 +4927,21 @@ declare namespace IoTSiteWise {
      */
     clientToken?: ClientToken;
     /**
-     * The property definitions of the composite model. For more information, see &lt;LINK&gt;. You can specify up to 200 properties per composite model. For more information, see Quotas in the IoT SiteWise User Guide.
+     * The property definitions of the composite model. For more information, see  Inline custom composite models in the IoT SiteWise User Guide. You can specify up to 200 properties per composite model. For more information, see Quotas in the IoT SiteWise User Guide.
      */
     assetModelCompositeModelProperties?: AssetModelProperties;
+    /**
+     * The expected current entity tag (ETag) for the asset model’s latest or active version (specified using matchForVersionType). The update request is rejected if the tag does not match the latest or active version's current entity tag. See Optimistic locking for asset model writes in the IoT SiteWise User Guide.
+     */
+    ifMatch?: ETag;
+    /**
+     * Accepts * to reject the update request if an active version (specified using matchForVersionType as ACTIVE) already exists for the asset model.
+     */
+    ifNoneMatch?: SelectAll;
+    /**
+     * Specifies the asset model version type (LATEST or ACTIVE) used in conjunction with If-Match or If-None-Match headers to determine the target ETag for the update operation.
+     */
+    matchForVersionType?: AssetModelVersionType;
   }
   export interface UpdateAssetModelCompositeModelResponse {
     /**
@@ -4860,7 +4956,11 @@ declare namespace IoTSiteWise {
      */
     assetModelId: CustomID;
     /**
-     * A unique, friendly name for the asset model.
+     * An external ID to assign to the asset model. The asset model must not already have an external ID. The external ID must be unique within your Amazon Web Services account. For more information, see Using external IDs in the IoT SiteWise User Guide.
+     */
+    assetModelExternalId?: ExternalId;
+    /**
+     * A unique name for the asset model.
      */
     assetModelName: Name;
     /**
@@ -4876,7 +4976,7 @@ declare namespace IoTSiteWise {
      */
     assetModelHierarchies?: AssetModelHierarchies;
     /**
-     * The composite models that are part of this asset model. It groups properties (such as attributes, measurements, transforms, and metrics) and child composite models that model parts of your industrial equipment. Each composite model has a type that defines the properties that the composite model supports. Use composite models to define alarms on this asset model.  When creating custom composite models, you need to use CreateAssetModelCompositeModel. For more information, see &lt;LINK&gt;. 
+     * The composite models that are part of this asset model. It groups properties (such as attributes, measurements, transforms, and metrics) and child composite models that model parts of your industrial equipment. Each composite model has a type that defines the properties that the composite model supports. Use composite models to define alarms on this asset model.  When creating custom composite models, you need to use CreateAssetModelCompositeModel. For more information, see Creating custom composite models (Components) in the IoT SiteWise User Guide. 
      */
     assetModelCompositeModels?: AssetModelCompositeModels;
     /**
@@ -4884,9 +4984,17 @@ declare namespace IoTSiteWise {
      */
     clientToken?: ClientToken;
     /**
-     * An external ID to assign to the asset model. The asset model must not already have an external ID. The external ID must be unique within your Amazon Web Services account. For more information, see Using external IDs in the IoT SiteWise User Guide.
+     * The expected current entity tag (ETag) for the asset model’s latest or active version (specified using matchForVersionType). The update request is rejected if the tag does not match the latest or active version's current entity tag. See Optimistic locking for asset model writes in the IoT SiteWise User Guide.
      */
-    assetModelExternalId?: ExternalId;
+    ifMatch?: ETag;
+    /**
+     * Accepts * to reject the update request if an active version (specified using matchForVersionType as ACTIVE) already exists for the asset model.
+     */
+    ifNoneMatch?: SelectAll;
+    /**
+     * Specifies the asset model version type (LATEST or ACTIVE) used in conjunction with If-Match or If-None-Match headers to determine the target ETag for the update operation.
+     */
+    matchForVersionType?: AssetModelVersionType;
   }
   export interface UpdateAssetModelResponse {
     /**
@@ -5002,9 +5110,9 @@ declare namespace IoTSiteWise {
      */
     gatewayId: ID;
     /**
-     * A unique, friendly name for the gateway.
+     * A unique name for the gateway.
      */
-    gatewayName: Name;
+    gatewayName: GatewayName;
   }
   export interface UpdatePortalRequest {
     /**
@@ -5095,7 +5203,7 @@ declare namespace IoTSiteWise {
      */
     stringValue?: PropertyValueStringValue;
     /**
-     * Asset property data of type integer (number that's greater than or equal to zero).
+     * Asset property data of type integer (whole number).
      */
     integerValue?: PropertyValueIntegerValue;
     /**
@@ -5107,6 +5215,7 @@ declare namespace IoTSiteWise {
      */
     booleanValue?: PropertyValueBooleanValue;
   }
+  export type Version = string;
   export interface WarmTierRetentionPeriod {
     /**
      * The number of days the data is stored in the warm tier.

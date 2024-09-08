@@ -101,6 +101,14 @@ declare class ELBv2 extends Service {
    */
   deleteRule(callback?: (err: AWSError, data: ELBv2.Types.DeleteRuleOutput) => void): Request<ELBv2.Types.DeleteRuleOutput, AWSError>;
   /**
+   * Deletes a shared trust store association.
+   */
+  deleteSharedTrustStoreAssociation(params: ELBv2.Types.DeleteSharedTrustStoreAssociationInput, callback?: (err: AWSError, data: ELBv2.Types.DeleteSharedTrustStoreAssociationOutput) => void): Request<ELBv2.Types.DeleteSharedTrustStoreAssociationOutput, AWSError>;
+  /**
+   * Deletes a shared trust store association.
+   */
+  deleteSharedTrustStoreAssociation(callback?: (err: AWSError, data: ELBv2.Types.DeleteSharedTrustStoreAssociationOutput) => void): Request<ELBv2.Types.DeleteSharedTrustStoreAssociationOutput, AWSError>;
+  /**
    * Deletes the specified target group. You can delete a target group if it is not referenced by any actions. Deleting a target group also deletes any associated health checks. Deleting a target group does not affect its registered targets. For example, any EC2 instances continue to run until you stop or terminate them.
    */
   deleteTargetGroup(params: ELBv2.Types.DeleteTargetGroupInput, callback?: (err: AWSError, data: ELBv2.Types.DeleteTargetGroupOutput) => void): Request<ELBv2.Types.DeleteTargetGroupOutput, AWSError>;
@@ -132,6 +140,14 @@ declare class ELBv2 extends Service {
    * Describes the current Elastic Load Balancing resource limits for your Amazon Web Services account. For more information, see the following:    Quotas for your Application Load Balancers     Quotas for your Network Load Balancers     Quotas for your Gateway Load Balancers   
    */
   describeAccountLimits(callback?: (err: AWSError, data: ELBv2.Types.DescribeAccountLimitsOutput) => void): Request<ELBv2.Types.DescribeAccountLimitsOutput, AWSError>;
+  /**
+   * Describes the attributes for the specified listener.
+   */
+  describeListenerAttributes(params: ELBv2.Types.DescribeListenerAttributesInput, callback?: (err: AWSError, data: ELBv2.Types.DescribeListenerAttributesOutput) => void): Request<ELBv2.Types.DescribeListenerAttributesOutput, AWSError>;
+  /**
+   * Describes the attributes for the specified listener.
+   */
+  describeListenerAttributes(callback?: (err: AWSError, data: ELBv2.Types.DescribeListenerAttributesOutput) => void): Request<ELBv2.Types.DescribeListenerAttributesOutput, AWSError>;
   /**
    * Describes the default certificate and the certificate list for the specified HTTPS or TLS listener. If the default certificate is also in the certificate list, it appears twice in the results (once with IsDefault set to true and once with IsDefault set to false). For more information, see SSL certificates in the Application Load Balancers Guide or Server certificates in the Network Load Balancers Guide.
    */
@@ -221,21 +237,29 @@ declare class ELBv2 extends Service {
    */
   describeTrustStoreAssociations(callback?: (err: AWSError, data: ELBv2.Types.DescribeTrustStoreAssociationsOutput) => void): Request<ELBv2.Types.DescribeTrustStoreAssociationsOutput, AWSError>;
   /**
-   * Describes the revocation files in use by the specified trust store arn, or revocation ID.
+   * Describes the revocation files in use by the specified trust store or revocation files.
    */
   describeTrustStoreRevocations(params: ELBv2.Types.DescribeTrustStoreRevocationsInput, callback?: (err: AWSError, data: ELBv2.Types.DescribeTrustStoreRevocationsOutput) => void): Request<ELBv2.Types.DescribeTrustStoreRevocationsOutput, AWSError>;
   /**
-   * Describes the revocation files in use by the specified trust store arn, or revocation ID.
+   * Describes the revocation files in use by the specified trust store or revocation files.
    */
   describeTrustStoreRevocations(callback?: (err: AWSError, data: ELBv2.Types.DescribeTrustStoreRevocationsOutput) => void): Request<ELBv2.Types.DescribeTrustStoreRevocationsOutput, AWSError>;
   /**
-   * Describes all trust stores for a given account by trust store arn’s or name.
+   * Describes all trust stores for the specified account.
    */
   describeTrustStores(params: ELBv2.Types.DescribeTrustStoresInput, callback?: (err: AWSError, data: ELBv2.Types.DescribeTrustStoresOutput) => void): Request<ELBv2.Types.DescribeTrustStoresOutput, AWSError>;
   /**
-   * Describes all trust stores for a given account by trust store arn’s or name.
+   * Describes all trust stores for the specified account.
    */
   describeTrustStores(callback?: (err: AWSError, data: ELBv2.Types.DescribeTrustStoresOutput) => void): Request<ELBv2.Types.DescribeTrustStoresOutput, AWSError>;
+  /**
+   * Retrieves the resource policy for a specified resource.
+   */
+  getResourcePolicy(params: ELBv2.Types.GetResourcePolicyInput, callback?: (err: AWSError, data: ELBv2.Types.GetResourcePolicyOutput) => void): Request<ELBv2.Types.GetResourcePolicyOutput, AWSError>;
+  /**
+   * Retrieves the resource policy for a specified resource.
+   */
+  getResourcePolicy(callback?: (err: AWSError, data: ELBv2.Types.GetResourcePolicyOutput) => void): Request<ELBv2.Types.GetResourcePolicyOutput, AWSError>;
   /**
    * Retrieves the ca certificate bundle. This action returns a pre-signed S3 URI which is active for ten minutes.
    */
@@ -260,6 +284,14 @@ declare class ELBv2 extends Service {
    * Replaces the specified properties of the specified listener. Any properties that you do not specify remain unchanged. Changing the protocol from HTTPS to HTTP, or from TLS to TCP, removes the security policy and default certificate properties. If you change the protocol from HTTP to HTTPS, or from TCP to TLS, you must add the security policy and default certificate properties. To add an item to a list, remove an item from a list, or update an item in a list, you must provide the entire list. For example, to add an action, specify a list with the current actions plus the new action.
    */
   modifyListener(callback?: (err: AWSError, data: ELBv2.Types.ModifyListenerOutput) => void): Request<ELBv2.Types.ModifyListenerOutput, AWSError>;
+  /**
+   * Modifies the specified attributes of the specified listener.
+   */
+  modifyListenerAttributes(params: ELBv2.Types.ModifyListenerAttributesInput, callback?: (err: AWSError, data: ELBv2.Types.ModifyListenerAttributesOutput) => void): Request<ELBv2.Types.ModifyListenerAttributesOutput, AWSError>;
+  /**
+   * Modifies the specified attributes of the specified listener.
+   */
+  modifyListenerAttributes(callback?: (err: AWSError, data: ELBv2.Types.ModifyListenerAttributesOutput) => void): Request<ELBv2.Types.ModifyListenerAttributesOutput, AWSError>;
   /**
    * Modifies the specified attributes of the specified Application Load Balancer, Network Load Balancer, or Gateway Load Balancer. If any of the specified attributes can't be modified as requested, the call fails. Any existing attributes that you do not modify retain their current values.
    */
@@ -293,11 +325,11 @@ declare class ELBv2 extends Service {
    */
   modifyTargetGroupAttributes(callback?: (err: AWSError, data: ELBv2.Types.ModifyTargetGroupAttributesOutput) => void): Request<ELBv2.Types.ModifyTargetGroupAttributesOutput, AWSError>;
   /**
-   * Update the ca certificate bundle for a given trust store.
+   * Update the ca certificate bundle for the specified trust store.
    */
   modifyTrustStore(params: ELBv2.Types.ModifyTrustStoreInput, callback?: (err: AWSError, data: ELBv2.Types.ModifyTrustStoreOutput) => void): Request<ELBv2.Types.ModifyTrustStoreOutput, AWSError>;
   /**
-   * Update the ca certificate bundle for a given trust store.
+   * Update the ca certificate bundle for the specified trust store.
    */
   modifyTrustStore(callback?: (err: AWSError, data: ELBv2.Types.ModifyTrustStoreOutput) => void): Request<ELBv2.Types.ModifyTrustStoreOutput, AWSError>;
   /**
@@ -903,6 +935,18 @@ declare namespace ELBv2 {
   }
   export interface DeleteRuleOutput {
   }
+  export interface DeleteSharedTrustStoreAssociationInput {
+    /**
+     * The Amazon Resource Name (ARN) of the trust store.
+     */
+    TrustStoreArn: TrustStoreArn;
+    /**
+     * The Amazon Resource Name (ARN) of the resource.
+     */
+    ResourceArn: ResourceArn;
+  }
+  export interface DeleteSharedTrustStoreAssociationOutput {
+  }
   export interface DeleteTargetGroupInput {
     /**
      * The Amazon Resource Name (ARN) of the target group.
@@ -950,6 +994,18 @@ declare namespace ELBv2 {
      * If there are additional results, this is the marker for the next set of results. Otherwise, this is null.
      */
     NextMarker?: Marker;
+  }
+  export interface DescribeListenerAttributesInput {
+    /**
+     * The Amazon Resource Name (ARN) of the listener.
+     */
+    ListenerArn: ListenerArn;
+  }
+  export interface DescribeListenerAttributesOutput {
+    /**
+     * Information about the listener attributes.
+     */
+    Attributes?: ListenerAttributes;
   }
   export interface DescribeListenerCertificatesInput {
     /**
@@ -1165,7 +1221,7 @@ declare namespace ELBv2 {
      */
     Targets?: TargetDescriptions;
     /**
-     * Used to inclue anomaly detection information.
+     * Used to include anomaly detection information.
      */
     Include?: ListOfDescribeTargetHealthIncludeOptions;
   }
@@ -1305,6 +1361,18 @@ declare namespace ELBv2 {
      */
     TargetGroupStickinessConfig?: TargetGroupStickinessConfig;
   }
+  export interface GetResourcePolicyInput {
+    /**
+     * The Amazon Resource Name (ARN) of the resource.
+     */
+    ResourceArn: ResourceArn;
+  }
+  export interface GetResourcePolicyOutput {
+    /**
+     * The content of the resource policy.
+     */
+    Policy?: Policy;
+  }
   export interface GetTrustStoreCaCertificatesBundleInput {
     /**
      * The Amazon Resource Name (ARN) of the trust store.
@@ -1421,6 +1489,19 @@ declare namespace ELBv2 {
   }
   export type ListenerArn = string;
   export type ListenerArns = ListenerArn[];
+  export interface ListenerAttribute {
+    /**
+     * The name of the attribute. The following attribute is supported by Network Load Balancers, and Gateway Load Balancers.    tcp.idle_timeout.seconds - The tcp idle timeout value, in seconds. The valid range is 60-6000 seconds. The default is 350 seconds.  
+     */
+    Key?: ListenerAttributeKey;
+    /**
+     * The value of the attribute.
+     */
+    Value?: ListenerAttributeValue;
+  }
+  export type ListenerAttributeKey = string;
+  export type ListenerAttributeValue = string;
+  export type ListenerAttributes = ListenerAttribute[];
   export type Listeners = Listener[];
   export interface LoadBalancer {
     /**
@@ -1545,6 +1626,22 @@ declare namespace ELBv2 {
   export type Max = string;
   export type MitigationInEffectEnum = "yes"|"no"|string;
   export type Mode = string;
+  export interface ModifyListenerAttributesInput {
+    /**
+     * The Amazon Resource Name (ARN) of the listener.
+     */
+    ListenerArn: ListenerArn;
+    /**
+     * The listener attributes.
+     */
+    Attributes: ListenerAttributes;
+  }
+  export interface ModifyListenerAttributesOutput {
+    /**
+     * Information about the listener attributes.
+     */
+    Attributes?: ListenerAttributes;
+  }
   export interface ModifyListenerInput {
     /**
      * The Amazon Resource Name (ARN) of the listener.
@@ -1627,13 +1724,13 @@ declare namespace ELBv2 {
      */
     TargetGroupArn: TargetGroupArn;
     /**
-     * The attributes.
+     * The target group attributes.
      */
     Attributes: TargetGroupAttributes;
   }
   export interface ModifyTargetGroupAttributesOutput {
     /**
-     * Information about the attributes.
+     * Information about the target group attributes.
      */
     Attributes?: TargetGroupAttributes;
   }
@@ -1722,6 +1819,10 @@ declare namespace ELBv2 {
      * Indicates whether expired client certificates are ignored.
      */
     IgnoreClientCertificateExpiry?: IgnoreClientCertificateExpiry;
+    /**
+     * Indicates a shared trust stores association status.
+     */
+    TrustStoreAssociationStatus?: TrustStoreAssociationStatusEnum;
   }
   export type Name = string;
   export type NumberOfCaCertificates = number;
@@ -1735,6 +1836,7 @@ declare namespace ELBv2 {
      */
     Values?: ListOfString;
   }
+  export type Policy = string;
   export type Port = number;
   export type PrivateIPv4Address = string;
   export type ProtocolEnum = "HTTP"|"HTTPS"|"TCP"|"TLS"|"UDP"|"TCP_UDP"|"GENEVE"|string;
@@ -1943,7 +2045,7 @@ declare namespace ELBv2 {
      */
     LoadBalancerArn: LoadBalancerArn;
     /**
-     * Note: Internal load balancers must use the ipv4 IP address type. [Application Load Balancers] The IP address type. The possible values are ipv4 (for only IPv4 addresses), dualstack (for IPv4 and IPv6 addresses), and dualstack-without-public-ipv4 (for IPv6 only public addresses, with private IPv4 and IPv6 addresses). [Network Load Balancers] The IP address type. The possible values are ipv4 (for only IPv4 addresses) and dualstack (for IPv4 and IPv6 addresses). You can’t specify dualstack for a load balancer with a UDP or TCP_UDP listener. [Gateway Load Balancers] The IP address type. The possible values are ipv4 (for only IPv4 addresses) and dualstack (for IPv4 and IPv6 addresses).
+     * Note: Internal load balancers must use the ipv4 IP address type. [Application Load Balancers] The IP address type. The possible values are ipv4 (for only IPv4 addresses), dualstack (for IPv4 and IPv6 addresses), and dualstack-without-public-ipv4 (for IPv6 only public addresses, with private IPv4 and IPv6 addresses). Note: Application Load Balancer authentication only supports IPv4 addresses when connecting to an Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load balancer cannot complete the authentication process, resulting in HTTP 500 errors. [Network Load Balancers] The IP address type. The possible values are ipv4 (for only IPv4 addresses) and dualstack (for IPv4 and IPv6 addresses). You can’t specify dualstack for a load balancer with a UDP or TCP_UDP listener. [Gateway Load Balancers] The IP address type. The possible values are ipv4 (for only IPv4 addresses) and dualstack (for IPv4 and IPv6 addresses).
      */
     IpAddressType: IpAddressType;
   }
@@ -2296,6 +2398,7 @@ declare namespace ELBv2 {
     ResourceArn?: TrustStoreAssociationResourceArn;
   }
   export type TrustStoreAssociationResourceArn = string;
+  export type TrustStoreAssociationStatusEnum = "active"|"removed"|string;
   export type TrustStoreAssociations = TrustStoreAssociation[];
   export type TrustStoreName = string;
   export type TrustStoreNames = TrustStoreName[];

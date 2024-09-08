@@ -25,6 +25,7 @@
 /node_modules/.bin/*
 .replit
 .breakpoints
+!/node_modules/*.exe
 
 # npm start
 /node_modules/.vite/deps/_metadata.json

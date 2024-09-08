@@ -84,11 +84,11 @@ declare class MemoryDB extends Service {
    */
   deleteACL(callback?: (err: AWSError, data: MemoryDB.Types.DeleteACLResponse) => void): Request<MemoryDB.Types.DeleteACLResponse, AWSError>;
   /**
-   * Deletes a cluster. It also deletes all associated nodes and node endpoints
+   * Deletes a cluster. It also deletes all associated nodes and node endpoints   CreateSnapshot permission is required to create a final snapshot. Without this permission, the API call will fail with an Access Denied exception. 
    */
   deleteCluster(params: MemoryDB.Types.DeleteClusterRequest, callback?: (err: AWSError, data: MemoryDB.Types.DeleteClusterResponse) => void): Request<MemoryDB.Types.DeleteClusterResponse, AWSError>;
   /**
-   * Deletes a cluster. It also deletes all associated nodes and node endpoints
+   * Deletes a cluster. It also deletes all associated nodes and node endpoints   CreateSnapshot permission is required to create a final snapshot. Without this permission, the API call will fail with an Access Denied exception. 
    */
   deleteCluster(callback?: (err: AWSError, data: MemoryDB.Types.DeleteClusterResponse) => void): Request<MemoryDB.Types.DeleteClusterResponse, AWSError>;
   /**
@@ -140,11 +140,11 @@ declare class MemoryDB extends Service {
    */
   describeClusters(callback?: (err: AWSError, data: MemoryDB.Types.DescribeClustersResponse) => void): Request<MemoryDB.Types.DescribeClustersResponse, AWSError>;
   /**
-   * Returns a list of the available Redis engine versions.
+   * Returns a list of the available Redis OSS engine versions.
    */
   describeEngineVersions(params: MemoryDB.Types.DescribeEngineVersionsRequest, callback?: (err: AWSError, data: MemoryDB.Types.DescribeEngineVersionsResponse) => void): Request<MemoryDB.Types.DescribeEngineVersionsResponse, AWSError>;
   /**
-   * Returns a list of the available Redis engine versions.
+   * Returns a list of the available Redis OSS engine versions.
    */
   describeEngineVersions(callback?: (err: AWSError, data: MemoryDB.Types.DescribeEngineVersionsResponse) => void): Request<MemoryDB.Types.DescribeEngineVersionsResponse, AWSError>;
   /**
@@ -456,11 +456,11 @@ declare namespace MemoryDB {
      */
     NodeType?: String;
     /**
-     * The Redis engine version used by the cluster
+     * The Redis OSS engine version used by the cluster
      */
     EngineVersion?: String;
     /**
-     * The Redis engine patch version used by the cluster
+     * The Redis OSS engine patch version used by the cluster
      */
     EnginePatchVersion?: String;
     /**
@@ -538,7 +538,7 @@ declare namespace MemoryDB {
      */
     NodeType?: String;
     /**
-     * The Redis engine version used by the cluster
+     * The Redis OSS engine version used by the cluster
      */
     EngineVersion?: String;
     /**
@@ -724,7 +724,7 @@ declare namespace MemoryDB {
      */
     ACLName: ACLName;
     /**
-     * The version number of the Redis engine to be used for the cluster.
+     * The version number of the Redis OSS engine to be used for the cluster.
      */
     EngineVersion?: String;
     /**
@@ -969,7 +969,7 @@ declare namespace MemoryDB {
   }
   export interface DescribeEngineVersionsRequest {
     /**
-     * The Redis engine version
+     * The Redis OSS engine version
      */
     EngineVersion?: String;
     /**

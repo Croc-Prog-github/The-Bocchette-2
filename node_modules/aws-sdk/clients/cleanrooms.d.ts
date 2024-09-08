@@ -84,6 +84,30 @@ declare class CleanRooms extends Service {
    */
   createConfiguredTableAssociation(callback?: (err: AWSError, data: CleanRooms.Types.CreateConfiguredTableAssociationOutput) => void): Request<CleanRooms.Types.CreateConfiguredTableAssociationOutput, AWSError>;
   /**
+   *  Creates a new analysis rule for an associated configured table.
+   */
+  createConfiguredTableAssociationAnalysisRule(params: CleanRooms.Types.CreateConfiguredTableAssociationAnalysisRuleInput, callback?: (err: AWSError, data: CleanRooms.Types.CreateConfiguredTableAssociationAnalysisRuleOutput) => void): Request<CleanRooms.Types.CreateConfiguredTableAssociationAnalysisRuleOutput, AWSError>;
+  /**
+   *  Creates a new analysis rule for an associated configured table.
+   */
+  createConfiguredTableAssociationAnalysisRule(callback?: (err: AWSError, data: CleanRooms.Types.CreateConfiguredTableAssociationAnalysisRuleOutput) => void): Request<CleanRooms.Types.CreateConfiguredTableAssociationAnalysisRuleOutput, AWSError>;
+  /**
+   * Creates an ID mapping table.
+   */
+  createIdMappingTable(params: CleanRooms.Types.CreateIdMappingTableInput, callback?: (err: AWSError, data: CleanRooms.Types.CreateIdMappingTableOutput) => void): Request<CleanRooms.Types.CreateIdMappingTableOutput, AWSError>;
+  /**
+   * Creates an ID mapping table.
+   */
+  createIdMappingTable(callback?: (err: AWSError, data: CleanRooms.Types.CreateIdMappingTableOutput) => void): Request<CleanRooms.Types.CreateIdMappingTableOutput, AWSError>;
+  /**
+   * Creates an ID namespace association.
+   */
+  createIdNamespaceAssociation(params: CleanRooms.Types.CreateIdNamespaceAssociationInput, callback?: (err: AWSError, data: CleanRooms.Types.CreateIdNamespaceAssociationOutput) => void): Request<CleanRooms.Types.CreateIdNamespaceAssociationOutput, AWSError>;
+  /**
+   * Creates an ID namespace association.
+   */
+  createIdNamespaceAssociation(callback?: (err: AWSError, data: CleanRooms.Types.CreateIdNamespaceAssociationOutput) => void): Request<CleanRooms.Types.CreateIdNamespaceAssociationOutput, AWSError>;
+  /**
    * Creates a membership for a specific collaboration identifier and joins the collaboration.
    */
   createMembership(params: CleanRooms.Types.CreateMembershipInput, callback?: (err: AWSError, data: CleanRooms.Types.CreateMembershipOutput) => void): Request<CleanRooms.Types.CreateMembershipOutput, AWSError>;
@@ -148,6 +172,30 @@ declare class CleanRooms extends Service {
    */
   deleteConfiguredTableAssociation(callback?: (err: AWSError, data: CleanRooms.Types.DeleteConfiguredTableAssociationOutput) => void): Request<CleanRooms.Types.DeleteConfiguredTableAssociationOutput, AWSError>;
   /**
+   * Deletes an analysis rule for a configured table association.
+   */
+  deleteConfiguredTableAssociationAnalysisRule(params: CleanRooms.Types.DeleteConfiguredTableAssociationAnalysisRuleInput, callback?: (err: AWSError, data: CleanRooms.Types.DeleteConfiguredTableAssociationAnalysisRuleOutput) => void): Request<CleanRooms.Types.DeleteConfiguredTableAssociationAnalysisRuleOutput, AWSError>;
+  /**
+   * Deletes an analysis rule for a configured table association.
+   */
+  deleteConfiguredTableAssociationAnalysisRule(callback?: (err: AWSError, data: CleanRooms.Types.DeleteConfiguredTableAssociationAnalysisRuleOutput) => void): Request<CleanRooms.Types.DeleteConfiguredTableAssociationAnalysisRuleOutput, AWSError>;
+  /**
+   * Deletes an ID mapping table.
+   */
+  deleteIdMappingTable(params: CleanRooms.Types.DeleteIdMappingTableInput, callback?: (err: AWSError, data: CleanRooms.Types.DeleteIdMappingTableOutput) => void): Request<CleanRooms.Types.DeleteIdMappingTableOutput, AWSError>;
+  /**
+   * Deletes an ID mapping table.
+   */
+  deleteIdMappingTable(callback?: (err: AWSError, data: CleanRooms.Types.DeleteIdMappingTableOutput) => void): Request<CleanRooms.Types.DeleteIdMappingTableOutput, AWSError>;
+  /**
+   * Deletes an ID namespace association.
+   */
+  deleteIdNamespaceAssociation(params: CleanRooms.Types.DeleteIdNamespaceAssociationInput, callback?: (err: AWSError, data: CleanRooms.Types.DeleteIdNamespaceAssociationOutput) => void): Request<CleanRooms.Types.DeleteIdNamespaceAssociationOutput, AWSError>;
+  /**
+   * Deletes an ID namespace association.
+   */
+  deleteIdNamespaceAssociation(callback?: (err: AWSError, data: CleanRooms.Types.DeleteIdNamespaceAssociationOutput) => void): Request<CleanRooms.Types.DeleteIdNamespaceAssociationOutput, AWSError>;
+  /**
    * Removes the specified member from a collaboration. The removed member is placed in the Removed status and can't interact with the collaboration. The removed member's data is inaccessible to active members of the collaboration.
    */
   deleteMember(params: CleanRooms.Types.DeleteMemberInput, callback?: (err: AWSError, data: CleanRooms.Types.DeleteMemberOutput) => void): Request<CleanRooms.Types.DeleteMemberOutput, AWSError>;
@@ -204,6 +252,14 @@ declare class CleanRooms extends Service {
    */
   getCollaborationConfiguredAudienceModelAssociation(callback?: (err: AWSError, data: CleanRooms.Types.GetCollaborationConfiguredAudienceModelAssociationOutput) => void): Request<CleanRooms.Types.GetCollaborationConfiguredAudienceModelAssociationOutput, AWSError>;
   /**
+   * Retrieves an ID namespace association from a specific collaboration.
+   */
+  getCollaborationIdNamespaceAssociation(params: CleanRooms.Types.GetCollaborationIdNamespaceAssociationInput, callback?: (err: AWSError, data: CleanRooms.Types.GetCollaborationIdNamespaceAssociationOutput) => void): Request<CleanRooms.Types.GetCollaborationIdNamespaceAssociationOutput, AWSError>;
+  /**
+   * Retrieves an ID namespace association from a specific collaboration.
+   */
+  getCollaborationIdNamespaceAssociation(callback?: (err: AWSError, data: CleanRooms.Types.GetCollaborationIdNamespaceAssociationOutput) => void): Request<CleanRooms.Types.GetCollaborationIdNamespaceAssociationOutput, AWSError>;
+  /**
    * Returns details about a specified privacy budget template.
    */
   getCollaborationPrivacyBudgetTemplate(params: CleanRooms.Types.GetCollaborationPrivacyBudgetTemplateInput, callback?: (err: AWSError, data: CleanRooms.Types.GetCollaborationPrivacyBudgetTemplateOutput) => void): Request<CleanRooms.Types.GetCollaborationPrivacyBudgetTemplateOutput, AWSError>;
@@ -243,6 +299,30 @@ declare class CleanRooms extends Service {
    * Retrieves a configured table association.
    */
   getConfiguredTableAssociation(callback?: (err: AWSError, data: CleanRooms.Types.GetConfiguredTableAssociationOutput) => void): Request<CleanRooms.Types.GetConfiguredTableAssociationOutput, AWSError>;
+  /**
+   *  Retrieves the analysis rule for a configured table association.
+   */
+  getConfiguredTableAssociationAnalysisRule(params: CleanRooms.Types.GetConfiguredTableAssociationAnalysisRuleInput, callback?: (err: AWSError, data: CleanRooms.Types.GetConfiguredTableAssociationAnalysisRuleOutput) => void): Request<CleanRooms.Types.GetConfiguredTableAssociationAnalysisRuleOutput, AWSError>;
+  /**
+   *  Retrieves the analysis rule for a configured table association.
+   */
+  getConfiguredTableAssociationAnalysisRule(callback?: (err: AWSError, data: CleanRooms.Types.GetConfiguredTableAssociationAnalysisRuleOutput) => void): Request<CleanRooms.Types.GetConfiguredTableAssociationAnalysisRuleOutput, AWSError>;
+  /**
+   * Retrieves an ID mapping table.
+   */
+  getIdMappingTable(params: CleanRooms.Types.GetIdMappingTableInput, callback?: (err: AWSError, data: CleanRooms.Types.GetIdMappingTableOutput) => void): Request<CleanRooms.Types.GetIdMappingTableOutput, AWSError>;
+  /**
+   * Retrieves an ID mapping table.
+   */
+  getIdMappingTable(callback?: (err: AWSError, data: CleanRooms.Types.GetIdMappingTableOutput) => void): Request<CleanRooms.Types.GetIdMappingTableOutput, AWSError>;
+  /**
+   * Retrieves an ID namespace association.
+   */
+  getIdNamespaceAssociation(params: CleanRooms.Types.GetIdNamespaceAssociationInput, callback?: (err: AWSError, data: CleanRooms.Types.GetIdNamespaceAssociationOutput) => void): Request<CleanRooms.Types.GetIdNamespaceAssociationOutput, AWSError>;
+  /**
+   * Retrieves an ID namespace association.
+   */
+  getIdNamespaceAssociation(callback?: (err: AWSError, data: CleanRooms.Types.GetIdNamespaceAssociationOutput) => void): Request<CleanRooms.Types.GetIdNamespaceAssociationOutput, AWSError>;
   /**
    * Retrieves a specified membership for an identifier.
    */
@@ -308,6 +388,14 @@ declare class CleanRooms extends Service {
    */
   listCollaborationConfiguredAudienceModelAssociations(callback?: (err: AWSError, data: CleanRooms.Types.ListCollaborationConfiguredAudienceModelAssociationsOutput) => void): Request<CleanRooms.Types.ListCollaborationConfiguredAudienceModelAssociationsOutput, AWSError>;
   /**
+   * Returns a list of the ID namespace associations in a collaboration.
+   */
+  listCollaborationIdNamespaceAssociations(params: CleanRooms.Types.ListCollaborationIdNamespaceAssociationsInput, callback?: (err: AWSError, data: CleanRooms.Types.ListCollaborationIdNamespaceAssociationsOutput) => void): Request<CleanRooms.Types.ListCollaborationIdNamespaceAssociationsOutput, AWSError>;
+  /**
+   * Returns a list of the ID namespace associations in a collaboration.
+   */
+  listCollaborationIdNamespaceAssociations(callback?: (err: AWSError, data: CleanRooms.Types.ListCollaborationIdNamespaceAssociationsOutput) => void): Request<CleanRooms.Types.ListCollaborationIdNamespaceAssociationsOutput, AWSError>;
+  /**
    * Returns an array that summarizes each privacy budget template in a specified collaboration.
    */
   listCollaborationPrivacyBudgetTemplates(params: CleanRooms.Types.ListCollaborationPrivacyBudgetTemplatesInput, callback?: (err: AWSError, data: CleanRooms.Types.ListCollaborationPrivacyBudgetTemplatesOutput) => void): Request<CleanRooms.Types.ListCollaborationPrivacyBudgetTemplatesOutput, AWSError>;
@@ -355,6 +443,22 @@ declare class CleanRooms extends Service {
    * Lists configured tables.
    */
   listConfiguredTables(callback?: (err: AWSError, data: CleanRooms.Types.ListConfiguredTablesOutput) => void): Request<CleanRooms.Types.ListConfiguredTablesOutput, AWSError>;
+  /**
+   * Returns a list of ID mapping tables.
+   */
+  listIdMappingTables(params: CleanRooms.Types.ListIdMappingTablesInput, callback?: (err: AWSError, data: CleanRooms.Types.ListIdMappingTablesOutput) => void): Request<CleanRooms.Types.ListIdMappingTablesOutput, AWSError>;
+  /**
+   * Returns a list of ID mapping tables.
+   */
+  listIdMappingTables(callback?: (err: AWSError, data: CleanRooms.Types.ListIdMappingTablesOutput) => void): Request<CleanRooms.Types.ListIdMappingTablesOutput, AWSError>;
+  /**
+   * Returns a list of ID namespace associations.
+   */
+  listIdNamespaceAssociations(params: CleanRooms.Types.ListIdNamespaceAssociationsInput, callback?: (err: AWSError, data: CleanRooms.Types.ListIdNamespaceAssociationsOutput) => void): Request<CleanRooms.Types.ListIdNamespaceAssociationsOutput, AWSError>;
+  /**
+   * Returns a list of ID namespace associations.
+   */
+  listIdNamespaceAssociations(callback?: (err: AWSError, data: CleanRooms.Types.ListIdNamespaceAssociationsOutput) => void): Request<CleanRooms.Types.ListIdNamespaceAssociationsOutput, AWSError>;
   /**
    * Lists all members within a collaboration.
    */
@@ -411,6 +515,14 @@ declare class CleanRooms extends Service {
    * Lists all of the tags that have been added to a resource.
    */
   listTagsForResource(callback?: (err: AWSError, data: CleanRooms.Types.ListTagsForResourceOutput) => void): Request<CleanRooms.Types.ListTagsForResourceOutput, AWSError>;
+  /**
+   * Defines the information that's necessary to populate an ID mapping table.
+   */
+  populateIdMappingTable(params: CleanRooms.Types.PopulateIdMappingTableInput, callback?: (err: AWSError, data: CleanRooms.Types.PopulateIdMappingTableOutput) => void): Request<CleanRooms.Types.PopulateIdMappingTableOutput, AWSError>;
+  /**
+   * Defines the information that's necessary to populate an ID mapping table.
+   */
+  populateIdMappingTable(callback?: (err: AWSError, data: CleanRooms.Types.PopulateIdMappingTableOutput) => void): Request<CleanRooms.Types.PopulateIdMappingTableOutput, AWSError>;
   /**
    * An estimate of the number of aggregation functions that the member who can query can run given epsilon and noise parameters.
    */
@@ -492,6 +604,30 @@ declare class CleanRooms extends Service {
    */
   updateConfiguredTableAssociation(callback?: (err: AWSError, data: CleanRooms.Types.UpdateConfiguredTableAssociationOutput) => void): Request<CleanRooms.Types.UpdateConfiguredTableAssociationOutput, AWSError>;
   /**
+   *  Updates the analysis rule for a configured table association.
+   */
+  updateConfiguredTableAssociationAnalysisRule(params: CleanRooms.Types.UpdateConfiguredTableAssociationAnalysisRuleInput, callback?: (err: AWSError, data: CleanRooms.Types.UpdateConfiguredTableAssociationAnalysisRuleOutput) => void): Request<CleanRooms.Types.UpdateConfiguredTableAssociationAnalysisRuleOutput, AWSError>;
+  /**
+   *  Updates the analysis rule for a configured table association.
+   */
+  updateConfiguredTableAssociationAnalysisRule(callback?: (err: AWSError, data: CleanRooms.Types.UpdateConfiguredTableAssociationAnalysisRuleOutput) => void): Request<CleanRooms.Types.UpdateConfiguredTableAssociationAnalysisRuleOutput, AWSError>;
+  /**
+   * Provides the details that are necessary to update an ID mapping table.
+   */
+  updateIdMappingTable(params: CleanRooms.Types.UpdateIdMappingTableInput, callback?: (err: AWSError, data: CleanRooms.Types.UpdateIdMappingTableOutput) => void): Request<CleanRooms.Types.UpdateIdMappingTableOutput, AWSError>;
+  /**
+   * Provides the details that are necessary to update an ID mapping table.
+   */
+  updateIdMappingTable(callback?: (err: AWSError, data: CleanRooms.Types.UpdateIdMappingTableOutput) => void): Request<CleanRooms.Types.UpdateIdMappingTableOutput, AWSError>;
+  /**
+   * Provides the details that are necessary to update an ID namespace association.
+   */
+  updateIdNamespaceAssociation(params: CleanRooms.Types.UpdateIdNamespaceAssociationInput, callback?: (err: AWSError, data: CleanRooms.Types.UpdateIdNamespaceAssociationOutput) => void): Request<CleanRooms.Types.UpdateIdNamespaceAssociationOutput, AWSError>;
+  /**
+   * Provides the details that are necessary to update an ID namespace association.
+   */
+  updateIdNamespaceAssociation(callback?: (err: AWSError, data: CleanRooms.Types.UpdateIdNamespaceAssociationOutput) => void): Request<CleanRooms.Types.UpdateIdNamespaceAssociationOutput, AWSError>;
+  /**
    * Updates a membership.
    */
   updateMembership(params: CleanRooms.Types.UpdateMembershipInput, callback?: (err: AWSError, data: CleanRooms.Types.UpdateMembershipOutput) => void): Request<CleanRooms.Types.UpdateMembershipOutput, AWSError>;
@@ -518,6 +654,8 @@ declare class CleanRooms extends Service {
 }
 declare namespace CleanRooms {
   export type AccountId = string;
+  export type AdditionalAnalyses = "ALLOWED"|"REQUIRED"|"NOT_ALLOWED"|string;
+  export type AdditionalAnalysesResourceArn = string;
   export interface AggregateColumn {
     /**
      * Column names in configured table of aggregate columns.
@@ -547,7 +685,9 @@ declare namespace CleanRooms {
   export type AggregationConstraintMinimumInteger = number;
   export type AggregationConstraints = AggregationConstraint[];
   export type AggregationType = "COUNT_DISTINCT"|string;
+  export type AllowedAdditionalAnalyses = AdditionalAnalysesResourceArn[];
   export type AllowedColumnList = ColumnName[];
+  export type AllowedResultReceivers = AccountId[];
   export type AnalysisFormat = "SQL"|string;
   export type AnalysisMethod = "DIRECT_QUERY"|string;
   export interface AnalysisParameter {
@@ -620,6 +760,10 @@ declare namespace CleanRooms {
      * Columns that must meet a specific threshold value (after an aggregation function is applied to it) for each output row to be returned.
      */
     outputConstraints: AggregationConstraints;
+    /**
+     *  An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the direct query.  The additionalAnalyses parameter is currently supported for the list analysis rule (AnalysisRuleList) and the custom analysis rule (AnalysisRuleCustom).
+     */
+    additionalAnalyses?: AdditionalAnalyses;
   }
   export type AnalysisRuleAggregationAggregateColumnsList = AggregateColumn[];
   export type AnalysisRuleColumnList = AnalysisRuleColumnName[];
@@ -634,12 +778,35 @@ declare namespace CleanRooms {
      */
     allowedAnalysisProviders?: AnalysisRuleCustomAllowedAnalysisProvidersList;
     /**
+     *  An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the direct query.
+     */
+    additionalAnalyses?: AdditionalAnalyses;
+    /**
+     *  A list of columns that aren't allowed to be shown in the query output.
+     */
+    disallowedOutputColumns?: AnalysisRuleColumnList;
+    /**
      * The differential privacy configuration.
      */
     differentialPrivacy?: DifferentialPrivacyConfiguration;
   }
   export type AnalysisRuleCustomAllowedAnalysesList = AnalysisTemplateArnOrQueryWildcard[];
   export type AnalysisRuleCustomAllowedAnalysisProvidersList = AccountId[];
+  export interface AnalysisRuleIdMappingTable {
+    /**
+     * The columns that query runners are allowed to use in an INNER JOIN statement.
+     */
+    joinColumns: AnalysisRuleIdMappingTableJoinColumnsList;
+    /**
+     * The query constraints of the analysis rule ID mapping table.
+     */
+    queryConstraints: QueryConstraintList;
+    /**
+     * The columns that query runners are allowed to select, group by, or filter by.
+     */
+    dimensionColumns?: AnalysisRuleColumnList;
+  }
+  export type AnalysisRuleIdMappingTableJoinColumnsList = AnalysisRuleColumnName[];
   export interface AnalysisRuleList {
     /**
      * Columns that can be used to join a configured table with the table of the member who can query and other members' configured tables.
@@ -653,6 +820,10 @@ declare namespace CleanRooms {
      * Columns that can be listed in the output.
      */
     listColumns: AnalysisRuleColumnList;
+    /**
+     *  An indicator as to whether additional analyses (such as Clean Rooms ML) can be applied to the output of the direct query.
+     */
+    additionalAnalyses?: AdditionalAnalyses;
   }
   export type AnalysisRuleListJoinColumnsList = AnalysisRuleColumnName[];
   export interface AnalysisRulePolicy {
@@ -674,8 +845,12 @@ declare namespace CleanRooms {
      * Analysis rule type that enables custom SQL queries on a configured table.
      */
     custom?: AnalysisRuleCustom;
+    /**
+     * The ID mapping table.
+     */
+    idMappingTable?: AnalysisRuleIdMappingTable;
   }
-  export type AnalysisRuleType = "AGGREGATION"|"LIST"|"CUSTOM"|string;
+  export type AnalysisRuleType = "AGGREGATION"|"LIST"|"CUSTOM"|"ID_MAPPING_TABLE"|string;
   export type AnalysisRuleTypeList = AnalysisRuleType[];
   export interface AnalysisSchema {
     /**
@@ -823,6 +998,7 @@ declare namespace CleanRooms {
   }
   export type AnalysisTemplateValidationStatusReasonList = AnalysisTemplateValidationStatusReason[];
   export type AnalysisTemplateValidationType = "DIFFERENTIAL_PRIVACY"|string;
+  export type AnalysisType = "DIRECT_ANALYSIS"|"ADDITIONAL_ANALYSIS"|string;
   export interface BatchGetCollaborationAnalysisTemplateError {
     /**
      * The Amazon Resource Name (ARN) of the analysis template.
@@ -1169,6 +1345,100 @@ declare namespace CleanRooms {
   }
   export type CollaborationConfiguredAudienceModelAssociationSummaryList = CollaborationConfiguredAudienceModelAssociationSummary[];
   export type CollaborationDescription = string;
+  export interface CollaborationIdNamespaceAssociation {
+    /**
+     * The unique identifier of the collaboration ID namespace association.
+     */
+    id: IdNamespaceAssociationIdentifier;
+    /**
+     * The Amazon Resource Name (ARN) of the collaboration ID namespace association.
+     */
+    arn: IdNamespaceAssociationArn;
+    /**
+     * The unique identifier of the collaboration that contains the collaboration ID namespace association.
+     */
+    collaborationId: UUID;
+    /**
+     * The Amazon Resource Name (ARN) of the collaboration that contains the collaboration ID namespace association.
+     */
+    collaborationArn: CollaborationArn;
+    /**
+     * The name of the collaboration ID namespace association.
+     */
+    name: GenericResourceName;
+    /**
+     * The description of the collaboration ID namespace association.
+     */
+    description?: ResourceDescription;
+    /**
+     * The unique identifier of the Amazon Web Services account that created the collaboration ID namespace association.
+     */
+    creatorAccountId: AccountId;
+    /**
+     * The time at which the collaboration ID namespace association was created.
+     */
+    createTime: Timestamp;
+    /**
+     * The most recent time at which the collaboration ID namespace was updated.
+     */
+    updateTime: Timestamp;
+    /**
+     * The input reference configuration that's necessary to create the collaboration ID namespace association.
+     */
+    inputReferenceConfig: IdNamespaceAssociationInputReferenceConfig;
+    /**
+     * The input reference properties that are needed to create the collaboration ID namespace association.
+     */
+    inputReferenceProperties: IdNamespaceAssociationInputReferenceProperties;
+    idMappingConfig?: IdMappingConfig;
+  }
+  export interface CollaborationIdNamespaceAssociationSummary {
+    /**
+     * The Amazon Resource Name (ARN) of the collaboration ID namespace association.
+     */
+    arn: IdNamespaceAssociationArn;
+    /**
+     * The time at which the collaboration ID namespace association was created.
+     */
+    createTime: Timestamp;
+    /**
+     * The unique identifier of the collaboration ID namespace association.
+     */
+    id: IdNamespaceAssociationIdentifier;
+    /**
+     * The most recent time at which the collaboration ID namespace association was updated.
+     */
+    updateTime: Timestamp;
+    /**
+     * The Amazon Resource Name (ARN) of the collaboration that contains this collaboration ID namespace association.
+     */
+    collaborationArn: CollaborationArn;
+    /**
+     * The unique identifier of the collaboration that contains this collaboration ID namespace association.
+     */
+    collaborationId: UUID;
+    /**
+     * The Amazon Web Services account that created this collaboration ID namespace association.
+     */
+    creatorAccountId: AccountId;
+    /**
+     * The input reference configuration that's used to create the collaboration ID namespace association.
+     */
+    inputReferenceConfig: IdNamespaceAssociationInputReferenceConfig;
+    /**
+     * The name of the collaboration ID namespace association.
+     */
+    name: GenericResourceName;
+    /**
+     * The description of the collaboration ID namepsace association.
+     */
+    description?: ResourceDescription;
+    /**
+     * The input reference properties that are used to create the collaboration ID namespace association.
+     */
+    inputReferenceProperties: IdNamespaceAssociationInputReferencePropertiesSummary;
+  }
+  export type CollaborationIdNamespaceAssociationSummaryList = CollaborationIdNamespaceAssociationSummary[];
   export type CollaborationIdentifier = string;
   export type CollaborationName = string;
   export interface CollaborationPrivacyBudgetSummary {
@@ -1348,6 +1618,12 @@ declare namespace CleanRooms {
   export type ColumnList = Column[];
   export type ColumnName = string;
   export type ColumnTypeString = string;
+  export interface ConfigurationDetails {
+    /**
+     *  The direct analysis configuration details.
+     */
+    directAnalysisConfigurationDetails?: DirectAnalysisConfigurationDetails;
+  }
   export type ConfiguredAudienceModelArn = string;
   export interface ConfiguredAudienceModelAssociation {
     /**
@@ -1575,6 +1851,10 @@ declare namespace CleanRooms {
      */
     description?: TableDescription;
     /**
+     *  The analysis rule types for the configured table association.
+     */
+    analysisRuleTypes?: ConfiguredTableAssociationAnalysisRuleTypeList;
+    /**
      * The time the configured table association was created.
      */
     createTime: Timestamp;
@@ -1583,6 +1863,88 @@ declare namespace CleanRooms {
      */
     updateTime: Timestamp;
   }
+  export interface ConfiguredTableAssociationAnalysisRule {
+    /**
+     *  The membership identifier for the configured table association analysis rule.
+     */
+    membershipIdentifier: MembershipIdentifier;
+    /**
+     *  The unique identifier for the configured table association.
+     */
+    configuredTableAssociationId: ConfiguredTableAssociationIdentifier;
+    /**
+     *  The Amazon Resource Name (ARN) of the configured table association.
+     */
+    configuredTableAssociationArn: ConfiguredTableAssociationArn;
+    /**
+     *  The policy of the configured table association analysis rule.
+     */
+    policy: ConfiguredTableAssociationAnalysisRulePolicy;
+    /**
+     *  The type of the configured table association analysis rule.
+     */
+    type: ConfiguredTableAssociationAnalysisRuleType;
+    /**
+     *  The creation time of the configured table association analysis rule.
+     */
+    createTime: Timestamp;
+    /**
+     *  The update time of the configured table association analysis rule.
+     */
+    updateTime: Timestamp;
+  }
+  export interface ConfiguredTableAssociationAnalysisRuleAggregation {
+    /**
+     *  The list of collaboration members who are allowed to receive results of queries run with this configured table.
+     */
+    allowedResultReceivers?: AllowedResultReceivers;
+    /**
+     *  The list of resources or wildcards (ARNs) that are allowed to perform additional analysis on query output. The allowedAdditionalAnalyses parameter is currently supported for the list analysis rule (AnalysisRuleList) and the custom analysis rule (AnalysisRuleCustom).
+     */
+    allowedAdditionalAnalyses?: AllowedAdditionalAnalyses;
+  }
+  export interface ConfiguredTableAssociationAnalysisRuleCustom {
+    /**
+     *  The list of collaboration members who are allowed to receive results of queries run with this configured table.
+     */
+    allowedResultReceivers?: AllowedResultReceivers;
+    /**
+     *  The list of resources or wildcards (ARNs) that are allowed to perform additional analysis on query output.
+     */
+    allowedAdditionalAnalyses?: AllowedAdditionalAnalyses;
+  }
+  export interface ConfiguredTableAssociationAnalysisRuleList {
+    /**
+     *  The list of collaboration members who are allowed to receive results of queries run with this configured table.
+     */
+    allowedResultReceivers?: AllowedResultReceivers;
+    /**
+     *  The list of resources or wildcards (ARNs) that are allowed to perform additional analysis on query output.
+     */
+    allowedAdditionalAnalyses?: AllowedAdditionalAnalyses;
+  }
+  export interface ConfiguredTableAssociationAnalysisRulePolicy {
+    /**
+     *  The policy for the configured table association analysis rule.
+     */
+    v1?: ConfiguredTableAssociationAnalysisRulePolicyV1;
+  }
+  export interface ConfiguredTableAssociationAnalysisRulePolicyV1 {
+    /**
+     *  Analysis rule type that enables only list queries on a configured table.
+     */
+    list?: ConfiguredTableAssociationAnalysisRuleList;
+    /**
+     *  Analysis rule type that enables only aggregation queries on a configured table.
+     */
+    aggregation?: ConfiguredTableAssociationAnalysisRuleAggregation;
+    /**
+     *  Analysis rule type that enables the table owner to approve custom SQL queries on their configured tables. It supports differential privacy.
+     */
+    custom?: ConfiguredTableAssociationAnalysisRuleCustom;
+  }
+  export type ConfiguredTableAssociationAnalysisRuleType = "AGGREGATION"|"LIST"|"CUSTOM"|string;
+  export type ConfiguredTableAssociationAnalysisRuleTypeList = ConfiguredTableAssociationAnalysisRuleType[];
   export type ConfiguredTableAssociationArn = string;
   export type ConfiguredTableAssociationIdentifier = string;
   export interface ConfiguredTableAssociationSummary {
@@ -1728,7 +2090,7 @@ declare namespace CleanRooms {
   }
   export interface CreateCollaborationOutput {
     /**
-     * The entire created collaboration object.
+     * The collaboration.
      */
     collaboration: Collaboration;
   }
@@ -1774,15 +2136,39 @@ declare namespace CleanRooms {
      */
     analysisRuleType: ConfiguredTableAnalysisRuleType;
     /**
-     * The entire created configured table analysis rule object.
+     * The analysis rule policy that was created for the configured table.
      */
     analysisRulePolicy: ConfiguredTableAnalysisRulePolicy;
   }
   export interface CreateConfiguredTableAnalysisRuleOutput {
     /**
-     * The entire created analysis rule.
+     * The analysis rule that was created for the configured table.
      */
     analysisRule: ConfiguredTableAnalysisRule;
+  }
+  export interface CreateConfiguredTableAssociationAnalysisRuleInput {
+    /**
+     *  A unique identifier for the membership that the configured table association belongs to. Currently accepts the membership ID.
+     */
+    membershipIdentifier: MembershipIdentifier;
+    /**
+     *  The unique ID for the configured table association. Currently accepts the configured table association ID.
+     */
+    configuredTableAssociationIdentifier: ConfiguredTableAssociationIdentifier;
+    /**
+     *  The type of analysis rule.
+     */
+    analysisRuleType: ConfiguredTableAssociationAnalysisRuleType;
+    /**
+     * The analysis rule policy that was created for the configured table association.
+     */
+    analysisRulePolicy: ConfiguredTableAssociationAnalysisRulePolicy;
+  }
+  export interface CreateConfiguredTableAssociationAnalysisRuleOutput {
+    /**
+     * The analysis rule for the conﬁgured table association. In the console, the ConfiguredTableAssociationAnalysisRule is referred to as the collaboration analysis rule.
+     */
+    analysisRule: ConfiguredTableAssociationAnalysisRule;
   }
   export interface CreateConfiguredTableAssociationInput {
     /**
@@ -1812,7 +2198,7 @@ declare namespace CleanRooms {
   }
   export interface CreateConfiguredTableAssociationOutput {
     /**
-     * The entire configured table association object.
+     * The configured table association.
      */
     configuredTableAssociation: ConfiguredTableAssociation;
   }
@@ -1847,6 +2233,70 @@ declare namespace CleanRooms {
      * The created configured table.
      */
     configuredTable: ConfiguredTable;
+  }
+  export interface CreateIdMappingTableInput {
+    /**
+     * The unique identifier of the membership that contains the ID mapping table.
+     */
+    membershipIdentifier: MembershipIdentifier;
+    /**
+     * A name for the ID mapping table.
+     */
+    name: ResourceAlias;
+    /**
+     * A description of the ID mapping table.
+     */
+    description?: ResourceDescription;
+    /**
+     * The input reference configuration needed to create the ID mapping table.
+     */
+    inputReferenceConfig: IdMappingTableInputReferenceConfig;
+    /**
+     * An optional label that you can assign to a resource when you create it. Each tag consists of a key and an optional value, both of which you define. When you use tagging, you can also use tag-based access control in IAM policies to control access to this resource.
+     */
+    tags?: TagMap;
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon Web Services KMS key. This value is used to encrypt the mapping table data that is stored by Clean Rooms.
+     */
+    kmsKeyArn?: KMSKeyArn;
+  }
+  export interface CreateIdMappingTableOutput {
+    /**
+     * The ID mapping table that was created.
+     */
+    idMappingTable: IdMappingTable;
+  }
+  export interface CreateIdNamespaceAssociationInput {
+    /**
+     * The unique identifier of the membership that contains the ID namespace association.
+     */
+    membershipIdentifier: MembershipIdentifier;
+    /**
+     * The input reference configuration needed to create the ID namespace association.
+     */
+    inputReferenceConfig: IdNamespaceAssociationInputReferenceConfig;
+    /**
+     * An optional label that you can assign to a resource when you create it. Each tag consists of a key and an optional value, both of which you define. When you use tagging, you can also use tag-based access control in IAM policies to control access to this resource.
+     */
+    tags?: TagMap;
+    /**
+     * The name for the ID namespace association.
+     */
+    name: GenericResourceName;
+    /**
+     * The description of the ID namespace association.
+     */
+    description?: ResourceDescription;
+    /**
+     * The configuration settings for the ID mapping table.
+     */
+    idMappingConfig?: IdMappingConfig;
+  }
+  export interface CreateIdNamespaceAssociationOutput {
+    /**
+     * The ID namespace association that was created.
+     */
+    idNamespaceAssociation: IdNamespaceAssociation;
   }
   export interface CreateMembershipInput {
     /**
@@ -1966,6 +2416,22 @@ declare namespace CleanRooms {
   }
   export interface DeleteConfiguredTableAnalysisRuleOutput {
   }
+  export interface DeleteConfiguredTableAssociationAnalysisRuleInput {
+    /**
+     *  A unique identifier for the membership that the configured table association belongs to. Currently accepts the membership ID.
+     */
+    membershipIdentifier: MembershipIdentifier;
+    /**
+     * The identiﬁer for the conﬁgured table association that's related to the analysis rule that you want to delete.
+     */
+    configuredTableAssociationIdentifier: ConfiguredTableAssociationIdentifier;
+    /**
+     * The type of the analysis rule that you want to delete.
+     */
+    analysisRuleType: ConfiguredTableAssociationAnalysisRuleType;
+  }
+  export interface DeleteConfiguredTableAssociationAnalysisRuleOutput {
+  }
   export interface DeleteConfiguredTableAssociationInput {
     /**
      * The unique ID for the configured table association to be deleted. Currently accepts the configured table ID.
@@ -1985,6 +2451,30 @@ declare namespace CleanRooms {
     configuredTableIdentifier: ConfiguredTableIdentifier;
   }
   export interface DeleteConfiguredTableOutput {
+  }
+  export interface DeleteIdMappingTableInput {
+    /**
+     * The unique identifier of the ID mapping table that you want to delete.
+     */
+    idMappingTableIdentifier: UUID;
+    /**
+     * The unique identifier of the membership that contains the ID mapping table that you want to delete.
+     */
+    membershipIdentifier: MembershipIdentifier;
+  }
+  export interface DeleteIdMappingTableOutput {
+  }
+  export interface DeleteIdNamespaceAssociationInput {
+    /**
+     * The unique identifier of the ID namespace association that you want to delete.
+     */
+    idNamespaceAssociationIdentifier: IdNamespaceAssociationIdentifier;
+    /**
+     * The unique identifier of the membership that contains the ID namespace association that you want to delete.
+     */
+    membershipIdentifier: MembershipIdentifier;
+  }
+  export interface DeleteIdNamespaceAssociationOutput {
   }
   export interface DeleteMemberInput {
     /**
@@ -2148,10 +2638,19 @@ declare namespace CleanRooms {
      */
     usersNoisePerQuery?: UsersNoisePerQuery;
   }
+  export interface DirectAnalysisConfigurationDetails {
+    /**
+     *  The account IDs for the member who received the results of a protected query.
+     */
+    receiverAccountIds?: ReceiverAccountIds;
+  }
   export type DisplayName = string;
+  export interface Document {
+  }
   export type Epsilon = number;
   export type FilterableMemberStatus = "INVITED"|"ACTIVE"|string;
   export type Float = number;
+  export type GenericResourceName = string;
   export interface GetAnalysisTemplateInput {
     /**
      * The identifier for a membership resource.
@@ -2199,6 +2698,22 @@ declare namespace CleanRooms {
      * The metadata of the configured audience model association.
      */
     collaborationConfiguredAudienceModelAssociation: CollaborationConfiguredAudienceModelAssociation;
+  }
+  export interface GetCollaborationIdNamespaceAssociationInput {
+    /**
+     * The unique identifier of the collaboration that contains the ID namespace association that you want to retrieve.
+     */
+    collaborationIdentifier: CollaborationIdentifier;
+    /**
+     * The unique identifier of the ID namespace association that you want to retrieve.
+     */
+    idNamespaceAssociationIdentifier: IdNamespaceAssociationIdentifier;
+  }
+  export interface GetCollaborationIdNamespaceAssociationOutput {
+    /**
+     * The ID namespace association that you requested.
+     */
+    collaborationIdNamespaceAssociation: CollaborationIdNamespaceAssociation;
   }
   export interface GetCollaborationInput {
     /**
@@ -2260,6 +2775,26 @@ declare namespace CleanRooms {
      */
     analysisRule: ConfiguredTableAnalysisRule;
   }
+  export interface GetConfiguredTableAssociationAnalysisRuleInput {
+    /**
+     *  A unique identifier for the membership that the configured table association belongs to. Currently accepts the membership ID.
+     */
+    membershipIdentifier: MembershipIdentifier;
+    /**
+     *  The identiﬁer for the conﬁgured table association that's related to the analysis rule.
+     */
+    configuredTableAssociationIdentifier: ConfiguredTableAssociationIdentifier;
+    /**
+     *  The type of analysis rule that you want to retrieve.
+     */
+    analysisRuleType: ConfiguredTableAssociationAnalysisRuleType;
+  }
+  export interface GetConfiguredTableAssociationAnalysisRuleOutput {
+    /**
+     * The analysis rule for the conﬁgured table association. In the console, the ConfiguredTableAssociationAnalysisRule is referred to as the collaboration analysis rule.
+     */
+    analysisRule: ConfiguredTableAssociationAnalysisRule;
+  }
   export interface GetConfiguredTableAssociationInput {
     /**
      * The unique ID for the configured table association to retrieve. Currently accepts the configured table ID.
@@ -2287,6 +2822,38 @@ declare namespace CleanRooms {
      * The retrieved configured table.
      */
     configuredTable: ConfiguredTable;
+  }
+  export interface GetIdMappingTableInput {
+    /**
+     * The unique identifier of the ID mapping table identifier that you want to retrieve.
+     */
+    idMappingTableIdentifier: UUID;
+    /**
+     * The unique identifier of the membership that contains the ID mapping table that you want to retrieve.
+     */
+    membershipIdentifier: MembershipIdentifier;
+  }
+  export interface GetIdMappingTableOutput {
+    /**
+     * The ID mapping table that you requested.
+     */
+    idMappingTable: IdMappingTable;
+  }
+  export interface GetIdNamespaceAssociationInput {
+    /**
+     * The unique identifier of the ID namespace association that you want to retrieve.
+     */
+    idNamespaceAssociationIdentifier: IdNamespaceAssociationIdentifier;
+    /**
+     * The unique identifier of the membership that contains the ID namespace association that you want to retrieve.
+     */
+    membershipIdentifier: MembershipIdentifier;
+  }
+  export interface GetIdNamespaceAssociationOutput {
+    /**
+     * The ID namespace association that you requested.
+     */
+    idNamespaceAssociation: IdNamespaceAssociation;
   }
   export interface GetMembershipInput {
     /**
@@ -2380,9 +2947,288 @@ declare namespace CleanRooms {
      */
     databaseName: GlueDatabaseName;
   }
+  export interface IdMappingConfig {
+    /**
+     * An indicator as to whether you can use your column as a dimension column in the ID mapping table (TRUE) or not (FALSE). Default is FALSE.
+     */
+    allowUseAsDimensionColumn: Boolean;
+  }
+  export interface IdMappingTable {
+    /**
+     * The unique identifier of the ID mapping table.
+     */
+    id: UUID;
+    /**
+     * The Amazon Resource Name (ARN) of the ID mapping table.
+     */
+    arn: IdMappingTableArn;
+    /**
+     * The input reference configuration for the ID mapping table.
+     */
+    inputReferenceConfig: IdMappingTableInputReferenceConfig;
+    /**
+     * The unique identifier of the membership resource for the ID mapping table.
+     */
+    membershipId: UUID;
+    /**
+     * The Amazon Resource Name (ARN) of the membership resource for the ID mapping table.
+     */
+    membershipArn: MembershipArn;
+    /**
+     * The unique identifier of the collaboration that contains this ID mapping table.
+     */
+    collaborationId: UUID;
+    /**
+     * The Amazon Resource Name (ARN) of the collaboration that contains this ID mapping table.
+     */
+    collaborationArn: CollaborationArn;
+    /**
+     * The description of the ID mapping table.
+     */
+    description?: ResourceDescription;
+    /**
+     * The name of the ID mapping table.
+     */
+    name: ResourceAlias;
+    /**
+     * The time at which the ID mapping table was created.
+     */
+    createTime: Timestamp;
+    /**
+     * The most recent time at which the ID mapping table was updated.
+     */
+    updateTime: Timestamp;
+    /**
+     * The input reference properties for the ID mapping table.
+     */
+    inputReferenceProperties: IdMappingTableInputReferenceProperties;
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon Web Services KMS key.
+     */
+    kmsKeyArn?: KMSKeyArn;
+  }
+  export type IdMappingTableArn = string;
+  export type IdMappingTableInputReferenceArn = string;
+  export interface IdMappingTableInputReferenceConfig {
+    /**
+     * The Amazon Resource Name (ARN) of the referenced resource in Entity Resolution. Valid values are ID mapping workflow ARNs.
+     */
+    inputReferenceArn: IdMappingTableInputReferenceArn;
+    /**
+     * When TRUE, Clean Rooms manages permissions for the ID mapping table resource.  When FALSE, the resource owner manages permissions for the ID mapping table resource.
+     */
+    manageResourcePolicies: Boolean;
+  }
+  export interface IdMappingTableInputReferenceProperties {
+    /**
+     * The input source of the ID mapping table.
+     */
+    idMappingTableInputSource: IdMappingTableInputSourceList;
+  }
+  export interface IdMappingTableInputSource {
+    /**
+     * The unique identifier of the ID namespace association.
+     */
+    idNamespaceAssociationId: String;
+    /**
+     * The type of the input source of the ID mapping table.
+     */
+    type: IdNamespaceType;
+  }
+  export type IdMappingTableInputSourceList = IdMappingTableInputSource[];
+  export interface IdMappingTableSchemaTypeProperties {
+    /**
+     * Defines which ID namespace associations are used to create the ID mapping table.
+     */
+    idMappingTableInputSource: IdMappingTableInputSourceList;
+  }
+  export interface IdMappingTableSummary {
+    /**
+     * The Amazon Resource Name (ARN) of the collaboration that contains this ID mapping table.
+     */
+    collaborationArn: CollaborationArn;
+    /**
+     * The unique identifier of the collaboration that contains this ID mapping table.
+     */
+    collaborationId: UUID;
+    /**
+     * The unique identifier of the membership resource for this ID mapping table.
+     */
+    membershipId: MembershipIdentifier;
+    /**
+     * The Amazon Resource Name (ARN) of the membership resource for this ID mapping table.
+     */
+    membershipArn: MembershipArn;
+    /**
+     * The time at which this ID mapping table was created.
+     */
+    createTime: Timestamp;
+    /**
+     * The most recent time at which this ID mapping table was updated.
+     */
+    updateTime: Timestamp;
+    /**
+     * The unique identifier of this ID mapping table.
+     */
+    id: UUID;
+    /**
+     * The Amazon Resource Name (ARN) of this ID mapping table.
+     */
+    arn: IdMappingTableArn;
+    /**
+     * The description of this ID mapping table.
+     */
+    description?: ResourceDescription;
+    /**
+     * The input reference configuration for the ID mapping table.
+     */
+    inputReferenceConfig: IdMappingTableInputReferenceConfig;
+    /**
+     * The name of this ID mapping table.
+     */
+    name: ResourceAlias;
+  }
+  export type IdMappingTableSummaryList = IdMappingTableSummary[];
+  export type IdMappingWorkflowsSupported = Document[];
+  export interface IdNamespaceAssociation {
+    /**
+     * The unique identifier for this ID namespace association.
+     */
+    id: IdNamespaceAssociationIdentifier;
+    /**
+     * The Amazon Resource Name (ARN) of the ID namespace association.
+     */
+    arn: IdNamespaceAssociationArn;
+    /**
+     * The unique identifier of the membership resource for this ID namespace association.
+     */
+    membershipId: UUID;
+    /**
+     * The Amazon Resource Name (ARN) of the membership resource for this ID namespace association.
+     */
+    membershipArn: MembershipArn;
+    /**
+     * The unique identifier of the collaboration that contains this ID namespace association.
+     */
+    collaborationId: UUID;
+    /**
+     * The Amazon Resource Name (ARN) of the collaboration that contains this ID namespace association.
+     */
+    collaborationArn: CollaborationArn;
+    /**
+     * The name of this ID namespace association.
+     */
+    name: GenericResourceName;
+    /**
+     * The description of the ID namespace association.
+     */
+    description?: ResourceDescription;
+    /**
+     * The time at which the ID namespace association was created.
+     */
+    createTime: Timestamp;
+    /**
+     * The most recent time at which the ID namespace association was updated.
+     */
+    updateTime: Timestamp;
+    /**
+     * The input reference configuration for the ID namespace association.
+     */
+    inputReferenceConfig: IdNamespaceAssociationInputReferenceConfig;
+    /**
+     * The input reference properties for the ID namespace association.
+     */
+    inputReferenceProperties: IdNamespaceAssociationInputReferenceProperties;
+    /**
+     * The configuration settings for the ID mapping table.
+     */
+    idMappingConfig?: IdMappingConfig;
+  }
+  export type IdNamespaceAssociationArn = string;
+  export type IdNamespaceAssociationIdentifier = string;
+  export type IdNamespaceAssociationInputReferenceArn = string;
+  export interface IdNamespaceAssociationInputReferenceConfig {
+    /**
+     * The Amazon Resource Name (ARN) of the Entity Resolution resource that is being associated to the collaboration. Valid resource ARNs are from the ID namespaces that you own.
+     */
+    inputReferenceArn: IdNamespaceAssociationInputReferenceArn;
+    /**
+     * When TRUE, Clean Rooms manages permissions for the ID namespace association resource. When FALSE, the resource owner manages permissions for the ID namespace association resource.
+     */
+    manageResourcePolicies: Boolean;
+  }
+  export interface IdNamespaceAssociationInputReferenceProperties {
+    /**
+     * The ID namespace type for this ID namespace association.
+     */
+    idNamespaceType: IdNamespaceType;
+    /**
+     * Defines how ID mapping workflows are supported for this ID namespace association.
+     */
+    idMappingWorkflowsSupported: IdMappingWorkflowsSupported;
+  }
+  export interface IdNamespaceAssociationInputReferencePropertiesSummary {
+    /**
+     * The ID namespace type for this ID namespace association.
+     */
+    idNamespaceType: IdNamespaceType;
+  }
+  export interface IdNamespaceAssociationSummary {
+    /**
+     * The unique identifier of the membership resource for this ID namespace association.
+     */
+    membershipId: MembershipIdentifier;
+    /**
+     * The Amazon Resource Name (ARN) of the membership resource for this ID namespace association.
+     */
+    membershipArn: MembershipArn;
+    /**
+     * The Amazon Resource Name (ARN) of the collaboration that contains this ID namespace association.
+     */
+    collaborationArn: CollaborationArn;
+    /**
+     * The unique identifier of the collaboration that contains this ID namespace association.
+     */
+    collaborationId: UUID;
+    /**
+     * The time at which this ID namespace association was created.
+     */
+    createTime: Timestamp;
+    /**
+     * The most recent time at which this ID namespace association has been updated.
+     */
+    updateTime: Timestamp;
+    /**
+     * The unique identifier of this ID namespace association.
+     */
+    id: UUID;
+    /**
+     * The Amazon Resource Name (ARN) of this ID namespace association.
+     */
+    arn: IdNamespaceAssociationArn;
+    /**
+     * The input reference configuration details for this ID namespace association.
+     */
+    inputReferenceConfig: IdNamespaceAssociationInputReferenceConfig;
+    /**
+     * The name of the ID namespace association.
+     */
+    name: GenericResourceName;
+    /**
+     * The description of the ID namespace association.
+     */
+    description?: ResourceDescription;
+    /**
+     * The input reference properties for this ID namespace association.
+     */
+    inputReferenceProperties: IdNamespaceAssociationInputReferencePropertiesSummary;
+  }
+  export type IdNamespaceAssociationSummaryList = IdNamespaceAssociationSummary[];
+  export type IdNamespaceType = "SOURCE"|"TARGET"|string;
   export type JoinOperator = "OR"|"AND"|string;
   export type JoinOperatorsList = JoinOperator[];
   export type JoinRequiredOption = "QUERY_RUNNER"|string;
+  export type KMSKeyArn = string;
   export type KeyPrefix = string;
   export interface ListAnalysisTemplatesInput {
     /**
@@ -2455,6 +3301,30 @@ declare namespace CleanRooms {
      * The token value retrieved from a previous call to access the next page of results.
      */
     nextToken?: PaginationToken;
+  }
+  export interface ListCollaborationIdNamespaceAssociationsInput {
+    /**
+     * The unique identifier of the collaboration that contains the ID namespace associations that you want to retrieve.
+     */
+    collaborationIdentifier: CollaborationIdentifier;
+    /**
+     * The pagination token that's used to fetch the next set of results.
+     */
+    nextToken?: PaginationToken;
+    /**
+     * The maximum size of the results that is returned per call. Service chooses a default if it has not been set. Service may return a nextToken even if the maximum results has not been met.&gt;
+     */
+    maxResults?: MaxResults;
+  }
+  export interface ListCollaborationIdNamespaceAssociationsOutput {
+    /**
+     * The token value provided to access the next page of results.
+     */
+    nextToken?: PaginationToken;
+    /**
+     * The summary information of the collaboration ID namespace associations that you requested.
+     */
+    collaborationIdNamespaceAssociationSummaries: CollaborationIdNamespaceAssociationSummaryList;
   }
   export interface ListCollaborationPrivacyBudgetTemplatesInput {
     /**
@@ -2599,6 +3469,54 @@ declare namespace CleanRooms {
      * The token value retrieved from a previous call to access the next page of results.
      */
     nextToken?: PaginationToken;
+  }
+  export interface ListIdMappingTablesInput {
+    /**
+     * The unique identifier of the membership that contains the ID mapping tables that you want to view.
+     */
+    membershipIdentifier: MembershipIdentifier;
+    /**
+     * The pagination token that's used to fetch the next set of results.
+     */
+    nextToken?: PaginationToken;
+    /**
+     * The maximum size of the results that is returned per call. Service chooses a default if it has not been set. Service may return a nextToken even if the maximum results has not been met.
+     */
+    maxResults?: MaxResults;
+  }
+  export interface ListIdMappingTablesOutput {
+    /**
+     * The summary information of the ID mapping tables that you requested.
+     */
+    idMappingTableSummaries: IdMappingTableSummaryList;
+    /**
+     * The token value provided to access the next page of results.
+     */
+    nextToken?: PaginationToken;
+  }
+  export interface ListIdNamespaceAssociationsInput {
+    /**
+     * The unique identifier of the membership that contains the ID namespace association that you want to view.
+     */
+    membershipIdentifier: MembershipIdentifier;
+    /**
+     * The pagination token that's used to fetch the next set of results.
+     */
+    nextToken?: PaginationToken;
+    /**
+     * The maximum size of the results that is returned per call. Service chooses a default if it has not been set. Service may return a nextToken even if the maximum results has not been met.
+     */
+    maxResults?: MaxResults;
+  }
+  export interface ListIdNamespaceAssociationsOutput {
+    /**
+     * The token value provided to access the next page of results.
+     */
+    nextToken?: PaginationToken;
+    /**
+     * The summary information of the ID namespace associations that you requested.
+     */
+    idNamespaceAssociationSummaries: IdNamespaceAssociationSummaryList;
   }
   export interface ListMembersInput {
     /**
@@ -2980,6 +3898,22 @@ declare namespace CleanRooms {
      */
     queryCompute: QueryComputePaymentConfig;
   }
+  export interface PopulateIdMappingTableInput {
+    /**
+     * The unique identifier of the ID mapping table that you want to populate.
+     */
+    idMappingTableIdentifier: UUID;
+    /**
+     * The unique identifier of the membership that contains the ID mapping table that you want to populate.
+     */
+    membershipIdentifier: MembershipIdentifier;
+  }
+  export interface PopulateIdMappingTableOutput {
+    /**
+     * The unique identifier of the mapping job that will populate the ID mapping table.
+     */
+    idMappingJobId: UUID;
+  }
   export interface PreviewPrivacyImpactInput {
     /**
      * A unique identifier for one of your memberships for a collaboration. Accepts a membership ID.
@@ -3097,7 +4031,7 @@ declare namespace CleanRooms {
      */
     autoRefresh: PrivacyBudgetTemplateAutoRefresh;
     /**
-     * Specifies the epislon and noise parameters for the privacy budget template.
+     * Specifies the epsilon and noise parameters for the privacy budget template.
      */
     parameters: PrivacyBudgetTemplateParametersOutput;
   }
@@ -3225,6 +4159,12 @@ declare namespace CleanRooms {
     code: String;
   }
   export type ProtectedQueryIdentifier = string;
+  export interface ProtectedQueryMemberOutputConfiguration {
+    /**
+     * The unique identifier for the account.
+     */
+    accountId: AccountId;
+  }
   export type ProtectedQueryMemberOutputList = ProtectedQuerySingleMemberOutput[];
   export interface ProtectedQueryOutput {
     /**
@@ -3238,9 +4178,13 @@ declare namespace CleanRooms {
   }
   export interface ProtectedQueryOutputConfiguration {
     /**
-     * Required configuration for a protected query with an `S3` output type.
+     * Required configuration for a protected query with an s3 output type.
      */
     s3?: ProtectedQueryS3OutputConfiguration;
+    /**
+     *  Required configuration for a protected query with a member output type.
+     */
+    member?: ProtectedQueryMemberOutputConfiguration;
   }
   export interface ProtectedQueryResult {
     /**
@@ -3298,7 +4242,7 @@ declare namespace CleanRooms {
   }
   export interface ProtectedQueryStatistics {
     /**
-     * The duration of the Protected Query, from creation until query completion.
+     * The duration of the protected query, from creation until query completion.
      */
     totalDurationInMillis?: Long;
   }
@@ -3324,6 +4268,10 @@ declare namespace CleanRooms {
      * The status of the protected query. Value values are `SUBMITTED`, `STARTED`, `CANCELLED`, `CANCELLING`, `FAILED`, `SUCCESS`, `TIMED_OUT`.
      */
     status: ProtectedQueryStatus;
+    /**
+     *  The receiver configuration.
+     */
+    receiverConfigurations: ReceiverConfigurationsList;
   }
   export type ProtectedQuerySummaryList = ProtectedQuerySummary[];
   export type ProtectedQueryType = "SQL"|string;
@@ -3333,7 +4281,32 @@ declare namespace CleanRooms {
      */
     isResponsible: Boolean;
   }
+  export interface QueryConstraint {
+    /**
+     * An array of column names that specifies which columns are required in the JOIN statement.
+     */
+    requireOverlap?: QueryConstraintRequireOverlap;
+  }
+  export type QueryConstraintList = QueryConstraint[];
+  export interface QueryConstraintRequireOverlap {
+    /**
+     * The columns that are required to overlap.
+     */
+    columns?: AnalysisRuleColumnList;
+  }
   export type QueryTables = TableAlias[];
+  export type ReceiverAccountIds = AccountId[];
+  export interface ReceiverConfiguration {
+    /**
+     *  The type of analysis for the protected query. The results of the query can be analyzed directly (DIRECT_ANALYSIS) or used as input into additional analyses (ADDITIONAL_ANALYSIS), such as a query that is a seed for a lookalike ML model.
+     */
+    analysisType: AnalysisType;
+    /**
+     *  The configuration details of the receiver configuration.
+     */
+    configurationDetails?: ConfigurationDetails;
+  }
+  export type ReceiverConfigurationsList = ReceiverConfiguration[];
   export type ResourceAlias = string;
   export type ResourceDescription = string;
   export type ResultFormat = "CSV"|"PARQUET"|string;
@@ -3393,6 +4366,10 @@ declare namespace CleanRooms {
      * Details about the status of the schema. Currently, only one entry is present.
      */
     schemaStatusDetails: SchemaStatusDetailList;
+    /**
+     * The schema type properties.
+     */
+    schemaTypeProperties?: SchemaTypeProperties;
   }
   export type SchemaAnalysisRuleList = AnalysisRule[];
   export interface SchemaAnalysisRuleRequest {
@@ -3412,7 +4389,7 @@ declare namespace CleanRooms {
   export type SchemaStatus = "READY"|"NOT_READY"|string;
   export interface SchemaStatusDetail {
     /**
-     * The status of the schema.
+     * The status of the schema, indicating if it is ready to query.
      */
     status: SchemaStatus;
     /**
@@ -3427,6 +4404,10 @@ declare namespace CleanRooms {
      * The configuration details of the schema analysis rule for the given type.
      */
     configurations?: SchemaConfigurationList;
+    /**
+     * The type of analysis that can be performed on the schema. A schema can have an analysisType of DIRECT_ANALYSIS, ADDITIONAL_ANALYSIS_FOR_AUDIENCE_GENERATION, or both.
+     */
+    analysisType: AnalysisType;
   }
   export type SchemaStatusDetailList = SchemaStatusDetail[];
   export interface SchemaStatusReason {
@@ -3439,7 +4420,7 @@ declare namespace CleanRooms {
      */
     message: String;
   }
-  export type SchemaStatusReasonCode = "ANALYSIS_RULE_MISSING"|"ANALYSIS_TEMPLATES_NOT_CONFIGURED"|"ANALYSIS_PROVIDERS_NOT_CONFIGURED"|"DIFFERENTIAL_PRIVACY_POLICY_NOT_CONFIGURED"|string;
+  export type SchemaStatusReasonCode = "ANALYSIS_RULE_MISSING"|"ANALYSIS_TEMPLATES_NOT_CONFIGURED"|"ANALYSIS_PROVIDERS_NOT_CONFIGURED"|"DIFFERENTIAL_PRIVACY_POLICY_NOT_CONFIGURED"|"ID_MAPPING_TABLE_NOT_POPULATED"|"COLLABORATION_ANALYSIS_RULE_NOT_CONFIGURED"|"ADDITIONAL_ANALYSES_NOT_CONFIGURED"|"RESULT_RECEIVERS_NOT_CONFIGURED"|"ADDITIONAL_ANALYSES_NOT_ALLOWED"|"RESULT_RECEIVERS_NOT_ALLOWED"|"ANALYSIS_RULE_TYPES_NOT_COMPATIBLE"|string;
   export type SchemaStatusReasonList = SchemaStatusReason[];
   export interface SchemaSummary {
     /**
@@ -3480,7 +4461,13 @@ declare namespace CleanRooms {
     analysisMethod?: AnalysisMethod;
   }
   export type SchemaSummaryList = SchemaSummary[];
-  export type SchemaType = "TABLE"|string;
+  export type SchemaType = "TABLE"|"ID_MAPPING_TABLE"|string;
+  export interface SchemaTypeProperties {
+    /**
+     * The ID mapping table for the schema type properties.
+     */
+    idMappingTable?: IdMappingTableSchemaTypeProperties;
+  }
   export interface StartProtectedQueryInput {
     /**
      * The type of the protected query to be started.
@@ -3630,6 +4617,30 @@ declare namespace CleanRooms {
      */
     analysisRule: ConfiguredTableAnalysisRule;
   }
+  export interface UpdateConfiguredTableAssociationAnalysisRuleInput {
+    /**
+     *  A unique identifier for the membership that the configured table association belongs to. Currently accepts the membership ID.
+     */
+    membershipIdentifier: MembershipIdentifier;
+    /**
+     *  The identifier for the configured table association to update.
+     */
+    configuredTableAssociationIdentifier: ConfiguredTableAssociationIdentifier;
+    /**
+     *  The analysis rule type that you want to update.
+     */
+    analysisRuleType: ConfiguredTableAssociationAnalysisRuleType;
+    /**
+     *  The updated analysis rule policy for the conﬁgured table association.
+     */
+    analysisRulePolicy: ConfiguredTableAssociationAnalysisRulePolicy;
+  }
+  export interface UpdateConfiguredTableAssociationAnalysisRuleOutput {
+    /**
+     *  The updated analysis rule for the conﬁgured table association. In the console, the ConfiguredTableAssociationAnalysisRule is referred to as the collaboration analysis rule.
+     */
+    analysisRule: ConfiguredTableAssociationAnalysisRule;
+  }
   export interface UpdateConfiguredTableAssociationInput {
     /**
      * The unique identifier for the configured table association to update. Currently accepts the configured table association ID.
@@ -3673,6 +4684,58 @@ declare namespace CleanRooms {
      * The updated configured table.
      */
     configuredTable: ConfiguredTable;
+  }
+  export interface UpdateIdMappingTableInput {
+    /**
+     * The unique identifier of the ID mapping table that you want to update.
+     */
+    idMappingTableIdentifier: UUID;
+    /**
+     * The unique identifier of the membership that contains the ID mapping table that you want to update.
+     */
+    membershipIdentifier: MembershipIdentifier;
+    /**
+     * A new description for the ID mapping table.
+     */
+    description?: ResourceDescription;
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon Web Services KMS key.
+     */
+    kmsKeyArn?: KMSKeyArn;
+  }
+  export interface UpdateIdMappingTableOutput {
+    /**
+     * The updated ID mapping table.
+     */
+    idMappingTable: IdMappingTable;
+  }
+  export interface UpdateIdNamespaceAssociationInput {
+    /**
+     * The unique identifier of the ID namespace association that you want to update.
+     */
+    idNamespaceAssociationIdentifier: IdNamespaceAssociationIdentifier;
+    /**
+     * The unique identifier of the membership that contains the ID namespace association that you want to update.
+     */
+    membershipIdentifier: MembershipIdentifier;
+    /**
+     * A new name for the ID namespace association.
+     */
+    name?: GenericResourceName;
+    /**
+     * A new description for the ID namespace association.
+     */
+    description?: ResourceDescription;
+    /**
+     * The configuration settings for the ID mapping table.
+     */
+    idMappingConfig?: IdMappingConfig;
+  }
+  export interface UpdateIdNamespaceAssociationOutput {
+    /**
+     * The updated ID namespace association.
+     */
+    idNamespaceAssociation: IdNamespaceAssociation;
   }
   export interface UpdateMembershipInput {
     /**

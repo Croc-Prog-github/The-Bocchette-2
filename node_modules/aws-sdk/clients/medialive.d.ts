@@ -1933,6 +1933,10 @@ Only specify sources for PULL type Inputs. Leave Destinations empty.
     Tags?: Tags;
     Type?: InputType;
     Vpc?: InputVpcRequest;
+    /**
+     * The settings associated with an SRT input.
+     */
+    SrtSettings?: SrtSettingsRequest;
   }
   export interface CreateInputResponse {
     Input?: Input;
@@ -2549,6 +2553,10 @@ during input switch actions. Presently, this functionality only works with MP4_F
      */
     Tags?: Tags;
     Type?: InputType;
+    /**
+     * The settings associated with an SRT input.
+     */
+    SrtSettings?: SrtSettings;
   }
   export interface DescribeInputSecurityGroupRequest {
     /**
@@ -2971,7 +2979,6 @@ provide the language to consider when translating the image-based source to text
   export interface Eac3AtmosSettings {
     /**
      * Average bitrate in bits/second. Valid bitrates depend on the coding mode.
-//  * @affectsRightSizing true
      */
     Bitrate?: __double;
     /**
@@ -3455,7 +3462,14 @@ EPOCH_LOCKING - MediaLive will attempt to synchronize the output of each pipelin
      */
     EntropyEncoding?: H264EntropyEncoding;
     /**
-     * Optional filters that you can apply to an encode.
+     * Optional. Both filters reduce bandwidth by removing imperceptible details. You can enable one of the filters. We
+recommend that you try both filters and observe the results to decide which one to use.
+
+The Temporal Filter reduces bandwidth by removing imperceptible details in the content. It combines perceptual
+filtering and motion compensated temporal filtering (MCTF). It operates independently of the compression level.
+
+The Bandwidth Reduction filter is a perceptual filter located within the encoding loop. It adapts to the current
+compression level to filter imperceptible signals. This filter works only when the resolution is 1080p or lower.
      */
     FilterSettings?: H264FilterSettings;
     /**
@@ -3621,6 +3635,11 @@ This field is optional; when no value is specified the encoder will choose the n
      * Timecode burn-in settings
      */
     TimecodeBurninSettings?: TimecodeBurninSettings;
+    /**
+     * Sets the minimum QP. If you aren't familiar with quantization adjustment, leave the field empty. MediaLive will
+apply an appropriate value.
+     */
+    MinQp?: __integerMin1Max51;
   }
   export type H264SpatialAq = "DISABLED"|"ENABLED"|string;
   export type H264SubGopLength = "DYNAMIC"|"FIXED"|string;
@@ -3678,7 +3697,14 @@ This field is optional; when no value is specified the encoder will choose the n
      */
     ColorSpaceSettings?: H265ColorSpaceSettings;
     /**
-     * Optional filters that you can apply to an encode.
+     * Optional. Both filters reduce bandwidth by removing imperceptible details. You can enable one of the filters. We
+recommend that you try both filters and observe the results to decide which one to use.
+
+The Temporal Filter reduces bandwidth by removing imperceptible details in the content. It combines perceptual
+filtering and motion compensated temporal filtering (MCTF). It operates independently of the compression level.
+
+The Bandwidth Reduction filter is a perceptual filter located within the encoding loop. It adapts to the current
+compression level to filter imperceptible signals. This filter works only when the resolution is 1080p or lower.
      */
     FilterSettings?: H265FilterSettings;
     /**
@@ -3818,6 +3844,11 @@ In all other configurations, you typically enter "none".
      * Select the tree block size used for encoding. If you enter "auto", the encoder will pick the best size. If you are setting up the picture as a tile, you must set this to 32x32. In all other configurations, you typically enter "auto".
      */
     TreeblockSize?: H265TreeblockSize;
+    /**
+     * Sets the minimum QP. If you aren't familiar with quantization adjustment, leave the field empty. MediaLive will
+apply an appropriate value.
+     */
+    MinQp?: __integerMin1Max51;
   }
   export type H265Tier = "HIGH"|"MAIN"|string;
   export type H265TimecodeInsertionBehavior = "DISABLED"|"PIC_TIMING_SEI"|string;
@@ -4306,6 +4337,10 @@ during input switch actions. Presently, this functionality only works with MP4_F
      */
     Tags?: Tags;
     Type?: InputType;
+    /**
+     * The settings associated with an SRT input.
+     */
+    SrtSettings?: SrtSettings;
   }
   export interface InputAttachment {
     /**
@@ -4852,7 +4887,7 @@ pulled from.
     UrlPath?: __listOf__string;
   }
   export type InputTimecodeSource = "ZEROBASED"|"EMBEDDED"|string;
-  export type InputType = "UDP_PUSH"|"RTP_PUSH"|"RTMP_PUSH"|"RTMP_PULL"|"URL_PULL"|"MP4_FILE"|"MEDIACONNECT"|"INPUT_DEVICE"|"AWS_CDI"|"TS_FILE"|string;
+  export type InputType = "UDP_PUSH"|"RTP_PUSH"|"RTMP_PUSH"|"RTMP_PULL"|"URL_PULL"|"MP4_FILE"|"MEDIACONNECT"|"INPUT_DEVICE"|"AWS_CDI"|"TS_FILE"|"SRT_CALLER"|string;
   export interface InputVpcRequest {
     /**
      * A list of up to 5 EC2 VPC security group IDs to attach to the Input VPC network interfaces.
@@ -5809,6 +5844,10 @@ The Multiplex must be in the same region as the Channel.
     Scte35Pid?: __integer;
     TimedMetadataPid?: __integer;
     VideoPid?: __integer;
+    AribCaptionsPid?: __integer;
+    DvbTeletextPids?: __listOf__integer;
+    EcmPid?: __integer;
+    Smpte2038Pid?: __integer;
   }
   export interface MultiplexProgramPipelineDetail {
     /**
@@ -7524,6 +7563,10 @@ exactly two source URLs for redundancy.
 Only specify sources for PULL type Inputs. Leave Destinations empty.
      */
     Sources?: __listOfInputSourceRequest;
+    /**
+     * The settings associated with an SRT input.
+     */
+    SrtSettings?: SrtSettingsRequest;
   }
   export interface UpdateInputResponse {
     Input?: Input;
@@ -7578,6 +7621,7 @@ Only specify sources for PULL type Inputs. Leave Destinations empty.
      * Name of the multiplex.
      */
     Name?: __string;
+    PacketIdentifiersMapping?: MultiplexPacketIdentifiersMapping;
   }
   export interface UpdateMultiplexResponse {
     /**
@@ -9219,6 +9263,75 @@ one destination per packager.
   export type __stringPatternArnMedialiveSignalMap = string;
   export type __stringPatternS = string;
   export type Scte35SegmentationScope = "ALL_OUTPUT_GROUPS"|"SCTE35_ENABLED_OUTPUT_GROUPS"|string;
+  export type Algorithm = "AES128"|"AES192"|"AES256"|string;
+  export interface SrtCallerDecryption {
+    /**
+     * The algorithm used to encrypt content.
+     */
+    Algorithm?: Algorithm;
+    /**
+     * The ARN for the secret in Secrets Manager. Someone in your organization must create a secret and provide you with its ARN. The secret holds the passphrase that MediaLive uses to decrypt the source content.
+     */
+    PassphraseSecretArn?: __string;
+  }
+  export interface SrtCallerDecryptionRequest {
+    /**
+     * The algorithm used to encrypt content.
+     */
+    Algorithm?: Algorithm;
+    /**
+     * The ARN for the secret in Secrets Manager. Someone in your organization must create a secret and provide you with its ARN. This secret holds the passphrase that MediaLive will use to decrypt the source content.
+     */
+    PassphraseSecretArn?: __string;
+  }
+  export interface SrtCallerSource {
+    Decryption?: SrtCallerDecryption;
+    /**
+     * The preferred latency (in milliseconds) for implementing packet loss and recovery. Packet recovery is a key feature of SRT.
+     */
+    MinimumLatency?: __integer;
+    /**
+     * The IP address at the upstream system (the listener) that MediaLive (the caller) connects to.
+     */
+    SrtListenerAddress?: __string;
+    /**
+     * The port at the upstream system (the listener) that MediaLive (the caller) connects to.
+     */
+    SrtListenerPort?: __string;
+    /**
+     * The stream ID, if the upstream system uses this identifier.
+     */
+    StreamId?: __string;
+  }
+  export interface SrtCallerSourceRequest {
+    Decryption?: SrtCallerDecryptionRequest;
+    /**
+     * The preferred latency (in milliseconds) for implementing packet loss and recovery. Packet recovery is a key feature of SRT. Obtain this value from the operator at the upstream system.
+     */
+    MinimumLatency?: __integer;
+    /**
+     * The IP address at the upstream system (the listener) that MediaLive (the caller) will connect to.
+     */
+    SrtListenerAddress?: __string;
+    /**
+     * The port at the upstream system (the listener) that MediaLive (the caller) will connect to.
+     */
+    SrtListenerPort?: __string;
+    /**
+     * This value is required if the upstream system uses this identifier because without it, the SRT handshake between MediaLive (the caller) and the upstream system (the listener) might fail.
+     */
+    StreamId?: __string;
+  }
+  export interface SrtSettings {
+    SrtCallerSources?: __listOfSrtCallerSource;
+  }
+  export interface SrtSettingsRequest {
+    SrtCallerSources?: __listOfSrtCallerSourceRequest;
+  }
+  export type __listOfSrtCallerSource = SrtCallerSource[];
+  export type __listOfSrtCallerSourceRequest = SrtCallerSourceRequest[];
+  export type MultiplexPacketIdentifiersMapping = {[key: string]: MultiplexProgramPacketIdentifiersMap};
+  export type __integerMin1Max51 = number;
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
    */
