@@ -89,10 +89,19 @@ function name(params) { //Compotamento della funzione
 }
 ```
 - Preferibilmente vi chiediamo di evitare di inserire troppi commenti, specialmente per le singole righe di codice. In questo modo il codice diventa più fluido da leggere. Inserite commenti per le righe quando necessario.
+- Quando dovete commentare più righe di codice, vi chiediamo di iniziare con il commento, poi le righe di codice ed infine una doppia andata a capo. Quando invece bisogna commentare una singola riga, posiziona il commento alla fine e se presente una sezione di codice, vai due volte a capo.
+```JS
+// Commento per una sezione di righe di codice
+let id = document.getElementById("ID")
+confirm.toString().length
+id.textContent = 'abc'
+
+F().length = 1 // Commento per una sola riga
+```
 
 ### CSS
 Regole per ottimizzare lo stile del codice per il linguaggio CSS:
-- Preferibilmente, quando ci sono molte Regole di css, usate 2 andate a capo per spaziare Regole che riguardano altri elementi, invece mettete vicine le regole per lo stesso elemento.
+- Preferibilmente, quando ci sono molte Regole di css, usate doppia andata a capo per spaziare Regole che riguardano altri elementi, invece mettete vicine le regole per lo stesso elemento.
 ```CSS
 body {
   cursor: default;
