@@ -39,6 +39,7 @@ git commit -m "Description of your commit"
 git push origin branch-name
 ```
 7. **Pull Request**: Apri una [Pull Request](https://github.com/Croc-Prog-github/The-Bocchette-2/compare) sul repository. Assicurati di descrivere chiaramente le tue modifiche.
+8. Attendi che la tua Pull Request venga revisionata, ti forniremo ulteriori dettagli  nei commenti.
 
 Grazie per aver contribuito a rendere migliore The Bocchette 2! 🚀🎉
 
