@@ -75,6 +75,7 @@ let BidiHTTPResponse = (() => {
         }
         #initialize() {
             if (this.#data.fromCache) {
+                this.#request._fromMemoryCache = true;
                 this.#request
                     .frame()
                     ?.page()
@@ -152,7 +153,7 @@ let BidiHTTPResponse = (() => {
             }
             return this.#securityDetails ?? null;
         }
-        buffer() {
+        content() {
             throw new Errors_js_1.UnsupportedOperation();
         }
     };
