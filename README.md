@@ -26,7 +26,7 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
   **Altri link:**
   [TB2 website](https://croc-prog-github.github.io/The-Bocchette-2/)
   |
-  [Statistiche](https://repo-tracker.com/r/gh/Croc-Prog-github/The-Bocchette-2)
+  [Statistiche](https://githubtracker.com/Croc-Prog-github/The-Bocchette-2)
   |
   [Wiki](https://github.com/Croc-Prog-github/The-Bocchette-2/wiki)
   |
