@@ -24,6 +24,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -41,24 +42,32 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: "14"
           cache: "node_modules"
           cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
+
+      - name: MegaLinter
+        uses: oxsecurity/megalinter@v8.4.2
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
+
       - name: Build with Astro
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
+
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
@@ -76,12 +85,9 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      # Clear Node.js cache
       - name: Clear Node.js cache
-        uses: actions/setup-node@v3
         run: npm cache clean --force
 
-      # Setup Node again with a different cache folder
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
