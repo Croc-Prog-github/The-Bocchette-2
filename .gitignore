@@ -19,13 +19,14 @@
 # Colyseus
 /game/multiP/colyseus.js
 /ServerService/MultiP-server/node_modules
+!/ServerService/MultiP-server/node_modules/.package-lock.json
 /ServerService/MultiP-server/loadtest.log
 
 # Replit
 /node_modules/.bin/*
 .replit
 .breakpoints
-!/node_modules/*.exe
+/node_modules/*.exe
 
 # npm start
 /node_modules/.vite/deps/_metadata.json
