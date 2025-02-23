@@ -59,7 +59,7 @@ export declare class Room<State = any> {
     onMessage<T = any>(type: "*", callback: (type: string | number | Schema, message: T) => void): any;
     onMessage<T extends (typeof Schema & (new (...args: any[]) => any))>(type: T, callback: (message: InstanceType<T>) => void): any;
     onMessage<T = any>(type: string | number, callback: (message: T) => void): any;
-    send(type: string | number, message?: any): void;
+    send<T = any>(type: string | number, message?: T): void;
     sendBytes(type: string | number, bytes: number[] | ArrayBufferLike): void;
     get state(): State;
     removeAllListeners(): void;
