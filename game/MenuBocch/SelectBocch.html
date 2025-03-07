@@ -21,19 +21,19 @@
     </div>
 
     <div>
-      <div style="display: flex; margin-inline: 37%; justify-content: space-evenly; flex-direction: row;">
-        <div style="display: flex;flex-direction: column;">
-          <div style="background: black; width: 150px; height: 130px; cursor: pointer; margin-bottom: 10%;"><img src="" alt="Errore di fonte"></div>
-          <div style="background: black; width: 150px; height: 130px; cursor: pointer;" onclick="window.location.href = '/game/MenuBocch/Ultrax/Ultrax.html';">
-            <x style="color: white; display: flex; justify-content: space-around; margin-top: 35%;">Ultrax</x>
-          </div>
+      <div id="grid" style="display: grid; justify-content: center; justify-items: center;">
+        <div style="background: black; width: 150px; height: 130px; cursor: pointer;"><img src="" alt="Errore di fonte"></div>
+        <div style="background: black; width: 150px; height: 130px; cursor: pointer;" onclick="window.location.href = '/game/MenuBocch/Ultrax/Ultrax.html';">
+          <hx style="color: white; display: flex; justify-content: space-around; margin-top: 35%;">Ultrax</hx>
         </div>
-
-        <div style="display: flex;flex-direction: column;/* margin-top: 10px; */">
-          <div style="background: black; width: 150px; height: 130px; cursor: pointer; margin-bottom: 10%;"><img src="" alt="Errore di fonte"></div>
-          <div style="background: black; width: 150px; height: 130px; cursor: pointer;"><img src="" alt="Errore di fonte"></div>
-        </div>
-        
+        <div style="background: black; width: 150px; height: 130px; cursor: pointer;"><img src="" alt="Errore di fonte"></div>
+        <div style="background: black; width: 150px; height: 130px; cursor: pointer;"><img src="" alt="Errore di fonte"></div>
+        <div style="background: black; width: 150px; height: 130px; cursor: pointer;"><img src="" alt="Errore di fonte"></div>
+        <div style="background: black; width: 150px; height: 130px; cursor: pointer;"><img src="" alt="Errore di fonte"></div>
+        <div style="background: black; width: 150px; height: 130px; cursor: pointer;"><img src="" alt="Errore di fonte"></div>
+        <div style="background: black; width: 150px; height: 130px; cursor: pointer;"><img src="" alt="Errore di fonte"></div>
+        <div style="background: black; width: 150px; height: 130px; cursor: pointer;"><img src="" alt="Errore di fonte"></div>
+        <div style="background: black; width: 150px; height: 130px; cursor: pointer;"><img src="" alt="Errore di fonte"></div>
       </div>
     </div>
 
@@ -41,6 +41,37 @@
 </html>
 
 <style>
+  @media screen and (min-width: 320px) {
+    #grid {
+      grid-template-columns: repeat(2, 51%);
+      grid-template-rows: repeat(10, 21%);
+    }
+  }
+  @media screen and (min-width: 375px) {
+    #grid {
+      grid-template-columns: repeat(2, 45%);
+      grid-template-rows: repeat(10, 22%);
+    }
+  }
+  @media screen and (min-width: 425px) {
+    #grid {
+      grid-template-columns: repeat(2, 40%);
+      grid-template-rows: repeat(10, 22%);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    #grid {
+      grid-template-columns: repeat(4, 22%);
+      grid-template-rows: repeat(10, 37%);
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    #grid {
+      grid-template-columns: repeat(5, 17%);
+      grid-template-rows: repeat(10, 57%);
+    }
+  }
+
   * {
     user-select: none;
   }
