@@ -25,7 +25,7 @@
     "bootstrap": "^5.3.5",
     "chalk": "^5.4.1",
     "colyseus": "^0.16.4",
-    "colyseus.js": "^0.16.15",
+    "colyseus.js": "^0.16.16",
     "express.js": "^1.0.0",
     "json": "^11.0.0",
     "node": "^23.11.0",
