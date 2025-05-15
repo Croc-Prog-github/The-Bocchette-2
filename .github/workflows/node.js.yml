@@ -1,4 +1,6 @@
 name: The-Bocchette-2 Actions
+permissions:
+  contents: read
 on:
   push:
     branches:
