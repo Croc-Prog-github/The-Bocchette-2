@@ -56,9 +56,11 @@
       <div name="loginDiv" style="margin: 7px; text-align: center; flex-direction: column; align-items: center;" id="login" hidden="">
         <strong style="margin-inline: 83px; font-size: 20px; cursor: default;">Accedi</strong>
         <hx style="font-size: small; margin-right: auto;">Bentornato, accedi al tuo account.</hx>
-        <input type="text" placeholder="Username" maxlength="14">
-        <br>
-        <input type="password" minlength="8" placeholder="Password">
+        <form style="display: flex; flex-direction: column;">
+          <input type="text" placeholder="Username" maxlength="14" required>
+          <br>
+          <input type="password" minlength="8" placeholder="Password" required>
+        </form>
         <hx style="font-size: small; color: -webkit-link; cursor: pointer; text-decoration: underline;">Password dimenticata</hx>
         <br>
         <div style="display: flex; flex-direction: row;">
@@ -87,10 +89,12 @@
       <div name="RegistratiDiv" id="regist" hidden="" style="margin: 7px; text-align: center; flex-direction: column; align-items: center;">
         <strong style="margin-inline: 83px; font-size: 20px; cursor: default;">Registrati</strong>
         <hx style="font-size: small; margin-right: auto;">Benvenuto, crea il tuo account qui.</hx>
-        <input type="text" placeholder="Username" maxlength="14">
-        <br>
-        <input type="password" minlength="8" placeholder="Password">
-        <input type="password" minlength="8" placeholder="Conferma Password">
+        <form style="display: flex; flex-direction: column;">
+          <input type="text" placeholder="Username" maxlength="14">
+          <br>
+          <input type="password" minlength="8" placeholder="Password">
+          <input type="password" minlength="8" placeholder="Conferma Password">  
+        </form>
         <!--
         <br>
         <input type="email" placeholder="E-mail di conferma">
