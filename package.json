@@ -31,7 +31,7 @@
     "node": "^24.1.0",
     "puppeteer": "^24.10.0",
     "typescript": "^5.8.3",
-    "glob": "^11.0.2",
+    "glob": "^11.0.3",
     "nanoid": "^5.1.5"
   },
   "main": "index.js || index.html",
