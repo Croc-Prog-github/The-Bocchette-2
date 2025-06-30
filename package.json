@@ -16,7 +16,7 @@
     "express.js": "^1.0.0",
     "https": "^1.0.0",
     "jest": "^30.0.2",
-    "vite": "^6.3.5",
+    "vite": "^7.0.0",
     "nanoid": "^5.1.5"
   },
   "dependencies": {
