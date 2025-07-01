@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../src/index.ts"],
-  "sourcesContent": ["export { WebSocketClient } from './WebSocketClient.js';\nexport { WebSocketTransport, type TransportOptions } from './WebSocketTransport.js';"],
-  "mappings": ";;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,6BAAgC;AAChC,gCAA0D;",
-  "names": []
-}

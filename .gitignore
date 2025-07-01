@@ -1,8 +1,7 @@
 # File IDE
 .env
+/node_modules/
 /node_modules/*
-/node_modules/.bin
-!/node_modules/.package-lock.json
 
 # Updates
 
