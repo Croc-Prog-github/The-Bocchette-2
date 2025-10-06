@@ -30,7 +30,7 @@
     "json": "^11.0.0",
     "node": "^24.9.0",
     "puppeteer": "^24.22.0",
-    "typescript": "^5.9.2",
+    "typescript": "^5.9.3",
     "glob": "^11.0.3",
     "nanoid": "^5.1.6"
   },
