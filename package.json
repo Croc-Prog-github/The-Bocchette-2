@@ -28,7 +28,7 @@
     "colyseus.js": "^0.16.21",
     "express.js": "^1.0.0",
     "json": "^11.0.0",
-    "node": "^24.10.0",
+    "node": "^25.0.0",
     "puppeteer": "^24.24.1",
     "typescript": "^5.9.3",
     "glob": "^11.0.3",
