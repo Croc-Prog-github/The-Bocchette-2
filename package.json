@@ -29,7 +29,7 @@
     "express.js": "^1.0.0",
     "json": "^11.0.0",
     "node": "^25.2.1",
-    "puppeteer": "^24.32.0",
+    "puppeteer": "^24.33.0",
     "typescript": "^5.9.3",
     "glob": "^13.0.0",
     "nanoid": "^5.1.6"
