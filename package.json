@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "animejs": "^4.2.2",
-    "aws-sdk": "^2.1692.0",
+    "aws-sdk": "^2.1693.0",
     "bootstrap": "^5.3.8",
     "chalk": "^5.6.2",
     "colyseus": "^0.16.5",
