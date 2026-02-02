@@ -24,7 +24,7 @@
     "aws-sdk": "^2.1693.0",
     "bootstrap": "^5.3.8",
     "chalk": "^5.6.2",
-    "colyseus": "^0.16.5",
+    "colyseus": "^0.17.8",
     "colyseus.js": "^0.16.22",
     "express.js": "^1.0.0",
     "json": "^11.0.0",
