@@ -16,8 +16,9 @@ Prova subito The Bocchette 2, anche senza registrarti: con **l'Account ospite**.
   [![GitHub Repo stars](https://img.shields.io/github/stars/Croc-Prog-github/The-Bocchette-2?style=flat-square&color=yellow)](https://github.com/Croc-Prog-github/The-Bocchette-2/stargazers)
   ![GitHub repo size](https://img.shields.io/github/repo-size/Croc-Prog-github/The-Bocchette-2?style=flat-square)
   [![Contributors](https://img.shields.io/github/contributors/Croc-Prog-github/The-Bocchette-2?style=flat-square)](https://github.com/Croc-Prog-github/The-Bocchette-2/graphs/contributors)
-  ![Code quality](https://img.shields.io/badge/Code%20Quality-A-lighgreen?style=flat-square)
+  ![Code Quality](https://www.codefactor.io/Content/badges/A.svg)
   [![Licenze](https://img.shields.io/badge/licenze-MIT-blue?style=flat-square&link=https%3A%2F%2Fgithub.com%2FCroc-Prog-github%2FThe-Bocchette-2%2Fblob%2Fmain%2FLICENSE.md)](https://github.com/Croc-Prog-github/The-Bocchette-2/blob/main/LICENSE.md)
+  <!--![Code quality](https://img.shields.io/badge/Code%20Quality-A-lighgreen?style=flat-square)-->
   <!-- ![Manteined](https://img.shields.io/badge/Aggiornamenti-SI!-green) -->
 </div>
 
