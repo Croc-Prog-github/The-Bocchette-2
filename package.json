@@ -20,7 +20,7 @@
     "nanoid": "^5.1.16"
   },
   "dependencies": {
-    "animejs": "^4.4.1",
+    "animejs": "^4.5.0",
     "aws-sdk": "^2.1693.0",
     "bootstrap": "^5.3.8",
     "chalk": "^5.6.2",
