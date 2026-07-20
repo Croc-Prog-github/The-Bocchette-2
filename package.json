@@ -17,7 +17,7 @@
     "https": "^1.0.0",
     "jest": "^30.4.2",
     "vite": "^8.1.4",
-    "nanoid": "^5.1.16"
+    "nanoid": "^6.0.0"
   },
   "dependencies": {
     "animejs": "^4.5.0",
@@ -32,7 +32,7 @@
     "puppeteer": "^24.35.0",
     "typescript": "^7.0.2",
     "glob": "^13.0.6",
-    "nanoid": "^5.1.16"
+    "nanoid": "^6.0.0"
   },
   "main": "index.js || index.html",
   "repository": {
